@@ -71,6 +71,23 @@
 4. **安全风险集中在三处**：主仓库侧 #302（AGENTS.md 注入）/ #300（审计日志可删）/ #301（压缩丢硬约束）为信任边界级红线；插件侧 qqbot 凭据明文落盘无 chmod、toybox time-capsule 明文存储；group-chat-diary 内嵌 109 名成员 PII 且数据仍指向已迁移的 dsh2026/issues。
 5. **四个占位仓库不计入能力**：sandbox-mxc、dsh-opencode-server（与 TUI 移除直接相关，值得跟踪首 commit）、ex-setting、dsh-coding-receipt 均 0 commit、创建与 push 间隔 1-2 秒，属"先建仓占名"。
 
+## 自动运行（每 8 小时）
+
+本仓库部署于远程主机 **10.144.144.9**（`/home/adam/dsh-external-research/`），由 cron **每 8 小时自动运行**一次 `scripts/cron-check.sh`，无人值守完成「检测 → 索引 → 报告 → 推送」闭环：
+
+1. **拉取自身**：`git pull dsh-ext main`，同步引擎/脚本/文档最新版（本仓库远程为 `dsh-external/dsh-external-research`，private）。
+2. **检测变化**：`git ls-remote` 对比 `.cron-state.json` 记录的 HEAD，覆盖 mainline（`dsh2026/test-AdamPlatin123`）与 dsh-external org 全部 15 个仓库；离线时跳过并保留上次状态，不误报。
+3. **索引变化仓库**：任一仓库 HEAD 变化（或首次运行）→ 执行 `scripts/compare-mainline.sh`，产出当日 `reports/<日期>/` 报告（兼容性矩阵 + 双方建议 + mainline 变更分析），更新 `CHANGELOG.md` 与 `reports/latest` 软链。
+4. **推送回 org**：报告以 `dsh-ecosystem-bot` 身份 commit 并 `git push dsh-ext main`，生态对比结果随仓库分发。
+
+运行细节：
+
+- **cron 行**：`0 */8 * * * cd /home/adam/dsh-external-research && ./scripts/cron-check.sh`（crontab 顶部已设置 `PATH=/home/adam/.local/bin:...` 使 gh/jq 可用）。
+- **日志**：`logs/cron-<日期>.log`（不入库）；状态记录 `.cron-state.json`（不入库）。
+- **环境**：远程与本机一致的 deepseek 密钥（`agent.db` auth_credentials，哈希一致）、omp 环境（node 24 + `@oh-my-pi/pi-coding-agent`）、gh 认证（AdamPlatin123）与 git credential（`gh auth setup-git`）。
+- **手动触发**：`bash -lc 'cd /home/adam/dsh-external-research && ./scripts/cron-check.sh'`。
+- **查看最新结果**：本仓库 `CHANGELOG.md` 顶部与 `reports/latest/`。
+
 ## 产出文件清单
 
 | 路径（绝对） | 说明 |

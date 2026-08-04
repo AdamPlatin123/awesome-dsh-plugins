@@ -2,3 +2,4 @@
 .clones/
 node_modules/
 *.log
+.cron-state.json
