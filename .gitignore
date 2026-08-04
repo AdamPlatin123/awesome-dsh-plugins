@@ -1,0 +1,4 @@
+.mainline/
+.clones/
+node_modules/
+*.log

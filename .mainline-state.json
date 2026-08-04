@@ -1,0 +1,67 @@
+{
+  "lastMainlineCommit": "02d755595816a6d384033c96fb67a1fda3b28228",
+  "lastDate": "2026-08-05",
+  "previousCommit": "02d755595816a6d384033c96fb67a1fda3b28228",
+  "repos": {
+    "issues": {
+      "anchoredCommit": "未知",
+      "status": "不适用"
+    },
+    "dsh-live-stats": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-working-activity": {
+      "anchoredCommit": "20260804T143803Z",
+      "status": "需适配"
+    },
+    "plugin-registry": {
+      "anchoredCommit": "20260804T143803Z",
+      "status": "兼容"
+    },
+    "sandbox-mxc": {
+      "anchoredCommit": "未知",
+      "status": "占位"
+    },
+    "web-components": {
+      "anchoredCommit": "b4b67f0",
+      "status": "兼容"
+    },
+    "dsh-opencode-server": {
+      "anchoredCommit": "未知",
+      "status": "占位"
+    },
+    "toybox": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "ex-setting": {
+      "anchoredCommit": "未知",
+      "status": "占位"
+    },
+    "tg-bot": {
+      "anchoredCommit": "fa3d357fc66102d82f0ddbf67fd3d5d70944d8f7",
+      "status": "兼容"
+    },
+    "group-chat-diary": {
+      "anchoredCommit": "未知",
+      "status": "不适用"
+    },
+    "dsh-skins": {
+      "anchoredCommit": "f1792735",
+      "status": "兼容"
+    },
+    "dsh-coding-receipt": {
+      "anchoredCommit": "未知",
+      "status": "占位"
+    },
+    "qqbot": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-subagent-tree": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    }
+  }
+}
