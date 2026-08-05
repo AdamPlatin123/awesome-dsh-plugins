@@ -2,9 +2,9 @@
 
 ## 项目定位
 
-本仓库是对 **dsh-external 组织**（DeepSeek Harness 内测期私有组织）下 **15 个仓库**的聚合调研产出。调研以 orchestrate 方式并行推进：15 个 scout 子代理各负责一个仓库的只读深挖，同时引入旧 session（`019fc8ab`）在 deepseek-harness 快照上的磁盘 I/O / 版本差异 / 群聊对齐上下文，最终在 `cross-analysis/` 汇成交叉分析与生态全景报告。
+本仓库是对 **dsh-external 组织**（DeepSeek Harness 内测期私有组织）下 **59 个仓库**（截至 2026-08-05，首轮 15 + 扩展 41 + hub 元仓库等）的聚合调研产出。调研以 orchestrate 方式并行推进：首轮 15 个 scout 子代理 + 扩展轮 41 个 scout 子代理（并发上限 32/批），每个仓库一个只读深挖，同时引入旧 session（`019fc8ab`）在 deepseek-harness 快照上的磁盘 I/O / 版本差异 / 群聊对齐上下文，最终在 `cross-analysis/` 汇成交叉分析与生态全景报告。
 
-**核心结论一句话**：0804 官方快照之后，dsh-external 组织出现一轮"生态圈地潮"——11 个仓库承载了插件协议（两代格式并存）、IM 远程通道、Web UI 扩展与工具链资产，另有 4 个仓库（sandbox-mxc、dsh-opencode-server、ex-setting、dsh-coding-receipt）仍为空占位；所有已落地仓库几乎全部依赖"复制 + git apply 锚定 0804 快照补丁"的集成模式，这是当前最大的系统性运维债务。
+**核心结论一句话**：0804 官方快照之后，dsh-external 组织出现一轮"生态圈地潮"——56 个已落地仓库承载了插件管理器（marisa/dshx）、目录元仓库（hub）、IM 远程通道（tg/qq/飞书/企微/微信/Telegram 六通道）、桌面分发（dsh-desktop / deepseek-harness-desktop 双轨）、Windows 移植（dsh-win-port）、工具插件（calculator/json/browser/vision 等）与 Web UI 扩展，另有 3 个仓库仍为空占位；插件格式从 `.dsh-plugin` 演进到 `dsh.plugin.json`（marisa 格式规范 v0.4），"复制 + git apply 锚定快照补丁"仍是主要集成债务。
 
 ## 快速导航
 
@@ -21,7 +21,7 @@
 ```
 /mnt/shared/_Projects/dsh-external-research/
 ├── README.md                  # 本文件：项目说明与关键结论
-├── research/                  # 15 个仓库的独立调研摘要（.md，只读，scout 产出）
+├── research/                  # 56 个仓库的独立调研摘要（.md，只读，scout 产出，首轮 15 + 扩展 41）
 │   ├── issues.md              #   dsh-external/issues（Issue Tracker 承载仓库，308 issue）
 │   ├── toybox.md              #   整活插件玩具箱（.dsh-plugin 静态格式，8 插件）
 │   ├── plugin-registry.md     #   dsh.plugin.json 第三方插件系统（协议层）
