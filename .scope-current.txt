@@ -54,3 +54,4 @@ dsh-web-terminal
 dsh-ui-progress
 turtle-ui
 dsh-cc-tui
+Qwen-MM-Plugins

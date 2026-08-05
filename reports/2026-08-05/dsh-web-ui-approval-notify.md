@@ -1,9 +1,9 @@
-# sandbox-mxc — 与 mainline 兼容性对比（2026-08-05）
-> 调研摘要（只读资产，本报告不复制其正文）：[research/sandbox-mxc.md](../../research/sandbox-mxc.md)——集成点与调研全文以 research 为准。
+# dsh-web-ui-approval-notify — 与 mainline 兼容性对比（2026-08-05）
+> 调研摘要（只读资产，本报告不复制其正文）：[research/dsh-web-ui-approval-notify.md](../../research/dsh-web-ui-approval-notify.md)——集成点与调研全文以 research 为准。
 
 ## 克隆证据
 
-- 克隆 HEAD：83c0b98
+- 克隆 HEAD：9ad6b8a
 - 锚定：未知（unknown，未知）
 - 补丁：无补丁
 - seam：缺: tuiPrompt

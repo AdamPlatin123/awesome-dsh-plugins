@@ -1,5 +1,5 @@
 {
-  "lastMainlineCommit": "02d755595816a6d384033c96fb67a1fda3b28228",
+  "lastMainlineCommit": "bfb913696efaa241b92fe8731b2d2336bdb7f697",
   "lastDate": "2026-08-05",
   "previousCommit": "02d755595816a6d384033c96fb67a1fda3b28228",
   "repos": {
@@ -62,6 +62,174 @@
     "dsh-subagent-tree": {
       "anchoredCommit": "未知",
       "status": "需适配"
+    },
+    "review-panel": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-github-integration": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-weixin-bot": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "marisa": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-feishu-bot": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-wecom-bot": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "session-chatlog": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "distill": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "telegram": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-tool-browser": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-my-rsi": {
+      "anchoredCommit": "b067916ae930cd9a519996ea9ee673afd1ec7335",
+      "status": "兼容"
+    },
+    "dsh-win-port": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-desktop": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-pty-windows": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-shell-windows": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "deepseek-harness-desktop": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "session-persistence-rdb": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "deepseek-harness-distro": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-tool-calculator": {
+      "anchoredCommit": "25b2ad4f67",
+      "status": "兼容"
+    },
+    "dshx-update-check": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-acp": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-sfw": {
+      "anchoredCommit": "未知",
+      "status": "占位"
+    },
+    "dsh-issue-filer": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-gh-bridge": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-vision": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-web-ui-approval-notify": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-agent-session-sources": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-companion": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "hub": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-tool-json": {
+      "anchoredCommit": "25b2ad4f67",
+      "status": "兼容"
+    },
+    "dsh-skills-manager": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-pi-adapter": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "chat-width": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-memory-evolve": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-artifact": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-session-search": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-cordis-examples": {
+      "anchoredCommit": "未知",
+      "status": "占位"
+    },
+    "dsh-web-terminal": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-ui-progress": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "turtle-ui": {
+      "anchoredCommit": "a6fedc9e3b36d066e34860d040db6df47d88c432",
+      "status": "需适配"
+    },
+    "dsh-cc-tui": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "Qwen-MM-Plugins": {
+      "anchoredCommit": "未知",
+      "status": "占位"
     }
   }
 }

@@ -1,5 +1,5 @@
-# dsh-coding-receipt — 与 mainline 兼容性对比（2026-08-05）
-> 调研摘要（只读资产，本报告不复制其正文）：[research/dsh-coding-receipt.md](../../research/dsh-coding-receipt.md)——集成点与调研全文以 research 为准。
+# dsh-cordis-examples — 与 mainline 兼容性对比（2026-08-05）
+> 调研摘要（只读资产，本报告不复制其正文）：[research/dsh-cordis-examples.md](../../research/dsh-cordis-examples.md)——集成点与调研全文以 research 为准。
 
 ## 克隆证据
 

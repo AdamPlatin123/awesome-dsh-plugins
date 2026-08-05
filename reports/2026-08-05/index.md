@@ -1,6 +1,6 @@
 # 当日索引（2026-08-05）
 - [主报告 mainline-compat.md](mainline-compat.md)（兼容性矩阵 + mainline 变更分析 + 双方建议）
-- mainline：`02d7555`（snapshots/20260804T143803Z），上次 `02d755595816a6d384033c96fb67a1fda3b28228`
+- mainline：`bfb9136`（snapshots/20260805T134133Z），上次 `02d755595816a6d384033c96fb67a1fda3b28228`
 - [返回 CHANGELOG](../../CHANGELOG.md)
 
 ## 仓库详情
@@ -20,6 +20,48 @@
 - [dsh-coding-receipt.md](dsh-coding-receipt.md) — 占位
 - [qqbot.md](qqbot.md) — 兼容
 - [dsh-subagent-tree.md](dsh-subagent-tree.md) — 需适配
+- [review-panel.md](review-panel.md) — 兼容
+- [dsh-github-integration.md](dsh-github-integration.md) — 兼容
+- [dsh-weixin-bot.md](dsh-weixin-bot.md) — 兼容
+- [marisa.md](marisa.md) — 兼容
+- [dsh-feishu-bot.md](dsh-feishu-bot.md) — 兼容
+- [dsh-wecom-bot.md](dsh-wecom-bot.md) — 兼容
+- [session-chatlog.md](session-chatlog.md) — 兼容
+- [distill.md](distill.md) — 兼容
+- [telegram.md](telegram.md) — 兼容
+- [dsh-tool-browser.md](dsh-tool-browser.md) — 兼容
+- [dsh-my-rsi.md](dsh-my-rsi.md) — 兼容
+- [dsh-win-port.md](dsh-win-port.md) — 兼容
+- [dsh-desktop.md](dsh-desktop.md) — 兼容
+- [dsh-pty-windows.md](dsh-pty-windows.md) — 兼容
+- [dsh-shell-windows.md](dsh-shell-windows.md) — 兼容
+- [deepseek-harness-desktop.md](deepseek-harness-desktop.md) — 兼容
+- [session-persistence-rdb.md](session-persistence-rdb.md) — 兼容
+- [deepseek-harness-distro.md](deepseek-harness-distro.md) — 兼容
+- [dsh-tool-calculator.md](dsh-tool-calculator.md) — 兼容
+- [dshx-update-check.md](dshx-update-check.md) — 兼容
+- [dsh-acp.md](dsh-acp.md) — 兼容
+- [dsh-sfw.md](dsh-sfw.md) — 占位
+- [dsh-issue-filer.md](dsh-issue-filer.md) — 兼容
+- [dsh-gh-bridge.md](dsh-gh-bridge.md) — 兼容
+- [dsh-vision.md](dsh-vision.md) — 兼容
+- [dsh-web-ui-approval-notify.md](dsh-web-ui-approval-notify.md) — 兼容
+- [dsh-agent-session-sources.md](dsh-agent-session-sources.md) — 兼容
+- [dsh-companion.md](dsh-companion.md) — 兼容
+- [hub.md](hub.md) — 兼容
+- [dsh-tool-json.md](dsh-tool-json.md) — 兼容
+- [dsh-skills-manager.md](dsh-skills-manager.md) — 兼容
+- [dsh-pi-adapter.md](dsh-pi-adapter.md) — 兼容
+- [chat-width.md](chat-width.md) — 兼容
+- [dsh-memory-evolve.md](dsh-memory-evolve.md) — 兼容
+- [dsh-artifact.md](dsh-artifact.md) — 兼容
+- [dsh-session-search.md](dsh-session-search.md) — 兼容
+- [dsh-cordis-examples.md](dsh-cordis-examples.md) — 占位
+- [dsh-web-terminal.md](dsh-web-terminal.md) — 兼容
+- [dsh-ui-progress.md](dsh-ui-progress.md) — 兼容
+- [turtle-ui.md](turtle-ui.md) — 需适配
+- [dsh-cc-tui.md](dsh-cc-tui.md) — 兼容
+- [Qwen-MM-Plugins.md](Qwen-MM-Plugins.md) — 占位
 
 ## 相关资产
 

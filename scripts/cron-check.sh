@@ -20,6 +20,16 @@ for dep in bash git gh jq; do
   command -v "$dep" >/dev/null 2>&1 || { echo "[错误] 缺少依赖: $dep"; exit 2; }
 done
 
+# 0.5 代理探测：本地 xray 代理可用时，仅 gh 走代理（git 走 per-URL http.https://github.com/.proxy 配置）
+# 代理不可用则全部直连（不阻塞，检测阶段有网络抖动保护）
+if timeout 3 curl -s -x http://127.0.0.1:10809 -o /dev/null --max-time 2 https://api.github.com 2>/dev/null; then
+  export HTTPS_PROXY="http://127.0.0.1:10809"
+  export HTTP_PROXY="http://127.0.0.1:10809"
+  echo "[代理] 本地 xray 代理可用，gh 走代理（git 仅 github.com 走代理）"
+else
+  echo "[代理] 本地代理不可用，全部直连"
+fi
+
 # 1. 拉取自身最新（引擎/脚本/README 更新随 org repo 同步）
 git pull dsh-ext main --ff-only 2>&1 | tail -1 || echo "[提示] git pull 失败（可能离线或已最新），继续"
 

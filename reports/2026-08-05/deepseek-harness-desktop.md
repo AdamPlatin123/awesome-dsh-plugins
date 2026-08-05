@@ -1,9 +1,9 @@
-# sandbox-mxc — 与 mainline 兼容性对比（2026-08-05）
-> 调研摘要（只读资产，本报告不复制其正文）：[research/sandbox-mxc.md](../../research/sandbox-mxc.md)——集成点与调研全文以 research 为准。
+# deepseek-harness-desktop — 与 mainline 兼容性对比（2026-08-05）
+> 调研摘要（只读资产，本报告不复制其正文）：[research/deepseek-harness-desktop.md](../../research/deepseek-harness-desktop.md)——集成点与调研全文以 research 为准。
 
 ## 克隆证据
 
-- 克隆 HEAD：83c0b98
+- 克隆 HEAD：bf8ffc4
 - 锚定：未知（unknown，未知）
 - 补丁：无补丁
 - seam：缺: tuiPrompt

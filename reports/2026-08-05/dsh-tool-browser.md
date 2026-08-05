@@ -1,13 +1,13 @@
-# toybox — 与 mainline 兼容性对比（2026-08-05）
-> 调研摘要（只读资产，本报告不复制其正文）：[research/toybox.md](../../research/toybox.md)——集成点与调研全文以 research 为准。
+# dsh-tool-browser — 与 mainline 兼容性对比（2026-08-05）
+> 调研摘要（只读资产，本报告不复制其正文）：[research/dsh-tool-browser.md](../../research/dsh-tool-browser.md)——集成点与调研全文以 research 为准。
 
 ## 克隆证据
 
-- 克隆 HEAD：7acd885
+- 克隆 HEAD：eb86454
 - 锚定：未知（catalog，未知（catalog ref，非 mainline 锚定））
 - 补丁：无补丁
 - seam：缺: tuiPrompt
-- peerDeps：无 dsh-* 依赖
+- peerDeps：5 项匹配
 
 ## 四维对比
 
@@ -16,7 +16,7 @@
 | 锚定 vs 当日 mainline | 未知（catalog ref，非 mainline 锚定） |
 | 补丁 apply --check --3way | 无补丁 |
 | seam 符号存在性 | 缺: tuiPrompt |
-| peerDeps 范围 vs mainline 实际 | 无 dsh-* 依赖 |
+| peerDeps 范围 vs mainline 实际 | 5 项匹配 |
 | **综合判定** | **兼容** |
 
 ## 建议

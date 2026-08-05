@@ -3,7 +3,7 @@
 
 ## 克隆证据
 
-- 克隆 HEAD：a9c27f0
+- 克隆 HEAD：9582dbe
 - 锚定：20260804T143803Z（label，未知（非 commit 锚定: 20260804T143803Z））
 - 补丁：OK（1 个补丁全部干净应用）
 - seam：缺: tuiPrompt
@@ -21,4 +21,4 @@
 
 ## 建议
 
-- 兼容：当日 mainline（02d7555，snapshots/20260804T143803Z）对比结论见上表；详细建议汇总于 [mainline-compat.md](mainline-compat.md)。
+- 兼容：当日 mainline（bfb9136，snapshots/20260805T134133Z）对比结论见上表；详细建议汇总于 [mainline-compat.md](mainline-compat.md)。
