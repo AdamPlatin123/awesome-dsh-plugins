@@ -21,7 +21,7 @@
     },
     "sandbox-mxc": {
       "anchoredCommit": "未知",
-      "status": "占位"
+      "status": "兼容"
     },
     "web-components": {
       "anchoredCommit": "b4b67f0",
@@ -29,7 +29,7 @@
     },
     "dsh-opencode-server": {
       "anchoredCommit": "未知",
-      "status": "占位"
+      "status": "兼容"
     },
     "toybox": {
       "anchoredCommit": "未知",
@@ -61,7 +61,7 @@
     },
     "dsh-subagent-tree": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "需适配"
     }
   }
 }
