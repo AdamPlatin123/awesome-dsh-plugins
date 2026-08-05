@@ -3,9 +3,9 @@
 
 ## 克隆证据
 
-- 克隆 HEAD：c427938
+- 克隆 HEAD：35914bb
 - 锚定：未知（unknown，未知）
-- 补丁：无补丁
+- 补丁：CONFLICT（1 个补丁中 0 个 OK）
 - seam：缺: tuiPrompt
 - peerDeps：6 项匹配
 
@@ -14,11 +14,11 @@
 | 维度 | 结果 |
 |---|---|
 | 锚定 vs 当日 mainline | 未知 |
-| 补丁 apply --check --3way | 无补丁 |
+| 补丁 apply --check --3way | CONFLICT（1 个补丁中 0 个 OK） |
 | seam 符号存在性 | 缺: tuiPrompt |
 | peerDeps 范围 vs mainline 实际 | 6 项匹配 |
-| **综合判定** | **兼容** |
+| **综合判定** | **需适配** |
 
 ## 建议
 
-- 兼容：当日 mainline（02d7555，snapshots/20260804T143803Z）对比结论见上表；详细建议汇总于 [mainline-compat.md](mainline-compat.md)。
+- 需适配：当日 mainline（02d7555，snapshots/20260804T143803Z）对比结论见上表；详细建议汇总于 [mainline-compat.md](mainline-compat.md)。

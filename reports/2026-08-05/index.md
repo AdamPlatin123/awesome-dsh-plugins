@@ -9,9 +9,9 @@
 - [dsh-live-stats.md](dsh-live-stats.md) — 兼容
 - [dsh-working-activity.md](dsh-working-activity.md) — 需适配
 - [plugin-registry.md](plugin-registry.md) — 兼容
-- [sandbox-mxc.md](sandbox-mxc.md) — 占位
+- [sandbox-mxc.md](sandbox-mxc.md) — 兼容
 - [web-components.md](web-components.md) — 兼容
-- [dsh-opencode-server.md](dsh-opencode-server.md) — 占位
+- [dsh-opencode-server.md](dsh-opencode-server.md) — 兼容
 - [toybox.md](toybox.md) — 兼容
 - [ex-setting.md](ex-setting.md) — 占位
 - [tg-bot.md](tg-bot.md) — 兼容
@@ -19,7 +19,7 @@
 - [dsh-skins.md](dsh-skins.md) — 兼容
 - [dsh-coding-receipt.md](dsh-coding-receipt.md) — 占位
 - [qqbot.md](qqbot.md) — 兼容
-- [dsh-subagent-tree.md](dsh-subagent-tree.md) — 兼容
+- [dsh-subagent-tree.md](dsh-subagent-tree.md) — 需适配
 
 ## 相关资产
 
