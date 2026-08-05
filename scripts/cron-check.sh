@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
-# 每 8 小时自动运行（cron）：检测 dsh-external org 仓库与 mainline 变化，
-# 有变化的仓库触发 mainline 兼容索引，更新报告/CHANGELOG 并推送回 org repo。
+# 每 8 小时自动运行（cron）：
+#   1) 动态发现 dsh-external org 新仓库（gh api），与已知 15 仓合并为检测范围
+#   2) 检测 mainline + 全部仓库 HEAD 变化
+#   3) 有变化（或发现新仓库）→ 运行 mainline 兼容索引（--scope 动态清单）
+#   4) 更新报告/CHANGELOG 并推送回 org repo
 # 依赖：bash/git/gh/jq（gh 已认证，git credential 走 gh auth setup-git）
 set -uo pipefail
 
@@ -18,29 +21,51 @@ for dep in bash git gh jq; do
 done
 
 # 1. 拉取自身最新（引擎/脚本/README 更新随 org repo 同步）
-git pull dsh-ext main --ff-only 2>&1 | tail -2 || echo "[提示] git pull 失败（可能离线或已最新），继续"
+git pull dsh-ext main --ff-only 2>&1 | tail -1 || echo "[提示] git pull 失败（可能离线或已最新），继续"
 
-# 2. 检测 mainline + 15 个 org 仓库的 HEAD 变化
+# 2. 已知仓库（调研基线 15 仓）+ 动态发现新仓库
+KNOWN_REPOS=( issues dsh-live-stats dsh-working-activity plugin-registry sandbox-mxc \
+              web-components dsh-opencode-server toybox ex-setting tg-bot \
+              group-chat-diary dsh-skins dsh-coding-receipt qqbot dsh-subagent-tree )
+SELF_REPO="dsh-external-research"   # 本仓库自身，不纳入索引
+
+# 动态拉取 org 全部仓库名（失败则回退已知列表，不误报离线）
+ORG_REPOS="$(timeout 60 gh api "orgs/dsh-external/repos?per_page=100&type=all" --paginate --jq '.[].name' 2>/dev/null || echo "")"
+if [ -z "$ORG_REPOS" ]; then
+  echo "[提示] gh api 获取 org 仓库失败，回退已知列表"
+  SCOPE_REPOS=( "${KNOWN_REPOS[@]}" )
+else
+  SCOPE_REPOS=( "${KNOWN_REPOS[@]}" )
+  NEW_REPOS=()
+  while IFS= read -r name; do
+    [ -n "$name" ] || continue
+    [ "$name" = "$SELF_REPO" ] && continue
+    found=0
+    for k in "${KNOWN_REPOS[@]}"; do [ "$k" = "$name" ] && found=1 && break; done
+    if [ "$found" -eq 0 ]; then
+      NEW_REPOS+=( "$name" )
+      SCOPE_REPOS+=( "$name" )
+    fi
+  done <<< "$ORG_REPOS"
+  if [ "${#NEW_REPOS[@]}" -gt 0 ]; then
+    echo "[新仓库] 发现 ${#NEW_REPOS[@]} 个未索引仓库: ${NEW_REPOS[*]}"
+  else
+    echo "[新仓库] 无新增仓库（org 共 $(echo "$ORG_REPOS" | wc -l | tr -d ' ') 个）"
+  fi
+fi
+
+# 写入动态 scope 清单（引擎 --scope 契约：每行一个仓库名）
+: > .scope-current.txt
+for r in "${SCOPE_REPOS[@]}"; do echo "$r" >> .scope-current.txt; done
+
+# 3. 检测 mainline + 全部 scope 仓库的 HEAD 变化
 STATE=".cron-state.json"
 CHANGED=""
-declare -a REPOS=(
-  "mainline|https://github.com/dsh2026/test-AdamPlatin123"
-  "issues|https://github.com/dsh-external/issues"
-  "dsh-live-stats|https://github.com/dsh-external/dsh-live-stats"
-  "dsh-working-activity|https://github.com/dsh-external/dsh-working-activity"
-  "plugin-registry|https://github.com/dsh-external/plugin-registry"
-  "sandbox-mxc|https://github.com/dsh-external/sandbox-mxc"
-  "web-components|https://github.com/dsh-external/web-components"
-  "dsh-opencode-server|https://github.com/dsh-external/dsh-opencode-server"
-  "toybox|https://github.com/dsh-external/toybox"
-  "ex-setting|https://github.com/dsh-external/ex-setting"
-  "tg-bot|https://github.com/dsh-external/tg-bot"
-  "group-chat-diary|https://github.com/dsh-external/group-chat-diary"
-  "dsh-skins|https://github.com/dsh-external/dsh-skins"
-  "dsh-coding-receipt|https://github.com/dsh-external/dsh-coding-receipt"
-  "qqbot|https://github.com/dsh-external/qqbot"
-  "dsh-subagent-tree|https://github.com/dsh-external/dsh-subagent-tree"
-)
+declare -a REPOS=()
+REPOS+=( "mainline|https://github.com/dsh2026/test-AdamPlatin123" )
+for r in "${SCOPE_REPOS[@]}"; do
+  REPOS+=( "$r|https://github.com/dsh-external/$r" )
+done
 
 if [ -f "$STATE" ]; then
   for entry in "${REPOS[@]}"; do
@@ -49,7 +74,10 @@ if [ -f "$STATE" ]; then
     cur="$(timeout 20 git ls-remote "$url" HEAD 2>/dev/null | awk '{print $1}')"
     if [ -z "$cur" ]; then
       echo "[跳过] $name：ls-remote 失败（离线/网络），保留上次状态"
-    elif [ -n "$prev" ] && [ "$cur" != "$prev" ]; then
+    elif [ -z "$prev" ]; then
+      CHANGED="$CHANGED $name"
+      echo "[新增] $name：首次纳入检测（HEAD $cur）"
+    elif [ "$cur" != "$prev" ]; then
       CHANGED="$CHANGED $name"
       echo "[变化] $name: $prev -> $cur"
     fi
@@ -59,14 +87,14 @@ else
   CHANGED="all(首次)"
 fi
 
-# 3. 有变化 → 运行 mainline 兼容索引
+# 4. 有变化 → 运行 mainline 兼容索引（动态 scope）
 if [ -n "$CHANGED" ]; then
   echo "[索引] 变化仓库:$CHANGED"
-  ./scripts/compare-mainline.sh
+  ./scripts/compare-mainline.sh --scope .scope-current.txt
   rc=$?
   echo "[索引] compare-mainline.sh 退出码 $rc"
 
-  # 4. 提交报告/CHANGELOG/状态并推送回 org repo
+  # 5. 提交报告/CHANGELOG/状态并推送回 org repo
   if git diff --quiet && git diff --cached --quiet; then
     echo "[提交] 无新内容，跳过 commit"
   else
@@ -76,10 +104,10 @@ if [ -n "$CHANGED" ]; then
     git push dsh-ext main 2>&1 | tail -2 || echo "[提示] push 失败（网络），下次 cron 重试"
   fi
 else
-  echo "[无变化] 15 仓库 + mainline HEAD 均未变，跳过索引"
+  echo "[无变化] 全部仓库 HEAD 未变，跳过索引"
 fi
 
-# 5. 更新状态文件（记录当前 HEAD）
+# 6. 更新状态文件（记录当前 HEAD）
 {
   echo "{"
   first=1
