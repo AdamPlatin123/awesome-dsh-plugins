@@ -1,7 +1,7 @@
 {
   "lastMainlineCommit": "bfb913696efaa241b92fe8731b2d2336bdb7f697",
-  "lastDate": "2026-08-05",
-  "previousCommit": "02d755595816a6d384033c96fb67a1fda3b28228",
+  "lastDate": "2026-08-06",
+  "previousCommit": "bfb913696efaa241b92fe8731b2d2336bdb7f697",
   "repos": {
     "issues": {
       "anchoredCommit": "未知",
@@ -36,8 +36,8 @@
       "status": "兼容"
     },
     "ex-setting": {
-      "anchoredCommit": "未知",
-      "status": "占位"
+      "anchoredCommit": "b4b67f0",
+      "status": "需适配"
     },
     "tg-bot": {
       "anchoredCommit": "fa3d357fc66102d82f0ddbf67fd3d5d70944d8f7",
@@ -77,7 +77,7 @@
     },
     "marisa": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "关注"
     },
     "dsh-feishu-bot": {
       "anchoredCommit": "未知",
@@ -104,7 +104,7 @@
       "status": "兼容"
     },
     "dsh-my-rsi": {
-      "anchoredCommit": "b067916ae930cd9a519996ea9ee673afd1ec7335",
+      "anchoredCommit": "4832fffbc8963b8a7b1f8332e691083195bf94bc",
       "status": "兼容"
     },
     "dsh-win-port": {
@@ -185,7 +185,7 @@
     },
     "dsh-skills-manager": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "关注"
     },
     "dsh-pi-adapter": {
       "anchoredCommit": "未知",
@@ -225,11 +225,15 @@
     },
     "dsh-cc-tui": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "关注"
     },
     "Qwen-MM-Plugins": {
       "anchoredCommit": "未知",
       "status": "占位"
+    },
+    "dsh-web-ui": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
     }
   }
 }
