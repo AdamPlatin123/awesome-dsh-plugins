@@ -17,7 +17,7 @@
     },
     "plugin-registry": {
       "anchoredCommit": "20260804T143803Z",
-      "status": "兼容"
+      "status": "需适配"
     },
     "sandbox-mxc": {
       "anchoredCommit": "未知",
@@ -44,7 +44,7 @@
       "status": "兼容"
     },
     "group-chat-diary": {
-      "anchoredCommit": "未知",
+      "anchoredCommit": "YYYY-MM-DD",
       "status": "不适用"
     },
     "dsh-skins": {
@@ -228,10 +228,22 @@
       "status": "关注"
     },
     "Qwen-MM-Plugins": {
-      "anchoredCommit": "未知",
-      "status": "占位"
+      "anchoredCommit": "b4b67f0",
+      "status": "需适配"
     },
     "dsh-web-ui": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-ui-whale": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "Recall": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-prompt-studio": {
       "anchoredCommit": "未知",
       "status": "兼容"
     }

@@ -3,11 +3,11 @@
 
 ## 克隆证据
 
-- 克隆 HEAD：f34426d
+- 克隆 HEAD：8532c85
 - 锚定：未知（unknown，未知）
 - 补丁：无补丁
 - seam：缺: tuiPrompt
-- peerDeps：3 项匹配
+- peerDeps：4 项匹配
 
 ## 四维对比
 
@@ -16,7 +16,7 @@
 | 锚定 vs 当日 mainline | 未知 |
 | 补丁 apply --check --3way | 无补丁 |
 | seam 符号存在性 | 缺: tuiPrompt |
-| peerDeps 范围 vs mainline 实际 | 3 项匹配 |
+| peerDeps 范围 vs mainline 实际 | 4 项匹配 |
 | **综合判定** | **关注** |
 
 ## 建议

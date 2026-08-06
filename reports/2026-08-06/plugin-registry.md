@@ -3,9 +3,9 @@
 
 ## 克隆证据
 
-- 克隆 HEAD：3f91c74
+- 克隆 HEAD：a645cbe
 - 锚定：20260804T143803Z（label，未知（非 commit 锚定: 20260804T143803Z））
-- 补丁：OK（1 个补丁全部干净应用）
+- 补丁：CONFLICT（1 个补丁中 0 个 OK）
 - seam：缺: tuiPrompt
 - peerDeps：11 项匹配
 
@@ -14,11 +14,11 @@
 | 维度 | 结果 |
 |---|---|
 | 锚定 vs 当日 mainline | 未知（非 commit 锚定: 20260804T143803Z） |
-| 补丁 apply --check --3way | OK（1 个补丁全部干净应用） |
+| 补丁 apply --check --3way | CONFLICT（1 个补丁中 0 个 OK） |
 | seam 符号存在性 | 缺: tuiPrompt |
 | peerDeps 范围 vs mainline 实际 | 11 项匹配 |
-| **综合判定** | **兼容** |
+| **综合判定** | **需适配** |
 
 ## 建议
 
-- 兼容：当日 mainline（bfb9136，snapshots/20260805T134133Z）对比结论见上表；详细建议汇总于 [mainline-compat.md](mainline-compat.md)。
+- 需适配：当日 mainline（bfb9136，snapshots/20260805T134133Z）对比结论见上表；详细建议汇总于 [mainline-compat.md](mainline-compat.md)。

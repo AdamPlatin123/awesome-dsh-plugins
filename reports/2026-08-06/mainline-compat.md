@@ -2,7 +2,7 @@
 
 - mainline：`bfb9136`（snapshots/20260805T134133Z）
 - 上次对比：`bfb913696efaa241b92fe8731b2d2336bdb7f697`
-- 兼容性：54/58 无需适配，4 需适配（dsh-working-activity ex-setting dsh-subagent-tree turtle-ui）；其中关注 3、占位 4、不适用 2
+- 兼容性：55/61 无需适配，6 需适配（dsh-working-activity plugin-registry ex-setting dsh-subagent-tree turtle-ui Qwen-MM-Plugins）；其中关注 3、占位 3、不适用 2
 
 ## 兼容性矩阵
 
@@ -11,14 +11,14 @@
 | issues | 未知 | 不适用 | 不适用 | 不适用 | 不适用 |
 | dsh-live-stats | 未知 | 无补丁 | 缺: tuiPrompt | 7 项匹配 | 兼容 |
 | dsh-working-activity | 未知（非 commit 锚定: 20260804T143803Z） | CONFLICT（1 个补丁中 0 个 OK） | 缺: tuiPrompt | 4 项匹配 | 需适配 |
-| plugin-registry | 未知（非 commit 锚定: 20260804T143803Z） | OK（1 个补丁全部干净应用） | 缺: tuiPrompt | 11 项匹配 | 兼容 |
-| sandbox-mxc | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 兼容 |
+| plugin-registry | 未知（非 commit 锚定: 20260804T143803Z） | CONFLICT（1 个补丁中 0 个 OK） | 缺: tuiPrompt | 11 项匹配 | 需适配 |
+| sandbox-mxc | 未知 | 无补丁 | 缺: tuiPrompt | 1 项匹配 | 兼容 |
 | web-components | 未知（不同谱系） | OK（1 个补丁全部干净应用） | 缺: tuiPrompt | 4 项匹配 | 兼容 |
 | dsh-opencode-server | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 兼容 |
 | toybox | 未知（catalog ref，非 mainline 锚定） | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 兼容 |
 | ex-setting | 未知（不同谱系） | CONFLICT（1 个补丁中 0 个 OK） | 缺: tuiPrompt | 10 项匹配 | 需适配 |
 | tg-bot | 未知（不同谱系） | 无补丁 | 缺: tuiPrompt | 12 项匹配 | 兼容 |
-| group-chat-diary | 未知 | 不适用 | 不适用 | 不适用 | 不适用 |
+| group-chat-diary | 未知（非 commit 锚定: YYYY-MM-DD） | 不适用 | 不适用 | 不适用 | 不适用 |
 | dsh-skins | 未知（不同谱系） | 无补丁 | 缺: tuiPrompt | 5 项匹配 | 兼容 |
 | dsh-coding-receipt | 未知 | 不适用（空仓库） | 不适用（空仓库） | 不适用 | 占位 |
 | qqbot | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 兼容 |
@@ -63,9 +63,12 @@
 | dsh-web-terminal | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 兼容 |
 | dsh-ui-progress | 未知 | 无补丁 | 缺: tuiPrompt | 2 项匹配 | 兼容 |
 | turtle-ui | 未知（不同谱系） | CONFLICT（1 个补丁中 0 个 OK） | 缺: tuiPrompt | 21 项匹配 | 需适配 |
-| dsh-cc-tui | 未知 | 无补丁 | 缺: tuiPrompt | 3 项匹配 | 关注 |
-| Qwen-MM-Plugins | 未知 | 不适用（空仓库） | 不适用（空仓库） | 不适用 | 占位 |
+| dsh-cc-tui | 未知 | 无补丁 | 缺: tuiPrompt | 4 项匹配 | 关注 |
+| Qwen-MM-Plugins | 未知（不同谱系） | CONFLICT（1 个补丁中 0 个 OK） | 缺: tuiPrompt | 4 项匹配 | 需适配 |
 | dsh-web-ui | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 兼容 |
+| dsh-ui-whale | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 兼容 |
+| Recall | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 兼容 |
+| dsh-prompt-studio | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 兼容 |
 
 ## mainline 变更分析（bfb913696efaa241b92fe8731b2d2336bdb7f697 → bfb9136）
 
@@ -114,8 +117,8 @@
 - 需适配：锚定 20260804T143803Z（未知（非 commit 锚定: 20260804T143803Z））、补丁状态「CONFLICT（1 个补丁中 0 个 OK）」；建议以当日 snapshot HEAD（bfb9136）为新基线重新锚定/rebuild 补丁。
 - 补丁冲突/缺文件点集中在 mainline 变更分析节列出的破坏面，优先把集成改到稳定 seam（slots/sessionProjections/ThemeService）上。
 ### plugin-registry
-- 兼容：锚定 20260804T143803Z（未知（非 commit 锚定: 20260804T143803Z））、补丁「OK（1 个补丁全部干净应用）」，当日 mainline 可干净集成。
-- 建议把补丁基线从 20260804T143803Z 显式记录到 README/补丁头，快照一漂即可自动预警。
+- 需适配：锚定 20260804T143803Z（未知（非 commit 锚定: 20260804T143803Z））、补丁状态「CONFLICT（1 个补丁中 0 个 OK）」；建议以当日 snapshot HEAD（bfb9136）为新基线重新锚定/rebuild 补丁。
+- 补丁冲突/缺文件点集中在 mainline 变更分析节列出的破坏面，优先把集成改到稳定 seam（slots/sessionProjections/ThemeService）上。
 ### sandbox-mxc
 - 兼容：锚定 未知（未知）、补丁「无补丁」，当日 mainline 可干净集成。
 ### web-components
@@ -225,10 +228,17 @@
 - 需适配：锚定 a6fedc9e3b36d066e34860d040db6df47d88c432（未知（不同谱系））、补丁状态「CONFLICT（1 个补丁中 0 个 OK）」；建议以当日 snapshot HEAD（bfb9136）为新基线重新锚定/rebuild 补丁。
 - 补丁冲突/缺文件点集中在 mainline 变更分析节列出的破坏面，优先把集成改到稳定 seam（slots/sessionProjections/ThemeService）上。
 ### dsh-cc-tui
-- 关注：seam 或 peerDeps 存在不匹配（seam: 缺: tuiPrompt；peer: 3 项匹配），建议确认所依赖的宿主面当日是否仍满足。
+- 关注：seam 或 peerDeps 存在不匹配（seam: 缺: tuiPrompt；peer: 4 项匹配），建议确认所依赖的宿主面当日是否仍满足。
 ### Qwen-MM-Plugins
-- 占位仓库（0 commit），无集成点可对比；建议首个 commit 落地后再纳入兼容跟踪。
+- 需适配：锚定 b4b67f0（未知（不同谱系））、补丁状态「CONFLICT（1 个补丁中 0 个 OK）」；建议以当日 snapshot HEAD（bfb9136）为新基线重新锚定/rebuild 补丁。
+- 补丁冲突/缺文件点集中在 mainline 变更分析节列出的破坏面，优先把集成改到稳定 seam（slots/sessionProjections/ThemeService）上。
 ### dsh-web-ui
+- 兼容：锚定 未知（未知）、补丁「无补丁」，当日 mainline 可干净集成。
+### dsh-ui-whale
+- 兼容：锚定 未知（未知）、补丁「无补丁」，当日 mainline 可干净集成。
+### Recall
+- 兼容：锚定 未知（未知）、补丁「无补丁」，当日 mainline 可干净集成。
+### dsh-prompt-studio
 - 兼容：锚定 未知（未知）、补丁「无补丁」，当日 mainline 可干净集成。
 
 ## 主仓库侧建议

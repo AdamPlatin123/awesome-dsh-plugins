@@ -8,7 +8,7 @@
 - [issues.md](issues.md) — 不适用
 - [dsh-live-stats.md](dsh-live-stats.md) — 兼容
 - [dsh-working-activity.md](dsh-working-activity.md) — 需适配
-- [plugin-registry.md](plugin-registry.md) — 兼容
+- [plugin-registry.md](plugin-registry.md) — 需适配
 - [sandbox-mxc.md](sandbox-mxc.md) — 兼容
 - [web-components.md](web-components.md) — 兼容
 - [dsh-opencode-server.md](dsh-opencode-server.md) — 兼容
@@ -61,8 +61,11 @@
 - [dsh-ui-progress.md](dsh-ui-progress.md) — 兼容
 - [turtle-ui.md](turtle-ui.md) — 需适配
 - [dsh-cc-tui.md](dsh-cc-tui.md) — 关注
-- [Qwen-MM-Plugins.md](Qwen-MM-Plugins.md) — 占位
+- [Qwen-MM-Plugins.md](Qwen-MM-Plugins.md) — 需适配
 - [dsh-web-ui.md](dsh-web-ui.md) — 兼容
+- [dsh-ui-whale.md](dsh-ui-whale.md) — 兼容
+- [Recall.md](Recall.md) — 兼容
+- [dsh-prompt-studio.md](dsh-prompt-studio.md) — 兼容
 
 ## 相关资产
 

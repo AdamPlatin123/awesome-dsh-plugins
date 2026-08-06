@@ -1,13 +1,13 @@
-# sandbox-mxc — 与 mainline 兼容性对比（2026-08-06）
-> 调研摘要（只读资产，本报告不复制其正文）：[research/sandbox-mxc.md](../../research/sandbox-mxc.md)——集成点与调研全文以 research 为准。
+# dsh-prompt-studio — 与 mainline 兼容性对比（2026-08-06）
+> 调研摘要（只读资产，本报告不复制其正文）：[research/dsh-prompt-studio.md](../../research/dsh-prompt-studio.md)——集成点与调研全文以 research 为准。
 
 ## 克隆证据
 
-- 克隆 HEAD：9f5ff18
+- 克隆 HEAD：9fa3a74
 - 锚定：未知（unknown，未知）
 - 补丁：无补丁
 - seam：缺: tuiPrompt
-- peerDeps：1 项匹配
+- peerDeps：无 dsh-* 依赖
 
 ## 四维对比
 
@@ -16,7 +16,7 @@
 | 锚定 vs 当日 mainline | 未知 |
 | 补丁 apply --check --3way | 无补丁 |
 | seam 符号存在性 | 缺: tuiPrompt |
-| peerDeps 范围 vs mainline 实际 | 1 项匹配 |
+| peerDeps 范围 vs mainline 实际 | 无 dsh-* 依赖 |
 | **综合判定** | **兼容** |
 
 ## 建议
