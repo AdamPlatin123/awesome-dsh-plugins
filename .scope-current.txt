@@ -55,3 +55,7 @@ dsh-ui-progress
 turtle-ui
 dsh-cc-tui
 Qwen-MM-Plugins
+dsh-web-ui
+dsh-ui-whale
+Recall
+dsh-prompt-studio
