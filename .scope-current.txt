@@ -70,3 +70,10 @@ dsh-deep-research
 dsh-multimedia-webui-input
 repo-visibility-guard
 dsh-grok-tui
+ds_web_craw
+fabric
+dsh-browser
+dsh-desktop-mac
+dsh-public-repo-monitor
+dsh-tui
+dsh-inspect
