@@ -764,7 +764,7 @@ $detail_all
   fi
 
   # 汇总打印
-  info "兼容性汇总：${#REPOS[@]} 仓库 → 无需适配 $(( ${#REPOS[@]} - adapt )) / 需适配 $adapt（${adapt_names:-无}）/ 关注 $watch / 占位 $placeholder / 不适用 $na"
+  info "兼容性汇总：${#REPOS[@]} 仓库 → 无需适配 $(( ${#REPOS[@]} - adapt - gone )) / 需适配 $adapt（${adapt_names:-无}）/ 关注 $watch / 占位 $placeholder / 不适用 $na / 已删除 $gone"
 }
 
 update_changelog() {
