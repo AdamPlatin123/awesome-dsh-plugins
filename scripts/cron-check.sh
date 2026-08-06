@@ -24,9 +24,13 @@ done
 git pull dsh-ext main --ff-only 2>&1 | tail -1 || echo "[提示] git pull 失败（可能离线或已最新），继续"
 
 # 2. 已知仓库（调研基线 15 仓）+ 动态发现新仓库
-KNOWN_REPOS=( issues dsh-live-stats dsh-working-activity plugin-registry sandbox-mxc \
-              web-components dsh-opencode-server toybox ex-setting tg-bot \
-              group-chat-diary dsh-skins dsh-coding-receipt qqbot dsh-subagent-tree )
+# 已知仓库 = 已调研摘要清单（research/*.md 文件名，新增摘要自动同步；不再手工维护）
+KNOWN_REPOS=()
+for _f in research/*.md; do
+  [ -f "$_f" ] || continue
+  _n="${_f##*/}"; _n="${_n%.md}"
+  [ -n "$_n" ] && KNOWN_REPOS+=( "$_n" )
+done
 SELF_REPO="dsh-external-research"   # 本仓库自身，不纳入索引
 
 # 动态拉取 org 全部仓库名（失败则回退已知列表，不误报离线）
