@@ -69,7 +69,8 @@ declare -A CATALOG_REF
 declare -A PATCH_ST     # OK / CONFLICT / 缺文件 / 无补丁 / 不适用
 declare -A SEAM_ST      # "6/6 存在" / "缺: tuiPrompt" / 不适用
 declare -A PEER_ST      # "2 项匹配" / "1 项不匹配" / 无 / 不适用
-declare -A OVERALL      # 兼容 / 需适配 / 关注 / 占位 / 不适用
+declare -A OVERALL      # 兼容 / 需适配 / 关注 / 占位 / 不适用 / 已删除
+REPO_GONE=()             # 本次运行发现已删除/迁移/改私有的仓库（跳过不索引）
 declare -A REPO_HEAD    # 克隆 HEAD 短 commit
 
 # ---- 小工具 -----------------------------------------------------------------
@@ -83,11 +84,25 @@ die()   { # $1=退出码 $2=消息
 
 # 分类拉取失败：离线/认证 → 退出码 3；其他错误 → 退出码 2。
 # 绝不静默降级为占位（新 clone 失败）或继续读旧缓存（fetch 失败）。
+# 例外：repository not found（仓库被删除/迁移/改为私有）是确定性事实，不中断整体索引。
+#   调用方在调用 fetch_fail 前先经 is_repo_gone() 拦截，标记"已删除"后跳过该仓库继续。
+FETCH_ERR_NOT_FOUND=8
+is_repo_gone() { # $1=git 错误输出 → 0=仓库不存在（应跳过） 1=其他
+  printf '%s' "$1" | grep -qiE 'repository not found|not found|does not appear to be a git repository|404' \
+    && ! printf '%s' "$1" | grep -qiE 'could not resolve host|connection (timed out|refused|reset)|unable to access' \
+    && return 0
+  return 1
+}
+
 fetch_fail() { # $1=对象（mainline/仓库名） $2=阶段 $3=git 输出
   local obj="$1" stage="$2" err="$3" first
   first="$(printf '%s' "$err" | sed '/^[[:space:]]*$/d' | head -1)"
+  if is_repo_gone "$err"; then
+    warn "仓库不存在（已删除/迁移/改为私有）→ 跳过并继续：$obj"
+    return "$FETCH_ERR_NOT_FOUND"
+  fi
   if printf '%s' "$err" | grep -qiE \
-    'could not resolve host|connection (timed out|refused|reset)|network is unreachable|operation timed out|unable to access|authentication failed|access denied|access rights|permission denied|not authorized|403|repository not found|terminal prompts disabled|connection reset by peer'; then
+    'could not resolve host|connection (timed out|refused|reset)|network is unreachable|operation timed out|unable to access|authentication failed|access denied|access rights|permission denied|not authorized|403|terminal prompts disabled|connection reset by peer'; then
     die 3 "拉取 $obj 失败（$stage）：疑似离线/认证问题${first:+：$first}"
   fi
   die 2 "拉取 $obj 失败（$stage）${first:+：$first}"
@@ -252,13 +267,13 @@ repo_fetch() {
     *) die 2 "仓库克隆路径逃逸（$dir_real 不在 $clones_real 内）: $name" ;;
   esac
   # H3 先探测远端 ref：clone/fetch 网络/认证错误在动手前就暴露，空仓与拉取失败从此区分
-  lsref="$(git ls-remote --heads "$url" 2>&1)" || fetch_fail "$name" "ls-remote" "$lsref"
+  lsref="$(git ls-remote --heads "$url" 2>&1)" || { fetch_fail "$name" "ls-remote" "$lsref" || { REPO_GONE+=("$name"); return 0; }; }
   if [ -z "$lsref" ]; then
     # 空仓：远端可达但无任何 ref（clone 成功但 ls-remote 无 ref）→ 占位，非拉取失败
     if [ ! -d "$dir/.git" ]; then
       merr="$(mktemp)"
       if ! git clone --quiet --depth 1 "$url" "$dir" >/dev/null 2>"$merr"; then
-        fetch_fail "$name" "clone(空仓初始化)" "$(cat "$merr")"
+        fetch_fail "$name" "clone(空仓初始化)" "$(cat "$merr")" || { REPO_GONE+=("$name"); return 0; }
       fi
       rm -f "$merr"
     fi
@@ -268,11 +283,11 @@ repo_fetch() {
   merr="$(mktemp)"
   if [ ! -d "$dir/.git" ]; then
     if ! git clone --quiet --depth 1 "$url" "$dir" >/dev/null 2>"$merr"; then
-      fetch_fail "$name" "clone" "$(cat "$merr")"
+      fetch_fail "$name" "clone" "$(cat "$merr")" || { REPO_GONE+=("$name"); return 0; }
     fi
   else
     if ! git -C "$dir" fetch --quiet --depth 1 origin HEAD >/dev/null 2>"$merr"; then
-      fetch_fail "$name" "fetch" "$(cat "$merr")"
+      fetch_fail "$name" "fetch" "$(cat "$merr")" || { REPO_GONE+=("$name"); return 0; }
     fi
     git -C "$dir" reset --hard --quiet FETCH_HEAD >/dev/null 2>&1 \
       || die 2 "重置 $name 到 FETCH_HEAD 失败"
@@ -467,6 +482,7 @@ seam_keyword() {
 overall_judge() {
   local name="$1"
   local is_noncode=0 n sym kw txt seam_hit=0
+  for g in "${REPO_GONE[@]:-}"; do [ "$g" = "$name" ] && { OVERALL[$name]="已删除"; return 0; }; done
   for n in "${NONCODE_REPOS[@]}"; do [ "$n" = "$name" ] && is_noncode=1; done
   # 空仓库（占位）
   if [ -z "${REPO_HEAD[$name]:-}" ]; then OVERALL[$name]="占位"; return 0; fi
@@ -513,7 +529,7 @@ mainline_diff_analyze() {
 build_reports() {
   local name row
   local matrix_rows="" detail_all="" sugg_plugin="" sugg_main=""
-  local ok=0 adapt=0 watch=0 placeholder=0 na=0
+  local ok=0 adapt=0 watch=0 placeholder=0 na=0 gone=0
   local adapt_names=""
 
   for name in "${REPOS[@]}"; do
@@ -523,6 +539,7 @@ build_reports() {
       关注) watch=$((watch+1)) ;;
       占位) placeholder=$((placeholder+1)) ;;
       不适用) na=$((na+1)) ;;
+      已删除) gone=$((gone+1)) ;;
     esac
   done
   adapt_names="$(printf '%s' "$adapt_names" | xargs)"
@@ -672,8 +689,8 @@ $p"
       printf '# mainline 兼容性报告（%s）\n\n' "$DATE"
       printf -- '- mainline：`%s`（snapshots/%s）\n' "$MAINLINE_SHORT" "$MAINLINE_LABEL"
       printf -- '- 上次对比：`%s`\n' "$PREV_COMMIT"
-      printf -- '- 兼容性：%s/%s 无需适配，%s 需适配（%s）；其中关注 %s、占位 %s、不适用 %s\n\n' \
-        "$(( ${#REPOS[@]} - adapt ))" "${#REPOS[@]}" "$adapt" "${adapt_names:-无}" "$watch" "$placeholder" "$na"
+      printf -- '- 兼容性：%s/%s 无需适配，%s 需适配（%s）；其中关注 %s、占位 %s、不适用 %s、已删除 %s\n\n' \
+        "$(( ${#REPOS[@]} - adapt - gone ))" "${#REPOS[@]}" "$adapt" "${adapt_names:-无}" "$watch" "$placeholder" "$na" "$gone"
       printf '## 兼容性矩阵\n\n| 仓库 | 锚定 | 补丁 | seam | peerDeps | 综合判定 |\n|---|---|---|---|---|---|%s\n\n' "$matrix_rows"
       printf '## mainline 变更分析（%s → %s）\n\n' "$PREV_COMMIT" "$MAINLINE_SHORT"
       printf '### 关键变更\n%s\n\n' "$changes"
