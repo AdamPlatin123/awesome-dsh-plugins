@@ -77,3 +77,5 @@ dsh-desktop-mac
 dsh-public-repo-monitor
 dsh-tui
 dsh-inspect
+dsh-hub
+dsh-alphasolve

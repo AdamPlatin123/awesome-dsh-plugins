@@ -1,7 +1,7 @@
 {
   "lastMainlineCommit": "9d84ab42354a70058a66a826c4473e55925052b6",
   "lastDate": "2026-08-07",
-  "previousCommit": "bfb913696efaa241b92fe8731b2d2336bdb7f697",
+  "previousCommit": "9d84ab42354a70058a66a826c4473e55925052b6",
   "repos": {
     "chat-width": {
       "anchoredCommit": "未知",
@@ -317,6 +317,14 @@
     },
     "dsh-inspect": {
       "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-hub": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-alphasolve": {
+      "anchoredCommit": "279244acb0",
       "status": "兼容"
     }
   }

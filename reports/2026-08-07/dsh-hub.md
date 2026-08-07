@@ -1,9 +1,9 @@
-# dsh-memory-evolve — 与 mainline 兼容性对比（2026-08-07）
-> 调研摘要（只读资产，本报告不复制其正文）：[research/dsh-memory-evolve.md](../../research/dsh-memory-evolve.md)——集成点与调研全文以 research 为准。
+# dsh-hub — 与 mainline 兼容性对比（2026-08-07）
+> 调研摘要（只读资产，本报告不复制其正文）：[research/dsh-hub.md](../../research/dsh-hub.md)——集成点与调研全文以 research 为准。
 
 ## 克隆证据
 
-- 克隆 HEAD：68d05de
+- 克隆 HEAD：c3ef5e7
 - 锚定：未知（unknown，未知）
 - 补丁：无补丁
 - seam：缺: tuiPrompt

@@ -1,6 +1,6 @@
 # 当日索引（2026-08-07）
 - [主报告 mainline-compat.md](mainline-compat.md)（兼容性矩阵 + mainline 变更分析 + 双方建议）
-- mainline：`9d84ab4`（snapshots/20260806T160212Z），上次 `bfb913696efaa241b92fe8731b2d2336bdb7f697`
+- mainline：`9d84ab4`（snapshots/20260806T160212Z），上次 `9d84ab42354a70058a66a826c4473e55925052b6`
 - [返回 CHANGELOG](../../CHANGELOG.md)
 
 ## 仓库详情
@@ -84,6 +84,8 @@
 - [dsh-public-repo-monitor.md](dsh-public-repo-monitor.md) — 兼容
 - [dsh-tui.md](dsh-tui.md) — 占位
 - [dsh-inspect.md](dsh-inspect.md) — 兼容
+- [dsh-hub.md](dsh-hub.md) — 兼容
+- [dsh-alphasolve.md](dsh-alphasolve.md) — 兼容
 
 ## 相关资产
 
