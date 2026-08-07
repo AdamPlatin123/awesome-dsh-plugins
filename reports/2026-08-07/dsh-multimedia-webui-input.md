@@ -3,8 +3,8 @@
 
 ## 克隆证据
 
-- 克隆 HEAD：9705062
-- 锚定：ce1fc03f95（commit，未知（不同谱系））
+- 克隆 HEAD：d6cb64a
+- 锚定：279244acb0（commit，未知（不同谱系））
 - 补丁：无补丁
 - seam：缺: tuiPrompt
 - peerDeps：无 dsh-* 依赖

@@ -3,7 +3,7 @@
 
 ## 克隆证据
 
-- 克隆 HEAD：d1ab0c3
+- 克隆 HEAD：22e13da
 - 锚定：YYYY-MM-DD（label，未知（非 commit 锚定: YYYY-MM-DD））
 - 补丁：不适用
 - seam：不适用

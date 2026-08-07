@@ -3,11 +3,11 @@
 
 ## 克隆证据
 
-- 克隆 HEAD：595b59e
+- 克隆 HEAD：fa79a1f
 - 锚定：25b2ad4f67（commit，未知（不同谱系））
 - 补丁：无补丁
 - seam：缺: tuiPrompt
-- peerDeps：无 dsh-* 依赖
+- peerDeps：1 项匹配
 
 ## 四维对比
 
@@ -16,7 +16,7 @@
 | 锚定 vs 当日 mainline | 未知（不同谱系） |
 | 补丁 apply --check --3way | 无补丁 |
 | seam 符号存在性 | 缺: tuiPrompt |
-| peerDeps 范围 vs mainline 实际 | 无 dsh-* 依赖 |
+| peerDeps 范围 vs mainline 实际 | 1 项匹配 |
 | **综合判定** | **兼容** |
 
 ## 建议

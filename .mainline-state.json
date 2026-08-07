@@ -140,11 +140,11 @@
       "status": "兼容"
     },
     "dsh-ui-progress": {
-      "anchoredCommit": "未知",
+      "anchoredCommit": "ce1fc03f95",
       "status": "兼容"
     },
     "dsh-ui-whale": {
-      "anchoredCommit": "未知",
+      "anchoredCommit": "ce1fc03f95",
       "status": "兼容"
     },
     "dsh-vision": {
@@ -280,7 +280,7 @@
       "status": "兼容"
     },
     "dsh-multimedia-webui-input": {
-      "anchoredCommit": "ce1fc03f95",
+      "anchoredCommit": "279244acb0",
       "status": "兼容"
     },
     "repo-visibility-guard": {
@@ -325,6 +325,14 @@
     },
     "dsh-alphasolve": {
       "anchoredCommit": "279244acb0",
+      "status": "兼容"
+    },
+    "zotero-wave-rag": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "onboarding": {
+      "anchoredCommit": "未知",
       "status": "兼容"
     }
   }

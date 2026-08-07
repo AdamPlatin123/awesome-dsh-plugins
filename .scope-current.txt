@@ -79,3 +79,5 @@ dsh-tui
 dsh-inspect
 dsh-hub
 dsh-alphasolve
+zotero-wave-rag
+onboarding

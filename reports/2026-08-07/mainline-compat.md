@@ -2,7 +2,7 @@
 
 - mainline：`9d84ab4`（snapshots/20260806T160212Z）
 - 上次对比：`9d84ab42354a70058a66a826c4473e55925052b6`
-- 兼容性：70/81 无需适配，10 需适配（dsh-my-rsi dsh-subagent-tree dsh-working-activity ex-setting plugin-registry Qwen-MM-Plugins sandbox-mxc turtle-ui web-components fabric）；其中关注 3、占位 4、不适用 2、已删除 1
+- 兼容性：72/83 无需适配，10 需适配（dsh-my-rsi dsh-subagent-tree dsh-working-activity ex-setting plugin-registry Qwen-MM-Plugins sandbox-mxc turtle-ui web-components fabric）；其中关注 3、占位 4、不适用 2、已删除 1
 
 ## 兼容性矩阵
 
@@ -15,7 +15,7 @@
 | dsh-acp | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 兼容 |
 | dsh-agent-session-sources | 未知 | 无补丁 | 缺: tuiPrompt | 29 项匹配 | 兼容 |
 | dsh-artifact | 未知 | 无补丁 | 缺: tuiPrompt | 2 项匹配 | 兼容 |
-| dsh-cc-tui | 未知 | 无补丁 | 缺: tuiPrompt | 4 项匹配 | 关注 |
+| dsh-cc-tui | 未知 | 无补丁 | 缺: tuiPrompt | 7 项匹配 | 关注 |
 | dsh-coding-receipt | 未知 | 不适用（空仓库） | 不适用（空仓库） | 不适用 | 占位 |
 | dsh-companion | 未知 | 无补丁 | 缺: tuiPrompt | 7 项匹配 | 兼容 |
 | dsh-cordis-examples | 未知 | 不适用（空仓库） | 不适用（空仓库） | 不适用 | 占位 |
@@ -38,12 +38,12 @@
 | dsh-skins | 未知（不同谱系） | 无补丁 | 缺: tuiPrompt | 5 项匹配 | 兼容 |
 | dsh-subagent-tree | 未知 | CONFLICT（1 个补丁中 0 个 OK） | 缺: tuiPrompt | 6 项匹配 | 需适配 |
 | dsh-tool-browser | 未知（catalog ref，非 mainline 锚定） | 无补丁 | 缺: tuiPrompt | 5 项匹配 | 兼容 |
-| dsh-tool-calculator | 未知（不同谱系） | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 兼容 |
-| dsh-tool-encoding | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 兼容 |
-| dsh-tool-json | 未知（不同谱系） | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 兼容 |
-| dsh-tool-time | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 兼容 |
-| dsh-ui-progress | 未知 | 无补丁 | 缺: tuiPrompt | 2 项匹配 | 兼容 |
-| dsh-ui-whale | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 兼容 |
+| dsh-tool-calculator | 未知（不同谱系） | 无补丁 | 缺: tuiPrompt | 1 项匹配 | 兼容 |
+| dsh-tool-encoding | 未知 | 无补丁 | 缺: tuiPrompt | 2 项匹配 | 兼容 |
+| dsh-tool-json | 未知（不同谱系） | 无补丁 | 缺: tuiPrompt | 1 项匹配 | 兼容 |
+| dsh-tool-time | 未知 | 无补丁 | 缺: tuiPrompt | 2 项匹配 | 兼容 |
+| dsh-ui-progress | 未知（不同谱系） | 无补丁 | 缺: tuiPrompt | 2 项匹配 | 兼容 |
+| dsh-ui-whale | 未知（不同谱系） | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 兼容 |
 | dsh-vision | 未知 | 无补丁 | 缺: tuiPrompt | 2 项匹配 | 兼容 |
 | dsh-web-terminal | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 兼容 |
 | dsh-web-ui-approval-notify | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 兼容 |
@@ -58,7 +58,7 @@
 | hub | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 兼容 |
 | issues | 未知 | 不适用 | 不适用 | 不适用 | 不适用 |
 | marisa | 未知 | 无补丁 | 缺: tuiPrompt | 2 项匹配 | 关注 |
-| plugin-registry | 未知（非 commit 锚定: 20260804T143803Z） | CONFLICT（1 个补丁中 0 个 OK） | 缺: tuiPrompt | 11 项匹配 | 需适配 |
+| plugin-registry | 未知（非 commit 锚定: 20260804T143803Z） | CONFLICT（2 个补丁中 1 个 OK） | 缺: tuiPrompt | 12 项匹配 | 需适配 |
 | qqbot | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 兼容 |
 | Qwen-MM-Plugins | 未知（不同谱系） | CONFLICT（1 个补丁中 0 个 OK） | 缺: tuiPrompt | 4 项匹配 | 需适配 |
 | Recall | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 兼容 |
@@ -89,6 +89,8 @@
 | dsh-inspect | 未知 | 无补丁 | 缺: tuiPrompt | 1 项匹配 | 兼容 |
 | dsh-hub | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 兼容 |
 | dsh-alphasolve | 未知（不同谱系） | 无补丁 | 缺: tuiPrompt | 6 项匹配 | 兼容 |
+| zotero-wave-rag | 未知 | 无补丁 | 缺: tuiPrompt | 1 项匹配 | 兼容 |
+| onboarding | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 兼容 |
 
 ## mainline 变更分析（9d84ab42354a70058a66a826c4473e55925052b6 → 9d84ab4）
 
@@ -144,7 +146,7 @@
 ### dsh-artifact
 - 兼容：锚定 未知（未知）、补丁「无补丁」，当日 mainline 可干净集成。
 ### dsh-cc-tui
-- 关注：seam 或 peerDeps 存在不匹配（seam: 缺: tuiPrompt；peer: 4 项匹配），建议确认所依赖的宿主面当日是否仍满足。
+- 关注：seam 或 peerDeps 存在不匹配（seam: 缺: tuiPrompt；peer: 7 项匹配），建议确认所依赖的宿主面当日是否仍满足。
 ### dsh-coding-receipt
 - 占位仓库（0 commit），无集成点可对比；建议首个 commit 落地后再纳入兼容跟踪。
 - 输入来自 DSH session log，建议在 mainline 会话持久化格式稳定后实现。
@@ -201,9 +203,9 @@
 ### dsh-tool-time
 - 兼容：锚定 未知（未知）、补丁「无补丁」，当日 mainline 可干净集成。
 ### dsh-ui-progress
-- 兼容：锚定 未知（未知）、补丁「无补丁」，当日 mainline 可干净集成。
+- 兼容：锚定 ce1fc03f95（未知（不同谱系））、补丁「无补丁」，当日 mainline 可干净集成。
 ### dsh-ui-whale
-- 兼容：锚定 未知（未知）、补丁「无补丁」，当日 mainline 可干净集成。
+- 兼容：锚定 ce1fc03f95（未知（不同谱系））、补丁「无补丁」，当日 mainline 可干净集成。
 ### dsh-vision
 - 兼容：锚定 未知（未知）、补丁「无补丁」，当日 mainline 可干净集成。
 ### dsh-web-terminal
@@ -235,7 +237,7 @@
 ### marisa
 - 关注：seam 或 peerDeps 存在不匹配（seam: 缺: tuiPrompt；peer: 2 项匹配），建议确认所依赖的宿主面当日是否仍满足。
 ### plugin-registry
-- 需适配：锚定 20260804T143803Z（未知（非 commit 锚定: 20260804T143803Z））、补丁状态「CONFLICT（1 个补丁中 0 个 OK）」；建议以当日 snapshot HEAD（9d84ab4）为新基线重新锚定/rebuild 补丁。
+- 需适配：锚定 20260804T143803Z（未知（非 commit 锚定: 20260804T143803Z））、补丁状态「CONFLICT（2 个补丁中 1 个 OK）」；建议以当日 snapshot HEAD（9d84ab4）为新基线重新锚定/rebuild 补丁。
 - 补丁冲突/缺文件点集中在 mainline 变更分析节列出的破坏面，优先把集成改到稳定 seam（slots/sessionProjections/ThemeService）上。
 ### qqbot
 - 兼容：锚定 未知（未知）、补丁「无补丁」，当日 mainline 可干净集成。
@@ -279,7 +281,7 @@
 ### dsh-deep-research
 - 兼容：锚定 未知（未知）、补丁「无补丁」，当日 mainline 可干净集成。
 ### dsh-multimedia-webui-input
-- 兼容：锚定 ce1fc03f95（未知（不同谱系））、补丁「无补丁」，当日 mainline 可干净集成。
+- 兼容：锚定 279244acb0（未知（不同谱系））、补丁「无补丁」，当日 mainline 可干净集成。
 ### repo-visibility-guard
 - 兼容：锚定 未知（未知）、补丁「无补丁」，当日 mainline 可干净集成。
 ### dsh-grok-tui
@@ -303,6 +305,10 @@
 - 兼容：锚定 未知（未知）、补丁「无补丁」，当日 mainline 可干净集成。
 ### dsh-alphasolve
 - 兼容：锚定 279244acb0（未知（不同谱系））、补丁「无补丁」，当日 mainline 可干净集成。
+### zotero-wave-rag
+- 兼容：锚定 未知（未知）、补丁「无补丁」，当日 mainline 可干净集成。
+### onboarding
+- 兼容：锚定 未知（未知）、补丁「无补丁」，当日 mainline 可干净集成。
 
 ## 主仓库侧建议
 

@@ -86,6 +86,8 @@
 - [dsh-inspect.md](dsh-inspect.md) — 兼容
 - [dsh-hub.md](dsh-hub.md) — 兼容
 - [dsh-alphasolve.md](dsh-alphasolve.md) — 兼容
+- [zotero-wave-rag.md](zotero-wave-rag.md) — 兼容
+- [onboarding.md](onboarding.md) — 兼容
 
 ## 相关资产
 
