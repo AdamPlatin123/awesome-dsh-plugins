@@ -81,3 +81,15 @@ dsh-hub
 dsh-alphasolve
 zotero-wave-rag
 onboarding
+ego-browser
+dsh-nowledge-mem
+dsh-sidechain
+dsh-a2a
+dsh-feishu-notify
+dsh-remote
+mstar-workflow
+dsh-scholar
+dsh-issue-like-skill
+dsh-tool-csv
+dsh-tool-regex
+dsh-session-repair-skill
