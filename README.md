@@ -3,19 +3,19 @@
 > 面向 DSH 插件开发者的组织级情报门户：每 8 小时自动索引 dsh-external 全部仓库，对比当日 mainline 接口差异，产出兼容性矩阵、新增/修改跟踪与双方开发者建议。
 
 <!-- AUTO:ecosystem:START -->
-> 自动更新：2026-08-09_0239（cron 每 8 小时 · 报告日 2026-08-08 · mainline `0882344`）
+> 自动更新：2026-08-09_0452（cron 每 8 小时 · 报告日 2026-08-09 · mainline `0882344`）
 
 **生态仪表盘**
 
 | 指标 | 值 |
 |---|---|
-| 仓库总数 | 134 |
-| ✅ 无需适配 | 123 |
+| 仓库总数 | 141 |
+| ✅ 无需适配 | 63 |
 | ⚠️ 需适配 | 10 |
 | 关注 / 占位 / 不适用 / 已删除 | 3 / 8 / 2 / 1 |
 | 🐙 开放 PR | 2 |
 
-📄 **最新报告**：[mainline-compat.md](reports/2026-08-08/mainline-compat.md) · [当日索引](reports/2026-08-08/index.md)（完整矩阵 + 双方建议）
+📄 **最新报告**：[mainline-compat.md](reports/2026-08-09/mainline-compat.md) · [当日索引](reports/2026-08-09/index.md)（完整矩阵 + 双方建议）
 
 **今日新增 / 修改仓库**
 
@@ -37,30 +37,70 @@
 | dsh-public-repo-monitor | 🆕 新增 |
 | dsh-tui | 🆕 新增 |
 | dsh-inspect | 🆕 新增 |
-| dsh-cc-tui | ✏️ 修改 |
-| dsh-memory-evolve | ✏️ 修改 |
-| dsh-session-search | ✏️ 修改 |
-| dsh-sfw | ✏️ 修改 |
-| dsh-skins | ✏️ 修改 |
-| dsh-ui-progress | ✏️ 修改 |
-| dsh-ui-whale | ✏️ 修改 |
-| dsh-win-port | ✏️ 修改 |
-| hub | ✏️ 修改 |
-| dsh-hub | ✏️ 修改 |
-| dsh-a2a | ✏️ 修改 |
-| dsh-feishu-notify | ✏️ 修改 |
-| dsh-web-workflow-visualizer | ✏️ 修改 |
-| dsh-checkpoint | ✏️ 修改 |
-| dsh-rewind | ✏️ 修改 |
-| official-plugins-port | ✏️ 修改 |
-| oh-my-dsh | ✏️ 修改 |
-| dsh-profile-bundle-example | ✏️ 修改 |
-| dsh-plan-execute | ✏️ 修改 |
-| dsh-paste-input | ✏️ 修改 |
-| zotero-harvest | ✏️ 修改 |
-| dsh-bash-encoding | ✏️ 修改 |
-| dsh-skill-stats | ✏️ 修改 |
-| dsh-web-archive | ✏️ 修改 |
+| dsh-hub | 🆕 新增 |
+| dsh-alphasolve | 🆕 新增 |
+| zotero-wave-rag | 🆕 新增 |
+| onboarding | 🆕 新增 |
+| ego-browser | 🆕 新增 |
+| dsh-nowledge-mem | 🆕 新增 |
+| dsh-sidechain | 🆕 新增 |
+| dsh-a2a | 🆕 新增 |
+| dsh-feishu-notify | 🆕 新增 |
+| dsh-remote | 🆕 新增 |
+| mstar-workflow | 🆕 新增 |
+| dsh-scholar | 🆕 新增 |
+| dsh-issue-like-skill | 🆕 新增 |
+| dsh-tool-csv | 🆕 新增 |
+| dsh-tool-regex | 🆕 新增 |
+| dsh-session-repair-skill | 🆕 新增 |
+| DSH-better-sidebar | 🆕 新增 |
+| dsh-session-hub | 🆕 新增 |
+| dsh-ica | 🆕 新增 |
+| dsh-advisor | 🆕 新增 |
+| dsh-llm-fallbacks | 🆕 新增 |
+| dsh-web-workflow-visualizer | 🆕 新增 |
+| dsh-checkpoint | 🆕 新增 |
+| dsh-rewind | 🆕 新增 |
+| official-plugins-port | 🆕 新增 |
+| oh-my-dsh | 🆕 新增 |
+| dsh-side-panel | 🆕 新增 |
+| dsh-profile-bundle-example | 🆕 新增 |
+| dsh-plan-execute | 🆕 新增 |
+| dsh-paste-input | 🆕 新增 |
+| zotero-harvest | 🆕 新增 |
+| dsh-mygo | 🆕 新增 |
+| zephyr | 🆕 新增 |
+| dsh-bash-encoding | 🆕 新增 |
+| dsh-skill-stats | 🆕 新增 |
+| dsh-web-archive | 🆕 新增 |
+| sandbox-micro | 🆕 新增 |
+| dsh-git-identity | 🆕 新增 |
+| dsh-android | 🆕 新增 |
+| dsh-lazyfish | 🆕 新增 |
+| dsh-auto-approval | 🆕 新增 |
+| dsh-crew | 🆕 新增 |
+| dsh-input-history | 🆕 新增 |
+| dsh-client-ui-plan-execute | 🆕 新增 |
+| dsh-stickers | 🆕 新增 |
+| deep-standard-skill | 🆕 新增 |
+| dsh-serenity-plugin | 🆕 新增 |
+| dsh-toolkit | 🆕 新增 |
+| dsh-tool-markdown | 🆕 新增 |
+| dsh-session-health | 🆕 新增 |
+| dsh-desktop-tools | 🆕 新增 |
+| dsh-reuse-first | 🆕 新增 |
+| dsh-plus | 🆕 新增 |
+| dsh-session-cluster | 🆕 新增 |
+| DSH-UI4A | 🆕 新增 |
+| dsh-visualize | 🆕 新增 |
+| dsh-tps | 🆕 新增 |
+| dsh-plugin-check | 🆕 新增 |
+| dsh-plugin-dev | 🆕 新增 |
+| dsh-gomoku | 🆕 新增 |
+| dsh-101 | 🆕 新增 |
+| dsh-change-ledger | 🆕 新增 |
+| （今日无修改） | |
+
 **需适配（补丁基线 / seam 变化）**
 
 | 仓库 | 锚定 | 判定 |
