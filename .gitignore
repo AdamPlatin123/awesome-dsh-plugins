@@ -4,3 +4,4 @@ node_modules/
 *.log
 .cron-state.json
 .scope-current.txt
+.last-changes.json

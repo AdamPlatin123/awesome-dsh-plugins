@@ -91,6 +91,35 @@ else
   CHANGED="all(首次)"
 fi
 
+# 3.5 记录本次新增/修改仓库（供 README 自动仪表盘渲染）
+#     新增 = 本次发现的 NEW_REPOS；修改 = CHANGED 中非新增的已知仓库
+CHANGED_REPOS=()
+for _c in $CHANGED; do
+  [ "$_c" = "all(首次)" ] && continue
+  _is_new=0
+  for _n in "${NEW_REPOS[@]:-}"; do [ "$_n" = "$_c" ] && _is_new=1 && break; done
+  [ "$_is_new" -eq 0 ] && CHANGED_REPOS+=( "$_c" )
+done
+{
+  printf '{"date":"%s","new_repos":[' "$(date +%Y-%m-%d)"
+  _first=1
+  for _n in "${NEW_REPOS[@]:-}"; do
+    [ $_first -eq 0 ] && printf ','
+    printf '"%s"' "$_n"
+    _first=0
+  done
+  printf '],"changed_repos":['
+  _first=1
+  for _c in "${CHANGED_REPOS[@]:-}"; do
+    [ $_first -eq 0 ] && printf ','
+    printf '"%s"' "$_c"
+    _first=0
+  done
+  printf ']}'
+} > .last-changes.json.tmp && mv .last-changes.json.tmp .last-changes.json
+
+echo "[状态] .last-changes.json 已记录（新增 ${#NEW_REPOS[@]:-0} / 修改 ${#CHANGED_REPOS[@]}）"
+
 # 4. 有变化 → 运行 mainline 兼容索引（动态 scope）
 if [ -n "$CHANGED" ]; then
   echo "[索引] 变化仓库:$CHANGED"
