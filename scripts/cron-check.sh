@@ -111,6 +111,22 @@ else
   echo "[无变化] 全部仓库 HEAD 未变，跳过索引"
 fi
 
+# 5.5 每次运行后更新 README 自动状态节（兼容性汇总 + 跟踪中的 PR）
+#     PR 状态变化也 commit——README 是每日状态视图，不依赖仓库 HEAD 变化
+echo "[README] 更新自动状态节..."
+if ./scripts/update-readme.sh >/dev/null 2>&1; then
+  if ! git diff --quiet -- README.md; then
+    git add README.md
+    git -c user.name="dsh-ecosystem-bot" -c user.email="bot@dsh-external.local" \
+      commit -m "chore: README 生态状态更新 $(date +%Y-%m-%d_%H%M)（兼容性汇总 + PR 跟踪）" || echo "[提示] README commit 失败"
+    git push dsh-ext main 2>&1 | tail -1 || echo "[提示] README push 失败，下次 cron 重试"
+  else
+    echo "[README] 无变化（状态与 PR 列表未变）"
+  fi
+else
+  echo "[README] 更新失败（gh 离线或解析错误），下次重试"
+fi
+
 # 6. 更新状态文件（记录当前 HEAD）
 {
   echo "{"
