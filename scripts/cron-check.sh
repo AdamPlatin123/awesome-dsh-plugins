@@ -1,11 +1,15 @@
 #!/usr/bin/env bash
 # 每 8 小时自动运行（cron）：
-#   1) 动态发现 dsh-external org 新仓库（gh api），与已知 15 仓合并为检测范围
+#   1) 动态发现 dsh-external org 新仓库（gh api），与已知仓库合并为检测范围
 #   2) 检测 mainline + 全部仓库 HEAD 变化
-#   3) 有变化（或发现新仓库）→ 运行 mainline 兼容索引（--scope 动态清单）
-#   4) 更新报告/CHANGELOG 并推送回 org repo
+#   3) 有变化（或 --full 强制）→ 运行 mainline 兼容索引（--scope 动态清单）
+#   4) 更新报告/CHANGELOG/README 并推送回 org repo
+# 用法：cron-check.sh [--full]  — --full 跳过变化检测，全量索引所有仓库（cron 02:00 班次）
 # 依赖：bash/git/gh/jq（gh 已认证，git credential 走 gh auth setup-git）
 set -uo pipefail
+
+FULL=0
+for _arg in "$@"; do [ "$_arg" = "--full" ] && FULL=1; done
 
 REPO_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$REPO_DIR" || exit 2
@@ -13,7 +17,7 @@ mkdir -p logs
 LOG="logs/cron-$(date +%Y%m%d).log"
 exec >> "$LOG" 2>&1
 
-echo "=== $(date -Is) cron-check 开始 ==="
+[ "$FULL" -eq 1 ] && echo "=== $(date -Is) cron-check 开始（--full 全量模式） ===" || echo "=== $(date -Is) cron-check 开始 ==="
 
 # 0. 依赖预检
 for dep in bash git gh jq; do
@@ -84,7 +88,10 @@ for r in "${SCOPE_REPOS[@]}"; do
   REPOS+=( "$r|https://github.com/dsh-external/$r" )
 done
 
-if [ -f "$STATE" ]; then
+if [ "$FULL" -eq 1 ]; then
+  echo "[全量] --full 模式：跳过变化检测，强制全量索引（最新 mainline + 全部仓库）"
+  CHANGED="all(全量)"
+elif [ -f "$STATE" ]; then
   for entry in "${REPOS[@]}"; do
     name="${entry%%|*}"; url="${entry#*|}"
     prev="$(jq -r --arg n "$name" '.[$n] // ""' "$STATE" 2>/dev/null || echo "")"
@@ -109,6 +116,7 @@ fi
 CHANGED_REPOS=()
 for _c in $CHANGED; do
   [ "$_c" = "all(首次)" ] && continue
+  [ "$_c" = "all(全量)" ] && continue
   _is_new=0
   for _n in "${NEW_REPOS[@]:-}"; do [ "$_n" = "$_c" ] && _is_new=1 && break; done
   [ "$_is_new" -eq 0 ] && CHANGED_REPOS+=( "$_c" )

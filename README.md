@@ -112,7 +112,7 @@
 <details>
 <summary>🤖 自动运行机制（点击展开）</summary>
 
-- 部署于远程主机 **10.144.144.9**，cron 每 8 小时（00:00 / 08:00 / 16:00）执行 `scripts/cron-check.sh`：
+- 部署于远程主机 **10.144.144.9**，cron 每日三班：**02:00（--full 全量）** / 10:00 / 18:00（增量）。02:00 全量班抓取凌晨 2 点前发布的 mainline 新快照并索引全部仓库；10:00/18:00 只索引有变化的仓库。
   1. 动态发现 org 新仓库（gh api，与 `research/*.md` 摘要清单求差集）
   2. 检测 mainline + 全部仓库 HEAD 变化（`.cron-state.json`）
   3. 有变化 → `scripts/compare-mainline.sh` 索引（补丁 apply / seam / peerDeps / 锚定四维对比）
