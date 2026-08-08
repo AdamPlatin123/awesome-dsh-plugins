@@ -21,4 +21,4 @@
 
 ## 建议
 
-- 需适配：当日 mainline（e72bf03，snapshots/20260807T130646Z）对比结论见上表；详细建议汇总于 [mainline-compat.md](mainline-compat.md)。
+- 需适配：当日 mainline（0882344，snapshots/20260808T121140Z）对比结论见上表；详细建议汇总于 [mainline-compat.md](mainline-compat.md)。

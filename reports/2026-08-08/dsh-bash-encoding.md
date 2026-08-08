@@ -3,7 +3,7 @@
 
 ## 克隆证据
 
-- 克隆 HEAD：0a4b5d2
+- 克隆 HEAD：ba14e26
 - 锚定：未知（unknown，未知）
 - 补丁：无补丁
 - seam：缺: tuiPrompt
@@ -21,4 +21,4 @@
 
 ## 建议
 
-- 兼容：当日 mainline（e72bf03，snapshots/20260807T130646Z）对比结论见上表；详细建议汇总于 [mainline-compat.md](mainline-compat.md)。
+- 兼容：当日 mainline（0882344，snapshots/20260808T121140Z）对比结论见上表；详细建议汇总于 [mainline-compat.md](mainline-compat.md)。

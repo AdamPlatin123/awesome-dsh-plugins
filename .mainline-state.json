@@ -1,7 +1,7 @@
 {
-  "lastMainlineCommit": "e72bf03c5f10c76f3ba426e42237206423fc186e",
+  "lastMainlineCommit": "0882344227593b67a3f6459f791162d1eeeafd25",
   "lastDate": "2026-08-08",
-  "previousCommit": "9d84ab42354a70058a66a826c4473e55925052b6",
+  "previousCommit": "e72bf03c5f10c76f3ba426e42237206423fc186e",
   "repos": {
     "chat-width": {
       "anchoredCommit": "未知",
@@ -76,7 +76,7 @@
       "status": "兼容"
     },
     "dsh-my-rsi": {
-      "anchoredCommit": "4832fffbc8963b8a7b1f8332e691083195bf94bc",
+      "anchoredCommit": "17fdde293847c502f14814f38f6e698b565b69c8",
       "status": "需适配"
     },
     "dsh-opencode-server": {
@@ -297,7 +297,7 @@
     },
     "fabric": {
       "anchoredCommit": "4d3e1305d7f96c9b8e5842c71eab65b0ee7d36f5",
-      "status": "兼容"
+      "status": "需适配"
     },
     "dsh-browser": {
       "anchoredCommit": "未知",
@@ -466,6 +466,78 @@
     "sandbox-micro": {
       "anchoredCommit": "未知",
       "status": "占位"
+    },
+    "dsh-git-identity": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-android": {
+      "anchoredCommit": "e56256082c",
+      "status": "兼容"
+    },
+    "dsh-lazyfish": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-auto-approval": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-crew": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-input-history": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-client-ui-plan-execute": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-stickers": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "deep-standard-skill": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-serenity-plugin": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-toolkit": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-tool-markdown": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-session-health": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-desktop-tools": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-reuse-first": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-plus": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-session-cluster": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "DSH-UI4A": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
     }
   }
 }

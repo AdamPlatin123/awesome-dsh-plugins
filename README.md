@@ -103,3 +103,18 @@
 ## 免责声明
 
 本仓库内容来自**私有仓库调研**，所有被调研仓库均属 `dsh-external` 组织私有资产，仅供内部使用；请勿公开分发、外传或用于任何未经许可的用途。
+
+## 生态状态（自动更新）
+
+<!-- AUTO:ecosystem:START -->
+> 自动更新：2026-08-08_2336（cron 每 8 小时；源码见 scripts/update-readme.sh）
+
+**兼容性汇总**（报告日 2026-08-08 · mainline `e72bf03`）：兼容性：106/116 无需适配，9 需适配（dsh-my-rsi dsh-subagent-tree dsh-working-activity ex-setting plugin-registry Qwen-MM-Plugins sandbox-mxc turtle-ui web-components）；其中关注 3、占位 8、不适用 2、已删除 1
+
+**正在跟踪的 open PR**（org 共 2 个）：
+
+| 仓库 | PR | 标题 | 更新 |
+|---|---|---|---|
+| [group-chat-diary](https://github.com/dsh-external/group-chat-diary) | [#4](https://github.com/dsh-external/group-chat-diary/pull/4) | Automate Cloudflare Pages deployment | 2026-08-07 |
+| [dsh-live-stats](https://github.com/dsh-external/dsh-live-stats) | [#1](https://github.com/dsh-external/dsh-live-stats/pull/1) | fix: make live token and TPS accounting provider-aligned | 2026-08-07 |
+<!-- AUTO:ecosystem:END -->

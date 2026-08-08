@@ -1,4 +1,9 @@
 ## 2026-08-08
+- mainline：`0882344`（snapshots/20260808T121140Z）—— 较上次 e72bf03c5f10c76f3ba426e42237206423fc186e：WebSocket 下行通道新增：packages/client/connection/src/websocket-downlink.ts 及其测试进入 mainline（架构 note 2026-08-04-websocket-downlink-carrier），远程通道类插件可对齐。 包级变化：packages/ 下删除 0 个包目录、新增 14 个文件（diffstat 见下）。
+- 兼容状态：124 / 134 兼容，10 需适配（dsh-my-rsi dsh-subagent-tree dsh-working-activity ex-setting plugin-registry Qwen-MM-Plugins sandbox-mxc turtle-ui web-components fabric）
+- 报告：[mainline-compat.md](reports/2026-08-08/mainline-compat.md) · [当日索引](reports/2026-08-08/index.md)
+
+## 2026-08-08
 - mainline：`e72bf03`（snapshots/20260807T130646Z）—— 较上次 9d84ab42354a70058a66a826c4473e55925052b6：WebSocket 下行通道新增：packages/client/connection/src/websocket-downlink.ts 及其测试进入 mainline（架构 note 2026-08-04-websocket-downlink-carrier），远程通道类插件可对齐。 包级变化：packages/ 下删除 0 个包目录、新增 14 个文件（diffstat 见下）。
 - 兼容状态：107 / 116 兼容，9 需适配（dsh-my-rsi dsh-subagent-tree dsh-working-activity ex-setting plugin-registry Qwen-MM-Plugins sandbox-mxc turtle-ui web-components）
 - 报告：[mainline-compat.md](reports/2026-08-08/mainline-compat.md) · [当日索引](reports/2026-08-08/index.md)

@@ -5,7 +5,7 @@
 
 - 克隆 HEAD：1cddce7
 - 锚定：4d3e1305d7f96c9b8e5842c71eab65b0ee7d36f5（commit，未知（不同谱系））
-- 补丁：OK（1 个补丁全部干净应用）
+- 补丁：CONFLICT（1 个补丁中 0 个 OK）
 - seam：缺: tuiPrompt
 - peerDeps：9 项匹配
 
@@ -14,11 +14,11 @@
 | 维度 | 结果 |
 |---|---|
 | 锚定 vs 当日 mainline | 未知（不同谱系） |
-| 补丁 apply --check --3way | OK（1 个补丁全部干净应用） |
+| 补丁 apply --check --3way | CONFLICT（1 个补丁中 0 个 OK） |
 | seam 符号存在性 | 缺: tuiPrompt |
 | peerDeps 范围 vs mainline 实际 | 9 项匹配 |
-| **综合判定** | **兼容** |
+| **综合判定** | **需适配** |
 
 ## 建议
 
-- 兼容：当日 mainline（e72bf03，snapshots/20260807T130646Z）对比结论见上表；详细建议汇总于 [mainline-compat.md](mainline-compat.md)。
+- 需适配：当日 mainline（0882344，snapshots/20260808T121140Z）对比结论见上表；详细建议汇总于 [mainline-compat.md](mainline-compat.md)。

@@ -1,6 +1,6 @@
 # 当日索引（2026-08-08）
 - [主报告 mainline-compat.md](mainline-compat.md)（兼容性矩阵 + mainline 变更分析 + 双方建议）
-- mainline：`e72bf03`（snapshots/20260807T130646Z），上次 `9d84ab42354a70058a66a826c4473e55925052b6`
+- mainline：`0882344`（snapshots/20260808T121140Z），上次 `e72bf03c5f10c76f3ba426e42237206423fc186e`
 - [返回 CHANGELOG](../../CHANGELOG.md)
 
 ## 仓库详情
@@ -78,7 +78,7 @@
 - [repo-visibility-guard.md](repo-visibility-guard.md) — 兼容
 - [dsh-grok-tui.md](dsh-grok-tui.md) — 兼容
 - [ds_web_craw.md](ds_web_craw.md) — 兼容
-- [fabric.md](fabric.md) — 兼容
+- [fabric.md](fabric.md) — 需适配
 - [dsh-browser.md](dsh-browser.md) — 兼容
 - [dsh-desktop-mac.md](dsh-desktop-mac.md) — 兼容
 - [dsh-public-repo-monitor.md](dsh-public-repo-monitor.md) — 兼容
@@ -121,6 +121,24 @@
 - [dsh-skill-stats.md](dsh-skill-stats.md) — 兼容
 - [dsh-web-archive.md](dsh-web-archive.md) — 兼容
 - [sandbox-micro.md](sandbox-micro.md) — 占位
+- [dsh-git-identity.md](dsh-git-identity.md) — 兼容
+- [dsh-android.md](dsh-android.md) — 兼容
+- [dsh-lazyfish.md](dsh-lazyfish.md) — 兼容
+- [dsh-auto-approval.md](dsh-auto-approval.md) — 兼容
+- [dsh-crew.md](dsh-crew.md) — 兼容
+- [dsh-input-history.md](dsh-input-history.md) — 兼容
+- [dsh-client-ui-plan-execute.md](dsh-client-ui-plan-execute.md) — 兼容
+- [dsh-stickers.md](dsh-stickers.md) — 兼容
+- [deep-standard-skill.md](deep-standard-skill.md) — 兼容
+- [dsh-serenity-plugin.md](dsh-serenity-plugin.md) — 兼容
+- [dsh-toolkit.md](dsh-toolkit.md) — 兼容
+- [dsh-tool-markdown.md](dsh-tool-markdown.md) — 兼容
+- [dsh-session-health.md](dsh-session-health.md) — 兼容
+- [dsh-desktop-tools.md](dsh-desktop-tools.md) — 兼容
+- [dsh-reuse-first.md](dsh-reuse-first.md) — 兼容
+- [dsh-plus.md](dsh-plus.md) — 兼容
+- [dsh-session-cluster.md](dsh-session-cluster.md) — 兼容
+- [DSH-UI4A.md](DSH-UI4A.md) — 兼容
 
 ## 相关资产
 
