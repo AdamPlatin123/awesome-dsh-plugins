@@ -5,3 +5,6 @@ node_modules/
 .cron-state.json
 .scope-current.txt
 .last-changes.json
+.mainline-state.json
+logs/
+*.tmp

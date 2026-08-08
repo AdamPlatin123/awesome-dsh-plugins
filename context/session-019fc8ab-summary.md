@@ -1,5 +1,7 @@
 # 旧 session 019fc8ab 调研上下文归档
 
+> ⚠️ 历史归档：本文件为 2026-08-05 归档的旧 session 调研上下文快照，仅作历史参考；当前 org 现状以 reports/ 每日报告为准。
+
 > 来源：`omp --resume 019fc8ab-0b11-7000-a24f-eb6cb8b80fb0`
 > 会话文件：`/home/adam/.omp/agent/sessions/--mnt-shared-_Projects-test-AdamPlatin123--/2026-08-03T17-28-00-529Z_019fc8ab-0b11-7000-a24f-eb6cb8b80fb0.jsonl`
 > 归档日期：2026-08-05

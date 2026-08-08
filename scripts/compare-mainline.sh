@@ -69,8 +69,9 @@ declare -A CATALOG_REF
 declare -A PATCH_ST     # OK / CONFLICT / 缺文件 / 无补丁 / 不适用
 declare -A SEAM_ST      # "6/6 存在" / "缺: tuiPrompt" / 不适用
 declare -A PEER_ST      # "2 项匹配" / "1 项不匹配" / 无 / 不适用
-declare -A OVERALL      # 兼容 / 需适配 / 关注 / 占位 / 不适用 / 已删除
-REPO_GONE=()             # 本次运行发现已删除/迁移/改私有的仓库（跳过不索引）
+declare -A OVERALL      # 兼容 / 需适配 / 关注 / 占位 / 不适用 / 已删除 / 未知（待调研）/ 未知（无法确认）
+REPO_GONE=()             # 本次运行确认已删除/迁移/改私有的仓库（git 404 + gh 404 双重确认，跳过不索引）
+REPO_GONE_UNKNOWN=()     # git 报 repository not found 但 gh 交叉验证失败（网络/认证）→ 无法确认状态
 declare -A REPO_HEAD    # 克隆 HEAD 短 commit
 
 # ---- 小工具 -----------------------------------------------------------------
@@ -106,6 +107,25 @@ fetch_fail() { # $1=对象（mainline/仓库名） $2=阶段 $3=git 输出
     die 3 "拉取 $obj 失败（$stage）：疑似离线/认证问题${first:+：$first}"
   fi
   die 2 "拉取 $obj 失败（$stage）${first:+：$first}"
+}
+
+# git 侧确认 repository not found（404）后，用 gh api 交叉验证，防网络/代理/认证误报：
+#   gh 也 404            → 确认仓库已删除 → REPO_GONE（判定"已删除"）
+#   gh 可访问（200）     → 仓库实际存在，git 侧疑似误报 → 脚本错误退出（exit 2）
+#   gh 查询失败（网络等）→ 无法确认 → REPO_GONE_UNKNOWN（判定"未知（无法确认）"，而非"已删除"）
+mark_repo_gone() { # $1=仓库名
+  local name="$1" out rc
+  out="$(timeout 30 gh api "repos/$ORG/$name" 2>&1)"; rc=$?
+  if [ $rc -eq 0 ]; then
+    die 2 "git 报仓库不存在但 gh api 可访问（$ORG/$name），git 侧疑似误报，请人工核查"
+  fi
+  if printf '%s' "$out" | grep -q 'HTTP 404'; then
+    REPO_GONE+=("$name")
+    warn "仓库不存在（git 404 + gh 404 双重确认）→ 标记已删除并跳过：$name"
+  else
+    REPO_GONE_UNKNOWN+=("$name")
+    warn "git 404 但 gh api 交叉验证失败（无法确认仓库状态）→ 标记未知并跳过：$name"
+  fi
 }
 
 # 逐项确认：提示与回答均走 /dev/tty（管道 / here-string 下 fd 0 非 TTY 也能交互）。
@@ -181,8 +201,9 @@ if [ -n "$SCOPE_FILE" ]; then
     line="${line%%#*}"          # 去注释
     line="${line//[[:space:]]/}" # 去空白
     [ -n "$line" ] || continue
-    # H2 防路径逃逸：仓库名仅允许 [a-zA-Z0-9_-]（不含 . / .. / 斜杠），非法即脚本错误退出
-    [[ "$line" =~ ^[a-zA-Z0-9_-]+$ ]] || die 2 "非法仓库名（仅允许 [a-zA-Z0-9_-]）: $line"
+    # H2 防路径逃逸：仓库名仅允许 [a-zA-Z0-9._-]（允许点，仍拒绝 . / .. / 斜杠），非法即脚本错误退出
+    [[ "$line" =~ ^[a-zA-Z0-9._-]+$ ]] || die 2 "非法仓库名（仅允许 [a-zA-Z0-9._-]）: $line"
+    [ "$line" != "." ] && [ "$line" != ".." ] || die 2 "非法仓库名（不允许 . 或 ..）: $line"
     REPOS+=( "$line" )
   done < "$SCOPE_PATH"
   [ "${#REPOS[@]}" -gt 0 ] || die 2 "--scope 文件未包含任何仓库名"
@@ -258,8 +279,9 @@ repo_fetch() {
   local name="$1" dir="" url="" lsref merr head dir_real clones_real
   dir="$CLONES_DIR/$name"
   url="https://github.com/$ORG/$name.git"
-  # H2 防路径逃逸：仓库名白名单 + realpath 校验 .clones/<name> 仍在 .clones/ 内
-  [[ "$name" =~ ^[a-zA-Z0-9_-]+$ ]] || die 2 "非法仓库名: $name"
+  # H2 防路径逃逸：仓库名白名单（允许点，仍拒绝 . / ..）+ realpath 校验 .clones/<name> 仍在 .clones/ 内
+  [[ "$name" =~ ^[a-zA-Z0-9._-]+$ ]] || die 2 "非法仓库名: $name"
+  [ "$name" != "." ] && [ "$name" != ".." ] || die 2 "非法仓库名（不允许 . 或 ..）: $name"
   dir_real="$(realpath -m "$dir")"
   clones_real="$(realpath -m "$CLONES_DIR")"
   case "$dir_real" in
@@ -267,13 +289,13 @@ repo_fetch() {
     *) die 2 "仓库克隆路径逃逸（$dir_real 不在 $clones_real 内）: $name" ;;
   esac
   # H3 先探测远端 ref：clone/fetch 网络/认证错误在动手前就暴露，空仓与拉取失败从此区分
-  lsref="$(git ls-remote --heads "$url" 2>&1)" || { fetch_fail "$name" "ls-remote" "$lsref" || { REPO_GONE+=("$name"); return 0; }; }
+  lsref="$(git ls-remote --heads "$url" 2>&1)" || { fetch_fail "$name" "ls-remote" "$lsref" || { mark_repo_gone "$name"; return 0; }; }
   if [ -z "$lsref" ]; then
     # 空仓：远端可达但无任何 ref（clone 成功但 ls-remote 无 ref）→ 占位，非拉取失败
     if [ ! -d "$dir/.git" ]; then
       merr="$(mktemp)"
       if ! git clone --quiet --depth 1 "$url" "$dir" >/dev/null 2>"$merr"; then
-        fetch_fail "$name" "clone(空仓初始化)" "$(cat "$merr")" || { REPO_GONE+=("$name"); return 0; }
+        fetch_fail "$name" "clone(空仓初始化)" "$(cat "$merr")" || { mark_repo_gone "$name"; return 0; }
       fi
       rm -f "$merr"
     fi
@@ -283,11 +305,11 @@ repo_fetch() {
   merr="$(mktemp)"
   if [ ! -d "$dir/.git" ]; then
     if ! git clone --quiet --depth 1 "$url" "$dir" >/dev/null 2>"$merr"; then
-      fetch_fail "$name" "clone" "$(cat "$merr")" || { REPO_GONE+=("$name"); return 0; }
+      fetch_fail "$name" "clone" "$(cat "$merr")" || { mark_repo_gone "$name"; return 0; }
     fi
   else
     if ! git -C "$dir" fetch --quiet --depth 1 origin HEAD >/dev/null 2>"$merr"; then
-      fetch_fail "$name" "fetch" "$(cat "$merr")" || { REPO_GONE+=("$name"); return 0; }
+      fetch_fail "$name" "fetch" "$(cat "$merr")" || { mark_repo_gone "$name"; return 0; }
     fi
     git -C "$dir" reset --hard --quiet FETCH_HEAD >/dev/null 2>&1 \
       || die 2 "重置 $name 到 FETCH_HEAD 失败"
@@ -413,7 +435,7 @@ patch_check() {
   else PATCH_ST[$name]="OK（${#files[@]} 个补丁全部干净应用）"; fi
 }
 
-# seam 存在性：cur 用工作树 grep，prev 用代表路径文件计数
+# seam 存在性：cur 用工作树 grep；mainline 两提交侧的符号级对比见 mainline_diff_analyze（git grep）
 seam_check() {
   local name="$1" sym missing=() present=0 total=${#SEAM_SYMBOLS[@]}
   local n
@@ -478,22 +500,25 @@ seam_keyword() {
   esac
 }
 
-# 综合判定（优先级：占位 > 需适配 > 关注 > 兼容/不适用）
+# 综合判定（优先级：占位 > 需适配 > 关注 > 兼容/不适用；未建模仓库不自动判兼容）
 overall_judge() {
   local name="$1"
-  local is_noncode=0 n sym kw txt seam_hit=0
+  local is_noncode=0 n sym kw txt seam_hit=0 no_patch=0 no_anchor=0
   for g in "${REPO_GONE[@]:-}"; do [ "$g" = "$name" ] && { OVERALL[$name]="已删除"; return 0; }; done
+  for g in "${REPO_GONE_UNKNOWN[@]:-}"; do [ "$g" = "$name" ] && { OVERALL[$name]="未知（无法确认）"; return 0; }; done
   for n in "${NONCODE_REPOS[@]}"; do [ "$n" = "$name" ] && is_noncode=1; done
   # 空仓库（占位）
   if [ -z "${REPO_HEAD[$name]:-}" ]; then OVERALL[$name]="占位"; return 0; fi
   if [ $is_noncode -eq 1 ]; then OVERALL[$name]="不适用"; return 0; fi
-  case "${PATCH_ST[$name]}" in
-    CONFLICT*) OVERALL[$name]="需适配"; return 0 ;;
-    缺文件*)   OVERALL[$name]="需适配"; return 0 ;;
-  esac
-  case "${ANCHOR_ST[$name]}" in
-    落后)       OVERALL[$name]="需适配（滞后 mainline）"; return 0 ;;
-  esac
+  # 未建模仓库（无 research/<name>.md）：不自动判兼容 —— 无补丁且无锚定时标记"未知（待调研）"
+  if [ ! -f "$ROOT/research/$name.md" ]; then
+    case "${PATCH_ST[$name]:-}" in 无补丁|"") no_patch=1 ;; esac
+    case "${ANCHOR_STR[$name]:-}" in ""|未知) no_anchor=1 ;; esac
+    if [ "$no_patch" -eq 1 ] && [ "$no_anchor" -eq 1 ]; then
+      OVERALL[$name]="未知（待调研）"
+      return 0
+    fi
+  fi
   # seam 缺失面是否与仓库集成点相关（避免 tuiPrompt 缺失误伤所有仓库）
   if [[ "${SEAM_ST[$name]}" == 缺:* ]]; then
     txt="$(sed -n '/^## *与 DeepSeek Harness 主仓库的集成点/,/^## /p' "$ROOT/research/$name.md" 2>/dev/null)"
@@ -503,6 +528,16 @@ overall_judge() {
       if printf '%s' "$txt" | grep -qi "$kw"; then seam_hit=1; fi
     done
   fi
+  case "${PATCH_ST[$name]}" in
+    CONFLICT*) OVERALL[$name]="需适配"; return 0 ;;
+    缺文件*)   OVERALL[$name]="需适配"; return 0 ;;
+  esac
+  case "${ANCHOR_ST[$name]}" in
+    落后)
+      # 锚定滞后不再直接判需适配：相关 seam 缺失仍升级为需适配，否则仅关注
+      if [ $seam_hit -eq 1 ]; then OVERALL[$name]="需适配（滞后 mainline，相关 seam 缺失）"; return 0; fi
+      OVERALL[$name]="关注（锚定滞后 mainline）"; return 0 ;;
+  esac
   if [ $seam_hit -eq 1 ] || [[ "${PEER_ST[$name]}" == *不匹配* ]]; then
     OVERALL[$name]="关注"; return 0
   fi
@@ -511,17 +546,38 @@ overall_judge() {
 
 # ---- 4. mainline 自身变更分析 -------------------------------------------------
 declare -A SEAM_PREV SEAM_CUR
-file_count_in() { # $1=commit $2=path → 文件数
-  git -C "$MAINLINE" ls-tree -r --name-only "$1" "$2" 2>/dev/null | wc -l
+BASELINE_AVAILABLE=1    # PREV_COMMIT 对象是否可解析（缺失 → 基线不可用，seam 变化无法对比）
+
+# seam 符号在指定 commit 内是否出现：git grep 探测（0=出现 1=未出现 2=探测失败/对象不可读）
+seam_in_commit() { # $1=commit $2=符号
+  local rc
+  git -C "$MAINLINE" grep -qF "$2" "$1" -- packages/ >/dev/null 2>&1
+  rc=$?
+  if [ "$rc" -eq 0 ]; then return 0
+  elif [ "$rc" -eq 1 ]; then return 1
+  else return 2; fi
 }
 
 mainline_diff_analyze() {
-  local sym path prev_n cur_n
+  local sym rc
+  # 基线对象存在性：PREV_COMMIT 缺失 → 无法对比（基线不可用），不据此误判破坏性变更
+  if ! git -C "$MAINLINE" cat-file -e "$PREV_COMMIT^{commit}" 2>/dev/null; then
+    warn "mainline 基线 $PREV_COMMIT 对象不存在，seam 变化对比不可用（基线不可用）"
+    BASELINE_AVAILABLE=0
+  fi
   for sym in "${SEAM_SYMBOLS[@]}"; do
-    path="${SEAM_PATH[$sym]}"
-    prev_n="$(file_count_in "$PREV_COMMIT" "$path")"
-    cur_n="$(file_count_in "$MAINLINE_COMMIT" "$path")"
-    SEAM_PREV[$sym]="$prev_n"; SEAM_CUR[$sym]="$cur_n"
+    if [ "$BASELINE_AVAILABLE" -eq 1 ]; then
+      seam_in_commit "$PREV_COMMIT" "$sym"; rc=$?
+      if [ "$rc" -eq 0 ]; then SEAM_PREV[$sym]=1
+      elif [ "$rc" -eq 2 ]; then SEAM_PREV[$sym]=""; warn "seam 符号 $sym 在 $PREV_COMMIT 探测失败（对象不可读）"
+      else SEAM_PREV[$sym]=0; fi
+    else
+      SEAM_PREV[$sym]=""
+    fi
+    seam_in_commit "$MAINLINE_COMMIT" "$sym"; rc=$?
+    if [ "$rc" -eq 0 ]; then SEAM_CUR[$sym]=1
+    elif [ "$rc" -eq 2 ]; then SEAM_CUR[$sym]=""; warn "seam 符号 $sym 在 $MAINLINE_COMMIT 探测失败（对象不可读）"
+    else SEAM_CUR[$sym]=0; fi
   done
 }
 
@@ -529,7 +585,7 @@ mainline_diff_analyze() {
 build_reports() {
   local name row
   local matrix_rows="" detail_all="" sugg_plugin="" sugg_main=""
-  local ok=0 adapt=0 watch=0 placeholder=0 na=0 gone=0
+  local ok=0 adapt=0 watch=0 placeholder=0 na=0 gone=0 unknown=0
   local adapt_names=""
 
   for name in "${REPOS[@]}"; do
@@ -540,6 +596,7 @@ build_reports() {
       占位) placeholder=$((placeholder+1)) ;;
       不适用) na=$((na+1)) ;;
       已删除) gone=$((gone+1)) ;;
+      未知*) unknown=$((unknown+1)) ;;
     esac
   done
   adapt_names="$(printf '%s' "$adapt_names" | xargs)"
@@ -581,7 +638,11 @@ $p"
   prev_n="${SEAM_PREV[tuiPrompt]}"; cur_n="${SEAM_CUR[tuiPrompt]}"
   if [ "${prev_n:-0}" -gt 0 ] && [ "${cur_n:-0}" -eq 0 ]; then
     changes="$changes
-- **TUI 组件包整体移除**：packages/ui/tui 由 $prev_n 个文件归零，tuiPrompt 符号随包消失；pi-tui 补丁与相关 Agent Notes 归档。"
+- **TUI 组件包移除**：packages/ui/tui 的 tuiPrompt 符号从 mainline 消失（出现 → 消失），pi-tui 补丁与相关 Agent Notes 归档。"
+  fi
+  if [ "$BASELINE_AVAILABLE" -eq 0 ]; then
+    changes="$changes
+- **基线不可用**：上次对比基线 \`$PREV_COMMIT\` 对象在 mainline 本地不存在，seam 符号变化与 diff 对比无法执行。"
   fi
   if git -C "$MAINLINE" cat-file -e "$MAINLINE_COMMIT:packages/client/connection/src/websocket-downlink.ts" 2>/dev/null; then
     changes="$changes
@@ -605,16 +666,20 @@ $p"
   # 供 CHANGELOG 的简短摘要（取前 4 条，去掉 markdown 强调）
   SUMMARY_BULLETS="$(printf '%s' "$changes" | sed '/^$/d' | sed -E 's/^- \*\*([^*]+)\*\*：/\1：/' | head -4 | tr '\n' ' ')"
 
-  # seam 符号变化表
-  local seam_lines=""
+  # seam 符号变化表（存在性：出现 / 消失；基线不可用或探测失败时如实标注）
+  local seam_lines="" state="" prev_v="" cur_v=""
   for sym in "${SEAM_SYMBOLS[@]}"; do
     prev_n="${SEAM_PREV[$sym]}"; cur_n="${SEAM_CUR[$sym]}"
-    if [ "${prev_n:-0}" -gt 0 ] && [ "${cur_n:-0}" -gt 0 ]; then state="存在 → 存在（稳定）"
-    elif [ "${prev_n:-0}" -gt 0 ] && [ "${cur_n:-0}" -eq 0 ]; then state="存在 → 缺失（破坏性）"
-    elif [ "${prev_n:-0}" -eq 0 ] && [ "${cur_n:-0}" -gt 0 ]; then state="缺失 → 存在（新增）"
-    else state="缺失 → 缺失"; fi
+    if [ "$BASELINE_AVAILABLE" -eq 0 ]; then
+      state="基线不可用（$PREV_COMMIT 对象缺失）"; prev_v="—"; cur_v="—"
+    elif [ -z "$prev_n" ] || [ -z "$cur_n" ]; then
+      state="未知（探测失败）"; prev_v="—"; cur_v="—"
+    elif [ "$prev_n" -eq 1 ] && [ "$cur_n" -eq 1 ]; then state="出现 → 出现（稳定）"; prev_v="出现"; cur_v="出现"
+    elif [ "$prev_n" -eq 1 ] && [ "$cur_n" -eq 0 ]; then state="出现 → 消失（破坏性）"; prev_v="出现"; cur_v="消失"
+    elif [ "$prev_n" -eq 0 ] && [ "$cur_n" -eq 1 ]; then state="消失 → 出现（新增）"; prev_v="消失"; cur_v="出现"
+    else state="消失 → 消失"; prev_v="消失"; cur_v="消失"; fi
     seam_lines="$seam_lines
-| \`$sym\` | $prev_n | $cur_n | $state |"
+| \`$sym\` | $prev_v | $cur_v | $state |"
   done
 
   # 破坏性变更清单
@@ -663,6 +728,10 @@ $p"
         sugg_plugin="$sugg_plugin
 - 关注：seam 或 peerDeps 存在不匹配（seam: ${SEAM_ST[$name]}；peer: ${PEER_ST[$name]}），建议确认所依赖的宿主面当日是否仍满足。"
         ;;
+      未知*)
+        sugg_plugin="$sugg_plugin
+- 未建模/状态未知：尚无 research/$name.md 调研摘要（或 git/gh 无法确认仓库状态），不做兼容性结论；建议先完成调研建模或人工核查后再纳入兼容跟踪。"
+        ;;
       *)
         sugg_plugin="$sugg_plugin
 - 兼容：锚定 ${ANCHOR_STR[$name]}（${ANCHOR_ST[$name]}）、补丁「${PATCH_ST[$name]}」，当日 mainline 可干净集成。"
@@ -689,14 +758,14 @@ $p"
       printf '# mainline 兼容性报告（%s）\n\n' "$DATE"
       printf -- '- mainline：`%s`（snapshots/%s）\n' "$MAINLINE_SHORT" "$MAINLINE_LABEL"
       printf -- '- 上次对比：`%s`\n' "$PREV_COMMIT"
-      printf -- '- 兼容性：%s/%s 无需适配，%s 需适配（%s）；其中关注 %s、占位 %s、不适用 %s、已删除 %s\n\n' \
-        "$(( ${#REPOS[@]} - adapt - gone ))" "${#REPOS[@]}" "$adapt" "${adapt_names:-无}" "$watch" "$placeholder" "$na" "$gone"
+      printf -- '- 兼容性：%s/%s 无需适配，%s 需适配（%s）；其中关注 %s、占位 %s、不适用 %s、已删除 %s、未知 %s\n\n' \
+        "$(( ${#REPOS[@]} - adapt - gone - unknown ))" "${#REPOS[@]}" "$adapt" "${adapt_names:-无}" "$watch" "$placeholder" "$na" "$gone" "$unknown"
       printf '## 兼容性矩阵\n\n| 仓库 | 锚定 | 补丁 | seam | peerDeps | 综合判定 |\n|---|---|---|---|---|---|%s\n\n' "$matrix_rows"
       printf '## mainline 变更分析（%s → %s）\n\n' "$PREV_COMMIT" "$MAINLINE_SHORT"
       printf '### 关键变更\n%s\n\n' "$changes"
       printf '### 删除 / 新增包\n\n删除的包目录：%s\n\n新增文件：\n```\n%s\n```\n\n' \
         "$(printf '%s' "$deleted_pkgs" | sed '/^$/d' | tr '\n' ' ' | xargs)" "$added_files"
-      printf '### seam 符号变化\n\n| 符号 | prev 文件数 | cur 文件数 | 变化 |\n|---|---|---|---|%s\n\n' "$seam_lines"
+      printf '### seam 符号变化\n\n| 符号 | prev 存在性 | cur 存在性 | 变化 |\n|---|---|---|---|%s\n\n' "$seam_lines"
       printf '### diffstat（packages/ patches/ workspace）\n\n```\n%s\n```\n\n' "$diffstat"
       printf '## 破坏性变更清单\n%s\n\n' "$breaking"
       printf '## 插件侧建议（按仓库）\n%s\n\n' "$sugg_plugin"
@@ -764,7 +833,7 @@ $detail_all
   fi
 
   # 汇总打印
-  info "兼容性汇总：${#REPOS[@]} 仓库 → 无需适配 $(( ${#REPOS[@]} - adapt - gone )) / 需适配 $adapt（${adapt_names:-无}）/ 关注 $watch / 占位 $placeholder / 不适用 $na / 已删除 $gone"
+  info "兼容性汇总：${#REPOS[@]} 仓库 → 无需适配 $(( ${#REPOS[@]} - adapt - gone - unknown )) / 需适配 $adapt（${adapt_names:-无}）/ 关注 $watch / 占位 $placeholder / 不适用 $na / 已删除 $gone / 未知 $unknown"
 }
 
 update_changelog() {

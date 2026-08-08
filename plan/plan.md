@@ -1,5 +1,7 @@
 # dsh-external 生态情报 repo：auto mainline 对比引擎（计划 v6）
 
+> ⚠️ 历史计划快照（2026-08-05），与当前 134 仓现状不符，仅作过程记录
+
 > 计划状态：DRAFT v6（v5 + 用户 B 调整：CHANGELOG 主视图、日期文件夹分立、软链接、点击直达）
 > 计划日期：2026-08-05
 > 目标仓库：`/mnt/shared/_Projects/dsh-external-research/`（private；若推远程仅 private 仓库）

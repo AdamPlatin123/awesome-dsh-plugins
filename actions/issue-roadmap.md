@@ -1,5 +1,7 @@
 # Issue 聚类路线图（dsh-external/issues，308 条）
 
+> ⚠️ 快照：2026-08-04 抓取（308 条），已过期，仅作历史参考
+
 > 生成日期：2026-08-05
 > 数据源：`/tmp/dsh-ext-research/issues_all.json`（GitHub Issues API 全量缓存）
 > **抓取时间戳**：`2026-08-04T18:49:33Z`（UTC，即北京时间 2026-08-05 02:49；文件 mtime）

@@ -35,12 +35,13 @@ SELF_REPO="dsh-external-research"   # 本仓库自身，不纳入索引
 
 # 动态拉取 org 全部仓库名（失败则回退已知列表，不误报离线）
 ORG_REPOS="$(timeout 60 gh api "orgs/dsh-external/repos?per_page=100&type=all" --paginate --jq '.[].name' 2>/dev/null || echo "")"
+# 动态发现的新仓库（在 gh api 调用前初始化空数组，避免 set -u 下未定义引用）
+NEW_REPOS=()
 if [ -z "$ORG_REPOS" ]; then
   echo "[提示] gh api 获取 org 仓库失败，回退已知列表"
   SCOPE_REPOS=( "${KNOWN_REPOS[@]}" )
 else
   SCOPE_REPOS=( "${KNOWN_REPOS[@]}" )
-  NEW_REPOS=()
   while IFS= read -r name; do
     [ -n "$name" ] || continue
     [ "$name" = "$SELF_REPO" ] && continue
@@ -62,6 +63,18 @@ fi
 : > .scope-current.txt
 for r in "${SCOPE_REPOS[@]}"; do echo "$r" >> .scope-current.txt; done
 
+# 远端 HEAD 探测：mainline 取最新快照分支（与 compare-mainline.sh 实际索引的快照一致），
+# 其余仓库取 HEAD。快照分支名含 ISO 时间戳，字典序即时间序。
+remote_head() { # $1=仓库名 $2=远端 URL → 输出当前 commit（失败为空）
+  local name="$1" url="$2"
+  if [ "$name" = "mainline" ]; then
+    timeout 20 git ls-remote "$url" 'refs/heads/snapshots/*' 2>/dev/null \
+      | LC_ALL=C sort -k2 | tail -1 | awk '{print $1}'
+  else
+    timeout 20 git ls-remote "$url" HEAD 2>/dev/null | awk '{print $1}'
+  fi
+}
+
 # 3. 检测 mainline + 全部 scope 仓库的 HEAD 变化
 STATE=".cron-state.json"
 CHANGED=""
@@ -75,7 +88,7 @@ if [ -f "$STATE" ]; then
   for entry in "${REPOS[@]}"; do
     name="${entry%%|*}"; url="${entry#*|}"
     prev="$(jq -r --arg n "$name" '.[$n] // ""' "$STATE" 2>/dev/null || echo "")"
-    cur="$(timeout 20 git ls-remote "$url" HEAD 2>/dev/null | awk '{print $1}')"
+    cur="$(remote_head "$name" "$url")"
     if [ -z "$cur" ]; then
       echo "[跳过] $name：ls-remote 失败（离线/网络），保留上次状态"
     elif [ -z "$prev" ]; then
@@ -118,7 +131,7 @@ done
   printf ']}'
 } > .last-changes.json.tmp && mv .last-changes.json.tmp .last-changes.json
 
-echo "[状态] .last-changes.json 已记录（新增 ${#NEW_REPOS[@]:-0} / 修改 ${#CHANGED_REPOS[@]}）"
+echo "[状态] .last-changes.json 已记录（新增 ${#NEW_REPOS[@]} / 修改 ${#CHANGED_REPOS[@]}）"
 
 # 4. 有变化 → 运行 mainline 兼容索引（动态 scope）
 if [ -n "$CHANGED" ]; then
@@ -126,6 +139,14 @@ if [ -n "$CHANGED" ]; then
   ./scripts/compare-mainline.sh --scope .scope-current.txt
   rc=$?
   echo "[索引] compare-mainline.sh 退出码 $rc"
+
+  # 引擎失败（退出码 >1 = 脚本错误/离线）→ 不 commit、不更新 README、不写状态文件，
+  # 原样退出，留待下次 cron 重试（避免把失败误当成功推进基线）
+  if [ "$rc" -gt 1 ]; then
+    rm -f .last-changes.json   # 撤销本次生成的仪表盘数据，README 不引用失败结果
+    echo "[错误] compare-mainline.sh 失败（退出码 $rc），跳过提交/README/状态写入，下次 cron 重试"
+    exit "$rc"
+  fi
 
   # 5. 提交报告/CHANGELOG/状态并推送回 org repo
   if git diff --quiet && git diff --cached --quiet; then
@@ -162,7 +183,7 @@ fi
   first=1
   for entry in "${REPOS[@]}"; do
     name="${entry%%|*}"; url="${entry#*|}"
-    cur="$(timeout 20 git ls-remote "$url" HEAD 2>/dev/null | awk '{print $1}')"
+    cur="$(remote_head "$name" "$url")"
     [ -z "$cur" ] && cur="$(jq -r --arg n "$name" '.[$n] // ""' "$STATE" 2>/dev/null || echo "")"
     [ $first -eq 0 ] && echo ","
     printf '  "%s": "%s"' "$name" "$cur"

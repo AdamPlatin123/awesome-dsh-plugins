@@ -142,5 +142,5 @@
 
 ## 相关资产
 
-- [research/](../../research/) — 15 份静态调研摘要（只读）
+- [research/](../../research/) — 63 份静态调研摘要（只读）
 - [cross-analysis/summary.md](../../cross-analysis/summary.md) — 生态全景聚合报告

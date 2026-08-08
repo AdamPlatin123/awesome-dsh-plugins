@@ -1,13 +1,13 @@
 ---
 name: mainline-compat
-description: 运行 dsh-external 生态与当日 mainline 快照的兼容性对比引擎（scripts/compare-mainline.sh）：拉取 dsh2026/test-AdamPlatin123 最新快照分支，对比 15 个生态仓库的锚定/补丁/seam/peerDeps 四个维度，输出 mainline 自身变更分析与双方适配建议，并更新 CHANGELOG、reports/latest 软链与状态文件。当用户要求 mainline 对比、生态兼容性检查、接口差异分析、兼容性报告、或提到"对比当日 mainline""插件与主仓库接口是否兼容""生成兼容性报告"时使用；也用于按日期重新生成对比报告。
+description: 运行 dsh-external 生态与当日 mainline 快照的兼容性对比引擎（scripts/compare-mainline.sh）：拉取 dsh2026/test-AdamPlatin123 最新快照分支，对比当前 org 全部仓库（动态发现）的锚定/补丁/seam/peerDeps 四个维度，输出 mainline 自身变更分析与双方适配建议，并更新 CHANGELOG、reports/latest 软链与状态文件。当用户要求 mainline 对比、生态兼容性检查、接口差异分析、兼容性报告、或提到"对比当日 mainline""插件与主仓库接口是否兼容""生成兼容性报告"时使用；也用于按日期重新生成对比报告。
 ---
 
 # mainline-compat — 生态与当日 mainline 的兼容性对比
 
 ## 目标
 
-对 `dsh-external` 组织 15 个仓库，自动对比它们与**当日 mainline**（`github.com/dsh2026/test-AdamPlatin123` 最新快照分支）的接口差异，判定每个仓库是否可继续在当日 mainline 上集成，并分别给插件侧与主仓库侧提出适配建议。产出按日期分立的报告，`CHANGELOG.md` 为主更新视图。
+对 `dsh-external` 组织全部仓库（动态发现，当前 134），自动对比它们与**当日 mainline**（`github.com/dsh2026/test-AdamPlatin123` 最新快照分支）的接口差异，判定每个仓库是否可继续在当日 mainline 上集成，并分别给插件侧与主仓库侧提出适配建议。产出按日期分立的报告，`CHANGELOG.md` 为主更新视图。
 
 ## 前置与约束
 
@@ -26,7 +26,7 @@ description: 运行 dsh-external 生态与当日 mainline 快照的兼容性对�
    - ③ seam 符号：`ThemeService` / `settingsNamespace` / `sessionProjections` / `tuiPrompt` / `slots` / `session/event` 在 `.mainline/packages/` 的存在性（缺失面只在与仓库集成点相关时计入判定）；
    - ④ peerDeps：`dsh-*` 依赖范围 vs mainline workspace 实际版本（`.mainline/packages/*/*/package.json`）。
 4. **mainline 变更分析**：`git diff --stat` 上次记录 commit → 当日（首次无状态时用 `--base`，默认 `cab66cd`），输出删除/新增包、seam 符号变化、破坏性变更清单与 ≥3 条关键变更（如 TUI 移除、WebSocket 下行通道新增）。
-5. **生成报告**：`reports/<date>/mainline-compat.md`（15 仓库兼容性矩阵 + 插件侧建议 ≥15 条 + 主仓库侧建议 ≥3 条 + mainline 变更分析节）、`reports/<date>/<name>.md` × 15（各仓库详情，头部相对链接 `research/<name>.md`）、`reports/<date>/index.md`（当日索引）。
+5. **生成报告**：`reports/<date>/mainline-compat.md`（全部仓库兼容性矩阵（动态发现，当前 134）+ 插件侧建议 ≥15 条 + 主仓库侧建议 ≥3 条 + mainline 变更分析节）、`reports/<date>/<name>.md` × 全部发现仓库（各仓库详情，头部相对链接 `research/<name>.md`）、`reports/<date>/index.md`（当日索引）。
 6. **更新**：`reports/latest` 软链 → 当日日期；`CHANGELOG.md` 顶部插入当日条目（格式见 `AGENTS.md` 第 3 节）；写 `.mainline-state.json`（lastMainlineCommit / lastDate / repos 状态）。
 7. **可选自动执行**（默认关闭）：`--publish-issues` 解析 `actions/org-issues.md` 草稿（默认仅打印将发布清单，实际发布逐条确认后 `gh issue create`）；`--apply-fix` 输出待改 diff（如 catalog ref 滞后），实际写须逐项确认。
 
@@ -63,7 +63,7 @@ bash /mnt/shared/_Projects/dsh-external-research/scripts/compare-mainline.sh --a
 
 ## 产出核对清单
 
-- `reports/<date>/` 存在且含 `mainline-compat.md` + 15 个 `<repo>.md` + `index.md`；`reports/latest` 软链指向 `<date>`。
+- `reports/<date>/` 存在且含 `mainline-compat.md` + 全部 `<repo>.md`（当前 134）+ `index.md`；`reports/latest` 软链指向 `<date>`。
 - `CHANGELOG.md` 顶部为当日条目，报告链接为相对路径可点击直达。
 - `.mainline-state.json` 已写入；下次运行以上次 commit 为对比基线。
 - 报告无 issue 正文复制、无真实密钥值、无成员昵称；矩阵/建议/变更分析三节齐备。

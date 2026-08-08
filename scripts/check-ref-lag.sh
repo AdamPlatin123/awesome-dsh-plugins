@@ -107,33 +107,39 @@ collect() {
   FOUND+=("$r")
 }
 
-# 从 catalog.json 提取 source 中的 #<40位commit>&path（jq 优先，正则回退）
+# 从 catalog.json 提取 source 中的 #<40位commit>&path（jq 优先；JSON 解析失败才回退正则）
 extract_source_refs() {
-  local file="$1"
+  local file="$1" out
   if [ "$HAVE_JQ" -eq 1 ]; then
-    jq -r '.plugins[]?.source | capture("(?:.*)#(?<c>[0-9a-f]{40})&path:.*")? | .c' \
-      "$file" 2>/dev/null | grep -v '^$'
-  else
-    grep -oE '#[0-9a-f]{40}&path' "$file" | sed 's/^#//; s/&path$//'
+    if out="$(jq -r '.plugins[]?.source | capture("(?:.*)#(?<c>[0-9a-f]{40})&path:.*")? | .c' "$file" 2>/dev/null)"; then
+      # jq 解析成功（可能无匹配，输出为空也是合法结果）→ 不回退正则
+      printf '%s' "$out" | grep -v '^$'
+      return 0
+    fi
+    echo "[提示] jq 解析 $file 失败（非法 JSON），回退正则提取" >&2
   fi
+  grep -oE '#[0-9a-f]{40}&path' "$file" | sed 's/^#//; s/&path$//'
 }
 
-# 从 catalog.json 提取 pin 的 ref（plugins[].ref，jq 优先，正则回退）
+# 从 catalog.json 提取 pin 的 ref（plugins[].ref，jq 优先；JSON 解析失败才回退正则）
 extract_pin_refs() {
-  local file="$1"
+  local file="$1" out
   if [ "$HAVE_JQ" -eq 1 ]; then
-    jq -r '.plugins[]?.ref? // empty' "$file" 2>/dev/null | grep -E '^[0-9a-f]{40}$'
-  else
-    grep -oE '"ref"[[:space:]]*:[[:space:]]*"[0-9a-f]{40}"' "$file" \
-      | sed -E 's/.*"([0-9a-f]{40})".*/\1/'
+    if out="$(jq -r '.plugins[]?.ref? // empty' "$file" 2>/dev/null)"; then
+      printf '%s' "$out" | grep -E '^[0-9a-f]{40}$'
+      return 0
+    fi
+    echo "[提示] jq 解析 $file 失败（非法 JSON），回退正则提取" >&2
   fi
+  grep -oE '"ref"[[:space:]]*:[[:space:]]*"[0-9a-f]{40}"' "$file" \
+    | sed -E 's/.*"([0-9a-f]{40})".*/\1/'
 }
 
-# ---- toybox 策略：catalog.json source + README INSTALL 块 ----
+# ---- toybox 策略：catalog.json source + README INSTALL 块（两来源必须同时可解析，任一失败即 SKIP） ----
 check_toybox() {
   local dir="$1" repo="$2"
   local cat="$dir/catalog.json" readme="$dir/README.md"
-  local refs got=0
+  local refs got_cat=0 got_readme=0
   FOUND=()
 
   # 来源 1：catalog.json 的 plugins[].source（#<40位commit>&path）
@@ -143,7 +149,7 @@ check_toybox() {
     refs=$(extract_source_refs "$cat" | sort -u)
     if [ -n "$refs" ]; then
       while IFS= read -r r; do collect "$r"; done <<<"$refs"
-      got=1
+      got_cat=1
       echo "[$repo] catalog.json source：提取到 $(wc -l <<<"$refs" | tr -d ' ') 个发布 ref"
     else
       echo "[$repo] 来源 catalog.json 未匹配到 #<40位commit>&path 形式的 ref（内容不符或无法解析）"
@@ -158,15 +164,16 @@ check_toybox() {
       | grep -oE '#[0-9a-f]{40}&path' | sed 's/^#//; s/&path$//' | sort -u)
     if [ -n "$refs" ]; then
       while IFS= read -r r; do collect "$r"; done <<<"$refs"
-      got=1
+      got_readme=1
       echo "[$repo] README INSTALL 块：提取到 $(wc -l <<<"$refs" | tr -d ' ') 个发布 ref"
     else
       echo "[$repo] 来源 README INSTALL 块未匹配到 #<40位commit>&path（未发布或块缺失）"
     fi
   fi
 
-  if [ "$got" -eq 0 ] || [ "${#FOUND[@]}" -eq 0 ]; then
-    echo "[$repo] SKIP：无法从任何来源提取发布 ref（解析失败）"
+  # 两来源任一失败（文件缺失 / 无法解析 / 无 ref）→ SKIP，不以另一来源单向通过（避免漏检滞后）
+  if [ "$got_cat" -ne 1 ] || [ "$got_readme" -ne 1 ]; then
+    echo "[$repo] SKIP：catalog.json 与 README INSTALL 块两个来源必须同时可解析（解析失败）"
     return 2
   fi
   return 0
@@ -209,8 +216,15 @@ compare_head() {
   head_sha=$(git ls-remote "$remote" HEAD 2>"$err" | awk '{print $1}')
   if [ -z "$head_sha" ]; then
     if [ -s "$err" ]; then
+      local errtext
+      errtext="$(tr -d '\n' <"$err")"
+      # 404/无权限：仓库不存在或无权访问 → 状态"未知"，退出码 2（解析失败类），非离线
+      if printf '%s' "$errtext" | grep -qiE 'repository not found|not found|404|access denied|permission denied|not authorized|403'; then
+        echo "[$repo] 未知：远程不可访问（404/无权限）——$(sanitize_text "$errtext")"
+        return 2
+      fi
       # 输出前脱敏：remote 可能含 user:token，git stderr 也可能回显完整 URL
-      echo "[$repo] 错误：无法访问远程 $(sanitize_text "$remote") —— 疑似离线（$(sanitize_text "$(tr -d '\n' <"$err")")）"
+      echo "[$repo] 错误：无法访问远程 $(sanitize_text "$remote") —— 疑似离线（$(sanitize_text "$errtext")）"
       return 3
     fi
     echo "[$repo] SKIP：远程仓库无任何提交（HEAD 为空），无法对比"
@@ -266,6 +280,11 @@ for repo in "${REPOS[@]}"; do
   if [ "$rc" -eq 3 ]; then
     echo "错误：离线或网络不可达（退出码 3）" >&2
     exit 3
+  fi
+  if [ "$rc" -eq 2 ]; then
+    # SKIP / 未知（404、无提交、无法解析）→ 计入 any_skip，最终退出码 2
+    any_skip=1
+    continue
   fi
   [ "$rc" -eq 1 ] && overall=1
 done

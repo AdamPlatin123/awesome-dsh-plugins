@@ -1,6 +1,6 @@
 # AGENTS.md
 
-dsh-external 生态情报仓库（private）：对 `dsh-external` 组织 15 个仓库的聚合调研，加上与**当日 mainline**（`dsh2026/test-AdamPlatin123` 最新快照分支）的自动兼容性对比。本仓库只承载情报、对比引擎与报告，不托管任何插件代码。
+dsh-external 生态情报仓库（private）：对 `dsh-external` 组织全部仓库（动态发现，当前 134）的聚合调研，加上与**当日 mainline**（`dsh2026/test-AdamPlatin123` 最新快照分支）的自动兼容性对比。本仓库只承载情报、对比引擎与报告，不托管任何插件代码。
 
 ## Private 约束（最高优先级）
 
@@ -18,8 +18,8 @@ README.md                    # 项目说明 + 快速导航（链接 CHANGELOG �
 CHANGELOG.md                 # ★主更新视图：按日期倒序的每日条目（mainline 变更 + 生态兼容状态 + 报告链接）
 reports/                     # 按日期文件夹分立的报告（引擎自动生成）
   latest -> <最新日期>        # 软链接，始终指向最新日期文件夹
-  <YYYY-MM-DD>/              # 当日：mainline-compat.md + <repo>.md × 15 + index.md
-research/                    # 15 份静态调研摘要（只读资产，不在此编辑）
+  <YYYY-MM-DD>/              # 当日：mainline-compat.md + <repo>.md × 全部发现仓库（当前 134） + index.md
+research/                    # 63 份静态调研摘要（只读资产，不在此编辑）
 context/                     # 旧 session 调研上下文归档（只读）
 cross-analysis/              # 聚合分析（只读）
 analysis/                    # 情报分析（插件格式 / 安全风险）
@@ -28,7 +28,7 @@ plan/                        # 计划与过程产物
 .agents/skills/mainline-compat/  # 对比引擎 skill（工作流 + SKILL.md）
 scripts/compare-mainline.sh  # 核心引擎（bash，零第三方依赖）
 .mainline/                   # mainline 快照 clone 缓存（gitignore，chmod 700）
-.clones/                     # 15 仓库 shallow clone 缓存（gitignore）
+.clones/                     # 动态 clone 缓存（gitignore；当前含 15 仓，随索引增长）
 .mainline-state.json         # 上次对比状态（lastMainlineCommit/lastDate/repos）
 ```
 
@@ -59,10 +59,10 @@ bash scripts/compare-mainline.sh --apply-fix         # 输出待修 diff（如 c
 - `CHANGELOG.md` 是**主更新视图**：每次对比运行自动在顶部插入当日条目，格式固定为：
 
   ```markdown
-  ## 2026-08-05
-  - mainline：`02d7555`（snapshots/20260804T143803Z）—— 较上次 [变更摘要 3-5 条]
-  - 兼容状态：14/15 兼容，1 需适配（<repo>）
-  - 报告：[mainline-compat.md](reports/2026-08-05/mainline-compat.md) · [当日索引](reports/2026-08-05/index.md)
+  ## 2026-08-08
+  - mainline：`0882344`（snapshots/20260808T121140Z）—— 较上次 [变更摘要 3-5 条]
+  - 兼容状态：123/134 无需适配，10 需适配（<repo>）
+  - 报告：[mainline-compat.md](reports/2026-08-08/mainline-compat.md) · [当日索引](reports/2026-08-08/index.md)
   ```
 
 - 报告链接用**相对路径**（跨平台可靠，GitHub 与本地均可点击直达）；`reports/latest` 软链接随时指向最新日期文件夹，README/CHANGELOG 顶部"最新报告"即指此。

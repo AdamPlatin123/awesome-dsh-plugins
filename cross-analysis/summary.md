@@ -1,5 +1,7 @@
 # dsh-external 生态超级调研：聚合报告
 
+> ⚠️ **快照声明**：本报告为 2026-08-05 首轮 15 仓基线聚合，当前 org 已 134 仓；最新全景见 reports/latest/mainline-compat.md（每日更新）。
+
 > 本报告由 15 个并行调研摘要（`/mnt/shared/_Projects/dsh-external-research/research/*.md`）与旧 session 上下文归档（`/mnt/shared/_Projects/dsh-external-research/context/session-019fc8ab-summary.md`）聚合而成。
 > 所有论断均可在对应摘要文件中追溯（标注 `research/<仓库>.md`）；每个仓库至少出现一次。
 > 调研基准日：2026-08-05。
