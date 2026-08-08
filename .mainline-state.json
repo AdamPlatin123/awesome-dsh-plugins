@@ -1,7 +1,7 @@
 {
-  "lastMainlineCommit": "9d84ab42354a70058a66a826c4473e55925052b6",
-  "lastDate": "2026-08-07",
-  "previousCommit": "bfb913696efaa241b92fe8731b2d2336bdb7f697",
+  "lastMainlineCommit": "e72bf03c5f10c76f3ba426e42237206423fc186e",
+  "lastDate": "2026-08-08",
+  "previousCommit": "9d84ab42354a70058a66a826c4473e55925052b6",
   "repos": {
     "chat-width": {
       "anchoredCommit": "未知",
@@ -101,7 +101,7 @@
     },
     "dsh-sfw": {
       "anchoredCommit": "未知",
-      "status": "占位"
+      "status": "兼容"
     },
     "dsh-shell-windows": {
       "anchoredCommit": "未知",
@@ -112,7 +112,7 @@
       "status": "关注"
     },
     "dsh-skins": {
-      "anchoredCommit": "f1792735",
+      "anchoredCommit": "8abbd65a",
       "status": "兼容"
     },
     "dsh-subagent-tree": {
@@ -140,11 +140,11 @@
       "status": "兼容"
     },
     "dsh-ui-progress": {
-      "anchoredCommit": "未知",
+      "anchoredCommit": "ce1fc03f95",
       "status": "兼容"
     },
     "dsh-ui-whale": {
-      "anchoredCommit": "未知",
+      "anchoredCommit": "ce1fc03f95",
       "status": "兼容"
     },
     "dsh-vision": {
@@ -200,7 +200,7 @@
       "status": "不适用"
     },
     "marisa": {
-      "anchoredCommit": "未知",
+      "anchoredCommit": "snapshot-20260807T130646Z",
       "status": "关注"
     },
     "plugin-registry": {
@@ -280,7 +280,7 @@
       "status": "兼容"
     },
     "dsh-multimedia-webui-input": {
-      "anchoredCommit": "ce1fc03f95",
+      "anchoredCommit": "279244acb0",
       "status": "兼容"
     },
     "repo-visibility-guard": {
@@ -297,7 +297,7 @@
     },
     "fabric": {
       "anchoredCommit": "4d3e1305d7f96c9b8e5842c71eab65b0ee7d36f5",
-      "status": "需适配"
+      "status": "兼容"
     },
     "dsh-browser": {
       "anchoredCommit": "未知",
@@ -318,6 +318,154 @@
     "dsh-inspect": {
       "anchoredCommit": "未知",
       "status": "兼容"
+    },
+    "dsh-hub": {
+      "anchoredCommit": "e8a0f1a758",
+      "status": "兼容"
+    },
+    "dsh-alphasolve": {
+      "anchoredCommit": "279244acb0",
+      "status": "兼容"
+    },
+    "zotero-wave-rag": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "onboarding": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "ego-browser": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-nowledge-mem": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-sidechain": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-a2a": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-feishu-notify": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-remote": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "mstar-workflow": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-scholar": {
+      "anchoredCommit": "未知",
+      "status": "占位"
+    },
+    "dsh-issue-like-skill": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-tool-csv": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-tool-regex": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-session-repair-skill": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "DSH-better-sidebar": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-session-hub": {
+      "anchoredCommit": "未知",
+      "status": "占位"
+    },
+    "dsh-ica": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-advisor": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-llm-fallbacks": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-web-workflow-visualizer": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-checkpoint": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-rewind": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "official-plugins-port": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "oh-my-dsh": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-side-panel": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-profile-bundle-example": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-plan-execute": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-paste-input": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "zotero-harvest": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-Modular-Yet-Graceful-Orchestrator": {
+      "anchoredCommit": "未知",
+      "status": "占位"
+    },
+    "zephyr": {
+      "anchoredCommit": "未知",
+      "status": "占位"
+    },
+    "dsh-bash-encoding": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-skill-stats": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-web-archive": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "sandbox-micro": {
+      "anchoredCommit": "未知",
+      "status": "占位"
     }
   }
 }

@@ -3,8 +3,8 @@
 
 ## 克隆证据
 
-- 克隆 HEAD：7d7b5d6
-- 锚定：未知（unknown，未知）
+- 克隆 HEAD：07d8373
+- 锚定：ce1fc03f95（commit，未知（不同谱系））
 - 补丁：无补丁
 - seam：缺: tuiPrompt
 - peerDeps：无 dsh-* 依赖
@@ -13,7 +13,7 @@
 
 | 维度 | 结果 |
 |---|---|
-| 锚定 vs 当日 mainline | 未知 |
+| 锚定 vs 当日 mainline | 未知（不同谱系） |
 | 补丁 apply --check --3way | 无补丁 |
 | seam 符号存在性 | 缺: tuiPrompt |
 | peerDeps 范围 vs mainline 实际 | 无 dsh-* 依赖 |
