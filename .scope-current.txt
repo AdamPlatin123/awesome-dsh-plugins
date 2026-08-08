@@ -104,3 +104,13 @@ dsh-rewind
 official-plugins-port
 oh-my-dsh
 dsh-side-panel
+dsh-profile-bundle-example
+dsh-plan-execute
+dsh-paste-input
+zotero-harvest
+dsh-Modular-Yet-Graceful-Orchestrator
+zephyr
+dsh-bash-encoding
+dsh-skill-stats
+dsh-web-archive
+sandbox-micro
