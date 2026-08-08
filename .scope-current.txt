@@ -93,3 +93,14 @@ dsh-issue-like-skill
 dsh-tool-csv
 dsh-tool-regex
 dsh-session-repair-skill
+DSH-better-sidebar
+dsh-session-hub
+dsh-ica
+dsh-advisor
+dsh-llm-fallbacks
+dsh-web-workflow-visualizer
+dsh-checkpoint
+dsh-rewind
+official-plugins-port
+oh-my-dsh
+dsh-side-panel
