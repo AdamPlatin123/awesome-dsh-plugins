@@ -3,7 +3,7 @@
 > 面向 DSH 插件开发者的组织级情报门户：每 8 小时自动索引 dsh-external 全部仓库，对比当日 mainline 接口差异，产出兼容性矩阵、新增/修改跟踪与双方开发者建议。
 
 <!-- AUTO:ecosystem:START -->
-> 自动更新：2026-08-09_0132（cron 每 8 小时 · 报告日 2026-08-08 · mainline `0882344`）
+> 自动更新：2026-08-09_0153（cron 每 8 小时 · 报告日 2026-08-08 · mainline `0882344`）
 
 **生态仪表盘**
 
@@ -15,41 +15,52 @@
 | 关注 / 占位 / 不适用 / 已删除 | 3 / 8 / 2 / 1 |
 | 🐙 开放 PR | 2 |
 
+📄 **最新报告**：[mainline-compat.md](reports/2026-08-08/mainline-compat.md) · [当日索引](reports/2026-08-08/index.md)（完整矩阵 + 双方建议）
+
 **今日新增 / 修改仓库**
 
 | 仓库 | 类型 |
 |---|---|
-| dsh-memory-evolve | 🆕 新增 |
-| dsh-my-rsi | 🆕 新增 |
-| dsh-win-port | 🆕 新增 |
-| dsh-a2a | 🆕 新增 |
-| dsh-plan-execute | 🆕 新增 |
-| dsh-bash-encoding | 🆕 新增 |
-| dsh-git-identity | 🆕 新增 |
-| dsh-android | 🆕 新增 |
-| dsh-lazyfish | 🆕 新增 |
-| dsh-auto-approval | 🆕 新增 |
-| dsh-crew | 🆕 新增 |
-| dsh-input-history | 🆕 新增 |
-| dsh-client-ui-plan-execute | 🆕 新增 |
-| dsh-stickers | 🆕 新增 |
-| dsh-android | ✏️ 修改 |
-| dsh-lazyfish | ✏️ 修改 |
-| dsh-auto-approval | ✏️ 修改 |
-| dsh-crew | ✏️ 修改 |
-| dsh-input-history | ✏️ 修改 |
-| dsh-client-ui-plan-execute | ✏️ 修改 |
-| dsh-stickers | ✏️ 修改 |
-| deep-standard-skill | ✏️ 修改 |
-| dsh-serenity-plugin | ✏️ 修改 |
-| dsh-toolkit | ✏️ 修改 |
-| dsh-tool-markdown | ✏️ 修改 |
-| dsh-session-health | ✏️ 修改 |
-| dsh-desktop-tools | ✏️ 修改 |
-| dsh-reuse-first | ✏️ 修改 |
-| dsh-plus | ✏️ 修改 |
-| dsh-session-cluster | ✏️ 修改 |
-| DSH-UI4A | ✏️ 修改 |
+| dsh-web-ui-notify | 🆕 新增 |
+| dsh-evolve | 🆕 新增 |
+| dsh-island | 🆕 新增 |
+| dsh-drag-and-drop | 🆕 新增 |
+| dsh-message-edit | 🆕 新增 |
+| dsh-deep-research | 🆕 新增 |
+| dsh-multimedia-webui-input | 🆕 新增 |
+| repo-visibility-guard | 🆕 新增 |
+| dsh-grok-tui | 🆕 新增 |
+| ds_web_craw | 🆕 新增 |
+| fabric | 🆕 新增 |
+| dsh-browser | 🆕 新增 |
+| dsh-desktop-mac | 🆕 新增 |
+| dsh-public-repo-monitor | 🆕 新增 |
+| dsh-tui | 🆕 新增 |
+| dsh-inspect | 🆕 新增 |
+| dsh-cc-tui | ✏️ 修改 |
+| dsh-memory-evolve | ✏️ 修改 |
+| dsh-session-search | ✏️ 修改 |
+| dsh-sfw | ✏️ 修改 |
+| dsh-skins | ✏️ 修改 |
+| dsh-ui-progress | ✏️ 修改 |
+| dsh-ui-whale | ✏️ 修改 |
+| dsh-win-port | ✏️ 修改 |
+| hub | ✏️ 修改 |
+| dsh-hub | ✏️ 修改 |
+| dsh-a2a | ✏️ 修改 |
+| dsh-feishu-notify | ✏️ 修改 |
+| dsh-web-workflow-visualizer | ✏️ 修改 |
+| dsh-checkpoint | ✏️ 修改 |
+| dsh-rewind | ✏️ 修改 |
+| official-plugins-port | ✏️ 修改 |
+| oh-my-dsh | ✏️ 修改 |
+| dsh-profile-bundle-example | ✏️ 修改 |
+| dsh-plan-execute | ✏️ 修改 |
+| dsh-paste-input | ✏️ 修改 |
+| zotero-harvest | ✏️ 修改 |
+| dsh-bash-encoding | ✏️ 修改 |
+| dsh-skill-stats | ✏️ 修改 |
+| dsh-web-archive | ✏️ 修改 |
 **需适配（补丁基线 / seam 变化）**
 
 | 仓库 | 锚定 | 判定 |
@@ -92,7 +103,7 @@
 - **安全清单**：`analysis/security-issues.md`（红线与整改）
 - **逐仓库摘要**：`research/*.md`（63+ 份）
 - **变更记录**：[CHANGELOG.md](CHANGELOG.md)
-- **最新报告**：[reports/latest/](reports/latest/)（兼容性矩阵 + 双方建议）
+- **最新报告**：[reports/ 目录](https://github.com/dsh-external/dsh-external-research/tree/main/reports)（按日归档；自动节顶部有当日直达链接；`reports/latest` 为软链，网页显示目标名、本地克隆可 cd）
 - **Issue 路线图**：`actions/issue-roadmap.md`、`actions/org-issues.md`（issue 草稿）
 - **旧 session 上下文**：`context/session-019fc8ab-summary.md`
 

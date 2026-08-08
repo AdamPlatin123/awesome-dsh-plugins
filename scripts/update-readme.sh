@@ -79,6 +79,8 @@ BLOCK="<!-- AUTO:ecosystem:START -->
 | 关注 / 占位 / 不适用 / 已删除 | $WATCH / $PLACE / $NA / $GONE |
 | 🐙 开放 PR | $PR_TOTAL |
 
+📄 **最新报告**：[mainline-compat.md](reports/$DATE/mainline-compat.md) · [当日索引](reports/$DATE/index.md)（完整矩阵 + 双方建议）
+
 **今日新增 / 修改仓库**
 
 | 仓库 | 类型 |
