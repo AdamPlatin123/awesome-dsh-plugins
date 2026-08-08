@@ -108,7 +108,7 @@ dsh-profile-bundle-example
 dsh-plan-execute
 dsh-paste-input
 zotero-harvest
-dsh-Modular-Yet-Graceful-Orchestrator
+dsh-mygo
 zephyr
 dsh-bash-encoding
 dsh-skill-stats
@@ -136,3 +136,6 @@ dsh-visualize
 dsh-tps
 dsh-plugin-check
 dsh-plugin-dev
+dsh-gomoku
+dsh-101
+dsh-change-ledger
