@@ -1,5 +1,10 @@
 ## 2026-08-10
 - mainline：`1c4950a`（snapshots/20260809T140917Z）—— 较上次 1c4950ab71fa4d128c749d9b22af17373edddb73：WebSocket 下行通道新增：packages/client/connection/src/websocket-downlink.ts 及其测试进入 mainline（架构 note 2026-08-04-websocket-downlink-carrier），远程通道类插件可对齐。 包级变化：packages/ 下删除 0 个包目录、新增 0 个文件（diffstat 见下）。
+- 兼容状态：169 / 175 兼容，6 需适配（dsh-subagent-tree dsh-working-activity plugin-registry turtle-ui dsh-tps dsh-split-panes）
+- 报告：[mainline-compat.md](reports/2026-08-10/mainline-compat.md) · [当日索引](reports/2026-08-10/index.md)
+
+## 2026-08-10
+- mainline：`1c4950a`（snapshots/20260809T140917Z）—— 较上次 1c4950ab71fa4d128c749d9b22af17373edddb73：WebSocket 下行通道新增：packages/client/connection/src/websocket-downlink.ts 及其测试进入 mainline（架构 note 2026-08-04-websocket-downlink-carrier），远程通道类插件可对齐。 包级变化：packages/ 下删除 0 个包目录、新增 0 个文件（diffstat 见下）。
 - 兼容状态：167 / 173 兼容，6 需适配（dsh-subagent-tree dsh-working-activity plugin-registry turtle-ui dsh-tps dsh-split-panes）
 - 报告：[mainline-compat.md](reports/2026-08-10/mainline-compat.md) · [当日索引](reports/2026-08-10/index.md)
 

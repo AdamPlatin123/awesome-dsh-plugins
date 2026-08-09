@@ -2,7 +2,7 @@
 
 - mainline：`1c4950a`（snapshots/20260809T140917Z）
 - 上次对比：`1c4950ab71fa4d128c749d9b22af17373edddb73`
-- 兼容性：73/173 无需适配，6 需适配（dsh-subagent-tree dsh-working-activity plugin-registry turtle-ui dsh-tps dsh-split-panes）；其中关注 3、占位 9、不适用 2、已删除 1、未知 93
+- 兼容性：73/175 无需适配，6 需适配（dsh-subagent-tree dsh-working-activity plugin-registry turtle-ui dsh-tps dsh-split-panes）；其中关注 3、占位 9、不适用 2、已删除 1、未知 95
 
 ## 兼容性矩阵
 
@@ -181,6 +181,8 @@
 | dsh-engram-relay | 未知 | 无补丁 | 缺: tuiPrompt | 3 项匹配 | 未知（待调研） |
 | yet-another-subagent | 未知 | 无补丁 | 缺: tuiPrompt | 17 项匹配 | 未知（待调研） |
 | dsh-voice-chat | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 未知（待调研） |
+| dsh-ads | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 未知（待调研） |
+| dsh-skill-session-recovery | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 未知（待调研） |
 
 ## mainline 变更分析（1c4950ab71fa4d128c749d9b22af17373edddb73 → 1c4950a）
 
@@ -576,6 +578,10 @@
 - 未建模/状态未知：尚无 research/yet-another-subagent.md 调研摘要（或 git/gh 无法确认仓库状态），不做兼容性结论；建议先完成调研建模或人工核查后再纳入兼容跟踪。
 ### dsh-voice-chat
 - 未建模/状态未知：尚无 research/dsh-voice-chat.md 调研摘要（或 git/gh 无法确认仓库状态），不做兼容性结论；建议先完成调研建模或人工核查后再纳入兼容跟踪。
+### dsh-ads
+- 未建模/状态未知：尚无 research/dsh-ads.md 调研摘要（或 git/gh 无法确认仓库状态），不做兼容性结论；建议先完成调研建模或人工核查后再纳入兼容跟踪。
+### dsh-skill-session-recovery
+- 未建模/状态未知：尚无 research/dsh-skill-session-recovery.md 调研摘要（或 git/gh 无法确认仓库状态），不做兼容性结论；建议先完成调研建模或人工核查后再纳入兼容跟踪。
 
 ## 主仓库侧建议
 

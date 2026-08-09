@@ -171,3 +171,5 @@ dsh-browser-panel
 dsh-engram-relay
 yet-another-subagent
 dsh-voice-chat
+dsh-ads
+dsh-skill-session-recovery

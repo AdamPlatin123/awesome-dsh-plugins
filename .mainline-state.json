@@ -694,6 +694,14 @@
     "dsh-voice-chat": {
       "anchoredCommit": "未知",
       "status": "未知（待调研）"
+    },
+    "dsh-ads": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-skill-session-recovery": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
     }
   }
 }

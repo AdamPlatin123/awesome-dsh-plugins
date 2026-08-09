@@ -178,6 +178,8 @@
 - [dsh-engram-relay.md](dsh-engram-relay.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-engram-relay)
 - [yet-another-subagent.md](yet-another-subagent.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/yet-another-subagent)
 - [dsh-voice-chat.md](dsh-voice-chat.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-voice-chat)
+- [dsh-ads.md](dsh-ads.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-ads)
+- [dsh-skill-session-recovery.md](dsh-skill-session-recovery.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-skill-session-recovery)
 
 ## 相关资产
 
