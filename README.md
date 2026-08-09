@@ -121,6 +121,7 @@
 - 数据源：`.last-changes.json` 记录每轮新增/修改仓库，驱动仪表盘
 - 已删除/迁移仓库自动标记跳过（session-persistence-rdb 实例）；离线显式报错不误报
 - 手动触发：`bash -lc 'cd /home/adam/dsh-external-research && ./scripts/cron-check.sh'`
+- **更新即索引（post-merge hook）**：本 repo 被推送非 bot 提交（脚本/配置/文档变更）后，远程 `git pull` 会自动触发 `--full` 全量索引各 repo 兼容性；与被监控仓库自身更新无关（那些由 cron 轮询兜底）。bot 自产产物（reports/README/CHANGELOG/状态文件）不触发。
 
 </details>
 
