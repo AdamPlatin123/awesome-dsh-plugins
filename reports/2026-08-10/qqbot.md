@@ -1,7 +1,7 @@
 # qqbot — 与 mainline 兼容性对比（2026-08-10）> [打开仓库](https://github.com/dsh-external/qqbot) · 调研摘要（只读资产，本报告不复制其正文）：[research/qqbot.md](../../research/qqbot.md)\n\n
 ## 克隆证据
 
-- 克隆 HEAD：6e238b0
+- 克隆 HEAD：e436ed6
 - 锚定：未知（unknown，未知）
 - 补丁：无补丁
 - seam：缺: tuiPrompt

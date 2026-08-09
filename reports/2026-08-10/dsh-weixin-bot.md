@@ -1,7 +1,7 @@
 # dsh-weixin-bot — 与 mainline 兼容性对比（2026-08-10）> [打开仓库](https://github.com/dsh-external/dsh-weixin-bot) · 调研摘要（只读资产，本报告不复制其正文）：[research/dsh-weixin-bot.md](../../research/dsh-weixin-bot.md)\n\n
 ## 克隆证据
 
-- 克隆 HEAD：f6a077f
+- 克隆 HEAD：15a192a
 - 锚定：未知（unknown，未知）
 - 补丁：无补丁
 - seam：缺: tuiPrompt

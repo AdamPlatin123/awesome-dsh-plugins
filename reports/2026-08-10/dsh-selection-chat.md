@@ -1,7 +1,7 @@
-# dsh-club — 与 mainline 兼容性对比（2026-08-10）> [打开仓库](https://github.com/dsh-external/dsh-club) · 深度摘要待调研（当前为引擎自动判定）\n\n
+# dsh-selection-chat — 与 mainline 兼容性对比（2026-08-10）> [打开仓库](https://github.com/dsh-external/dsh-selection-chat) · 深度摘要待调研（当前为引擎自动判定）\n\n
 ## 克隆证据
 
-- 克隆 HEAD：a7ee97c
+- 克隆 HEAD：d2ce015
 - 锚定：未知（unknown，未知）
 - 补丁：无补丁
 - seam：缺: tuiPrompt

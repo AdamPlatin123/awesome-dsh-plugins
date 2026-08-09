@@ -1,7 +1,7 @@
 {
   "lastMainlineCommit": "1c4950ab71fa4d128c749d9b22af17373edddb73",
   "lastDate": "2026-08-10",
-  "previousCommit": "0882344227593b67a3f6459f791162d1eeeafd25",
+  "previousCommit": "1c4950ab71fa4d128c749d9b22af17373edddb73",
   "repos": {
     "chat-width": {
       "anchoredCommit": "未知",
@@ -672,6 +672,26 @@
       "status": "未知（待调研）"
     },
     "dsh-spur": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-selection-chat": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-browser-panel": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-engram-relay": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "yet-another-subagent": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-voice-chat": {
       "anchoredCommit": "未知",
       "status": "未知（待调研）"
     }

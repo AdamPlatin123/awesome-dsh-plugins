@@ -166,3 +166,8 @@ dsh-humanize
 dsh-agent-budget
 dsh-involute
 dsh-spur
+dsh-selection-chat
+dsh-browser-panel
+dsh-engram-relay
+yet-another-subagent
+dsh-voice-chat

@@ -1,7 +1,7 @@
 # dsh-wecom-bot — 与 mainline 兼容性对比（2026-08-10）> [打开仓库](https://github.com/dsh-external/dsh-wecom-bot) · 调研摘要（只读资产，本报告不复制其正文）：[research/dsh-wecom-bot.md](../../research/dsh-wecom-bot.md)\n\n
 ## 克隆证据
 
-- 克隆 HEAD：66c85d9
+- 克隆 HEAD：146bb8c
 - 锚定：未知（unknown，未知）
 - 补丁：无补丁
 - seam：缺: tuiPrompt

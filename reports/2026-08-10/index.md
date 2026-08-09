@@ -1,6 +1,6 @@
 # 当日索引（2026-08-10）
 - [主报告 mainline-compat.md](mainline-compat.md)（兼容性矩阵 + mainline 变更分析 + 双方建议）
-- mainline：`1c4950a`（snapshots/20260809T140917Z），上次 `0882344227593b67a3f6459f791162d1eeeafd25`
+- mainline：`1c4950a`（snapshots/20260809T140917Z），上次 `1c4950ab71fa4d128c749d9b22af17373edddb73`
 - [返回 CHANGELOG](../../CHANGELOG.md)
 
 ## 仓库详情
@@ -173,6 +173,11 @@
 - [dsh-agent-budget.md](dsh-agent-budget.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-agent-budget)
 - [dsh-involute.md](dsh-involute.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-involute)
 - [dsh-spur.md](dsh-spur.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-spur)
+- [dsh-selection-chat.md](dsh-selection-chat.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-selection-chat)
+- [dsh-browser-panel.md](dsh-browser-panel.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-browser-panel)
+- [dsh-engram-relay.md](dsh-engram-relay.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-engram-relay)
+- [yet-another-subagent.md](yet-another-subagent.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/yet-another-subagent)
+- [dsh-voice-chat.md](dsh-voice-chat.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-voice-chat)
 
 ## 相关资产
 
