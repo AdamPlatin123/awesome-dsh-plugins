@@ -3,17 +3,17 @@
 > 面向 DSH 插件开发者的组织级情报门户：每 8 小时自动索引 dsh-external 全部仓库，对比当日 mainline 接口差异，产出兼容性矩阵、新增/修改跟踪与双方开发者建议。
 
 <!-- AUTO:ecosystem:START -->
-> 自动更新：2026-08-09_1454（cron 每 8 小时 · 报告日 2026-08-09 · mainline `0882344`）
+> 自动更新：2026-08-09_1852（cron 每 8 小时 · 报告日 2026-08-09 · mainline `0882344`）
 
 **生态仪表盘**
 
 | 指标 | 值 |
 |---|---|
-| 仓库总数 | 147 |
-| ✅ 无需适配 | 67 |
-| ⚠️ 需适配 | 10 |
+| 仓库总数 | 152 |
+| ✅ 无需适配 | 71 |
+| ⚠️ 需适配 | 7 |
 | 关注 / 占位 / 不适用 / 已删除 | 3 / 6 / 2 / 1 |
-| 🐙 开放 PR | 3 |
+| 🐙 开放 PR | 2 |
 
 📄 **最新报告**：[mainline-compat.md](reports/2026-08-09/mainline-compat.md) · [当日索引](reports/2026-08-09/index.md)（完整矩阵 + 双方建议）
 
@@ -105,8 +105,18 @@
 | dsh-task-board | 🆕 新增 |
 | dsh-activity-plugin | 🆕 新增 |
 | dsh-tool-diff | 🆕 新增 |
-| （今日无修改） | |
-
+| dsh-git-graph | 🆕 新增 |
+| dsh-mobileweb-adapter | 🆕 新增 |
+| dsh-desktop-electron | 🆕 新增 |
+| dsh-mineru | 🆕 新增 |
+| dsh-pet | 🆕 新增 |
+| dsh-feishu-bot | ✏️ 修改 |
+| dsh-memory-evolve | ✏️ 修改 |
+| dsh-ui-progress | ✏️ 修改 |
+| dsh-wecom-bot | ✏️ 修改 |
+| dsh-weixin-bot | ✏️ 修改 |
+| hub | ✏️ 修改 |
+| qqbot | ✏️ 修改 |
 **需适配（补丁基线 / seam 变化）**
 
 | 仓库 | 锚定 | 判定 |
@@ -114,18 +124,14 @@
 | dsh-my-rsi | 未知（不同谱系） | 需适配 |
 | dsh-subagent-tree | 未知 | 需适配 |
 | dsh-working-activity | 未知（非 commit 锚定: 20260804T143803Z） | 需适配 |
-| ex-setting | 未知（不同谱系） | 需适配 |
 | plugin-registry | 未知（非 commit 锚定: 20260804T143803Z） | 需适配 |
 | Qwen-MM-Plugins | 未知（不同谱系） | 需适配 |
 | sandbox-mxc | 未知（不同谱系） | 需适配 |
 | turtle-ui | 未知（不同谱系） | 需适配 |
-| web-components | 未知（不同谱系） | 需适配 |
-| fabric | 未知（不同谱系） | 需适配 |
 **正在跟踪的 open PR**
 
 | 仓库 | PR | 标题 | 更新 |
 |---|---|---|---|
-| [dsh-hub](https://github.com/dsh-external/dsh-hub) | [#6](https://github.com/dsh-external/dsh-hub/pull/6) | Connect OMDSH Workshop to official Harness contracts | 2026-08-09 |
 | [group-chat-diary](https://github.com/dsh-external/group-chat-diary) | [#4](https://github.com/dsh-external/group-chat-diary/pull/4) | Automate Cloudflare Pages deployment | 2026-08-07 |
 | [dsh-live-stats](https://github.com/dsh-external/dsh-live-stats) | [#1](https://github.com/dsh-external/dsh-live-stats/pull/1) | fix: make live token and TPS accounting provider-aligned | 2026-08-07 |
 <!-- AUTO:ecosystem:END -->
