@@ -781,9 +781,14 @@ $p"
   local detail=""
   for name in "${REPOS[@]}"; do
     detail="$(printf '# %s — 与 mainline 兼容性对比（%s）\n\n' "$name" "$DATE")"
-    detail="$detail
-> 调研摘要（只读资产，本报告不复制其正文）：[research/$name.md](../../research/$name.md)——集成点与调研全文以 research 为准。
+    # 仓库名可点击跳转 GitHub；research 摘要链接仅在存在时输出（避免死链）
+    if [ -f "$ROOT/research/$name.md" ]; then
+      detail="$detail> [打开仓库](https://github.com/$ORG/$name) · 调研摘要（只读资产，本报告不复制其正文）：[research/$name.md](../../research/$name.md)\n\n"
+    else
+      detail="$detail> [打开仓库](https://github.com/$ORG/$name) · 深度摘要待调研（当前为引擎自动判定）\n\n"
+    fi
 
+    detail="$detail
 ## 克隆证据
 
 - 克隆 HEAD：${REPO_HEAD[$name]:-（空仓库）}
@@ -810,7 +815,7 @@ $p"
       printf '%s' "$detail" > "$REPORTS_DIR/$name.md" || die 2 "写入详情报告失败: $name.md"
     fi
     detail_all="$detail_all
-- [${name}.md](${name}.md) — ${OVERALL[$name]}"
+- [${name}.md](${name}.md) — ${OVERALL[$name]} · [仓库](https://github.com/$ORG/$name)"
   done
 
   local index_txt
@@ -825,7 +830,7 @@ $detail_all
 
 ## 相关资产
 
-- [research/](../../research/) — 15 份静态调研摘要（只读）
+- [research/](../../research/) — $(ls "$ROOT"/research/*.md 2>/dev/null | wc -l | tr -d ' ') 份静态调研摘要（只读）
 - [cross-analysis/summary.md](../../cross-analysis/summary.md) — 生态全景聚合报告
 "
   if [ "$DRY_RUN" -eq 0 ]; then

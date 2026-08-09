@@ -49,15 +49,15 @@ if [ -f .last-changes.json ]; then
   MOD_LIST="$(jq -r '.changed_repos[]?' .last-changes.json 2>/dev/null || true)"
 fi
 NEW_ROWS=""; MOD_ROWS=""
-[ -n "$NEW_LIST" ] && NEW_ROWS="$(printf '%s\n' "$NEW_LIST" | while IFS= read -r n; do [ -n "$n" ] && printf '| %s | 🆕 新增 |\n' "$n"; done)"
+[ -n "$NEW_LIST" ] && NEW_ROWS="$(printf '%s\n' "$NEW_LIST" | while IFS= read -r n; do [ -n "$n" ] && printf '| [%s](https://github.com/dsh-external/%s) | 🆕 新增 |\n' "$n" "$n"; done)"
 [ -z "$NEW_ROWS" ] && NEW_ROWS=$'| （今日无新增） | |\n'
-[ -n "$MOD_LIST" ] && MOD_ROWS="$(printf '%s\n' "$MOD_LIST" | while IFS= read -r n; do [ -n "$n" ] && printf '| %s | ✏️ 修改 |\n' "$n"; done)"
+[ -n "$MOD_LIST" ] && MOD_ROWS="$(printf '%s\n' "$MOD_LIST" | while IFS= read -r n; do [ -n "$n" ] && printf '| [%s](https://github.com/dsh-external/%s) | ✏️ 修改 |\n' "$n" "$n"; done)"
 [ -z "$MOD_ROWS" ] && MOD_ROWS=$'| （今日无修改） | |\n'
 
 # 3. 需适配仓库（从最新报告矩阵提取状态=需适配的行）
 ADAPT_ROWS=""
 if [ -n "$LATEST_REPORT" ] && [ -f "$LATEST_REPORT/mainline-compat.md" ]; then
-  ADAPT_ROWS="$(grep -E '^\| .* \| 需适配[^|]* \|$' "$LATEST_REPORT/mainline-compat.md" | sed -E 's#^\| ([^|]+) \| ([^|]+) \| ([^|]+) \| ([^|]+) \| ([^|]+) \| ([^|]+) \|$#| \1 | \2 | \6 |#' | head -20)"
+  ADAPT_ROWS="$(grep -E '^\| .* \| 需适配[^|]* \|$' "$LATEST_REPORT/mainline-compat.md" | sed -E 's#^\| ([^|]+) \| ([^|]+) \| ([^|]+) \| ([^|]+) \| ([^|]+) \| ([^|]+) \|$#| [\1](https://github.com/dsh-external/\1) | \2 | \6 |#' | head -20)"
 fi
 [ -z "$ADAPT_ROWS" ] && ADAPT_ROWS=$'| （暂无） | | |\n'
 
