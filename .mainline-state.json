@@ -1,7 +1,7 @@
 {
   "lastMainlineCommit": "0882344227593b67a3f6459f791162d1eeeafd25",
-  "lastDate": "2026-08-08",
-  "previousCommit": "e72bf03c5f10c76f3ba426e42237206423fc186e",
+  "lastDate": "2026-08-09",
+  "previousCommit": "0882344227593b67a3f6459f791162d1eeeafd25",
   "repos": {
     "chat-width": {
       "anchoredCommit": "未知",
@@ -257,27 +257,27 @@
     },
     "dsh-web-ui-notify": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-evolve": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-island": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-drag-and-drop": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-message-edit": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-deep-research": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-multimedia-webui-input": {
       "anchoredCommit": "279244acb0",
@@ -285,15 +285,15 @@
     },
     "repo-visibility-guard": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-grok-tui": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "ds_web_craw": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "fabric": {
       "anchoredCommit": "4d3e1305d7f96c9b8e5842c71eab65b0ee7d36f5",
@@ -301,15 +301,15 @@
     },
     "dsh-browser": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-desktop-mac": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-public-repo-monitor": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-tui": {
       "anchoredCommit": "未知",
@@ -317,7 +317,7 @@
     },
     "dsh-inspect": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-hub": {
       "anchoredCommit": "e8a0f1a758",
@@ -329,39 +329,39 @@
     },
     "zotero-wave-rag": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "onboarding": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "ego-browser": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-nowledge-mem": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-sidechain": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-a2a": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-feishu-notify": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-remote": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "mstar-workflow": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-scholar": {
       "anchoredCommit": "未知",
@@ -369,23 +369,23 @@
     },
     "dsh-issue-like-skill": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-tool-csv": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-tool-regex": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-session-repair-skill": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "DSH-better-sidebar": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-session-hub": {
       "anchoredCommit": "未知",
@@ -393,59 +393,55 @@
     },
     "dsh-ica": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-advisor": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-llm-fallbacks": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-web-workflow-visualizer": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-checkpoint": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-rewind": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "official-plugins-port": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "oh-my-dsh": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-side-panel": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-profile-bundle-example": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-plan-execute": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-paste-input": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "zotero-harvest": {
       "anchoredCommit": "未知",
-      "status": "兼容"
-    },
-    "dsh-Modular-Yet-Graceful-Orchestrator": {
-      "anchoredCommit": "未知",
-      "status": "占位"
+      "status": "未知（待调研）"
     },
     "zephyr": {
       "anchoredCommit": "未知",
@@ -453,15 +449,15 @@
     },
     "dsh-bash-encoding": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-skill-stats": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-web-archive": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "sandbox-micro": {
       "anchoredCommit": "未知",
@@ -469,7 +465,7 @@
     },
     "dsh-git-identity": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-android": {
       "anchoredCommit": "e56256082c",
@@ -477,67 +473,107 @@
     },
     "dsh-lazyfish": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-auto-approval": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-crew": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-input-history": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-client-ui-plan-execute": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-stickers": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "deep-standard-skill": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-serenity-plugin": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-toolkit": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-tool-markdown": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-session-health": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-desktop-tools": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-reuse-first": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-plus": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "dsh-session-cluster": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
     },
     "DSH-UI4A": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "未知（待调研）"
+    },
+    "dsh-visualize": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-tps": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-plugin-check": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-plugin-dev": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-gomoku": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-101": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-change-ledger": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-genui": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-mygo": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "cross-harness-cite": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
     }
   }
 }
