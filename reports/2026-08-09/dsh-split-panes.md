@@ -1,10 +1,10 @@
-# dsh-tps — 与 mainline 兼容性对比（2026-08-09）
-> 调研摘要（只读资产，本报告不复制其正文）：[research/dsh-tps.md](../../research/dsh-tps.md)——集成点与调研全文以 research 为准。
+# dsh-split-panes — 与 mainline 兼容性对比（2026-08-09）
+> 调研摘要（只读资产，本报告不复制其正文）：[research/dsh-split-panes.md](../../research/dsh-split-panes.md)——集成点与调研全文以 research 为准。
 
 ## 克隆证据
 
-- 克隆 HEAD：607fcc1
-- 锚定：7f25d3e98c（commit，未知（不同谱系））
+- 克隆 HEAD：c3f24a1
+- 锚定：未知（unknown，未知）
 - 补丁：OK（1 个补丁全部干净应用）
 - seam：缺: tuiPrompt
 - peerDeps：4 项匹配
@@ -13,7 +13,7 @@
 
 | 维度 | 结果 |
 |---|---|
-| 锚定 vs 当日 mainline | 未知（不同谱系） |
+| 锚定 vs 当日 mainline | 未知 |
 | 补丁 apply --check --3way | OK（1 个补丁全部干净应用） |
 | seam 符号存在性 | 缺: tuiPrompt |
 | peerDeps 范围 vs mainline 实际 | 4 项匹配 |

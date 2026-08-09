@@ -436,8 +436,8 @@
       "status": "未知（待调研）"
     },
     "dsh-paste-input": {
-      "anchoredCommit": "未知",
-      "status": "未知（待调研）"
+      "anchoredCommit": "7f25d3e98c",
+      "status": "兼容"
     },
     "zotero-harvest": {
       "anchoredCommit": "未知",
@@ -448,8 +448,8 @@
       "status": "占位"
     },
     "dsh-bash-encoding": {
-      "anchoredCommit": "未知",
-      "status": "未知（待调研）"
+      "anchoredCommit": "7f25d3e98c",
+      "status": "兼容"
     },
     "dsh-skill-stats": {
       "anchoredCommit": "未知",
@@ -460,8 +460,8 @@
       "status": "未知（待调研）"
     },
     "sandbox-micro": {
-      "anchoredCommit": "未知",
-      "status": "占位"
+      "anchoredCommit": "8bebf18040a429090aacd8d80d64334c9a75244a",
+      "status": "兼容"
     },
     "dsh-git-identity": {
       "anchoredCommit": "未知",
@@ -484,8 +484,8 @@
       "status": "未知（待调研）"
     },
     "dsh-input-history": {
-      "anchoredCommit": "未知",
-      "status": "未知（待调研）"
+      "anchoredCommit": "7f25d3e98c",
+      "status": "兼容"
     },
     "dsh-client-ui-plan-execute": {
       "anchoredCommit": "未知",
@@ -540,8 +540,8 @@
       "status": "未知（待调研）"
     },
     "dsh-tps": {
-      "anchoredCommit": "未知",
-      "status": "未知（待调研）"
+      "anchoredCommit": "7f25d3e98c",
+      "status": "兼容"
     },
     "dsh-plugin-check": {
       "anchoredCommit": "未知",
@@ -559,7 +559,7 @@
       "anchoredCommit": "未知",
       "status": "未知（待调研）"
     },
-    "dsh-change-ledger": {
+    "dsh-turn-rewind": {
       "anchoredCommit": "未知",
       "status": "未知（待调研）"
     },
@@ -572,6 +572,22 @@
       "status": "未知（待调研）"
     },
     "cross-harness-cite": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-split-panes": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-task-board": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-activity-plugin": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-tool-diff": {
       "anchoredCommit": "未知",
       "status": "未知（待调研）"
     }

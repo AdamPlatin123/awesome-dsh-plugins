@@ -137,7 +137,11 @@ dsh-plugin-check
 dsh-plugin-dev
 dsh-gomoku
 dsh-101
-dsh-change-ledger
+dsh-turn-rewind
 dsh-genui
 dsh-mygo
 cross-harness-cite
+dsh-split-panes
+dsh-task-board
+dsh-activity-plugin
+dsh-tool-diff

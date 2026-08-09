@@ -3,22 +3,22 @@
 
 ## 克隆证据
 
-- 克隆 HEAD：（空仓库）
-- 锚定：未知（unknown，未知）
-- 补丁：不适用（空仓库）
-- seam：不适用（空仓库）
-- peerDeps：不适用
+- 克隆 HEAD：c2b607b
+- 锚定：8bebf18040a429090aacd8d80d64334c9a75244a（commit，未知（不同谱系））
+- 补丁：OK（1 个补丁全部干净应用）
+- seam：缺: tuiPrompt
+- peerDeps：6 项匹配
 
 ## 四维对比
 
 | 维度 | 结果 |
 |---|---|
-| 锚定 vs 当日 mainline | 未知 |
-| 补丁 apply --check --3way | 不适用（空仓库） |
-| seam 符号存在性 | 不适用（空仓库） |
-| peerDeps 范围 vs mainline 实际 | 不适用 |
-| **综合判定** | **占位** |
+| 锚定 vs 当日 mainline | 未知（不同谱系） |
+| 补丁 apply --check --3way | OK（1 个补丁全部干净应用） |
+| seam 符号存在性 | 缺: tuiPrompt |
+| peerDeps 范围 vs mainline 实际 | 6 项匹配 |
+| **综合判定** | **兼容** |
 
 ## 建议
 
-- 占位：当日 mainline（0882344，snapshots/20260808T121140Z）对比结论见上表；详细建议汇总于 [mainline-compat.md](mainline-compat.md)。
+- 兼容：当日 mainline（0882344，snapshots/20260808T121140Z）对比结论见上表；详细建议汇总于 [mainline-compat.md](mainline-compat.md)。

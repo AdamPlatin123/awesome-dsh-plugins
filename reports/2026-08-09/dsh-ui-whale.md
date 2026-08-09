@@ -3,7 +3,7 @@
 
 ## 克隆证据
 
-- 克隆 HEAD：f97d554
+- 克隆 HEAD：62d5606
 - 锚定：ce1fc03f95（commit，未知（不同谱系））
 - 补丁：无补丁
 - seam：缺: tuiPrompt

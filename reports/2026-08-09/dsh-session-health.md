@@ -3,7 +3,7 @@
 
 ## 克隆证据
 
-- 克隆 HEAD：2628d4d
+- 克隆 HEAD：d0f52db
 - 锚定：未知（unknown，未知）
 - 补丁：无补丁
 - seam：缺: tuiPrompt

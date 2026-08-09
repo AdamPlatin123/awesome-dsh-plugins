@@ -3,11 +3,11 @@
 
 ## 克隆证据
 
-- 克隆 HEAD：2002094
+- 克隆 HEAD：ec0a58e
 - 锚定：未知（unknown，未知）
 - 补丁：无补丁
 - seam：缺: tuiPrompt
-- peerDeps：10 项匹配
+- peerDeps：11 项匹配
 
 ## 四维对比
 
@@ -16,7 +16,7 @@
 | 锚定 vs 当日 mainline | 未知 |
 | 补丁 apply --check --3way | 无补丁 |
 | seam 符号存在性 | 缺: tuiPrompt |
-| peerDeps 范围 vs mainline 实际 | 10 项匹配 |
+| peerDeps 范围 vs mainline 实际 | 11 项匹配 |
 | **综合判定** | **未知（待调研）** |
 
 ## 建议
