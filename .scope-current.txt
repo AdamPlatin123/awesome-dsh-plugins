@@ -108,7 +108,6 @@ dsh-profile-bundle-example
 dsh-plan-execute
 dsh-paste-input
 zotero-harvest
-dsh-mygo
 zephyr
 dsh-bash-encoding
 dsh-skill-stats
@@ -139,3 +138,6 @@ dsh-plugin-dev
 dsh-gomoku
 dsh-101
 dsh-change-ledger
+dsh-genui
+dsh-mygo
+cross-harness-cite

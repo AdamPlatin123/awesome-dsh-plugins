@@ -443,10 +443,6 @@
       "anchoredCommit": "未知",
       "status": "未知（待调研）"
     },
-    "dsh-mygo": {
-      "anchoredCommit": "未知",
-      "status": "占位"
-    },
     "zephyr": {
       "anchoredCommit": "未知",
       "status": "占位"
@@ -564,6 +560,18 @@
       "status": "未知（待调研）"
     },
     "dsh-change-ledger": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-genui": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-mygo": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "cross-harness-cite": {
       "anchoredCommit": "未知",
       "status": "未知（待调研）"
     }

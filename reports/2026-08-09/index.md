@@ -115,7 +115,6 @@
 - [dsh-plan-execute.md](dsh-plan-execute.md) — 未知（待调研）
 - [dsh-paste-input.md](dsh-paste-input.md) — 未知（待调研）
 - [zotero-harvest.md](zotero-harvest.md) — 未知（待调研）
-- [dsh-mygo.md](dsh-mygo.md) — 占位
 - [zephyr.md](zephyr.md) — 占位
 - [dsh-bash-encoding.md](dsh-bash-encoding.md) — 未知（待调研）
 - [dsh-skill-stats.md](dsh-skill-stats.md) — 未知（待调研）
@@ -146,6 +145,9 @@
 - [dsh-gomoku.md](dsh-gomoku.md) — 未知（待调研）
 - [dsh-101.md](dsh-101.md) — 未知（待调研）
 - [dsh-change-ledger.md](dsh-change-ledger.md) — 未知（待调研）
+- [dsh-genui.md](dsh-genui.md) — 未知（待调研）
+- [dsh-mygo.md](dsh-mygo.md) — 未知（待调研）
+- [cross-harness-cite.md](cross-harness-cite.md) — 未知（待调研）
 
 ## 相关资产
 
