@@ -3,8 +3,8 @@
 
 ## 克隆证据
 
-- 克隆 HEAD：5fc6fee
-- 锚定：e8a0f1a758（commit，未知（不同谱系））
+- 克隆 HEAD：4c3b7b1
+- 锚定：7f25d3e98c（commit，未知（不同谱系））
 - 补丁：无补丁
 - seam：缺: tuiPrompt
 - peerDeps：无 dsh-* 依赖

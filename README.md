@@ -3,17 +3,17 @@
 > 面向 DSH 插件开发者的组织级情报门户：每 8 小时自动索引 dsh-external 全部仓库，对比当日 mainline 接口差异，产出兼容性矩阵、新增/修改跟踪与双方开发者建议。
 
 <!-- AUTO:ecosystem:START -->
-> 自动更新：2026-08-10_0041（cron 每 8 小时 · 报告日 2026-08-09 · mainline `0882344`）
+> 自动更新：2026-08-10_0049（cron 每 8 小时 · 报告日 2026-08-09 · mainline `0882344`）
 
 **生态仪表盘**
 
 | 指标 | 值 |
 |---|---|
-| 仓库总数 | 147 |
-| ✅ 无需适配 | 67 |
-| ⚠️ 需适配 | 10 |
+| 仓库总数 | 152 |
+| ✅ 无需适配 | 71 |
+| ⚠️ 需适配 | 7 |
 | 关注 / 占位 / 不适用 / 已删除 | 3 / 6 / 2 / 1 |
-| 🐙 开放 PR | 4 |
+| 🐙 开放 PR | 5 |
 
 📄 **最新报告**：[mainline-compat.md](reports/2026-08-09/mainline-compat.md) · [当日索引](reports/2026-08-09/index.md)（完整矩阵 + 双方建议）
 
@@ -68,17 +68,15 @@
 | [dsh-my-rsi](https://github.com/dsh-external/dsh-my-rsi) | 未知（不同谱系） | 需适配 |
 | [dsh-subagent-tree](https://github.com/dsh-external/dsh-subagent-tree) | 未知 | 需适配 |
 | [dsh-working-activity](https://github.com/dsh-external/dsh-working-activity) | 未知（非 commit 锚定: 20260804T143803Z） | 需适配 |
-| [ex-setting](https://github.com/dsh-external/ex-setting) | 未知（不同谱系） | 需适配 |
 | [plugin-registry](https://github.com/dsh-external/plugin-registry) | 未知（非 commit 锚定: 20260804T143803Z） | 需适配 |
 | [Qwen-MM-Plugins](https://github.com/dsh-external/Qwen-MM-Plugins) | 未知（不同谱系） | 需适配 |
 | [sandbox-mxc](https://github.com/dsh-external/sandbox-mxc) | 未知（不同谱系） | 需适配 |
 | [turtle-ui](https://github.com/dsh-external/turtle-ui) | 未知（不同谱系） | 需适配 |
-| [web-components](https://github.com/dsh-external/web-components) | 未知（不同谱系） | 需适配 |
-| [fabric](https://github.com/dsh-external/fabric) | 未知（不同谱系） | 需适配 |
 **正在跟踪的 open PR**
 
 | 仓库 | PR | 标题 | 更新 |
 |---|---|---|---|
+| [dsh-hub](https://github.com/dsh-external/dsh-hub) | [#8](https://github.com/dsh-external/dsh-hub/pull/8) | Recover candidates that never become ready | 2026-08-09 |
 | [dsh-my-rsi](https://github.com/dsh-external/dsh-my-rsi) | [#40](https://github.com/dsh-external/dsh-my-rsi/pull/40) | Refine main session surfaces | 2026-08-09 |
 | [dsh-hub](https://github.com/dsh-external/dsh-hub) | [#7](https://github.com/dsh-external/dsh-hub/pull/7) | Add Registry-bound configuration Recipes | 2026-08-09 |
 | [group-chat-diary](https://github.com/dsh-external/group-chat-diary) | [#4](https://github.com/dsh-external/group-chat-diary/pull/4) | Automate Cloudflare Pages deployment | 2026-08-07 |

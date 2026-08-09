@@ -145,3 +145,8 @@ dsh-split-panes
 dsh-task-board
 dsh-activity-plugin
 dsh-tool-diff
+dsh-git-graph
+dsh-mobileweb-adapter
+dsh-desktop-electron
+dsh-mineru
+dsh-pet
