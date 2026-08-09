@@ -96,17 +96,22 @@ mkdir -p "$REPO_DIR/reports/$DATE"
 } > "$REPORT"
 echo "[构建] 报告已写入 $REPORT"
 
-# 5. 自动部署：构建成功后把 dsh CLI 软链为远程可用实例（供插件测试/生态使用）
+# 5. 自动部署：构建成功后生成 dsh wrapper（绝对 node 路径，cron/非交互环境可用）
 #    SOP：构建成功 → 部署 → 验证 --version → 报告记录部署状态
 DEPLOY_STATUS="未部署（构建失败）"
 if [ "$INSTALL_RC" -eq 0 ] && [ "${BUILD_RC:-99}" -eq 0 ] && [ -f "$BUILD_DIR/apps/cli/lib/bin.js" ]; then
   mkdir -p "$HOME/.local/bin"
-  ln -sfn "$BUILD_DIR/apps/cli/lib/bin.js" "$HOME/.local/bin/dsh"
-  if "$NODE_BIN/node" "$HOME/.local/bin/dsh" --version >/dev/null 2>&1; then
-    DEPLOY_STATUS="✅ 已部署（dsh v$("$NODE_BIN/node" "$HOME/.local/bin/dsh" --version 2>/dev/null)）"
+  rm -f "$HOME/.local/bin/dsh"   # 防软链跟随：若旧 dsh 是软链，cat 会覆盖其目标（曾毁坏 bin.js）
+  cat > "$HOME/.local/bin/dsh" << WRAPPER
+#!/usr/bin/env bash
+exec "$NODE_BIN/node" "$BUILD_DIR/apps/cli/lib/bin.js" "\$@"
+WRAPPER
+  chmod +x "$HOME/.local/bin/dsh"
+  if "$NODE_BIN/node" "$BUILD_DIR/apps/cli/lib/bin.js" --version >/dev/null 2>&1; then
+    DEPLOY_STATUS="✅ 已部署（dsh v$("$NODE_BIN/node" "$BUILD_DIR/apps/cli/lib/bin.js" --version 2>/dev/null)）"
     echo "[部署] $DEPLOY_STATUS"
   else
-    DEPLOY_STATUS="⚠️ 软链已建但 --version 验证失败"
+    DEPLOY_STATUS="⚠️ wrapper 已建但 --version 验证失败"
     echo "[部署] $DEPLOY_STATUS"
   fi
 fi
