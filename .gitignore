@@ -8,3 +8,4 @@ node_modules/
 .mainline-state.json
 logs/
 *.tmp
+.mainline-build/

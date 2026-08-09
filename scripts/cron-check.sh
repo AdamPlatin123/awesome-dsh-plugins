@@ -156,7 +156,14 @@ if [ -n "$CHANGED" ]; then
     exit "$rc"
   fi
 
-  # 5. 提交报告/CHANGELOG/状态并推送回 org repo
+  # 4.5 全量模式（或 hook 触发）下：索引后异步构建最新 mainline，验证可编译性
+#     构建产物 mainline-build.md 由下一轮 cron 随报告提交（不阻塞本轮）
+if [ "$FULL" -eq 1 ] && [ -x ./scripts/build-mainline.sh ]; then
+  echo "[构建] 启动 mainline 自动构建（后台，结果写入 reports/ 并随下轮提交）..."
+  setsid nohup bash -lc "cd '$REPO_DIR' && ./scripts/build-mainline.sh" >> logs/build.log 2>&1 < /dev/null &
+fi
+
+# 5. 提交报告/CHANGELOG/状态并推送回 org repo
   if git diff --quiet && git diff --cached --quiet; then
     echo "[提交] 无新内容，跳过 commit"
   else
