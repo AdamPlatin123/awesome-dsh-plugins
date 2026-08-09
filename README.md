@@ -3,17 +3,17 @@
 > 面向 DSH 插件开发者的组织级情报门户：每 8 小时自动索引 dsh-external 全部仓库，对比当日 mainline 接口差异，产出兼容性矩阵、新增/修改跟踪与双方开发者建议。
 
 <!-- AUTO:ecosystem:START -->
-> 自动更新：2026-08-09_0452（cron 每 8 小时 · 报告日 2026-08-09 · mainline `0882344`）
+> 自动更新：2026-08-09_1051（cron 每 8 小时 · 报告日 2026-08-09 · mainline `0882344`）
 
 **生态仪表盘**
 
 | 指标 | 值 |
 |---|---|
-| 仓库总数 | 141 |
-| ✅ 无需适配 | 63 |
+| 仓库总数 | 143 |
+| ✅ 无需适配 | 62 |
 | ⚠️ 需适配 | 10 |
-| 关注 / 占位 / 不适用 / 已删除 | 3 / 8 / 2 / 1 |
-| 🐙 开放 PR | 2 |
+| 关注 / 占位 / 不适用 / 已删除 | 3 / 7 / 2 / 1 |
+| 🐙 开放 PR | 3 |
 
 📄 **最新报告**：[mainline-compat.md](reports/2026-08-09/mainline-compat.md) · [当日索引](reports/2026-08-09/index.md)（完整矩阵 + 双方建议）
 
@@ -68,7 +68,6 @@
 | dsh-plan-execute | 🆕 新增 |
 | dsh-paste-input | 🆕 新增 |
 | zotero-harvest | 🆕 新增 |
-| dsh-mygo | 🆕 新增 |
 | zephyr | 🆕 新增 |
 | dsh-bash-encoding | 🆕 新增 |
 | dsh-skill-stats | 🆕 新增 |
@@ -99,8 +98,11 @@
 | dsh-gomoku | 🆕 新增 |
 | dsh-101 | 🆕 新增 |
 | dsh-change-ledger | 🆕 新增 |
-| （今日无修改） | |
-
+| dsh-genui | 🆕 新增 |
+| dsh-mygo | 🆕 新增 |
+| cross-harness-cite | 🆕 新增 |
+| dsh-web-ui | ✏️ 修改 |
+| group-chat-diary | ✏️ 修改 |
 **需适配（补丁基线 / seam 变化）**
 
 | 仓库 | 锚定 | 判定 |
@@ -119,6 +121,7 @@
 
 | 仓库 | PR | 标题 | 更新 |
 |---|---|---|---|
+| [dsh-hub](https://github.com/dsh-external/dsh-hub) | [#6](https://github.com/dsh-external/dsh-hub/pull/6) | Connect OMDSH Workshop to official Harness contracts | 2026-08-09 |
 | [group-chat-diary](https://github.com/dsh-external/group-chat-diary) | [#4](https://github.com/dsh-external/group-chat-diary/pull/4) | Automate Cloudflare Pages deployment | 2026-08-07 |
 | [dsh-live-stats](https://github.com/dsh-external/dsh-live-stats) | [#1](https://github.com/dsh-external/dsh-live-stats/pull/1) | fix: make live token and TPS accounting provider-aligned | 2026-08-07 |
 <!-- AUTO:ecosystem:END -->
