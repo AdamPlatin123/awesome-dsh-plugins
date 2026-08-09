@@ -3,13 +3,13 @@
 > 面向 DSH 插件开发者的组织级情报门户：每 8 小时自动索引 dsh-external 全部仓库，对比当日 mainline 接口差异，产出兼容性矩阵、新增/修改跟踪与双方开发者建议。
 
 <!-- AUTO:ecosystem:START -->
-> 自动更新：2026-08-10_0142（cron 每 8 小时 · 报告日 2026-08-10 · mainline `1c4950a`）
+> 自动更新：2026-08-10_0252（cron 每 8 小时 · 报告日 2026-08-10 · mainline `1c4950a`）
 
 **生态仪表盘**
 
 | 指标 | 值 |
 |---|---|
-| 仓库总数 | 168 |
+| 仓库总数 | 173 |
 | ✅ 无需适配 | 73 |
 | ⚠️ 需适配 | 6 |
 | 关注 / 占位 / 不适用 / 已删除 | 3 / 9 / 2 / 1 |
@@ -126,6 +126,11 @@
 | [dsh-agent-budget](https://github.com/dsh-external/dsh-agent-budget) | 🆕 新增 |
 | [dsh-involute](https://github.com/dsh-external/dsh-involute) | 🆕 新增 |
 | [dsh-spur](https://github.com/dsh-external/dsh-spur) | 🆕 新增 |
+| [dsh-selection-chat](https://github.com/dsh-external/dsh-selection-chat) | 🆕 新增 |
+| [dsh-browser-panel](https://github.com/dsh-external/dsh-browser-panel) | 🆕 新增 |
+| [dsh-engram-relay](https://github.com/dsh-external/dsh-engram-relay) | 🆕 新增 |
+| [yet-another-subagent](https://github.com/dsh-external/yet-another-subagent) | 🆕 新增 |
+| [dsh-voice-chat](https://github.com/dsh-external/dsh-voice-chat) | 🆕 新增 |
 | （今日无修改） | |
 
 **需适配（补丁基线 / seam 变化）**
