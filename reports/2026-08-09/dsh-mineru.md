@@ -1,9 +1,9 @@
-# dsh-tool-csv — 与 mainline 兼容性对比（2026-08-09）
-> 调研摘要（只读资产，本报告不复制其正文）：[research/dsh-tool-csv.md](../../research/dsh-tool-csv.md)——集成点与调研全文以 research 为准。
+# dsh-mineru — 与 mainline 兼容性对比（2026-08-09）
+> 调研摘要（只读资产，本报告不复制其正文）：[research/dsh-mineru.md](../../research/dsh-mineru.md)——集成点与调研全文以 research 为准。
 
 ## 克隆证据
 
-- 克隆 HEAD：57a8bf0
+- 克隆 HEAD：1c5757d
 - 锚定：未知（unknown，未知）
 - 补丁：无补丁
 - seam：缺: tuiPrompt

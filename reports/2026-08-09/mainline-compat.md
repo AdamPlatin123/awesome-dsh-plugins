@@ -2,7 +2,7 @@
 
 - mainline：`0882344`（snapshots/20260808T121140Z）
 - 上次对比：`0882344227593b67a3f6459f791162d1eeeafd25`
-- 兼容性：67/147 无需适配，10 需适配（dsh-my-rsi dsh-subagent-tree dsh-working-activity ex-setting plugin-registry Qwen-MM-Plugins sandbox-mxc turtle-ui web-components fabric）；其中关注 3、占位 6、不适用 2、已删除 1、未知 69
+- 兼容性：71/152 无需适配，7 需适配（dsh-my-rsi dsh-subagent-tree dsh-working-activity plugin-registry Qwen-MM-Plugins sandbox-mxc turtle-ui）；其中关注 3、占位 6、不适用 2、已删除 1、未知 73
 
 ## 兼容性矩阵
 
@@ -39,10 +39,10 @@
 | dsh-subagent-tree | 未知 | CONFLICT（1 个补丁中 0 个 OK） | 缺: tuiPrompt | 6 项匹配 | 需适配 |
 | dsh-tool-browser | 未知（catalog ref，非 mainline 锚定） | 无补丁 | 缺: tuiPrompt | 5 项匹配 | 兼容 |
 | dsh-tool-calculator | 未知（不同谱系） | 无补丁 | 缺: tuiPrompt | 1 项匹配 | 兼容 |
-| dsh-tool-encoding | 未知 | 无补丁 | 缺: tuiPrompt | 2 项匹配 | 兼容 |
+| dsh-tool-encoding | 未知 | 无补丁 | 缺: tuiPrompt | 1 项匹配 | 兼容 |
 | dsh-tool-json | 未知（不同谱系） | 无补丁 | 缺: tuiPrompt | 1 项匹配 | 兼容 |
-| dsh-tool-time | 未知 | 无补丁 | 缺: tuiPrompt | 2 项匹配 | 兼容 |
-| dsh-ui-progress | 未知（不同谱系） | 无补丁 | 缺: tuiPrompt | 3 项匹配 | 兼容 |
+| dsh-tool-time | 未知 | 无补丁 | 缺: tuiPrompt | 1 项匹配 | 兼容 |
+| dsh-ui-progress | 未知（不同谱系） | 无补丁 | 缺: tuiPrompt | 2 项匹配 | 兼容 |
 | dsh-ui-whale | 未知（不同谱系） | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 兼容 |
 | dsh-vision | 未知 | 无补丁 | 缺: tuiPrompt | 2 项匹配 | 兼容 |
 | dsh-web-terminal | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 兼容 |
@@ -53,7 +53,7 @@
 | dsh-win-port | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 兼容 |
 | dsh-working-activity | 未知（非 commit 锚定: 20260804T143803Z） | CONFLICT（1 个补丁中 0 个 OK） | 缺: tuiPrompt | 4 项匹配 | 需适配 |
 | dshx-update-check | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 兼容 |
-| ex-setting | 未知（不同谱系） | CONFLICT（1 个补丁中 0 个 OK） | 缺: tuiPrompt | 10 项匹配 | 需适配 |
+| ex-setting | 未知（不同谱系） | OK（1 个补丁全部干净应用） | 缺: tuiPrompt | 10 项匹配 | 兼容 |
 | group-chat-diary | 未知（非 commit 锚定: YYYY-MM-DD） | 不适用 | 不适用 | 不适用 | 不适用 |
 | hub | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 兼容 |
 | issues | 未知 | 不适用 | 不适用 | 不适用 | 不适用 |
@@ -70,7 +70,7 @@
 | tg-bot | 未知（不同谱系） | 无补丁 | 缺: tuiPrompt | 12 项匹配 | 兼容 |
 | toybox | 未知（catalog ref，非 mainline 锚定） | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 兼容 |
 | turtle-ui | 未知（不同谱系） | CONFLICT（1 个补丁中 0 个 OK） | 缺: tuiPrompt | 21 项匹配 | 需适配 |
-| web-components | 未知（不同谱系） | CONFLICT（1 个补丁中 0 个 OK） | 缺: tuiPrompt | 4 项匹配 | 需适配 |
+| web-components | 未知（不同谱系） | OK（1 个补丁全部干净应用） | 缺: tuiPrompt | 4 项匹配 | 兼容 |
 | dsh-web-ui-notify | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 未知（待调研） |
 | dsh-evolve | 未知 | 无补丁 | 缺: tuiPrompt | 2 项匹配 | 未知（待调研） |
 | dsh-island | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 未知（待调研） |
@@ -81,7 +81,7 @@
 | repo-visibility-guard | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 未知（待调研） |
 | dsh-grok-tui | 未知 | 无补丁 | 缺: tuiPrompt | 5 项匹配 | 未知（待调研） |
 | ds_web_craw | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 未知（待调研） |
-| fabric | 未知（不同谱系） | CONFLICT（1 个补丁中 0 个 OK） | 缺: tuiPrompt | 9 项匹配 | 需适配 |
+| fabric | 未知（不同谱系） | OK（1 个补丁全部干净应用） | 缺: tuiPrompt | 9 项匹配 | 兼容 |
 | dsh-browser | 未知（catalog ref，非 mainline 锚定） | 无补丁 | 缺: tuiPrompt | 5 项匹配 | 未知（待调研） |
 | dsh-desktop-mac | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 未知（待调研） |
 | dsh-public-repo-monitor | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 未知（待调研） |
@@ -142,19 +142,24 @@
 | dsh-session-cluster | 未知 | 无补丁 | 缺: tuiPrompt | 6 项匹配 | 未知（待调研） |
 | DSH-UI4A | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 未知（待调研） |
 | dsh-visualize | 未知 | 无补丁 | 缺: tuiPrompt | 6 项匹配 | 未知（待调研） |
-| dsh-tps | 未知（不同谱系） | OK（1 个补丁全部干净应用） | 缺: tuiPrompt | 4 项匹配 | 兼容 |
+| dsh-tps | 未知 | OK（1 个补丁全部干净应用） | 缺: tuiPrompt | 4 项匹配 | 兼容 |
 | dsh-plugin-check | 未知 | 无补丁 | 缺: tuiPrompt | 1 项匹配 | 未知（待调研） |
 | dsh-plugin-dev | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 未知（待调研） |
 | dsh-gomoku | 未知 | 无补丁 | 缺: tuiPrompt | 2 项匹配 | 未知（待调研） |
 | dsh-101 | 未知 | 无补丁 | 缺: tuiPrompt | 16 项匹配 | 未知（待调研） |
 | dsh-turn-rewind | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 未知（待调研） |
-| dsh-genui | 未知 | 无补丁 | 缺: tuiPrompt | 8 项匹配 | 未知（待调研） |
+| dsh-genui | 未知（不同谱系） | 无补丁 | 缺: tuiPrompt | 8 项匹配 | 兼容 |
 | dsh-mygo | 未知 | 无补丁 | 缺: tuiPrompt | 7 项匹配 | 未知（待调研） |
 | cross-harness-cite | 未知 | 无补丁 | 缺: tuiPrompt | 15 项匹配 | 未知（待调研） |
 | dsh-split-panes | 未知 | OK（1 个补丁全部干净应用） | 缺: tuiPrompt | 4 项匹配 | 兼容 |
 | dsh-task-board | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 未知（待调研） |
 | dsh-activity-plugin | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 未知（待调研） |
 | dsh-tool-diff | 未知 | 无补丁 | 缺: tuiPrompt | 1 项匹配 | 未知（待调研） |
+| dsh-git-graph | 未知 | 无补丁 | 缺: tuiPrompt | 10 项匹配 | 未知（待调研） |
+| dsh-mobileweb-adapter | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 未知（待调研） |
+| dsh-desktop-electron | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 未知（待调研） |
+| dsh-mineru | 未知 | 无补丁 | 缺: tuiPrompt | 1 项匹配 | 未知（待调研） |
+| dsh-pet | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 未知（待调研） |
 
 ## mainline 变更分析（0882344227593b67a3f6459f791162d1eeeafd25 → 0882344）
 
@@ -290,8 +295,8 @@
 ### dshx-update-check
 - 兼容：锚定 未知（未知）、补丁「无补丁」，当日 mainline 可干净集成。
 ### ex-setting
-- 需适配：锚定 b4b67f0（未知（不同谱系））、补丁状态「CONFLICT（1 个补丁中 0 个 OK）」；建议以当日 snapshot HEAD（0882344）为新基线重新锚定/rebuild 补丁。
-- 补丁冲突/缺文件点集中在 mainline 变更分析节列出的破坏面，优先把集成改到稳定 seam（slots/sessionProjections/ThemeService）上。
+- 兼容：锚定 e6b10664af9c4ca82ef0120e53a493c5e0ce7e7d（未知（不同谱系））、补丁「OK（1 个补丁全部干净应用）」，当日 mainline 可干净集成。
+- 建议把补丁基线从 e6b10664af9c4ca82ef0120e53a493c5e0ce7e7d 显式记录到 README/补丁头，快照一漂即可自动预警。
 ### group-chat-diary
 - 非代码仓库（issue 跟踪 / 归档产物），无代码级集成，不参与补丁/seam 对比。
 ### hub
@@ -330,8 +335,8 @@
 - 需适配：锚定 a6fedc9e3b36d066e34860d040db6df47d88c432（未知（不同谱系））、补丁状态「CONFLICT（1 个补丁中 0 个 OK）」；建议以当日 snapshot HEAD（0882344）为新基线重新锚定/rebuild 补丁。
 - 补丁冲突/缺文件点集中在 mainline 变更分析节列出的破坏面，优先把集成改到稳定 seam（slots/sessionProjections/ThemeService）上。
 ### web-components
-- 需适配：锚定 b4b67f0（未知（不同谱系））、补丁状态「CONFLICT（1 个补丁中 0 个 OK）」；建议以当日 snapshot HEAD（0882344）为新基线重新锚定/rebuild 补丁。
-- 补丁冲突/缺文件点集中在 mainline 变更分析节列出的破坏面，优先把集成改到稳定 seam（slots/sessionProjections/ThemeService）上。
+- 兼容：锚定 b4b67f0（未知（不同谱系））、补丁「OK（1 个补丁全部干净应用）」，当日 mainline 可干净集成。
+- 建议把补丁基线从 b4b67f0 显式记录到 README/补丁头，快照一漂即可自动预警。
 ### dsh-web-ui-notify
 - 未建模/状态未知：尚无 research/dsh-web-ui-notify.md 调研摘要（或 git/gh 无法确认仓库状态），不做兼容性结论；建议先完成调研建模或人工核查后再纳入兼容跟踪。
 ### dsh-evolve
@@ -353,8 +358,8 @@
 ### ds_web_craw
 - 未建模/状态未知：尚无 research/ds_web_craw.md 调研摘要（或 git/gh 无法确认仓库状态），不做兼容性结论；建议先完成调研建模或人工核查后再纳入兼容跟踪。
 ### fabric
-- 需适配：锚定 4d3e1305d7f96c9b8e5842c71eab65b0ee7d36f5（未知（不同谱系））、补丁状态「CONFLICT（1 个补丁中 0 个 OK）」；建议以当日 snapshot HEAD（0882344）为新基线重新锚定/rebuild 补丁。
-- 补丁冲突/缺文件点集中在 mainline 变更分析节列出的破坏面，优先把集成改到稳定 seam（slots/sessionProjections/ThemeService）上。
+- 兼容：锚定 4d3e1305d7f96c9b8e5842c71eab65b0ee7d36f5（未知（不同谱系））、补丁「OK（1 个补丁全部干净应用）」，当日 mainline 可干净集成。
+- 建议把补丁基线从 4d3e1305d7f96c9b8e5842c71eab65b0ee7d36f5 显式记录到 README/补丁头，快照一漂即可自动预警。
 ### dsh-browser
 - 未建模/状态未知：尚无 research/dsh-browser.md 调研摘要（或 git/gh 无法确认仓库状态），不做兼容性结论；建议先完成调研建模或人工核查后再纳入兼容跟踪。
 ### dsh-desktop-mac
@@ -366,7 +371,7 @@
 ### dsh-inspect
 - 未建模/状态未知：尚无 research/dsh-inspect.md 调研摘要（或 git/gh 无法确认仓库状态），不做兼容性结论；建议先完成调研建模或人工核查后再纳入兼容跟踪。
 ### dsh-hub
-- 兼容：锚定 e8a0f1a758（未知（不同谱系））、补丁「无补丁」，当日 mainline 可干净集成。
+- 兼容：锚定 7f25d3e98c（未知（不同谱系））、补丁「无补丁」，当日 mainline 可干净集成。
 ### dsh-alphasolve
 - 兼容：锚定 279244acb0（未知（不同谱系））、补丁「无补丁」，当日 mainline 可干净集成。
 ### zotero-wave-rag
@@ -477,8 +482,8 @@
 ### dsh-visualize
 - 未建模/状态未知：尚无 research/dsh-visualize.md 调研摘要（或 git/gh 无法确认仓库状态），不做兼容性结论；建议先完成调研建模或人工核查后再纳入兼容跟踪。
 ### dsh-tps
-- 兼容：锚定 7f25d3e98c（未知（不同谱系））、补丁「OK（1 个补丁全部干净应用）」，当日 mainline 可干净集成。
-- 建议把补丁基线从 7f25d3e98c 显式记录到 README/补丁头，快照一漂即可自动预警。
+- 兼容：锚定 未知（未知）、补丁「OK（1 个补丁全部干净应用）」，当日 mainline 可干净集成。
+- 建议把补丁基线从 未知 显式记录到 README/补丁头，快照一漂即可自动预警。
 ### dsh-plugin-check
 - 未建模/状态未知：尚无 research/dsh-plugin-check.md 调研摘要（或 git/gh 无法确认仓库状态），不做兼容性结论；建议先完成调研建模或人工核查后再纳入兼容跟踪。
 ### dsh-plugin-dev
@@ -490,7 +495,7 @@
 ### dsh-turn-rewind
 - 未建模/状态未知：尚无 research/dsh-turn-rewind.md 调研摘要（或 git/gh 无法确认仓库状态），不做兼容性结论；建议先完成调研建模或人工核查后再纳入兼容跟踪。
 ### dsh-genui
-- 未建模/状态未知：尚无 research/dsh-genui.md 调研摘要（或 git/gh 无法确认仓库状态），不做兼容性结论；建议先完成调研建模或人工核查后再纳入兼容跟踪。
+- 兼容：锚定 7f25d3e98c（未知（不同谱系））、补丁「无补丁」，当日 mainline 可干净集成。
 ### dsh-mygo
 - 未建模/状态未知：尚无 research/dsh-mygo.md 调研摘要（或 git/gh 无法确认仓库状态），不做兼容性结论；建议先完成调研建模或人工核查后再纳入兼容跟踪。
 ### cross-harness-cite
@@ -504,6 +509,16 @@
 - 未建模/状态未知：尚无 research/dsh-activity-plugin.md 调研摘要（或 git/gh 无法确认仓库状态），不做兼容性结论；建议先完成调研建模或人工核查后再纳入兼容跟踪。
 ### dsh-tool-diff
 - 未建模/状态未知：尚无 research/dsh-tool-diff.md 调研摘要（或 git/gh 无法确认仓库状态），不做兼容性结论；建议先完成调研建模或人工核查后再纳入兼容跟踪。
+### dsh-git-graph
+- 未建模/状态未知：尚无 research/dsh-git-graph.md 调研摘要（或 git/gh 无法确认仓库状态），不做兼容性结论；建议先完成调研建模或人工核查后再纳入兼容跟踪。
+### dsh-mobileweb-adapter
+- 未建模/状态未知：尚无 research/dsh-mobileweb-adapter.md 调研摘要（或 git/gh 无法确认仓库状态），不做兼容性结论；建议先完成调研建模或人工核查后再纳入兼容跟踪。
+### dsh-desktop-electron
+- 未建模/状态未知：尚无 research/dsh-desktop-electron.md 调研摘要（或 git/gh 无法确认仓库状态），不做兼容性结论；建议先完成调研建模或人工核查后再纳入兼容跟踪。
+### dsh-mineru
+- 未建模/状态未知：尚无 research/dsh-mineru.md 调研摘要（或 git/gh 无法确认仓库状态），不做兼容性结论；建议先完成调研建模或人工核查后再纳入兼容跟踪。
+### dsh-pet
+- 未建模/状态未知：尚无 research/dsh-pet.md 调研摘要（或 git/gh 无法确认仓库状态），不做兼容性结论；建议先完成调研建模或人工核查后再纳入兼容跟踪。
 
 ## 主仓库侧建议
 

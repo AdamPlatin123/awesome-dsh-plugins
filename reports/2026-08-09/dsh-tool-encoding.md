@@ -3,11 +3,11 @@
 
 ## 克隆证据
 
-- 克隆 HEAD：8dddc22
+- 克隆 HEAD：3b33068
 - 锚定：未知（unknown，未知）
 - 补丁：无补丁
 - seam：缺: tuiPrompt
-- peerDeps：2 项匹配
+- peerDeps：1 项匹配
 
 ## 四维对比
 
@@ -16,7 +16,7 @@
 | 锚定 vs 当日 mainline | 未知 |
 | 补丁 apply --check --3way | 无补丁 |
 | seam 符号存在性 | 缺: tuiPrompt |
-| peerDeps 范围 vs mainline 实际 | 2 项匹配 |
+| peerDeps 范围 vs mainline 实际 | 1 项匹配 |
 | **综合判定** | **兼容** |
 
 ## 建议
