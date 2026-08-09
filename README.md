@@ -3,16 +3,16 @@
 > 面向 DSH 插件开发者的组织级情报门户：每 8 小时自动索引 dsh-external 全部仓库，对比当日 mainline 接口差异，产出兼容性矩阵、新增/修改跟踪与双方开发者建议。
 
 <!-- AUTO:ecosystem:START -->
-> 自动更新：2026-08-09_1051（cron 每 8 小时 · 报告日 2026-08-09 · mainline `0882344`）
+> 自动更新：2026-08-09_1454（cron 每 8 小时 · 报告日 2026-08-09 · mainline `0882344`）
 
 **生态仪表盘**
 
 | 指标 | 值 |
 |---|---|
-| 仓库总数 | 143 |
-| ✅ 无需适配 | 62 |
+| 仓库总数 | 147 |
+| ✅ 无需适配 | 67 |
 | ⚠️ 需适配 | 10 |
-| 关注 / 占位 / 不适用 / 已删除 | 3 / 7 / 2 / 1 |
+| 关注 / 占位 / 不适用 / 已删除 | 3 / 6 / 2 / 1 |
 | 🐙 开放 PR | 3 |
 
 📄 **最新报告**：[mainline-compat.md](reports/2026-08-09/mainline-compat.md) · [当日索引](reports/2026-08-09/index.md)（完整矩阵 + 双方建议）
@@ -97,12 +97,16 @@
 | dsh-plugin-dev | 🆕 新增 |
 | dsh-gomoku | 🆕 新增 |
 | dsh-101 | 🆕 新增 |
-| dsh-change-ledger | 🆕 新增 |
+| dsh-turn-rewind | 🆕 新增 |
 | dsh-genui | 🆕 新增 |
 | dsh-mygo | 🆕 新增 |
 | cross-harness-cite | 🆕 新增 |
-| dsh-web-ui | ✏️ 修改 |
-| group-chat-diary | ✏️ 修改 |
+| dsh-split-panes | 🆕 新增 |
+| dsh-task-board | 🆕 新增 |
+| dsh-activity-plugin | 🆕 新增 |
+| dsh-tool-diff | 🆕 新增 |
+| （今日无修改） | |
+
 **需适配（补丁基线 / seam 变化）**
 
 | 仓库 | 锚定 | 判定 |
