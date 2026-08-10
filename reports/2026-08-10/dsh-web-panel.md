@@ -1,7 +1,7 @@
 # dsh-web-panel — 与 mainline 兼容性对比（2026-08-10）> [打开仓库](https://github.com/dsh-external/dsh-web-panel) · 深度摘要待调研（当前为引擎自动判定）\n\n
 ## 克隆证据
 
-- 克隆 HEAD：71693f9
+- 克隆 HEAD：c006515
 - 锚定：未知（unknown，未知）
 - 补丁：无补丁
 - seam：缺: tuiPrompt

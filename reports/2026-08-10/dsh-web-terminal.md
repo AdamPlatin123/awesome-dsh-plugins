@@ -1,7 +1,7 @@
 # dsh-web-terminal — 与 mainline 兼容性对比（2026-08-10）> [打开仓库](https://github.com/dsh-external/dsh-web-terminal) · 调研摘要（只读资产，本报告不复制其正文）：[research/dsh-web-terminal.md](../../research/dsh-web-terminal.md)\n\n
 ## 克隆证据
 
-- 克隆 HEAD：71693f9
+- 克隆 HEAD：c006515
 - 锚定：未知（unknown，未知）
 - 补丁：无补丁
 - seam：缺: tuiPrompt

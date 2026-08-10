@@ -105,7 +105,7 @@
 - [dsh-session-hub.md](dsh-session-hub.md) — 占位 · [仓库](https://github.com/dsh-external/dsh-session-hub)
 - [dsh-ica.md](dsh-ica.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-ica)
 - [dsh-advisor.md](dsh-advisor.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-advisor)
-- [dsh-llm-fallbacks.md](dsh-llm-fallbacks.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-llm-fallbacks)
+- [dsh-llm-fallbacks.md](dsh-llm-fallbacks.md) — 兼容 · [仓库](https://github.com/dsh-external/dsh-llm-fallbacks)
 - [dsh-web-workflow-visualizer.md](dsh-web-workflow-visualizer.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-web-workflow-visualizer)
 - [dsh-checkpoint.md](dsh-checkpoint.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-checkpoint)
 - [dsh-rewind.md](dsh-rewind.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-rewind)
@@ -178,6 +178,9 @@
 - [dsh-engram-relay.md](dsh-engram-relay.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-engram-relay)
 - [yet-another-subagent.md](yet-another-subagent.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/yet-another-subagent)
 - [dsh-voice-chat.md](dsh-voice-chat.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-voice-chat)
+- [dsh-ads.md](dsh-ads.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-ads)
+- [dsh-skill-session-recovery.md](dsh-skill-session-recovery.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-skill-session-recovery)
+- [dsh-tavern-plugin.md](dsh-tavern-plugin.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-tavern-plugin)
 
 ## 相关资产
 

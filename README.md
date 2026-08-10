@@ -3,17 +3,17 @@
 > 面向 DSH 插件开发者的组织级情报门户：每 8 小时自动索引 dsh-external 全部仓库，对比当日 mainline 接口差异，产出兼容性矩阵、新增/修改跟踪与双方开发者建议。
 
 <!-- AUTO:ecosystem:START -->
-> 自动更新：2026-08-10_0252（cron 每 8 小时 · 报告日 2026-08-10 · mainline `1c4950a`）
+> 自动更新：2026-08-10_1056（cron 每 8 小时 · 报告日 2026-08-10 · mainline `1c4950a`）
 
 **生态仪表盘**
 
 | 指标 | 值 |
 |---|---|
-| 仓库总数 | 173 |
-| ✅ 无需适配 | 73 |
+| 仓库总数 | 176 |
+| ✅ 无需适配 | 74 |
 | ⚠️ 需适配 | 6 |
 | 关注 / 占位 / 不适用 / 已删除 | 3 / 9 / 2 / 1 |
-| 🐙 开放 PR | 5 |
+| 🐙 开放 PR | 4 |
 
 📄 **最新报告**：[mainline-compat.md](reports/2026-08-10/mainline-compat.md) · [当日索引](reports/2026-08-10/index.md)（完整矩阵 + 双方建议）
 
@@ -131,8 +131,15 @@
 | [dsh-engram-relay](https://github.com/dsh-external/dsh-engram-relay) | 🆕 新增 |
 | [yet-another-subagent](https://github.com/dsh-external/yet-another-subagent) | 🆕 新增 |
 | [dsh-voice-chat](https://github.com/dsh-external/dsh-voice-chat) | 🆕 新增 |
-| （今日无修改） | |
-
+| [dsh-ads](https://github.com/dsh-external/dsh-ads) | 🆕 新增 |
+| [dsh-skill-session-recovery](https://github.com/dsh-external/dsh-skill-session-recovery) | 🆕 新增 |
+| [dsh-tavern-plugin](https://github.com/dsh-external/dsh-tavern-plugin) | 🆕 新增 |
+| [dsh-cc-tui](https://github.com/dsh-external/dsh-cc-tui) | ✏️ 修改 |
+| [dsh-memory-evolve](https://github.com/dsh-external/dsh-memory-evolve) | ✏️ 修改 |
+| [dsh-ui-progress](https://github.com/dsh-external/dsh-ui-progress) | ✏️ 修改 |
+| [dsh-ui-whale](https://github.com/dsh-external/dsh-ui-whale) | ✏️ 修改 |
+| [dsh-web-terminal](https://github.com/dsh-external/dsh-web-terminal) | ✏️ 修改 |
+| [hub](https://github.com/dsh-external/hub) | ✏️ 修改 |
 **需适配（补丁基线 / seam 变化）**
 
 | 仓库 | 锚定 | 判定 |
@@ -147,7 +154,6 @@
 
 | 仓库 | PR | 标题 | 更新 |
 |---|---|---|---|
-| [mstar-workflow](https://github.com/dsh-external/mstar-workflow) | [#2](https://github.com/dsh-external/mstar-workflow/pull/2) | iter-20260809-mstar-panel-beautify: MStar 工作流面板重构 (react-flow 循环图 + 布局 + 视觉升级) | 2026-08-09 |
 | [dsh-my-rsi](https://github.com/dsh-external/dsh-my-rsi) | [#40](https://github.com/dsh-external/dsh-my-rsi/pull/40) | Refine main session surfaces | 2026-08-09 |
 | [dsh-hub](https://github.com/dsh-external/dsh-hub) | [#7](https://github.com/dsh-external/dsh-hub/pull/7) | Add Registry-bound configuration Recipes | 2026-08-09 |
 | [group-chat-diary](https://github.com/dsh-external/group-chat-diary) | [#4](https://github.com/dsh-external/group-chat-diary/pull/4) | Automate Cloudflare Pages deployment | 2026-08-07 |

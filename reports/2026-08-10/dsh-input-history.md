@@ -1,7 +1,7 @@
 # dsh-input-history — 与 mainline 兼容性对比（2026-08-10）> [打开仓库](https://github.com/dsh-external/dsh-input-history) · 深度摘要待调研（当前为引擎自动判定）\n\n
 ## 克隆证据
 
-- 克隆 HEAD：054f315
+- 克隆 HEAD：8933f95
 - 锚定：7f25d3e98c（commit，未知（不同谱系））
 - 补丁：无补丁
 - seam：缺: tuiPrompt

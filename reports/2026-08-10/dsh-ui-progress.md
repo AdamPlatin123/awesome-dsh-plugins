@@ -1,7 +1,7 @@
 # dsh-ui-progress — 与 mainline 兼容性对比（2026-08-10）> [打开仓库](https://github.com/dsh-external/dsh-ui-progress) · 调研摘要（只读资产，本报告不复制其正文）：[research/dsh-ui-progress.md](../../research/dsh-ui-progress.md)\n\n
 ## 克隆证据
 
-- 克隆 HEAD：0f5d356
+- 克隆 HEAD：f2b42eb
 - 锚定：ce1fc03f95（commit，未知（不同谱系））
 - 补丁：无补丁
 - seam：缺: tuiPrompt

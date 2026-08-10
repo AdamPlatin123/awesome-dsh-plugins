@@ -2,7 +2,7 @@
 
 - mainline：`1c4950a`（snapshots/20260809T140917Z）
 - 上次对比：`1c4950ab71fa4d128c749d9b22af17373edddb73`
-- 兼容性：73/173 无需适配，6 需适配（dsh-subagent-tree dsh-working-activity plugin-registry turtle-ui dsh-tps dsh-split-panes）；其中关注 3、占位 9、不适用 2、已删除 1、未知 93
+- 兼容性：74/176 无需适配，6 需适配（dsh-subagent-tree dsh-working-activity plugin-registry turtle-ui dsh-tps dsh-split-panes）；其中关注 3、占位 9、不适用 2、已删除 1、未知 95
 
 ## 兼容性矩阵
 
@@ -15,7 +15,7 @@
 | dsh-acp | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 兼容 |
 | dsh-agent-session-sources | 未知 | 无补丁 | 缺: tuiPrompt | 29 项匹配 | 兼容 |
 | dsh-artifact | 未知 | 无补丁 | 缺: tuiPrompt | 2 项匹配 | 兼容 |
-| dsh-cc-tui | 未知 | 无补丁 | 缺: tuiPrompt | 9 项匹配 | 关注 |
+| dsh-cc-tui | 未知 | 无补丁 | 缺: tuiPrompt | 12 项匹配 | 关注 |
 | dsh-coding-receipt | 未知 | 不适用（空仓库） | 不适用（空仓库） | 不适用 | 占位 |
 | dsh-companion | 未知 | 无补丁 | 缺: tuiPrompt | 7 项匹配 | 兼容 |
 | dsh-cordis-examples | 未知 | 不适用（空仓库） | 不适用（空仓库） | 不适用 | 占位 |
@@ -108,7 +108,7 @@
 | dsh-session-hub | 未知 | 不适用（空仓库） | 不适用（空仓库） | 不适用 | 占位 |
 | dsh-ica | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 未知（待调研） |
 | dsh-advisor | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 未知（待调研） |
-| dsh-llm-fallbacks | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 未知（待调研） |
+| dsh-llm-fallbacks | 未知 | OK（2 个补丁全部干净应用） | 缺: tuiPrompt | 8 项匹配 | 兼容 |
 | dsh-web-workflow-visualizer | 未知 | 无补丁 | 缺: tuiPrompt | 3 项匹配 | 未知（待调研） |
 | dsh-checkpoint | 未知（catalog ref，非 mainline 锚定） | 无补丁 | 缺: tuiPrompt | 4 项匹配 | 未知（待调研） |
 | dsh-rewind | 未知（catalog ref，非 mainline 锚定） | 无补丁 | 缺: tuiPrompt | 6 项匹配 | 未知（待调研） |
@@ -150,7 +150,7 @@
 | dsh-101 | 未知 | 无补丁 | 缺: tuiPrompt | 16 项匹配 | 未知（待调研） |
 | dsh-turn-rewind | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 未知（待调研） |
 | dsh-genui | 未知（不同谱系） | 无补丁 | 缺: tuiPrompt | 8 项匹配 | 兼容 |
-| dsh-mygo | 未知 | 无补丁 | 缺: tuiPrompt | 7 项匹配 | 未知（待调研） |
+| dsh-mygo | 未知 | 无补丁 | 缺: tuiPrompt | 8 项匹配 | 未知（待调研） |
 | cross-harness-cite | 未知 | 无补丁 | 缺: tuiPrompt | 15 项匹配 | 未知（待调研） |
 | dsh-split-panes | 未知 | CONFLICT（1 个补丁中 0 个 OK） | 缺: tuiPrompt | 4 项匹配 | 需适配 |
 | dsh-task-board | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 未知（待调研） |
@@ -181,6 +181,9 @@
 | dsh-engram-relay | 未知 | 无补丁 | 缺: tuiPrompt | 3 项匹配 | 未知（待调研） |
 | yet-another-subagent | 未知 | 无补丁 | 缺: tuiPrompt | 17 项匹配 | 未知（待调研） |
 | dsh-voice-chat | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 未知（待调研） |
+| dsh-ads | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 未知（待调研） |
+| dsh-skill-session-recovery | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 未知（待调研） |
+| dsh-tavern-plugin | 未知 | 无补丁 | 缺: tuiPrompt | 无 dsh-* 依赖 | 未知（待调研） |
 
 ## mainline 变更分析（1c4950ab71fa4d128c749d9b22af17373edddb73 → 1c4950a）
 
@@ -236,7 +239,7 @@
 ### dsh-artifact
 - 兼容：锚定 未知（未知）、补丁「无补丁」，当日 mainline 可干净集成。
 ### dsh-cc-tui
-- 关注：seam 或 peerDeps 存在不匹配（seam: 缺: tuiPrompt；peer: 9 项匹配），建议确认所依赖的宿主面当日是否仍满足。
+- 关注：seam 或 peerDeps 存在不匹配（seam: 缺: tuiPrompt；peer: 12 项匹配），建议确认所依赖的宿主面当日是否仍满足。
 ### dsh-coding-receipt
 - 占位仓库（0 commit），无集成点可对比；建议首个 commit 落地后再纳入兼容跟踪。
 - 输入来自 DSH session log，建议在 mainline 会话持久化格式稳定后实现。
@@ -429,7 +432,8 @@
 ### dsh-advisor
 - 未建模/状态未知：尚无 research/dsh-advisor.md 调研摘要（或 git/gh 无法确认仓库状态），不做兼容性结论；建议先完成调研建模或人工核查后再纳入兼容跟踪。
 ### dsh-llm-fallbacks
-- 未建模/状态未知：尚无 research/dsh-llm-fallbacks.md 调研摘要（或 git/gh 无法确认仓库状态），不做兼容性结论；建议先完成调研建模或人工核查后再纳入兼容跟踪。
+- 兼容：锚定 未知（未知）、补丁「OK（2 个补丁全部干净应用）」，当日 mainline 可干净集成。
+- 建议把补丁基线从 未知 显式记录到 README/补丁头，快照一漂即可自动预警。
 ### dsh-web-workflow-visualizer
 - 未建模/状态未知：尚无 research/dsh-web-workflow-visualizer.md 调研摘要（或 git/gh 无法确认仓库状态），不做兼容性结论；建议先完成调研建模或人工核查后再纳入兼容跟踪。
 ### dsh-checkpoint
@@ -576,6 +580,12 @@
 - 未建模/状态未知：尚无 research/yet-another-subagent.md 调研摘要（或 git/gh 无法确认仓库状态），不做兼容性结论；建议先完成调研建模或人工核查后再纳入兼容跟踪。
 ### dsh-voice-chat
 - 未建模/状态未知：尚无 research/dsh-voice-chat.md 调研摘要（或 git/gh 无法确认仓库状态），不做兼容性结论；建议先完成调研建模或人工核查后再纳入兼容跟踪。
+### dsh-ads
+- 未建模/状态未知：尚无 research/dsh-ads.md 调研摘要（或 git/gh 无法确认仓库状态），不做兼容性结论；建议先完成调研建模或人工核查后再纳入兼容跟踪。
+### dsh-skill-session-recovery
+- 未建模/状态未知：尚无 research/dsh-skill-session-recovery.md 调研摘要（或 git/gh 无法确认仓库状态），不做兼容性结论；建议先完成调研建模或人工核查后再纳入兼容跟踪。
+### dsh-tavern-plugin
+- 未建模/状态未知：尚无 research/dsh-tavern-plugin.md 调研摘要（或 git/gh 无法确认仓库状态），不做兼容性结论；建议先完成调研建模或人工核查后再纳入兼容跟踪。
 
 ## 主仓库侧建议
 
