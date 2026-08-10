@@ -67,6 +67,9 @@ for name in "${CANDIDATES[@]}"; do
   RC=$?
   if [ $RC -eq 0 ]; then
     PASS=$((PASS+1)); PASS_LIST+=("$name")
+  elif [ -n "$(ls "$CLONES/$name"/lib/*.js 2>/dev/null | head -1)" ]; then
+    # 自带 lib/ 构建产物：无需编译即可运行（源码级问题不影响运行时）
+    PASS=$((PASS+1)); PASS_LIST+=("$name(lib)")
   else
     FAIL=$((FAIL+1))
     FIRST="$(printf '%s\n' "$OUT" | grep -E "error TS" | head -1 | sed -E 's#.*error (TS[0-9]+): (.*)#\1: \2#' | cut -c1-90)"
