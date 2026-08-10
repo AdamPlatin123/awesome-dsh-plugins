@@ -114,13 +114,18 @@ fi
 # 3.5 记录本次新增/修改仓库（供 README 自动仪表盘渲染）
 #     新增 = 本次发现的 NEW_REPOS；修改 = CHANGED 中非新增的已知仓库
 CHANGED_REPOS=()
-for _c in $CHANGED; do
-  [ "$_c" = "all(首次)" ] && continue
-  [ "$_c" = "all(全量)" ] && continue
-  _is_new=0
-  for _n in "${NEW_REPOS[@]:-}"; do [ "$_n" = "$_c" ] && _is_new=1 && break; done
-  [ "$_is_new" -eq 0 ] && CHANGED_REPOS+=( "$_c" )
-done
+if [ "$FULL" -eq 1 ]; then
+  # 全量模式：逐 repo commit 全部 scope 仓库详情
+  CHANGED_REPOS=( "${SCOPE_REPOS[@]:-}" )
+else
+  for _c in $CHANGED; do
+    [ "$_c" = "all(首次)" ] && continue
+    [ "$_c" = "all(全量)" ] && continue
+    _is_new=0
+    for _n in "${NEW_REPOS[@]:-}"; do [ "$_n" = "$_c" ] && _is_new=1 && break; done
+    [ "$_is_new" -eq 0 ] && CHANGED_REPOS+=( "$_c" )
+  done
+fi
 {
   printf '{"date":"%s","new_repos":[' "$(date +%Y-%m-%d)"
   _first=1
@@ -163,15 +168,28 @@ if [ "$FULL" -eq 1 ] && [ -x ./scripts/build-mainline.sh ]; then
   setsid nohup bash -lc "cd '$REPO_DIR' && ./scripts/build-mainline.sh" >> logs/build.log 2>&1 < /dev/null &
 fi
 
-# 5. 提交报告/CHANGELOG/状态并推送回 org repo
-  if git diff --quiet && git diff --cached --quiet; then
-    echo "[提交] 无新内容，跳过 commit"
-  else
-    git add -A
+# 5. 提交：逐 repo 独立 commit + 聚合产物一个 commit，一次 push
+DATE_DIR="reports/$(date +%Y-%m-%d)"
+REPO_COMMITS=0
+# 5.1 变化仓库的详情文件逐个 commit（追踪每 repo 兼容性变化）
+for _n in ${CHANGED_REPOS[@]:-}; do
+  _f="$DATE_DIR/$_n.md"
+  if [ -f "$_f" ] && ! git diff --quiet -- "$_f"; then
+    git add "$_f"
     git -c user.name="dsh-ecosystem-bot" -c user.email="bot@dsh-external.local" \
-      commit -m "chore: 自动索引更新 $(date +%Y-%m-%d_%H%M) — 变化:$CHANGED" || echo "[提示] commit 失败"
-    git push dsh-ext main 2>&1 | tail -2 || echo "[提示] push 失败（网络），下次 cron 重试"
+      commit -q -m "index: $_n 兼容性更新（$(date +%Y-%m-%d_%H%M)）" && REPO_COMMITS=$((REPO_COMMITS+1))
   fi
+done
+# 5.2 聚合产物（主报告/索引/CHANGELOG/README/状态）一个 commit
+if git diff --quiet && git diff --cached --quiet; then
+  echo "[提交] 无新内容，跳过 commit"
+else
+  git add -A
+  git -c user.name="dsh-ecosystem-bot" -c user.email="bot@dsh-external.local" \
+    commit -q -m "chore: 聚合产物更新 $(date +%Y-%m-%d_%H%M) — 变化:$CHANGED（repo 级 $REPO_COMMITS 个）" \
+    && echo "[提交] repo 级 $REPO_COMMITS 个 + 聚合 1 个"
+fi
+git push dsh-ext main 2>&1 | tail -2 || echo "[提示] push 失败（网络），下次 cron 重试"
 else
   echo "[无变化] 全部仓库 HEAD 未变，跳过索引"
 fi
