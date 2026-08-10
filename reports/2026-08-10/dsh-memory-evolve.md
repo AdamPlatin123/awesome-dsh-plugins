@@ -1,7 +1,7 @@
 # dsh-memory-evolve — 与 mainline 兼容性对比（2026-08-10）> [打开仓库](https://github.com/dsh-external/dsh-memory-evolve) · 调研摘要（只读资产，本报告不复制其正文）：[research/dsh-memory-evolve.md](../../research/dsh-memory-evolve.md)\n\n
 ## 克隆证据
 
-- 克隆 HEAD：7932296
+- 克隆 HEAD：29f4974
 - 锚定：未知（unknown，未知）
 - 补丁：无补丁
 - seam：缺: tuiPrompt

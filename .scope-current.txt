@@ -173,3 +173,4 @@ yet-another-subagent
 dsh-voice-chat
 dsh-ads
 dsh-skill-session-recovery
+dsh-tavern-plugin

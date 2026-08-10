@@ -1,7 +1,7 @@
 # dsh-ui-whale — 与 mainline 兼容性对比（2026-08-10）> [打开仓库](https://github.com/dsh-external/dsh-ui-whale) · 调研摘要（只读资产，本报告不复制其正文）：[research/dsh-ui-whale.md](../../research/dsh-ui-whale.md)\n\n
 ## 克隆证据
 
-- 克隆 HEAD：62d5606
+- 克隆 HEAD：8bbf756
 - 锚定：ce1fc03f95（commit，未知（不同谱系））
 - 补丁：无补丁
 - seam：缺: tuiPrompt
