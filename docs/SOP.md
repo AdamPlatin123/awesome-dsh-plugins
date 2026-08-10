@@ -88,3 +88,49 @@ SKIP_BUILD=1 ./scripts/build-mainline.sh  # 跳过构建（不部署）
 | 日志 | `logs/cron-<日期>.log` · `logs/build*.log` |
 | 状态文件 | `.cron-state.json` · `.mainline-state.json` · `.last-changes.json`（均 gitignore） |
 | 部署实例 | `~/.local/bin/dsh` → `.mainline-build/apps/cli/lib/bin.js` |
+
+## 7. 插件验证与修复 SOP（每周 + 变更触发）
+
+### 7.1 流程
+
+```text
+[触发] 每周全量 / mainline 快照更新 / 新插件入 scope
+    ↓
+1. verify-compile.sh     编译验证（tsc --noEmit）：
+                         通过 OR 自带 lib/ → 可运行；无 lib 且失败 → 需修复
+    ↓
+2. fix-plugin.sh         修复自动化（默认 dry-run）：
+                         · baseUrl 弃用 → 自动修（--apply）
+                         · 缺 @types/第三方依赖 → 建议 pnpm add
+                         · API 漂移（TS2339 类）→ 人工清单
+    ↓
+3. test-plugin.sh        安装测试：
+                         · marisa/dshx 安装 → dshx doctor → dsh run 冒烟（真实路径）
+                         · 或 workspace 集成 → tsc → dsh run 冒烟
+    ↓
+4. 报告                 reports/<日期>/compile-compat.md / plugin-fix.md / plugin-test.md
+```
+
+### 7.2 触发时机
+
+| 时机 | 动作 |
+|---|---|
+| 每周一 02:00 全量后 | verify-compile + fix-plugin（dry-run）→ 报告 |
+| mainline 新快照 | verify-compile（快照变更可能破坏插件编译） |
+| 新插件入库 | test-plugin（安装测试真实路径） |
+| 人工修复后 | 重跑 verify-compile 验证修复率 |
+
+### 7.3 判定标准
+
+| 判定 | 条件 | 去向 |
+|---|---|---|
+| ✅ 可运行 | tsc 通过 OR 自带 lib/ 产物 | 报告“兼容” |
+| 🔧 可自动修 | baseUrl 弃用/缺依赖/缺类型 | fix-plugin --apply 或建议命令 |
+| 👤 需人工 | API 漂移（TS2339/TS2345/TS2322） | 人工清单 → issue 草稿 |
+| ⚠️ 环境类 | TS2307 解析（cordis/@deepseek-ai 等） | 标注“真实安装可解”，不误判不兼容 |
+
+### 7.4 已知边界
+
+- 单包 tsc 验证有天花板（依赖源码编译冲突）——最终判定以真实安装（marisa/workspace）为准
+- 编译失败 ≠ 不可用：~56% 失败仓自带 lib 可运行；~62% 失败为环境解析类
+- 自动修复只做低风险项；API 漂移必须人工
