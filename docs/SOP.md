@@ -88,7 +88,7 @@ SKIP_BUILD=1 ./scripts/build-mainline.sh  # 跳过构建（不部署）
 | 日志 | `logs/cron-<日期>.log` · `logs/build*.log` |
 | 状态文件 | `.cron-state.json` · `.mainline-state.json` · `.last-changes.json`（均 gitignore） |
 | 部署实例 | `~/.local/bin/dsh` → `.mainline-build/apps/cli/lib/bin.js` |
-## 8. 远程 omp 模型切换（内网 Qwen，零费用）
+
 ## 7. 插件验证与修复 SOP（每周 + 变更触发）
 
 ### 7.1 流程
@@ -134,6 +134,7 @@ SKIP_BUILD=1 ./scripts/build-mainline.sh  # 跳过构建（不部署）
 - 单包 tsc 验证有天花板（依赖源码编译冲突）——最终判定以真实安装（marisa/workspace）为准
 - 编译失败 ≠ 不可用：~56% 失败仓自带 lib 可运行；~62% 失败为环境解析类
 - 自动修复只做低风险项；API 漂移必须人工
+
 
 ## 8. 远程 omp 模型切换（内网 Qwen，零费用）
 
