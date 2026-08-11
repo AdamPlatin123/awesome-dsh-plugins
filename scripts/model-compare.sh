@@ -19,7 +19,7 @@ echo "[任务] $TASK"
 echo "[调用] deepseek-v4-flash..."
 DS_OUT="$(timeout 60 curl -s -m 55 https://api.deepseek.com/chat/completions \
   -H "Authorization: Bearer $DS_KEY" -H "Content-Type: application/json" \
-  -d "$(python3 -c "import json,sys; print(json.dumps({'model':'deepseek-v4-flash','messages':[{'role':'user','content':sys.argv[1]}],'max_tokens':1500}))" "$TASK")" 2>&1)"
+  -d "$(python3 -c "import json,sys; print(json.dumps({'model':'deepseek-v4-flash','messages':[{'role':'user','content':sys.argv[1]}],'max_tokens':8000}))" "$TASK")" 2>&1)"
 DS_TXT="$(printf '%s' "$DS_OUT" | python3 -c "import json,sys
 try:
     d=json.load(sys.stdin); print(d['choices'][0]['message']['content'] or '')
@@ -30,7 +30,7 @@ DS_LEN="${#DS_TXT}"
 echo "[调用] Qwen3.6-35B..."
 QW_OUT="$(timeout 90 curl -s -m 85 http://10.123.45.18:8080/v1/chat/completions \
   -H "Content-Type: application/json" \
-  -d "$(python3 -c "import json,sys; print(json.dumps({'model':'Qwen3.6-35B','messages':[{'role':'user','content':sys.argv[1]}],'max_tokens':3000}))" "$TASK")" 2>&1)"
+  -d "$(python3 -c "import json,sys; print(json.dumps({'model':'Qwen3.6-35B','messages':[{'role':'user','content':sys.argv[1]}],'max_tokens':16000}))" "$TASK")" 2>&1)"
 QW_TXT="$(printf '%s' "$QW_OUT" | python3 -c "import json,sys
 try:
     d=json.load(sys.stdin); m=d['choices'][0]['message']; c=m.get('content') or ''; r=m.get('reasoning') or ''
@@ -51,13 +51,13 @@ mkdir -p "$REPO_DIR/reports/$DATE"
   echo "## deepseek-v4-flash（旧，计费）— ${DS_LEN} 字"
   echo ""
   echo '```'
-  printf '%s' "$DS_TXT" | head -40
+  printf '%s' "$DS_TXT"
   echo '```'
   echo ""
   echo "## Qwen3.6-35B（新，内网零费用）— ${QW_LEN} 字"
   echo ""
   echo '```'
-  printf '%s' "$QW_TXT" | head -40
+  printf '%s' "$QW_TXT"
   echo '```'
   echo ""
   echo "## 比对要点（待多模型审查）"
