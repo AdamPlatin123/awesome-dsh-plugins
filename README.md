@@ -3,19 +3,19 @@
 > 面向 DSH 插件开发者的组织级情报门户：每 8 小时自动索引 dsh-external 全部仓库，对比当日 mainline 接口差异，产出兼容性矩阵、新增/修改跟踪与双方开发者建议。
 
 <!-- AUTO:ecosystem:START -->
-> 自动更新：2026-08-11_0258（cron 每 8 小时 · 报告日 2026-08-11 · mainline `3c21611`）
+> 自动更新：2026-08-12_0223（cron 每 8 小时 · 报告日 2026-08-12 · mainline `340d23a`）
 
 **生态仪表盘**
 
 | 指标 | 值 |
 |---|---|
-| 仓库总数 | 210 |
-| ✅ 无需适配 | 81 |
+| 仓库总数 | 251 |
+| ✅ 无需适配 | 89 |
 | ⚠️ 需适配 | 5 |
-| 关注 / 占位 / 不适用 / 已删除 | 3 / 11 / 2 / 1 |
-| 🐙 开放 PR | 7 |
+| 关注 / 占位 / 不适用 / 已删除 | 26 / 15 / 2 / 0 |
+| 🐙 开放 PR | 9 |
 
-📄 **最新报告**：[mainline-compat.md](reports/2026-08-11/mainline-compat.md) · [当日索引](reports/2026-08-11/index.md)（完整矩阵 + 双方建议）
+📄 **最新报告**：[mainline-compat.md](reports/2026-08-12/mainline-compat.md) · [当日索引](reports/2026-08-12/index.md)（完整矩阵 + 双方建议）
 
 **今日新增 / 修改仓库**
 
@@ -168,6 +168,47 @@
 | [dsh-annotation](https://github.com/dsh-external/dsh-annotation) | 🆕 新增 |
 | [dsh-ui-webview](https://github.com/dsh-external/dsh-ui-webview) | 🆕 新增 |
 | [dsh-web-review](https://github.com/dsh-external/dsh-web-review) | 🆕 新增 |
+| [dsh-cc-connect](https://github.com/dsh-external/dsh-cc-connect) | 🆕 新增 |
+| [dsh-focus-chat](https://github.com/dsh-external/dsh-focus-chat) | 🆕 新增 |
+| [dsh-build](https://github.com/dsh-external/dsh-build) | 🆕 新增 |
+| [oh-my-deepseek](https://github.com/dsh-external/oh-my-deepseek) | 🆕 新增 |
+| [dsh-save-intp](https://github.com/dsh-external/dsh-save-intp) | 🆕 新增 |
+| [dsh-find-plugins](https://github.com/dsh-external/dsh-find-plugins) | 🆕 新增 |
+| [dsh-fkin-vibe](https://github.com/dsh-external/dsh-fkin-vibe) | 🆕 新增 |
+| [dsh-harness-ops](https://github.com/dsh-external/dsh-harness-ops) | 🆕 新增 |
+| [dsh-vision-toolkit](https://github.com/dsh-external/dsh-vision-toolkit) | 🆕 新增 |
+| [dsh-code](https://github.com/dsh-external/dsh-code) | 🆕 新增 |
+| [Top](https://github.com/dsh-external/Top) | 🆕 新增 |
+| [__perm_probe__](https://github.com/dsh-external/__perm_probe__) | 🆕 新增 |
+| [dsh-kimi-browser](https://github.com/dsh-external/dsh-kimi-browser) | 🆕 新增 |
+| [dsh-edu](https://github.com/dsh-external/dsh-edu) | 🆕 新增 |
+| [dsh-ohos-patch](https://github.com/dsh-external/dsh-ohos-patch) | 🆕 新增 |
+| [oh-dsh-desktop](https://github.com/dsh-external/oh-dsh-desktop) | 🆕 新增 |
+| [dsh-plugin-skills](https://github.com/dsh-external/dsh-plugin-skills) | 🆕 新增 |
+| [dsh-deep-whale](https://github.com/dsh-external/dsh-deep-whale) | 🆕 新增 |
+| [dsh-tool-search](https://github.com/dsh-external/dsh-tool-search) | 🆕 新增 |
+| [oh-my-dsh-distribution](https://github.com/dsh-external/oh-my-dsh-distribution) | 🆕 新增 |
+| [dsh-memory](https://github.com/dsh-external/dsh-memory) | 🆕 新增 |
+| [dsh-chat](https://github.com/dsh-external/dsh-chat) | 🆕 新增 |
+| [dsh-web](https://github.com/dsh-external/dsh-web) | 🆕 新增 |
+| [dsh_ide](https://github.com/dsh-external/dsh_ide) | 🆕 新增 |
+| [dsh-trace](https://github.com/dsh-external/dsh-trace) | 🆕 新增 |
+| [deepseek-manners](https://github.com/dsh-external/deepseek-manners) | 🆕 新增 |
+| [plugin-template](https://github.com/dsh-external/plugin-template) | 🆕 新增 |
+| [dsh-design](https://github.com/dsh-external/dsh-design) | 🆕 新增 |
+| [dsh-computer-use](https://github.com/dsh-external/dsh-computer-use) | 🆕 新增 |
+| [dsh-meme](https://github.com/dsh-external/dsh-meme) | 🆕 新增 |
+| [dsh-roleplay-portable-spike](https://github.com/dsh-external/dsh-roleplay-portable-spike) | 🆕 新增 |
+| [dsh-music-player](https://github.com/dsh-external/dsh-music-player) | 🆕 新增 |
+| [dsh-multica-runtime](https://github.com/dsh-external/dsh-multica-runtime) | 🆕 新增 |
+| [dsh-mega](https://github.com/dsh-external/dsh-mega) | 🆕 新增 |
+| [dsh-office](https://github.com/dsh-external/dsh-office) | 🆕 新增 |
+| [savemoneybenchmark](https://github.com/dsh-external/savemoneybenchmark) | 🆕 新增 |
+| [dsh-slice-agent-loop](https://github.com/dsh-external/dsh-slice-agent-loop) | 🆕 新增 |
+| [dsh-kb-sieve](https://github.com/dsh-external/dsh-kb-sieve) | 🆕 新增 |
+| [dsh-data-agent](https://github.com/dsh-external/dsh-data-agent) | 🆕 新增 |
+| [dsh-security](https://github.com/dsh-external/dsh-security) | 🆕 新增 |
+| [dsh-teamwork](https://github.com/dsh-external/dsh-teamwork) | 🆕 新增 |
 | [chat-width](https://github.com/dsh-external/chat-width) | ✏️ 修改 |
 | [deepseek-harness-desktop](https://github.com/dsh-external/deepseek-harness-desktop) | ✏️ 修改 |
 | [deepseek-harness-distro](https://github.com/dsh-external/deepseek-harness-distro) | ✏️ 修改 |
@@ -378,24 +419,67 @@
 | [dsh-annotation](https://github.com/dsh-external/dsh-annotation) | ✏️ 修改 |
 | [dsh-ui-webview](https://github.com/dsh-external/dsh-ui-webview) | ✏️ 修改 |
 | [dsh-web-review](https://github.com/dsh-external/dsh-web-review) | ✏️ 修改 |
+| [dsh-cc-connect](https://github.com/dsh-external/dsh-cc-connect) | ✏️ 修改 |
+| [dsh-focus-chat](https://github.com/dsh-external/dsh-focus-chat) | ✏️ 修改 |
+| [dsh-build](https://github.com/dsh-external/dsh-build) | ✏️ 修改 |
+| [oh-my-deepseek](https://github.com/dsh-external/oh-my-deepseek) | ✏️ 修改 |
+| [dsh-save-intp](https://github.com/dsh-external/dsh-save-intp) | ✏️ 修改 |
+| [dsh-find-plugins](https://github.com/dsh-external/dsh-find-plugins) | ✏️ 修改 |
+| [dsh-fkin-vibe](https://github.com/dsh-external/dsh-fkin-vibe) | ✏️ 修改 |
+| [dsh-harness-ops](https://github.com/dsh-external/dsh-harness-ops) | ✏️ 修改 |
+| [dsh-vision-toolkit](https://github.com/dsh-external/dsh-vision-toolkit) | ✏️ 修改 |
+| [dsh-code](https://github.com/dsh-external/dsh-code) | ✏️ 修改 |
+| [Top](https://github.com/dsh-external/Top) | ✏️ 修改 |
+| [__perm_probe__](https://github.com/dsh-external/__perm_probe__) | ✏️ 修改 |
+| [dsh-kimi-browser](https://github.com/dsh-external/dsh-kimi-browser) | ✏️ 修改 |
+| [dsh-edu](https://github.com/dsh-external/dsh-edu) | ✏️ 修改 |
+| [dsh-ohos-patch](https://github.com/dsh-external/dsh-ohos-patch) | ✏️ 修改 |
+| [oh-dsh-desktop](https://github.com/dsh-external/oh-dsh-desktop) | ✏️ 修改 |
+| [dsh-plugin-skills](https://github.com/dsh-external/dsh-plugin-skills) | ✏️ 修改 |
+| [dsh-deep-whale](https://github.com/dsh-external/dsh-deep-whale) | ✏️ 修改 |
+| [dsh-tool-search](https://github.com/dsh-external/dsh-tool-search) | ✏️ 修改 |
+| [oh-my-dsh-distribution](https://github.com/dsh-external/oh-my-dsh-distribution) | ✏️ 修改 |
+| [dsh-memory](https://github.com/dsh-external/dsh-memory) | ✏️ 修改 |
+| [dsh-chat](https://github.com/dsh-external/dsh-chat) | ✏️ 修改 |
+| [dsh-web](https://github.com/dsh-external/dsh-web) | ✏️ 修改 |
+| [dsh_ide](https://github.com/dsh-external/dsh_ide) | ✏️ 修改 |
+| [dsh-trace](https://github.com/dsh-external/dsh-trace) | ✏️ 修改 |
+| [deepseek-manners](https://github.com/dsh-external/deepseek-manners) | ✏️ 修改 |
+| [plugin-template](https://github.com/dsh-external/plugin-template) | ✏️ 修改 |
+| [dsh-design](https://github.com/dsh-external/dsh-design) | ✏️ 修改 |
+| [dsh-computer-use](https://github.com/dsh-external/dsh-computer-use) | ✏️ 修改 |
+| [dsh-meme](https://github.com/dsh-external/dsh-meme) | ✏️ 修改 |
+| [dsh-roleplay-portable-spike](https://github.com/dsh-external/dsh-roleplay-portable-spike) | ✏️ 修改 |
+| [dsh-music-player](https://github.com/dsh-external/dsh-music-player) | ✏️ 修改 |
+| [dsh-multica-runtime](https://github.com/dsh-external/dsh-multica-runtime) | ✏️ 修改 |
+| [dsh-mega](https://github.com/dsh-external/dsh-mega) | ✏️ 修改 |
+| [dsh-office](https://github.com/dsh-external/dsh-office) | ✏️ 修改 |
+| [savemoneybenchmark](https://github.com/dsh-external/savemoneybenchmark) | ✏️ 修改 |
+| [dsh-slice-agent-loop](https://github.com/dsh-external/dsh-slice-agent-loop) | ✏️ 修改 |
+| [dsh-kb-sieve](https://github.com/dsh-external/dsh-kb-sieve) | ✏️ 修改 |
+| [dsh-data-agent](https://github.com/dsh-external/dsh-data-agent) | ✏️ 修改 |
+| [dsh-security](https://github.com/dsh-external/dsh-security) | ✏️ 修改 |
+| [dsh-teamwork](https://github.com/dsh-external/dsh-teamwork) | ✏️ 修改 |
 **需适配（补丁基线 / seam 变化）**
 
 | 仓库 | 锚定 | 判定 |
 |---|---|---|
 | [dsh-subagent-tree](https://github.com/dsh-external/dsh-subagent-tree) | 未知 | 需适配 |
 | [dsh-working-activity](https://github.com/dsh-external/dsh-working-activity) | 未知（非 commit 锚定: 20260804T143803Z） | 需适配 |
-| [dsh-advisor](https://github.com/dsh-external/dsh-advisor) | 未知（catalog ref，非 mainline 锚定） | 需适配 |
 | [dsh-tps](https://github.com/dsh-external/dsh-tps) | 未知 | 需适配 |
 | [dsh-split-panes](https://github.com/dsh-external/dsh-split-panes) | 未知 | 需适配 |
+| [dsh-ohos-patch](https://github.com/dsh-external/dsh-ohos-patch) | 未知 | 需适配 |
 **正在跟踪的 open PR**
 
 | 仓库 | PR | 标题 | 更新 |
 |---|---|---|---|
+| [dsh-turn-rewind](https://github.com/dsh-external/dsh-turn-rewind) | [#1](https://github.com/dsh-external/dsh-turn-rewind/pull/1) | fix: restore Turn Rewind buttons on current chat nodes | 2026-08-11 |
+| [dsh-hub](https://github.com/dsh-external/dsh-hub) | [#15](https://github.com/dsh-external/dsh-hub/pull/15) | Align optional host capabilities and legacy cleanup | 2026-08-11 |
+| [dsh-web-ui](https://github.com/dsh-external/dsh-web-ui) | [#2](https://github.com/dsh-external/dsh-web-ui/pull/2) | feat: Minecraft voxel skin with rotating panorama skybox | 2026-08-11 |
+| [dsh-my-rsi](https://github.com/dsh-external/dsh-my-rsi) | [#49](https://github.com/dsh-external/dsh-my-rsi/pull/49) | docs: record external method provenance (#45) | 2026-08-11 |
+| [dsh-my-rsi](https://github.com/dsh-external/dsh-my-rsi) | [#43](https://github.com/dsh-external/dsh-my-rsi/pull/43) | feat: rsi-core live plugin execution face (#41) + supervised revival layer (#42) | 2026-08-11 |
 | [session-teleport](https://github.com/dsh-external/session-teleport) | [#2](https://github.com/dsh-external/session-teleport/pull/2) | Add safe plugin lifecycle and real-device acceptance | 2026-08-10 |
-| [DSH-better-sidebar](https://github.com/dsh-external/DSH-better-sidebar) | [#3](https://github.com/dsh-external/DSH-better-sidebar/pull/3) | feat: 服务化改造 — ctx.betterSidebar 注册表（registerTab/registerFileViewer）+ 内置迁移到 registry，v0.4.0 | 2026-08-10 |
-| [dsh-hub](https://github.com/dsh-external/dsh-hub) | [#9](https://github.com/dsh-external/dsh-hub/pull/9) | Bridge official client manifests through Harness 0810 | 2026-08-10 |
-| [dsh-my-rsi](https://github.com/dsh-external/dsh-my-rsi) | [#40](https://github.com/dsh-external/dsh-my-rsi/pull/40) | Refine main session surfaces | 2026-08-09 |
-| [dsh-hub](https://github.com/dsh-external/dsh-hub) | [#7](https://github.com/dsh-external/dsh-hub/pull/7) | Add Registry-bound configuration Recipes | 2026-08-09 |
+| [dsh-my-rsi](https://github.com/dsh-external/dsh-my-rsi) | [#40](https://github.com/dsh-external/dsh-my-rsi/pull/40) | Refine main session surfaces + docs-query skills + superagent Phase 0 | 2026-08-11 |
 | [group-chat-diary](https://github.com/dsh-external/group-chat-diary) | [#4](https://github.com/dsh-external/group-chat-diary/pull/4) | Automate Cloudflare Pages deployment | 2026-08-07 |
 | [dsh-live-stats](https://github.com/dsh-external/dsh-live-stats) | [#1](https://github.com/dsh-external/dsh-live-stats/pull/1) | fix: make live token and TPS accounting provider-aligned | 2026-08-07 |
 <!-- AUTO:ecosystem:END -->
