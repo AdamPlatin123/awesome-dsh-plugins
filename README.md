@@ -3,7 +3,7 @@
 > 面向 DSH 插件开发者的组织级情报门户：每 8 小时自动索引 dsh-external 全部仓库，对比当日 mainline 接口差异，产出兼容性矩阵、新增/修改跟踪与双方开发者建议。
 
 <!-- AUTO:ecosystem:START -->
-> 自动更新：2026-08-12_0223（cron 每 8 小时 · 报告日 2026-08-12 · mainline `340d23a`）
+> 自动更新：2026-08-12_0305（cron 每 8 小时 · 报告日 2026-08-12 · mainline `340d23a`）
 
 **生态仪表盘**
 
@@ -13,7 +13,7 @@
 | ✅ 无需适配 | 89 |
 | ⚠️ 需适配 | 5 |
 | 关注 / 占位 / 不适用 / 已删除 | 26 / 15 / 2 / 0 |
-| 🐙 开放 PR | 9 |
+| 🐙 开放 PR | 10 |
 
 📄 **最新报告**：[mainline-compat.md](reports/2026-08-12/mainline-compat.md) · [当日索引](reports/2026-08-12/index.md)（完整矩阵 + 双方建议）
 
@@ -473,6 +473,7 @@
 
 | 仓库 | PR | 标题 | 更新 |
 |---|---|---|---|
+| [dsh-llm-fallbacks](https://github.com/dsh-external/dsh-llm-fallbacks) | [#8](https://github.com/dsh-external/dsh-llm-fallbacks/pull/8) | feat(fallbacks): mount-only plugin (gateway settings channel, role rules-only, patch purge) + settings UI fidelity | 2026-08-11 |
 | [dsh-turn-rewind](https://github.com/dsh-external/dsh-turn-rewind) | [#1](https://github.com/dsh-external/dsh-turn-rewind/pull/1) | fix: restore Turn Rewind buttons on current chat nodes | 2026-08-11 |
 | [dsh-hub](https://github.com/dsh-external/dsh-hub) | [#15](https://github.com/dsh-external/dsh-hub/pull/15) | Align optional host capabilities and legacy cleanup | 2026-08-11 |
 | [dsh-web-ui](https://github.com/dsh-external/dsh-web-ui) | [#2](https://github.com/dsh-external/dsh-web-ui/pull/2) | feat: Minecraft voxel skin with rotating panorama skybox | 2026-08-11 |
