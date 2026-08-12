@@ -1,5 +1,10 @@
 ## 2026-08-13
 - mainline：`7b9644f`（snapshots/20260812T172954Z-final-unwatermarked）—— 较上次 7b9644f2b664e46c9518506035aa6c8d5af4d8e8：WebSocket 下行通道新增：packages/client/connection/src/websocket-downlink.ts 及其测试进入 mainline（架构 note 2026-08-04-websocket-downlink-carrier），远程通道类插件可对齐。 包级变化：packages/ 下删除 0 个包目录、新增 0 个文件（diffstat 见下）。
+- 兼容状态：277 / 286 兼容，9 需适配（dsh-subagent-tree dsh-working-activity turtle-ui fabric dsh-tps dsh-split-panes dsh-question-collapse dsh-ohos-patch dsh-cot-summary）
+- 报告：[mainline-compat.md](reports/2026-08-13/mainline-compat.md) · [当日索引](reports/2026-08-13/index.md)
+
+## 2026-08-13
+- mainline：`7b9644f`（snapshots/20260812T172954Z-final-unwatermarked）—— 较上次 7b9644f2b664e46c9518506035aa6c8d5af4d8e8：WebSocket 下行通道新增：packages/client/connection/src/websocket-downlink.ts 及其测试进入 mainline（架构 note 2026-08-04-websocket-downlink-carrier），远程通道类插件可对齐。 包级变化：packages/ 下删除 0 个包目录、新增 0 个文件（diffstat 见下）。
 - 兼容状态：275 / 284 兼容，9 需适配（dsh-subagent-tree dsh-working-activity turtle-ui fabric dsh-tps dsh-split-panes dsh-question-collapse dsh-ohos-patch dsh-cot-summary）
 - 报告：[mainline-compat.md](reports/2026-08-13/mainline-compat.md) · [当日索引](reports/2026-08-13/index.md)
 
