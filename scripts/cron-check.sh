@@ -161,7 +161,11 @@ if [ -n "$CHANGED" ]; then
     exit "$rc"
   fi
 
-  # 4.5 全量模式（或 hook 触发）下：索引后异步构建最新 mainline，验证可编译性
+  # 4.6 引擎完成后：LLM 生成开发者摘要（deepseek-v4-flash，异步）
+echo "[LLM] 生成开发者摘要（后台）..."
+setsid nohup bash -lc "cd '$REPO_DIR' && ./scripts/report-llm.sh" >> logs/llm.log 2>&1 < /dev/null &
+
+# 4.5 全量模式（或 hook 触发）下：索引后异步构建最新 mainline，验证可编译性
 #     构建产物 mainline-build.md 由下一轮 cron 随报告提交（不阻塞本轮）
 if [ "$FULL" -eq 1 ] && [ -x ./scripts/build-mainline.sh ]; then
   echo "[构建] 启动 mainline 自动构建（后台，结果写入 reports/ 并随下轮提交）..."
