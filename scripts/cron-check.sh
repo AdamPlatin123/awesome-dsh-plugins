@@ -190,6 +190,7 @@ else
     && echo "[提交] repo 级 $REPO_COMMITS 个 + 聚合 1 个"
 fi
 git push dsh-ext main 2>&1 | tail -2 || echo "[提示] push 失败（网络），下次 cron 重试"
+git push origin main 2>&1 | tail -1 || echo "[提示] origin 备份 push 失败，下次重试"
 else
   echo "[无变化] 全部仓库 HEAD 未变，跳过索引"
 fi
