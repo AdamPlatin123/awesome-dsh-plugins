@@ -8,6 +8,14 @@
 # 依赖：bash/git/gh/jq（gh 已认证，git credential 走 gh auth setup-git）
 set -uo pipefail
 
+# 互斥：flock 防止 hook 触发与 cron 定时班并发（曾实测 3 个 --full 同时跑竞态）
+LOCK_FD=9
+exec 9>/tmp/dsh-cron-check.lock
+if ! flock -n 9; then
+  echo "[互斥] 已有 cron-check 在运行，本轮退出"
+  exit 0
+fi
+
 FULL=0
 for _arg in "$@"; do [ "$_arg" = "--full" ] && FULL=1; done
 
