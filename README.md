@@ -17,16 +17,16 @@
 ## 现在
 
 <!-- AUTO:ecosystem:START -->
-> 自动更新：2026-08-13_0511（cron 每 8 小时 · 报告日 2026-08-13 · mainline `7b9644f`）
+> 自动更新：2026-08-13_0609（cron 每 8 小时 · 报告日 2026-08-13 · mainline `7b9644f`）
 
 **生态仪表盘**
 
 | 指标 | 值 |
 |---|---|
-| 仓库总数 | 284 |
+| 仓库总数 | 286 |
 | ✅ 无需适配 | 87 |
 | ⚠️ 需适配 | 9 |
-| 关注 / 占位 / 不适用 / 已删除 | 31 / 13 / 2 / 0 |
+| 关注 / 占位 / 不适用 / 已删除 | 31 / 13 / 2 / 4 |
 | 🐙 开放 PR | 11 |
 
 📄 **最新报告**：[兼容矩阵](reports/2026-08-13/mainline-compat.md) · [开发者摘要](reports/2026-08-13/mainline-summary.md) · [当日索引](reports/2026-08-13/index.md)
@@ -112,6 +112,7 @@
 | [dsh-gomoku](https://github.com/dsh-external/dsh-gomoku) | 🆕 新增 |
 | [dsh-101](https://github.com/dsh-external/dsh-101) | 🆕 新增 |
 | [dsh-turn-rewind](https://github.com/dsh-external/dsh-turn-rewind) | 🆕 新增 |
+| [dsh-genui](https://github.com/dsh-external/dsh-genui) | 🆕 新增 |
 | [dsh-mygo](https://github.com/dsh-external/dsh-mygo) | 🆕 新增 |
 | [cross-harness-cite](https://github.com/dsh-external/cross-harness-cite) | 🆕 新增 |
 | [dsh-split-panes](https://github.com/dsh-external/dsh-split-panes) | 🆕 新增 |
@@ -256,6 +257,7 @@
 | [dsh-custom-tool](https://github.com/dsh-external/dsh-custom-tool) | 🆕 新增 |
 | [dsh-openbiliclaw](https://github.com/dsh-external/dsh-openbiliclaw) | 🆕 新增 |
 | [dsh-longbridge](https://github.com/dsh-external/dsh-longbridge) | 🆕 新增 |
+| [dsh-dzcf](https://github.com/dsh-external/dsh-dzcf) | 🆕 新增 |
 | [chat-width](https://github.com/dsh-external/chat-width) | ✏️ 修改 |
 | [deepseek-harness-desktop](https://github.com/dsh-external/deepseek-harness-desktop) | ✏️ 修改 |
 | [deepseek-harness-distro](https://github.com/dsh-external/deepseek-harness-distro) | ✏️ 修改 |
@@ -396,6 +398,7 @@
 | [dsh-gomoku](https://github.com/dsh-external/dsh-gomoku) | ✏️ 修改 |
 | [dsh-101](https://github.com/dsh-external/dsh-101) | ✏️ 修改 |
 | [dsh-turn-rewind](https://github.com/dsh-external/dsh-turn-rewind) | ✏️ 修改 |
+| [dsh-genui](https://github.com/dsh-external/dsh-genui) | ✏️ 修改 |
 | [dsh-mygo](https://github.com/dsh-external/dsh-mygo) | ✏️ 修改 |
 | [cross-harness-cite](https://github.com/dsh-external/cross-harness-cite) | ✏️ 修改 |
 | [dsh-split-panes](https://github.com/dsh-external/dsh-split-panes) | ✏️ 修改 |
@@ -540,6 +543,7 @@
 | [dsh-custom-tool](https://github.com/dsh-external/dsh-custom-tool) | ✏️ 修改 |
 | [dsh-openbiliclaw](https://github.com/dsh-external/dsh-openbiliclaw) | ✏️ 修改 |
 | [dsh-longbridge](https://github.com/dsh-external/dsh-longbridge) | ✏️ 修改 |
+| [dsh-dzcf](https://github.com/dsh-external/dsh-dzcf) | ✏️ 修改 |
 **需适配（补丁基线 / seam 变化）**
 
 | 仓库 | 锚定 | 判定 |
