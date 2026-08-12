@@ -1,3 +1,8 @@
+## 2026-08-13
+- mainline：`340d23a`（snapshots/20260811T152241Z）—— 较上次 340d23a3aa833f4d5a66489297a6c6820ff049fc：WebSocket 下行通道新增：packages/client/connection/src/websocket-downlink.ts 及其测试进入 mainline（架构 note 2026-08-04-websocket-downlink-carrier），远程通道类插件可对齐。 包级变化：packages/ 下删除 0 个包目录、新增 0 个文件（diffstat 见下）。
+- 兼容状态：269 / 275 兼容，6 需适配（dsh-subagent-tree dsh-working-activity turtle-ui dsh-tps dsh-split-panes dsh-ohos-patch）
+- 报告：[mainline-compat.md](reports/2026-08-13/mainline-compat.md) · [当日索引](reports/2026-08-13/index.md)
+
 ## 2026-08-12
 - mainline：`340d23a`（snapshots/20260811T152241Z）—— 较上次 3c21611f061661686ff987827a112da19461027d：WebSocket 下行通道新增：packages/client/connection/src/websocket-downlink.ts 及其测试进入 mainline（架构 note 2026-08-04-websocket-downlink-carrier），远程通道类插件可对齐。 workspace catalog 变更：pnpm-workspace.yaml 增补条目（见 diffstat）。 包级变化：packages/ 下删除 6 个包目录、新增 14 个文件（diffstat 见下）。
 - 兼容状态：246 / 251 兼容，5 需适配（dsh-subagent-tree dsh-working-activity dsh-tps dsh-split-panes dsh-ohos-patch）
