@@ -1,5 +1,5 @@
 {
-  "lastMainlineCommit": "340d23a3aa833f4d5a66489297a6c6820ff049fc",
+  "lastMainlineCommit": "7b9644f2b664e46c9518506035aa6c8d5af4d8e8",
   "lastDate": "2026-08-13",
   "previousCommit": "340d23a3aa833f4d5a66489297a6c6820ff049fc",
   "repos": {
@@ -125,19 +125,19 @@
     },
     "dsh-tool-calculator": {
       "anchoredCommit": "25b2ad4f67",
-      "status": "兼容"
+      "status": "关注"
     },
     "dsh-tool-encoding": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "关注"
     },
     "dsh-tool-json": {
       "anchoredCommit": "25b2ad4f67",
-      "status": "兼容"
+      "status": "关注"
     },
     "dsh-tool-time": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "关注"
     },
     "dsh-ui-progress": {
       "anchoredCommit": "20260805T134133Z",
@@ -153,7 +153,7 @@
     },
     "dsh-web-terminal": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "关注"
     },
     "dsh-web-ui-approval-notify": {
       "anchoredCommit": "未知",
@@ -161,7 +161,7 @@
     },
     "dsh-web-ui": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "关注"
     },
     "dsh-wecom-bot": {
       "anchoredCommit": "未知",
@@ -233,7 +233,7 @@
     },
     "session-persistence-rdb": {
       "anchoredCommit": "未知",
-      "status": "关注"
+      "status": "兼容"
     },
     "telegram": {
       "anchoredCommit": "未知",
@@ -301,7 +301,7 @@
     },
     "fabric": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "需适配"
     },
     "dsh-browser": {
       "anchoredCommit": "未知",
@@ -713,7 +713,7 @@
     },
     "dsh-question-collapse": {
       "anchoredCommit": "348409b1",
-      "status": "兼容"
+      "status": "需适配"
     },
     "dsh-latex": {
       "anchoredCommit": "未知",
@@ -824,8 +824,8 @@
       "status": "占位"
     },
     "dsh-web-review": {
-      "anchoredCommit": "da262ec14c",
-      "status": "兼容"
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
     },
     "dsh-cc-connect": {
       "anchoredCommit": "未知",
@@ -864,8 +864,8 @@
       "status": "未知（待调研）"
     },
     "dsh-code": {
-      "anchoredCommit": "未知",
-      "status": "占位"
+      "anchoredCommit": "1ec12f796a822c78fba9ad7f6448c3987e325c23",
+      "status": "需适配"
     },
     "Top": {
       "anchoredCommit": "未知",
@@ -973,7 +973,7 @@
     },
     "dsh-slice-agent-loop": {
       "anchoredCommit": "20260811T152241Z",
-      "status": "兼容"
+      "status": "关注"
     },
     "dsh-kb-sieve": {
       "anchoredCommit": "未知",
@@ -1097,9 +1097,37 @@
     },
     "dsh-cot-summary": {
       "anchoredCommit": "未知",
-      "status": "关注"
+      "status": "需适配"
     },
     "dsh-emoji": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh_workflow": {
+      "anchoredCommit": "未知",
+      "status": "占位"
+    },
+    "dsh-openmaic": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-deepcel": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-STAR": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-STAGE": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-conversation-share": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "tonghuashun-webui": {
       "anchoredCommit": "未知",
       "status": "未知（待调研）"
     }
