@@ -41,22 +41,22 @@ description: 运行 dsh-external 生态与当日 mainline 快照的兼容性对�
 
 ```sh
 # 1) 完整对比（当日），生成报告并更新 CHANGELOG / 软链 / 状态
-bash /mnt/shared/_Projects/dsh-external-research/scripts/compare-mainline.sh
+bash /mnt/shared/_Projects/dsh-plugin-radar/scripts/compare-mainline.sh
 
 # 2) 只读预演：验证网络、克隆、判定，不落盘任何产物
-bash /mnt/shared/_Projects/dsh-external-research/scripts/compare-mainline.sh --dry-run
+bash /mnt/shared/_Projects/dsh-plugin-radar/scripts/compare-mainline.sh --dry-run
 
 # 3) 限定仓库范围（每行一个仓库名，# 注释）
-bash /mnt/shared/_Projects/dsh-external-research/scripts/compare-mainline.sh --scope /tmp/scope.txt
+bash /mnt/shared/_Projects/dsh-plugin-radar/scripts/compare-mainline.sh --scope /tmp/scope.txt
 
 # 4) 指定日期目录与首次对比基线
-bash /mnt/shared/_Projects/dsh-external-research/scripts/compare-mainline.sh --date 2026-08-05 --base cab66cd
+bash /mnt/shared/_Projects/dsh-plugin-radar/scripts/compare-mainline.sh --date 2026-08-05 --base cab66cd
 
 # 5) 查看将发布的 issue 草稿（不写远程）
-bash /mnt/shared/_Projects/dsh-external-research/scripts/compare-mainline.sh --publish-issues --dry-run
+bash /mnt/shared/_Projects/dsh-plugin-radar/scripts/compare-mainline.sh --publish-issues --dry-run
 
 # 6) 查看待修 diff（如 toybox/skins catalog ref 滞后），不写入
-bash /mnt/shared/_Projects/dsh-external-research/scripts/compare-mainline.sh --apply-fix --dry-run
+bash /mnt/shared/_Projects/dsh-plugin-radar/scripts/compare-mainline.sh --apply-fix --dry-run
 ```
 
 退出码：`0` 全部兼容；`1` 存在需适配（含 mainline 破坏性变更）；`2` 脚本错误；`3` 离线。

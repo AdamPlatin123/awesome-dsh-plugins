@@ -24,7 +24,7 @@ JS_CANDIDATES=()    # JS：node --check
 NA_COUNT=0
 for dir in "$CLONES"/*/; do
   name="$(basename "$dir")"
-  [ "$name" = "dsh-external-research" ] && continue
+  [ "$name" = "dsh-plugin-radar" ] && continue
   if [ -f "$dir/tsconfig.json" ] && [ -d "$dir/src" ]; then
     CANDIDATES+=("$name")
   elif [ -f "$dir/package.json" ] && ls "$dir"/*.js "$dir"/lib/*.js "$dir"/src/*.js >/dev/null 2>&1; then

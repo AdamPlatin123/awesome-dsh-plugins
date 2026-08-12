@@ -4,7 +4,7 @@
 
 > 计划状态：DRAFT v6（v5 + 用户 B 调整：CHANGELOG 主视图、日期文件夹分立、软链接、点击直达）
 > 计划日期：2026-08-05
-> 目标仓库：`/mnt/shared/_Projects/dsh-external-research/`（private；若推远程仅 private 仓库）
+> 目标仓库：`/mnt/shared/_Projects/dsh-plugin-radar/`（private；若推远程仅 private 仓库）
 > mainline 定义：`github.com/dsh2026/test-AdamPlatin123` 最新快照分支（当前 HEAD=02d7555）
 
 ## 1. 用户意图与约束
@@ -22,7 +22,7 @@ README.md / research/*.md（15 摘要）/ context/session-019fc8ab-summary.md / 
 ## 3. 仓库结构与更新视图（v6 核心变更）
 
 ```
-dsh-external-research/
+dsh-plugin-radar/
 ├── README.md                    # 项目说明 + 快速导航（链接到 CHANGELOG 与最新报告）
 ├── CHANGELOG.md                 # ★主更新视图：按日期倒序的每日条目（mainline 变更 + 生态兼容状态 + 报告链接）
 ├── reports/                     # 按日期文件夹分立的报告

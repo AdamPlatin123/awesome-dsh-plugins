@@ -36,7 +36,7 @@ while IFS= read -r line; do
   err="$(printf '%s' "$line" | sed -E 's/^\| [^|]+ \| //' | cut -c1-200)"
   [ -z "$name" ] && continue
   # 跳过非插件/自身
-  case "$name" in 插件|dsh-external-research|hub|marisa|toybox) continue ;; esac
+  case "$name" in 插件|dsh-plugin-radar|hub|marisa|toybox) continue ;; esac
   # only-manual：只保留 API 漂移类
   if [ "$ONLY_MANUAL" -eq 1 ]; then
     case "$err" in TS2339*|TS2345*|TS2322*) ;; *) continue ;; esac
@@ -51,7 +51,7 @@ while IFS= read -r line; do
   TITLE="[compat] 与最新 mainline（$MAINLINE_LABEL）$SEVERITY：$err"
   BODY="## 兼容性验证发现（自动报告，未修复）
 
-在 [dsh-external-research](https://github.com/dsh-external/dsh-external-research) 的编译验证中发现本仓库可能存在问题：
+在 [dsh-plugin-radar](https://github.com/dsh-external/dsh-plugin-radar) 的编译验证中发现本仓库可能存在问题：
 
 - **mainline 基线**：$MAINLINE_LABEL
 - **验证方式**：插件源码放入 mainline workspace 后 \`tsc --noEmit\`
@@ -62,7 +62,7 @@ while IFS= read -r line; do
 - 错误分类：
   - TS2307/TS6053/TS5083/TS5101/TS2688 → 环境/配置类（tsconfig 解析、依赖、类型包），真实安装环境可能可解
   - TS2339/TS2345/TS2322 → API 漂移，**很可能真实不兼容**
-- 完整验证数据：https://github.com/dsh-external/dsh-external-research/blob/main/reports/$(basename "$(dirname "$COMPAT")")/compile-compat.md
+- 完整验证数据：https://github.com/dsh-external/dsh-plugin-radar/blob/main/reports/$(basename "$(dirname "$COMPAT")")/compile-compat.md
 
 ### 建议
 请仓库维护者自查：更新 tsconfig 继承 / 补齐依赖 / 对照新 API 签名。"
