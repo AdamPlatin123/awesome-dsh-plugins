@@ -34,8 +34,12 @@ if [ ! -d "$BUILD_DIR/.git" ]; then
   timeout 300 git clone --depth 1 --branch "$LABEL" https://github.com/dsh2026/test-AdamPlatin123 "$BUILD_DIR" >/dev/null 2>&1 \
     || { echo "[构建] clone 失败"; exit 2; }
 else
+  # 自动切换最新快照：先清掉构建树污染（插件 symlink/本地实验改动），保证干净切换
+  git -C "$BUILD_DIR" clean -fd packages/tools >/dev/null 2>&1 || true
+  git -C "$BUILD_DIR" checkout -q -- . 2>/dev/null || true
   timeout 300 git -C "$BUILD_DIR" fetch --depth 1 origin "$LABEL" >/dev/null 2>&1 \
-    && git -C "$BUILD_DIR" checkout -q FETCH_HEAD 2>/dev/null \
+    && git -C "$BUILD_DIR" checkout -q FETCH_HEAD -- . 2>/dev/null \
+    && git -C "$BUILD_DIR" reset -q --hard FETCH_HEAD 2>/dev/null \
     || { echo "[构建] fetch 失败"; exit 2; }
 fi
 cd "$BUILD_DIR" || exit 2

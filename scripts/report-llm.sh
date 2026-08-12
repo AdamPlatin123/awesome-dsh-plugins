@@ -44,7 +44,7 @@ PROMPT="你是 DSH 插件生态的资深技术顾问。以下是最新 mainline 
 echo "[llm] 调用 deepseek-v4-flash 生成摘要..."
 SUMMARY="$(timeout 180 curl -s -m 170 https://api.deepseek.com/chat/completions \
   -H "Authorization: Bearer $DS_KEY" -H "Content-Type: application/json" \
-  -d "$(python3 -c "import json,sys;print(json.dumps({'model':'deepseek-v4-flash','messages':[{'role':'user','content':sys.argv[1]}],'max_tokens':2000}))" "$PROMPT")" 2>/dev/null \
+  -d "$(python3 -c "import json,sys;print(json.dumps({'model':'deepseek-v4-pro','messages':[{'role':'user','content':sys.argv[1]}],'max_tokens':2000}))" "$PROMPT")" 2>/dev/null \
   | python3 -c "import json,sys
 try:
     d=json.load(sys.stdin)
