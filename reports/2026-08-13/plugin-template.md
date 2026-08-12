@@ -1,7 +1,7 @@
 # plugin-template — 与 mainline 兼容性对比（2026-08-13）> [打开仓库](https://github.com/dsh-external/plugin-template) · 深度摘要待调研（当前为引擎自动判定）\n\n
 ## 克隆证据
 
-- 克隆 HEAD：9c69fa0
+- 克隆 HEAD：68e1a7d
 - 锚定：README（label，未知（非 commit 锚定: README））
 - 补丁：无补丁
 - seam：缺: ThemeService tuiPrompt

@@ -1,0 +1,32 @@
+{
+  "chat-width": {
+    "pluginHead": "f45ceca",
+    "mainlineHead": "7b9644f2b664",
+    "result": "⚠️ 加载失败",
+    "date": "2026-08-13"
+  },
+  "distill": {
+    "pluginHead": "75a7615",
+    "mainlineHead": "7b9644f2b664",
+    "result": "⚠️ 加载失败",
+    "date": "2026-08-13"
+  },
+  "dsh-agent-session-sources": {
+    "pluginHead": "4221e2a",
+    "mainlineHead": "7b9644f2b664",
+    "result": "⚠️ 加载失败",
+    "date": "2026-08-13"
+  },
+  "dsh-artifact": {
+    "pluginHead": "59ee496",
+    "mainlineHead": "7b9644f2b664",
+    "result": "⚠️ 加载失败",
+    "date": "2026-08-13"
+  },
+  "dsh-cc-tui": {
+    "pluginHead": "09b5f57",
+    "mainlineHead": "7b9644f2b664",
+    "result": "⚠️ 加载失败",
+    "date": "2026-08-13"
+  }
+}

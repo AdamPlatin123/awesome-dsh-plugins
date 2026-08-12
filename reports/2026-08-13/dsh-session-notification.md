@@ -1,11 +1,11 @@
-# dsh_workflow — 与 mainline 兼容性对比（2026-08-13）> [打开仓库](https://github.com/dsh-external/dsh_workflow) · 深度摘要待调研（当前为引擎自动判定）\n\n
+# dsh-session-notification — 与 mainline 兼容性对比（2026-08-13）> [打开仓库](https://github.com/dsh-external/dsh-session-notification) · 深度摘要待调研（当前为引擎自动判定）\n\n
 ## 克隆证据
 
-- 克隆 HEAD：8c98df6
+- 克隆 HEAD：b0ef113
 - 锚定：未知（unknown，未知）
 - 补丁：无补丁
 - seam：缺: ThemeService tuiPrompt
-- peerDeps：11 项匹配
+- peerDeps：无 dsh-* 依赖
 
 ## 四维对比
 
@@ -14,7 +14,7 @@
 | 锚定 vs 当日 mainline | 未知 |
 | 补丁 apply --check --3way | 无补丁 |
 | seam 符号存在性 | 缺: ThemeService tuiPrompt |
-| peerDeps 范围 vs mainline 实际 | 11 项匹配 |
+| peerDeps 范围 vs mainline 实际 | 无 dsh-* 依赖 |
 | **综合判定** | **未知（待调研）** |
 
 ## 建议

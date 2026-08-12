@@ -1,7 +1,7 @@
 {
   "lastMainlineCommit": "7b9644f2b664e46c9518506035aa6c8d5af4d8e8",
   "lastDate": "2026-08-13",
-  "previousCommit": "340d23a3aa833f4d5a66489297a6c6820ff049fc",
+  "previousCommit": "7b9644f2b664e46c9518506035aa6c8d5af4d8e8",
   "repos": {
     "chat-width": {
       "anchoredCommit": "未知",
@@ -369,7 +369,7 @@
     },
     "dsh-scholar": {
       "anchoredCommit": "未知",
-      "status": "占位"
+      "status": "未知（待调研）"
     },
     "dsh-issue-like-skill": {
       "anchoredCommit": "未知",
@@ -563,10 +563,6 @@
       "anchoredCommit": "未知",
       "status": "未知（待调研）"
     },
-    "dsh-genui": {
-      "anchoredCommit": "未知",
-      "status": "未知（待调研）"
-    },
     "dsh-mygo": {
       "anchoredCommit": "未知",
       "status": "未知（待调研）"
@@ -652,8 +648,8 @@
       "status": "未知（待调研）"
     },
     "dsh-track": {
-      "anchoredCommit": "未知",
-      "status": "未知（待调研）"
+      "anchoredCommit": "20260812T172954Z-final-unwatermarked",
+      "status": "兼容"
     },
     "dsh-spur": {
       "anchoredCommit": "未知",
@@ -862,10 +858,6 @@
     "dsh-vision-toolkit": {
       "anchoredCommit": "未知",
       "status": "未知（待调研）"
-    },
-    "dsh-code": {
-      "anchoredCommit": "1ec12f796a822c78fba9ad7f6448c3987e325c23",
-      "status": "需适配"
     },
     "Top": {
       "anchoredCommit": "未知",
@@ -1105,7 +1097,7 @@
     },
     "dsh_workflow": {
       "anchoredCommit": "未知",
-      "status": "占位"
+      "status": "未知（待调研）"
     },
     "dsh-openmaic": {
       "anchoredCommit": "未知",
@@ -1128,6 +1120,22 @@
       "status": "未知（待调研）"
     },
     "tonghuashun-webui": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-session-notification": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-custom-tool": {
+      "anchoredCommit": "d6ea05b5",
+      "status": "关注"
+    },
+    "dsh-openbiliclaw": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-longbridge": {
       "anchoredCommit": "未知",
       "status": "未知（待调研）"
     }

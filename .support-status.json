@@ -1,0 +1,22 @@
+{
+  "chat-width": {
+    "support": "⚠️ 加载失败",
+    "lastTest": "2026-08-13"
+  },
+  "distill": {
+    "support": "⚠️ 加载失败",
+    "lastTest": "2026-08-13"
+  },
+  "dsh-agent-session-sources": {
+    "support": "⚠️ 加载失败",
+    "lastTest": "2026-08-13"
+  },
+  "dsh-artifact": {
+    "support": "⚠️ 加载失败",
+    "lastTest": "2026-08-13"
+  },
+  "dsh-cc-tui": {
+    "support": "⚠️ 加载失败",
+    "lastTest": "2026-08-13"
+  }
+}

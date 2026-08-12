@@ -70,19 +70,7 @@ for name in "${CANDIDATES[@]}"; do
 
   TASK="如果插件 $name 已加载，请调用它注册的工具（若有）并回复结果；若没有可调用工具，只回复：插件已加载 $name"
   echo "[测试] $name ..."
-  # 动态 cordis：headless 配置 + 插件加载行（@dsh-external/<name>）
-  TEST_CFG="/tmp/dsh-rt-$name.yml"
-  PKG_NAME="$(jq -r .name "$CLONES/$name/package.json" 2>/dev/null || echo "@dsh-external/$name")"
-  if [ -f "$BUILD/examples/headless-agent/cordis.yml" ]; then
-    cp "$BUILD/examples/headless-agent/cordis.yml" "$TEST_CFG"
-  else
-    cp "$BUILD/packages/examples/agent-spine-demo/cordis.yml" "$TEST_CFG" 2>/dev/null || echo "plugins: []" > "$TEST_CFG"
-  fi
-  printf -- "- id: %s\n  name: '%s'\n" "$name" "$PKG_NAME" >> "$TEST_CFG"
-  OUT="$(cd "$BUILD" && timeout 240 env \
-    DEEPSEEK_BASE_URL="$QW_BASE" DEEPSEEK_API_KEY="none" \
-    CLI_BIN="apps/cli/lib/bin.js"; [ -f "$CLI_BIN" ] || CLI_BIN="packages/examples/cli-demo/src/bin.ts"; TSX=""; [ -f "apps/cli/lib/bin.js" ] || TSX="--import tsx"; node $TSX $CLI_BIN --config "$TEST_CFG" "$TASK" 2>&1)"
-  rm -f "$TEST_CFG"
+ @ours
   RC=$?
   if printf '%s' "$OUT" | grep -qiE "Cannot find module|failed to load|Error loading plugin|not found.*plugin|ENOENT"; then
     RESULT="⚠️ 加载失败"; LOAD_FAIL=$((LOAD_FAIL+1))

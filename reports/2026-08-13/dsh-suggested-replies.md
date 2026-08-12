@@ -1,7 +1,7 @@
 # dsh-suggested-replies — 与 mainline 兼容性对比（2026-08-13）> [打开仓库](https://github.com/dsh-external/dsh-suggested-replies) · 深度摘要待调研（当前为引擎自动判定）\n\n
 ## 克隆证据
 
-- 克隆 HEAD：ab8fa67
+- 克隆 HEAD：f6322e7
 - 锚定：未知（catalog，未知（catalog ref，非 mainline 锚定））
 - 补丁：无补丁
 - seam：缺: ThemeService tuiPrompt

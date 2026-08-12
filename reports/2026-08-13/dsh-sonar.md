@@ -1,7 +1,7 @@
 # dsh-sonar — 与 mainline 兼容性对比（2026-08-13）> [打开仓库](https://github.com/dsh-external/dsh-sonar) · 深度摘要待调研（当前为引擎自动判定）\n\n
 ## 克隆证据
 
-- 克隆 HEAD：4ca6590
+- 克隆 HEAD：1de5105
 - 锚定：未知（unknown，未知）
 - 补丁：无补丁
 - seam：缺: ThemeService tuiPrompt

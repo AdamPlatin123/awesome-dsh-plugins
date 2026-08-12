@@ -1,7 +1,7 @@
 # dsh-harness-ops — 与 mainline 兼容性对比（2026-08-13）> [打开仓库](https://github.com/dsh-external/dsh-harness-ops) · 深度摘要待调研（当前为引擎自动判定）\n\n
 ## 克隆证据
 
-- 克隆 HEAD：40c3158
+- 克隆 HEAD：144db95
 - 锚定：8ec407cd64（commit，未知（不同谱系））
 - 补丁：无补丁
 - seam：缺: ThemeService tuiPrompt

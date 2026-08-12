@@ -1,6 +1,6 @@
 # 当日索引（2026-08-13）
 - [主报告 mainline-compat.md](mainline-compat.md)（兼容性矩阵 + mainline 变更分析 + 双方建议）
-- mainline：`7b9644f`（snapshots/20260812T172954Z-final-unwatermarked），上次 `340d23a3aa833f4d5a66489297a6c6820ff049fc`
+- mainline：`7b9644f`（snapshots/20260812T172954Z-final-unwatermarked），上次 `7b9644f2b664e46c9518506035aa6c8d5af4d8e8`
 - [开发者摘要](mainline-summary.md)（LLM 生成，存在时） · [返回 CHANGELOG](../../CHANGELOG.md)
 
 ## 仓库详情
@@ -96,7 +96,7 @@
 - [dsh-feishu-notify.md](dsh-feishu-notify.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-feishu-notify)
 - [dsh-remote.md](dsh-remote.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-remote)
 - [mstar-workflow.md](mstar-workflow.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/mstar-workflow)
-- [dsh-scholar.md](dsh-scholar.md) — 占位 · [仓库](https://github.com/dsh-external/dsh-scholar)
+- [dsh-scholar.md](dsh-scholar.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-scholar)
 - [dsh-issue-like-skill.md](dsh-issue-like-skill.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-issue-like-skill)
 - [dsh-tool-csv.md](dsh-tool-csv.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-tool-csv)
 - [dsh-tool-regex.md](dsh-tool-regex.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-tool-regex)
@@ -145,7 +145,6 @@
 - [dsh-gomoku.md](dsh-gomoku.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-gomoku)
 - [dsh-101.md](dsh-101.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-101)
 - [dsh-turn-rewind.md](dsh-turn-rewind.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-turn-rewind)
-- [dsh-genui.md](dsh-genui.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-genui)
 - [dsh-mygo.md](dsh-mygo.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-mygo)
 - [cross-harness-cite.md](cross-harness-cite.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/cross-harness-cite)
 - [dsh-split-panes.md](dsh-split-panes.md) — 需适配 · [仓库](https://github.com/dsh-external/dsh-split-panes)
@@ -167,7 +166,7 @@
 - [dsh-club.md](dsh-club.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-club)
 - [dsh-humanize.md](dsh-humanize.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-humanize)
 - [dsh-agent-budget.md](dsh-agent-budget.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-agent-budget)
-- [dsh-track.md](dsh-track.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-track)
+- [dsh-track.md](dsh-track.md) — 兼容 · [仓库](https://github.com/dsh-external/dsh-track)
 - [dsh-spur.md](dsh-spur.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-spur)
 - [dsh-selection-chat.md](dsh-selection-chat.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-selection-chat)
 - [dsh-browser-panel.md](dsh-browser-panel.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-browser-panel)
@@ -220,7 +219,6 @@
 - [dsh-fkin-vibe.md](dsh-fkin-vibe.md) — 占位 · [仓库](https://github.com/dsh-external/dsh-fkin-vibe)
 - [dsh-harness-ops.md](dsh-harness-ops.md) — 兼容 · [仓库](https://github.com/dsh-external/dsh-harness-ops)
 - [dsh-vision-toolkit.md](dsh-vision-toolkit.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-vision-toolkit)
-- [dsh-code.md](dsh-code.md) — 需适配 · [仓库](https://github.com/dsh-external/dsh-code)
 - [Top.md](Top.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/Top)
 - [__perm_probe__.md](__perm_probe__.md) — 占位 · [仓库](https://github.com/dsh-external/__perm_probe__)
 - [dsh-kimi-browser.md](dsh-kimi-browser.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-kimi-browser)
@@ -280,13 +278,17 @@
 - [dsh-deeplink.md](dsh-deeplink.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-deeplink)
 - [dsh-cot-summary.md](dsh-cot-summary.md) — 需适配 · [仓库](https://github.com/dsh-external/dsh-cot-summary)
 - [dsh-emoji.md](dsh-emoji.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-emoji)
-- [dsh_workflow.md](dsh_workflow.md) — 占位 · [仓库](https://github.com/dsh-external/dsh_workflow)
+- [dsh_workflow.md](dsh_workflow.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh_workflow)
 - [dsh-openmaic.md](dsh-openmaic.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-openmaic)
 - [dsh-deepcel.md](dsh-deepcel.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-deepcel)
 - [dsh-STAR.md](dsh-STAR.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-STAR)
 - [dsh-STAGE.md](dsh-STAGE.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-STAGE)
 - [dsh-conversation-share.md](dsh-conversation-share.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-conversation-share)
 - [tonghuashun-webui.md](tonghuashun-webui.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/tonghuashun-webui)
+- [dsh-session-notification.md](dsh-session-notification.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-session-notification)
+- [dsh-custom-tool.md](dsh-custom-tool.md) — 关注 · [仓库](https://github.com/dsh-external/dsh-custom-tool)
+- [dsh-openbiliclaw.md](dsh-openbiliclaw.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-openbiliclaw)
+- [dsh-longbridge.md](dsh-longbridge.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-longbridge)
 
 ## 相关资产
 
