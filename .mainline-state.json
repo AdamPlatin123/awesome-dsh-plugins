@@ -1,7 +1,7 @@
 {
   "lastMainlineCommit": "340d23a3aa833f4d5a66489297a6c6820ff049fc",
-  "lastDate": "2026-08-12",
-  "previousCommit": "3c21611f061661686ff987827a112da19461027d",
+  "lastDate": "2026-08-13",
+  "previousCommit": "340d23a3aa833f4d5a66489297a6c6820ff049fc",
   "repos": {
     "chat-width": {
       "anchoredCommit": "未知",
@@ -76,7 +76,7 @@
       "status": "兼容"
     },
     "dsh-my-rsi": {
-      "anchoredCommit": "c97643832821746b816d80d498e8a66fbb9db895",
+      "anchoredCommit": "未知",
       "status": "关注"
     },
     "dsh-opencode-server": {
@@ -233,7 +233,7 @@
     },
     "session-persistence-rdb": {
       "anchoredCommit": "未知",
-      "status": "兼容"
+      "status": "关注"
     },
     "telegram": {
       "anchoredCommit": "未知",
@@ -249,7 +249,7 @@
     },
     "turtle-ui": {
       "anchoredCommit": "a6fedc9e3b36d066e34860d040db6df47d88c432",
-      "status": "占位"
+      "status": "需适配"
     },
     "web-components": {
       "anchoredCommit": "b4b67f0",
@@ -301,7 +301,7 @@
     },
     "fabric": {
       "anchoredCommit": "未知",
-      "status": "未知（待调研）"
+      "status": "兼容"
     },
     "dsh-browser": {
       "anchoredCommit": "未知",
@@ -404,8 +404,8 @@
       "status": "未知（待调研）"
     },
     "dsh-llm-fallbacks": {
-      "anchoredCommit": "331b0716ba61da51881da244a5f78c5c0984f026",
-      "status": "关注"
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
     },
     "dsh-web-workflow-visualizer": {
       "anchoredCommit": "未知",
@@ -564,12 +564,12 @@
       "status": "未知（待调研）"
     },
     "dsh-genui": {
-      "anchoredCommit": "7f25d3e98c",
-      "status": "关注"
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
     },
     "dsh-mygo": {
-      "anchoredCommit": "8ec407cd64",
-      "status": "关注"
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
     },
     "cross-harness-cite": {
       "anchoredCommit": "未知",
@@ -579,10 +579,6 @@
       "anchoredCommit": "未知",
       "status": "需适配"
     },
-    "dsh-task-board": {
-      "anchoredCommit": "未知",
-      "status": "未知（待调研）"
-    },
     "dsh-activity-plugin": {
       "anchoredCommit": "未知",
       "status": "未知（待调研）"
@@ -591,17 +587,13 @@
       "anchoredCommit": "未知",
       "status": "未知（待调研）"
     },
-    "dsh-git-graph": {
-      "anchoredCommit": "未知",
-      "status": "未知（待调研）"
-    },
     "dsh-mobileweb-adapter": {
       "anchoredCommit": "未知",
       "status": "未知（待调研）"
     },
     "dsh-desktop-electron": {
-      "anchoredCommit": "未知",
-      "status": "未知（待调研）"
+      "anchoredCommit": "da262ec14c",
+      "status": "兼容"
     },
     "dsh-mineru": {
       "anchoredCommit": "未知",
@@ -612,10 +604,6 @@
       "status": "未知（待调研）"
     },
     "dsh-paseo": {
-      "anchoredCommit": "未知",
-      "status": "未知（待调研）"
-    },
-    "dsh-remote-web-ui": {
       "anchoredCommit": "未知",
       "status": "未知（待调研）"
     },
@@ -763,10 +751,6 @@
       "anchoredCommit": "未知",
       "status": "未知（待调研）"
     },
-    "dsh-pet-web": {
-      "anchoredCommit": "未知",
-      "status": "未知（待调研）"
-    },
     "dsh-sleep": {
       "anchoredCommit": "未知",
       "status": "未知（待调研）"
@@ -840,7 +824,7 @@
       "status": "占位"
     },
     "dsh-web-review": {
-      "anchoredCommit": "8ec407cd64",
+      "anchoredCommit": "da262ec14c",
       "status": "兼容"
     },
     "dsh-cc-connect": {
@@ -963,7 +947,7 @@
       "anchoredCommit": "未知",
       "status": "未知（待调研）"
     },
-    "dsh-roleplay-portable-spike": {
+    "dsh-agent-rp": {
       "anchoredCommit": "未知",
       "status": "未知（待调研）"
     },
@@ -1004,6 +988,118 @@
       "status": "未知（待调研）"
     },
     "dsh-teamwork": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "ui-status-label": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-easy-ctx-manager": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "browser4-dsh": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "show-bash-command": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-chat-thumb": {
+      "anchoredCommit": "README",
+      "status": "兼容"
+    },
+    "dsh-super-injector": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-hmz": {
+      "anchoredCommit": "未知",
+      "status": "占位"
+    },
+    "dsh-better-sidebar-plugin-office": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-explain": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-interpreters": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-stock-market": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-scout": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-diff-viewer": {
+      "anchoredCommit": "未知",
+      "status": "兼容"
+    },
+    "dsh-turn-navigator": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-mobile": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-share": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-travel-plugin": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-suggested-replies": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-aigc-canvas": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-sonar": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-ultra-ui": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-deepresearch": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-notebooks": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "context-doctor": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-openpencil": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-deeplink": {
+      "anchoredCommit": "未知",
+      "status": "未知（待调研）"
+    },
+    "dsh-cot-summary": {
+      "anchoredCommit": "未知",
+      "status": "关注"
+    },
+    "dsh-emoji": {
       "anchoredCommit": "未知",
       "status": "未知（待调研）"
     }
