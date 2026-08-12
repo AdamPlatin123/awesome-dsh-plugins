@@ -1,7 +1,7 @@
 # dsh-engram-relay — 与 mainline 兼容性对比（2026-08-13）> [打开仓库](https://github.com/dsh-external/dsh-engram-relay) · 深度摘要待调研（当前为引擎自动判定）\n\n
 ## 克隆证据
 
-- 克隆 HEAD：9f58b33
+- 克隆 HEAD：1a9775d
 - 锚定：未知（unknown，未知）
 - 补丁：无补丁
 - seam：缺: ThemeService tuiPrompt
