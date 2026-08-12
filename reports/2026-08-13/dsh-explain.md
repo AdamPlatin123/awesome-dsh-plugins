@@ -4,8 +4,8 @@
 - 克隆 HEAD：901f207
 - 锚定：未知（unknown，未知）
 - 补丁：无补丁
-- seam：缺: tuiPrompt
-- peerDeps：15 项匹配
+- seam：缺: ThemeService tuiPrompt
+- peerDeps：15 项中 14 不匹配: @deepseek-ai/dsh-api-gateway=^0.0.1-rc.1↔0.0.1-rc.2 @deepseek-ai/dsh-brand=^0.0.1-rc.1↔0.0.1-rc.2 @deepseek-ai/dsh-client-locale=^0.0.1-rc.1↔0.0.1-rc.2 @deepseek-ai/dsh-client-runtime=^0.0.1-rc.1↔0.0.1-rc.2 @deepseek-ai/dsh-client-ui-conversation=^0.0.1-rc.1↔0.0.1-rc.2 @deepseek-ai/dsh-client-ui-primitives=^0.0.1-rc.1↔0.0.1-rc.2 @deepseek-ai/dsh-client-ui-slots=^0.0.1-rc.1↔0.0.1-rc.2 @deepseek-ai/dsh-client-web-react=^0.0.1-rc.1↔0.0.1-rc.2 @deepseek-ai/dsh-commands=^0.0.1-rc.1↔0.0.1-rc.2 @deepseek-ai/dsh-llm=^0.0.1-rc.1↔0.0.1-rc.2 @deepseek-ai/dsh-session=^0.0.1-rc.1↔0.0.1-rc.2 @deepseek-ai/dsh-settings=^0.0.1-rc.1↔0.0.1-rc.2 @deepseek-ai/dsh-token-meter=^0.0.1-rc.1↔0.0.1-rc.2 @deepseek-ai/dsh-typert-generator=^0.0.1-rc.1↔0.0.1-rc.2
 
 ## 四维对比
 
@@ -13,10 +13,10 @@
 |---|---|
 | 锚定 vs 当日 mainline | 未知 |
 | 补丁 apply --check --3way | 无补丁 |
-| seam 符号存在性 | 缺: tuiPrompt |
-| peerDeps 范围 vs mainline 实际 | 15 项匹配 |
+| seam 符号存在性 | 缺: ThemeService tuiPrompt |
+| peerDeps 范围 vs mainline 实际 | 15 项中 14 不匹配: @deepseek-ai/dsh-api-gateway=^0.0.1-rc.1↔0.0.1-rc.2 @deepseek-ai/dsh-brand=^0.0.1-rc.1↔0.0.1-rc.2 @deepseek-ai/dsh-client-locale=^0.0.1-rc.1↔0.0.1-rc.2 @deepseek-ai/dsh-client-runtime=^0.0.1-rc.1↔0.0.1-rc.2 @deepseek-ai/dsh-client-ui-conversation=^0.0.1-rc.1↔0.0.1-rc.2 @deepseek-ai/dsh-client-ui-primitives=^0.0.1-rc.1↔0.0.1-rc.2 @deepseek-ai/dsh-client-ui-slots=^0.0.1-rc.1↔0.0.1-rc.2 @deepseek-ai/dsh-client-web-react=^0.0.1-rc.1↔0.0.1-rc.2 @deepseek-ai/dsh-commands=^0.0.1-rc.1↔0.0.1-rc.2 @deepseek-ai/dsh-llm=^0.0.1-rc.1↔0.0.1-rc.2 @deepseek-ai/dsh-session=^0.0.1-rc.1↔0.0.1-rc.2 @deepseek-ai/dsh-settings=^0.0.1-rc.1↔0.0.1-rc.2 @deepseek-ai/dsh-token-meter=^0.0.1-rc.1↔0.0.1-rc.2 @deepseek-ai/dsh-typert-generator=^0.0.1-rc.1↔0.0.1-rc.2 |
 | **综合判定** | **未知（待调研）** |
 
 ## 建议
 
-- 未知（待调研）：当日 mainline（340d23a，snapshots/20260811T152241Z）对比结论见上表；详细建议汇总于 [mainline-compat.md](mainline-compat.md)。
+- 未知（待调研）：当日 mainline（7b9644f，snapshots/20260812T172954Z-final-unwatermarked）对比结论见上表；详细建议汇总于 [mainline-compat.md](mainline-compat.md)。
