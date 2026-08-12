@@ -273,3 +273,7 @@ dsh-openpencil
 dsh-deeplink
 dsh-cot-summary
 dsh-emoji
+dsh_workflow
+dsh-openmaic
+dsh-deepcel
+dsh-STAR
