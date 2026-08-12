@@ -823,7 +823,7 @@ $p"
   index_txt="$index_txt
 - [主报告 mainline-compat.md](mainline-compat.md)（兼容性矩阵 + mainline 变更分析 + 双方建议）
 - mainline：\`$MAINLINE_SHORT\`（snapshots/$MAINLINE_LABEL），上次 \`$PREV_COMMIT\`
-- [返回 CHANGELOG](../../CHANGELOG.md)
+- [开发者摘要](mainline-summary.md)（LLM 生成，存在时） · [返回 CHANGELOG](../../CHANGELOG.md)
 
 ## 仓库详情
 $detail_all
