@@ -3,7 +3,7 @@
 # 渲染规则：
 #   - 顶层 = 功能领域（webui/agent/coding/comm/data/fun/infra/edu/other），每类 <details> 折叠、h3 大标题 + 描述
 #   - 每条带类型标签（插件/技能/合集/渠道/基建/研究/社区），来自 catalog 的 category
-#   - 每类显示前 10 条；第 11 条起嵌套折叠「展开全部」
+#   - 每类一次展开全部条目（不分段）「展开全部」
 #   - DOMAIN_MAP 全量重分类（275 条，人工审校）；未映射归 other
 # 数据源：hub catalog.json（gh api 实时拉取）；渲染由 python3 完成
 set -uo pipefail
@@ -137,7 +137,7 @@ for r in merged_repos:
 out = []
 out.append("<!-- AUTO:catalog:START -->")
 out.append("")
-out.append("> 按功能领域分类（重分类修正，数据源 [dsh-external/hub](https://github.com/dsh-external/hub) catalog）。每类显示前 10 条，其余折叠；点击标题展开。")
+out.append("> 按功能领域分类（重分类修正，数据源 [dsh-external/hub](https://github.com/dsh-external/hub) catalog）。每类显示前 10 条，全部可见；点击标题展开。")
 out.append("")
 for key, title, desc in DOMAIN_META:
     items = groups.get(key, [])
@@ -152,20 +152,9 @@ for key, title, desc in DOMAIN_META:
     if n == 0:
         out.append("| （暂无） | — | — |")
     else:
-        for r in items[:10]:
+        for r in items:
             t = TYPE_LABEL.get(r.get("category", ""), "插件")
             out.append(f"| [{r['name']}]({r.get('url', '')}) | {t} | {short_desc(r)} |")
-        if n > 10:
-            out.append("")
-            out.append("<details>")
-            out.append(f"<summary>展开全部（剩余 {n - 10} 条）</summary>")
-            out.append("")
-            out.append("| 插件 | 类型 | 说明 |")
-            out.append("|---|---|---|")
-            for r in items[10:]:
-                t = TYPE_LABEL.get(r.get("category", ""), "插件")
-                out.append(f"| [{r['name']}]({r.get('url', '')}) | {t} | {short_desc(r)} |")
-            out.append("</details>")
     out.append("</details>")
     out.append("")
     # 描述第二遍：块外持续显示（默认可见，不随折叠消失）
