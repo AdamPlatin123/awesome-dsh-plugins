@@ -34,7 +34,7 @@ DeepSeek Harness（DSH）插件生态的**目录 + 兼容性情报站**。
 
 <!-- AUTO:catalog:START -->
 
-> 按功能领域分类（重分类修正，数据源 [dsh-external/hub](https://github.com/dsh-external/hub) catalog）。点击标题展开，全部条目一次显示。
+> 按功能领域分类（重分类修正）。点击标题展开，全部条目一次显示。。
 
 <details>
 <summary><h3>🔌 Web UI 增强（44）</h3></summary>
