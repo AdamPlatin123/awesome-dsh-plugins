@@ -3,6 +3,7 @@
 # 输出：reports/<日期>/model-compare.md
 # 用法：model-compare.sh "测试任务"
 set -uo pipefail
+[ -f "$HOME/.dsh-radar.env" ] && . "$HOME/.dsh-radar.env"
 
 REPO_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$REPO_DIR" || exit 2
@@ -28,7 +29,7 @@ DS_LEN="${#DS_TXT}"
 
 # 2. Qwen3.6-35B（新模型，内网零费用）
 echo "[调用] Qwen3.6-35B..."
-QW_OUT="$(timeout 90 curl -s -m 85 http://10.123.45.18:8080/v1/chat/completions \
+QW_OUT="$(timeout 90 curl -s -m 85 ${DSH_QWEN_BASE_URL:-http://127.0.0.1:1/v1}/chat/completions \
   -H "Content-Type: application/json" \
   -d "$(python3 -c "import json,sys; print(json.dumps({'model':'Qwen3.6-35B','messages':[{'role':'user','content':sys.argv[1]}],'max_tokens':65536}))" "$TASK")" 2>&1)"
 QW_TXT="$(printf '%s' "$QW_OUT" | python3 -c "import json,sys

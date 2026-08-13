@@ -6,6 +6,7 @@
 # 判定：✅ 可用 / ⚠️ 加载失败 / ❌ 工具调用失败 / ⏭️ 跳过（双未更新）
 # 用法：runtime-test.sh [--limit N] [插件名...]
 set -uo pipefail
+[ -f "$HOME/.dsh-radar.env" ] && . "$HOME/.dsh-radar.env"
 REPO_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$REPO_DIR" || exit 2
 DATE="$(date +%Y-%m-%d)"
@@ -14,7 +15,7 @@ BUILD="$REPO_DIR/.mainline-build"
 NODE_BIN="$HOME/.nvm/versions/node/v24.14.1/bin"
 export PATH="$NODE_BIN:$HOME/.local/bin:$PATH"
 JQ="$(command -v jq || echo "$HOME/.local/bin/jq")"
-QW_BASE="http://10.123.45.18:8080/v1"
+QW_BASE="${DSH_QWEN_BASE_URL:-http://127.0.0.1:1/v1}"
 
 LIMIT=99999
 SUFFIX=""

@@ -9,3 +9,4 @@ node_modules/
 logs/
 *.tmp
 .mainline-build/
+.dsh-radar.env

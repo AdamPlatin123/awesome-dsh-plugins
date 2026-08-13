@@ -4,11 +4,12 @@
 # 输入上限：输入长度递增，观察是否 context length exceeded
 # 用法：model-probe.sh
 set -uo pipefail
+[ -f "$HOME/.dsh-radar.env" ] && . "$HOME/.dsh-radar.env"
 
 REPO_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$REPO_DIR" || exit 2
 DS_KEY="$(python3 -c "import sqlite3,json;db=sqlite3.connect('/home/adam/.omp/agent/agent.db');print(json.loads(db.execute(\"SELECT data FROM auth_credentials WHERE provider='deepseek'\").fetchone()[0])['key'])" 2>/dev/null)"
-QW_URL="http://10.123.45.18:8080/v1/chat/completions"
+QW_URL="${DSH_QWEN_BASE_URL:-http://127.0.0.1:1/v1}/chat/completions"
 OUT="$REPO_DIR/reports/$(date +%Y-%m-%d)/model-probe.md"
 mkdir -p "$(dirname "$OUT")"
 echo "# 模型上限实测（$(date +%Y-%m-%d)）" > "$OUT"
