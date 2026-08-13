@@ -17,20 +17,21 @@
 ## 现在
 
 <!-- AUTO:ecosystem:START -->
-> 自动更新：2026-08-13_2106（cron 每日 · 报告日 2026-08-13 · mainline `7b9644f`）
+> 自动更新：2026-08-13_2109（cron 每 8 小时 · 报告日 2026-08-13 · mainline `7b9644f`）
 
-**插件目录**（dsh-external org · 286 仓库 · 状态分群）
+**生态仪表盘**
 
-| 状态 | 数量 |
+| 指标 | 值 |
 |---|---|
-| ✅ 兼容 mainline | 87 |
+| 仓库总数 | 286 |
+| ✅ 无需适配 | 87 |
 | ⚠️ 需适配 | 9 |
-| 🔍 关注 / 占位 / 不适用 / 已删除 | 31 / 13 / 2 / 4 |
+| 关注 / 占位 / 不适用 / 已删除 | 31 / 13 / 2 / 4 |
 | 🐙 开放 PR | 10 |
 
-📄 **完整矩阵**：[mainline-compat.md](reports/2026-08-13/mainline-compat.md) · [开发者摘要](reports/2026-08-13/mainline-summary.md) · [当日索引](reports/2026-08-13/index.md)
+📄 **最新报告**：[兼容矩阵](reports/2026-08-13/mainline-compat.md) · [开发者摘要](reports/2026-08-13/mainline-summary.md) · [当日索引](reports/2026-08-13/index.md)
 
-**今日新增 / 修改**
+**今日新增 / 修改仓库**
 
 | 仓库 | 类型 |
 |---|---|
@@ -543,9 +544,9 @@
 | [dsh-openbiliclaw](https://github.com/dsh-external/dsh-openbiliclaw) | ✏️ 修改 |
 | [dsh-longbridge](https://github.com/dsh-external/dsh-longbridge) | ✏️ 修改 |
 | [dsh-dzcf](https://github.com/dsh-external/dsh-dzcf) | ✏️ 修改 |
-**⚠️ 需适配（补丁基线 / seam 变化）**
+**需适配（补丁基线 / seam 变化）**
 
-| 插件 | 锚定 | 判定 |
+| 仓库 | 锚定 | 判定 |
 |---|---|---|
 | [dsh-subagent-tree](https://github.com/dsh-external/dsh-subagent-tree) | 未知 | 需适配 |
 | [dsh-working-activity](https://github.com/dsh-external/dsh-working-activity) | 未知（非 commit 锚定: 20260804T143803Z） | 需适配 |
@@ -556,7 +557,7 @@
 | [dsh-question-collapse](https://github.com/dsh-external/dsh-question-collapse) | 未知（不同谱系） | 需适配 |
 | [dsh-ohos-patch](https://github.com/dsh-external/dsh-ohos-patch) | 未知 | 需适配 |
 | [dsh-cot-summary](https://github.com/dsh-external/dsh-cot-summary) | 未知 | 需适配 |
-**🐙 正在跟踪的 open PR**
+**正在跟踪的 open PR**
 
 | 仓库 | PR | 标题 | 更新 |
 |---|---|---|---|
