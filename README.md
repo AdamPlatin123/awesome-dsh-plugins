@@ -41,52 +41,52 @@ DeepSeek Harness（DSH）插件生态的**目录 + 兼容性情报站**。
 
 *界面与交互增强插件：侧边栏、输入框、皮肤主题、面板 dock、消息显示、状态栏与可视化，让 Web 界面更顺手更好看*
 
-| 插件 | 类型 | 说明 |
-|---|---|---|
-| [7d7d](https://github.com/dsh-external/7d7d) | 插件 | 7k7d 游戏门户 —— 7k7k 风格 DSH 小游戏平台：模型生成/上传 HTML5 与 F |
-| [chat-width](https://github.com/dsh-external/chat-width) | 插件 | 自由调节正文和输入框的展示宽度 |
-| [dsh-ads](https://github.com/dsh-external/dsh-ads) | 插件 | 是兄弟就来蹬我！DSH Web UI 广告：2005 年中文站点风格的侧栏广告 / 对话内信息流 |
-| [dsh-aigc-canvas](https://github.com/dsh-external/dsh-aigc-canvas) | 插件 | — |
-| [dsh-annotation](https://github.com/dsh-external/dsh-annotation) | 插件 | DSH Web 选中批注插件：选文字→批注→回车随消息发送；气泡隐藏批注块（零闪烁）；回复按 A |
-| [dsh-anti-ads](https://github.com/dsh-external/dsh-anti-ads) | 插件 | — |
-| [DSH-better-sidebar](https://github.com/dsh-external/DSH-better-sidebar) | 插件 | 一个侧边栏的完整工作台，支持三方接入/文件渲染编辑/终端/Git/子代理，一个面板全部搞定 |
-| [dsh-browser-panel](https://github.com/dsh-external/dsh-browser-panel) | 插件 | WebUI 内嵌完整有头浏览器视图插件：模型在 DSH WebUI 内实时操控真实浏览器，用户可 |
-| [dsh-chat](https://github.com/dsh-external/dsh-chat) | 插件 | DSH 对话插件：对话视图增强 |
-| [dsh-custom-css](https://github.com/dsh-external/dsh-custom-css) | 插件 | — |
-| [dsh-deepcel](https://github.com/dsh-external/dsh-deepcel) | 合集 | Deepcel spreadsheet-workbook skin for DeepSeek H |
-| [dsh-drag-and-drop](https://github.com/dsh-external/dsh-drag-and-drop) | 插件 | 为 DSH Web UI 增加跨平台文件拖拽与原始路径插入能力，无需复制文件 |
-| [dsh-genui](https://github.com/dsh-external/dsh-genui) | 插件 | DSH的生成式UI能力,不断更新中,欢迎issue&pr! |
-| [dsh-input-history](https://github.com/dsh-external/dsh-input-history) | 插件 | — |
-| [dsh-island](https://github.com/dsh-external/dsh-island) | 基建 | DSH Dynamic Island — macOS notch panel for DSH；m |
-| [dsh-live-stats](https://github.com/dsh-external/dsh-live-stats) | 插件 | Live input/output token estimates and generation |
-| [dsh-message-edit](https://github.com/dsh-external/dsh-message-edit) | 插件 | DSH plugin: branch-based message editing, reroll |
-| [dsh-paste-input](https://github.com/dsh-external/dsh-paste-input) | 插件 | DSH WebUI 文件输入增强：Ctrl+V 粘贴（带首次告知弹窗）+ 拖拽 + 选择文件，发 |
-| [dsh-question-collapse](https://github.com/dsh-external/dsh-question-collapse) | 插件 | DSH WebUI 提问栏折叠插件：保留问题标题与取消按钮，展开后保留未提交草稿 |
-| [dsh-selection-chat](https://github.com/dsh-external/dsh-selection-chat) | 插件 | DSH WebUI plugin: select conversation text → add |
-| [dsh-side-panel](https://github.com/dsh-external/dsh-side-panel) | 插件 | DSH 侧边栏，集成文件浏览器、终端和 Git 审查，方便预览文件 |
-| [dsh-skins](https://github.com/dsh-external/dsh-skins) | 合集 | DSH Web 换肤插件仓库：官方 ThemeService 第三方皮肤（token + AI  |
-| [dsh-split-panes](https://github.com/dsh-external/dsh-split-panes) | 插件 | — |
-| [dsh-tavern-plugin](https://github.com/dsh-external/dsh-tavern-plugin) | 插件 | 小酒馆 (Tavern) plugin — character cards, chat, mem |
-| [dsh-tps](https://github.com/dsh-external/dsh-tps) | 插件 | 只是一个 tps 插件 |
-| [dsh-ui-webview](https://github.com/dsh-external/dsh-ui-webview) | 插件 | — |
-| [DSH-UI4A](https://github.com/dsh-external/DSH-UI4A) | 插件 | UI4A(UI for Agent)的DSH实现 https://macaron.im/blog |
-| [dsh-ultra-ui](https://github.com/dsh-external/dsh-ultra-ui) | 插件 | — |
-| [dsh-vision](https://github.com/dsh-external/dsh-vision) | 插件 | dsh 插件：给纯文本 DeepSeek 加视觉——view_image 工具桥接任意 Open |
-| [dsh-visualize](https://github.com/dsh-external/dsh-visualize) | 插件 | DSH 对话内生成式 UI 插件：模型把交互式 HTML 卡片直接画进会话流——visualiz |
-| [dsh-voice-chat](https://github.com/dsh-external/dsh-voice-chat) | 插件 | 实时语音对话插件：WebUI 内语音输入/输出，边说话边编程（vibe coding），0 打字 |
-| [dsh-web](https://github.com/dsh-external/dsh-web) | 插件 | DSH Web 插件：Web UI 增强 |
-| [dsh-web-panel](https://github.com/dsh-external/dsh-web-panel) | 插件 | DSH Web UI 内嵌交互式终端插件（dsh-external/issues#111）：支持 |
-| [dsh-web-review](https://github.com/dsh-external/dsh-web-review) | 插件 | — |
-| [dsh-web-ui](https://github.com/dsh-external/dsh-web-ui) | 合集 | — |
-| [ex-setting](https://github.com/dsh-external/ex-setting) | 插件 | DSH的设置扩展 |
-| [group-chat-diary](https://github.com/dsh-external/group-chat-diary) | 社区 | DSH 内测群聊日记归档 |
-| [review-panel](https://github.com/dsh-external/review-panel) | 社区 | Internal beta review panel for DeepSeek Harness |
-| [show-bash-command](https://github.com/dsh-external/show-bash-command) | 插件 | 显示命令具体内容而不是描述 |
-| [turtle-ui](https://github.com/dsh-external/turtle-ui) | 插件 | fine |
-| [ui-status-label](https://github.com/dsh-external/ui-status-label) | 插件 | 把你鲸鱼娘思考时的 deep diving 自定义成任意你想要的样子 |
-| [web-components](https://github.com/dsh-external/web-components) | 基建 | web-components支持 |
-| [ya-workspace-sidebar](https://github.com/dsh-external/ya-workspace-sidebar) | 插件 | — |
-| [zephyr](https://github.com/dsh-external/zephyr) | 基建 | deepseek harness composer |
+| 插件 | 类型 | 兼容性 | 说明 |
+|---|---|---|---|
+| [dsh-input-history](https://github.com/dsh-external/dsh-input-history) | 插件 | 兼容 | — |
+| [dsh-paste-input](https://github.com/dsh-external/dsh-paste-input) | 插件 | 兼容 | DSH WebUI 文件输入增强：Ctrl+V 粘贴（带首次告知弹窗）+ 拖拽 + 选择文件，发 |
+| [review-panel](https://github.com/dsh-external/review-panel) | 社区 | 兼容 | Internal beta review panel for DeepSeek Harness |
+| [chat-width](https://github.com/dsh-external/chat-width) | 插件 | 关注 | 自由调节正文和输入框的展示宽度 |
+| [dsh-live-stats](https://github.com/dsh-external/dsh-live-stats) | 插件 | 关注 | Live input/output token estimates and generation |
+| [dsh-skins](https://github.com/dsh-external/dsh-skins) | 合集 | 关注 | DSH Web 换肤插件仓库：官方 ThemeService 第三方皮肤（token + AI  |
+| [dsh-vision](https://github.com/dsh-external/dsh-vision) | 插件 | 关注 | dsh 插件：给纯文本 DeepSeek 加视觉——view_image 工具桥接任意 Open |
+| [dsh-web-ui](https://github.com/dsh-external/dsh-web-ui) | 合集 | 关注 | — |
+| [ex-setting](https://github.com/dsh-external/ex-setting) | 插件 | 关注 | DSH的设置扩展 |
+| [web-components](https://github.com/dsh-external/web-components) | 基建 | 关注 | web-components支持 |
+| [dsh-question-collapse](https://github.com/dsh-external/dsh-question-collapse) | 插件 | 需适配 | DSH WebUI 提问栏折叠插件：保留问题标题与取消按钮，展开后保留未提交草稿 |
+| [dsh-split-panes](https://github.com/dsh-external/dsh-split-panes) | 插件 | 需适配 | — |
+| [dsh-tps](https://github.com/dsh-external/dsh-tps) | 插件 | 需适配 | 只是一个 tps 插件 |
+| [turtle-ui](https://github.com/dsh-external/turtle-ui) | 插件 | 需适配 | fine |
+| [7d7d](https://github.com/dsh-external/7d7d) | 插件 | 待调研 | 7k7d 游戏门户 —— 7k7k 风格 DSH 小游戏平台：模型生成/上传 HTML5 与 F |
+| [dsh-ads](https://github.com/dsh-external/dsh-ads) | 插件 | 待调研 | 是兄弟就来蹬我！DSH Web UI 广告：2005 年中文站点风格的侧栏广告 / 对话内信息流 |
+| [dsh-aigc-canvas](https://github.com/dsh-external/dsh-aigc-canvas) | 插件 | 待调研 | — |
+| [dsh-annotation](https://github.com/dsh-external/dsh-annotation) | 插件 | 待调研 | DSH Web 选中批注插件：选文字→批注→回车随消息发送；气泡隐藏批注块（零闪烁）；回复按 A |
+| [dsh-anti-ads](https://github.com/dsh-external/dsh-anti-ads) | 插件 | 待调研 | — |
+| [DSH-better-sidebar](https://github.com/dsh-external/DSH-better-sidebar) | 插件 | 待调研 | 一个侧边栏的完整工作台，支持三方接入/文件渲染编辑/终端/Git/子代理，一个面板全部搞定 |
+| [dsh-browser-panel](https://github.com/dsh-external/dsh-browser-panel) | 插件 | 待调研 | WebUI 内嵌完整有头浏览器视图插件：模型在 DSH WebUI 内实时操控真实浏览器，用户可 |
+| [dsh-custom-css](https://github.com/dsh-external/dsh-custom-css) | 插件 | 待调研 | — |
+| [dsh-deepcel](https://github.com/dsh-external/dsh-deepcel) | 合集 | 待调研 | Deepcel spreadsheet-workbook skin for DeepSeek H |
+| [dsh-drag-and-drop](https://github.com/dsh-external/dsh-drag-and-drop) | 插件 | 待调研 | 为 DSH Web UI 增加跨平台文件拖拽与原始路径插入能力，无需复制文件 |
+| [dsh-genui](https://github.com/dsh-external/dsh-genui) | 插件 | 待调研 | DSH的生成式UI能力,不断更新中,欢迎issue&pr! |
+| [dsh-island](https://github.com/dsh-external/dsh-island) | 基建 | 待调研 | DSH Dynamic Island — macOS notch panel for DSH；m |
+| [dsh-message-edit](https://github.com/dsh-external/dsh-message-edit) | 插件 | 待调研 | DSH plugin: branch-based message editing, reroll |
+| [dsh-selection-chat](https://github.com/dsh-external/dsh-selection-chat) | 插件 | 待调研 | DSH WebUI plugin: select conversation text → add |
+| [dsh-side-panel](https://github.com/dsh-external/dsh-side-panel) | 插件 | 待调研 | DSH 侧边栏，集成文件浏览器、终端和 Git 审查，方便预览文件 |
+| [dsh-tavern-plugin](https://github.com/dsh-external/dsh-tavern-plugin) | 插件 | 待调研 | 小酒馆 (Tavern) plugin — character cards, chat, mem |
+| [DSH-UI4A](https://github.com/dsh-external/DSH-UI4A) | 插件 | 待调研 | UI4A(UI for Agent)的DSH实现 https://macaron.im/blog |
+| [dsh-ultra-ui](https://github.com/dsh-external/dsh-ultra-ui) | 插件 | 待调研 | — |
+| [dsh-visualize](https://github.com/dsh-external/dsh-visualize) | 插件 | 待调研 | DSH 对话内生成式 UI 插件：模型把交互式 HTML 卡片直接画进会话流——visualiz |
+| [dsh-voice-chat](https://github.com/dsh-external/dsh-voice-chat) | 插件 | 待调研 | 实时语音对话插件：WebUI 内语音输入/输出，边说话边编程（vibe coding），0 打字 |
+| [dsh-web-panel](https://github.com/dsh-external/dsh-web-panel) | 插件 | 待调研 | DSH Web UI 内嵌交互式终端插件（dsh-external/issues#111）：支持 |
+| [dsh-web-review](https://github.com/dsh-external/dsh-web-review) | 插件 | 待调研 | — |
+| [show-bash-command](https://github.com/dsh-external/show-bash-command) | 插件 | 待调研 | 显示命令具体内容而不是描述 |
+| [ui-status-label](https://github.com/dsh-external/ui-status-label) | 插件 | 待调研 | 把你鲸鱼娘思考时的 deep diving 自定义成任意你想要的样子 |
+| [ya-workspace-sidebar](https://github.com/dsh-external/ya-workspace-sidebar) | 插件 | 待调研 | — |
+| [zephyr](https://github.com/dsh-external/zephyr) | 基建 | 待调研 | deepseek harness composer |
+| [dsh-ui-webview](https://github.com/dsh-external/dsh-ui-webview) | 插件 | 占位 | — |
+| [group-chat-diary](https://github.com/dsh-external/group-chat-diary) | 社区 | 不适用 | DSH 内测群聊日记归档 |
+| [dsh-chat](https://github.com/dsh-external/dsh-chat) | 插件 | 已删除 | DSH 对话插件：对话视图增强 |
+| [dsh-web](https://github.com/dsh-external/dsh-web) | 插件 | 已删除 | DSH Web 插件：Web UI 增强 |
 </details>
 
 *界面与交互增强插件：侧边栏、输入框、皮肤主题、面板 dock、消息显示、状态栏与可视化，让 Web 界面更顺手更好看*
@@ -96,69 +96,69 @@ DeepSeek Harness（DSH）插件生态的**目录 + 兼容性情报站**。
 
 *增强 agent 本身的能力：子代理管理、记忆与上下文、会话控制、规划执行、唤醒/睡眠、提示词与技能注入*
 
-| 插件 | 类型 | 说明 |
-|---|---|---|
-| [deep-standard-skill](https://github.com/dsh-external/deep-standard-skill) | 技能 | 把工程规范从没人读的文档变成会拒绝违规的程序 |
-| [distill](https://github.com/dsh-external/distill) | 插件 | Marisa 插件：自动对话蒸馏（后台 subagent 反省 + 技能 create/upda |
-| [dsh_workflow](https://github.com/dsh-external/dsh_workflow) | 插件 | Dynamic Workflow for dsh |
-| [dsh-a2a](https://github.com/dsh-external/dsh-a2a) | 插件 | Agent2Agent mesh for the Harness |
-| [dsh-activity-plugin](https://github.com/dsh-external/dsh-activity-plugin) | 插件 | — |
-| [dsh-agent-budget](https://github.com/dsh-external/dsh-agent-budget) | 插件 | Native Harness agent-tree token budget plugin |
-| [dsh-agent-rp](https://github.com/dsh-external/dsh-agent-rp) | 插件 | SillyTavern migration and next-generation Agent  |
-| [dsh-agent-session-sources](https://github.com/dsh-external/dsh-agent-session-sources) | 合集 | This repository contains the provider-neutral ag |
-| [dsh-alphasolve](https://github.com/dsh-external/dsh-alphasolve) | 插件 | Session-scoped AlphaSolve workflow for DeepSeek  |
-| [dsh-auto-approval](https://github.com/dsh-external/dsh-auto-approval) | 插件 | — |
-| [dsh-checkpoint](https://github.com/dsh-external/dsh-checkpoint) | 插件 | Mark an exploration start in the session; pairs  |
-| [dsh-client-ui-plan-execute](https://github.com/dsh-external/dsh-client-ui-plan-execute) | 插件 | DSH Web 设置页「规划/执行模型」设置行插件：编辑 dsh-plan-execute 双模 |
-| [dsh-cot-summary](https://github.com/dsh-external/dsh-cot-summary) | 合集 | 啊哈哈哈哈，最后一天了，我要总结cot！ |
-| [dsh-deeplink](https://github.com/dsh-external/dsh-deeplink) | 插件 | DSH WebUI 深链插件：?session=/?workspace= 直接打开指定项目对话 |
-| [dsh-design](https://github.com/dsh-external/dsh-design) | 插件 | DSH-native Web/UI design Agent bundle for Create |
-| [dsh-easy-ctx-manager](https://github.com/dsh-external/dsh-easy-ctx-manager) | 插件 | 一个适用于dsh的上下文管理插件，包含上下文节省，注意力优化，压缩档案馆等功能 |
-| [dsh-engram-relay](https://github.com/dsh-external/dsh-engram-relay) | 插件 | 外置 engram 转接模型插件：内置 <1B 模型（transformers.js/ONNX） |
-| [dsh-evolve](https://github.com/dsh-external/dsh-evolve) | 插件 | 自进化插件：agent 在 session 内随对话给自己长出/剪掉能力 —— evolve_a |
-| [dsh-explain](https://github.com/dsh-external/dsh-explain) | 插件 | DSH 学习模式插件（WIP）：开关打开后，agent 工作时实时讲解涉及的知识点，用于用户学习 |
-| [dsh-focus-chat](https://github.com/dsh-external/dsh-focus-chat) | 插件 | 一个聚焦对话视图插件：提供对话的精简阅读界面——工具调用折叠成摘要行、回合折叠、Think 行 |
-| [dsh-inspect](https://github.com/dsh-external/dsh-inspect) | 插件 | 发现问题(checkup) → 修复交付(fix) → 质量复查(review) 的对抗式闭环插 |
-| [dsh-issue-like-skill](https://github.com/dsh-external/dsh-issue-like-skill) | 技能 | dsh-issue-like skill: react 👍 to DSH issues on d |
-| [dsh-kimi-bridge](https://github.com/dsh-external/dsh-kimi-bridge) | 插件 | — |
-| [dsh-llm-fallbacks](https://github.com/dsh-external/dsh-llm-fallbacks) | 插件 | An dsh plugin for role-based LLM retry&fallback  |
-| [dsh-mega](https://github.com/dsh-external/dsh-mega) | 合集 | dsh 整合包：精选插件一行安装（loop / task-status / plugin-con |
-| [dsh-memory](https://github.com/dsh-external/dsh-memory) | 插件 | DSH 记忆插件：跨会话长期记忆与自我进化 |
-| [dsh-mnemon](https://github.com/dsh-external/dsh-mnemon) | 插件 | Mnemonic layer for DSH (integration with mnemon- |
-| [dsh-nowledge-mem](https://github.com/dsh-external/dsh-nowledge-mem) | 插件 | DSH plugin for Nowledge Mem™ |
-| [dsh-openmaic](https://github.com/dsh-external/dsh-openmaic) | 插件 | Generate OpenMAIC classrooms (interactive AI les |
-| [dsh-plan-execute](https://github.com/dsh-external/dsh-plan-execute) | 插件 | DSH plan/execute 双模型路由插件：plan 模式用规划模型（推理型），批准后自动 |
-| [dsh-prompt-studio](https://github.com/dsh-external/dsh-prompt-studio) | 插件 | DSH plugin: edit user and built-in system-prompt |
-| [dsh-qq2006](https://github.com/dsh-external/dsh-qq2006) | 插件 | DSH (DeepSeek Harness) QQ2006 skin plugin: theme |
-| [dsh-reuse-first](https://github.com/dsh-external/dsh-reuse-first) | 技能 | — |
-| [dsh-rewind](https://github.com/dsh-external/dsh-rewind) | 插件 | Fold everything since the last checkpoint mark i |
-| [dsh-scout](https://github.com/dsh-external/dsh-scout) | 插件 | — |
-| [dsh-self-control-guard](https://github.com/dsh-external/dsh-self-control-guard) | 插件 | DSH self-control guard: intercept host-kill atte |
-| [dsh-session-cluster](https://github.com/dsh-external/dsh-session-cluster) | 插件 | Same-machine cross-session messaging for DeepSee |
-| [dsh-session-health](https://github.com/dsh-external/dsh-session-health) | 插件 | DSH 会话健康检查插件：多帧 zstd 会话文件的帧级扫描诊断（torn/损坏/空会话检测）， |
-| [dsh-session-hub](https://github.com/dsh-external/dsh-session-hub) | 插件 | 跨工具会话互通插件：把 opencode / Claude Code / Antigravity |
-| [dsh-session-repair-skill](https://github.com/dsh-external/dsh-session-repair-skill) | 技能 | Detect and repair corrupted dsh session history  |
-| [dsh-skill-session-recovery](https://github.com/dsh-external/dsh-skill-session-recovery) | 技能 | DSH 会话丢失事故的定位/无损修复/安全重启 skill：诊断 corrupt session |
-| [dsh-skill-stats](https://github.com/dsh-external/dsh-skill-stats) | 插件 | 技能调用统计插件：历史回放 + 实时订阅，统计每个技能的调用次数、会话分布与调用时间线；会话 T |
-| [dsh-skills-manager](https://github.com/dsh-external/dsh-skills-manager) | 插件 | 在webui中方便的列出、禁用启用、编辑skills |
-| [dsh-sleep](https://github.com/dsh-external/dsh-sleep) | 插件 | — |
-| [dsh-slice-agent-loop](https://github.com/dsh-external/dsh-slice-agent-loop) | 插件 | A drop-in DeepSeek Harness agent loop whose cont |
-| [dsh-subagent-tree](https://github.com/dsh-external/dsh-subagent-tree) | 插件 | DSH 工作区侧栏树子代理分支插件（会话行扩展 hole）— 非官方，版权归作者 |
-| [dsh-super-injector](https://github.com/dsh-external/dsh-super-injector) | 插件 | — |
-| [dsh-superpowers](https://github.com/dsh-external/dsh-superpowers) | 插件 | Reserved DSH integration for Superpowers: reusab |
-| [dsh-track](https://github.com/dsh-external/dsh-track) | 插件 | DSH Track Bridge 插件：嵌入式任务管理引擎——决策点协议、念头捕获墙、Linea |
-| [dsh-turn-navigator](https://github.com/dsh-external/dsh-turn-navigator) | 插件 | Private DSH Web turn navigation plugin |
-| [dsh-turn-rewind](https://github.com/dsh-external/dsh-turn-rewind) | 插件 | Turn Rewind for DSH — rewind conversation and wo |
-| [dsh-ui-progress](https://github.com/dsh-external/dsh-ui-progress) | 插件 | DSH Web UI 任务进度插件：report_progress 工具动画卡片 + 输入框停靠 |
-| [dsh-web-workflow-visualizer](https://github.com/dsh-external/dsh-web-workflow-visualizer) | 插件 | DSH Web GUI 的 Workflow 可视化 + 图工程插件：多 agent 动态工作流 |
-| [mstar-workflow](https://github.com/dsh-external/mstar-workflow) | 插件 | A Skill-driven Harness/Loop Engineering Workflow |
-| [Qwen-MM-Plugins](https://github.com/dsh-external/Qwen-MM-Plugins) | 合集 | Qwen-MM-Plugins支持 |
-| [Recall](https://github.com/dsh-external/Recall) | 基建 | Switch agents. Keep the memory. Local-first sear |
-| [session-teleport](https://github.com/dsh-external/session-teleport) | 插件 | PostgreSQL-backed single-writer session handoff  |
-| [yet-another-subagent](https://github.com/dsh-external/yet-another-subagent) | 插件 | — |
-| [dsh-oauth-mcp-client](https://github.com/springbrand-lab/dsh-oauth-mcp-client) | 插件 | OAuth 2.1 Streamable HTTP MCP 客户端 |
-| [falsify-dsh](https://github.com/shi275773124/falsify-dsh) | 插件 | Falsify CLI 适配器（裁决） |
-| [billion-context-dsh](https://github.com/Tyan66666/billion-context-dsh) | 插件 | 模型驱动上下文管理（Active Context Pruning） |
+| 插件 | 类型 | 兼容性 | 说明 |
+|---|---|---|---|
+| [dsh-prompt-studio](https://github.com/dsh-external/dsh-prompt-studio) | 插件 | 兼容 | DSH plugin: edit user and built-in system-prompt |
+| [dsh-track](https://github.com/dsh-external/dsh-track) | 插件 | 兼容 | DSH Track Bridge 插件：嵌入式任务管理引擎——决策点协议、念头捕获墙、Linea |
+| [dsh-ui-progress](https://github.com/dsh-external/dsh-ui-progress) | 插件 | 兼容 | DSH Web UI 任务进度插件：report_progress 工具动画卡片 + 输入框停靠 |
+| [Recall](https://github.com/dsh-external/Recall) | 基建 | 兼容 | Switch agents. Keep the memory. Local-first sear |
+| [distill](https://github.com/dsh-external/distill) | 插件 | 关注 | Marisa 插件：自动对话蒸馏（后台 subagent 反省 + 技能 create/upda |
+| [dsh-agent-session-sources](https://github.com/dsh-external/dsh-agent-session-sources) | 合集 | 关注 | This repository contains the provider-neutral ag |
+| [dsh-alphasolve](https://github.com/dsh-external/dsh-alphasolve) | 插件 | 关注 | Session-scoped AlphaSolve workflow for DeepSeek  |
+| [dsh-skills-manager](https://github.com/dsh-external/dsh-skills-manager) | 插件 | 关注 | 在webui中方便的列出、禁用启用、编辑skills |
+| [dsh-slice-agent-loop](https://github.com/dsh-external/dsh-slice-agent-loop) | 插件 | 关注 | A drop-in DeepSeek Harness agent loop whose cont |
+| [Qwen-MM-Plugins](https://github.com/dsh-external/Qwen-MM-Plugins) | 合集 | 关注 | Qwen-MM-Plugins支持 |
+| [dsh-cot-summary](https://github.com/dsh-external/dsh-cot-summary) | 合集 | 需适配 | 啊哈哈哈哈，最后一天了，我要总结cot！ |
+| [dsh-subagent-tree](https://github.com/dsh-external/dsh-subagent-tree) | 插件 | 需适配 | DSH 工作区侧栏树子代理分支插件（会话行扩展 hole）— 非官方，版权归作者 |
+| [deep-standard-skill](https://github.com/dsh-external/deep-standard-skill) | 技能 | 待调研 | 把工程规范从没人读的文档变成会拒绝违规的程序 |
+| [dsh_workflow](https://github.com/dsh-external/dsh_workflow) | 插件 | 待调研 | Dynamic Workflow for dsh |
+| [dsh-a2a](https://github.com/dsh-external/dsh-a2a) | 插件 | 待调研 | Agent2Agent mesh for the Harness |
+| [dsh-activity-plugin](https://github.com/dsh-external/dsh-activity-plugin) | 插件 | 待调研 | — |
+| [dsh-agent-budget](https://github.com/dsh-external/dsh-agent-budget) | 插件 | 待调研 | Native Harness agent-tree token budget plugin |
+| [dsh-agent-rp](https://github.com/dsh-external/dsh-agent-rp) | 插件 | 待调研 | SillyTavern migration and next-generation Agent  |
+| [dsh-auto-approval](https://github.com/dsh-external/dsh-auto-approval) | 插件 | 待调研 | — |
+| [dsh-checkpoint](https://github.com/dsh-external/dsh-checkpoint) | 插件 | 待调研 | Mark an exploration start in the session; pairs  |
+| [dsh-client-ui-plan-execute](https://github.com/dsh-external/dsh-client-ui-plan-execute) | 插件 | 待调研 | DSH Web 设置页「规划/执行模型」设置行插件：编辑 dsh-plan-execute 双模 |
+| [dsh-deeplink](https://github.com/dsh-external/dsh-deeplink) | 插件 | 待调研 | DSH WebUI 深链插件：?session=/?workspace= 直接打开指定项目对话 |
+| [dsh-design](https://github.com/dsh-external/dsh-design) | 插件 | 待调研 | DSH-native Web/UI design Agent bundle for Create |
+| [dsh-easy-ctx-manager](https://github.com/dsh-external/dsh-easy-ctx-manager) | 插件 | 待调研 | 一个适用于dsh的上下文管理插件，包含上下文节省，注意力优化，压缩档案馆等功能 |
+| [dsh-engram-relay](https://github.com/dsh-external/dsh-engram-relay) | 插件 | 待调研 | 外置 engram 转接模型插件：内置 <1B 模型（transformers.js/ONNX） |
+| [dsh-evolve](https://github.com/dsh-external/dsh-evolve) | 插件 | 待调研 | 自进化插件：agent 在 session 内随对话给自己长出/剪掉能力 —— evolve_a |
+| [dsh-explain](https://github.com/dsh-external/dsh-explain) | 插件 | 待调研 | DSH 学习模式插件（WIP）：开关打开后，agent 工作时实时讲解涉及的知识点，用于用户学习 |
+| [dsh-focus-chat](https://github.com/dsh-external/dsh-focus-chat) | 插件 | 待调研 | 一个聚焦对话视图插件：提供对话的精简阅读界面——工具调用折叠成摘要行、回合折叠、Think 行 |
+| [dsh-inspect](https://github.com/dsh-external/dsh-inspect) | 插件 | 待调研 | 发现问题(checkup) → 修复交付(fix) → 质量复查(review) 的对抗式闭环插 |
+| [dsh-issue-like-skill](https://github.com/dsh-external/dsh-issue-like-skill) | 技能 | 待调研 | dsh-issue-like skill: react 👍 to DSH issues on d |
+| [dsh-kimi-bridge](https://github.com/dsh-external/dsh-kimi-bridge) | 插件 | 待调研 | — |
+| [dsh-llm-fallbacks](https://github.com/dsh-external/dsh-llm-fallbacks) | 插件 | 待调研 | An dsh plugin for role-based LLM retry&fallback  |
+| [dsh-mega](https://github.com/dsh-external/dsh-mega) | 合集 | 待调研 | dsh 整合包：精选插件一行安装（loop / task-status / plugin-con |
+| [dsh-mnemon](https://github.com/dsh-external/dsh-mnemon) | 插件 | 待调研 | Mnemonic layer for DSH (integration with mnemon- |
+| [dsh-nowledge-mem](https://github.com/dsh-external/dsh-nowledge-mem) | 插件 | 待调研 | DSH plugin for Nowledge Mem™ |
+| [dsh-openmaic](https://github.com/dsh-external/dsh-openmaic) | 插件 | 待调研 | Generate OpenMAIC classrooms (interactive AI les |
+| [dsh-plan-execute](https://github.com/dsh-external/dsh-plan-execute) | 插件 | 待调研 | DSH plan/execute 双模型路由插件：plan 模式用规划模型（推理型），批准后自动 |
+| [dsh-qq2006](https://github.com/dsh-external/dsh-qq2006) | 插件 | 待调研 | DSH (DeepSeek Harness) QQ2006 skin plugin: theme |
+| [dsh-reuse-first](https://github.com/dsh-external/dsh-reuse-first) | 技能 | 待调研 | — |
+| [dsh-rewind](https://github.com/dsh-external/dsh-rewind) | 插件 | 待调研 | Fold everything since the last checkpoint mark i |
+| [dsh-scout](https://github.com/dsh-external/dsh-scout) | 插件 | 待调研 | — |
+| [dsh-self-control-guard](https://github.com/dsh-external/dsh-self-control-guard) | 插件 | 待调研 | DSH self-control guard: intercept host-kill atte |
+| [dsh-session-cluster](https://github.com/dsh-external/dsh-session-cluster) | 插件 | 待调研 | Same-machine cross-session messaging for DeepSee |
+| [dsh-session-health](https://github.com/dsh-external/dsh-session-health) | 插件 | 待调研 | DSH 会话健康检查插件：多帧 zstd 会话文件的帧级扫描诊断（torn/损坏/空会话检测）， |
+| [dsh-session-repair-skill](https://github.com/dsh-external/dsh-session-repair-skill) | 技能 | 待调研 | Detect and repair corrupted dsh session history  |
+| [dsh-skill-session-recovery](https://github.com/dsh-external/dsh-skill-session-recovery) | 技能 | 待调研 | DSH 会话丢失事故的定位/无损修复/安全重启 skill：诊断 corrupt session |
+| [dsh-skill-stats](https://github.com/dsh-external/dsh-skill-stats) | 插件 | 待调研 | 技能调用统计插件：历史回放 + 实时订阅，统计每个技能的调用次数、会话分布与调用时间线；会话 T |
+| [dsh-sleep](https://github.com/dsh-external/dsh-sleep) | 插件 | 待调研 | — |
+| [dsh-super-injector](https://github.com/dsh-external/dsh-super-injector) | 插件 | 待调研 | — |
+| [dsh-turn-navigator](https://github.com/dsh-external/dsh-turn-navigator) | 插件 | 待调研 | Private DSH Web turn navigation plugin |
+| [dsh-turn-rewind](https://github.com/dsh-external/dsh-turn-rewind) | 插件 | 待调研 | Turn Rewind for DSH — rewind conversation and wo |
+| [dsh-web-workflow-visualizer](https://github.com/dsh-external/dsh-web-workflow-visualizer) | 插件 | 待调研 | DSH Web GUI 的 Workflow 可视化 + 图工程插件：多 agent 动态工作流 |
+| [mstar-workflow](https://github.com/dsh-external/mstar-workflow) | 插件 | 待调研 | A Skill-driven Harness/Loop Engineering Workflow |
+| [session-teleport](https://github.com/dsh-external/session-teleport) | 插件 | 待调研 | PostgreSQL-backed single-writer session handoff  |
+| [yet-another-subagent](https://github.com/dsh-external/yet-another-subagent) | 插件 | 待调研 | — |
+| [dsh-oauth-mcp-client](https://github.com/springbrand-lab/dsh-oauth-mcp-client) | 插件 | 待调研 | OAuth 2.1 Streamable HTTP MCP 客户端 |
+| [falsify-dsh](https://github.com/shi275773124/falsify-dsh) | 插件 | 待调研 | Falsify CLI 适配器（裁决） |
+| [billion-context-dsh](https://github.com/Tyan66666/billion-context-dsh) | 插件 | 待调研 | 模型驱动上下文管理（Active Context Pruning） |
+| [dsh-session-hub](https://github.com/dsh-external/dsh-session-hub) | 插件 | 占位 | 跨工具会话互通插件：把 opencode / Claude Code / Antigravity |
+| [dsh-superpowers](https://github.com/dsh-external/dsh-superpowers) | 插件 | 占位 | Reserved DSH integration for Superpowers: reusab |
+| [dsh-memory](https://github.com/dsh-external/dsh-memory) | 插件 | 已删除 | DSH 记忆插件：跨会话长期记忆与自我进化 |
 </details>
 
 *增强 agent 本身的能力：子代理管理、记忆与上下文、会话控制、规划执行、唤醒/睡眠、提示词与技能注入*
@@ -168,45 +168,45 @@ DeepSeek Harness（DSH）插件生态的**目录 + 兼容性情报站**。
 
 *面向编程场景的工具：代码操作、git 集成、终端、diff 与编辑器、文档生成、语言支持与构建辅助*
 
-| 插件 | 类型 | 说明 |
-|---|---|---|
-| [cross-harness-cite](https://github.com/dsh-external/cross-harness-cite) | 插件 | 支持跨Harness引用codex/claude code的历史对话 |
-| [dsh_ide](https://github.com/dsh-external/dsh_ide) | 插件 | DSH IDE 大工程：集成开发环境方向（编辑器/工程视图/调试） |
-| [dsh-auto-blame](https://github.com/dsh-external/dsh-auto-blame) | 插件 | — |
-| [dsh-bash-encoding](https://github.com/dsh-external/dsh-bash-encoding) | 插件 | DSH bash 输出编码自动识别插件：替换 ctx.bash，自管 spawn 收集原始字节， |
-| [dsh-better-sidebar-plugin-office](https://github.com/dsh-external/dsh-better-sidebar-plugin-office) | 插件 | — |
-| [dsh-build](https://github.com/dsh-external/dsh-build) | 插件 | dsh-build |
-| [dsh-cc-connect](https://github.com/dsh-external/dsh-cc-connect) | 插件 | 通过cc connect远程使用dsh |
-| [dsh-cc-tui](https://github.com/dsh-external/dsh-cc-tui) | 插件 | Claude Code 风格全屏交互终端插件：像素鲸鱼顶栏、流光大字、思考流式展开、双击 Esc |
-| [dsh-code](https://github.com/dsh-external/dsh-code) | 插件 | — |
-| [dsh-code-map](https://github.com/dsh-external/dsh-code-map) | 插件 | DSH 代码地图插件：symbol 索引 / 文档符号 / 调用层级 / 继承树——给模型补上「 |
-| [dsh-codex-bridge](https://github.com/dsh-external/dsh-codex-bridge) | 插件 | — |
-| [dsh-gh-bridge](https://github.com/dsh-external/dsh-gh-bridge) | 插件 | DSH plugin: bridge the macOS Keychain GitHub tok |
-| [dsh-git-identity](https://github.com/dsh-external/dsh-git-identity) | 插件 | DSH 插件：git 提交固定使用环境自身作者身份（优先 gh CLI 登录账号，GitHub  |
-| [dsh-github-integration](https://github.com/dsh-external/dsh-github-integration) | 合集 | DSH GitHub integration plugin |
-| [dsh-grok-tui](https://github.com/dsh-external/dsh-grok-tui) | 插件 | Use dsh via grok-build's TUI. |
-| [dsh-interpreters](https://github.com/dsh-external/dsh-interpreters) | 插件 | — |
-| [dsh-latex](https://github.com/dsh-external/dsh-latex) | 插件 | DSH LaTeX 插件：agent 写 LaTeX 文档 → 一键编译 PDF（复用本机 Wi |
-| [dsh-memory-evolve](https://github.com/dsh-external/dsh-memory-evolve) | 插件 | 为 DeepSeek Harness 带来「跨会话长期记忆 + 后台自我进化」能力的纯插件实现： |
-| [dsh-my-rsi](https://github.com/dsh-external/dsh-my-rsi) | 合集 | DSH 本地插件集：tool-failure-guard / commit-gate / com |
-| [dsh-office](https://github.com/dsh-external/dsh-office) | 插件 | — |
-| [dsh-pi-adapter](https://github.com/dsh-external/dsh-pi-adapter) | 插件 | Run pi coding-agent extensions (ExtensionAPI) in |
-| [dsh-pty-windows](https://github.com/dsh-external/dsh-pty-windows) | 插件 | Marisa 插件：Windows PTY 进程检查器（PowerShell CIM 枚举 +  |
-| [dsh-shell-windows](https://github.com/dsh-external/dsh-shell-windows) | 插件 | Marisa 插件：Windows PowerShell 外壳适配器（ctx.shell，win |
-| [dsh-spec-kit](https://github.com/dsh-external/dsh-spec-kit) | 插件 | Reserved DSH integration for GitHub Spec Kit: sp |
-| [dsh-tool-browser](https://github.com/dsh-external/dsh-tool-browser) | 合集 | Private toybox snapshot of the DeepSeek Harness  |
-| [dsh-tool-calculator](https://github.com/dsh-external/dsh-tool-calculator) | 插件 | DSH 计算器工具插件：安全的数学表达式求值器，零依赖递归下降解析器 |
-| [dsh-tool-search](https://github.com/dsh-external/dsh-tool-search) | 插件 | Per-agent on-demand tool discovery and progressi |
-| [dsh-tool-stat](https://github.com/dsh-external/dsh-tool-stat) | 插件 | DSH 统计工具插件：描述统计/百分位数/频数分布/相关性，零依赖纯函数确定性 |
-| [dsh-tool-time](https://github.com/dsh-external/dsh-tool-time) | 插件 | DSH 时间工具插件：严格 ISO 8601 解析、IANA 时区转换、UTC 日历运算、固定时 |
-| [dsh-trace](https://github.com/dsh-external/dsh-trace) | 基建 | DeepSeek Harness telemetry backend that exports  |
-| [dsh-tui](https://github.com/dsh-external/dsh-tui) | 基建 | — |
-| [dsh-tui-front-door](https://github.com/dsh-external/dsh-tui-front-door) | 插件 | Standalone dsh TUI front door: ink REPL + keybin |
-| [dsh-vscode](https://github.com/dsh-external/dsh-vscode) | 基建 | Native VS Code chat integration for DeepSeek Har |
-| [dsh-working-activity](https://github.com/dsh-external/dsh-working-activity) | 插件 | DSH 实时模型工作状态行：俏皮思考文案、运行中的工具、回合总结、自我叙述（⏵）— 用于 TUI |
-| [official-plugins-port](https://github.com/dsh-external/official-plugins-port) | 合集 | Official Claude Code / Codex plugins ported to t |
-| [zotero-wave-rag](https://github.com/dsh-external/zotero-wave-rag) | 插件 | 面向 Zotero 论文库的浪潮式 RAG 细节检索系统 —— DSH 外部插件 |
-| [dsh-claude-move](https://github.com/PerryLink/dsh-claude-move) | 插件 | 迁移 Claude Code 会话 |
+| 插件 | 类型 | 兼容性 | 说明 |
+|---|---|---|---|
+| [dsh-bash-encoding](https://github.com/dsh-external/dsh-bash-encoding) | 插件 | 兼容 | DSH bash 输出编码自动识别插件：替换 ctx.bash，自管 spawn 收集原始字节， |
+| [dsh-gh-bridge](https://github.com/dsh-external/dsh-gh-bridge) | 插件 | 兼容 | DSH plugin: bridge the macOS Keychain GitHub tok |
+| [dsh-memory-evolve](https://github.com/dsh-external/dsh-memory-evolve) | 插件 | 兼容 | 为 DeepSeek Harness 带来「跨会话长期记忆 + 后台自我进化」能力的纯插件实现： |
+| [dsh-pi-adapter](https://github.com/dsh-external/dsh-pi-adapter) | 插件 | 兼容 | Run pi coding-agent extensions (ExtensionAPI) in |
+| [dsh-pty-windows](https://github.com/dsh-external/dsh-pty-windows) | 插件 | 兼容 | Marisa 插件：Windows PTY 进程检查器（PowerShell CIM 枚举 +  |
+| [dsh-shell-windows](https://github.com/dsh-external/dsh-shell-windows) | 插件 | 兼容 | Marisa 插件：Windows PowerShell 外壳适配器（ctx.shell，win |
+| [dsh-cc-tui](https://github.com/dsh-external/dsh-cc-tui) | 插件 | 关注 | Claude Code 风格全屏交互终端插件：像素鲸鱼顶栏、流光大字、思考流式展开、双击 Esc |
+| [dsh-github-integration](https://github.com/dsh-external/dsh-github-integration) | 合集 | 关注 | DSH GitHub integration plugin |
+| [dsh-my-rsi](https://github.com/dsh-external/dsh-my-rsi) | 合集 | 关注 | DSH 本地插件集：tool-failure-guard / commit-gate / com |
+| [dsh-tool-browser](https://github.com/dsh-external/dsh-tool-browser) | 合集 | 关注 | Private toybox snapshot of the DeepSeek Harness  |
+| [dsh-tool-calculator](https://github.com/dsh-external/dsh-tool-calculator) | 插件 | 关注 | DSH 计算器工具插件：安全的数学表达式求值器，零依赖递归下降解析器 |
+| [dsh-tool-time](https://github.com/dsh-external/dsh-tool-time) | 插件 | 关注 | DSH 时间工具插件：严格 ISO 8601 解析、IANA 时区转换、UTC 日历运算、固定时 |
+| [dsh-working-activity](https://github.com/dsh-external/dsh-working-activity) | 插件 | 需适配 | DSH 实时模型工作状态行：俏皮思考文案、运行中的工具、回合总结、自我叙述（⏵）— 用于 TUI |
+| [cross-harness-cite](https://github.com/dsh-external/cross-harness-cite) | 插件 | 待调研 | 支持跨Harness引用codex/claude code的历史对话 |
+| [dsh-auto-blame](https://github.com/dsh-external/dsh-auto-blame) | 插件 | 待调研 | — |
+| [dsh-better-sidebar-plugin-office](https://github.com/dsh-external/dsh-better-sidebar-plugin-office) | 插件 | 待调研 | — |
+| [dsh-cc-connect](https://github.com/dsh-external/dsh-cc-connect) | 插件 | 待调研 | 通过cc connect远程使用dsh |
+| [dsh-code](https://github.com/dsh-external/dsh-code) | 插件 | 待调研 | — |
+| [dsh-code-map](https://github.com/dsh-external/dsh-code-map) | 插件 | 待调研 | DSH 代码地图插件：symbol 索引 / 文档符号 / 调用层级 / 继承树——给模型补上「 |
+| [dsh-codex-bridge](https://github.com/dsh-external/dsh-codex-bridge) | 插件 | 待调研 | — |
+| [dsh-git-identity](https://github.com/dsh-external/dsh-git-identity) | 插件 | 待调研 | DSH 插件：git 提交固定使用环境自身作者身份（优先 gh CLI 登录账号，GitHub  |
+| [dsh-grok-tui](https://github.com/dsh-external/dsh-grok-tui) | 插件 | 待调研 | Use dsh via grok-build's TUI. |
+| [dsh-interpreters](https://github.com/dsh-external/dsh-interpreters) | 插件 | 待调研 | — |
+| [dsh-latex](https://github.com/dsh-external/dsh-latex) | 插件 | 待调研 | DSH LaTeX 插件：agent 写 LaTeX 文档 → 一键编译 PDF（复用本机 Wi |
+| [dsh-office](https://github.com/dsh-external/dsh-office) | 插件 | 待调研 | — |
+| [dsh-tool-search](https://github.com/dsh-external/dsh-tool-search) | 插件 | 待调研 | Per-agent on-demand tool discovery and progressi |
+| [dsh-tool-stat](https://github.com/dsh-external/dsh-tool-stat) | 插件 | 待调研 | DSH 统计工具插件：描述统计/百分位数/频数分布/相关性，零依赖纯函数确定性 |
+| [dsh-trace](https://github.com/dsh-external/dsh-trace) | 基建 | 待调研 | DeepSeek Harness telemetry backend that exports  |
+| [dsh-tui-front-door](https://github.com/dsh-external/dsh-tui-front-door) | 插件 | 待调研 | Standalone dsh TUI front door: ink REPL + keybin |
+| [dsh-vscode](https://github.com/dsh-external/dsh-vscode) | 基建 | 待调研 | Native VS Code chat integration for DeepSeek Har |
+| [official-plugins-port](https://github.com/dsh-external/official-plugins-port) | 合集 | 待调研 | Official Claude Code / Codex plugins ported to t |
+| [zotero-wave-rag](https://github.com/dsh-external/zotero-wave-rag) | 插件 | 待调研 | 面向 Zotero 论文库的浪潮式 RAG 细节检索系统 —— DSH 外部插件 |
+| [dsh-claude-move](https://github.com/PerryLink/dsh-claude-move) | 插件 | 待调研 | 迁移 Claude Code 会话 |
+| [dsh-build](https://github.com/dsh-external/dsh-build) | 插件 | 占位 | dsh-build |
+| [dsh-spec-kit](https://github.com/dsh-external/dsh-spec-kit) | 插件 | 占位 | Reserved DSH integration for GitHub Spec Kit: sp |
+| [dsh-tui](https://github.com/dsh-external/dsh-tui) | 基建 | 占位 | — |
+| [dsh_ide](https://github.com/dsh-external/dsh_ide) | 插件 | 已删除 | DSH IDE 大工程：集成开发环境方向（编辑器/工程视图/调试） |
 </details>
 
 *面向编程场景的工具：代码操作、git 集成、终端、diff 与编辑器、文档生成、语言支持与构建辅助*
@@ -216,27 +216,27 @@ DeepSeek Harness（DSH）插件生态的**目录 + 兼容性情报站**。
 
 *把 dsh 接入各类沟通渠道：微信/QQ/Telegram/飞书机器人、桌面通知、消息分享与跨端回复*
 
-| 插件 | 类型 | 说明 |
-|---|---|---|
-| [dsh-chat-thumb](https://github.com/dsh-external/dsh-chat-thumb) | 插件 | Chat缩略图 |
-| [dsh-club](https://github.com/dsh-external/dsh-club) | 插件 | DSH 俱乐部 — DeepSeek Harness 内测用户排行榜(每日自动采集) |
-| [dsh-coding-receipt](https://github.com/dsh-external/dsh-coding-receipt) | 基建 | Turn a DeepSeek Harness session log into a local |
-| [dsh-deep-research](https://github.com/dsh-external/dsh-deep-research) | 插件 | Adaptive deep-research orchestrator plugin for D |
-| [dsh-feishu-bot](https://github.com/dsh-external/dsh-feishu-bot) | 渠道 | Feishu remote channel for DeepSeek Harness |
-| [dsh-feishu-notify](https://github.com/dsh-external/dsh-feishu-notify) | 插件 | 为dsh新增飞书的通知：会话结束/需要等待输入 |
-| [dsh-ica](https://github.com/dsh-external/dsh-ica) | 渠道 | dsh 但是 icalingua 前端 |
-| [dsh-share](https://github.com/dsh-external/dsh-share) | 插件 | dsh对话分享插件 |
-| [dsh-suggested-replies](https://github.com/dsh-external/dsh-suggested-replies) | 插件 | DSH Web 预测回复插件：AI 回复后在输入框上方生成可点击填入草稿的下一步消息候选 |
-| [dsh-teamwork](https://github.com/dsh-external/dsh-teamwork) | 插件 | — |
-| [dsh-web-ui-notify](https://github.com/dsh-external/dsh-web-ui-notify) | 插件 | 为 DSH 增加桌面通知提醒 |
-| [dsh-webbridge](https://github.com/dsh-external/dsh-webbridge) | 插件 | DSH 结合 Kimi WebBridge |
-| [dsh-wecom-bot](https://github.com/dsh-external/dsh-wecom-bot) | 渠道 | Wecom remote channel for DeepSeek Harness |
-| [dsh-weixin-bot](https://github.com/dsh-external/dsh-weixin-bot) | 渠道 | WeiXin remote channel for DeepSeek Harness |
-| [issues](https://github.com/dsh-external/issues) | 社区 | 内测时遇到的问题 |
-| [qqbot](https://github.com/dsh-external/qqbot) | 渠道 | QQ remote channel for DeepSeek Harness |
-| [telegram](https://github.com/dsh-external/telegram) | 渠道 | Marisa 插件：Telegram Bot API 桥接（长轮询、per-chat 会话、HT |
-| [tg-bot](https://github.com/dsh-external/tg-bot) | 渠道 | Telegram remote channel for DeepSeek Harness |
-| [dsh-telegram](https://github.com/ben7am1n/dsh-telegram) | 插件 | Telegram 远程渠道 |
+| 插件 | 类型 | 兼容性 | 说明 |
+|---|---|---|---|
+| [dsh-chat-thumb](https://github.com/dsh-external/dsh-chat-thumb) | 插件 | 兼容 | Chat缩略图 |
+| [dsh-feishu-bot](https://github.com/dsh-external/dsh-feishu-bot) | 渠道 | 兼容 | Feishu remote channel for DeepSeek Harness |
+| [dsh-wecom-bot](https://github.com/dsh-external/dsh-wecom-bot) | 渠道 | 兼容 | Wecom remote channel for DeepSeek Harness |
+| [dsh-weixin-bot](https://github.com/dsh-external/dsh-weixin-bot) | 渠道 | 兼容 | WeiXin remote channel for DeepSeek Harness |
+| [qqbot](https://github.com/dsh-external/qqbot) | 渠道 | 兼容 | QQ remote channel for DeepSeek Harness |
+| [telegram](https://github.com/dsh-external/telegram) | 渠道 | 关注 | Marisa 插件：Telegram Bot API 桥接（长轮询、per-chat 会话、HT |
+| [tg-bot](https://github.com/dsh-external/tg-bot) | 渠道 | 关注 | Telegram remote channel for DeepSeek Harness |
+| [dsh-club](https://github.com/dsh-external/dsh-club) | 插件 | 待调研 | DSH 俱乐部 — DeepSeek Harness 内测用户排行榜(每日自动采集) |
+| [dsh-deep-research](https://github.com/dsh-external/dsh-deep-research) | 插件 | 待调研 | Adaptive deep-research orchestrator plugin for D |
+| [dsh-feishu-notify](https://github.com/dsh-external/dsh-feishu-notify) | 插件 | 待调研 | 为dsh新增飞书的通知：会话结束/需要等待输入 |
+| [dsh-ica](https://github.com/dsh-external/dsh-ica) | 渠道 | 待调研 | dsh 但是 icalingua 前端 |
+| [dsh-share](https://github.com/dsh-external/dsh-share) | 插件 | 待调研 | dsh对话分享插件 |
+| [dsh-suggested-replies](https://github.com/dsh-external/dsh-suggested-replies) | 插件 | 待调研 | DSH Web 预测回复插件：AI 回复后在输入框上方生成可点击填入草稿的下一步消息候选 |
+| [dsh-teamwork](https://github.com/dsh-external/dsh-teamwork) | 插件 | 待调研 | — |
+| [dsh-web-ui-notify](https://github.com/dsh-external/dsh-web-ui-notify) | 插件 | 待调研 | 为 DSH 增加桌面通知提醒 |
+| [dsh-webbridge](https://github.com/dsh-external/dsh-webbridge) | 插件 | 待调研 | DSH 结合 Kimi WebBridge |
+| [dsh-telegram](https://github.com/ben7am1n/dsh-telegram) | 插件 | 待调研 | Telegram 远程渠道 |
+| [dsh-coding-receipt](https://github.com/dsh-external/dsh-coding-receipt) | 基建 | 占位 | Turn a DeepSeek Harness session log into a local |
+| [issues](https://github.com/dsh-external/issues) | 社区 | 不适用 | 内测时遇到的问题 |
 </details>
 
 *把 dsh 接入各类沟通渠道：微信/QQ/Telegram/飞书机器人、桌面通知、消息分享与跨端回复*
@@ -246,44 +246,44 @@ DeepSeek Harness（DSH）插件生态的**目录 + 兼容性情报站**。
 
 *文件与数据处理：读写与格式转换、爬取抓取、数据库、编码识别、文档解析与知识库*
 
-| 插件 | 类型 | 说明 |
-|---|---|---|
-| [context-doctor](https://github.com/dsh-external/context-doctor) | 插件 | DSH 上下文注入审计插件：统计 AGENTS.md 指令链/技能目录/工具 schema 的  |
-| [ds_web_craw](https://github.com/dsh-external/ds_web_craw) | 基建 | — |
-| [dsh-advisor](https://github.com/dsh-external/dsh-advisor) | 插件 | Advisor - Pair a second model that passively rev |
-| [dsh-artifact](https://github.com/dsh-external/dsh-artifact) | 插件 | dsh 插件：文件交付协议——send_artifact 工具经 tool/result met |
-| [dsh-context7](https://github.com/dsh-external/dsh-context7) | 插件 | Reserved DSH integration for Context7: current,  |
-| [dsh-cyber-sec](https://github.com/dsh-external/dsh-cyber-sec) | 插件 | dsh 生态授权渗透测试 profile bundle：容器化 bash 执行（可降级本机）+  |
-| [dsh-data-agent](https://github.com/dsh-external/dsh-data-agent) | 插件 | 让AI帮你连数据库、写SQL的DSH插件 |
-| [dsh-diff-viewer](https://github.com/dsh-external/dsh-diff-viewer) | 插件 | DSH Web GUI PiUI-style diff viewer plugin: repla |
-| [dsh-find-plugins](https://github.com/dsh-external/dsh-find-plugins) | 技能 | — |
-| [dsh-issue-filer](https://github.com/dsh-external/dsh-issue-filer) | 技能 | DSH 提 issue 技能：向 dsh-external/issues 自动查重、格式化并创建 |
-| [dsh-kb-sieve](https://github.com/dsh-external/dsh-kb-sieve) | 插件 | DSH knowledge-base plugin: build audit-able KB p |
-| [dsh-loop](https://github.com/dsh-external/dsh-loop) | 插件 | DSH 插件：定时循环（/loop 命令 + loop 工具 + 活动状态条） |
-| [dsh-mineru](https://github.com/dsh-external/dsh-mineru) | 插件 | DSH plugin exposing MineRU document parsing tool |
-| [dsh-multimedia-webui-input](https://github.com/dsh-external/dsh-multimedia-webui-input) | 插件 | Community multimedia file and folder input for D |
-| [dsh-navbar](https://github.com/dsh-external/dsh-navbar) | 插件 | DSH 插件：对话节点导航条（右缘节点串快速跳转 user 消息） |
-| [dsh-notebooks](https://github.com/dsh-external/dsh-notebooks) | 插件 | — |
-| [dsh-openpencil](https://github.com/dsh-external/dsh-openpencil) | 插件 | OpenPencil design preview and editing plugin for |
-| [dsh-profile-bundle-example](https://github.com/dsh-external/dsh-profile-bundle-example) | 合集 | Minimal script-free Profile Bundle example for D |
-| [dsh-stock-market](https://github.com/dsh-external/dsh-stock-market) | 插件 | 有效解决了写代码的时候账户不能同时亏钱的BUG |
-| [dsh-task-status](https://github.com/dsh-external/dsh-task-status) | 插件 | DSH 插件：后台任务状态条（对话页任务进度 + 实时输出 tail） |
-| [dsh-tool-csv](https://github.com/dsh-external/dsh-tool-csv) | 插件 | DSH CSV 数据工具插件：解析/查询/统计/转换 CSV 文本（RFC 4180），零依赖状 |
-| [dsh-tool-diff](https://github.com/dsh-external/dsh-tool-diff) | 插件 | DSH Diff 工具插件：文本/JSON/CSV/Markdown 结构化比较与 unifie |
-| [dsh-tool-encoding](https://github.com/dsh-external/dsh-tool-encoding) | 插件 | DSH 编码/哈希工具插件：base64/base64url/url/hex 编解码、md5/s |
-| [dsh-tool-json](https://github.com/dsh-external/dsh-tool-json) | 插件 | DSH JSON 查询工具插件：JMESPath 子集查询，零依赖递归下降解析器 |
-| [dsh-tool-markdown](https://github.com/dsh-external/dsh-tool-markdown) | 插件 | DSH Markdown 工具插件：HTML↔Markdown 转换、GFM 表格规范化、目录生 |
-| [dsh-tool-regex](https://github.com/dsh-external/dsh-tool-regex) | 插件 | DSH 正则工具插件：测试匹配/提取捕获组/安全替换/静态解释正则（不执行代码），零依赖，注册  |
-| [dsh-tool-schema](https://github.com/dsh-external/dsh-tool-schema) | 插件 | DSH JSON Schema 验证工具插件：validate/paths/explain/no |
-| [dsh-toolkit](https://github.com/dsh-external/dsh-toolkit) | 合集 | DSH 零依赖工具包 collection —— time / encoding / json  |
-| [dsh-vision-toolkit](https://github.com/dsh-external/dsh-vision-toolkit) | 插件 | DeepSeek Harness-native integration for agent-vi |
-| [dsh-web-archive](https://github.com/dsh-external/dsh-web-archive) | 插件 | 折叠对话当中众多的“无用消息”，例如Think、Bash等 |
-| [session-chatlog](https://github.com/dsh-external/session-chatlog) | 插件 | Marisa 插件：会话聊天记录读取工具（session_list / session_read |
-| [session-persistence-rdb](https://github.com/dsh-external/session-persistence-rdb) | 插件 | session 关系型数据库持久化 |
-| [tonghuashun-harness](https://github.com/dsh-external/tonghuashun-harness) | 基建 | — |
-| [Top](https://github.com/dsh-external/Top) | 插件 | 📊 Daily leaderboard for the dsh-external plugin  |
-| [dsh-balance](https://github.com/TwotwoPiggy/dsh-balance) | 插件 | 实时 token 余额跟踪 |
-| [dsh-web-search-firecrawl](https://github.com/yangzhe1003/dsh-web-search-firecrawl) | 插件 | Firecrawl 搜索提供方 |
+| 插件 | 类型 | 兼容性 | 说明 |
+|---|---|---|---|
+| [dsh-diff-viewer](https://github.com/dsh-external/dsh-diff-viewer) | 插件 | 兼容 | DSH Web GUI PiUI-style diff viewer plugin: repla |
+| [dsh-issue-filer](https://github.com/dsh-external/dsh-issue-filer) | 技能 | 兼容 | DSH 提 issue 技能：向 dsh-external/issues 自动查重、格式化并创建 |
+| [dsh-multimedia-webui-input](https://github.com/dsh-external/dsh-multimedia-webui-input) | 插件 | 兼容 | Community multimedia file and folder input for D |
+| [session-persistence-rdb](https://github.com/dsh-external/session-persistence-rdb) | 插件 | 兼容 | session 关系型数据库持久化 |
+| [dsh-artifact](https://github.com/dsh-external/dsh-artifact) | 插件 | 关注 | dsh 插件：文件交付协议——send_artifact 工具经 tool/result met |
+| [dsh-tool-encoding](https://github.com/dsh-external/dsh-tool-encoding) | 插件 | 关注 | DSH 编码/哈希工具插件：base64/base64url/url/hex 编解码、md5/s |
+| [dsh-tool-json](https://github.com/dsh-external/dsh-tool-json) | 插件 | 关注 | DSH JSON 查询工具插件：JMESPath 子集查询，零依赖递归下降解析器 |
+| [session-chatlog](https://github.com/dsh-external/session-chatlog) | 插件 | 关注 | Marisa 插件：会话聊天记录读取工具（session_list / session_read |
+| [context-doctor](https://github.com/dsh-external/context-doctor) | 插件 | 待调研 | DSH 上下文注入审计插件：统计 AGENTS.md 指令链/技能目录/工具 schema 的  |
+| [ds_web_craw](https://github.com/dsh-external/ds_web_craw) | 基建 | 待调研 | — |
+| [dsh-advisor](https://github.com/dsh-external/dsh-advisor) | 插件 | 待调研 | Advisor - Pair a second model that passively rev |
+| [dsh-cyber-sec](https://github.com/dsh-external/dsh-cyber-sec) | 插件 | 待调研 | dsh 生态授权渗透测试 profile bundle：容器化 bash 执行（可降级本机）+  |
+| [dsh-data-agent](https://github.com/dsh-external/dsh-data-agent) | 插件 | 待调研 | 让AI帮你连数据库、写SQL的DSH插件 |
+| [dsh-find-plugins](https://github.com/dsh-external/dsh-find-plugins) | 技能 | 待调研 | — |
+| [dsh-kb-sieve](https://github.com/dsh-external/dsh-kb-sieve) | 插件 | 待调研 | DSH knowledge-base plugin: build audit-able KB p |
+| [dsh-loop](https://github.com/dsh-external/dsh-loop) | 插件 | 待调研 | DSH 插件：定时循环（/loop 命令 + loop 工具 + 活动状态条） |
+| [dsh-mineru](https://github.com/dsh-external/dsh-mineru) | 插件 | 待调研 | DSH plugin exposing MineRU document parsing tool |
+| [dsh-navbar](https://github.com/dsh-external/dsh-navbar) | 插件 | 待调研 | DSH 插件：对话节点导航条（右缘节点串快速跳转 user 消息） |
+| [dsh-notebooks](https://github.com/dsh-external/dsh-notebooks) | 插件 | 待调研 | — |
+| [dsh-openpencil](https://github.com/dsh-external/dsh-openpencil) | 插件 | 待调研 | OpenPencil design preview and editing plugin for |
+| [dsh-profile-bundle-example](https://github.com/dsh-external/dsh-profile-bundle-example) | 合集 | 待调研 | Minimal script-free Profile Bundle example for D |
+| [dsh-stock-market](https://github.com/dsh-external/dsh-stock-market) | 插件 | 待调研 | 有效解决了写代码的时候账户不能同时亏钱的BUG |
+| [dsh-task-status](https://github.com/dsh-external/dsh-task-status) | 插件 | 待调研 | DSH 插件：后台任务状态条（对话页任务进度 + 实时输出 tail） |
+| [dsh-tool-csv](https://github.com/dsh-external/dsh-tool-csv) | 插件 | 待调研 | DSH CSV 数据工具插件：解析/查询/统计/转换 CSV 文本（RFC 4180），零依赖状 |
+| [dsh-tool-diff](https://github.com/dsh-external/dsh-tool-diff) | 插件 | 待调研 | DSH Diff 工具插件：文本/JSON/CSV/Markdown 结构化比较与 unifie |
+| [dsh-tool-markdown](https://github.com/dsh-external/dsh-tool-markdown) | 插件 | 待调研 | DSH Markdown 工具插件：HTML↔Markdown 转换、GFM 表格规范化、目录生 |
+| [dsh-tool-regex](https://github.com/dsh-external/dsh-tool-regex) | 插件 | 待调研 | DSH 正则工具插件：测试匹配/提取捕获组/安全替换/静态解释正则（不执行代码），零依赖，注册  |
+| [dsh-tool-schema](https://github.com/dsh-external/dsh-tool-schema) | 插件 | 待调研 | DSH JSON Schema 验证工具插件：validate/paths/explain/no |
+| [dsh-toolkit](https://github.com/dsh-external/dsh-toolkit) | 合集 | 待调研 | DSH 零依赖工具包 collection —— time / encoding / json  |
+| [dsh-vision-toolkit](https://github.com/dsh-external/dsh-vision-toolkit) | 插件 | 待调研 | DeepSeek Harness-native integration for agent-vi |
+| [dsh-web-archive](https://github.com/dsh-external/dsh-web-archive) | 插件 | 待调研 | 折叠对话当中众多的“无用消息”，例如Think、Bash等 |
+| [tonghuashun-harness](https://github.com/dsh-external/tonghuashun-harness) | 基建 | 待调研 | — |
+| [Top](https://github.com/dsh-external/Top) | 插件 | 待调研 | 📊 Daily leaderboard for the dsh-external plugin  |
+| [dsh-balance](https://github.com/TwotwoPiggy/dsh-balance) | 插件 | 待调研 | 实时 token 余额跟踪 |
+| [dsh-web-search-firecrawl](https://github.com/yangzhe1003/dsh-web-search-firecrawl) | 插件 | 待调研 | Firecrawl 搜索提供方 |
+| [dsh-context7](https://github.com/dsh-external/dsh-context7) | 插件 | 占位 | Reserved DSH integration for Context7: current,  |
 </details>
 
 *文件与数据处理：读写与格式转换、爬取抓取、数据库、编码识别、文档解析与知识库*
@@ -293,26 +293,26 @@ DeepSeek Harness（DSH）插件生态的**目录 + 兼容性情报站**。
 
 *摸鱼与趣味：小游戏、桌面宠物、表情包、音乐、股票行情与旅行*
 
-| 插件 | 类型 | 说明 |
-|---|---|---|
-| [dsh-auto-chess](https://github.com/dsh-external/dsh-auto-chess) | 插件 | DSH Web里的自走棋插件：人机对战或双AI对弈 |
-| [dsh-d399](https://github.com/dsh-external/dsh-d399) | 插件 | 深夜寂寞？来玩 D399 — 当模型生成时弹出小游戏菜单（wordle / 消消乐，可拓展游戏注 |
-| [dsh-deep-whale](https://github.com/dsh-external/dsh-deep-whale) | 合集 | DSH Web 鲸娘皮肤系列(深海女仆工坊 maid-atelier)——CC BY-NC-SA |
-| [dsh-emoji](https://github.com/dsh-external/dsh-emoji) | 插件 | — |
-| [dsh-gomoku](https://github.com/dsh-external/dsh-gomoku) | 插件 | 在DSH中与AI下五子棋，也可以让AI对局，看哪个AI棋力更强 |
-| [dsh-lazyfish](https://github.com/dsh-external/dsh-lazyfish) | 插件 | DSH 右侧摸鱼面板：多源信息流 + B站播放器 + 任务联动（Lazy Fish = 摸鱼） |
-| [dsh-meme](https://github.com/dsh-external/dsh-meme) | 插件 | 让 agent 在回复正文内联表情包：inject_meme 工具 + httpServer 图 |
-| [dsh-minigames](https://github.com/dsh-external/dsh-minigames) | 插件 | DSH Web UI 右侧小游戏面板：恐龙跳一跳 / 俄罗斯方块 / 坦克大战(AI)，可扩展游 |
-| [dsh-music-player](https://github.com/dsh-external/dsh-music-player) | 插件 | — |
-| [dsh-pet](https://github.com/dsh-external/dsh-pet) | 插件 | 🐋 DSH 桌宠：悬浮桌面的 DeepSeek 小鲸鱼，不打开 DSH 也能实时感知会话状态（需 |
-| [dsh-pet-rs](https://github.com/dsh-external/dsh-pet-rs) | 基建 | — |
-| [dsh-sfw](https://github.com/dsh-external/dsh-sfw) | 插件 | 为了防止你的好bro/同事看到内测dsh然后：？这是什么 |
-| [dsh-stickers](https://github.com/dsh-external/dsh-stickers) | 插件 | DSH WebUI sticker plugin for bidirectional user  |
-| [dsh-travel-plugin](https://github.com/dsh-external/dsh-travel-plugin) | 插件 | 旅行小插件 |
-| [dsh-ui-whale](https://github.com/dsh-external/dsh-ui-whale) | 插件 | 【求⭐】🐋DSH Web UI 全手绘像素鲸鱼伙伴插件：会话标题栏常驻，平时眨眼/偶尔摆尾/动胸 |
-| [oh-my-dsh](https://github.com/dsh-external/oh-my-dsh) | 合集 | Perpetual-motion swarm: DSH feature-gap plugins  |
-| [toybox](https://github.com/dsh-external/toybox) | 合集 | DSH 插件玩具箱 🧸 —— 有趣的技能/MCP 插件收藏：代码考古学家在此安家（更多整活插件陆 |
-| [whale-girl](https://github.com/dsh-external/whale-girl) | 插件 | DSH Web GUI 桌面宠物插件（QQ 宠物形态）：右下角悬浮、可拖拽/投喂/玩耍的积累型伙 |
+| 插件 | 类型 | 兼容性 | 说明 |
+|---|---|---|---|
+| [dsh-minigames](https://github.com/dsh-external/dsh-minigames) | 插件 | 兼容 | DSH Web UI 右侧小游戏面板：恐龙跳一跳 / 俄罗斯方块 / 坦克大战(AI)，可扩展游 |
+| [dsh-sfw](https://github.com/dsh-external/dsh-sfw) | 插件 | 兼容 | 为了防止你的好bro/同事看到内测dsh然后：？这是什么 |
+| [dsh-ui-whale](https://github.com/dsh-external/dsh-ui-whale) | 插件 | 兼容 | 【求⭐】🐋DSH Web UI 全手绘像素鲸鱼伙伴插件：会话标题栏常驻，平时眨眼/偶尔摆尾/动胸 |
+| [toybox](https://github.com/dsh-external/toybox) | 合集 | 兼容 | DSH 插件玩具箱 🧸 —— 有趣的技能/MCP 插件收藏：代码考古学家在此安家（更多整活插件陆 |
+| [dsh-auto-chess](https://github.com/dsh-external/dsh-auto-chess) | 插件 | 待调研 | DSH Web里的自走棋插件：人机对战或双AI对弈 |
+| [dsh-d399](https://github.com/dsh-external/dsh-d399) | 插件 | 待调研 | 深夜寂寞？来玩 D399 — 当模型生成时弹出小游戏菜单（wordle / 消消乐，可拓展游戏注 |
+| [dsh-deep-whale](https://github.com/dsh-external/dsh-deep-whale) | 合集 | 待调研 | DSH Web 鲸娘皮肤系列(深海女仆工坊 maid-atelier)——CC BY-NC-SA |
+| [dsh-emoji](https://github.com/dsh-external/dsh-emoji) | 插件 | 待调研 | — |
+| [dsh-gomoku](https://github.com/dsh-external/dsh-gomoku) | 插件 | 待调研 | 在DSH中与AI下五子棋，也可以让AI对局，看哪个AI棋力更强 |
+| [dsh-lazyfish](https://github.com/dsh-external/dsh-lazyfish) | 插件 | 待调研 | DSH 右侧摸鱼面板：多源信息流 + B站播放器 + 任务联动（Lazy Fish = 摸鱼） |
+| [dsh-meme](https://github.com/dsh-external/dsh-meme) | 插件 | 待调研 | 让 agent 在回复正文内联表情包：inject_meme 工具 + httpServer 图 |
+| [dsh-music-player](https://github.com/dsh-external/dsh-music-player) | 插件 | 待调研 | — |
+| [dsh-pet](https://github.com/dsh-external/dsh-pet) | 插件 | 待调研 | 🐋 DSH 桌宠：悬浮桌面的 DeepSeek 小鲸鱼，不打开 DSH 也能实时感知会话状态（需 |
+| [dsh-pet-rs](https://github.com/dsh-external/dsh-pet-rs) | 基建 | 待调研 | — |
+| [dsh-stickers](https://github.com/dsh-external/dsh-stickers) | 插件 | 待调研 | DSH WebUI sticker plugin for bidirectional user  |
+| [dsh-travel-plugin](https://github.com/dsh-external/dsh-travel-plugin) | 插件 | 待调研 | 旅行小插件 |
+| [oh-my-dsh](https://github.com/dsh-external/oh-my-dsh) | 合集 | 待调研 | Perpetual-motion swarm: DSH feature-gap plugins  |
+| [whale-girl](https://github.com/dsh-external/whale-girl) | 插件 | 待调研 | DSH Web GUI 桌面宠物插件（QQ 宠物形态）：右下角悬浮、可拖拽/投喂/玩耍的积累型伙 |
 </details>
 
 *摸鱼与趣味：小游戏、桌面宠物、表情包、音乐、股票行情与旅行*
@@ -322,54 +322,54 @@ DeepSeek Harness（DSH）插件生态的**目录 + 兼容性情报站**。
 
 *运行环境与分发：桌面/移动客户端、远程主机、浏览器桥、沙箱隔离、插件管理、更新与监控*
 
-| 插件 | 类型 | 说明 |
-|---|---|---|
-| [browser4-dsh](https://github.com/dsh-external/browser4-dsh) | 技能 | Browser4 — an AI-native browser engine for auton |
-| [deepseek-harness-desktop](https://github.com/dsh-external/deepseek-harness-desktop) | 基建 | DSH 桌面应用 |
-| [deepseek-harness-distro](https://github.com/dsh-external/deepseek-harness-distro) | 基建 | 自定义发行版 |
-| [dsh-acp](https://github.com/dsh-external/dsh-acp) | 插件 | Client-neutral ACP adapter for DeepSeek Harness |
-| [dsh-android](https://github.com/dsh-external/dsh-android) | 基建 | run dsh on your android device. |
-| [dsh-browser](https://github.com/dsh-external/dsh-browser) | 基建 | Chrome侧边栏拓展，使用 DSH 直接操作浏览器（0视觉能力依赖） |
-| [dsh-browser-bridge](https://github.com/dsh-external/dsh-browser-bridge) | 插件 | Prompt-scoped bridge between DSH and explicitly  |
-| [dsh-companion](https://github.com/dsh-external/dsh-companion) | 基建 | DeepSeek Harness 的常驻桌面助手：全局唤起、定时自动化、快捷回复、插件市场 |
-| [dsh-computer-use](https://github.com/dsh-external/dsh-computer-use) | 插件 | Accessibility-first macOS Computer Use bundle fo |
-| [dsh-desktop](https://github.com/dsh-external/dsh-desktop) | 基建 | — |
-| [dsh-desktop-electron](https://github.com/dsh-external/dsh-desktop-electron) | 基建 | Cross-platform Electron desktop shell for the DS |
-| [dsh-desktop-mac](https://github.com/dsh-external/dsh-desktop-mac) | 基建 | — |
-| [dsh-desktop-tools](https://github.com/dsh-external/dsh-desktop-tools) | 基建 | DSH 桌面工具集:一键启动、自动升级、开机自启、PWA 可安装补丁(内测私有) |
-| [dsh-harness-ops](https://github.com/dsh-external/dsh-harness-ops) | 合集 | DSH 运维工具箱：升级、重启、故障都不用操心 |
-| [dsh-hub](https://github.com/dsh-external/dsh-hub) | 基建 | OMDSH community extension hub built on official  |
-| [dsh-kimi-browser](https://github.com/dsh-external/dsh-kimi-browser) | 插件 | DSH 插件：经 Kimi WebBridge 让模型驱动你的真实浏览器——13 个 webbr |
-| [dsh-mobile](https://github.com/dsh-external/dsh-mobile) | 插件 | — |
-| [dsh-mobileweb-adapter](https://github.com/dsh-external/dsh-mobileweb-adapter) | 插件 | DSH 手机 Web 适配器 —— 让 DeepSeek Harness Web GUI 在手机 |
-| [dsh-multica-runtime](https://github.com/dsh-external/dsh-multica-runtime) | 插件 | 支持在 Multica 上使用 DSH 作为 runtime |
-| [dsh-ohos-patch](https://github.com/dsh-external/dsh-ohos-patch) | 基建 | 让deepseek harness能在 ohos上跑！ |
-| [dsh-opencode-server](https://github.com/dsh-external/dsh-opencode-server) | 插件 | 把dsh的tui换成opencode！本插件为dsh web实现了opencode api的必要 |
-| [dsh-paseo](https://github.com/dsh-external/dsh-paseo) | 插件 | DSH 的paseo插件扩展支持 |
-| [dsh-plugin-check](https://github.com/dsh-external/dsh-plugin-check) | 插件 | DSH 插件健康检查工具：扫描插件仓库的清单协议 / patch 格式 / 构建陷阱 / hub |
-| [dsh-plugin-radar](https://github.com/dsh-external/dsh-plugin-radar) | 研究 | DSH 插件兼容性雷达：每日自动扫描 org 插件与 mainline 接口漂移（补丁/seam |
-| [dsh-public-repo-monitor](https://github.com/dsh-external/dsh-public-repo-monitor) | 基建 | — |
-| [dsh-remote](https://github.com/dsh-external/dsh-remote) | 插件 | 为DSH引入类似于Codex APP的通过SSH控制远端机器的能力 |
-| [dsh-security](https://github.com/dsh-external/dsh-security) | 研究 | DSH 现有的可行的攻击链 demo |
-| [dsh-security-audit](https://github.com/dsh-external/dsh-security-audit) | 插件 | DSH 本机安全审计插件：配置/插件来源/会话/网络暴露面，只读脱敏风险报告 |
-| [dsh-session-search](https://github.com/dsh-external/dsh-session-search) | 插件 | 跨工具会话全文搜索插件（dsh/codex/claude/pi/opencode）— Cross |
-| [dsh-sonar](https://github.com/dsh-external/dsh-sonar) | 插件 | — |
-| [dsh-win-port](https://github.com/dsh-external/dsh-win-port) | 基建 | — |
-| [dshx-update-check](https://github.com/dsh-external/dshx-update-check) | 插件 | marisa#1 提案原型：commit SHA 对比检测插件更新（只检测不自动更新） |
-| [ego-browser](https://github.com/dsh-external/ego-browser) | 插件 | DSH（DeepSeek Harness）插件：把 ego-lite 浏览器（给 AI Agen |
-| [fabric](https://github.com/dsh-external/fabric) | 基建 | 一种类似MC Fabric的hook处理器 |
-| [marisa](https://github.com/dsh-external/marisa) | 基建 | Marisa（魔理沙）— DeepSeek Harness 外部插件管理器：寄生安装、CLI + |
-| [oh-dsh-desktop](https://github.com/dsh-external/oh-dsh-desktop) | 基建 | Extensible macOS workbench for DeepSeek Harness  |
-| [oh-my-deepseek](https://github.com/dsh-external/oh-my-deepseek) | 插件 | oh-my-deepseek |
-| [oh-my-dsh-distribution](https://github.com/dsh-external/oh-my-dsh-distribution) | 基建 | Pure-data Oh My DSH distribution Recipes for DSH |
-| [plugin-registry](https://github.com/dsh-external/plugin-registry) | 基建 | DSH 插件生态基建：薄控制台（浏览器面板管理官方 repository 插件，0 patch） |
-| [plugin-template](https://github.com/dsh-external/plugin-template) | 基建 | 基于原turtle ui官方仓库创建的plugin模板仓库 |
-| [repo-visibility-guard](https://github.com/dsh-external/repo-visibility-guard) | 基建 | Automatically remediate public repositories in d |
-| [sandbox-micro](https://github.com/dsh-external/sandbox-micro) | 基建 | microsandbox支持 |
-| [sandbox-mxc](https://github.com/dsh-external/sandbox-mxc) | 基建 | 微软跨平台沙盒支持 |
-| [sandbox-nono](https://github.com/dsh-external/sandbox-nono) | 基建 | nono沙盒支持 |
-| [dsh-security-scan](https://github.com/ben7am1n/dsh-security-scan) | 插件 | 安全扫描插件 |
-| [deepseek-harness-desktop](https://github.com/chyra-moon/deepseek-harness-desktop) | 插件 | 桌面外壳：官方 1:1 复刻 |
+| 插件 | 类型 | 兼容性 | 说明 |
+|---|---|---|---|
+| [deepseek-harness-desktop](https://github.com/dsh-external/deepseek-harness-desktop) | 基建 | 兼容 | DSH 桌面应用 |
+| [deepseek-harness-distro](https://github.com/dsh-external/deepseek-harness-distro) | 基建 | 兼容 | 自定义发行版 |
+| [dsh-acp](https://github.com/dsh-external/dsh-acp) | 插件 | 兼容 | Client-neutral ACP adapter for DeepSeek Harness |
+| [dsh-android](https://github.com/dsh-external/dsh-android) | 基建 | 兼容 | run dsh on your android device. |
+| [dsh-desktop](https://github.com/dsh-external/dsh-desktop) | 基建 | 兼容 | — |
+| [dsh-desktop-electron](https://github.com/dsh-external/dsh-desktop-electron) | 基建 | 兼容 | Cross-platform Electron desktop shell for the DS |
+| [dsh-harness-ops](https://github.com/dsh-external/dsh-harness-ops) | 合集 | 兼容 | DSH 运维工具箱：升级、重启、故障都不用操心 |
+| [dsh-hub](https://github.com/dsh-external/dsh-hub) | 基建 | 兼容 | OMDSH community extension hub built on official  |
+| [dsh-opencode-server](https://github.com/dsh-external/dsh-opencode-server) | 插件 | 兼容 | 把dsh的tui换成opencode！本插件为dsh web实现了opencode api的必要 |
+| [dsh-win-port](https://github.com/dsh-external/dsh-win-port) | 基建 | 兼容 | — |
+| [dshx-update-check](https://github.com/dsh-external/dshx-update-check) | 插件 | 兼容 | marisa#1 提案原型：commit SHA 对比检测插件更新（只检测不自动更新） |
+| [plugin-registry](https://github.com/dsh-external/plugin-registry) | 基建 | 兼容 | DSH 插件生态基建：薄控制台（浏览器面板管理官方 repository 插件，0 patch） |
+| [plugin-template](https://github.com/dsh-external/plugin-template) | 基建 | 兼容 | 基于原turtle ui官方仓库创建的plugin模板仓库 |
+| [deepseek-harness-desktop](https://github.com/chyra-moon/deepseek-harness-desktop) | 插件 | 兼容 | 桌面外壳：官方 1:1 复刻 |
+| [dsh-companion](https://github.com/dsh-external/dsh-companion) | 基建 | 关注 | DeepSeek Harness 的常驻桌面助手：全局唤起、定时自动化、快捷回复、插件市场 |
+| [dsh-session-search](https://github.com/dsh-external/dsh-session-search) | 插件 | 关注 | 跨工具会话全文搜索插件（dsh/codex/claude/pi/opencode）— Cross |
+| [marisa](https://github.com/dsh-external/marisa) | 基建 | 关注 | Marisa（魔理沙）— DeepSeek Harness 外部插件管理器：寄生安装、CLI + |
+| [sandbox-mxc](https://github.com/dsh-external/sandbox-mxc) | 基建 | 关注 | 微软跨平台沙盒支持 |
+| [dsh-ohos-patch](https://github.com/dsh-external/dsh-ohos-patch) | 基建 | 需适配 | 让deepseek harness能在 ohos上跑！ |
+| [fabric](https://github.com/dsh-external/fabric) | 基建 | 需适配 | 一种类似MC Fabric的hook处理器 |
+| [browser4-dsh](https://github.com/dsh-external/browser4-dsh) | 技能 | 待调研 | Browser4 — an AI-native browser engine for auton |
+| [dsh-browser](https://github.com/dsh-external/dsh-browser) | 基建 | 待调研 | Chrome侧边栏拓展，使用 DSH 直接操作浏览器（0视觉能力依赖） |
+| [dsh-browser-bridge](https://github.com/dsh-external/dsh-browser-bridge) | 插件 | 待调研 | Prompt-scoped bridge between DSH and explicitly  |
+| [dsh-computer-use](https://github.com/dsh-external/dsh-computer-use) | 插件 | 待调研 | Accessibility-first macOS Computer Use bundle fo |
+| [dsh-desktop-mac](https://github.com/dsh-external/dsh-desktop-mac) | 基建 | 待调研 | — |
+| [dsh-desktop-tools](https://github.com/dsh-external/dsh-desktop-tools) | 基建 | 待调研 | DSH 桌面工具集:一键启动、自动升级、开机自启、PWA 可安装补丁(内测私有) |
+| [dsh-kimi-browser](https://github.com/dsh-external/dsh-kimi-browser) | 插件 | 待调研 | DSH 插件：经 Kimi WebBridge 让模型驱动你的真实浏览器——13 个 webbr |
+| [dsh-mobile](https://github.com/dsh-external/dsh-mobile) | 插件 | 待调研 | — |
+| [dsh-mobileweb-adapter](https://github.com/dsh-external/dsh-mobileweb-adapter) | 插件 | 待调研 | DSH 手机 Web 适配器 —— 让 DeepSeek Harness Web GUI 在手机 |
+| [dsh-multica-runtime](https://github.com/dsh-external/dsh-multica-runtime) | 插件 | 待调研 | 支持在 Multica 上使用 DSH 作为 runtime |
+| [dsh-paseo](https://github.com/dsh-external/dsh-paseo) | 插件 | 待调研 | DSH 的paseo插件扩展支持 |
+| [dsh-plugin-check](https://github.com/dsh-external/dsh-plugin-check) | 插件 | 待调研 | DSH 插件健康检查工具：扫描插件仓库的清单协议 / patch 格式 / 构建陷阱 / hub |
+| [dsh-plugin-radar](https://github.com/dsh-external/dsh-plugin-radar) | 研究 | 待调研 | DSH 插件兼容性雷达：每日自动扫描 org 插件与 mainline 接口漂移（补丁/seam |
+| [dsh-public-repo-monitor](https://github.com/dsh-external/dsh-public-repo-monitor) | 基建 | 待调研 | — |
+| [dsh-remote](https://github.com/dsh-external/dsh-remote) | 插件 | 待调研 | 为DSH引入类似于Codex APP的通过SSH控制远端机器的能力 |
+| [dsh-security](https://github.com/dsh-external/dsh-security) | 研究 | 待调研 | DSH 现有的可行的攻击链 demo |
+| [dsh-security-audit](https://github.com/dsh-external/dsh-security-audit) | 插件 | 待调研 | DSH 本机安全审计插件：配置/插件来源/会话/网络暴露面，只读脱敏风险报告 |
+| [dsh-sonar](https://github.com/dsh-external/dsh-sonar) | 插件 | 待调研 | — |
+| [ego-browser](https://github.com/dsh-external/ego-browser) | 插件 | 待调研 | DSH（DeepSeek Harness）插件：把 ego-lite 浏览器（给 AI Agen |
+| [oh-dsh-desktop](https://github.com/dsh-external/oh-dsh-desktop) | 基建 | 待调研 | Extensible macOS workbench for DeepSeek Harness  |
+| [oh-my-dsh-distribution](https://github.com/dsh-external/oh-my-dsh-distribution) | 基建 | 待调研 | Pure-data Oh My DSH distribution Recipes for DSH |
+| [repo-visibility-guard](https://github.com/dsh-external/repo-visibility-guard) | 基建 | 待调研 | Automatically remediate public repositories in d |
+| [sandbox-micro](https://github.com/dsh-external/sandbox-micro) | 基建 | 待调研 | microsandbox支持 |
+| [sandbox-nono](https://github.com/dsh-external/sandbox-nono) | 基建 | 待调研 | nono沙盒支持 |
+| [dsh-security-scan](https://github.com/ben7am1n/dsh-security-scan) | 插件 | 待调研 | 安全扫描插件 |
+| [oh-my-deepseek](https://github.com/dsh-external/oh-my-deepseek) | 插件 | 占位 | oh-my-deepseek |
 </details>
 
 *运行环境与分发：桌面/移动客户端、远程主机、浏览器桥、沙箱隔离、插件管理、更新与监控*
@@ -379,25 +379,25 @@ DeepSeek Harness（DSH）插件生态的**目录 + 兼容性情报站**。
 
 *学习与探索：技能包、插件开发指南、文档导航、评测基准与社区 onboarding*
 
-| 插件 | 类型 | 说明 |
-|---|---|---|
-| [deepseek-manners](https://github.com/dsh-external/deepseek-manners) | 插件 | DSH 插件：给每次消息后注入感谢语（deepseek-manners） |
-| [dsh-101](https://github.com/dsh-external/dsh-101) | 插件 | DSH 文档阅读模式 |
-| [dsh-cordis-examples](https://github.com/dsh-external/dsh-cordis-examples) | 合集 | Minimal native DSH/Cordis extension examples |
-| [dsh-cordis-rocks](https://github.com/dsh-external/dsh-cordis-rocks) | 合集 | 16-chapter companion tutorial for reversible Cor |
-| [dsh-deepresearch](https://github.com/dsh-external/dsh-deepresearch) | 插件 | — |
-| [dsh-edu](https://github.com/dsh-external/dsh-edu) | 合集 | 教育版 DeepSeek Harness（ohmydsh 式）：7 个教育 bundle 插件  |
-| [dsh-humanize](https://github.com/dsh-external/dsh-humanize) | 技能 | — |
-| [dsh-plugin-dev](https://github.com/dsh-external/dsh-plugin-dev) | 技能 | DSH 插件开发踩坑与做法档案（skill + 文档）：cordis 双副本、tsconfig  |
-| [dsh-plugin-guide](https://github.com/dsh-external/dsh-plugin-guide) | 合集 | DSH 插件开发指南：从零到精通 |
-| [dsh-plugin-skills](https://github.com/dsh-external/dsh-plugin-skills) | 技能 | Agent skills for building and testing DeepSeek H |
-| [dsh-plus](https://github.com/dsh-external/dsh-plus) | 合集 | DeepSeek Harness Plus: curated plugin manifest a |
-| [dsh-scholar](https://github.com/dsh-external/dsh-scholar) | 研究 | — |
-| [dshfind](https://github.com/dsh-external/dshfind) | 研究 | 从0开始学习dsh，dsh资源和导航站 dsh.com |
-| [onboarding](https://github.com/dsh-external/onboarding) | 社区 | Private onboarding hub for DeepSeek Harness beta |
-| [savemoneybenchmark](https://github.com/dsh-external/savemoneybenchmark) | 研究 | 降本增效benchmark |
-| [zotero-harvest](https://github.com/dsh-external/zotero-harvest) | 插件 | Zotero 文献采集入库插件（DSH external plugin）：多源检索（OpenAl |
-| [dsh-review-skills](https://github.com/ben7am1n/dsh-review-skills) | 插件 | 代码评审技能集 |
+| 插件 | 类型 | 兼容性 | 说明 |
+|---|---|---|---|
+| [deepseek-manners](https://github.com/dsh-external/deepseek-manners) | 插件 | 待调研 | DSH 插件：给每次消息后注入感谢语（deepseek-manners） |
+| [dsh-101](https://github.com/dsh-external/dsh-101) | 插件 | 待调研 | DSH 文档阅读模式 |
+| [dsh-cordis-rocks](https://github.com/dsh-external/dsh-cordis-rocks) | 合集 | 待调研 | 16-chapter companion tutorial for reversible Cor |
+| [dsh-deepresearch](https://github.com/dsh-external/dsh-deepresearch) | 插件 | 待调研 | — |
+| [dsh-edu](https://github.com/dsh-external/dsh-edu) | 合集 | 待调研 | 教育版 DeepSeek Harness（ohmydsh 式）：7 个教育 bundle 插件  |
+| [dsh-humanize](https://github.com/dsh-external/dsh-humanize) | 技能 | 待调研 | — |
+| [dsh-plugin-dev](https://github.com/dsh-external/dsh-plugin-dev) | 技能 | 待调研 | DSH 插件开发踩坑与做法档案（skill + 文档）：cordis 双副本、tsconfig  |
+| [dsh-plugin-guide](https://github.com/dsh-external/dsh-plugin-guide) | 合集 | 待调研 | DSH 插件开发指南：从零到精通 |
+| [dsh-plugin-skills](https://github.com/dsh-external/dsh-plugin-skills) | 技能 | 待调研 | Agent skills for building and testing DeepSeek H |
+| [dsh-plus](https://github.com/dsh-external/dsh-plus) | 合集 | 待调研 | DeepSeek Harness Plus: curated plugin manifest a |
+| [dsh-scholar](https://github.com/dsh-external/dsh-scholar) | 研究 | 待调研 | — |
+| [dshfind](https://github.com/dsh-external/dshfind) | 研究 | 待调研 | 从0开始学习dsh，dsh资源和导航站 dsh.com |
+| [onboarding](https://github.com/dsh-external/onboarding) | 社区 | 待调研 | Private onboarding hub for DeepSeek Harness beta |
+| [savemoneybenchmark](https://github.com/dsh-external/savemoneybenchmark) | 研究 | 待调研 | 降本增效benchmark |
+| [zotero-harvest](https://github.com/dsh-external/zotero-harvest) | 插件 | 待调研 | Zotero 文献采集入库插件（DSH external plugin）：多源检索（OpenAl |
+| [dsh-review-skills](https://github.com/ben7am1n/dsh-review-skills) | 插件 | 待调研 | 代码评审技能集 |
+| [dsh-cordis-examples](https://github.com/dsh-external/dsh-cordis-examples) | 合集 | 占位 | Minimal native DSH/Cordis extension examples |
 </details>
 
 *学习与探索：技能包、插件开发指南、文档导航、评测基准与社区 onboarding*
@@ -407,15 +407,15 @@ DeepSeek Harness（DSH）插件生态的**目录 + 兼容性情报站**。
 
 *描述缺失或暂未归类的仓库，补充信息后将细分*
 
-| 插件 | 类型 | 说明 |
-|---|---|---|
-| [dsh-fkin-vibe](https://github.com/dsh-external/dsh-fkin-vibe) | 插件 | — |
-| [dsh-hmz](https://github.com/dsh-external/dsh-hmz) | 插件 | — |
-| [dsh-mygo](https://github.com/dsh-external/dsh-mygo) | 基建 | — |
-| [dsh-save-intp](https://github.com/dsh-external/dsh-save-intp) | 插件 | — |
-| [dsh-serenity-plugin](https://github.com/dsh-external/dsh-serenity-plugin) | 合集 | dsh version serenity-plugin |
-| [dsh-sidechain](https://github.com/dsh-external/dsh-sidechain) | 插件 | DSH 侧会话插件：/side 持续性侧会话（Codex 风格）与 /btw 一次性侧问（Cla |
-| [dsh-spur](https://github.com/dsh-external/dsh-spur) | 插件 | — |
+| 插件 | 类型 | 兼容性 | 说明 |
+|---|---|---|---|
+| [dsh-mygo](https://github.com/dsh-external/dsh-mygo) | 基建 | 待调研 | — |
+| [dsh-save-intp](https://github.com/dsh-external/dsh-save-intp) | 插件 | 待调研 | — |
+| [dsh-serenity-plugin](https://github.com/dsh-external/dsh-serenity-plugin) | 合集 | 待调研 | dsh version serenity-plugin |
+| [dsh-sidechain](https://github.com/dsh-external/dsh-sidechain) | 插件 | 待调研 | DSH 侧会话插件：/side 持续性侧会话（Codex 风格）与 /btw 一次性侧问（Cla |
+| [dsh-spur](https://github.com/dsh-external/dsh-spur) | 插件 | 待调研 | — |
+| [dsh-fkin-vibe](https://github.com/dsh-external/dsh-fkin-vibe) | 插件 | 占位 | — |
+| [dsh-hmz](https://github.com/dsh-external/dsh-hmz) | 插件 | 占位 | — |
 </details>
 
 *描述缺失或暂未归类的仓库，补充信息后将细分*
@@ -433,7 +433,7 @@ DSH 插件生态交流群（微信群）：插件作者、维护者与使用者�
 ## 当前生态快照
 
 <!-- AUTO:ecosystem:START -->
-> 更新于 2026-08-13 23:45 · 每 8 小时刷新 · mainline `7b9644f`
+> 更新于 2026-08-14 04:28 · 每 8 小时刷新 · mainline `7b9644f`
 
 | 证据层 | 当前结果 |
 |---|---:|
@@ -442,7 +442,7 @@ DSH 插件生态交流群（微信群）：插件作者、维护者与使用者�
 | 证据不足 | 188 待调研 |
 | 其他 | 13 占位 · 2 不适用 · 4 已删除 |
 | 运行级实测 | 0 可用 · 5 失败（共测试 5 个） |
-| 正在跟踪的 PR | 11 |
+| 正在跟踪的 PR | 10 |
 
 [完整索引](reports/2026-08-13/index.md) · [静态矩阵](reports/2026-08-13/mainline-compat.md) · [编译实验](reports/2026-08-13/compile-compat.md) · [运行实测](reports/2026-08-13/runtime-test.md)
 
@@ -544,7 +544,7 @@ DSH 插件生态交流群（微信群）：插件作者、维护者与使用者�
 | [dsh-slice-agent-loop](https://github.com/dsh-external/dsh-slice-agent-loop) | 关注 |
 | [dsh-custom-tool](https://github.com/dsh-external/dsh-custom-tool) | 关注 |
 
-**待调研**（188）
+<details><summary>待调研（188）—— 点击展开</summary>
 
 | 仓库 | 状态 |
 |---|---|
@@ -736,6 +736,7 @@ DSH 插件生态交流群（微信群）：插件作者、维护者与使用者�
 | [dsh-longbridge](https://github.com/dsh-external/dsh-longbridge) | 待调研 |
 | [dsh-dzcf](https://github.com/dsh-external/dsh-dzcf) | 待调研 |
 | [---](https://github.com/dsh-external/---) | 待调研 |
+</details>
 
 **占位**（13）
 
@@ -807,7 +808,6 @@ DSH 插件生态交流群（微信群）：插件作者、维护者与使用者�
 | [dsh-my-rsi](https://github.com/dsh-external/dsh-my-rsi) | [#49](https://github.com/dsh-external/dsh-my-rsi/pull/49) | docs: record external method provenance (#45) | 2026-08-11 |
 | [dsh-my-rsi](https://github.com/dsh-external/dsh-my-rsi) | [#43](https://github.com/dsh-external/dsh-my-rsi/pull/43) | feat: rsi-core live plugin execution face (#41) + supervised revival layer (#42) | 2026-08-11 |
 | [session-teleport](https://github.com/dsh-external/session-teleport) | [#2](https://github.com/dsh-external/session-teleport/pull/2) | Add safe plugin lifecycle and real-device acceptance | 2026-08-10 |
-| [group-chat-diary](https://github.com/dsh-external/group-chat-diary) | [#4](https://github.com/dsh-external/group-chat-diary/pull/4) | Automate Cloudflare Pages deployment | 2026-08-07 |
 | [dsh-live-stats](https://github.com/dsh-external/dsh-live-stats) | [#1](https://github.com/dsh-external/dsh-live-stats/pull/1) | fix: make live token and TPS accounting provider-aligned | 2026-08-07 |
 
 <!-- AUTO:ecosystem:END -->

@@ -15,7 +15,7 @@ timeout 90 "$GH" api "repos/dsh-external/hub/contents/catalog.json" --jq '.conte
 [ -s "$CATALOG" ] || { echo "[gen-catalog] hub catalog 拉取失败，跳过"; rm -f "$CATALOG"; exit 0; }
 
 python3 - "$CATALOG" <<'PYEOF'
-import json, sys
+import json, re, sys
 
 catalog = json.load(open(sys.argv[1], encoding="utf-8"))
 repos = catalog.get("repos", [])
@@ -114,6 +114,30 @@ EXTRA_REPOS = {
     'dsh-claude-move': ('https://github.com/PerryLink/dsh-claude-move', '迁移 Claude Code 会话', 'coding'),
 }
 
+# 从最新 mainline-compat.md 读取兼容性判定
+import glob, os
+VERDICT_MAP = {}
+_reports = sorted(glob.glob('reports/20*/'))
+if _reports:
+    _compat = os.path.join(_reports[-1], 'mainline-compat.md')
+    if os.path.isfile(_compat):
+        for _line in open(_compat, encoding='utf-8'):
+            _m = re.match(r'^\|\s*([A-Za-z0-9_.-]+(?:/[A-Za-z0-9_.-]+)?)\s*\|.*\|\s*([^|]+?)\s*\|$', _line)
+            if _m:
+                VERDICT_MAP[_m.group(1)] = _m.group(2).strip()
+
+VERDICT_RANK = {'兼容': 0, '关注': 1, '需适配': 2, '待调研': 3, '占位': 4, '不适用': 5, '已删除': 6}
+
+def verdict_label(repo):
+    v = VERDICT_MAP.get(repo.get('name', ''), '待调研')
+    for k in VERDICT_RANK:
+        if k in v:
+            return k
+    return '待调研'
+
+def verdict_key(repo):
+    return VERDICT_RANK.get(verdict_label(repo), 3)
+
 def short_desc(repo):
     d = repo.get("description") or ""
     if d == "null" or not d.strip():
@@ -133,6 +157,9 @@ for r in merged_repos:
     if r.get("name") in EXTRA_REPOS:
         domain = EXTRA_REPOS[r["name"]][2]
     groups.setdefault(domain, []).append(r)
+# 每个领域内按兼容性排序（兼容在前）
+for k in groups:
+    groups[k] = sorted(groups[k], key=verdict_key)
 
 out = []
 out.append("<!-- AUTO:catalog:START -->")
@@ -147,14 +174,15 @@ for key, title, desc in DOMAIN_META:
     out.append("")
     out.append(f"*{desc}*")
     out.append("")
-    out.append("| 插件 | 类型 | 说明 |")
-    out.append("|---|---|---|")
+    out.append("| 插件 | 类型 | 兼容性 | 说明 |")
+    out.append("|---|---|---|---|")
     if n == 0:
         out.append("| （暂无） | — | — |")
     else:
         for r in items:
             t = TYPE_LABEL.get(r.get("category", ""), "插件")
-            out.append(f"| [{r['name']}]({r.get('url', '')}) | {t} | {short_desc(r)} |")
+            _v = verdict_label(r)
+            out.append(f"| [{r['name']}]({r.get('url', '')}) | {t} | {_v} | {short_desc(r)} |")
     out.append("</details>")
     out.append("")
     # 描述第二遍：块外持续显示（默认可见，不随折叠消失）

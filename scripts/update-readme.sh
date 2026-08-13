@@ -88,12 +88,17 @@ for g in order:
     items = groups.get(g, [])
     if not items:
         continue
-    out.append(f'\n**{g}**（{len(items)}）\n')
+    if g == '待调研':
+        out.append(f'\n<details><summary>待调研（{len(items)}）—— 点击展开</summary>\n')
+    else:
+        out.append(f'\n**{g}**（{len(items)}）\n')
     out.append('| 仓库 | 状态 |')
     out.append('|---|---|')
     for n in items:
         url = n if '/' in n else f'dsh-external/{n}'
         out.append(f'| [{n}](https://github.com/{url}) | {g} |')
+    if g == '待调研':
+        out.append('</details>')
 # STATS 行：与分群表同源，供 README 顶部证据层使用（避免两处口径不一致）
 stats = {g: len(groups.get(g, [])) for g in order}
 print('STATS|' + '|'.join(f'{g}={stats[g]}' for g in order))
