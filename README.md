@@ -650,3 +650,17 @@ dsh --profile headless --patch <(printf -- '- insert:\n    - id: my-plugin\n    
 - 完整 SOP：`docs/SOP.md`；插件修复/安装测试：`docs/plugin-fix-test.md`
 
 </details>
+
+## 💝 致谢
+
+感谢 DSH 内测期间每一位伙伴——本目录的兼容性情报、插件实测与问题报告，都建立在你们的真实使用与反馈之上。
+
+<div align="center">
+
+![DSH 内测大合影](assets/dsh-group-photo.webp)
+
+*DSH 内测大合影 · 部分内测成员（2026.08.13）*
+
+</div>
+
+> 图为部分内测成员合影，未涵盖全部贡献者。名单持续收录中——如果你参与了内测但未出现在合影里，欢迎通过 PR 在 [`PLUGINS.md`](PLUGINS.md) 或 issue 中告诉我们。
