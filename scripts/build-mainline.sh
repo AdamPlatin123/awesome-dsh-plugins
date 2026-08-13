@@ -1,12 +1,17 @@
 #!/usr/bin/env bash
 # 自动构建 deepseek-harness 最新快照，验证最新版本可编译性。
 # 输出：reports/<日期>/mainline-build.md（commit/install rc/build rc/耗时/错误摘要）
-# 由 cron-check.sh --full 调用（构建在索引后异步执行，不阻塞报告生成）。
-# 用法：build-mainline.sh [--skip-install]  ；SKIP_BUILD=1 环境变量跳过整个构建
+# 由 cron-check.sh --full 调用（构建在索引后执行）。
+# 用法：build-mainline.sh [--deploy]  ；SKIP_BUILD=1 环境变量跳过整个构建
+# 索引与部署解耦（SOP）：默认只构建并写报告，绝不替换用户 ~/.local/bin/dsh；
+# 只有显式 --deploy 才生成 dsh wrapper（人工运维动作，不在 cron 路径中）。
 # 依赖：bash/git/node（nvm v24）/corepack
 set -uo pipefail
 
 [ "${SKIP_BUILD:-0}" = "1" ] && { echo "[构建] SKIP_BUILD=1，跳过"; exit 0; }
+
+DEPLOY=0
+for _arg in "$@"; do [ "$_arg" = "--deploy" ] && DEPLOY=1; done
 
 REPO_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$REPO_DIR" || exit 2
@@ -45,9 +50,13 @@ fi
 cd "$BUILD_DIR" || exit 2
 CUR="$(git rev-parse --short HEAD 2>/dev/null)"
 
-# 3. 启用 pnpm 并构建
+# 3. 启用 pnpm 并构建（固定版本，随 mainline packageManager 走，不用 @latest 防供应链漂移）
 corepack enable >/dev/null 2>&1 || true
-corepack prepare pnpm@latest --activate >/dev/null 2>&1 || true
+MAINLINE_PM="$(grep -m1 '"packageManager"' package.json 2>/dev/null | sed -E 's/.*"pnpm@([0-9.]+)".*/\1/')"
+PNPM_VER="${MAINLINE_PM:-11.7.0}"
+if ! corepack prepare "pnpm@$PNPM_VER" --activate >/dev/null 2>&1; then
+  echo "[构建] corepack 激活 pnpm@$PNPM_VER 失败，回退 PATH 中的 pnpm"
+fi
 PNPM="$(command -v pnpm || echo "$NODE_BIN/pnpm")"
 [ -x "$PNPM" ] || { echo "[构建] pnpm 不可用"; exit 2; }
 
@@ -100,10 +109,9 @@ mkdir -p "$REPO_DIR/reports/$DATE"
 } > "$REPORT"
 echo "[构建] 报告已写入 $REPORT"
 
-# 5. 自动部署：构建成功后生成 dsh wrapper（绝对 node 路径，cron/非交互环境可用）
-#    SOP：构建成功 → 部署 → 验证 --version → 报告记录部署状态
-DEPLOY_STATUS="未部署（构建失败）"
-if [ "$INSTALL_RC" -eq 0 ] && [ "${BUILD_RC:-99}" -eq 0 ] && [ -f "$BUILD_DIR/apps/cli/lib/bin.js" ]; then
+# 5. 部署：索引与部署解耦（SOP P0）——默认不部署；仅显式 --deploy 时生成 dsh wrapper
+DEPLOY_STATUS="未部署（索引任务默认不部署 dsh；如需部署请显式运行 build-mainline.sh --deploy）"
+if [ "$DEPLOY" -eq 1 ] && [ "$INSTALL_RC" -eq 0 ] && [ "${BUILD_RC:-99}" -eq 0 ] && [ -f "$BUILD_DIR/apps/cli/lib/bin.js" ]; then
   mkdir -p "$HOME/.local/bin"
   rm -f "$HOME/.local/bin/dsh"   # 防软链跟随：若旧 dsh 是软链，cat 会覆盖其目标（曾毁坏 bin.js）
   cat > "$HOME/.local/bin/dsh" << WRAPPER
