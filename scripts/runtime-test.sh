@@ -11,8 +11,11 @@ REPO_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$REPO_DIR" || exit 2
 DATE="$(date +%Y-%m-%d)"
 CLONES="$REPO_DIR/.clones"
+BUILD="$REPO_DIR/.mainline-build"
+NODE_BIN="$HOME/.nvm/versions/node/v24.14.1/bin"
 export PATH="$NODE_BIN:$HOME/.local/bin:$PATH"
 JQ="$(command -v jq || echo "$HOME/.local/bin/jq")"
+QW_BASE="http://10.123.45.18:8080/v1"
 
 STATE="$REPO_DIR/.runtime-test-state.json"
 SUPPORT="$REPO_DIR/.support-status.json"
@@ -68,8 +71,7 @@ for name in "${CANDIDATES[@]}"; do
   fi
 
   TASK="如果插件 $name 已加载，请调用它注册的工具（若有）并回复结果；若没有可调用工具，只回复：插件已加载 $name"
-  echo "[测试] $name ..."
-  # 依赖链（一次）：插件 import mainline 包（@deepseek-ai/*）需从 .clones 父链解析
+  # 依赖链（一次）：mainline 包链进 .clones 父链；插件本体链进 headless profile 的 node_modules
   DEP_CHAIN="$CLONES/node_modules/@deepseek-ai"
   if [ ! -e "$DEP_CHAIN/dsh-tools" ]; then
     mkdir -p "$DEP_CHAIN"
@@ -79,6 +81,9 @@ for name in "${CANDIDATES[@]}"; do
       [ -n "$pn" ] && ln -sfn "$d" "$CLONES/node_modules/$pn" 2>/dev/null
     done
   fi
+  PROFILE_NM="$HOME/.dsh/profiles/headless/node_modules"
+  mkdir -p "$PROFILE_NM/@dsh-external" "$PROFILE_NM/@deepseek-ai"
+  ln -sfn "$CLONES/$name" "$PROFILE_NM/@dsh-external/$name" 2>/dev/null
   # 动态 patch（insert 形式追加插件条目），--profile headless 走 ~/.dsh 已配 Qwen3.6-35B
   PKG_NAME="$("$JQ" -r .name "$CLONES/$name/package.json" 2>/dev/null || echo "@dsh-external/$name")"
   PATCH_FILE="/tmp/dsh-rt-$name.patch.yml"
