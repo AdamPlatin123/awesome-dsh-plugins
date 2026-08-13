@@ -5,7 +5,7 @@
 [![repos](https://img.shields.io/badge/目录插件-286+-blue)](#插件目录) [![compat](https://img.shields.io/badge/兼容验证-四维-green)](reports/latest/mainline-compat.md) [![runtime](https://img.shields.io/badge/运行级实测-Agent%2B人工-orange)](reports/latest/runtime-test.md) [![cron](https://img.shields.io/badge/自动-每日%2002:00-purple)](#关于) [![topic](https://img.shields.io/badge/topic-dsh--plugin-lightgrey)](https://github.com/topics/dsh-plugin)
 
 
-**English** — *An automated directory of DeepSeek Harness (dsh) plugins: daily scans every repo under the dsh-external org and tracks compatibility against mainline snapshots — four-dimensional checks (patch / seam / peerDeps / compile), agent-driven runtime tests with human review, and an LLM daily digest. The ecosystem's most complete compatibility intelligence hub.*
+**English** — *An automated directory of DeepSeek Harness (dsh) plugins: daily scans every repo tagged dsh-plugin or dsh-external (any owner) and tracks compatibility against mainline snapshots — four-dimensional checks (patch / seam / peerDeps / compile), agent-driven runtime tests with human review, and an LLM daily digest. The ecosystem's most complete compatibility intelligence hub.*
 ## 🚀 直接跳转
 
 | 想看 | 跳转 |
@@ -617,18 +617,19 @@
 四个检测维度详见 [下方](#-四个检测维度详述)。
 ## 🤝 如何添加插件
 
-目录由自动化系统每日扫描 **dsh-external org 全部仓库**动态生成。想更快被收录或补充元数据，走 **PR 方案**：
+目录由自动化系统每日扫描：**打 `dsh-plugin` 或 `dsh-external` topic 的任意仓库**（不限组织）自动纳入。想更快被收录或补充元数据，走 **PR 方案**：
 
-1. 把仓库迁入（或 fork 到）`dsh-external` org
-2. 给插件仓库打 `dsh-plugin` topic（便于生态发现）
-3. 插件 package.json 使用 `@dsh-external/*` scope（**不要**占用 `@deepseek-ai/*` 保留命名空间）
-4. 在本仓库 [`PLUGINS.md`](PLUGINS.md) 表格追加一行（插件名 | 仓库 | 一句话说明），提 PR：
+1. 给插件仓库打 `dsh-plugin` topic（开放收录条件，无需迁入任何组织）
+2. 插件 package.json 使用 `@dsh-external/*` scope（**不要**占用 `@deepseek-ai/*` 保留命名空间）
+3. 在本仓库 [`PLUGINS.md`](PLUGINS.md) 表格追加一行（插件名 | 仓库 | 一句话说明），提 PR：
 
    | 插件 | 仓库 | 说明 |
    |---|---|---|
-   | my-plugin | [dsh-external/my-plugin](https://github.com/dsh-external/my-plugin) | 一句话功能描述 |
+   | my-plugin | [你的账号/my-plugin](https://github.com/你的账号/my-plugin) | 一句话功能描述 |
 
-5. PR 合并后立即进入目录；未提 PR 的仓库在次日 02:00 全量扫描时自动收录
+4. PR 合并后立即进入目录；未提 PR 的打标仓库在次日 02:00 全量扫描时自动收录
+
+> 组织仅作备选组织方式（如想与其他插件聚合管理，可迁入 `dsh-external`），不构成收录条件。
 
 **插件自检三步**（提交前）：
 
