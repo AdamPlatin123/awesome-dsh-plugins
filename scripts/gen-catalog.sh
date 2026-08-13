@@ -148,6 +148,9 @@ for key, title, desc in DOMAIN_META:
             out.append("</details>")
     out.append("</details>")
     out.append("")
+    # 描述第二遍：块外持续显示（默认可见，不随折叠消失）
+    out.append(f"*{desc}*")
+    out.append("")
 out.append("<!-- AUTO:catalog:END -->")
 
 block = "\n".join(out)

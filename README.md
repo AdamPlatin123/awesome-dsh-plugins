@@ -88,6 +88,8 @@
 </details>
 </details>
 
+*界面与交互增强插件：侧边栏、输入框、皮肤主题、面板 dock、消息显示、状态栏与可视化，让 Web 界面更顺手更好看*
+
 <details>
 <summary><h3>🤖 Agent 能力（58）</h3></summary>
 
@@ -162,6 +164,8 @@
 </details>
 </details>
 
+*增强 agent 本身的能力：子代理管理、记忆与上下文、会话控制、规划执行、唤醒/睡眠、提示词与技能注入*
+
 <details>
 <summary><h3>💻 编码开发（36）</h3></summary>
 
@@ -214,6 +218,8 @@
 </details>
 </details>
 
+*面向编程场景的工具：代码操作、git 集成、终端、diff 与编辑器、文档生成、语言支持与构建辅助*
+
 <details>
 <summary><h3>📡 消息通讯（18）</h3></summary>
 
@@ -247,6 +253,8 @@
 | [tg-bot](https://github.com/dsh-external/tg-bot) | 渠道 | Telegram remote channel for DeepSeek Harness |
 </details>
 </details>
+
+*把 dsh 接入各类沟通渠道：微信/QQ/Telegram/飞书机器人、桌面通知、消息分享与跨端回复*
 
 <details>
 <summary><h3>🗂 文件数据（34）</h3></summary>
@@ -298,6 +306,8 @@
 </details>
 </details>
 
+*文件与数据处理：读写与格式转换、爬取抓取、数据库、编码识别、文档解析与知识库*
+
 <details>
 <summary><h3>🎮 娱乐生活（18）</h3></summary>
 
@@ -331,6 +341,8 @@
 | [whale-girl](https://github.com/dsh-external/whale-girl) | 插件 | DSH Web GUI 桌面宠物插件（QQ 宠物形态）：右下角悬浮、可拖拽/投喂/玩耍的积累型伙 |
 </details>
 </details>
+
+*摸鱼与趣味：小游戏、桌面宠物、表情包、音乐、股票行情与旅行*
 
 <details>
 <summary><h3>🛠 基建部署（44）</h3></summary>
@@ -392,6 +404,8 @@
 </details>
 </details>
 
+*运行环境与分发：桌面/移动客户端、远程主机、浏览器桥、沙箱隔离、插件管理、更新与监控*
+
 <details>
 <summary><h3>📚 学习研究（16）</h3></summary>
 
@@ -424,6 +438,8 @@
 </details>
 </details>
 
+*学习与探索：技能包、插件开发指南、文档导航、评测基准与社区 onboarding*
+
 <details>
 <summary><h3>❓ 其他（7）</h3></summary>
 
@@ -439,6 +455,8 @@
 | [dsh-sidechain](https://github.com/dsh-external/dsh-sidechain) | 插件 | DSH 侧会话插件：/side 持续性侧会话（Codex 风格）与 /btw 一次性侧问（Cla |
 | [dsh-spur](https://github.com/dsh-external/dsh-spur) | 插件 | — |
 </details>
+
+*描述缺失或暂未归类的仓库，补充信息后将细分*
 
 <!-- AUTO:catalog:END -->
 
