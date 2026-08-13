@@ -90,32 +90,31 @@ fi
 
 # 5. 组装标记块（A 方向：仪表盘优先）
 BLOCK="<!-- AUTO:ecosystem:START -->
-> 自动更新：$(date +%Y-%m-%d_%H%M)（cron 每 8 小时 · 报告日 $DATE · mainline \`$MAINLINE\`）
+> 自动更新：$(date +%Y-%m-%d_%H%M)（cron 每日 · 报告日 $DATE · mainline \`$MAINLINE\`）
 
-**生态仪表盘**
+**插件目录**（dsh-external org · $TOTAL 仓库 · 状态分群）
 
-| 指标 | 值 |
+| 状态 | 数量 |
 |---|---|
-| 仓库总数 | $TOTAL |
-| ✅ 无需适配 | $COMPAT |
+| ✅ 兼容 mainline | $COMPAT |
 | ⚠️ 需适配 | $ADAPT |
-| 关注 / 占位 / 不适用 / 已删除 | $WATCH / $PLACE / $NA / $GONE |
+| 🔍 关注 / 占位 / 不适用 / 已删除 | $WATCH / $PLACE / $NA / $GONE |
 | 🐙 开放 PR | $PR_TOTAL |
 
-📄 **最新报告**：[兼容矩阵](reports/$DATE/mainline-compat.md) · [开发者摘要](reports/$DATE/mainline-summary.md) · [当日索引](reports/$DATE/index.md)
+📄 **完整矩阵**：[mainline-compat.md](reports/$DATE/mainline-compat.md) · [开发者摘要](reports/$DATE/mainline-summary.md) · [当日索引](reports/$DATE/index.md)
 
-**今日新增 / 修改仓库**
+**今日新增 / 修改**
 
 | 仓库 | 类型 |
 |---|---|
 ${NEW_ROWS}
 ${MOD_ROWS}
-**需适配（补丁基线 / seam 变化）**
+**⚠️ 需适配（补丁基线 / seam 变化）**
 
-| 仓库 | 锚定 | 判定 |
+| 插件 | 锚定 | 判定 |
 |---|---|---|
 ${ADAPT_ROWS}
-**正在跟踪的 open PR**
+**🐙 正在跟踪的 open PR**
 
 | 仓库 | PR | 标题 | 更新 |
 |---|---|---|---|

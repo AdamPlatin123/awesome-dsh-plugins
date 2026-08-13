@@ -43,7 +43,7 @@ for _f in research/*.md; do
   _n="${_f##*/}"; _n="${_n%.md}"
   [ -n "$_n" ] && KNOWN_REPOS+=( "$_n" )
 done
-SELF_REPO="dsh-plugin-radar"   # 本仓库自身，不纳入索引
+SELF_REPO="awesome-dsh-plugins"   # 本仓库自身，不纳入索引
 
 # 动态拉取 org 全部仓库名（失败则回退已知列表，不误报离线）
 ORG_REPOS="$(timeout 60 gh api "orgs/dsh-external/repos?per_page=100&type=all" --paginate --jq '.[].name' 2>/dev/null || echo "")"
