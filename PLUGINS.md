@@ -10,6 +10,7 @@
 | dsh-artifact | [dsh-external/dsh-artifact](https://github.com/dsh-external/dsh-artifact) | 制品管理（运行级实测 ✅） |
 | dsh-split-panes | [dsh-external/dsh-split-panes](https://github.com/dsh-external/dsh-split-panes) | 分屏面板（运行级实测 ✅） |
 | dsh-question-collapse | [dsh-external/dsh-question-collapse](https://github.com/dsh-external/dsh-question-collapse) | 问题折叠（运行级实测 ✅） |
+| dsh-sentinel | [fuhefei/dsh-sentinel](https://github.com/fuhefei/dsh-sentinel) | 事件驱动唤醒：文件/命令/http/进程/webhook 传感器唤醒 agent loop（非定时） |
 
 <!-- 新增条目示例（复制下面一行修改后插入上表末尾）：
 | my-plugin | [dsh-external/my-plugin](https://github.com/dsh-external/my-plugin) | 一句话功能描述 |
