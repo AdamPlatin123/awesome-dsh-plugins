@@ -1,6 +1,6 @@
 # SOP：DSH 生态情报自动化（拉取 → 构建 → 部署 → 比对 → 报告 → 推送）
 
-> 适用：dsh-plugin-radar 监控链路 · 远程主机 10.144.144.9 · 更新日期 2026-08-10
+> 适用：dsh-plugin-radar 监控链路 · 远程主机 <内网主机> · 更新日期 2026-08-10
 > 目标：对快速迭代的 deepseek-harness 与 org 插件生态，自动拉取最新内容、构建验证、部署实例、比对兼容性、产出报告，全链路无人值守。
 
 ## 1. 流程总览
@@ -140,10 +140,10 @@ SKIP_BUILD=1 ./scripts/build-mainline.sh  # 跳过构建（不部署）
 
 ### 8.1 现状（已固化）
 
-- **切换内容**：远程 omp 默认模型 `deepseek/deepseek-v4-flash:max` → `qwen-local/Qwen3.6-35B:max`（内网 10.123.45.18:8080 vLLM，零费用）
+- **切换内容**：远程 omp 默认模型 `deepseek/deepseek-v4-flash:max` → `qwen-local/Qwen3.6-35B:max`（内网 <内网模型服务>:8080 vLLM，零费用）
 - **配置文件**：`~/.omp/agent/models.yml`（qwen-local provider）+ `~/.omp/agent/config.yml`（modelRoles.default）——已持久修改，备份于 `*.bak-*`
 - **生效条件**：omp 重启后自动使用（配置已就绪）
-- **验证**：`curl http://10.123.45.18:8080/v1/chat/completions` 可用（2.5s 响应，content+reasoning 正常）
+- **验证**：`curl http://<内网模型服务>:8080/v1/chat/completions` 可用（2.5s 响应，content+reasoning 正常）
 
 ### 8.2 对效果与 SOP 的影响
 
