@@ -3,6 +3,14 @@
   目标文件：PLUGINS.md（表格追加一行即可）。
 -->
 
+> 📌 **标题格式**：`docs: 登记 <插件名>`（示例：`docs: 登记 dsh-balance`）——请勿使用其他标题格式。
+>
+> 🛠 **合并小贴士（重要）**：请让维护者能帮你 rebase——两种方式任选其一：
+> 1. 提交 PR 后，在 PR 页面右侧勾选 **Allow edits from maintainers**；
+> 2. 或在自己 fork 仓库的 Settings → General 勾选 **Allow edits and access to secrets by maintainers**（一次开启，以后所有 PR 自动允许）。
+>
+> 🙏 **致歉说明**：最近 README/PLUGINS.md 正在高速更改中（每日快照更新 + 分类体系重构），多个 PR 同时登记同一区域时可能产生冲突，处理可能稍显延迟，请见谅。
+
 ## 插件信息
 
 | 项 | 值 |
@@ -16,6 +24,7 @@
 
 - [ ] package.json `name` 使用 `@dsh-external/*` scope（未占用 `@deepseek-ai/*` 保留命名空间）
 - [ ] 仓库已打 `dsh-plugin` topic
+- [ ] 已在 PR 页面勾选 **Allow edits from maintainers**（或已在 fork Settings → General 开启同项，一次开启后续自动生效）
 - [ ] 所有运行时依赖已声明（`dependencies` / `peerDependencies`）
 - [ ] 已按自检三步实测通过：
 
