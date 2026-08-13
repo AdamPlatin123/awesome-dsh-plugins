@@ -276,12 +276,13 @@ mainline_fetch() {
 
 # ---- 2. 克隆/更新 15 仓库 ----------------------------------------------------
 repo_fetch() {
-  local name="$1" dir="" url="" lsref merr head dir_real clones_real
-  dir="$CLONES_DIR/$name"
-  url="https://github.com/$ORG/$name.git"
-  # H2 防路径逃逸：仓库名白名单（允许点，仍拒绝 . / ..）+ realpath 校验 .clones/<name> 仍在 .clones/ 内
-  [[ "$name" =~ ^[a-zA-Z0-9._-]+$ ]] || die 2 "非法仓库名: $name"
-  [ "$name" != "." ] && [ "$name" != ".." ] || die 2 "非法仓库名（不允许 . 或 ..）: $name"
+  # name 支持 bare（org 内）或 full_name（owner/name，topic 打标的外部仓库）
+  local name="$1" bare="${1##*/}" dir="" url="" lsref merr head dir_real clones_real
+  dir="$CLONES_DIR/$bare"
+  url="https://github.com/$name.git"
+  # H2 防路径逃逸：仓库名白名单（允许点，仍拒绝 . / ..）+ realpath 校验 .clones/<bare> 仍在 .clones/ 内
+  [[ "$bare" =~ ^[a-zA-Z0-9._-]+$ ]] || die 2 "非法仓库名: $name"
+  [ "$bare" != "." ] && [ "$bare" != ".." ] || die 2 "非法仓库名（不允许 . 或 ..）: $name"
   dir_real="$(realpath -m "$dir")"
   clones_real="$(realpath -m "$CLONES_DIR")"
   case "$dir_real" in
