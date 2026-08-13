@@ -35,7 +35,7 @@
 
 | 插件 | 仓库 | 说明 |
 |---|---|---|
-| （暂无手工登记；打标自动收录） | | |
+| dsh-telegram | [ben7am1n/dsh-telegram](https://github.com/ben7am1n/dsh-telegram) | Telegram runtime adapter — chat with dsh agents from Telegram; per-chat sessions, followup bridging, committed-text streaming, allowlist auth, zero runtime deps |
 
 ## 🛠 基础设施
 
