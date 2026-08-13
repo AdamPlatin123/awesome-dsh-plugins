@@ -16,6 +16,7 @@
 | dsh-question-collapse | [dsh-external/dsh-question-collapse](https://github.com/dsh-external/dsh-question-collapse) | 问题折叠 | ✅ |
 | dsh-sentinel | [fuhefei/dsh-sentinel](https://github.com/fuhefei/dsh-sentinel) | 事件驱动唤醒 agent loop（文件/命令/http/进程/webhook 传感器） | 待测 |
 | dsh-tianshu-tui | [huiliyi37/dsh-tianshu-tui](https://github.com/huiliyi37/dsh-tianshu-tui) | DSH 的 TUI（终端界面） | 待测 |
+| dsh-chat-import | [Nwflower/dsh-chat-import](https://github.com/Nwflower/dsh-chat-import) | 从 Claude Code JSONL 全保真导入历史会话为可续聊的 DSH 会话（含工具调用/思考块） | 待测 |
 
 ## 🧰 插件集
 
