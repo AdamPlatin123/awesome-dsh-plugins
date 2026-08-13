@@ -392,7 +392,7 @@
 
 DSH 插件生态交流群（微信群）：插件作者、维护者与使用者都在这里，讨论插件开发、兼容性问题与新插件发布。
 
-![DSH-Plugins 交流群二维码](assets/wechat-group-qr.png)
+<img src="assets/wechat-group-qr.png" width="300" alt="DSH-Plugins 交流群二维码">
 
 > 二维码 7 天内有效（2026-08-20 前），重新进入本页面将更新。
 
