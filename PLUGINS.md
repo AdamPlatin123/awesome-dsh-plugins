@@ -1,17 +1,51 @@
-# PLUGINS.md — 插件登记清单
+# PLUGINS.md — 插件登记清单（分类版）
 
-> 想更快被收录？在本表格追加一行并提 PR。未登记的仓库会在每日 02:00 全量扫描时自动收录（本文件是可选的元数据补充渠道）。
+> 想更快被收录？在对应类别的表格追加一行并提 PR。未登记的仓库只要打 `dsh-plugin` / `dsh-external` topic，会在每日 02:00 全量扫描时自动收录。
+>
+> 分类体系参考 [dsh-external/hub](https://github.com/dsh-external/hub)（catalog v0.1）：🔌 单插件 / 🧰 插件集 / 🎓 技能 / 📡 远程渠道 / 🛠 基础设施 / 💬 社区 / 🔬 研究 / ❓ 未分类。
 >
 > 约定：插件名与 repo 名一致；scope 使用 `@dsh-external/*`（勿占用 `@deepseek-ai/*` 保留命名空间）；repo 打 `dsh-plugin` topic。
 
+## 🔌 单插件
+
+| 插件 | 仓库 | 说明 | 运行级 |
+|---|---|---|---|
+| chat-width | [dsh-external/chat-width](https://github.com/dsh-external/chat-width) | 终端宽度感知 | ✅ |
+| dsh-artifact | [dsh-external/dsh-artifact](https://github.com/dsh-external/dsh-artifact) | 制品管理 | ✅ |
+| dsh-split-panes | [dsh-external/dsh-split-panes](https://github.com/dsh-external/dsh-split-panes) | 分屏面板 | ✅ |
+| dsh-question-collapse | [dsh-external/dsh-question-collapse](https://github.com/dsh-external/dsh-question-collapse) | 问题折叠 | ✅ |
+| dsh-sentinel | [fuhefei/dsh-sentinel](https://github.com/fuhefei/dsh-sentinel) | 事件驱动唤醒 agent loop（文件/命令/http/进程/webhook 传感器） | 待测 |
+
+## 🧰 插件集
+
 | 插件 | 仓库 | 说明 |
 |---|---|---|
-| chat-width | [dsh-external/chat-width](https://github.com/dsh-external/chat-width) | 终端宽度感知（运行级实测 ✅） |
-| dsh-artifact | [dsh-external/dsh-artifact](https://github.com/dsh-external/dsh-artifact) | 制品管理（运行级实测 ✅） |
-| dsh-split-panes | [dsh-external/dsh-split-panes](https://github.com/dsh-external/dsh-split-panes) | 分屏面板（运行级实测 ✅） |
-| dsh-question-collapse | [dsh-external/dsh-question-collapse](https://github.com/dsh-external/dsh-question-collapse) | 问题折叠（运行级实测 ✅） |
-| dsh-sentinel | [fuhefei/dsh-sentinel](https://github.com/fuhefei/dsh-sentinel) | 事件驱动唤醒：文件/命令/http/进程/webhook 传感器唤醒 agent loop（非定时） |
+| （暂无手工登记；打标自动收录） | | |
 
-<!-- 新增条目示例（复制下面一行修改后插入上表末尾）：
-| my-plugin | [dsh-external/my-plugin](https://github.com/dsh-external/my-plugin) | 一句话功能描述 |
+## 🎓 技能
+
+| 插件 | 仓库 | 说明 |
+|---|---|---|
+| （暂无手工登记；打标自动收录） | | |
+
+## 📡 远程渠道
+
+| 插件 | 仓库 | 说明 |
+|---|---|---|
+| （暂无手工登记；打标自动收录） | | |
+
+## 🛠 基础设施
+
+| 插件 | 仓库 | 说明 |
+|---|---|---|
+| （暂无手工登记；打标自动收录） | | |
+
+## ❓ 未分类
+
+| 插件 | 仓库 | 说明 |
+|---|---|---|
+| （暂无手工登记；打标自动收录） | | |
+
+<!-- 新增条目示例（复制下面一行修改后插入对应分类表格末尾）：
+| my-plugin | [你的账号/my-plugin](https://github.com/你的账号/my-plugin) | 一句话功能描述 | 待测 |
 -->
