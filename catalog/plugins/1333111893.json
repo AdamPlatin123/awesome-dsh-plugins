@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "github:1333111893",
+  "repository": {
+    "full_name": "ccch1mneyyy/dsh-cc-tui",
+    "url": "https://github.com/ccch1mneyyy/dsh-cc-tui"
+  },
+  "package": {
+    "name": "@deepseek-ai/dsh-cc-tui",
+    "entry": "lib/types/index.js"
+  },
+  "curation": {
+    "state": "candidate",
+    "category": "",
+    "description_zh": ""
+  },
+  "ownership": {
+    "method": "auto_discovered",
+    "verified_at": ""
+  },
+  "lifecycle": {
+    "state": "active"
+  },
+  "disclosures": {
+    "risk": "unknown",
+    "network": false,
+    "filesystem": "none",
+    "credentials": [],
+    "data_handling_url": ""
+  }
+}

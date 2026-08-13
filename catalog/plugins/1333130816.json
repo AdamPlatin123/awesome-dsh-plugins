@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "github:1333130816",
+  "repository": {
+    "full_name": "lhh010/dsh-ui-progress",
+    "url": "https://github.com/lhh010/dsh-ui-progress"
+  },
+  "package": {
+    "name": "@dsh-external/dsh-ui-progress",
+    "entry": "lib/index.js"
+  },
+  "curation": {
+    "state": "candidate",
+    "category": "",
+    "description_zh": ""
+  },
+  "ownership": {
+    "method": "auto_discovered",
+    "verified_at": ""
+  },
+  "lifecycle": {
+    "state": "active"
+  },
+  "disclosures": {
+    "risk": "unknown",
+    "network": false,
+    "filesystem": "none",
+    "credentials": [],
+    "data_handling_url": ""
+  }
+}

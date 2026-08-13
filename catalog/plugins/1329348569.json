@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "github:1329348569",
+  "repository": {
+    "full_name": "morlay/session-persistence-rdb",
+    "url": "https://github.com/morlay/session-persistence-rdb"
+  },
+  "package": {
+    "name": "@morlay/session-persistence-rdb",
+    "entry": "exports"
+  },
+  "curation": {
+    "state": "candidate",
+    "category": "",
+    "description_zh": ""
+  },
+  "ownership": {
+    "method": "auto_discovered",
+    "verified_at": ""
+  },
+  "lifecycle": {
+    "state": "active"
+  },
+  "disclosures": {
+    "risk": "unknown",
+    "network": false,
+    "filesystem": "none",
+    "credentials": [],
+    "data_handling_url": ""
+  }
+}

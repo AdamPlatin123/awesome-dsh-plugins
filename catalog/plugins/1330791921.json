@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "github:1330791921",
+  "repository": {
+    "full_name": "turtle1999/turtle-ui",
+    "url": "https://github.com/turtle1999/turtle-ui"
+  },
+  "package": {
+    "name": "@deepseek-ai/dsh-tui",
+    "entry": "lib/index.js"
+  },
+  "curation": {
+    "state": "candidate",
+    "category": "",
+    "description_zh": ""
+  },
+  "ownership": {
+    "method": "auto_discovered",
+    "verified_at": ""
+  },
+  "lifecycle": {
+    "state": "active"
+  },
+  "disclosures": {
+    "risk": "unknown",
+    "network": false,
+    "filesystem": "none",
+    "credentials": [],
+    "data_handling_url": ""
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "schema_version": 1,
+  "description": "Removed/blocked/renamed entries. Stable id keyed. Reappearance is blocked by policy.readd_policy.",
+  "entries": []
+}

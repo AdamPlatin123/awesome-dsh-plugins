@@ -10,3 +10,4 @@ logs/
 *.tmp
 .mainline-build/
 .dsh-radar.env
+generated/

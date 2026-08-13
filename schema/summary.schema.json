@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://dsh-external/awesome-dsh-plugins/schema/summary.schema.json",
+  "title": "Aggregated summary (single source README and reports consume)",
+  "type": "object",
+  "required": ["run_id", "generated_at", "counts", "sources"],
+  "additionalProperties": false,
+  "properties": {
+    "run_id": { "type": "string" },
+    "generated_at": { "type": "string" },
+    "pipeline_commit": { "type": "string" },
+    "counts": {
+      "type": "object",
+      "required": ["total", "candidate", "listed", "rejected", "removed", "blocked"],
+      "additionalProperties": false,
+      "properties": {
+        "total": { "type": "integer", "minimum": 0 },
+        "candidate": { "type": "integer", "minimum": 0 },
+        "listed": { "type": "integer", "minimum": 0 },
+        "rejected": { "type": "integer", "minimum": 0 },
+        "removed": { "type": "integer", "minimum": 0 },
+        "blocked": { "type": "integer", "minimum": 0 },
+        "by_evidence": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "static": { "$ref": "#/$defs/evidenceCounts" },
+            "compile": { "$ref": "#/$defs/evidenceCounts" },
+            "runtime": { "$ref": "#/$defs/evidenceCounts" },
+            "security": { "$ref": "#/$defs/evidenceCounts" }
+          }
+        }
+      }
+    },
+    "sources": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "org": { "type": "integer" },
+        "topic": { "type": "integer" },
+        "keyword": { "type": "integer" },
+        "clones": { "type": "integer" },
+        "research": { "type": "integer" }
+      }
+    },
+    "new_since_last": { "type": "integer", "minimum": 0 },
+    "removed_since_last": { "type": "integer", "minimum": 0 },
+    "not_run_or_inconclusive": { "type": "integer", "minimum": 0, "description": "Sanity: count of candidates whose every evidence axis is not_run/inconclusive — must never be reported as pass." }
+  },
+  "$defs": {
+    "evidenceCounts": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "pass": { "type": "integer" },
+        "warn": { "type": "integer" },
+        "fail": { "type": "integer" },
+        "not_run": { "type": "integer" },
+        "inconclusive": { "type": "integer" }
+      }
+    }
+  }
+}

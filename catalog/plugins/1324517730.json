@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "github:1324517730",
+  "repository": {
+    "full_name": "Moeblack/dsh-prompt-studio",
+    "url": "https://github.com/Moeblack/dsh-prompt-studio"
+  },
+  "package": {
+    "name": "dsh-prompt-studio",
+    "entry": "./index.mjs"
+  },
+  "curation": {
+    "state": "candidate",
+    "category": "",
+    "description_zh": ""
+  },
+  "ownership": {
+    "method": "auto_discovered",
+    "verified_at": ""
+  },
+  "lifecycle": {
+    "state": "active"
+  },
+  "disclosures": {
+    "risk": "unknown",
+    "network": false,
+    "filesystem": "none",
+    "credentials": [],
+    "data_handling_url": ""
+  }
+}

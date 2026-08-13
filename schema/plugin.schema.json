@@ -1,0 +1,75 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://dsh-external/awesome-dsh-plugins/schema/plugin.schema.json",
+  "title": "Catalog plugin entry (human fact source)",
+  "type": "object",
+  "required": ["schema_version", "id", "repository", "curation", "lifecycle"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": 1 },
+    "id": {
+      "description": "Stable GitHub repository id, prefixed github:. Survives rename/transfer.",
+      "type": "string",
+      "pattern": "^github:[0-9]+$"
+    },
+    "previous_names": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Prior owner/name after rename or transfer."
+    },
+    "repository": {
+      "type": "object",
+      "required": ["full_name", "url"],
+      "additionalProperties": false,
+      "properties": {
+        "full_name": { "type": "string" },
+        "url": { "type": "string", "format": "uri" }
+      }
+    },
+    "package": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string" },
+        "entry": { "type": "string" }
+      }
+    },
+    "curation": {
+      "type": "object",
+      "required": ["state"],
+      "additionalProperties": false,
+      "properties": {
+        "state": { "enum": ["candidate", "listed", "rejected", "removed", "blocked"] },
+        "category": { "type": "string" },
+        "description_zh": { "type": "string" }
+      }
+    },
+    "ownership": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "method": { "enum": ["auto_discovered", "maintainer_pr", "org_member", "verified"] },
+        "verified_at": { "type": "string" }
+      }
+    },
+    "lifecycle": {
+      "type": "object",
+      "required": ["state"],
+      "additionalProperties": false,
+      "properties": {
+        "state": { "enum": ["active", "deprecated", "archived", "deleted", "unknown"] }
+      }
+    },
+    "disclosures": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "risk": { "enum": ["unknown", "low", "medium", "high"] },
+        "network": { "type": "boolean" },
+        "filesystem": { "enum": ["none", "workspace-read", "workspace-write", "home-read", "arbitrary"] },
+        "credentials": { "type": "array", "items": { "type": "string" } },
+        "data_handling_url": { "type": "string" }
+      }
+    }
+  }
+}

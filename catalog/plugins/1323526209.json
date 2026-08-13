@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "github:1323526209",
+  "repository": {
+    "full_name": "omdsh-dev/dsh-tool-calculator",
+    "url": "https://github.com/omdsh-dev/dsh-tool-calculator"
+  },
+  "package": {
+    "name": "@deepseek-ai/dsh-tool-calculator",
+    "entry": "lib/index.js"
+  },
+  "curation": {
+    "state": "candidate",
+    "category": "",
+    "description_zh": ""
+  },
+  "ownership": {
+    "method": "auto_discovered",
+    "verified_at": ""
+  },
+  "lifecycle": {
+    "state": "active"
+  },
+  "disclosures": {
+    "risk": "unknown",
+    "network": false,
+    "filesystem": "none",
+    "credentials": [],
+    "data_handling_url": ""
+  }
+}

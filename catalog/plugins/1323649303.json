@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "github:1323649303",
+  "repository": {
+    "full_name": "dsh-external/dsh-skills-manager",
+    "url": "https://github.com/dsh-external/dsh-skills-manager"
+  },
+  "package": {
+    "name": "dsh-skills-manager",
+    "entry": "lib/index.js"
+  },
+  "curation": {
+    "state": "candidate",
+    "category": "",
+    "description_zh": ""
+  },
+  "ownership": {
+    "method": "auto_discovered",
+    "verified_at": ""
+  },
+  "lifecycle": {
+    "state": "archived"
+  },
+  "disclosures": {
+    "risk": "unknown",
+    "network": false,
+    "filesystem": "none",
+    "credentials": [],
+    "data_handling_url": ""
+  }
+}

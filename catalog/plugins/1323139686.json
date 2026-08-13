@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "github:1323139686",
+  "repository": {
+    "full_name": "omdsh-dev/ex-setting",
+    "url": "https://github.com/omdsh-dev/ex-setting"
+  },
+  "package": {
+    "name": "@deepseek-ai/dsh-ex-setting",
+    "entry": "lib/index.js"
+  },
+  "curation": {
+    "state": "candidate",
+    "category": "",
+    "description_zh": ""
+  },
+  "ownership": {
+    "method": "auto_discovered",
+    "verified_at": ""
+  },
+  "lifecycle": {
+    "state": "active"
+  },
+  "disclosures": {
+    "risk": "unknown",
+    "network": false,
+    "filesystem": "none",
+    "credentials": [],
+    "data_handling_url": ""
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "github:1333244632",
+  "repository": {
+    "full_name": "xiaoshihou514/dsh-vision",
+    "url": "https://github.com/xiaoshihou514/dsh-vision"
+  },
+  "package": {
+    "name": "@dsh-external/dsh-vision",
+    "entry": "lib/index.js"
+  },
+  "curation": {
+    "state": "candidate",
+    "category": "",
+    "description_zh": ""
+  },
+  "ownership": {
+    "method": "auto_discovered",
+    "verified_at": ""
+  },
+  "lifecycle": {
+    "state": "active"
+  },
+  "disclosures": {
+    "risk": "unknown",
+    "network": false,
+    "filesystem": "none",
+    "credentials": [],
+    "data_handling_url": ""
+  }
+}

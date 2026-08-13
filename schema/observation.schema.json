@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://dsh-external/awesome-dsh-plugins/schema/observation.schema.json",
+  "title": "Radar candidate observation (per-run collected facts)",
+  "type": "object",
+  "required": ["run_id", "observed_at", "id", "full_name", "sources"],
+  "additionalProperties": false,
+  "properties": {
+    "run_id": { "type": "string" },
+    "observed_at": { "type": "string" },
+    "id": { "type": "string", "pattern": "^github:[0-9]+$" },
+    "full_name": { "type": "string" },
+    "url": { "type": "string" },
+    "description": { "type": "string" },
+    "archived": { "type": "boolean" },
+    "fork": { "type": "boolean" },
+    "stars": { "type": "integer", "minimum": 0 },
+    "updated_at": { "type": "string" },
+    "topics": { "type": "array", "items": { "type": "string" } },
+    "sources": {
+      "type": "array",
+      "items": { "enum": ["org", "topic", "keyword", "clones", "research", "catalog"] },
+      "minItems": 1
+    },
+    "is_plugin": { "enum": [true, false, "unknown"] },
+    "package": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string" },
+        "entry": { "type": "string" }
+      }
+    },
+    "has_research_note": { "type": "boolean" },
+    "support": { "type": "string" },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "static": { "enum": ["pass", "warn", "fail", "not_run", "inconclusive"] },
+        "compile": { "enum": ["pass", "warn", "fail", "not_run", "inconclusive"] },
+        "runtime": { "enum": ["pass", "warn", "fail", "not_run", "inconclusive"] },
+        "security": { "enum": ["pass", "warn", "fail", "not_run", "inconclusive"] }
+      }
+    }
+  }
+}

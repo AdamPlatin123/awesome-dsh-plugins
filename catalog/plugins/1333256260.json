@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "github:1333256260",
+  "repository": {
+    "full_name": "Moeblack/dsh-skins",
+    "url": "https://github.com/Moeblack/dsh-skins"
+  },
+  "package": {
+    "name": "@dsh-external/dsh-web-skins",
+    "entry": "./packages/dsh-web-skins/lib/index.js"
+  },
+  "curation": {
+    "state": "candidate",
+    "category": "",
+    "description_zh": ""
+  },
+  "ownership": {
+    "method": "auto_discovered",
+    "verified_at": ""
+  },
+  "lifecycle": {
+    "state": "active"
+  },
+  "disclosures": {
+    "risk": "unknown",
+    "network": false,
+    "filesystem": "none",
+    "credentials": [],
+    "data_handling_url": ""
+  }
+}

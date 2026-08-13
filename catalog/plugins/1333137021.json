@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "github:1333137021",
+  "repository": {
+    "full_name": "Tieboyh/dsh-session-search",
+    "url": "https://github.com/Tieboyh/dsh-session-search"
+  },
+  "package": {
+    "name": "@dsh-external/dsh-session-search",
+    "entry": "lib/index.js"
+  },
+  "curation": {
+    "state": "candidate",
+    "category": "",
+    "description_zh": ""
+  },
+  "ownership": {
+    "method": "auto_discovered",
+    "verified_at": ""
+  },
+  "lifecycle": {
+    "state": "active"
+  },
+  "disclosures": {
+    "risk": "unknown",
+    "network": false,
+    "filesystem": "none",
+    "credentials": [],
+    "data_handling_url": ""
+  }
+}

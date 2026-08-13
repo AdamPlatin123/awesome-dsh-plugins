@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "github:1323731026",
+  "repository": {
+    "full_name": "csyangwen/dsh-memory-evolve",
+    "url": "https://github.com/csyangwen/dsh-memory-evolve"
+  },
+  "package": {
+    "name": "dsh-memory-evolve",
+    "entry": "lib/index.js"
+  },
+  "curation": {
+    "state": "candidate",
+    "category": "",
+    "description_zh": ""
+  },
+  "ownership": {
+    "method": "auto_discovered",
+    "verified_at": ""
+  },
+  "lifecycle": {
+    "state": "active"
+  },
+  "disclosures": {
+    "risk": "unknown",
+    "network": false,
+    "filesystem": "none",
+    "credentials": [],
+    "data_handling_url": ""
+  }
+}

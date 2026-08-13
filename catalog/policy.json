@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "description": "Admission, risk, status and count rules for the catalog. Consumed by normalize/aggregate gates.",
+  "admission": {
+    "candidate_to_listed_requires": [
+      "public_repository",
+      "stable_repository_id",
+      "is_plugin_true",
+      "readme_present",
+      "license_or_acknowledgement",
+      "explicit_risk_disclosure",
+      "static_outcome_not_fail"
+    ],
+    "comment": "A candidate becomes listed only after a curation PR satisfies all of the above. Auto-discovery never promotes to listed."
+  },
+  "discovery": {
+    "paths": ["org:dsh-external", "topic:dsh-plugin", "topic:dsh-external", "keyword:deepseek harness", "keyword:DSH plugin", "keyword:dsh plugin", "library:research", "library:clones"],
+    "dedupe_key": "github_numeric_repository_id",
+    "non_plugin_handling": "discovered but is_plugin=false → kept as candidate with is_plugin=false (Radar records everything found; Catalog never lists non-plugins)"
+  },
+  "shrinkage_guard": {
+    "min_retention_pct": 95,
+    "comment": "If candidate total < 95% of last published total, the run fails closed (source incomplete).",
+    "max_single_run_removals": "max(3, 5% of last active)"
+  },
+  "evidence": {
+    "pass_values": ["pass", "warn"],
+    "non_pass_values": ["fail"],
+    "never_count_as_pass": ["not_run", "inconclusive"]
+  },
+  "tombstone": {
+    "readd_policy": "blocked — a tombstoned id that reappears is NOT auto-relisted; requires an explicit curation PR explaining restoration."
+  }
+}
