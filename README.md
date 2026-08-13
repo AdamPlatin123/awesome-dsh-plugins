@@ -1,11 +1,11 @@
 # ✨ Awesome DSH Plugins
 
-> DeepSeek Harness（dsh）插件生态**自动目录**：每日扫描 dsh-external org 全部插件仓库，跟踪每个插件对 mainline 快照的兼容性——编译验证、补丁检测、seam 追踪、运行级实测（Qwen 驱动）、LLM 每日摘要。公测前最有价值的兼容性检查站。
+> DeepSeek Harness（dsh）插件生态**自动目录**：每日扫描 dsh-external org 全部插件仓库，跟踪每个插件对 mainline 快照的兼容性——补丁检测、seam 追踪、peerDeps 校验、编译验证四维对比，加运行级实测（Agent + 人工复核）与 LLM 每日摘要。生态最全的兼容性情报站。
 
-[![repos](https://img.shields.io/badge/目录插件-286+-blue)]() [![compat](https://img.shields.io/badge/兼容验证-四维-green)]() [![runtime](https://img.shields.io/badge/运行级实测-Qwen%20驱动-orange)]() [![cron](https://img.shields.io/badge/自动-每日%2002:00-purple)]() [![topic](https://img.shields.io/badge/topic-dsh--plugin-lightgrey)]()
+[![repos](https://img.shields.io/badge/目录插件-286+-blue)](#插件目录) [![compat](https://img.shields.io/badge/兼容验证-四维-green)](reports/latest/mainline-compat.md) [![runtime](https://img.shields.io/badge/运行级实测-Agent%2B人工-orange)](reports/latest/runtime-test.md) [![cron](https://img.shields.io/badge/自动-每日%2002:00-purple)](#关于) [![topic](https://img.shields.io/badge/topic-dsh--plugin-lightgrey)](https://github.com/topics/dsh-plugin)
 
 
-**English** — *An automated directory of DeepSeek Harness (dsh) plugins: daily scans every repo under the dsh-external org and tracks compatibility against mainline snapshots (four-dimensional checks, compile verification, and Qwen-driven runtime tests). Your one-stop compatibility dashboard before the public beta.*
+**English** — *An automated directory of DeepSeek Harness (dsh) plugins: daily scans every repo under the dsh-external org and tracks compatibility against mainline snapshots — four-dimensional checks (patch / seam / peerDeps / compile), agent-driven runtime tests with human review, and an LLM daily digest. The ecosystem's most complete compatibility intelligence hub.*
 ## 🚀 直接跳转
 
 | 想看 | 跳转 |
@@ -13,7 +13,7 @@
 | 插件目录（状态分群） | [下方目录](#插件目录) |
 | 今天生态状态（LLM 摘要） | [开发者摘要](reports/latest/mainline-summary.md) |
 | 完整兼容矩阵（逐仓判定） | [mainline-compat.md](reports/latest/mainline-compat.md) |
-| 运行级真实测试（Qwen 驱动） | [runtime-test.md](reports/latest/runtime-test.md) |
+| 运行级真实测试（Agent + 人工） | [runtime-test.md](reports/latest/runtime-test.md) |
 | mainline 破坏性变更清单 | [CHANGELOG.md](CHANGELOG.md) |
 | 完整 SOP（监控/构建/插件验证） | [docs/SOP.md](docs/SOP.md) |
 
@@ -611,7 +611,7 @@
 | ✅ 兼容 | 与最新 mainline 快照一致 | 四维对比无差异（补丁/seam/peerDeps/编译） |
 | ⚠️ 需适配 | 有接口漂移需修复 | 补丁基线变化、seam 变化、编译失败 |
 | 🔍 关注 | 有变化但影响待确认 | 新增/修改仓库、待观察项 |
-| 🧪 运行级实测 | 真实安装 + Qwen 驱动 headless 调用 | `runtime-test.md`：✅ 可用 / ⚠️ 加载失败 / ❌ 工具调用失败 |
+| 🧪 运行级实测 | 真实安装 + Agent 自动化 + 人工复核 | `runtime-test.md`：✅ 可用 / ⚠️ 加载失败 / ❌ 工具调用失败 |
 | 占位/不适用/已删除 | 非插件仓库或无插件内容 | 目录结构判定 |
 
 四个检测维度详见 [下方](#-四个检测维度详述)。
