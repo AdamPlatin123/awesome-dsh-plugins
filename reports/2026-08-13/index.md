@@ -145,6 +145,7 @@
 - [dsh-gomoku.md](dsh-gomoku.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-gomoku)
 - [dsh-101.md](dsh-101.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-101)
 - [dsh-turn-rewind.md](dsh-turn-rewind.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-turn-rewind)
+- [dsh-genui.md](dsh-genui.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-genui)
 - [dsh-mygo.md](dsh-mygo.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-mygo)
 - [cross-harness-cite.md](cross-harness-cite.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/cross-harness-cite)
 - [dsh-split-panes.md](dsh-split-panes.md) — 需适配 · [仓库](https://github.com/dsh-external/dsh-split-panes)
@@ -229,10 +230,10 @@
 - [dsh-deep-whale.md](dsh-deep-whale.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-deep-whale)
 - [dsh-tool-search.md](dsh-tool-search.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-tool-search)
 - [oh-my-dsh-distribution.md](oh-my-dsh-distribution.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/oh-my-dsh-distribution)
-- [dsh-memory.md](dsh-memory.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-memory)
-- [dsh-chat.md](dsh-chat.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-chat)
-- [dsh-web.md](dsh-web.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-web)
-- [dsh_ide.md](dsh_ide.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh_ide)
+- [dsh-memory.md](dsh-memory.md) — 已删除 · [仓库](https://github.com/dsh-external/dsh-memory)
+- [dsh-chat.md](dsh-chat.md) — 已删除 · [仓库](https://github.com/dsh-external/dsh-chat)
+- [dsh-web.md](dsh-web.md) — 已删除 · [仓库](https://github.com/dsh-external/dsh-web)
+- [dsh_ide.md](dsh_ide.md) — 已删除 · [仓库](https://github.com/dsh-external/dsh_ide)
 - [dsh-trace.md](dsh-trace.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-trace)
 - [deepseek-manners.md](deepseek-manners.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/deepseek-manners)
 - [plugin-template.md](plugin-template.md) — 兼容 · [仓库](https://github.com/dsh-external/plugin-template)
@@ -289,6 +290,7 @@
 - [dsh-custom-tool.md](dsh-custom-tool.md) — 关注 · [仓库](https://github.com/dsh-external/dsh-custom-tool)
 - [dsh-openbiliclaw.md](dsh-openbiliclaw.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-openbiliclaw)
 - [dsh-longbridge.md](dsh-longbridge.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-longbridge)
+- [dsh-dzcf.md](dsh-dzcf.md) — 未知（待调研） · [仓库](https://github.com/dsh-external/dsh-dzcf)
 
 ## 相关资产
 

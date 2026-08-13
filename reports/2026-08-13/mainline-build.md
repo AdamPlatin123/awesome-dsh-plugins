@@ -1,7 +1,7 @@
 # mainline 构建报告（2026-08-13）
 
 - 快照：`snapshots/20260812T172954Z-final-unwatermarked-5fa48343c7`（commit `7b9644f2`）
-- 构建时间：2026-08-13_045910（76s）
+- 构建时间：2026-08-13_051235（71s）
 - install：✅ 成功
 - build：❌ 失败 rc=1
 

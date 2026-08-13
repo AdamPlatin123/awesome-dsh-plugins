@@ -213,7 +213,6 @@ dsh-find-plugins
 dsh-fkin-vibe
 dsh-harness-ops
 dsh-vision-toolkit
-dsh-code
 Top
 __perm_probe__
 dsh-kimi-browser
@@ -280,3 +279,8 @@ dsh-STAR
 dsh-STAGE
 dsh-conversation-share
 tonghuashun-webui
+dsh-session-notification
+dsh-custom-tool
+dsh-openbiliclaw
+dsh-longbridge
+dsh-dzcf

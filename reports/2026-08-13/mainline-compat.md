@@ -2,7 +2,7 @@
 
 - mainline：`7b9644f`（snapshots/20260812T172954Z-final-unwatermarked）
 - 上次对比：`7b9644f2b664e46c9518506035aa6c8d5af4d8e8`
-- 兼容性：87/284 无需适配，9 需适配（dsh-subagent-tree dsh-working-activity turtle-ui fabric dsh-tps dsh-split-panes dsh-question-collapse dsh-ohos-patch dsh-cot-summary）；其中关注 31、占位 13、不适用 2、已删除 0、未知 188
+- 兼容性：87/286 无需适配，9 需适配（dsh-subagent-tree dsh-working-activity turtle-ui fabric dsh-tps dsh-split-panes dsh-question-collapse dsh-ohos-patch dsh-cot-summary）；其中关注 31、占位 13、不适用 2、已删除 4、未知 186
 
 ## 兼容性矩阵
 
@@ -148,6 +148,7 @@
 | dsh-gomoku | 未知 | 无补丁 | 缺: ThemeService tuiPrompt | 7 项中 7 不匹配: @deepseek-ai/dsh-client-locale=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-client-runtime=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-client-ui-conversation=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-client-ui-primitives=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-client-ui-slots=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-invariants=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-llm=^0.0.1↔0.0.1-rc.2 | 未知（待调研） |
 | dsh-101 | 未知 | 无补丁 | 缺: ThemeService tuiPrompt | 16 项中 15 不匹配: @deepseek-ai/dsh-agent=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-client-locale=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-client-runtime=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-client-ui-conversation=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-client-ui-layout=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-client-ui-primitives=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-client-ui-slots=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-client-ui-theme=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-host-webserver=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-invariants=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-llm=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-session=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-skill=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-system-prompt=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-tools=^0.0.1↔0.0.1-rc.2 | 未知（待调研） |
 | dsh-turn-rewind | 未知 | 无补丁 | 缺: ThemeService tuiPrompt | 无 dsh-* 依赖 | 未知（待调研） |
+| dsh-genui | 未知 | 无补丁 | 缺: ThemeService tuiPrompt | 9 项中 8 不匹配: @deepseek-ai/dsh-client-runtime=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-client-ui-primitives=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-client-ui-slots=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-client-ui-tool=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-invariants=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-llm=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-system-prompt=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-tools=^0.0.1↔0.0.1-rc.2 | 未知（待调研） |
 | dsh-mygo | 未知 | 无补丁 | 缺: ThemeService tuiPrompt | 11 项中 5 不匹配: @deepseek-ai/dsh-invariants=^0.0.1-rc.1↔0.0.1-rc.2 @deepseek-ai/dsh-session=^0.0.1-rc.1↔0.0.1-rc.2 @deepseek-ai/dsh-invariants=^0.0.1-rc.1↔0.0.1-rc.2 @deepseek-ai/dsh-storage=^0.0.1-rc.1↔0.0.1-rc.2 @deepseek-ai/dsh-storage-domain=^0.0.1-rc.1↔0.0.1-rc.2 | 未知（待调研） |
 | cross-harness-cite | 未知 | 无补丁 | 缺: ThemeService tuiPrompt | 15 项中 10 不匹配: @deepseek-ai/dsh-client-connection=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-client-locale=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-client-runtime=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-client-ui-conversation=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-client-ui-primitives=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-client-ui-settings=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-client-ui-slots=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-client-web-react=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-host-webserver=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-invariants=^0.0.1↔0.0.1-rc.2 | 未知（待调研） |
 | dsh-split-panes | 未知 | CONFLICT（1 个补丁中 0 个 OK） | 缺: ThemeService tuiPrompt | 4 项匹配 | 需适配 |
@@ -232,10 +233,10 @@
 | dsh-deep-whale | 未知 | 无补丁 | 缺: ThemeService tuiPrompt | 无 dsh-* 依赖 | 未知（待调研） |
 | dsh-tool-search | 未知（catalog ref，非 mainline 锚定） | 无补丁 | 缺: ThemeService tuiPrompt | 5 项匹配 | 未知（待调研） |
 | oh-my-dsh-distribution | 未知 | 无补丁 | 缺: ThemeService tuiPrompt | 无 dsh-* 依赖 | 未知（待调研） |
-| dsh-memory | 未知 | 无补丁 | 缺: ThemeService tuiPrompt | 无 dsh-* 依赖 | 未知（待调研） |
-| dsh-chat | 未知 | 无补丁 | 缺: ThemeService tuiPrompt | 无 dsh-* 依赖 | 未知（待调研） |
-| dsh-web | 未知 | 无补丁 | 缺: ThemeService tuiPrompt | 无 dsh-* 依赖 | 未知（待调研） |
-| dsh_ide | 未知 | 无补丁 | 缺: ThemeService tuiPrompt | 无 dsh-* 依赖 | 未知（待调研） |
+| dsh-memory | 未知 | 不适用（空仓库） | 不适用（空仓库） | 不适用 | 已删除 |
+| dsh-chat | 未知 | 不适用（空仓库） | 不适用（空仓库） | 不适用 | 已删除 |
+| dsh-web | 未知 | 不适用（空仓库） | 不适用（空仓库） | 不适用 | 已删除 |
+| dsh_ide | 未知 | 不适用（空仓库） | 不适用（空仓库） | 不适用 | 已删除 |
 | dsh-trace | 未知（catalog ref，非 mainline 锚定） | 无补丁 | 缺: ThemeService tuiPrompt | 4 项匹配 | 未知（待调研） |
 | deepseek-manners | 未知 | 无补丁 | 缺: ThemeService tuiPrompt | 无 dsh-* 依赖 | 未知（待调研） |
 | plugin-template | 未知（非 commit 锚定: README） | 无补丁 | 缺: ThemeService tuiPrompt | 无 dsh-* 依赖 | 兼容 |
@@ -292,6 +293,7 @@
 | dsh-custom-tool | 未知（不同谱系） | 无补丁 | 缺: ThemeService tuiPrompt | 7 项中 7 不匹配: @deepseek-ai/dsh-settings=^0.0.1-rc.1↔0.0.1-rc.2 @deepseek-ai/dsh-tools=^0.0.1-rc.1↔0.0.1-rc.2 @deepseek-ai/dsh-system-prompt=^0.0.1-rc.1↔0.0.1-rc.2 @deepseek-ai/dsh-client-runtime=^0.0.1-rc.1↔0.0.1-rc.2 @deepseek-ai/dsh-client-ui-settings=^0.0.1-rc.1↔0.0.1-rc.2 @deepseek-ai/dsh-client-ui-slots=^0.0.1-rc.1↔0.0.1-rc.2 @deepseek-ai/dsh-client-locale=^0.0.1-rc.1↔0.0.1-rc.2 | 关注 |
 | dsh-openbiliclaw | 未知 | 无补丁 | 缺: ThemeService tuiPrompt | 3 项中 3 不匹配: @deepseek-ai/dsh-client-runtime=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-client-ui-slots=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-tools=^0.0.1↔0.0.1-rc.2 | 未知（待调研） |
 | dsh-longbridge | 未知 | 无补丁 | 缺: ThemeService tuiPrompt | 11 项中 11 不匹配: @deepseek-ai/dsh-credentials=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-host-apiproxy=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-settings=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-tools=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-llm=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-client-connection=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-client-runtime=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-client-ui-primitives=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-client-ui-settings=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-client-ui-slots=^0.0.1↔0.0.1-rc.2 @deepseek-ai/dsh-user-approval=^0.0.1↔0.0.1-rc.2 | 未知（待调研） |
+| dsh-dzcf | 未知 | 无补丁 | 缺: ThemeService tuiPrompt | 无 dsh-* 依赖 | 未知（待调研） |
 
 ## mainline 变更分析（7b9644f2b664e46c9518506035aa6c8d5af4d8e8 → 7b9644f）
 
@@ -618,6 +620,8 @@
 - 未建模/状态未知：尚无 research/dsh-101.md 调研摘要（或 git/gh 无法确认仓库状态），不做兼容性结论；建议先完成调研建模或人工核查后再纳入兼容跟踪。
 ### dsh-turn-rewind
 - 未建模/状态未知：尚无 research/dsh-turn-rewind.md 调研摘要（或 git/gh 无法确认仓库状态），不做兼容性结论；建议先完成调研建模或人工核查后再纳入兼容跟踪。
+### dsh-genui
+- 未建模/状态未知：尚无 research/dsh-genui.md 调研摘要（或 git/gh 无法确认仓库状态），不做兼容性结论；建议先完成调研建模或人工核查后再纳入兼容跟踪。
 ### dsh-mygo
 - 未建模/状态未知：尚无 research/dsh-mygo.md 调研摘要（或 git/gh 无法确认仓库状态），不做兼容性结论；建议先完成调研建模或人工核查后再纳入兼容跟踪。
 ### cross-harness-cite
@@ -790,13 +794,17 @@
 ### oh-my-dsh-distribution
 - 未建模/状态未知：尚无 research/oh-my-dsh-distribution.md 调研摘要（或 git/gh 无法确认仓库状态），不做兼容性结论；建议先完成调研建模或人工核查后再纳入兼容跟踪。
 ### dsh-memory
-- 未建模/状态未知：尚无 research/dsh-memory.md 调研摘要（或 git/gh 无法确认仓库状态），不做兼容性结论；建议先完成调研建模或人工核查后再纳入兼容跟踪。
+- 兼容：锚定 未知（未知）、补丁「不适用（空仓库）」，当日 mainline 可干净集成。
+- 建议把补丁基线从 未知 显式记录到 README/补丁头，快照一漂即可自动预警。
 ### dsh-chat
-- 未建模/状态未知：尚无 research/dsh-chat.md 调研摘要（或 git/gh 无法确认仓库状态），不做兼容性结论；建议先完成调研建模或人工核查后再纳入兼容跟踪。
+- 兼容：锚定 未知（未知）、补丁「不适用（空仓库）」，当日 mainline 可干净集成。
+- 建议把补丁基线从 未知 显式记录到 README/补丁头，快照一漂即可自动预警。
 ### dsh-web
-- 未建模/状态未知：尚无 research/dsh-web.md 调研摘要（或 git/gh 无法确认仓库状态），不做兼容性结论；建议先完成调研建模或人工核查后再纳入兼容跟踪。
+- 兼容：锚定 未知（未知）、补丁「不适用（空仓库）」，当日 mainline 可干净集成。
+- 建议把补丁基线从 未知 显式记录到 README/补丁头，快照一漂即可自动预警。
 ### dsh_ide
-- 未建模/状态未知：尚无 research/dsh_ide.md 调研摘要（或 git/gh 无法确认仓库状态），不做兼容性结论；建议先完成调研建模或人工核查后再纳入兼容跟踪。
+- 兼容：锚定 未知（未知）、补丁「不适用（空仓库）」，当日 mainline 可干净集成。
+- 建议把补丁基线从 未知 显式记录到 README/补丁头，快照一漂即可自动预警。
 ### dsh-trace
 - 未建模/状态未知：尚无 research/dsh-trace.md 调研摘要（或 git/gh 无法确认仓库状态），不做兼容性结论；建议先完成调研建模或人工核查后再纳入兼容跟踪。
 ### deepseek-manners
@@ -911,6 +919,8 @@
 - 未建模/状态未知：尚无 research/dsh-openbiliclaw.md 调研摘要（或 git/gh 无法确认仓库状态），不做兼容性结论；建议先完成调研建模或人工核查后再纳入兼容跟踪。
 ### dsh-longbridge
 - 未建模/状态未知：尚无 research/dsh-longbridge.md 调研摘要（或 git/gh 无法确认仓库状态），不做兼容性结论；建议先完成调研建模或人工核查后再纳入兼容跟踪。
+### dsh-dzcf
+- 未建模/状态未知：尚无 research/dsh-dzcf.md 调研摘要（或 git/gh 无法确认仓库状态），不做兼容性结论；建议先完成调研建模或人工核查后再纳入兼容跟踪。
 
 ## 主仓库侧建议
 
