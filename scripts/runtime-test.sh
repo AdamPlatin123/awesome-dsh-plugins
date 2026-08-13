@@ -6,7 +6,6 @@
 # 判定：✅ 可用 / ⚠️ 加载失败 / ❌ 工具调用失败 / ⏭️ 跳过（双未更新）
 # 用法：runtime-test.sh [--limit N] [插件名...]
 set -uo pipefail
-
 REPO_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$REPO_DIR" || exit 2
 DATE="$(date +%Y-%m-%d)"
@@ -17,20 +16,27 @@ export PATH="$NODE_BIN:$HOME/.local/bin:$PATH"
 JQ="$(command -v jq || echo "$HOME/.local/bin/jq")"
 QW_BASE="http://10.123.45.18:8080/v1"
 
-STATE="$REPO_DIR/.runtime-test-state.json"
-SUPPORT="$REPO_DIR/.support-status.json"
 LIMIT=99999
+SUFFIX=""
 CANDIDATES=()
 for a in "$@"; do
   [[ "$a" =~ ^[0-9]+$ ]] && LIMIT="$a" && continue
   [ "$a" = "--limit" ] && continue
+  if [[ "$a" == --state-suffix=* ]]; then SUFFIX="${a#*=}"; continue; fi
   CANDIDATES+=("$a")
 done
+STATE="$REPO_DIR/.runtime-test-state${SUFFIX:+.$SUFFIX}.json"
+SUPPORT="$REPO_DIR/.support-status${SUFFIX:+.$SUFFIX}.json"
 
-echo "=== $(date -Is) runtime-test 开始（limit=$LIMIT） ==="
+# flock 互斥：防止 hook/cron 并发触发导致状态文件污染（分片按后缀隔离锁，互不阻塞）
+exec 9>"/tmp/dsh-runtime-test-${SUFFIX:-main}.lock"
+flock -n 9 || { echo "[互斥] 已有 runtime-test（${SUFFIX:-main}）在运行，本轮退出"; exit 0; }
+
+echo "=== $(date -Is) runtime-test 开始（limit=$LIMIT，分片 ${SUFFIX:-main}） ==="
 MAINLINE_HEAD="$(cd "$BUILD" && git rev-parse HEAD 2>/dev/null | cut -c1-12)"
 [ -f "$STATE" ] || echo '{}' > "$STATE"
 [ -f "$SUPPORT" ] || echo '{}' > "$SUPPORT"
+
 
 # 1. 候选：显式指定；否则取需适配+关注清单
 if [ ${#CANDIDATES[@]} -eq 0 ]; then
@@ -95,8 +101,11 @@ for name in "${CANDIDATES[@]}"; do
   RC=$?
   if printf '%s' "$OUT" | grep -qiE "Cannot find module|failed to load|Error loading plugin|not found.*plugin|ENOENT"; then
     RESULT="⚠️ 加载失败"; LOAD_FAIL=$((LOAD_FAIL+1))
+    mkdir -p "$REPO_DIR/.rt-errors"
+    printf '%s\n' "$OUT" | grep -m6 -iE "Cannot find|failed to (import|apply)|ERR_MODULE|Error:" > "$REPO_DIR/.rt-errors/$name.txt" 2>/dev/null
   elif [ $RC -ne 0 ]; then
     RESULT="❌ 运行报错（rc=$RC）"; TOOL_FAIL=$((TOOL_FAIL+1))
+    printf '%s\n' "$OUT" | tail -15 > "$REPO_DIR/.rt-errors/$name.txt" 2>/dev/null
   else
     RESULT="✅ 可用"; PASS=$((PASS+1))
   fi
