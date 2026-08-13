@@ -178,7 +178,7 @@
 | [dsh-task-status](https://github.com/dsh-external/dsh-task-status) | 🆕 新增 |
 | [dsh-annotation](https://github.com/dsh-external/dsh-annotation) | 🆕 新增 |
 | [dsh-ui-webview](https://github.com/dsh-external/dsh-ui-webview) | 🆕 新增 |
-| [dsh-web-review](https://github.com/dsh-external/dsh-web-review) | 🆕 新增 |
+| [dsh-web-review](https://github.com/CanglongCl/dsh-web-review) | 🆕 新增 |
 | [dsh-cc-connect](https://github.com/dsh-external/dsh-cc-connect) | 🆕 新增 |
 | [dsh-focus-chat](https://github.com/dsh-external/dsh-focus-chat) | 🆕 新增 |
 | [dsh-build](https://github.com/dsh-external/dsh-build) | 🆕 新增 |
@@ -464,7 +464,7 @@
 | [dsh-task-status](https://github.com/dsh-external/dsh-task-status) | ✏️ 修改 |
 | [dsh-annotation](https://github.com/dsh-external/dsh-annotation) | ✏️ 修改 |
 | [dsh-ui-webview](https://github.com/dsh-external/dsh-ui-webview) | ✏️ 修改 |
-| [dsh-web-review](https://github.com/dsh-external/dsh-web-review) | ✏️ 修改 |
+| [dsh-web-review](https://github.com/CanglongCl/dsh-web-review) | ✏️ 修改 |
 | [dsh-cc-connect](https://github.com/dsh-external/dsh-cc-connect) | ✏️ 修改 |
 | [dsh-focus-chat](https://github.com/dsh-external/dsh-focus-chat) | ✏️ 修改 |
 | [dsh-build](https://github.com/dsh-external/dsh-build) | ✏️ 修改 |
@@ -562,7 +562,7 @@
 
 | 仓库 | PR | 标题 | 更新 |
 |---|---|---|---|
-| [dsh-web-review](https://github.com/dsh-external/dsh-web-review) | [#1](https://github.com/dsh-external/dsh-web-review/pull/1) | dsh-web-review: add managed multi-tab browser preview | 2026-08-13 |
+| [dsh-web-review](https://github.com/CanglongCl/dsh-web-review) | [#1](https://github.com/dsh-external/dsh-web-review/pull/1) | dsh-web-review: add managed multi-tab browser preview | 2026-08-13 |
 | [dsh-pi-adapter](https://github.com/dsh-external/dsh-pi-adapter) | [#6](https://github.com/dsh-external/dsh-pi-adapter/pull/6) | feat: register commands through cordis DI activation, not first session/created | 2026-08-12 |
 | [dsh-pi-adapter](https://github.com/dsh-external/dsh-pi-adapter) | [#5](https://github.com/dsh-external/dsh-pi-adapter/pull/5) | feat: adapt-interactive ctx.ui tier + session-log quarantine audit | 2026-08-12 |
 | [dsh-my-rsi](https://github.com/dsh-external/dsh-my-rsi) | [#50](https://github.com/dsh-external/dsh-my-rsi/pull/50) | feat: migrate to 20260811 snapshot and reuse upstream surfaces | 2026-08-11 |
