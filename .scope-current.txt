@@ -284,3 +284,4 @@ dsh-custom-tool
 dsh-openbiliclaw
 dsh-longbridge
 dsh-dzcf
+fuhefei/dsh-sentinel
