@@ -76,8 +76,15 @@ else
     found=0
     for k in "${SCOPE_REPOS[@]}"; do [ "$k" = "$full" ] && found=1 && break; done
     if [ "$found" -eq 0 ]; then
-      NEW_REPOS+=( "$full" )
-      SCOPE_REPOS+=( "$full" )
+      # 验证为「能安装的插件」才纳入（package.json name+main/exports 或 dsh 集成；排除 awesome/合影/占位）
+      PKG_OK="$(timeout 30 gh api "repos/$full/contents/package.json" --jq '.content' 2>/dev/null | base64 -d 2>/dev/null || echo "")"
+      if [ -n "$PKG_OK" ] && printf '%s' "$PKG_OK" | jq -e '.name and (.main or .exports or .dsh)' >/dev/null 2>&1; then
+        NEW_REPOS+=( "$full" )
+        SCOPE_REPOS+=( "$full" )
+      else
+        echo "[跳过] $full：非插件仓库（无 package.json 或无可安装入口）"
+        echo "$full" >> .non-plugin-repos.txt
+      fi
     fi
   done <<< "$TOPIC_REPOS"
   if [ "${#NEW_REPOS[@]}" -gt 0 ]; then

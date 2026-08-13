@@ -1,6 +1,6 @@
 # SOP：DSH 生态情报自动化（拉取 → 构建 → 部署 → 比对 → 报告 → 推送）
 
-> 适用：dsh-plugin-radar 监控链路 · 远程主机 <内网主机> · 更新日期 2026-08-10
+> 适用：awesome-dsh-plugins 监控链路 · 远程主机 <内网主机> · 更新日期 2026-08-10
 > 目标：对快速迭代的 deepseek-harness 与 org 插件生态，自动拉取最新内容、构建验证、部署实例、比对兼容性、产出报告，全链路无人值守。
 
 ## 1. 流程总览
@@ -30,7 +30,7 @@ cron-check.sh（总调度）
 | cron 全量班 | 每日 02:00 | `cron-check.sh --full`：全量索引 + 自动构建 |
 | cron 增量班 | 每日 10:00 / 18:00 | 仅索引有变化的仓库 |
 | post-merge hook | 人工推送监控 repo（作者非 bot） | 自动触发 `--full` 全量 + 构建 |
-| 手动 | `bash -lc 'cd /home/adam/dsh-plugin-radar && ./scripts/cron-check.sh [--full]'` | 任意时刻 |
+| 手动 | `bash -lc 'cd /home/adam/awesome-dsh-plugins && ./scripts/cron-check.sh [--full]'` | 任意时刻 |
 
 ## 3. 各环节标准操作
 

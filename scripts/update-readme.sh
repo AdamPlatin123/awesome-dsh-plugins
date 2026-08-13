@@ -88,33 +88,44 @@ if [ "$PR_TOTAL" -gt 0 ] && [ -z "$PR_ROWS" ]; then
 fi
 [ -z "$PR_ROWS" ] && PR_ROWS="| （暂无 open PR） | | | |"$'\n'
 
-# 5. 组装标记块（A 方向：仪表盘优先）
+# 5. 组装标记块（证据层汇总：首页只出汇总+链接，不出完整表）
+# 运行级数字从 .support-status.json 统计；证据不足 = 总数 - 已判定
+UNKNOWN="?"
+if [[ "$TOTAL" =~ ^[0-9]+$ ]] && [[ "$COMPAT" =~ ^[0-9]+$ ]] && [[ "$ADAPT" =~ ^[0-9]+$ ]] \
+  && [[ "$WATCH" =~ ^[0-9]+$ ]] && [[ "$PLACE" =~ ^[0-9]+$ ]] && [[ "$NA" =~ ^[0-9]+$ ]] && [[ "$GONE" =~ ^[0-9]+$ ]]; then
+  UNKNOWN=$((TOTAL - COMPAT - ADAPT - WATCH - PLACE - NA - GONE))
+fi
+RT_PASS="?"; RT_FAIL="?"; RT_TESTED="?"
+if [ -f .support-status.json ]; then
+  RT_PASS="$(jq -r '[.[].support] | map(select(. == "✅ 可用")) | length' .support-status.json 2>/dev/null || echo "?")"
+  RT_FAIL="$(jq -r '[.[].support] | map(select(startswith("⚠️") or startswith("❌"))) | length' .support-status.json 2>/dev/null || echo "?")"
+  RT_TESTED="$(jq 'length' .support-status.json 2>/dev/null || echo "?")"
+fi
+
 BLOCK="<!-- AUTO:ecosystem:START -->
-> 自动更新：$(date +%Y-%m-%d_%H%M)（cron 每日 · 报告日 $DATE · mainline \`$MAINLINE\`）
+> 更新于 $(date +%Y-%m-%d\ %H:%M) · 每 8 小时刷新 · mainline \`$MAINLINE\`
 
-**插件目录**（dsh-external org · $TOTAL 仓库 · 状态分群）
+| 证据层 | 当前结果 |
+|---|---:|
+| 自动收录 | $TOTAL 个仓库 |
+| 静态综合判定 | $COMPAT 兼容 · $WATCH 关注 · $ADAPT 需适配 |
+| 证据不足 | $UNKNOWN 待调研 |
+| 其他 | $PLACE 占位 · $NA 不适用 · $GONE 已删除 |
+| 运行级实测 | $RT_PASS 可用 · $RT_FAIL 失败（共测试 $RT_TESTED 个） |
+| 正在跟踪的 PR | $PR_TOTAL |
 
-| 状态 | 数量 |
-|---|---|
-| ✅ 兼容 mainline | $COMPAT |
-| ⚠️ 需适配 | $ADAPT |
-| 🔍 关注 / 占位 / 不适用 / 已删除 | $WATCH / $PLACE / $NA / $GONE |
-| 🐙 开放 PR | $PR_TOTAL |
+[完整索引](reports/$DATE/index.md) · [静态矩阵](reports/$DATE/mainline-compat.md) · [编译实验](reports/$DATE/compile-compat.md) · [运行实测](reports/$DATE/runtime-test.md)
 
-📄 **完整矩阵**：[mainline-compat.md](reports/$DATE/mainline-compat.md) · [开发者摘要](reports/$DATE/mainline-summary.md) · [当日索引](reports/$DATE/index.md)
-
-**今日新增 / 修改**
+**今日新增 / 修改**（完整变更见 [CHANGELOG](CHANGELOG.md)）
 
 | 仓库 | 类型 |
 |---|---|
 ${NEW_ROWS}
-${MOD_ROWS}
-**⚠️ 需适配（补丁基线 / seam 变化）**
+${MOD_ROWS}**⚠️ 需适配**（完整矩阵见 [mainline-compat.md](reports/$DATE/mainline-compat.md)）
 
 | 插件 | 锚定 | 判定 |
 |---|---|---|
-${ADAPT_ROWS}
-**🐙 正在跟踪的 open PR**
+${ADAPT_ROWS}**🐙 正在跟踪的 open PR**
 
 | 仓库 | PR | 标题 | 更新 |
 |---|---|---|---|
