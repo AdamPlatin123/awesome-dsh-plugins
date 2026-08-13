@@ -145,8 +145,8 @@ fi
 #     新增 = 本次发现的 NEW_REPOS；修改 = CHANGED 中非新增的已知仓库
 CHANGED_REPOS=()
 if [ "$FULL" -eq 1 ]; then
-  # 全量模式：逐 repo commit 全部 scope 仓库详情
-  CHANGED_REPOS=( "${SCOPE_REPOS[@]:-}" )
+  # 全量模式：全部仓库是基线快照，不是"本次修改"；只保留真正新增（NEW_REPOS）
+  CHANGED_REPOS=()
 else
   for _c in $CHANGED; do
     [ "$_c" = "all(首次)" ] && continue

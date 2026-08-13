@@ -54,6 +54,66 @@ NEW_ROWS=""; MOD_ROWS=""
 [ -n "$MOD_LIST" ] && MOD_ROWS="$(printf '%s\n' "$MOD_LIST" | while IFS= read -r n; do [ -n "$n" ] && printf '| [%s](https://github.com/dsh-external/%s) | ✏️ 修改 |\n' "$n" "$n"; done)"
 [ -z "$MOD_ROWS" ] && MOD_ROWS=$'| （今日无修改） | |\n'
 
+# 2.5 完整仓库分群表（README 第一眼入口：全部仓库按判定状态分组列出）
+#     数据源 = 最新 mainline-compat.md 矩阵；URL 支持 owner/name（外部仓库）
+GROUP_BLOCK=""
+if [ -n "$LATEST_REPORT" ] && [ -f "$LATEST_REPORT/mainline-compat.md" ]; then
+  GROUP_OUTPUT="$(python3 - "$LATEST_REPORT/mainline-compat.md" <<'PYEOF'
+import re, sys
+path = sys.argv[1]
+groups: dict[str, list[str]] = {}
+order = ['兼容', '需适配', '关注', '待调研', '占位', '不适用', '已删除']
+for line in open(path, encoding='utf-8'):
+    m = re.match(r'^\|\s*([A-Za-z0-9_.-]+(?:/[A-Za-z0-9_.-]+)?)\s*\|.*\|\s*([^|]+?)\s*\|$', line)
+    if not m:
+        continue
+    name, verdict = m.group(1), m.group(2).strip()
+    if '需适配' in verdict:
+        g = '需适配'
+    elif '兼容' in verdict:
+        g = '兼容'
+    elif '关注' in verdict:
+        g = '关注'
+    elif '占位' in verdict:
+        g = '占位'
+    elif '不适用' in verdict:
+        g = '不适用'
+    elif '已删除' in verdict:
+        g = '已删除'
+    else:
+        g = '待调研'
+    groups.setdefault(g, []).append(name)
+out = []
+for g in order:
+    items = groups.get(g, [])
+    if not items:
+        continue
+    out.append(f'\n**{g}**（{len(items)}）\n')
+    out.append('| 仓库 | 状态 |')
+    out.append('|---|---|')
+    for n in items:
+        url = n if '/' in n else f'dsh-external/{n}'
+        out.append(f'| [{n}](https://github.com/{url}) | {g} |')
+# STATS 行：与分群表同源，供 README 顶部证据层使用（避免两处口径不一致）
+stats = {g: len(groups.get(g, [])) for g in order}
+print('STATS|' + '|'.join(f'{g}={stats[g]}' for g in order))
+print('\n'.join(out))
+PYEOF
+)"
+  GROUP_BLOCK="$(printf '%s' "$GROUP_OUTPUT" | grep -v '^STATS|')"
+  # 解析同源统计覆盖顶部数字（矩阵逐行判定为准）
+  _stats_line="$(printf '%s' "$GROUP_OUTPUT" | grep -m1 '^STATS|' | cut -d'|' -f2-)"
+  if [ -n "$_stats_line" ]; then
+    _parse() { printf '%s' "$_stats_line" | tr '|' '\n' | grep "^$1=" | cut -d= -f2; }
+    for _pair in 兼容=COMPAT 需适配=ADAPT 关注=WATCH 待调研=UNKNOWN 占位=PLACE 不适用=NA 已删除=GONE; do
+      _g="${_pair%%=*}"; _v="${_pair#*=}"
+      _n="$(_parse "$_g")"
+      [[ "$_n" =~ ^[0-9]+$ ]] && eval "$_v=$_n"
+    done
+    TOTAL=$((COMPAT + ADAPT + WATCH + UNKNOWN + PLACE + NA + GONE))
+  fi
+fi
+
 # 3. 需适配仓库（从最新报告矩阵提取状态=需适配的行）
 ADAPT_ROWS=""
 if [ -n "$LATEST_REPORT" ] && [ -f "$LATEST_REPORT/mainline-compat.md" ]; then
@@ -116,20 +176,28 @@ BLOCK="<!-- AUTO:ecosystem:START -->
 
 [完整索引](reports/$DATE/index.md) · [静态矩阵](reports/$DATE/mainline-compat.md) · [编译实验](reports/$DATE/compile-compat.md) · [运行实测](reports/$DATE/runtime-test.md)
 
+**插件目录**（$TOTAL 个仓库 · 按判定状态分群）
+${GROUP_BLOCK}
+
 **今日新增 / 修改**（完整变更见 [CHANGELOG](CHANGELOG.md)）
 
 | 仓库 | 类型 |
 |---|---|
 ${NEW_ROWS}
-${MOD_ROWS}**⚠️ 需适配**（完整矩阵见 [mainline-compat.md](reports/$DATE/mainline-compat.md)）
+${MOD_ROWS}
+
+**⚠️ 需适配**（完整矩阵见 [mainline-compat.md](reports/$DATE/mainline-compat.md)）
 
 | 插件 | 锚定 | 判定 |
 |---|---|---|
-${ADAPT_ROWS}**🐙 正在跟踪的 open PR**
+${ADAPT_ROWS}
+
+**🐙 正在跟踪的 open PR**
 
 | 仓库 | PR | 标题 | 更新 |
 |---|---|---|---|
-${PR_ROWS}<!-- AUTO:ecosystem:END -->"
+${PR_ROWS}
+<!-- AUTO:ecosystem:END -->"
 
 # 6. 替换 README 标记块（不存在则追加到末尾）
 python3 - "$README" "$BLOCK" <<'PYEOF'
@@ -149,4 +217,7 @@ with open(path, 'w', encoding='utf-8') as f:
     f.write(new)
 print('README 自动仪表盘已更新')
 PYEOF
+
+# 7. 分类目录块（参考 hub 九类体系，随 README 更新一并刷新）
+"$(dirname "$0")/gen-catalog.sh" >/dev/null 2>&1 || true
 exit 0
