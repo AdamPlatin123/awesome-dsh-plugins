@@ -617,12 +617,18 @@
 四个检测维度详见 [下方](#-四个检测维度详述)。
 ## 🤝 如何添加插件
 
-目录由自动化系统每日扫描 **dsh-external org 全部仓库**动态生成，无需手动登记。若你的插件尚未纳入：
+目录由自动化系统每日扫描 **dsh-external org 全部仓库**动态生成。想更快被收录或补充元数据，走 **PR 方案**：
 
-1. 把仓库迁入（或 fork 到）`dsh-external` org，或在本仓库提 [issue](https://github.com/dsh-external/awesome-dsh-plugins/issues) 附上仓库地址
+1. 把仓库迁入（或 fork 到）`dsh-external` org
 2. 给插件仓库打 `dsh-plugin` topic（便于生态发现）
 3. 插件 package.json 使用 `@dsh-external/*` scope（**不要**占用 `@deepseek-ai/*` 保留命名空间）
-4. 次日 02:00 全量扫描后，插件会出现在上方目录并持续跟踪兼容性
+4. 在本仓库 [`PLUGINS.md`](PLUGINS.md) 表格追加一行（插件名 | 仓库 | 一句话说明），提 PR：
+
+   | 插件 | 仓库 | 说明 |
+   |---|---|---|
+   | my-plugin | [dsh-external/my-plugin](https://github.com/dsh-external/my-plugin) | 一句话功能描述 |
+
+5. PR 合并后立即进入目录；未提 PR 的仓库在次日 02:00 全量扫描时自动收录
 
 **插件自检三步**（提交前）：
 
@@ -632,18 +638,6 @@ dsh --profile headless --patch <(printf -- '- insert:\n    - id: my-plugin\n    
 # 2. 无报错即通过加载级；有报错按提示修依赖声明
 # 3. 声明所有运行时依赖（react 等）到 package.json dependencies
 ```
-epseek-ai/* 从 ^0.0.1 切换到 0.0.1-rc.1，
-> 同时 tuiPrompt 被移除/改名，导致大量依赖范围不匹配与 API 缺失。
-> 提前适配：统一用 ^0.0.1-rc.1，并加兼容导出映射替代 tuiPrompt。
-```
-→ 一次跨插件系统性变更（rc.1 切换）被自动识别——脚本模板做不到，LLM 可以。
-
-**实例 3：插件自查三步**
-```
-1. 仪表盘"需适配"表看到 dsh-my-rsi
-2. 点开每日报告 → "补丁 CONFLICT（3 个补丁中 1 个 OK）+ 缺 tuiPrompt"
-3. 对照修复：rebase 补丁到新快照 + 替换 tuiPrompt 调用
-```
 
 ## 关于
 
@@ -651,7 +645,7 @@ epseek-ai/* 从 ^0.0.1 切换到 0.0.1-rc.1，
 <summary>📖 工作原理与限制（点击展开）</summary>
 
 - **每日 02:00 自动全量**：动态发现 org 仓库 → 拉最新 mainline 快照 → 四维对比 + 编译验证 + 构建部署 + LLM 摘要 → 报告推送（`cron-check.sh` / `compare-mainline.sh` / `report-llm.sh`）
-- **内容 private**：仅供 org 内测成员；插件迁移到个人账号后仍在扫描范围（动态发现自动跟随）
+- **公开目录**：个人镜像（AdamPlatin123/awesome-dsh-plugins）为 public 展示面；org 内数据源保持 private（监控链路与凭证隔离）
 - **诚实边界**：编译失败 ≠ 不可用（56% 自带 lib 可运行）；未知（待调研）仓库标注明确不猜测
 - 完整 SOP：`docs/SOP.md`；插件修复/安装测试：`docs/plugin-fix-test.md`
 
