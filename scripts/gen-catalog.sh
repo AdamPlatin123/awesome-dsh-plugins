@@ -137,7 +137,7 @@ for r in merged_repos:
 out = []
 out.append("<!-- AUTO:catalog:START -->")
 out.append("")
-out.append("> 按功能领域分类（重分类修正，数据源 [dsh-external/hub](https://github.com/dsh-external/hub) catalog）。每类显示前 10 条，全部可见；点击标题展开。")
+out.append("> 按功能领域分类（重分类修正，数据源 [dsh-external/hub](https://github.com/dsh-external/hub) catalog）。点击标题展开，全部条目一次显示。")
 out.append("")
 for key, title, desc in DOMAIN_META:
     items = groups.get(key, [])
