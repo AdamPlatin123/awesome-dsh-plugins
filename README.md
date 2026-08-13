@@ -4,6 +4,8 @@
 
 [![repos](https://img.shields.io/badge/目录插件-286+-blue)]() [![compat](https://img.shields.io/badge/兼容验证-四维-green)]() [![runtime](https://img.shields.io/badge/运行级实测-Qwen%20驱动-orange)]() [![cron](https://img.shields.io/badge/自动-每日%2002:00-purple)]() [![topic](https://img.shields.io/badge/topic-dsh--plugin-lightgrey)]()
 
+
+**English** — *An automated directory of DeepSeek Harness (dsh) plugins: daily scans every repo under the dsh-external org and tracks compatibility against mainline snapshots (four-dimensional checks, compile verification, and Qwen-driven runtime tests). Your one-stop compatibility dashboard before the public beta.*
 ## 🚀 直接跳转
 
 | 想看 | 跳转 |
@@ -596,6 +598,41 @@
 **实例 2：LLM 每日摘要**（08-13 实际产出）
 ```
 > 核心变更即 @deepseek-ai/* 从 ^0.0.1 切换到 0.0.1-rc.1，
+> 同时 tuiPrompt 被移除/改名，导致大量依赖范围不匹配与 API 缺失。
+> 提前适配：统一用 ^0.0.1-rc.1，并加兼容导出映射替代 tuiPrompt。
+```
+
+→ 一次跨插件系统性变更（rc.1 切换）被自动识别——脚本模板做不到，LLM 可以。
+
+## 📐 兼容性判定标准
+
+| 状态 | 含义 | 判定依据 |
+|---|---|---|
+| ✅ 兼容 | 与最新 mainline 快照一致 | 四维对比无差异（补丁/seam/peerDeps/编译） |
+| ⚠️ 需适配 | 有接口漂移需修复 | 补丁基线变化、seam 变化、编译失败 |
+| 🔍 关注 | 有变化但影响待确认 | 新增/修改仓库、待观察项 |
+| 🧪 运行级实测 | 真实安装 + Qwen 驱动 headless 调用 | `runtime-test.md`：✅ 可用 / ⚠️ 加载失败 / ❌ 工具调用失败 |
+| 占位/不适用/已删除 | 非插件仓库或无插件内容 | 目录结构判定 |
+
+四个检测维度详见 [下方](#-四个检测维度详述)。
+## 🤝 如何添加插件
+
+目录由自动化系统每日扫描 **dsh-external org 全部仓库**动态生成，无需手动登记。若你的插件尚未纳入：
+
+1. 把仓库迁入（或 fork 到）`dsh-external` org，或在本仓库提 [issue](https://github.com/dsh-external/awesome-dsh-plugins/issues) 附上仓库地址
+2. 给插件仓库打 `dsh-plugin` topic（便于生态发现）
+3. 插件 package.json 使用 `@dsh-external/*` scope（**不要**占用 `@deepseek-ai/*` 保留命名空间）
+4. 次日 02:00 全量扫描后，插件会出现在上方目录并持续跟踪兼容性
+
+**插件自检三步**（提交前）：
+
+```bash
+# 1. 安装最新 dsh 并加载你的插件
+dsh --profile headless --patch <(printf -- '- insert:\n    - id: my-plugin\n      name: @dsh-external/my-plugin\n') "hi"
+# 2. 无报错即通过加载级；有报错按提示修依赖声明
+# 3. 声明所有运行时依赖（react 等）到 package.json dependencies
+```
+epseek-ai/* 从 ^0.0.1 切换到 0.0.1-rc.1，
 > 同时 tuiPrompt 被移除/改名，导致大量依赖范围不匹配与 API 缺失。
 > 提前适配：统一用 ^0.0.1-rc.1，并加兼容导出映射替代 tuiPrompt。
 ```
