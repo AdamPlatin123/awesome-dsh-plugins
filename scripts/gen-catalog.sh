@@ -15,9 +15,12 @@ timeout 90 "$GH" api "repos/dsh-external/hub/contents/catalog.json" --jq '.conte
 [ -s "$CATALOG" ] || { echo "[gen-catalog] hub catalog 拉取失败，跳过"; rm -f "$CATALOG"; exit 0; }
 
 python3 - "$CATALOG" <<'PYEOF'
-import json, re, sys
+import json, os, re, sys
 
 catalog = json.load(open(sys.argv[1], encoding="utf-8"))
+DESC_CACHE = {}
+if os.path.isfile("desc-cache.json"):
+    DESC_CACHE = json.load(open("desc-cache.json", encoding="utf-8"))
 repos = catalog.get("repos", [])
 
 # 领域体系：key -> (emoji 标题, 描述)。顺序即渲染顺序。
@@ -139,13 +142,17 @@ def verdict_key(repo):
     return VERDICT_RANK.get(verdict_label(repo), 3)
 
 def short_desc(repo):
-    d = repo.get("description") or ""
+    name = repo.get("name", "")
+    d = DESC_CACHE.get(name, "")
+    if not d:
+        d = repo.get("description") or ""
     if d == "null" or not d.strip():
         return "—"
     d = d.split("。")[0].strip()
     if not d:
         d = d.split(".")[0].strip()
-    return d[:48] if d else "—"
+    return d[:80] if d else "—"
+
 
 groups = {key: [] for key, _, _ in DOMAIN_META}
 # 合并 catalog 与 EXTRA_REPOS（PR 登记新插件）
