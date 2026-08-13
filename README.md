@@ -1,20 +1,21 @@
-# 🔭 DSH Plugin Radar
+# ✨ Awesome DSH Plugins
 
-> **你的插件还兼容最新 dsh 吗？** 每天自动扫描 org 全部插件仓库与 mainline 的接口漂移——编译验证、补丁检测、seam 追踪、LLM 每日摘要。公测前最有价值的兼容性检查站。
+> DeepSeek Harness（dsh）插件生态**自动目录**：每日扫描 dsh-external org 全部插件仓库，跟踪每个插件对 mainline 快照的兼容性——编译验证、补丁检测、seam 追踪、运行级实测（Qwen 驱动）、LLM 每日摘要。公测前最有价值的兼容性检查站。
 
-[![repos](https://img.shields.io/badge/扫描插件-269+-blue)]() [![compat](https://img.shields.io/badge/兼容验证-编译级-green)]() [![mainline](https://img.shields.io/badge/mainline-每日快照-orange)]() [![cron](https://img.shields.io/badge/自动-每日%2002:00-purple)]()
+[![repos](https://img.shields.io/badge/目录插件-286+-blue)]() [![compat](https://img.shields.io/badge/兼容验证-四维-green)]() [![runtime](https://img.shields.io/badge/运行级实测-Qwen%20驱动-orange)]() [![cron](https://img.shields.io/badge/自动-每日%2002:00-purple)]() [![topic](https://img.shields.io/badge/topic-dsh--plugin-lightgrey)]()
 
 ## 🚀 直接跳转
 
 | 想看 | 跳转 |
 |---|---|
+| 插件目录（状态分群） | [下方目录](#插件目录) |
 | 今天生态状态（LLM 摘要） | [开发者摘要](reports/latest/mainline-summary.md) |
-| 完整兼容矩阵（147+ 仓逐仓判定） | [mainline-compat.md](reports/latest/mainline-compat.md) |
+| 完整兼容矩阵（逐仓判定） | [mainline-compat.md](reports/latest/mainline-compat.md) |
+| 运行级真实测试（Qwen 驱动） | [runtime-test.md](reports/latest/runtime-test.md) |
 | mainline 破坏性变更清单 | [CHANGELOG.md](CHANGELOG.md) |
-| 编译级兼容验证（9/98 通过详表） | [compile-compat.md](reports/) |
 | 完整 SOP（监控/构建/插件验证） | [docs/SOP.md](docs/SOP.md) |
 
-## 现在
+## 插件目录
 
 <!-- AUTO:ecosystem:START -->
 > 自动更新：2026-08-13_2109（cron 每 8 小时 · 报告日 2026-08-13 · mainline `7b9644f`）
