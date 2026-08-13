@@ -38,7 +38,7 @@
 
 | 插件 | 仓库 | 说明 |
 |---|---|---|
-| （暂无手工登记；打标自动收录） | | |
+| dsh-work | [vibeinging/dsh-work](https://github.com/vibeinging/dsh-work) | 以 dsh 为骨、codex 为皮的桌面 app | 待测 |
 
 ## ❓ 未分类
 
