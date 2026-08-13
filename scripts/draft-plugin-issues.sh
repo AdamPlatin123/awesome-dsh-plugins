@@ -15,6 +15,8 @@ declare -A REPOS=(
   [dsh-split-panes]=dsh-external/dsh-split-panes
   [dsh-question-collapse]=dsh-external/dsh-question-collapse
   [dsh-sentinel]=fuhefei/dsh-sentinel
+  [dsh-work]=vibeinging/dsh-work
+  [dsh-tianshu-tui]=huiliyi37/dsh-tianshu-tui
 )
 
 TITLE_TMPL="已被 Awesome DSH Plugins 收录 ✨"
@@ -33,7 +35,10 @@ for name in "${!REPOS[@]}"; do
   F=".draft-issues/$name.md"
   printf '%s\n' "$BODY" > "$F"
   if [ "$APPLY" = "1" ]; then
-    if "$GH" issue create --repo "$repo" --title "$TITLE_TMPL" --body-file "$F" >/dev/null 2>&1; then
+    # 幂等：已存在同标题 open issue 则跳过（避免重复发送）
+    if "$GH" issue list --repo "$repo" --state open --json title --jq ".[].title" 2>/dev/null | grep -qF "$TITLE_TMPL"; then
+      echo "[跳过] $name（$repo）已提过，幂等跳过"
+    elif "$GH" issue create --repo "$repo" --title "$TITLE_TMPL" --body-file "$F" >/dev/null 2>&1; then
       echo "[已提] $name（$repo）"
     else
       echo "[失败] $name（$repo）"
