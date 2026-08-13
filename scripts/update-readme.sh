@@ -149,4 +149,7 @@ with open(path, 'w', encoding='utf-8') as f:
     f.write(new)
 print('README 自动仪表盘已更新')
 PYEOF
+
+# 7. 分类目录块（参考 hub 九类体系，随 README 更新一并刷新）
+"$(dirname "$0")/gen-catalog.sh" >/dev/null 2>&1 || true
 exit 0
