@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
-# 生成 README「分类目录」章节（参考 dsh-external/hub 的八类体系）
+# 生成 README「分类目录」章节——顶层按功能领域分类（非仓库类型）
 # 渲染规则：
-#   - 每类一个 <details> 折叠块，点击标题展开；标题为 h3 大字号 + 类别描述
-#   - 每类显示前 10 条；第 11 条起放入嵌套折叠块「展开全部」
-#   - REPO_OVERRIDES 修正 hub catalog 的错误分类（重分类）；未覆盖的用 catalog 原值
+#   - 顶层 = 功能领域（webui/agent/coding/comm/data/fun/infra/edu/other），每类 <details> 折叠、h3 大标题 + 描述
+#   - 每条带类型标签（插件/技能/合集/渠道/基建/研究/社区），来自 catalog 的 category
+#   - 每类显示前 10 条；第 11 条起嵌套折叠「展开全部」
+#   - DOMAIN_MAP 全量重分类（275 条，人工审校）；未映射归 other
 # 数据源：hub catalog.json（gh api 实时拉取）；渲染由 python3 完成
 set -uo pipefail
 cd "$(dirname "$0")/.." || exit 2
@@ -19,70 +20,106 @@ import json, sys
 catalog = json.load(open(sys.argv[1], encoding="utf-8"))
 repos = catalog.get("repos", [])
 
-# 类别元信息：key -> (emoji 标题, 描述)。顺序即渲染顺序。
-CATEGORY_META = [
-    ("community",      "💬 社区",     "社群运营、内测反馈与公告类仓库"),
-    ("skill",          "🎓 技能",     "模型技能包：提示词、工作流与可复用 skill"),
-    ("plugin",         "🔌 单插件",   "单个功能插件：独立安装、单一能力"),
-    ("collection",     "🧰 插件集",   "多插件合集、皮肤包与发行版"),
-    ("channel",        "📡 远程渠道", "IM 与社交平台接入（微信、QQ、Telegram、飞书等）"),
-    ("infra",          "🛠 基础设施", "桌面/移动客户端、沙箱、构建与部署基建"),
-    ("research",       "🔬 研究",     "评测、基准与研究工具"),
-    ("_uncategorized", "❓ 未分类",   "尚未归类的仓库（重分类后应清空）"),
+# 领域体系：key -> (emoji 标题, 描述)。顺序即渲染顺序。
+DOMAIN_META = [
+    ("webui", "🔌 Web UI 增强", "侧边栏、输入、皮肤、面板与界面交互增强"),
+    ("agent", "🤖 Agent 能力", "子代理、记忆、上下文、会话与唤醒控制"),
+    ("coding", "💻 编码开发", "代码工具、git、终端、编辑器与文档工具"),
+    ("comm", "📡 消息通讯", "IM 渠道、通知、分享与机器人接入"),
+    ("data", "🗂 文件数据", "文件处理、爬取、数据库与格式转换"),
+    ("fun", "🎮 娱乐生活", "游戏、宠物、表情与摸鱼面板"),
+    ("infra", "🛠 基建部署", "桌面/移动客户端、远程、沙箱与发行"),
+    ("edu", "📚 学习研究", "技能包、文档、评测与导航"),
+    ("other", "❓ 其他", "待细分仓库"),
 ]
 
-# 重分类：hub catalog 分类错误的仓库 -> 修正类别
-REPO_OVERRIDES = {
-    # 未分类 10 个归位
-    "dsh_ide": "plugin",
-    "dsh_workflow": "plugin",
-    "dsh-build": "infra",
-    "dsh-code": "plugin",
-    "dsh-fkin-vibe": "plugin",
-    "dsh-hmz": "plugin",
-    "dsh-remote": "plugin",
-    "dsh-ui-webview": "plugin",
-    "oh-my-deepseek": "collection",
-    "Top": "infra",
-    # collection 里的单插件/单工具归位
-    "dsh-cot-summary": "plugin",
-    "dsh-tool-browser": "plugin",
-    "dsh-my-rsi": "plugin",
-    "dsh-deepcel": "plugin",
-    "dsh-deep-whale": "plugin",
-    "dsh-serenity-plugin": "plugin",
-    "dsh-plugin-guide": "skill",
-    # infra 里的单工具归位
-    "ds_web_craw": "plugin",
-    "dsh-android": "plugin",
+# 类型标签：catalog category -> 展示标签
+TYPE_LABEL = {
+    "plugin": "插件", "skill": "技能", "collection": "合集", "channel": "渠道",
+    "infra": "基建", "research": "研究", "community": "社区",
 }
 
-def effective_category(repo):
-    name = repo.get("name", "")
-    return REPO_OVERRIDES.get(name, repo.get("category", "_uncategorized"))
-
+# 全量领域映射（275 条，人工审校重分类；未列出归 other）
+DOMAIN_MAP = {
+'7d7d': 'webui', 'chat-width': 'webui', 'dsh-ads': 'webui', 'dsh-aigc-canvas': 'webui', 'dsh-annotation': 'webui',
+    'dsh-anti-ads': 'webui', 'dsh-chat': 'webui', 'dsh-custom-css': 'webui', 'dsh-deepcel': 'webui', 'dsh-drag-and-drop': 'webui',
+    'dsh-genui': 'webui', 'dsh-input-history': 'webui', 'dsh-live-stats': 'webui', 'dsh-message-edit': 'webui', 'dsh-paste-input': 'webui',
+    'dsh-question-collapse': 'webui', 'dsh-skins': 'webui', 'dsh-split-panes': 'webui', 'dsh-tavern-plugin': 'webui', 'dsh-tps': 'webui',
+    'dsh-ui-webview': 'webui', 'dsh-ultra-ui': 'webui', 'dsh-vision': 'webui', 'dsh-voice-chat': 'webui', 'dsh-web': 'webui',
+    'dsh-web-panel': 'webui', 'dsh-web-review': 'webui', 'dsh-web-ui': 'webui', 'dsh-browser-panel': 'webui', 'dsh-island': 'webui',
+    'DSH-UI4A': 'webui', 'ex-setting': 'webui', 'group-chat-diary': 'webui', 'review-panel': 'webui', 'show-bash-command': 'webui',
+    'turtle-ui': 'webui', 'ui-status-label': 'webui', 'web-components': 'webui', 'zephyr': 'webui', 'DSH-better-sidebar': 'webui',
+    'dsh-side-panel': 'webui', 'ya-workspace-sidebar': 'webui', 'dsh-selection-chat': 'webui', 'dsh-visualize': 'webui',
+    'dsh-a2a': 'agent', 'dsh-agent-budget': 'agent', 'dsh-agent-rp': 'agent', 'dsh-alphasolve': 'agent', 'dsh-auto-approval': 'agent',
+    'dsh-checkpoint': 'agent', 'dsh-client-ui-plan-execute': 'agent', 'dsh-cot-summary': 'agent', 'dsh-deeplink': 'agent',
+    'dsh-design': 'agent', 'dsh-easy-ctx-manager': 'agent', 'dsh-engram-relay': 'agent', 'dsh-evolve': 'agent', 'dsh-explain': 'agent',
+    'dsh-focus-chat': 'agent', 'dsh-inspect': 'agent', 'dsh-issue-like-skill': 'agent', 'dsh-kimi-bridge': 'agent', 'dsh-llm-fallbacks': 'agent',
+    'dsh-mega': 'agent', 'dsh-memory': 'agent', 'dsh-mnemon': 'agent', 'dsh-nowledge-mem': 'agent', 'dsh-openmaic': 'agent',
+    'dsh-plan-execute': 'agent', 'dsh-prompt-studio': 'agent', 'dsh-reuse-first': 'agent', 'dsh-rewind': 'agent', 'dsh-scout': 'agent',
+    'dsh-self-control-guard': 'agent', 'dsh-session-cluster': 'agent', 'dsh-session-health': 'agent', 'dsh-session-hub': 'agent',
+    'dsh-session-repair-skill': 'agent', 'dsh-skill-session-recovery': 'agent', 'dsh-skill-stats': 'agent', 'dsh-skills-manager': 'agent',
+    'dsh-sleep': 'agent', 'dsh-slice-agent-loop': 'agent', 'dsh-subagent-tree': 'agent', 'dsh-super-injector': 'agent',
+    'dsh-superpowers': 'agent', 'dsh-track': 'agent', 'dsh-turn-navigator': 'agent', 'dsh-turn-rewind': 'agent', 'dsh-ui-progress': 'agent',
+    'dsh-web-workflow-visualizer': 'agent', 'mstar-workflow': 'agent', 'session-teleport': 'agent', 'yet-another-subagent': 'agent',
+    'dsh_workflow': 'agent', 'distill': 'agent', 'dsh-agent-session-sources': 'agent', 'dsh-activity-plugin': 'agent', 'Recall': 'agent',
+    'Qwen-MM-Plugins': 'agent', 'deep-standard-skill': 'agent', 'dsh-qq2006': 'agent',
+    'cross-harness-cite': 'coding', 'dsh_ide': 'coding', 'dsh-auto-blame': 'coding', 'dsh-better-sidebar-plugin-office': 'coding',
+    'dsh-build': 'coding', 'dsh-cc-tui': 'coding', 'dsh-code': 'coding', 'dsh-code-map': 'coding', 'dsh-codex-bridge': 'coding',
+    'dsh-grok-tui': 'coding', 'dsh-interpreters': 'coding', 'dsh-latex': 'coding', 'dsh-memory-evolve': 'coding', 'dsh-my-rsi': 'coding',
+    'dsh-pi-adapter': 'coding', 'dsh-spec-kit': 'coding', 'dsh-tool-browser': 'coding', 'dsh-tool-calculator': 'coding',
+    'dsh-tool-search': 'coding', 'dsh-tool-stat': 'coding', 'dsh-tool-time': 'coding', 'dsh-trace': 'coding', 'dsh-tui': 'coding',
+    'dsh-tui-front-door': 'coding', 'dsh-vscode': 'coding', 'dsh-working-activity': 'coding', 'official-plugins-port': 'coding',
+    'dsh-gh-bridge': 'coding', 'dsh-git-identity': 'coding', 'dsh-github-integration': 'coding', 'dsh-bash-encoding': 'coding',
+    'dsh-cc-connect': 'coding', 'dsh-office': 'coding', 'zotero-wave-rag': 'coding', 'dsh-pty-windows': 'coding', 'dsh-shell-windows': 'coding',
+    'dsh-chat-thumb': 'comm', 'dsh-coding-receipt': 'comm', 'dsh-feishu-bot': 'comm', 'dsh-feishu-notify': 'comm', 'dsh-ica': 'comm',
+    'dsh-share': 'comm', 'dsh-suggested-replies': 'comm', 'dsh-web-ui-notify': 'comm', 'dsh-webbridge': 'comm', 'dsh-wecom-bot': 'comm',
+    'dsh-weixin-bot': 'comm', 'qqbot': 'comm', 'telegram': 'comm', 'tg-bot': 'comm', 'issues': 'comm', 'dsh-club': 'comm', 'dsh-teamwork': 'comm',
+    'dsh-deep-research': 'comm',
+    'context-doctor': 'data', 'dsh-advisor': 'data', 'dsh-artifact': 'data', 'dsh-context7': 'data', 'dsh-cyber-sec': 'data',
+    'dsh-data-agent': 'data', 'dsh-diff-viewer': 'data', 'dsh-issue-filer': 'data', 'dsh-kb-sieve': 'data', 'dsh-loop': 'data',
+    'dsh-mineru': 'data', 'dsh-multimedia-webui-input': 'data', 'dsh-navbar': 'data', 'dsh-notebooks': 'data', 'dsh-openpencil': 'data',
+    'dsh-profile-bundle-example': 'data', 'dsh-task-status': 'data', 'dsh-tool-csv': 'data', 'dsh-tool-diff': 'data',
+    'dsh-tool-encoding': 'data', 'dsh-tool-json': 'data', 'dsh-tool-markdown': 'data', 'dsh-tool-regex': 'data',
+    'dsh-tool-schema': 'data', 'dsh-toolkit': 'data', 'dsh-vision-toolkit': 'data', 'dsh-web-archive': 'data',
+    'session-persistence-rdb': 'data', 'Top': 'data', 'ds_web_craw': 'data', 'session-chatlog': 'data', 'dsh-stock-market': 'data',
+    'tonghuashun-harness': 'data', 'dsh-find-plugins': 'data',
+    'dsh-auto-chess': 'fun', 'dsh-d399': 'fun', 'dsh-deep-whale': 'fun', 'dsh-emoji': 'fun', 'dsh-gomoku': 'fun', 'dsh-lazyfish': 'fun',
+    'dsh-meme': 'fun', 'dsh-minigames': 'fun', 'dsh-music-player': 'fun', 'dsh-pet': 'fun', 'dsh-pet-rs': 'fun', 'dsh-sfw': 'fun',
+    'dsh-travel-plugin': 'fun', 'dsh-ui-whale': 'fun', 'whale-girl': 'fun', 'toybox': 'fun', 'oh-my-dsh': 'fun', 'dsh-stickers': 'fun',
+    'browser4-dsh': 'infra', 'deepseek-harness-desktop': 'infra', 'deepseek-harness-distro': 'infra', 'dsh-acp': 'infra',
+    'dsh-android': 'infra', 'dsh-browser': 'infra', 'dsh-browser-bridge': 'infra', 'dsh-companion': 'infra', 'dsh-computer-use': 'infra',
+    'dsh-desktop': 'infra', 'dsh-desktop-electron': 'infra', 'dsh-desktop-mac': 'infra', 'dsh-desktop-tools': 'infra',
+    'dsh-harness-ops': 'infra', 'dsh-hub': 'infra', 'dsh-kimi-browser': 'infra', 'dsh-mobile': 'infra', 'dsh-mobileweb-adapter': 'infra',
+    'dsh-ohos-patch': 'infra', 'dsh-opencode-server': 'infra', 'dsh-plugin-check': 'infra', 'dsh-plugin-radar': 'infra',
+    'dsh-public-repo-monitor': 'infra', 'dsh-remote': 'infra', 'dsh-session-search': 'infra', 'dsh-win-port': 'infra',
+    'dshx-update-check': 'infra', 'ego-browser': 'infra', 'fabric': 'infra', 'marisa': 'infra', 'oh-dsh-desktop': 'infra',
+    'oh-my-dsh-distribution': 'infra', 'oh-my-deepseek': 'infra', 'plugin-registry': 'infra', 'plugin-template': 'infra',
+    'repo-visibility-guard': 'infra', 'sandbox-micro': 'infra', 'sandbox-mxc': 'infra', 'sandbox-nono': 'infra',
+    'dsh-multica-runtime': 'infra', 'dsh-paseo': 'infra', 'dsh-security': 'infra', 'dsh-security-audit': 'infra', 'dsh-sonar': 'infra',
+    'deepseek-manners': 'edu', 'dsh-101': 'edu', 'dsh-cordis-examples': 'edu', 'dsh-cordis-rocks': 'edu', 'dsh-deepresearch': 'edu',
+    'dsh-edu': 'edu', 'dsh-humanize': 'edu', 'dsh-plugin-dev': 'edu', 'dsh-plugin-guide': 'edu', 'dsh-plugin-skills': 'edu',
+    'dsh-scholar': 'edu', 'dshfind': 'edu', 'onboarding': 'edu', 'savemoneybenchmark': 'edu', 'zotero-harvest': 'edu', 'dsh-plus': 'edu',
+}
 def short_desc(repo):
     d = repo.get("description") or ""
     if d == "null" or not d.strip():
         return "—"
-    # 取首个句号前内容，限 48 字符
     d = d.split("。")[0].strip()
     if not d:
         d = d.split(".")[0].strip()
     return d[:48] if d else "—"
 
-# 分组（应用 override）
-groups = {key: [] for key, _, _ in CATEGORY_META}
+groups = {key: [] for key, _, _ in DOMAIN_META}
 for r in repos:
-    cat = effective_category(r)
-    groups.setdefault(cat, []).append(r)
+    domain = DOMAIN_MAP.get(r.get("name", ""), "other")
+    groups.setdefault(domain, []).append(r)
 
 out = []
 out.append("<!-- AUTO:catalog:START -->")
 out.append("")
-out.append("> 分类参考 [dsh-external/hub](https://github.com/dsh-external/hub)（catalog v0.1，本页含重分类修正）。每类显示前 10 条，其余折叠；点击标题展开。")
+out.append("> 按功能领域分类（重分类修正，数据源 [dsh-external/hub](https://github.com/dsh-external/hub) catalog）。每类显示前 10 条，其余折叠；点击标题展开。")
 out.append("")
-for key, title, desc in CATEGORY_META:
+for key, title, desc in DOMAIN_META:
     items = groups.get(key, [])
     n = len(items)
     out.append("<details>")
@@ -90,22 +127,24 @@ for key, title, desc in CATEGORY_META:
     out.append("")
     out.append(f"*{desc}*")
     out.append("")
-    out.append("| 插件 | 说明 |")
-    out.append("|---|---|")
+    out.append("| 插件 | 类型 | 说明 |")
+    out.append("|---|---|---|")
     if n == 0:
-        out.append("| （暂无） | — |")
+        out.append("| （暂无） | — | — |")
     else:
         for r in items[:10]:
-            out.append(f"| [{r['name']}]({r.get('url', '')}) | {short_desc(r)} |")
+            t = TYPE_LABEL.get(r.get("category", ""), "插件")
+            out.append(f"| [{r['name']}]({r.get('url', '')}) | {t} | {short_desc(r)} |")
         if n > 10:
             out.append("")
             out.append("<details>")
             out.append(f"<summary>展开全部（剩余 {n - 10} 条）</summary>")
             out.append("")
-            out.append("| 插件 | 说明 |")
-            out.append("|---|---|")
+            out.append("| 插件 | 类型 | 说明 |")
+            out.append("|---|---|---|")
             for r in items[10:]:
-                out.append(f"| [{r['name']}]({r.get('url', '')}) | {short_desc(r)} |")
+                t = TYPE_LABEL.get(r.get("category", ""), "插件")
+                out.append(f"| [{r['name']}]({r.get('url', '')}) | {t} | {short_desc(r)} |")
             out.append("</details>")
     out.append("</details>")
     out.append("")
