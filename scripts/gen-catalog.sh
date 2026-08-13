@@ -3,7 +3,7 @@
 # 渲染规则：
 #   - 表格列出（插件 | 说明）
 #   - 每类显示前 10 条；第 11 条起放入嵌套折叠块「展开全部」
-#   - 「单插件」类默认展开（open），其余类别默认收起
+#   - 所有类别默认折叠，点击标题展开；每类显示前 10 条，其余折叠
 # 数据源：hub catalog.json（gh api 实时拉取）；渲染全部由 jq 完成（避免 bash 多行循环）
 set -uo pipefail
 cd "$(dirname "$0")/.." || exit 2
@@ -16,7 +16,7 @@ timeout 90 "$GH" api "repos/dsh-external/hub/contents/catalog.json" --jq '.conte
 
 BLOCK='<!-- AUTO:catalog:START -->'
 BLOCK+=$'\n'
-BLOCK+='> 分类参考 [dsh-external/hub](https://github.com/dsh-external/hub)（catalog v0.1）。每类显示前 10 条，其余折叠；「单插件」默认展开。'
+BLOCK+='> 分类参考 [dsh-external/hub](https://github.com/dsh-external/hub)（catalog v0.1）。每类显示前 10 条，其余折叠；点击标题展开。'
 BLOCK+=$'\n\n'
 
 render_cat() { # $1=key $2=title $3=open标记
@@ -25,7 +25,7 @@ render_cat() { # $1=key $2=title $3=open标记
   [ -n "$cnt" ] || cnt=0
   rows10="$("$JQ" -r ".repos[] | select((.category // \"uncategorized\") == \"$key\") | \"| [\(.name)](\(.url)) | \((.description // \"\") | split(\"。\")[0] | .[0:48] | if . == \"\" then \"—\" else . end) |\"" "$CATALOG" 2>/dev/null | head -10)"
   BLOCK+="<details$open>"$'\n'
-  BLOCK+="<summary>$title（$cnt）</summary>"$'\n\n'
+  BLOCK+="<summary><h3>$title（$cnt）</h3></summary>"$'\n\n'
   BLOCK+='| 插件 | 说明 |'$'\n|---|---|'$'\n'
   if [ -n "$rows10" ]; then BLOCK+="$rows10"$'\n'; else BLOCK+='| （暂无） | — |'$'\n'; fi
   if [ "$cnt" -gt 10 ]; then
@@ -41,7 +41,7 @@ render_cat() { # $1=key $2=title $3=open标记
 
 render_cat community "💬 社区" ""
 render_cat skill "🎓 技能" ""
-render_cat plugin "🔌 单插件" " open"
+render_cat plugin "🔌 单插件" ""
 render_cat collection "🧰 插件集" ""
 render_cat channel "📡 远程渠道" ""
 render_cat infra "🛠 基础设施" ""

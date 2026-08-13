@@ -25,10 +25,10 @@
 ## 分类目录
 
 <!-- AUTO:catalog:START -->
-> 分类参考 [dsh-external/hub](https://github.com/dsh-external/hub)（catalog v0.1）。每类显示前 10 条，其余折叠；「单插件」默认展开。
+> 分类参考 [dsh-external/hub](https://github.com/dsh-external/hub)（catalog v0.1）。每类显示前 10 条，其余折叠；点击标题展开。
 
 <details>
-<summary>💬 社区（4）</summary>
+<summary><h3>💬 社区（4）</h3></summary>
 
 | 插件 | 说明 |
 |---|---|
@@ -39,7 +39,7 @@
 </details>
 
 <details>
-<summary>🎓 技能（11）</summary>
+<summary><h3>🎓 技能（11）</h3></summary>
 
 | 插件 | 说明 |
 |---|---|
@@ -63,8 +63,8 @@
 </details>
 </details>
 
-<details open>
-<summary>🔌 单插件（180）</summary>
+<details>
+<summary><h3>🔌 单插件（180）</h3></summary>
 
 | 插件 | 说明 |
 |---|---|
@@ -258,7 +258,7 @@
 </details>
 
 <details>
-<summary>🧰 插件集（23）</summary>
+<summary><h3>🧰 插件集（23）</h3></summary>
 
 | 插件 | 说明 |
 |---|---|
@@ -295,7 +295,7 @@
 </details>
 
 <details>
-<summary>📡 远程渠道（7）</summary>
+<summary><h3>📡 远程渠道（7）</h3></summary>
 
 | 插件 | 说明 |
 |---|---|
@@ -309,7 +309,7 @@
 </details>
 
 <details>
-<summary>🛠 基础设施（35）</summary>
+<summary><h3>🛠 基础设施（35）</h3></summary>
 
 | 插件 | 说明 |
 |---|---|
@@ -358,7 +358,7 @@
 </details>
 
 <details>
-<summary>🔬 研究（5）</summary>
+<summary><h3>🔬 研究（5）</h3></summary>
 
 | 插件 | 说明 |
 |---|---|
@@ -370,7 +370,7 @@
 </details>
 
 <details>
-<summary>❓ 未分类（10）</summary>
+<summary><h3>❓ 未分类（10）</h3></summary>
 
 | 插件 | 说明 |
 |---|---|
