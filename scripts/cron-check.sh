@@ -47,33 +47,48 @@ SELF_REPO="awesome-dsh-plugins"   # 本仓库自身，不纳入索引
 
 # 动态拉取 org 全部仓库名（失败则回退已知列表，不误报离线）
 ORG_REPOS="$(timeout 60 gh api "orgs/dsh-external/repos?per_page=100&type=all" --paginate --jq '.[].name' 2>/dev/null || echo "")"
+# topic 打标仓库（dsh-plugin / dsh-external 任一，不限 org；search API 不允许纯 qualifier OR，分两次查）
+TOPIC_REPOS="$(timeout 90 gh api "search/repositories?q=topic:dsh-plugin&per_page=100" --jq '.items[].full_name' 2>/dev/null || echo "")"
+TOPIC_REPOS+=$'\n'"$(timeout 90 gh api "search/repositories?q=topic:dsh-external&per_page=100" --jq '.items[].full_name' 2>/dev/null || echo "")"
 # 动态发现的新仓库（在 gh api 调用前初始化空数组，避免 set -u 下未定义引用）
 NEW_REPOS=()
-if [ -z "$ORG_REPOS" ]; then
-  echo "[提示] gh api 获取 org 仓库失败，回退已知列表"
-  SCOPE_REPOS=( "${KNOWN_REPOS[@]}" )
+if [ -z "$ORG_REPOS" ] && [ -z "$TOPIC_REPOS" ]; then
+  echo "[提示] gh api 获取 org/topic 仓库失败，回退已知列表"
+  SCOPE_REPOS=()
+  for k in "${KNOWN_REPOS[@]}"; do SCOPE_REPOS+=( "dsh-external/$k" ); done
 else
-  SCOPE_REPOS=( "${KNOWN_REPOS[@]}" )
+  SCOPE_REPOS=()
+  for k in "${KNOWN_REPOS[@]}"; do SCOPE_REPOS+=( "dsh-external/$k" ); done
   while IFS= read -r name; do
     [ -n "$name" ] || continue
+    full="dsh-external/$name"
     [ "$name" = "$SELF_REPO" ] && continue
     found=0
-    for k in "${KNOWN_REPOS[@]}"; do [ "$k" = "$name" ] && found=1 && break; done
+    for k in "${SCOPE_REPOS[@]}"; do [ "$k" = "$full" ] && found=1 && break; done
     if [ "$found" -eq 0 ]; then
-      NEW_REPOS+=( "$name" )
-      SCOPE_REPOS+=( "$name" )
+      NEW_REPOS+=( "$full" )
+      SCOPE_REPOS+=( "$full" )
     fi
   done <<< "$ORG_REPOS"
+  while IFS= read -r full; do
+    [ -n "$full" ] || continue
+    [ "${full##*/}" = "$SELF_REPO" ] && continue
+    found=0
+    for k in "${SCOPE_REPOS[@]}"; do [ "$k" = "$full" ] && found=1 && break; done
+    if [ "$found" -eq 0 ]; then
+      NEW_REPOS+=( "$full" )
+      SCOPE_REPOS+=( "$full" )
+    fi
+  done <<< "$TOPIC_REPOS"
   if [ "${#NEW_REPOS[@]}" -gt 0 ]; then
     echo "[新仓库] 发现 ${#NEW_REPOS[@]} 个未索引仓库: ${NEW_REPOS[*]}"
   else
-    echo "[新仓库] 无新增仓库（org 共 $(echo "$ORG_REPOS" | wc -l | tr -d ' ') 个）"
+    echo "[新仓库] 无新增仓库（org $(echo "$ORG_REPOS" | wc -l | tr -d ' ') 个 + topic $(echo "$TOPIC_REPOS" | wc -l | tr -d ' ') 个）"
   fi
 fi
-
-# 写入动态 scope 清单（引擎 --scope 契约：每行一个仓库名）
 : > .scope-current.txt
 for r in "${SCOPE_REPOS[@]}"; do echo "$r" >> .scope-current.txt; done
+
 
 # 远端 HEAD 探测：mainline 取最新快照分支（与 compare-mainline.sh 实际索引的快照一致），
 # 其余仓库取 HEAD。快照分支名含 ISO 时间戳，字典序即时间序。
@@ -93,7 +108,7 @@ CHANGED=""
 declare -a REPOS=()
 REPOS+=( "mainline|https://github.com/dsh2026/test-AdamPlatin123" )
 for r in "${SCOPE_REPOS[@]}"; do
-  REPOS+=( "$r|https://github.com/dsh-external/$r" )
+  REPOS+=( "$r|https://github.com/$r" )
 done
 
 if [ "$FULL" -eq 1 ]; then
