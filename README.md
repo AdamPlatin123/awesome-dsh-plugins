@@ -433,7 +433,7 @@ DSH 插件生态交流群（微信群）：插件作者、维护者与使用者�
 ## 当前生态快照
 
 <!-- AUTO:ecosystem:START -->
-> 更新于 2026-08-14 04:28 · 每 8 小时刷新 · mainline `7b9644f`
+> 更新于 2026-08-14 04:31 · 每 8 小时刷新 · mainline `7b9644f`
 
 | 证据层 | 当前结果 |
 |---|---:|
@@ -776,8 +776,20 @@ DSH 插件生态交流群（微信群）：插件作者、维护者与使用者�
 
 | 仓库 | 类型 |
 |---|---|
-| （今日无新增） | |
-
+| [dsh-chat-import](https://github.com/dsh-external/dsh-chat-import) | 🆕 新增 |
+| [dsh-oauth-mcp-client](https://github.com/dsh-external/dsh-oauth-mcp-client) | 🆕 新增 |
+| [dsh-balance](https://github.com/dsh-external/dsh-balance) | 🆕 新增 |
+| [falsify-dsh](https://github.com/dsh-external/falsify-dsh) | 🆕 新增 |
+| [billion-context-dsh](https://github.com/dsh-external/billion-context-dsh) | 🆕 新增 |
+| [dsh-web-search-firecrawl](https://github.com/dsh-external/dsh-web-search-firecrawl) | 🆕 新增 |
+| [dsh-test-runner](https://github.com/dsh-external/dsh-test-runner) | 🆕 新增 |
+| [dsh-event-auditor](https://github.com/dsh-external/dsh-event-auditor) | 🆕 新增 |
+| [dsh-turn-index](https://github.com/dsh-external/dsh-turn-index) | 🆕 新增 |
+| [dsh-remote-sandbox](https://github.com/dsh-external/dsh-remote-sandbox) | 🆕 新增 |
+| [dsh-tray](https://github.com/dsh-external/dsh-tray) | 🆕 新增 |
+| [dsh-security-scan](https://github.com/dsh-external/dsh-security-scan) | 🆕 新增 |
+| [dsh-review-skills](https://github.com/dsh-external/dsh-review-skills) | 🆕 新增 |
+| [dsh-telegram](https://github.com/dsh-external/dsh-telegram) | 🆕 新增 |
 | （今日无修改） | |
 
 
