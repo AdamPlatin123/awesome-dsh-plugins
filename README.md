@@ -17,21 +17,20 @@
 ## 现在
 
 <!-- AUTO:ecosystem:START -->
-> 自动更新：2026-08-13_0609（cron 每 8 小时 · 报告日 2026-08-13 · mainline `7b9644f`）
+> 自动更新：2026-08-13_2106（cron 每日 · 报告日 2026-08-13 · mainline `7b9644f`）
 
-**生态仪表盘**
+**插件目录**（dsh-external org · 286 仓库 · 状态分群）
 
-| 指标 | 值 |
+| 状态 | 数量 |
 |---|---|
-| 仓库总数 | 286 |
-| ✅ 无需适配 | 87 |
+| ✅ 兼容 mainline | 87 |
 | ⚠️ 需适配 | 9 |
-| 关注 / 占位 / 不适用 / 已删除 | 31 / 13 / 2 / 4 |
-| 🐙 开放 PR | 11 |
+| 🔍 关注 / 占位 / 不适用 / 已删除 | 31 / 13 / 2 / 4 |
+| 🐙 开放 PR | 10 |
 
-📄 **最新报告**：[兼容矩阵](reports/2026-08-13/mainline-compat.md) · [开发者摘要](reports/2026-08-13/mainline-summary.md) · [当日索引](reports/2026-08-13/index.md)
+📄 **完整矩阵**：[mainline-compat.md](reports/2026-08-13/mainline-compat.md) · [开发者摘要](reports/2026-08-13/mainline-summary.md) · [当日索引](reports/2026-08-13/index.md)
 
-**今日新增 / 修改仓库**
+**今日新增 / 修改**
 
 | 仓库 | 类型 |
 |---|---|
@@ -544,9 +543,9 @@
 | [dsh-openbiliclaw](https://github.com/dsh-external/dsh-openbiliclaw) | ✏️ 修改 |
 | [dsh-longbridge](https://github.com/dsh-external/dsh-longbridge) | ✏️ 修改 |
 | [dsh-dzcf](https://github.com/dsh-external/dsh-dzcf) | ✏️ 修改 |
-**需适配（补丁基线 / seam 变化）**
+**⚠️ 需适配（补丁基线 / seam 变化）**
 
-| 仓库 | 锚定 | 判定 |
+| 插件 | 锚定 | 判定 |
 |---|---|---|
 | [dsh-subagent-tree](https://github.com/dsh-external/dsh-subagent-tree) | 未知 | 需适配 |
 | [dsh-working-activity](https://github.com/dsh-external/dsh-working-activity) | 未知（非 commit 锚定: 20260804T143803Z） | 需适配 |
@@ -557,16 +556,15 @@
 | [dsh-question-collapse](https://github.com/dsh-external/dsh-question-collapse) | 未知（不同谱系） | 需适配 |
 | [dsh-ohos-patch](https://github.com/dsh-external/dsh-ohos-patch) | 未知 | 需适配 |
 | [dsh-cot-summary](https://github.com/dsh-external/dsh-cot-summary) | 未知 | 需适配 |
-**正在跟踪的 open PR**
+**🐙 正在跟踪的 open PR**
 
 | 仓库 | PR | 标题 | 更新 |
 |---|---|---|---|
+| [dsh-web-review](https://github.com/dsh-external/dsh-web-review) | [#1](https://github.com/dsh-external/dsh-web-review/pull/1) | dsh-web-review: add managed multi-tab browser preview | 2026-08-13 |
 | [dsh-pi-adapter](https://github.com/dsh-external/dsh-pi-adapter) | [#6](https://github.com/dsh-external/dsh-pi-adapter/pull/6) | feat: register commands through cordis DI activation, not first session/created | 2026-08-12 |
-| [dsh-auto-approval](https://github.com/dsh-external/dsh-auto-approval) | [#2](https://github.com/dsh-external/dsh-auto-approval/pull/2) | feat: L0 self-kill guard + block-device redirect deny | 2026-08-12 |
-| [DSH-better-sidebar](https://github.com/dsh-external/DSH-better-sidebar) | [#8](https://github.com/dsh-external/DSH-better-sidebar/pull/8) | refactor: 移除内置 Office 预览，迁移至独立插件 dsh-better-sidebar-plugin-office | 2026-08-12 |
 | [dsh-pi-adapter](https://github.com/dsh-external/dsh-pi-adapter) | [#5](https://github.com/dsh-external/dsh-pi-adapter/pull/5) | feat: adapt-interactive ctx.ui tier + session-log quarantine audit | 2026-08-12 |
 | [dsh-my-rsi](https://github.com/dsh-external/dsh-my-rsi) | [#50](https://github.com/dsh-external/dsh-my-rsi/pull/50) | feat: migrate to 20260811 snapshot and reuse upstream surfaces | 2026-08-11 |
-| [dsh-hub](https://github.com/dsh-external/dsh-hub) | [#15](https://github.com/dsh-external/dsh-hub/pull/15) | Align optional host capabilities and legacy cleanup | 2026-08-11 |
+| [dsh-hub-private-archive](https://github.com/dsh-external/dsh-hub-private-archive) | [#15](https://github.com/dsh-external/dsh-hub-private-archive/pull/15) | Align optional host capabilities and legacy cleanup | 2026-08-11 |
 | [dsh-my-rsi](https://github.com/dsh-external/dsh-my-rsi) | [#49](https://github.com/dsh-external/dsh-my-rsi/pull/49) | docs: record external method provenance (#45) | 2026-08-11 |
 | [dsh-my-rsi](https://github.com/dsh-external/dsh-my-rsi) | [#43](https://github.com/dsh-external/dsh-my-rsi/pull/43) | feat: rsi-core live plugin execution face (#41) + supervised revival layer (#42) | 2026-08-11 |
 | [session-teleport](https://github.com/dsh-external/session-teleport) | [#2](https://github.com/dsh-external/session-teleport/pull/2) | Add safe plugin lifecycle and real-device acceptance | 2026-08-10 |
