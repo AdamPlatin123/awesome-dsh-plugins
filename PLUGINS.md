@@ -9,6 +9,7 @@
 ## 🔌 单插件
 
 | 插件 | 仓库 | 说明 | 运行级 |
+| dsh-event-auditor | [qing3a/dsh-event-auditor](https://github.com/qing3a/dsh-event-auditor) | Harness 事件流审计面板：观察事件类型/分发模式/计数/最近事件，settings 热改 + /audit 会话命令；已用 mock-llm 运行时验证（74 事件/12 waterfall） | ✅ |
 |---|---|---|---|
 | chat-width | [dsh-external/chat-width](https://github.com/dsh-external/chat-width) | 终端宽度感知 | ✅ |
 | dsh-artifact | [dsh-external/dsh-artifact](https://github.com/dsh-external/dsh-artifact) | 制品管理 | ✅ |
