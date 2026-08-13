@@ -1,8 +1,16 @@
 # Awesome DSH Plugins
 
-社区维护的 DeepSeek Harness（DSH）插件目录与兼容性证据索引。
+> 每天自动扫描 286+ 个 DeepSeek Harness 插件的兼容性雷达：哪个能用、哪个要改、哪个已经碎了，一眼看清。
 
-*A community-maintained catalog and compatibility evidence index for DeepSeek Harness plugins.*
+![repos](https://img.shields.io/badge/插件-286%2B-blue) ![scan](https://img.shields.io/badge/每日兼容性扫描-自动-green) ![license](https://img.shields.io/badge/license-MIT-blue)
+
+DeepSeek Harness（DSH）插件生态的**目录 + 兼容性情报站**。
+
+- **找插件**：按功能领域浏览全部插件（Web UI 增强 / Agent 能力 / 编码开发 / 消息通讯 / 娱乐生活……），想找输入增强、唤醒控制还是摸鱼面板，不用在几百个名字里翻
+- **避坑**：每个插件对当日 mainline 快照做四维检查（补丁 / seam / peerDeps / 编译）加运行级实测，兼容与否有证据，不是嘴上说说
+- **跟上变化**：DSH 几乎每天推新版本，插件漂移随时发生；这里每 8 小时自动对比，变化进 CHANGELOG，适配节奏由你掌控
+
+*A community-maintained catalog and daily compatibility radar for DeepSeek Harness plugins: find, compare, and avoid the broken ones.*
 
 [浏览分类目录](PLUGINS.md) · [查看最新快照](#当前生态快照) · [浏览历史报告](reports/) · [查看变更](CHANGELOG.md) · [提交插件](#提交插件)
 
