@@ -99,7 +99,7 @@ DeepSeek Harness（DSH）插件生态的**目录 + 兼容性情报站**。
 *界面与交互增强插件：侧边栏、输入框、皮肤主题、面板 dock、消息显示、状态栏与可视化，让 Web 界面更顺手更好看*
 
 <details>
-<summary><h3>🤖 Agent 能力（58）</h3></summary>
+<summary><h3>🤖 Agent 能力（61）</h3></summary>
 
 *增强 agent 本身的能力：子代理管理、记忆与上下文、会话控制、规划执行、唤醒/睡眠、提示词与技能注入*
 
@@ -117,7 +117,7 @@ DeepSeek Harness（DSH）插件生态的**目录 + 兼容性情报站**。
 | [dsh-auto-approval](https://github.com/dsh-external/dsh-auto-approval) | 插件 | — |
 
 <details>
-<summary>展开全部（剩余 48 条）</summary>
+<summary>展开全部（剩余 51 条）</summary>
 
 | 插件 | 类型 | 说明 |
 |---|---|---|
@@ -169,13 +169,16 @@ DeepSeek Harness（DSH）插件生态的**目录 + 兼容性情报站**。
 | [Recall](https://github.com/dsh-external/Recall) | 基建 | Switch agents. Keep the memory. Local-first sear |
 | [session-teleport](https://github.com/dsh-external/session-teleport) | 插件 | PostgreSQL-backed single-writer session handoff  |
 | [yet-another-subagent](https://github.com/dsh-external/yet-another-subagent) | 插件 | — |
+| [dsh-oauth-mcp-client](https://github.com/springbrand-lab/dsh-oauth-mcp-client) | 插件 | OAuth 2.1 Streamable HTTP MCP 客户端 |
+| [falsify-dsh](https://github.com/shi275773124/falsify-dsh) | 插件 | Falsify CLI 适配器（裁决） |
+| [billion-context-dsh](https://github.com/Tyan66666/billion-context-dsh) | 插件 | 模型驱动上下文管理（Active Context Pruning） |
 </details>
 </details>
 
 *增强 agent 本身的能力：子代理管理、记忆与上下文、会话控制、规划执行、唤醒/睡眠、提示词与技能注入*
 
 <details>
-<summary><h3>💻 编码开发（36）</h3></summary>
+<summary><h3>💻 编码开发（37）</h3></summary>
 
 *面向编程场景的工具：代码操作、git 集成、终端、diff 与编辑器、文档生成、语言支持与构建辅助*
 
@@ -193,7 +196,7 @@ DeepSeek Harness（DSH）插件生态的**目录 + 兼容性情报站**。
 | [dsh-code-map](https://github.com/dsh-external/dsh-code-map) | 插件 | DSH 代码地图插件：symbol 索引 / 文档符号 / 调用层级 / 继承树——给模型补上「 |
 
 <details>
-<summary>展开全部（剩余 26 条）</summary>
+<summary>展开全部（剩余 27 条）</summary>
 
 | 插件 | 类型 | 说明 |
 |---|---|---|
@@ -223,13 +226,14 @@ DeepSeek Harness（DSH）插件生态的**目录 + 兼容性情报站**。
 | [dsh-working-activity](https://github.com/dsh-external/dsh-working-activity) | 插件 | DSH 实时模型工作状态行：俏皮思考文案、运行中的工具、回合总结、自我叙述（⏵）— 用于 TUI |
 | [official-plugins-port](https://github.com/dsh-external/official-plugins-port) | 合集 | Official Claude Code / Codex plugins ported to t |
 | [zotero-wave-rag](https://github.com/dsh-external/zotero-wave-rag) | 插件 | 面向 Zotero 论文库的浪潮式 RAG 细节检索系统 —— DSH 外部插件 |
+| [dsh-claude-move](https://github.com/PerryLink/dsh-claude-move) | 插件 | 迁移 Claude Code 会话 |
 </details>
 </details>
 
 *面向编程场景的工具：代码操作、git 集成、终端、diff 与编辑器、文档生成、语言支持与构建辅助*
 
 <details>
-<summary><h3>📡 消息通讯（18）</h3></summary>
+<summary><h3>📡 消息通讯（19）</h3></summary>
 
 *把 dsh 接入各类沟通渠道：微信/QQ/Telegram/飞书机器人、桌面通知、消息分享与跨端回复*
 
@@ -247,7 +251,7 @@ DeepSeek Harness（DSH）插件生态的**目录 + 兼容性情报站**。
 | [dsh-teamwork](https://github.com/dsh-external/dsh-teamwork) | 插件 | — |
 
 <details>
-<summary>展开全部（剩余 8 条）</summary>
+<summary>展开全部（剩余 9 条）</summary>
 
 | 插件 | 类型 | 说明 |
 |---|---|---|
@@ -259,13 +263,14 @@ DeepSeek Harness（DSH）插件生态的**目录 + 兼容性情报站**。
 | [qqbot](https://github.com/dsh-external/qqbot) | 渠道 | QQ remote channel for DeepSeek Harness |
 | [telegram](https://github.com/dsh-external/telegram) | 渠道 | Marisa 插件：Telegram Bot API 桥接（长轮询、per-chat 会话、HT |
 | [tg-bot](https://github.com/dsh-external/tg-bot) | 渠道 | Telegram remote channel for DeepSeek Harness |
+| [dsh-telegram](https://github.com/ben7am1n/dsh-telegram) | 插件 | Telegram 远程渠道 |
 </details>
 </details>
 
 *把 dsh 接入各类沟通渠道：微信/QQ/Telegram/飞书机器人、桌面通知、消息分享与跨端回复*
 
 <details>
-<summary><h3>🗂 文件数据（34）</h3></summary>
+<summary><h3>🗂 文件数据（36）</h3></summary>
 
 *文件与数据处理：读写与格式转换、爬取抓取、数据库、编码识别、文档解析与知识库*
 
@@ -283,7 +288,7 @@ DeepSeek Harness（DSH）插件生态的**目录 + 兼容性情报站**。
 | [dsh-issue-filer](https://github.com/dsh-external/dsh-issue-filer) | 技能 | DSH 提 issue 技能：向 dsh-external/issues 自动查重、格式化并创建 |
 
 <details>
-<summary>展开全部（剩余 24 条）</summary>
+<summary>展开全部（剩余 26 条）</summary>
 
 | 插件 | 类型 | 说明 |
 |---|---|---|
@@ -311,6 +316,8 @@ DeepSeek Harness（DSH）插件生态的**目录 + 兼容性情报站**。
 | [session-persistence-rdb](https://github.com/dsh-external/session-persistence-rdb) | 插件 | session 关系型数据库持久化 |
 | [tonghuashun-harness](https://github.com/dsh-external/tonghuashun-harness) | 基建 | — |
 | [Top](https://github.com/dsh-external/Top) | 插件 | 📊 Daily leaderboard for the dsh-external plugin  |
+| [dsh-balance](https://github.com/TwotwoPiggy/dsh-balance) | 插件 | 实时 token 余额跟踪 |
+| [dsh-web-search-firecrawl](https://github.com/yangzhe1003/dsh-web-search-firecrawl) | 插件 | Firecrawl 搜索提供方 |
 </details>
 </details>
 
@@ -353,7 +360,7 @@ DeepSeek Harness（DSH）插件生态的**目录 + 兼容性情报站**。
 *摸鱼与趣味：小游戏、桌面宠物、表情包、音乐、股票行情与旅行*
 
 <details>
-<summary><h3>🛠 基建部署（44）</h3></summary>
+<summary><h3>🛠 基建部署（46）</h3></summary>
 
 *运行环境与分发：桌面/移动客户端、远程主机、浏览器桥、沙箱隔离、插件管理、更新与监控*
 
@@ -371,7 +378,7 @@ DeepSeek Harness（DSH）插件生态的**目录 + 兼容性情报站**。
 | [dsh-desktop](https://github.com/dsh-external/dsh-desktop) | 基建 | — |
 
 <details>
-<summary>展开全部（剩余 34 条）</summary>
+<summary>展开全部（剩余 36 条）</summary>
 
 | 插件 | 类型 | 说明 |
 |---|---|---|
@@ -409,13 +416,15 @@ DeepSeek Harness（DSH）插件生态的**目录 + 兼容性情报站**。
 | [sandbox-micro](https://github.com/dsh-external/sandbox-micro) | 基建 | microsandbox支持 |
 | [sandbox-mxc](https://github.com/dsh-external/sandbox-mxc) | 基建 | 微软跨平台沙盒支持 |
 | [sandbox-nono](https://github.com/dsh-external/sandbox-nono) | 基建 | nono沙盒支持 |
+| [dsh-security-scan](https://github.com/ben7am1n/dsh-security-scan) | 插件 | 安全扫描插件 |
+| [deepseek-harness-desktop](https://github.com/chyra-moon/deepseek-harness-desktop) | 插件 | 桌面外壳：官方 1:1 复刻 |
 </details>
 </details>
 
 *运行环境与分发：桌面/移动客户端、远程主机、浏览器桥、沙箱隔离、插件管理、更新与监控*
 
 <details>
-<summary><h3>📚 学习研究（16）</h3></summary>
+<summary><h3>📚 学习研究（17）</h3></summary>
 
 *学习与探索：技能包、插件开发指南、文档导航、评测基准与社区 onboarding*
 
@@ -433,7 +442,7 @@ DeepSeek Harness（DSH）插件生态的**目录 + 兼容性情报站**。
 | [dsh-plugin-skills](https://github.com/dsh-external/dsh-plugin-skills) | 技能 | Agent skills for building and testing DeepSeek H |
 
 <details>
-<summary>展开全部（剩余 6 条）</summary>
+<summary>展开全部（剩余 7 条）</summary>
 
 | 插件 | 类型 | 说明 |
 |---|---|---|
@@ -443,6 +452,7 @@ DeepSeek Harness（DSH）插件生态的**目录 + 兼容性情报站**。
 | [onboarding](https://github.com/dsh-external/onboarding) | 社区 | Private onboarding hub for DeepSeek Harness beta |
 | [savemoneybenchmark](https://github.com/dsh-external/savemoneybenchmark) | 研究 | 降本增效benchmark |
 | [zotero-harvest](https://github.com/dsh-external/zotero-harvest) | 插件 | Zotero 文献采集入库插件（DSH external plugin）：多源检索（OpenAl |
+| [dsh-review-skills](https://github.com/ben7am1n/dsh-review-skills) | 插件 | 代码评审技能集 |
 </details>
 </details>
 

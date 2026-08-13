@@ -100,6 +100,20 @@ DOMAIN_MAP = {
     'dsh-edu': 'edu', 'dsh-humanize': 'edu', 'dsh-plugin-dev': 'edu', 'dsh-plugin-guide': 'edu', 'dsh-plugin-skills': 'edu',
     'dsh-scholar': 'edu', 'dshfind': 'edu', 'onboarding': 'edu', 'savemoneybenchmark': 'edu', 'zotero-harvest': 'edu', 'dsh-plus': 'edu',
 }
+# PR 登记的新插件（catalog 未收录、topic 发现待确认）：name -> (url, desc, domain)
+EXTRA_REPOS = {
+    'dsh-review-skills': ('https://github.com/ben7am1n/dsh-review-skills', '代码评审技能集', 'edu'),
+    'dsh-security-scan': ('https://github.com/ben7am1n/dsh-security-scan', '安全扫描插件', 'infra'),
+    'dsh-telegram': ('https://github.com/ben7am1n/dsh-telegram', 'Telegram 远程渠道', 'comm'),
+    'dsh-oauth-mcp-client': ('https://github.com/springbrand-lab/dsh-oauth-mcp-client', 'OAuth 2.1 Streamable HTTP MCP 客户端', 'agent'),
+    'dsh-balance': ('https://github.com/TwotwoPiggy/dsh-balance', '实时 token 余额跟踪', 'data'),
+    'falsify-dsh': ('https://github.com/shi275773124/falsify-dsh', 'Falsify CLI 适配器（裁决）', 'agent'),
+    'billion-context-dsh': ('https://github.com/Tyan66666/billion-context-dsh', '模型驱动上下文管理（Active Context Pruning）', 'agent'),
+    'deepseek-harness-desktop': ('https://github.com/chyra-moon/deepseek-harness-desktop', '桌面外壳：官方 1:1 复刻', 'infra'),
+    'dsh-web-search-firecrawl': ('https://github.com/yangzhe1003/dsh-web-search-firecrawl', 'Firecrawl 搜索提供方', 'data'),
+    'dsh-claude-move': ('https://github.com/PerryLink/dsh-claude-move', '迁移 Claude Code 会话', 'coding'),
+}
+
 def short_desc(repo):
     d = repo.get("description") or ""
     if d == "null" or not d.strip():
@@ -110,8 +124,14 @@ def short_desc(repo):
     return d[:48] if d else "—"
 
 groups = {key: [] for key, _, _ in DOMAIN_META}
-for r in repos:
+# 合并 catalog 与 EXTRA_REPOS（PR 登记新插件）
+merged_repos = list(repos)
+for name, (url, desc, domain) in EXTRA_REPOS.items():
+    merged_repos.append({"name": name, "url": url, "description": desc, "category": "plugin"})
+for r in merged_repos:
     domain = DOMAIN_MAP.get(r.get("name", ""), "other")
+    if r.get("name") in EXTRA_REPOS:
+        domain = EXTRA_REPOS[r["name"]][2]
     groups.setdefault(domain, []).append(r)
 
 out = []
