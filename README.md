@@ -3,7 +3,7 @@
 **自动发现、证据验证的 DeepSeek Harness 插件生态雷达。**
 安装前就知道哪个插件能用、哪个要改。
 
-[![confirmed](https://img.shields.io/badge/confirmed-85-blue)](#-热门插件star-top-20) [![scan](https://img.shields.io/badge/scan-every_8h-green)](#当前生态快照) [![tested](https://img.shields.io/badge/tested-58-orange)](#本仓库如何判定) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![confirmed](https://img.shields.io/badge/confirmed-92-blue)](#-热门插件star-top-20) [![scan](https://img.shields.io/badge/scan-every_8h-green)](#当前生态快照) [![tested](https://img.shields.io/badge/tested-59-orange)](#本仓库如何判定) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
 简体中文 | [English](README.en-US.md)
 
