@@ -84,6 +84,7 @@
 | dsh-webhook-bridge | [ben7am1n/dsh-webhook-bridge](https://github.com/ben7am1n/dsh-webhook-bridge) | ✅ |
 | dsh-lark-bot | [PlutoKeating/dsh-lark-bot](https://github.com/PlutoKeating/dsh-lark-bot) | ✅ |
 | dsh-wechat-bridge | [gtaifu/dsh-wechat-bridge](https://github.com/gtaifu/dsh-wechat-bridge) | WeChat bridge via official Tencent iLink bot API — QR-code login, one friend = one persistent agent session, zero runtime deps, no OpenClaw |
+| dsh-onebot | [mario841859784/dsh-onebot](https://github.com/mario841859784/dsh-onebot) | QQ 渠道插件（OneBot 11 / NapCat）：反向/正向 WS、dm/群聊访问策略与 @ 门控、入站图片/语音/视频/文件解析 + whisper 转写、t2i 文字图卡片、斜杠命令、loop 合并转发+撤回（99 测试全绿，真实 QQ 链路实测） |
 
 ## 🛠 基础设施
 
