@@ -9,7 +9,7 @@
 
 ---
 
-> 收录 124 个 DSH 插件仓库（clone 验证 package.json），其中 5 个有运行级测试记录。
+> 收录 124 个 DSH 插件仓库（索引到1271个repos ，专用K8s集群 clone 验证 package.json）。
 
 ## 工作原理
 
