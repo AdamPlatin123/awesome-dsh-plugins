@@ -72,29 +72,30 @@ graph TB
 
 <!-- AUTO:featured:START -->
 
-> 按 GitHub star 数排序，每 8 小时自动刷新。数据截至 2026-08-14 13:24。
+> 按 GitHub star 数排序，每 8 小时自动刷新。数据截至 2026-08-14 19:24。
 
 | # | 插件 | ⭐ | 说明 |
 |---|---|---|---|
-| 1 | [dsh-web-ui](https://github.com/dsh-external/dsh-web-ui) | 987 | Plugin and skin collection for DeepSeek Harness (DSH) Web UI |
-| 2 | [dsh-TUI](https://github.com/ccch1mneyyy/dsh-TUI) | 524 | Claude Code 风格全屏交互终端插件：像素鲸鱼顶栏、实时工作状态行、思考流式展开、双击 Esc 回滚 |
-| 3 | [DSH-better-sidebar](https://github.com/dsh-external/DSH-better-sidebar) | 408 | 一个侧边栏的完整工作台，支持三方拓展注册新Tab页面，内置文件渲染编辑/终端/Git/子代理 |
-| 4 | [dsh-ads](https://github.com/dsh-external/dsh-ads) | 213 | 是兄弟就来蹬我！DSH Web UI 广告：2005 年中文站点风格的侧栏广告 / 对话内信息流 / 角落弹窗 + 一个 |
-| 5 | [oh-dsh-desktop](https://github.com/dsh-external/oh-dsh-desktop) | 100 | 一站式 DeepSeek Harness 社区发行版：TUI、桌面端与 Web UI 三种形态统一体验，支持分层安装、一 |
-| 6 | [dsh-code](https://github.com/dsh-external/dsh-code) | 95 | dsh-tianshu-tui — DeepSeek Harness terminal UI |
-| 7 | [whale-girl](https://github.com/dsh-external/whale-girl) | 65 | DSH Web GUI 桌面宠物插件（QQ 宠物形态）：右下角悬浮、可拖拽/投喂/玩耍的积累型伙伴 |
-| 8 | [dsh-browser](https://github.com/dsh-external/dsh-browser) | 51 | dsh plugin: Chrome sidebar extension that lets DSH operate y |
-| 9 | [dsh-openpencil](https://github.com/dsh-external/dsh-openpencil) | 49 | OpenPencil design preview and editing plugin for DSH |
-| 10 | [dsh_workflow](https://github.com/dsh-external/dsh_workflow) | 46 | 把Claude Code的UltraCode模式带给DSH，把 DSH 的一次性多 Agent 调度，升级为可生成、可保 |
-| 11 | [dsh-memory-evolve](https://github.com/dsh-external/dsh-memory-evolve) | 26 | 为 DeepSeek Harness 带来「跨会话长期记忆 + 后台自我进化」能力的纯插件实现：五轨记忆 · git 分 |
-| 12 | [dsh-annotation](https://github.com/dsh-external/dsh-annotation) | 25 | DSH Web 选中批注插件：选文字→批注→回车随消息发送；气泡隐藏批注块（零闪烁）；回复按 Annotation N  |
-| 13 | [ui-status-label](https://github.com/dsh-external/ui-status-label) | 24 | 把你鲸鱼娘思考时的 deep diving 自定义成任意你想要的样子 |
-| 14 | [dsh-multica-runtime](https://github.com/dsh-external/dsh-multica-runtime) | 22 | Support dsh runtime on Multica. |
-| 15 | [dsh-message-edit](https://github.com/dsh-external/dsh-message-edit) | 14 | DSH plugin: branch-based message editing, reroll, retry, ver |
-| 16 | [dsh-vision](https://github.com/dsh-external/dsh-vision) | 14 | dsh 插件：给纯文本 DeepSeek 加视觉——view_image 工具桥接任意 OpenAI 兼容 VLM（默认 |
-| 17 | [distill](https://github.com/dsh-external/distill) | 13 | 自动对话蒸馏：后台 subagent 反省 + 技能 create/update |
-| 18 | [dsh-share](https://github.com/dsh-external/dsh-share) | 12 | dsh对话分享插件，一键分享你的对话 |
-| 19 | [dsh-plugin-check](https://github.com/dsh-external/dsh-plugin-check) | 11 | DSH 插件健康检查工具：扫描插件仓库的清单协议 / patch 格式 / 构建陷阱 / hub 收录状态，零依赖只读， |
+| 1 | [dsh-web-ui](https://github.com/zhu1090093659/dsh-web-ui) | 1561 | Plugin and skin collection for DeepSeek Harness (DSH) W… |
+| 2 | [dsh-TUI](https://github.com/ccch1mneyyy/dsh-TUI) | 723 | 解决DSH 官方尚无终端 TUI 痛点的补位之作，献给偏爱cli的各位极客：Claude Code 风格全屏交… |
+| 3 | [DSH-better-sidebar](https://github.com/omdsh-dev/DSH-better-sidebar) | 631 | 一个侧边栏的完整工作台，支持三方拓展注册新Tab页面，内置文件渲染编辑/终端/Git/子代理 |
+| 4 | [sandbase-harness](https://github.com/sandbaseai/sandbase-harness) | 571 | Open-source CMA-compatible agent runtime for any model,… |
+| 5 | [dsh-ads](https://github.com/Nagi-ovo/dsh-ads) | 291 | 是兄弟就来蹬我！DSH Web UI 广告：2005 年中文站点风格的侧栏广告 / 对话内信息流 / 角落弹窗… |
+| 6 | [oh-dsh](https://github.com/hust-open-atom-club/oh-dsh) | 152 | 一站式 DeepSeek Harness 社区发行版：TUI、桌面端与 Web UI 三种形态统一体验，支持分… |
+| 7 | [dsh-tianshu-tui](https://github.com/huiliyi37/dsh-tianshu-tui) | 114 | dsh-tianshu-tui — DeepSeek Harness terminal UI +harness… |
+| 8 | [whale-girl](https://github.com/vlln/whale-girl) | 114 | DSH Web GUI 桌面宠物插件（QQ 宠物形态）：右下角悬浮、可拖拽/投喂/玩耍的积累型伙伴。官方 re… |
+| 9 | [dsh-browser](https://github.com/Lum1104/dsh-browser) | 72 | dsh plugin: Chrome sidebar extension that lets DSH oper… |
+| 10 | [dsh-genui](https://github.com/omdsh-dev/dsh-genui) | 67 | GenUI for DeepSeek Harness: interactive UI components r… |
+| 11 | [dsh-openpencil](https://github.com/ZSeven-W/dsh-openpencil) | 64 | OpenPencil design preview and editing plugin for DSH |
+| 12 | [dsh_workflow](https://github.com/icetomoyo/dsh_workflow) | 53 | 把Claude Code的UltraCode模式带给DSH，把 DSH 的一次性多 Agent 调度，升级为可… |
+| 13 | [dsh-annotation](https://github.com/omdsh-dev/dsh-annotation) | 33 | DSH Web 选中批注插件：选文字→批注→回车随消息发送；气泡隐藏批注块（零闪烁）；回复按 Annotati… |
+| 14 | [dsh-memory-evolve](https://github.com/csyangwen/dsh-memory-evolve) | 32 | 为 DeepSeek Harness 带来「跨会话长期记忆 + 后台自我进化」能力的纯插件实现：五轨记忆 · … |
+| 15 | [plugin-registry](https://github.com/vlln/plugin-registry) | 28 | DSH 插件生态基建：薄控制台（浏览器面板管理官方 repository 插件，0 patch）+ make-… |
+| 16 | [ui-status-label](https://github.com/alingalingling/ui-status-label) | 27 | 把你鲸鱼娘思考时的 deep diving 自定义成任意你想要的样子 |
+| 17 | [dsh-multica-runtime](https://github.com/multica-ai/dsh-multica-runtime) | 27 | Support dsh runtime on Multica. |
+| 18 | [dsh-work](https://github.com/vibeinging/dsh-work) | 22 | Local-first AI workbench for DSH Plugins, combining Age… |
+| 19 | [dsh-openbiliclaw](https://github.com/whiteguo233/dsh-openbiliclaw) | 19 | OpenBiliClaw 是本地运行的跨平台个性化内容推荐 Agent，持续理解你的兴趣并主动找内容。本仓库是… |
+| 20 | [dsh-message-edit](https://github.com/Moeblack/dsh-message-edit) | 16 | DSH plugin: branch-based message editing, reroll, retry… |
 
 <!-- AUTO:featured:END -->
 
