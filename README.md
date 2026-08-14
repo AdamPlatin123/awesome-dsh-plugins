@@ -72,11 +72,11 @@ graph TB
 
 <!-- AUTO:featured:START -->
 
-> 按 GitHub star 数排序，每 20 分钟自动刷新。数据截至 2026-08-14 19:33。
+> 按 GitHub star 数排序，每 20 分钟自动刷新。数据截至 2026-08-14 11:35。
 
 | # | 插件 | ⭐ | 说明 |
 |---|---|---|---|
-| 1 | [dsh-web-ui](https://github.com/zhu1090093659/dsh-web-ui) | 1577 | Plugin and skin collection for DeepSeek Harness (DSH) W… |
+| 1 | [dsh-web-ui](https://github.com/zhu1090093659/dsh-web-ui) | 1579 | Plugin and skin collection for DeepSeek Harness (DSH) W… |
 | 2 | [dsh-TUI](https://github.com/ccch1mneyyy/dsh-TUI) | 728 | 解决DSH 官方尚无终端 TUI 痛点的补位之作，献给偏爱cli的各位极客：Claude Code 风格全屏交… |
 | 3 | [DSH-better-sidebar](https://github.com/omdsh-dev/DSH-better-sidebar) | 635 | 一个侧边栏的完整工作台，支持三方拓展注册新Tab页面，内置文件渲染编辑/终端/Git/子代理 |
 | 4 | [sandbase-harness](https://github.com/sandbaseai/sandbase-harness) | 571 | Open-source CMA-compatible agent runtime for any model,… |
