@@ -73,18 +73,18 @@ graph TB
 
 <!-- AUTO:featured:START -->
 
-> 按 GitHub star 数排序，每 20 分钟自动刷新。数据截至 2026-08-14 21:54。
+> 按 GitHub star 数排序，每 20 分钟自动刷新。数据截至 2026-08-14 22:14。
 
 | # | 插件 | ⭐ | 说明 |
 |---|---|---|---|
-| 1 | [dsh-web-ui](https://github.com/zhu1090093659/dsh-web-ui) | 1919 | Plugin and skin collection for DeepSeek Harness (DSH) W… |
+| 1 | [dsh-web-ui](https://github.com/zhu1090093659/dsh-web-ui) | 1922 | Plugin and skin collection for DeepSeek Harness (DSH) W… |
 | 2 | [TokenTracker](https://github.com/xiufengsun/TokenTracker) | 1306 | Local-first AI token usage & cost tracker for 31 coding… |
-| 3 | [modlens](https://github.com/liustack/modlens) | 1285 | The first vision plugin for DeepSeek Harness, and the v… |
+| 3 | [modlens](https://github.com/liustack/modlens) | 1286 | The first vision plugin for DeepSeek Harness, and the v… |
 | 4 | [PicGo-Core](https://github.com/PicGo/PicGo-Core) | 969 | :zap:The ultimate image uploading engine. Both CLI & AP… |
-| 5 | [dsh-TUI](https://github.com/ccch1mneyyy/dsh-TUI) | 888 | 解决DSH 官方尚无终端 TUI 痛点的补位之作，献给偏爱cli的各位极客：Claude Code 风格全屏交… |
-| 6 | [DSH-better-sidebar](https://github.com/omdsh-dev/DSH-better-sidebar) | 762 | 一个侧边栏的完整工作台，支持三方拓展注册新侧边栏页面。内置文件渲染编辑/终端/Git/子代理 |
+| 5 | [dsh-TUI](https://github.com/ccch1mneyyy/dsh-TUI) | 889 | 解决DSH 官方尚无终端 TUI 痛点的补位之作，献给偏爱cli的各位极客：Claude Code 风格全屏交… |
+| 6 | [DSH-better-sidebar](https://github.com/omdsh-dev/DSH-better-sidebar) | 763 | 一个侧边栏的完整工作台，支持三方拓展注册新侧边栏页面。内置文件渲染编辑/终端/Git/子代理 |
 | 7 | [sandbase-harness](https://github.com/sandbaseai/sandbase-harness) | 574 | Open-source CMA-compatible agent runtime for any model,… |
-| 8 | [dsh-ads](https://github.com/Nagi-ovo/dsh-ads) | 333 | 把 DSH 变成 2005 年门户网站｜Parody ads, fake games, and popups … |
+| 8 | [dsh-ads](https://github.com/Nagi-ovo/dsh-ads) | 334 | 把 DSH 变成 2005 年门户网站｜Parody ads, fake games, and popups … |
 | 9 | [dsh-vision-toolkit](https://github.com/Anionex/dsh-vision-toolkit) | 328 | 让纯文本模型更好地做视觉任务的DeepSeek Harness插件：带意图的图片问答、长截图 OCR、UI 还… |
 | 10 | [Abu-Cowork](https://github.com/PM-Shawn/Abu-Cowork) | 323 | Open-source alternative to Claude Cowork — a local-firs… |
 | 11 | [dsh-agent-teams](https://github.com/NanmiCoder/dsh-agent-teams) | 246 | AgentTeams plugin for DeepSeek Harness |
@@ -93,7 +93,7 @@ graph TB
 | 14 | [dsh-tianshu-tui](https://github.com/huiliyi37/dsh-tianshu-tui) | 133 | dsh-tianshu-tui — DeepSeek Harness terminal UI +harness… |
 | 15 | [dsh-at-file](https://github.com/omdsh-dev/dsh-at-file) | 131 | Codex-style @file mentions for DeepSeek Harness: search… |
 | 16 | [whale-girl](https://github.com/vlln/whale-girl) | 127 | DSH Web GUI 桌面宠物插件（QQ 宠物形态）：右下角悬浮、可拖拽/投喂/玩耍的积累型伙伴。官方 re… |
-| 17 | [dsh-browser](https://github.com/Lum1104/dsh-browser) | 94 | dsh plugin: Chrome sidebar extension that lets DSH oper… |
+| 17 | [dsh-browser](https://github.com/Lum1104/dsh-browser) | 95 | dsh plugin: Chrome sidebar extension that lets DSH oper… |
 | 18 | [modsearch](https://github.com/liustack/modsearch) | 92 | The web plugin for DeepSeek Harness, and the search bri… |
 | 19 | [dsh-visualize](https://github.com/Nagi-ovo/dsh-visualize) | 82 | 在 DSH 对话中生成交互式可视化｜Render model-generated interactive ca… |
 | 20 | [dsh-genui](https://github.com/omdsh-dev/dsh-genui) | 74 | GenUI for DeepSeek Harness: interactive UI components r… |
