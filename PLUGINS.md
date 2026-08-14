@@ -56,6 +56,7 @@
 | dsh-work | [vibeinging/dsh-work](https://github.com/vibeinging/dsh-work) | 以 dsh 为骨、codex 为皮的桌面 app | 待测 |
 | deepseek-harness-desktop | [chyra-moon/deepseek-harness-desktop](https://github.com/chyra-moon/deepseek-harness-desktop) | Windows 原生桌面外壳:1:1 官方 Web UI、内置服务器托管、托盘驻留与掉线自动恢复 | 待测 |
 | dsh-remote-sandbox | [weijiafu14/dsh-remote-sandbox](https://github.com/weijiafu14/dsh-remote-sandbox) | 生产级远程执行世界：E2B 沙箱内纯 JS sidecar，fs/subprocess 单次往返、进程输出有界、心跳保活、崩溃透明恢复（resume/recreate）、tar 工作区同步；修复官方 e2b POC 两处 host 假设。43 项测试（含 6 项真机 E2E）全绿 | 已测 |
+| deepseek-harness-desktop | [cnskycn/deepseek-harness-desktop](https://github.com/cnskycn/deepseek-harness-desktop) | DeepSeek Harness (dsh) 官方 Web UI 的 Windows 桌面封装：一键安装包、内置完整 dsh 依赖、Node.js 自动检测与引导安装、原生窗口托管 | 待测 |
 
 ## ❓ 未分类
 
