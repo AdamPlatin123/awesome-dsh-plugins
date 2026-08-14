@@ -22,6 +22,7 @@
 | dsh-tianshu-tui | [huiliyi37/dsh-tianshu-tui](https://github.com/huiliyi37/dsh-tianshu-tui) | DSH 的 TUI（终端界面） | ✅ |
 | dsh-genui | [omdsh-dev/dsh-genui](https://github.com/omdsh-dev/dsh-genui) | GenUI 内联交互组件：dsh-ui fence 渲染图表/表单/测验/3D 场景，带 action 事件环 | ✅ |
 | dsh-annotation | [omdsh-dev/dsh-annotation](https://github.com/omdsh-dev/dsh-annotation) | DSH Web 选中批注插件：选文字→批注→回车随消息发送，回复按 Annotation N 逐条对照（可悬浮芯片） | ✅ |
+| dsh-ui-quote-selection | [nekogpt/dsh-ui-quote-selection](https://github.com/nekogpt/dsh-ui-quote-selection) | 在 DSH Web 中选中文字，一键引用到输入框；发送问题时自动附上完整原文 | ✅ |
 | dsh-security-scan | [ben7am1n/dsh-security-scan](https://github.com/ben7am1n/dsh-security-scan) | Secret & dangerous-pattern scanner — API keys/tokens/private keys redacted; ignore lists; zero deps | ✅ |
 | dsh-email | [STARDUSTLC666/dsh-email](https://github.com/STARDUSTLC666/dsh-email) | 邮件工具插件：IMAP/SMTP 收/发/搜/列文件夹/附件下载（email_list/read/search/send/folders/attachment），内置 QQ/163/126/新浪/阿里/Gmail/Outlook/iCloud 预设，支持多账号与连接复用，发信默认走审批门；纯 Node 全平台 | 待测 |
 | dsh-calendar | [STARDUSTLC666/dsh-calendar](https://github.com/STARDUSTLC666/dsh-calendar) | CalDAV 日历插件：查/建/改/删/搜日程（calendar_list/create/update/delete/search），Google/iCloud/Nextcloud/自定义端点，应用专用密码 | 待测 |
@@ -96,7 +97,6 @@
 -->
 | dsh-plugin-workshop | [yyyyukari/dsh-plugin-workshop](https://github.com/yyyyukari/dsh-plugin-workshop) | 创意工坊式插件浏览器：侧栏常驻入口，搜索/最热/最新/近 7-90 天飙升榜、中文关键词映射、描述与 README 机翻、插件特征验证过滤、一键安装/更新/卸载，内置已安装插件管理（零服务器，GitHub 直连） | ✅ |
 | dsh-file-review | [left0ver/dsh-file-review](https://github.com/left0ver/dsh-file-review) | 文件审查插件：diff 的形式查看文件的修改内容，方便对 agent 的修改进行审查 | ✅ |
-| dsh-ui-quote-selection | [nekogpt/dsh-ui-quote-selection](https://github.com/nekogpt/dsh-ui-quote-selection) | Web 选中文本一键引用到输入框：chip 显示、发送时自动展开为完整原文，走官方 input-trigger 引用管线 | ✅ |
 | dsh-file-claim | [Nwflower/dsh-file-claim](https://github.com/Nwflower/dsh-file-claim) | 同一工作区并行多会话的文件认领与写入保护（claim/release、心跳 stale 接管、pending 三路合并） | ✅ |
 | dsh-memento | [PerryLink/dsh-memento](https://github.com/PerryLink/dsh-memento) | 有界、分层、审批门、可审计的跨会话记忆接缝：ctx.memory 服务 + 本地 SQLite（零依赖）+ memory 工具 + 冻结快照注入；写必审批、模型可见 ⟺ 落盘 | ✅ |
 | dsh-mcp-panel | [PerryLink/dsh-mcp-panel](https://github.com/PerryLink/dsh-mcp-panel) | 官方 MCP 客户端（dsh-mcp-client）只读运行时管理面板：/mcp 命令 + 设置页 MCP 页签展示连接状态/已注册工具/错误/重连计数，脱敏展示与受控启停 patch 建议 | 待测 |
