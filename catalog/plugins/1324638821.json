@@ -27,5 +27,10 @@
     "filesystem": "none",
     "credentials": [],
     "data_handling_url": ""
+  },
+  "runtime_test": {
+    "status": "fail",
+    "reason": "FAIL: peer dependency '@deepseek-ai/dsh-tools' not found and node_modules is read-only (无法安装依赖)",
+    "tested_at": "2026-08-14"
   }
 }

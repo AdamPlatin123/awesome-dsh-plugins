@@ -27,5 +27,10 @@
     "filesystem": "none",
     "credentials": [],
     "data_handling_url": ""
+  },
+  "runtime_test": {
+    "status": "fail",
+    "reason": "FAIL: Peer 依赖 @deepseek-ai/dsh-tools 为私有包，安装失败导致插件无法加载",
+    "tested_at": "2026-08-14"
   }
 }

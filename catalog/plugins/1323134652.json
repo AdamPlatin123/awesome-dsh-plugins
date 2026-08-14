@@ -27,5 +27,10 @@
     "filesystem": "none",
     "credentials": [],
     "data_handling_url": ""
+  },
+  "runtime_test": {
+    "status": "fail",
+    "reason": "FAIL: 依赖 @deepseek-ai/dsh-invariants 等 DSH 内部包和 @dsh-external/mxc-sdk（需 GitHub Packages 认证）无法解析，且源码未编译（无 lib/ 目录）",
+    "tested_at": "2026-08-14"
   }
 }

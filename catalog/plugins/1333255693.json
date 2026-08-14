@@ -27,5 +27,10 @@
     "filesystem": "none",
     "credentials": [],
     "data_handling_url": ""
+  },
+  "runtime_test": {
+    "status": "fail",
+    "reason": "FAIL: 插件依赖使用 link: 协议指向 ~/deepseek-harness 目录（该目录不存在），无法安装构建，导致 dsh 加载失败",
+    "tested_at": "2026-08-14"
   }
 }

@@ -27,5 +27,10 @@
     "filesystem": "none",
     "credentials": [],
     "data_handling_url": ""
+  },
+  "runtime_test": {
+    "status": "fail",
+    "reason": "FAIL: peer dependencies (`@deepseek-ai/dsh-client-locale`, `@deepseek-ai/dsh-client-runtime`, `@deepseek-ai/dsh-client-ui-slots`, `@deepseek",
+    "tested_at": "2026-08-14"
   }
 }

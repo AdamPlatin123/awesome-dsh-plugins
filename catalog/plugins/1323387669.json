@@ -27,5 +27,10 @@
     "filesystem": "none",
     "credentials": [],
     "data_handling_url": ""
+  },
+  "runtime_test": {
+    "status": "fail",
+    "reason": "FAIL: peerDependencies (@deepseek-ai/dsh-agent, dsh-llm, dsh-session, cordis, schemastery) 为内部包，npm 注册表不可用，模块无法加载",
+    "tested_at": "2026-08-14"
   }
 }

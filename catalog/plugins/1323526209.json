@@ -27,5 +27,10 @@
     "filesystem": "none",
     "credentials": [],
     "data_handling_url": ""
+  },
+  "runtime_test": {
+    "status": "fail",
+    "reason": "FAIL: 只读文件系统无法安装依赖，且 peer 依赖 @deepseek-ai/dsh-tools 未安装导致模块加载失败（需通过 dsh plugin 安装或在 monorepo workspace 环境中使用）",
+    "tested_at": "2026-08-14"
   }
 }

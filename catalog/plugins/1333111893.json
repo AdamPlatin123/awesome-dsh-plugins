@@ -27,5 +27,10 @@
     "filesystem": "none",
     "credentials": [],
     "data_handling_url": ""
+  },
+  "runtime_test": {
+    "status": "fail",
+    "reason": "FAIL: 缺少 DSH monorepo 的 workspace:^ 依赖（如 @deepseek-ai/schemastery），无法独立加载",
+    "tested_at": "2026-08-14"
   }
 }

@@ -27,5 +27,10 @@
     "filesystem": "none",
     "credentials": [],
     "data_handling_url": ""
+  },
+  "runtime_test": {
+    "status": "fail",
+    "reason": "FAIL: peer dependencies (@deepseek-ai/schemastery 等) 无法安装——npm 缓存目录权限被拒，且沙箱阻止在 /clones/distill 创建 node_modules。",
+    "tested_at": "2026-08-14"
   }
 }
