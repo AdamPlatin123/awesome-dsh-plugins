@@ -3,11 +3,11 @@
 **A daily-updated radar that auto-discovers and compatibility-tests every plugin for DeepSeek Harness.**
 Know which plugins work before you install them.
 
-[![plugins](https://img.shields.io/badge/plugins-286%2B-blue)](#热门插件star-top-20) [![scan](https://img.shields.io/badge/scan-every_8h-green)](#当前生态快照) [![evidence](https://img.shields.io/badge/compat-four_dimensional-orange)](#本仓库如何判定) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![plugins](https://img.shields.io/badge/confirmed-255-blue)](#热门插件star-top-20) [![scan](https://img.shields.io/badge/scan-every_8h-green)](#当前生态快照) [![evidence](https://img.shields.io/badge/tested-242-orange)](#本仓库如何判定) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
 ## English
 
-**What is this?** DeepSeek Harness (DSH) is an open-source coding agent where everything is a plugin. This repo is a **radar** that automatically tracks its entire plugin ecosystem:
+**What is this?** DeepSeek Harness (DSH) is an open-source coding agent where everything is a plugin. This repo is a **radar** that automatically tracks its entire plugin ecosystem — **1328 candidates scanned**, **255 confirmed plugins** (verified by clone + package.json), **242 runtime-tested** by agent:
 
 - **Auto-discovered** — plugins tagged with the `dsh-plugin` topic are picked up by daily scans; no manual submission needed
 - **Evidence-tested** — every plugin gets a four-dimensional compatibility check (patches / API seams / peerDeps / compile) plus runtime tests against the latest DSH mainline
@@ -38,7 +38,7 @@ graph LR
 
 ## 中文
 
-> 每天自动扫描 286+ 个 DeepSeek Harness 插件的兼容性雷达：哪个能用、哪个要改、哪个已经碎了，一眼看清。
+> 扫描 1328 个候选仓库，255 个确认为 DSH 插件（clone 验证），242 个已通过 agent 运行级实测。兼容性雷达：哪个能用、哪个要改，一眼看清。
 
 **找插件** · **避坑** · **跟上变化**
 
