@@ -29,7 +29,7 @@
 | billion-context-dsh | [Tyan66666/billion-context-dsh](https://github.com/Tyan66666/billion-context-dsh) | 模型驱动上下文压缩（ACP）：compress/decompress/search_context/acp_status 工具，模型决定何时压缩，移植自 billion-context-pi | 待测 |
 | dsh-web-search-firecrawl | [yangzhe1003/dsh-web-search-firecrawl](https://github.com/yangzhe1003/dsh-web-search-firecrawl) | Firecrawl 搜索提供方：内置 web_search 工具接入 Firecrawl 搜索 API（npm @yangzhe1003/dsh-web-search-firecrawl） | ✅ |
 | dsh-test-runner | [suimi8/dsh-test-runner](https://github.com/suimi8/dsh-test-runner) | 结构化测试运行工具 test_run：自动探测 vitest/jest/pytest/node:test，执行并解析失败摘要，避免模型阅读整段原始测试输出 | 待测 |
-| dsh-stream-rules | [jiesou/dsh-stream-rules](https://github.com/jiesou/dsh-stream-rules) | 需要时注入规则、不浪费上下文（opencode-stream-rules 的 DSH 移植） | 待测 |
+| dsh-stream-rules | [jiesou/dsh-stream-rules](https://github.com/jiesou/dsh-stream-rules) | 模式匹配自动注入 steering rules，不占系统上下文 | 待测 |
 
 ## 🧰 插件集
 
