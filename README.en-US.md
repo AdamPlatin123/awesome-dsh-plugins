@@ -3,7 +3,7 @@
 **A daily-updated radar that auto-discovers and compatibility-tests every plugin for DeepSeek Harness.**
 Know which plugins work before you install them.
 
-[![confirmed](https://img.shields.io/badge/confirmed-255-blue)](#热门插件star-top-20) [![scan](https://img.shields.io/badge/scan-every_8h-green)](#当前生态快照) [![tested](https://img.shields.io/badge/tested-242-orange)](#本仓库如何判定) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![confirmed](https://img.shields.io/badge/confirmed-255-blue)](#-star-top-20) [![scan](https://img.shields.io/badge/scan-every_8h-green)](#ecosystem-snapshot) [![tested](https://img.shields.io/badge/tested-242-orange)](#how-we-assess-compatibility) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
 [English](README.en-US.md) | [简体中文](README.md)
 
@@ -50,35 +50,23 @@ graph TB
     RT -.->|evidence| E1
 ```
 
-**Quick Start**
+## Quick Start
 
-| Step | Link |
+| Goal | Link |
 |---|---|
-| Browse Star Top 20 | [🔥 热门插件](#热门插件star-top-20) |
-| Find by domain | [📋 分类目录](#分类目录) — 9 categories, compat status per plugin |
-| Check evidence | [📊 当前生态快照](#当前生态快照) — dated compatibility matrix |
-| Submit your plugin | Add `dsh-plugin` topic → auto-discovered within 8h · [PR template](.github/PULL_REQUEST_TEMPLATE.md) |
-
-[Browse catalog](#分类目录) · [Latest snapshot](#当前生态快照) · [CHANGELOG](CHANGELOG.md) · [Submit plugin](#提交插件) · [中文版](README.md)
+| Browse Star Top 20 | [🔥 Star Top 20](#-star-top-20) |
+| Find a plugin by use case | [📋 Plugin Catalog](#plugin-catalog) · [PLUGINS.md](PLUGINS.md) — 9 categories, compat status per plugin |
+| Browse all auto-discovered repos | [📊 Ecosystem Snapshot](#ecosystem-snapshot) — dated compatibility matrix |
+| See what changed recently | [📝 CHANGELOG](CHANGELOG.md) |
+| Register or submit a plugin | [🔧 For Plugin Developers](#for-plugin-developers) · add the `dsh-plugin` topic → discovered within 8h · [PR template](.github/PULL_REQUEST_TEMPLATE.md) |
+| Maintain this radar | [⚙️ Automation SOP](docs/SOP.md) |
+| Plugin user guide | [📖 For Plugin Users](#for-plugin-users) |
+| How we assess compatibility | [🔍 How We Assess Compatibility](#how-we-assess-compatibility) |
+| Join the community | [💬 dshfind.com](#-join-the-community) · [WeChat group](#join-the-wechat-group) |
 
 > [!IMPORTANT]
 > **Inclusion ≠ compatible, static check ≠ runtime-usable, runtime-usable ≠ security-audited.**
 > This repo provides traceable filtering signals, not official DSH endorsement. Always review plugin source, permissions, dependencies, and license before installing.
-
----
-
-## Getting Started
-
-| Goal | Link |
-|---|---|
-| Find a plugin by use case | [📋 分类目录](#分类目录) · [PLUGINS.md](PLUGINS.md) |
-| Browse all auto-discovered repos | [📊 当前生态快照](#当前生态快照) |
-| See what changed recently | [📝 CHANGELOG](CHANGELOG.md) |
-| Register or maintain a plugin | [🔧 给插件开发者](#给插件开发者) |
-| Maintain this radar | [⚙️ 自动化 SOP](docs/SOP.md) |
-| Plugin user guide | [📖 给插件使用者](#给插件使用者) |
-| How we assess compatibility | [🔍 本仓库如何判定](#本仓库如何判定) |
-| Join the community | [💬 欢迎加入讨论社群](#欢迎加入讨论社群) |
 
 ## 🔥 Star Top 20
 
@@ -525,7 +513,7 @@ DSH 插件生态交流群（微信群）：插件作者、维护者与使用者�
 ### 1. Find candidate plugins
 
 - 优先从 [PLUGINS.md](PLUGINS.md) 选择已有人工分类和说明的插件。
-- 若分类目录没有，再从[当前生态快照](#当前生态快照)进入当日完整索引，搜索仓库名或关键词。
+- 若分类目录没有，再从 [Ecosystem Snapshot](#ecosystem-snapshot) 进入当日完整索引，搜索仓库名或关键词。
 - 仓库无法公开访问、没有 README、没有许可证或长期无维护时，把它视为高风险候选，而不是“已验证插件”。
 
 ### 2. Understand status
