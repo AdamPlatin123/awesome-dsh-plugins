@@ -109,5 +109,6 @@
 
 <!-- 新增条目示例（复制下面一行修改后插入对应分类表格末尾）：
 | my-plugin | [你的账号/my-plugin](https://github.com/你的账号/my-plugin) | 一句话功能描述 | 待测 |
+| dsh-approval-guardian | [karuboniru/dsh-approval-guardian](https://github.com/karuboniru/dsh-approval-guardian) | DSH æ²ç®±ææå®¡æ¹å®æ¤ï¼æçå®ç sandbox escalation å®¡æ¹è·¯ç±å°ä¸æ¬¡æ§æ å·¥å·è¯å®¡ agentï¼è¿åç»æå allow/denyï¼æ®éå·¥ä½åºæä½é¶ä»å¥ | å¾æµ |
 -->
 
