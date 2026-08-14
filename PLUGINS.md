@@ -46,6 +46,7 @@
 | vpshub | [Sdongmaker/vpshub](https://github.com/Sdongmaker/vpshub) | DSH 的 VPS Hub:本地 SSH 台账(Orca 风格 ssh-config/manual + tombstone),vps_* 工具让 AI 发现/测试/执行/传输,密钥仅路径引用;可选设置页 UI(真实会话闭环实测:发现/连接/增删/别名预填) | ✅ |
 | dsh-latexcp | [Chi-hong22/dsh-latexcp](https://github.com/Chi-hong22/dsh-latexcp) | DSH Web 界面 LaTeX 公式复制插件：悬停 KaTeX 公式复制按钮，一键复制 TeX 源码（$…$ / \(…\) 两种格式 | 待测 |
 | dsh-plugin-web-access | [junhongchashui/dsh-plugin-web-access](https://github.com/junhongchashui/dsh-plugin-web-access) | 纯本地按需网页访问：web_fetch 命令行抓取 + 无头浏览器（browser_open/snapshot/eval/screenshot）双通道，零 API Key，注册 ctx.web fetch provider | ✅ |
+| dsh-web-access | [NexusAgentX/dsh-web-access](https://github.com/NexusAgentX/dsh-web-access) | 多提供方联网：web_search / fetch_content / source_check，注册 ctx.web 的 web-access 搜索/抓取提供方，Web 面板改配置与策展；npm `dsh-web-access` | ✅ |
 | dsh-mnemon | [omdsh-dev/dsh-mnemon](https://github.com/omdsh-dev/dsh-mnemon) | Mnemon 深度集成的本地记忆系统：运行时热记忆 / 项目档案 / 长期记忆体三层存储，受监督写回、检索工具与 8 页 Web UI | ✅ |
 | dsh-daily-brief | [Equinox7379/dsh-daily-brief](https://github.com/Equinox7379/dsh-daily-brief) | 回合日报：跨 live 会话统计回合/用户消息/助手回复/工具调用（daily_brief 工具，只读零依赖） | ✅ |
 | dsh-config-watch | [Equinox7379/dsh-config-watch](https://github.com/Equinox7379/dsh-config-watch) | 配置漂移侦探：启动时快照 profile/插件清单并记录变更历史（config_changes 工具） | ✅ |
