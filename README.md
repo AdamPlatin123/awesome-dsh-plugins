@@ -489,6 +489,14 @@ graph LR
 
 <!-- AUTO:catalog:END -->
 
+## 🌐 推广位 · dshfind
+
+[dshfind.com](https://dshfind.com) — DSH 原理学习、插件市场与最佳实践社区：从 Cordis 论文逐章精读到插件自动聚合市场。
+
+<a href="https://dshfind.com"><img src="assets/dshfind-screenshot.png" width="600" alt="dshfind.com — DSH 学习与分享社区"></a>
+
+[🌐 dshfind.com](https://dshfind.com) · [GitHub](https://github.com/hikariming/dshfind)
+
 ## 欢迎加入社群
 
 DSH 插件生态交流群（微信群）：插件作者、维护者与使用者都在这里，讨论插件开发、兼容性问题与新插件发布。
