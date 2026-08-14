@@ -1615,174 +1615,12 @@ DSH 插件生态交流群（微信群）：插件作者、维护者与使用者�
 | 静态综合判定 | 11 兼容 · 15 关注 · 4 需适配 |
 | 证据不足 | 94 待调研 |
 | 其他 | 0 占位 · 0 不适用 · 0 已删除 |
-| 运行级实测 | 0 可用 · 5 失败（共测试 5 个） |
+| 运行级实测 | ✅628 可用 · 130 不兼容 · 0 待定（共 807 个，k8s agent 口径） | 0 可用 · 5 失败（共测试 5 个） |
 | 正在跟踪的 PR | 0 |
 
 [完整索引](reports/2026-08-13/index.md) · [静态矩阵](reports/2026-08-13/mainline-compat.md) · [编译实验](reports/2026-08-13/compile-compat.md) · [运行实测](reports/2026-08-13/runtime-test.md)
 
 <details><summary>插件状态明细（按判定分群 · 与上方分类目录互补 · 默认折叠）</summary>
-
-**插件目录**（124 个仓库 · 按判定状态分群）
-
-**兼容**（11）
-
-| 仓库 | 状态 |
-|---|---|
-| [deepseek-harness-desktop](https://github.com/dsh-external/deepseek-harness-desktop) | 兼容 |
-| [dsh-memory-evolve](https://github.com/dsh-external/dsh-memory-evolve) | 兼容 |
-| [dsh-prompt-studio](https://github.com/dsh-external/dsh-prompt-studio) | 兼容 |
-| [dsh-web-ui-approval-notify](https://github.com/dsh-external/dsh-web-ui-approval-notify) | 兼容 |
-| [plugin-registry](https://github.com/dsh-external/plugin-registry) | 兼容 |
-| [session-persistence-rdb](https://github.com/dsh-external/session-persistence-rdb) | 兼容 |
-| [dsh-desktop-electron](https://github.com/dsh-external/dsh-desktop-electron) | 兼容 |
-| [dsh-track](https://github.com/dsh-external/dsh-track) | 兼容 |
-| [dsh-harness-ops](https://github.com/dsh-external/dsh-harness-ops) | 兼容 |
-| [plugin-template](https://github.com/dsh-external/plugin-template) | 兼容 |
-| [dsh-diff-viewer](https://github.com/dsh-external/dsh-diff-viewer) | 兼容 |
-
-**需适配**（4）
-
-| 仓库 | 状态 |
-|---|---|
-| [turtle-ui](https://github.com/dsh-external/turtle-ui) | 需适配 |
-| [fabric](https://github.com/dsh-external/fabric) | 需适配 |
-| [dsh-split-panes](https://github.com/dsh-external/dsh-split-panes) | 需适配 |
-| [dsh-ohos-patch](https://github.com/dsh-external/dsh-ohos-patch) | 需适配 |
-
-**关注**（15）
-
-| 仓库 | 状态 |
-|---|---|
-| [distill](https://github.com/dsh-external/distill) | 关注 |
-| [dsh-artifact](https://github.com/dsh-external/dsh-artifact) | 关注 |
-| [dsh-companion](https://github.com/dsh-external/dsh-companion) | 关注 |
-| [dsh-tool-calculator](https://github.com/dsh-external/dsh-tool-calculator) | 关注 |
-| [dsh-tool-encoding](https://github.com/dsh-external/dsh-tool-encoding) | 关注 |
-| [dsh-tool-json](https://github.com/dsh-external/dsh-tool-json) | 关注 |
-| [dsh-tool-time](https://github.com/dsh-external/dsh-tool-time) | 关注 |
-| [dsh-vision](https://github.com/dsh-external/dsh-vision) | 关注 |
-| [dsh-web-ui](https://github.com/dsh-external/dsh-web-ui) | 关注 |
-| [ex-setting](https://github.com/dsh-external/ex-setting) | 关注 |
-| [Qwen-MM-Plugins](https://github.com/dsh-external/Qwen-MM-Plugins) | 关注 |
-| [sandbox-mxc](https://github.com/dsh-external/sandbox-mxc) | 关注 |
-| [telegram](https://github.com/dsh-external/telegram) | 关注 |
-| [web-components](https://github.com/dsh-external/web-components) | 关注 |
-| [dsh-slice-agent-loop](https://github.com/dsh-external/dsh-slice-agent-loop) | 关注 |
-
-<details><summary>待调研（94）—— 点击展开</summary>
-
-| 仓库 | 状态 |
-|---|---|
-| [dsh-web-ui-notify](https://github.com/dsh-external/dsh-web-ui-notify) | 待调研 |
-| [dsh-evolve](https://github.com/dsh-external/dsh-evolve) | 待调研 |
-| [dsh-drag-and-drop](https://github.com/dsh-external/dsh-drag-and-drop) | 待调研 |
-| [dsh-message-edit](https://github.com/dsh-external/dsh-message-edit) | 待调研 |
-| [dsh-deep-research](https://github.com/dsh-external/dsh-deep-research) | 待调研 |
-| [dsh-browser](https://github.com/dsh-external/dsh-browser) | 待调研 |
-| [dsh-inspect](https://github.com/dsh-external/dsh-inspect) | 待调研 |
-| [zotero-wave-rag](https://github.com/dsh-external/zotero-wave-rag) | 待调研 |
-| [ego-browser](https://github.com/dsh-external/ego-browser) | 待调研 |
-| [dsh-sidechain](https://github.com/dsh-external/dsh-sidechain) | 待调研 |
-| [dsh-a2a](https://github.com/dsh-external/dsh-a2a) | 待调研 |
-| [dsh-remote](https://github.com/flymysql/dsh-remote) | 已发布 |
-| [mstar-workflow](https://github.com/dsh-external/mstar-workflow) | 待调研 |
-| [dsh-tool-csv](https://github.com/dsh-external/dsh-tool-csv) | 待调研 |
-| [dsh-tool-regex](https://github.com/dsh-external/dsh-tool-regex) | 待调研 |
-| [DSH-better-sidebar](https://github.com/dsh-external/DSH-better-sidebar) | 待调研 |
-| [dsh-advisor](https://github.com/dsh-external/dsh-advisor) | 待调研 |
-| [dsh-llm-fallbacks](https://github.com/dsh-external/dsh-llm-fallbacks) | 待调研 |
-| [dsh-checkpoint](https://github.com/dsh-external/dsh-checkpoint) | 待调研 |
-| [dsh-rewind](https://github.com/dsh-external/dsh-rewind) | 待调研 |
-| [dsh-side-panel](https://github.com/dsh-external/dsh-side-panel) | 待调研 |
-| [zotero-harvest](https://github.com/dsh-external/zotero-harvest) | 待调研 |
-| [dsh-web-archive](https://github.com/dsh-external/dsh-web-archive) | 待调研 |
-| [sandbox-micro](https://github.com/dsh-external/sandbox-micro) | 待调研 |
-| [dsh-git-identity](https://github.com/dsh-external/dsh-git-identity) | 待调研 |
-| [dsh-auto-approval](https://github.com/dsh-external/dsh-auto-approval) | 待调研 |
-| [dsh-stickers](https://github.com/dsh-external/dsh-stickers) | 待调研 |
-| [dsh-toolkit](https://github.com/dsh-external/dsh-toolkit) | 待调研 |
-| [dsh-tool-markdown](https://github.com/dsh-external/dsh-tool-markdown) | 待调研 |
-| [dsh-session-health](https://github.com/dsh-external/dsh-session-health) | 待调研 |
-| [dsh-plugin-check](https://github.com/dsh-external/dsh-plugin-check) | 待调研 |
-| [dsh-plugin-dev](https://github.com/dsh-external/dsh-plugin-dev) | 待调研 |
-| [dsh-gomoku](https://github.com/dsh-external/dsh-gomoku) | 待调研 |
-| [dsh-101](https://github.com/dsh-external/dsh-101) | 待调研 |
-| [dsh-mygo](https://github.com/dsh-external/dsh-mygo) | 待调研 |
-| [dsh-tool-diff](https://github.com/dsh-external/dsh-tool-diff) | 待调研 |
-| [dsh-mineru](https://github.com/dsh-external/dsh-mineru) | 待调研 |
-| [dsh-paseo](https://github.com/dsh-external/dsh-paseo) | 待调研 |
-| [dsh-webbridge](https://github.com/dsh-external/dsh-webbridge) | 待调研 |
-| [dsh-custom-css](https://github.com/dsh-external/dsh-custom-css) | 待调研 |
-| [dsh-humanize](https://github.com/dsh-external/dsh-humanize) | 待调研 |
-| [dsh-agent-budget](https://github.com/dsh-external/dsh-agent-budget) | 待调研 |
-| [dsh-spur](https://github.com/dsh-external/dsh-spur) | 待调研 |
-| [yet-another-subagent](https://github.com/dsh-external/yet-another-subagent) | 待调研 |
-| [dsh-ads](https://github.com/dsh-external/dsh-ads) | 待调研 |
-| [dsh-mnemon](https://github.com/dsh-external/dsh-mnemon) | 待调研 |
-| [dsh-pet-rs](https://github.com/dsh-external/dsh-pet-rs) | 待调研 |
-| [dsh-auto-blame](https://github.com/dsh-external/dsh-auto-blame) | 待调研 |
-| [dsh-tool-stat](https://github.com/dsh-external/dsh-tool-stat) | 待调研 |
-| [dsh-tool-schema](https://github.com/dsh-external/dsh-tool-schema) | 待调研 |
-| [dsh-security-audit](https://github.com/dsh-external/dsh-security-audit) | 待调研 |
-| [dsh-browser-bridge](https://github.com/dsh-external/dsh-browser-bridge) | 待调研 |
-| [ya-workspace-sidebar](https://github.com/dsh-external/ya-workspace-sidebar) | 待调研 |
-| [dsh-d399](https://github.com/dsh-external/dsh-d399) | 待调研 |
-| [dsh-sleep](https://github.com/dsh-external/dsh-sleep) | 待调研 |
-| [sandbox-nono](https://github.com/dsh-external/sandbox-nono) | 待调研 |
-| [dsh-auto-chess](https://github.com/dsh-external/dsh-auto-chess) | 待调研 |
-| [dsh-anti-ads](https://github.com/dsh-external/dsh-anti-ads) | 待调研 |
-| [whale-girl](https://github.com/dsh-external/whale-girl) | 待调研 |
-| [dsh-loop](https://github.com/dsh-external/dsh-loop) | 待调研 |
-| [dsh-navbar](https://github.com/dsh-external/dsh-navbar) | 待调研 |
-| [dsh-task-status](https://github.com/dsh-external/dsh-task-status) | 待调研 |
-| [dsh-annotation](https://github.com/dsh-external/dsh-annotation) | 待调研 |
-| [dsh-cc-connect](https://github.com/dsh-external/dsh-cc-connect) | 待调研 |
-| [dsh-focus-chat](https://github.com/dsh-external/dsh-focus-chat) | 待调研 |
-| [oh-dsh-desktop](https://github.com/dsh-external/oh-dsh-desktop) | 待调研 |
-| [dsh-plugin-skills](https://github.com/dsh-external/dsh-plugin-skills) | 待调研 |
-| [dsh-tool-search](https://github.com/dsh-external/dsh-tool-search) | 待调研 |
-| [dsh-trace](https://github.com/dsh-external/dsh-trace) | 待调研 |
-| [deepseek-manners](https://github.com/dsh-external/deepseek-manners) | 待调研 |
-| [dsh-multica-runtime](https://github.com/dsh-external/dsh-multica-runtime) | 待调研 |
-| [dsh-kb-sieve](https://github.com/dsh-external/dsh-kb-sieve) | 待调研 |
-| [dsh-data-agent](https://github.com/dsh-external/dsh-data-agent) | 待调研 |
-| [ui-status-label](https://github.com/dsh-external/ui-status-label) | 待调研 |
-| [dsh-better-sidebar-plugin-office](https://github.com/dsh-external/dsh-better-sidebar-plugin-office) | 待调研 |
-| [dsh-explain](https://github.com/dsh-external/dsh-explain) | 待调研 |
-| [dsh-interpreters](https://github.com/dsh-external/dsh-interpreters) | 待调研 |
-| [dsh-stock-market](https://github.com/dsh-external/dsh-stock-market) | 待调研 |
-| [dsh-scout](https://github.com/dsh-external/dsh-scout) | 待调研 |
-| [dsh-turn-navigator](https://github.com/dsh-external/dsh-turn-navigator) | 待调研 |
-| [dsh-mobile](https://github.com/dsh-external/dsh-mobile) | 待调研 |
-| [dsh-share](https://github.com/dsh-external/dsh-share) | 待调研 |
-| [dsh-aigc-canvas](https://github.com/dsh-external/dsh-aigc-canvas) | 待调研 |
-| [dsh-ultra-ui](https://github.com/dsh-external/dsh-ultra-ui) | 待调研 |
-| [dsh-deepresearch](https://github.com/dsh-external/dsh-deepresearch) | 待调研 |
-| [dsh-notebooks](https://github.com/dsh-external/dsh-notebooks) | 待调研 |
-| [context-doctor](https://github.com/dsh-external/context-doctor) | 待调研 |
-| [dsh-openpencil](https://github.com/dsh-external/dsh-openpencil) | 待调研 |
-| [dsh-emoji](https://github.com/dsh-external/dsh-emoji) | 待调研 |
-| [dsh_workflow](https://github.com/dsh-external/dsh_workflow) | 待调研 |
-| [dsh-conversation-share](https://github.com/dsh-external/dsh-conversation-share) | 待调研 |
-| [tonghuashun-webui](https://github.com/dsh-external/tonghuashun-webui) | 待调研 |
-| [dsh-session-notification](https://github.com/dsh-external/dsh-session-notification) | 待调研 |
-| [dsh-openbiliclaw](https://github.com/dsh-external/dsh-openbiliclaw) | 待调研 |
-</details>
-
-**今日新增 / 修改**（完整变更见 [CHANGELOG](CHANGELOG.md)）
-
-| 仓库 | 类型 |
-| （今日无修改） | |
-
-
-**⚠️ 需适配**（完整矩阵见 [mainline-compat.md](reports/2026-08-13/mainline-compat.md)）
-
-| 插件 | 锚定 | 判定 |
-|---|---|---|
-| [turtle-ui](https://github.com/dsh-external/turtle-ui) | 未知（不同谱系） | 需适配 |
-| [fabric](https://github.com/dsh-external/fabric) | 未知 | 需适配 |
-| [dsh-split-panes](https://github.com/dsh-external/dsh-split-panes) | 未知 | 需适配 |
-| [dsh-ohos-patch](https://github.com/dsh-external/dsh-ohos-patch) | 未知 | 需适配 |
 
 **🐙 正在跟踪的 open PR**
 
@@ -1794,7 +1632,6 @@ DSH 插件生态交流群（微信群）：插件作者、维护者与使用者�
 
 <!-- AUTO:ecosystem:END -->
 
-快照只回答“当前证据是什么”，不在首页复制几百行仓库和变更记录。逐仓结论、失败原因、当日新增和开放 PR 以对应报告为准。
 
 ## 项目边界与致谢
 
