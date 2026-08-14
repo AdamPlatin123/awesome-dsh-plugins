@@ -41,6 +41,7 @@
 | 插件 | 仓库 | 说明 |
 |---|---|---|
 | dsh-review-skills | [ben7am1n/dsh-review-skills](https://github.com/ben7am1n/dsh-review-skills) | Engineering-discipline skill pack — code-review, simplify, plan-then-execute, test-first, resolve-conflict; bundled ctx.skills provider |
+| dsh-plugin-installer | [zhang66633/dsh-plugin-installer](https://github.com/zhang66633/dsh-plugin-installer) | 安装与排查 dsh 插件的技能（bundled skill provider）：npm 直装 / GitHub clone 注册，MCP·技能·皮肤路径，13 坑配方，patch-skins.sh 版本条件化补丁；已发布 npm@1.1.0 |
 
 ## 📡 远程渠道
 
