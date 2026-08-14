@@ -52,6 +52,7 @@
 | dsh-turn-watchdog | [Equinox7379/dsh-turn-watchdog](https://github.com/Equinox7379/dsh-turn-watchdog) | 回合守夜人：检测疑似卡住的会话并注入警示（turn_watchdog_status 工具） | ✅ |
 | dsh-session-repair | [Equinox7379/dsh-session-repair](https://github.com/Equinox7379/dsh-session-repair) | 会话日志修复：给未知事件类型补 ignorable 并按合规帧格式重写，修复 SessionFormatUnsupportedError（修复前自动备份） | 待测 |
 | dsh-update-radar | [Equinox7379/dsh-update-radar](https://github.com/Equinox7379/dsh-update-radar) | 已装插件更新雷达：git 对比 link 插件本地与上游 HEAD，报告落后项（只读） | 待测 |
+| DSH-Plugins-Marketplace | [bradeGithub/DSH-Plugins-Marketplace](https://github.com/bradeGithub/DSH-Plugins-Marketplace) | DSH 插件市场：聚合 GitHub `dsh-plugin` 话题插件，Web GUI 一键安装/更新/已安装识别（含预装插件自动比对），静态索引 CI 每 2 小时刷新，中英双语 | ✅ |
 
 ## 🧰 插件集
 
