@@ -838,7 +838,7 @@ graph TB
 | [dsh-feishu-plugin](https://github.com/yangzhaofeng496/dsh-feishu-plugin) | 社区 | ✅ 运行级可用 | Feishu bot bridge plugin for DeepSeek Harness |
 | [dsh-im-hub](https://github.com/ThreeBody6666/dsh-im-hub) | 社区 | ✅ 运行级可用 | Multi-platform IM gateway for DeepSeek Harness: Feishu (Lark), WeCom (WeChat Wor |
 | [dsh-lark](https://github.com/omdsh-dev/dsh-lark) | 社区 | ✅ 运行级可用 | Lark/Feishu IM bot channel for DeepSeek Harness \| 飞书 DeepSeek Harness 插件 |
-| [dsh-lark-bot](https://github.com/PlutoKeating/dsh-lark-bot) | 社区 | ✅ 运行级可用 | dsh-lark-bot：把 DeepSeek Harness (dsh) 桥接进飞书/Lark 的 bot，含完整项目工作区管理 |
+| [dsh-lark-bot](https://github.com/PlutoKeating/dsh-lark-bot) | 社区 | ✅ 运行级可用 | dsh-lark-bot：把 DeepSeek Harness (dsh) 桥接进飞书/Lark 的 bot — 流式卡片、git worktree 项目隔离、scope 并行任务、多角色 Agent、会话归档、lark_notify 跨会话通知；npm 双包 + dsh profile bundle 可安装（0.6.0） |
 | [dsh-lark-meeting-notifier](https://github.com/yeruizhi/dsh-lark-meeting-notifier) | 社区 | ✅ 运行级可用 | — |
 | [dsh-llm-codex-oauth](https://github.com/Player-MINEPIG/dsh-llm-codex-oauth) | 社区 | ✅ 运行级可用 | 在 dsh（DeepSeek Harness）里使用你的 ChatGPT / Codex 订阅 |
 | [dsh-llm-proxy](https://github.com/Ye-Yu-Mo/dsh-llm-proxy) | 社区 | ✅ 运行级可用 | DeepSeek Harness (dsh) 全局 HTTP 代理插件：undici setGlobalDispatcher + EnvHttpProxyAge |
