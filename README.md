@@ -1,16 +1,50 @@
 # Awesome DSH Plugins
 
+**A daily-updated radar that auto-discovers and compatibility-tests every plugin for DeepSeek Harness.**
+Know which plugins work before you install them.
+
+[![plugins](https://img.shields.io/badge/plugins-286%2B-blue)](#热门插件star-top-20) [![scan](https://img.shields.io/badge/scan-every_8h-green)](#当前生态快照) [![evidence](https://img.shields.io/badge/compat-four_dimensional-orange)](#本仓库如何判定) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+
+## English
+
+**What is this?** DeepSeek Harness (DSH) is an open-source coding agent where everything is a plugin. This repo is a **radar** that automatically tracks its entire plugin ecosystem:
+
+- **Auto-discovered** — plugins tagged with the `dsh-plugin` topic are picked up by daily scans; no manual submission needed
+- **Evidence-tested** — every plugin gets a four-dimensional compatibility check (patches / API seams / peerDeps / compile) plus runtime tests against the latest DSH mainline
+- **Traceable** — every verdict links to a dated report with full evidence; no vague "it works" claims
+- **Continuously updated** — refreshed every 8 hours; DSH ships new versions almost daily, plugin drift is tracked in the [CHANGELOG](CHANGELOG.md)
+
+```mermaid
+graph LR
+    A[GitHub API<br/>topic: dsh-plugin] -->|auto-discover| B[Clone & Analyze]
+    B --> C{4D Compat Check}
+    C -->|patch| D[seam]
+    C -->|peerDeps| E[compile]
+    D & E --> F[Runtime Test]
+    F --> G[Dated Report<br/>README + CHANGELOG]
+    G -->|every 8h| A
+```
+
+**Quick Start**
+
+1. Browse the [🔥 Star Top 20](#热门插件star-top-20) — see what the community uses most
+2. Find by domain in the [分类目录](#分类目录) — 9 functional categories with compatibility status
+3. Check evidence in the [当前生态快照](#当前生态快照) — dated compatibility matrix
+4. Submit your plugin: add the `dsh-plugin` topic to your repo → done (auto-discovered within 8 hours)
+
+[Browse catalog](#分类目录) · [Latest snapshot](#当前生态快照) · [CHANGELOG](CHANGELOG.md) · [Submit plugin](#提交插件) · [中文](#从这里开始)
+
+---
+
+## 中文
+
 > 每天自动扫描 286+ 个 DeepSeek Harness 插件的兼容性雷达：哪个能用、哪个要改、哪个已经碎了，一眼看清。
 
-![repos](https://img.shields.io/badge/插件-286%2B-blue) ![scan](https://img.shields.io/badge/每日兼容性扫描-自动-green) ![license](https://img.shields.io/badge/license-MIT-blue)
+**找插件** · **避坑** · **跟上变化**
 
-DeepSeek Harness（DSH）插件生态的**目录 + 兼容性情报站**。
-
-- **找插件**：按功能领域浏览全部插件（Web UI 增强 / Agent 能力 / 编码开发 / 消息通讯 / 娱乐生活……），想找输入增强、唤醒控制还是摸鱼面板，不用在几百个名字里翻
-- **避坑**：每个插件对当日 mainline 快照做四维检查（补丁 / seam / peerDeps / 编译）加运行级实测，兼容与否有证据，不是嘴上说说
-- **跟上变化**：DSH 几乎每天推新版本，插件漂移随时发生；这里每 8 小时自动对比，变化进 CHANGELOG，适配节奏由你掌控
-
-*A community-maintained catalog and daily compatibility radar for DeepSeek Harness plugins: find, compare, and avoid the broken ones.*
+- **找插件**：按功能领域浏览（Web UI / Agent 能力 / 编码开发 / 娱乐生活……），兼容性一目了然
+- **避坑**：每个插件对当日 mainline 做四维检查 + 运行级实测，兼容与否有证据
+- **跟上变化**：每 8 小时自动对比，插件漂移实时跟踪，变化进 CHANGELOG
 
 [浏览分类目录](PLUGINS.md) · [查看最新快照](#当前生态快照) · [浏览历史报告](reports/) · [查看变更](CHANGELOG.md) · [提交插件](#提交插件)
 
