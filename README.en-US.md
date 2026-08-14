@@ -16,18 +16,18 @@ Know which plugins work before you install them.
 ```mermaid
 graph TB
     subgraph Discovery["🔍 Auto-Discovery every 8h"]
-        A1[GitHub API<br/>org: dsh-external]
-        A2[GitHub Search<br/>topic: dsh-plugin<br/>topic: dsh-external]
-        A3[Known list<br/>fallback]
+        A1["GitHub API<br/>org: dsh-external"]
+        A2["GitHub Search<br/>topic: dsh-plugin<br/>topic: dsh-external"]
+        A3["Known list<br/>fallback"]
     end
     subgraph Validation["📋 Plugin Validation"]
-        B1{package.json<br/>name + main/exports/dsh?}
-        B1 -->|pass| B2[✅ Confirmed]
-        B1 -->|fail| B3[❌ Skip]
+        B1{"package.json<br/>name + main/exports/dsh?"}
+        B1 -->|pass| B2["✅ Confirmed"]
+        B1 -->|fail| B3["❌ Skip"]
     end
     subgraph Analysis["🔬 Clone & Analyze"]
-        C1[Mainline<br/>blob:none]
-        C2[Plugin<br/>depth:1]
+        C1["Mainline<br/>blob:none"]
+        C2["Plugin<br/>depth:1"]
     end
     subgraph Compat["⚖️ 4D Compatibility"]
         D1[Patch]
@@ -36,11 +36,11 @@ graph TB
         D4[Compile]
     end
     subgraph Output["📊 Evidence"]
-        E1[reports/&#8203;date/]
-        E2[README<br/>catalog]
+        E1["reports/date/"]
+        E2["README<br/>catalog"]
         E3[CHANGELOG]
     end
-    RT[🤖 Runtime Test<br/>242 plugins]
+    RT["🤖 Runtime Test<br/>242 plugins"]
     A1 --> B1
     A2 --> B1
     A3 --> B1

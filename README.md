@@ -16,18 +16,18 @@
 ```mermaid
 graph TB
     subgraph Discovery["🔍 自动发现（每 8 小时）"]
-        A1[GitHub API<br/>org: dsh-external]
-        A2[GitHub Search<br/>topic: dsh-plugin<br/>topic: dsh-external]
-        A3[已知列表<br/>兜底]
+        A1["GitHub API<br/>org: dsh-external"]
+        A2["GitHub Search<br/>topic: dsh-plugin<br/>topic: dsh-external"]
+        A3["已知列表<br/>兜底"]
     end
     subgraph Validation["📋 插件验证"]
-        B1{package.json<br/>name + main/exports/dsh?}
-        B1 -->|通过| B2[✅ 确认插件]
-        B1 -->|失败| B3[❌ 跳过非插件]
+        B1{"package.json<br/>name + main/exports/dsh?"}
+        B1 -->|通过| B2["✅ 确认插件"]
+        B1 -->|失败| B3["❌ 跳过非插件"]
     end
     subgraph Analysis["🔬 克隆分析"]
-        C1[mainline<br/>blob:none]
-        C2[插件仓库<br/>depth:1]
+        C1["mainline<br/>blob:none"]
+        C2["插件仓库<br/>depth:1"]
     end
     subgraph Compat["⚖️ 四维兼容检查"]
         D1[补丁]
@@ -36,11 +36,11 @@ graph TB
         D4[编译]
     end
     subgraph Output["📊 证据输出"]
-        E1[reports/日期/]
-        E2[README<br/>分类目录]
+        E1["reports/日期/"]
+        E2["README<br/>分类目录"]
         E3[CHANGELOG]
     end
-    RT[🤖 运行级实测<br/>242 个插件]
+    RT["🤖 运行级实测<br/>242 个插件"]
     A1 --> B1
     A2 --> B1
     A3 --> B1
