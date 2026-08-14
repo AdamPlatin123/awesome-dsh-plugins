@@ -109,19 +109,6 @@
 
 <!-- 新增条目示例（复制下面一行修改后插入对应分类表格末尾）：
 | my-plugin | [你的账号/my-plugin](https://github.com/你的账号/my-plugin) | 一句话功能描述 | 待测 |
-| dsh-lens | [NexusAgentX/dsh-lens](https://github.com/NexusAgentX/dsh-lens) | 写/改文件时的实时代码反馈：LSP / linter / formatter / ast-grep / symbol_search，Web chip+dock；npm `dsh-lens` | ✅ |
-| dsh-hdc-bridge | [1na-ko/dsh-hdc-bridge](https://github.com/1na-ko/dsh-hdc-bridge) | 鸿蒙设备桥：hdc 设备闭环（截图/装包/日志/崩溃/UI 自动化）+ 官方优先 API 知识层（SDK .d.ts + 离线 Tier-1 随包）+ DevEco CLI 构建/签名/lint；无头 DSH 实例真实 E2E 已验证 | 待测 |
-| dsh-lan-access | [Leon0555/dsh-lan-access](https://github.com/Leon0555/dsh-lan-access) | 局域网访问：Web GUI 绑定 0.0.0.0 + crypto.randomUUID polyfill（修复非安全上下文下 RPC 崩溃），npm 可装 | ✅ |
-| dsh-skill-search | [Equinox7379/dsh-skill-search](https://github.com/Equinox7379/dsh-skill-search) | 按需技能搜索器：海量技能库零预加载，关键词搜索 SKILL.md（rg 快路径 + Node 兜底），AI 只读命中的那份 | ✅ |
-| dsh-file-review | [left0ver/dsh-file-review](https://github.com/left0ver/dsh-file-review) | 文件审查插件：diff的形式查看文件的修改内容，方便对agent的修改进行审查 | ✅ |
-| dsh-ui-quote-selection | [nekogpt/dsh-ui-quote-selection](https://github.com/nekogpt/dsh-ui-quote-selection) | Web 选中文本一键引用到输入框：chip 显示、发送时自动展开为完整原文，走官方 input-trigger 引用管线 | 待测 |
-| dsh-file-claim | [Nwflower/dsh-file-claim](https://github.com/Nwflower/dsh-file-claim) | 同一工作区并行多会话的文件认领与写入保护（claim/release、心跳 stale 接管、pending 三路合并） | 待测 |
-| dsh-memento | [PerryLink/dsh-memento](https://github.com/PerryLink/dsh-memento) | æçãåå±ãå®¡æ¹é¨ãå¯å®¡è®¡çè·¨ä¼è¯è®°å¿æ¥ç¼ï¼ctx.memory æå¡ + æ¬å° SQLiteï¼é¶ä¾èµï¼+ memory å·¥å
-| dsh-plugin-workshop | [yyyyukari/dsh-plugin-workshop](https://github.com/yyyyukari/dsh-plugin-workshop) | åæå·¥åå¼æä»¶æµè§å¨ï¼ä¾§æ å¸¸é©»å
-| dsh-auto-continue | [HsiangNianian/dsh-auto-continue](https://github.com/HsiangNianian/dsh-auto-continue) | DSH Web 请求中断自动续跑插件：回合因网络/超时等非人为原因失败后自动发送「继续」续跑（含宿主崩溃遗留回合扫描恢复），全部参数可在设置→插件配置中调整 | ✅ |
-| [dsh-chat-import](https://github.com/Nwflower/dsh-chat-import) | ð æ°å¢ |
-| dsh-plugin-installer | [zhang66633/dsh-plugin-installer](https://github.com/zhang66633/dsh-plugin-installer) | 安装与排查 dsh 插件的技能（bundled skill provider）：npm 直装 / GitHub clone 注册，MCP·技能·皮肤路径，13 坑配方，patch-skins.sh 版本条件化补丁；已发布 npm@1.1.0 |
-| dsh-plugin-cost | [yweilai77-dev/dsh-plugin-cost](https://github.com/yweilai77-dev/dsh-plugin-cost) | DSH Web 会话费用估算：tokenUsage 四桶 × 可配置价格表，一键刷新官方价格（估算非账单） | 待测 |
-| dsh-stream-rules | [jiesou/dsh-stream-rules](https://github.com/jiesou/dsh-stream-rules) | 模式匹配自动注入 steering rules，不占系统上下文 | 待测 |
+| dsh-approval-guardian | [karuboniru/dsh-approval-guardian](https://github.com/karuboniru/dsh-approval-guardian) | DSH æ²ç®±ææå®¡æ¹å®æ¤ï¼æçå®ç sandbox escalation å®¡æ¹è·¯ç±å°ä¸æ¬¡æ§æ å·¥å·è¯å®¡ agentï¼è¿åç»æå allow/denyï¼æ®éå·¥ä½åºæä½é¶ä»å¥ | å¾æµ |
 -->
 
