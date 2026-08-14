@@ -76,19 +76,6 @@ graph TB
 | 本仓库如何判定兼容性 | [🔍 本仓库如何判定](#本仓库如何判定) |
 | 加入社群交流 | [💬 欢迎加入讨论社群](#欢迎加入讨论社群) |
 
-## 从这里开始
-
-| 你的目标 | 跳转入口 |
-|---|---|
-| 按用途找一个插件 | [📋 分类目录](#分类目录) · [PLUGINS.md](PLUGINS.md) |
-| 浏览自动发现的全部仓库 | [📊 当前生态快照](#当前生态快照) |
-| 了解最近发生了什么 | [📝 CHANGELOG](CHANGELOG.md) |
-| 登记或维护一个插件 | [🔧 给插件开发者](#给插件开发者) |
-| 维护本雷达 | [⚙️ 自动化 SOP](docs/SOP.md) |
-| 给插件使用者指南 | [📖 给插件使用者](#给插件使用者) |
-| 本仓库如何判定兼容性 | [🔍 本仓库如何判定](#本仓库如何判定) |
-| 加入社群交流 | [💬 欢迎加入社群](#欢迎加入社群) |
-
 ## 🔥 热门插件（Star Top 20）
 
 <!-- AUTO:featured:START -->
@@ -517,7 +504,7 @@ graph TB
 
 [dshfind.com](https://dshfind.com) — DSH 原理学习、插件市场与最佳实践社区：从 Cordis 论文逐章精读到插件自动聚合市场。
 
-<a href="https://dshfind.com"><img src="assets/dshfind-screenshot.png" width="600" alt="dshfind.com — DSH 学习与分享社区"></a>
+<a href="https://dshfind.com"><img src="assets/dshfind-zh.png" width="600" alt="dshfind.com — DSH 学习与分享社区"></a>
 
 [🌐 dshfind.com](https://dshfind.com) · [GitHub](https://github.com/hikariming/dshfind)
 
