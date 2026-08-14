@@ -483,10 +483,10 @@ DSH 插件生态交流群（微信群）：插件作者、维护者与使用者�
 | 静态综合判定 | 11 兼容 · 15 关注 · 4 需适配 |
 | 证据不足 | 94 待调研 |
 | 其他 | 0 占位 · 0 不适用 · 0 已删除 |
-| 运行级实测 | 0 可用 · 5 失败（共测试 5 个） |
+| 运行级实测 | ✅628 可用 · 130 不兼容 · 0 待定（共 807 个，k8s agent 口径）|
 | 正在跟踪的 PR | 0 |
 
-[完整索引](reports/2026-08-13/index.md) · [静态矩阵](reports/2026-08-13/mainline-compat.md) · [编译实验](reports/2026-08-13/compile-compat.md) · [运行实测](reports/2026-08-13/runtime-test.md)
+[完整索引](reports/2026-08-13/index.md) · [静态矩阵](reports/2026-08-13/mainline-compat.md) · [编译实验](reports/2026-08-13/compile-compat.md) · [运行实测](reports/2026-08-14/agent-test.md)
 
 **插件目录**（124 个仓库 · 按判定状态分群）
 
