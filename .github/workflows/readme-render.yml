@@ -1,0 +1,46 @@
+name: readme-render
+# Bot B：数据快照合入 main 后，从快照渲染 README 并开 PR（merge 门控的自动 README diff）
+on:
+  push:
+    branches: [main]
+    paths: ['data/snapshots/**']
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: readme-render
+  cancel-in-progress: true
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Render README from latest snapshot
+        run: python3 scripts/render-readme-from-snapshot.py
+
+      - name: Create PR if changed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "readme-render-bot"
+          git config user.email "readme-render-bot@users.noreply.github.com"
+          if git diff --quiet README.md; then
+            echo "无变化（快照与 README 已对齐）"
+            exit 0
+          fi
+          BR="readme/render-$(date -u +%Y%m%dT%H%M%SZ)"
+          git checkout -b "$BR"
+          git add README.md
+          git commit -m "readme-render: 从快照 $(ls -t data/snapshots | head -1 | sed 's/.json//') 渲染（Bot B，merge 门控）"
+          git push origin "$BR"
+          gh pr create --base main --head "$BR" \
+            --title "[Readme-Render-Bot] README 渲染自快照 $(ls -t data/snapshots | head -1 | sed 's/.json//')" \
+            --body "PR 类别：bot README 渲染（豁免插件登记模板）。
+数据源：本仓 \`data/snapshots/\` 最新已合并快照（渲染器只读快照，不访问外部流）——数字对齐由 run_id 锚定保证。
+由 \`readme-render\` workflow 在快照合入 main 后自动触发。" \
+            || echo "PR 已存在或创建失败，分支已推送"
