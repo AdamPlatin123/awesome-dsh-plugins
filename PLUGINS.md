@@ -30,14 +30,12 @@
 | dsh-calendar | [STARDUSTLC666/dsh-calendar](https://github.com/STARDUSTLC666/dsh-calendar) | CalDAV 日历插件：查/建/改/删/搜日程（calendar_list/create/update/delete/search），Google/iCloud/Nextcloud/自定义端点，应用专用密码 | 待测 |
 | dsh-dingtalk | [STARDUSTLC666/dsh-dingtalk](https://github.com/STARDUSTLC666/dsh-dingtalk) | 钉钉群机器人通知（dingtalk_notify/dingtalk_text），自定义机器人 webhook+加签，零运行时依赖 | 待测 |
 | dsh-slack | [STARDUSTLC666/dsh-slack](https://github.com/STARDUSTLC666/dsh-slack) | Slack 通知插件（slack_notify/slack_channels），Bot Token + 官方 Web API | 待测 |
-| dsh-security-scan | [ben7am1n/dsh-security-scan](https://github.com/ben7am1n/dsh-security-scan) | Secret & dangerous-pattern scanner — API keys/tokens/private keys redacted; ignore lists; zero deps | ✅ |
 | dsh-turn-index | [Simon314620/dsh-turn-index](https://github.com/Simon314620/dsh-turn-index) | 对话轮次索引侧边栏：每轮提问一目了然，点击跳转 + 滚动联动高亮，双语纯客户端 | 待测 |
 | dsh-sticky-note | [Meredith2328/dsh-sticky-note](https://github.com/Meredith2328/dsh-sticky-note) | 输入框工具栏快速便签：点子/感想/TODO，Markdown 预览、自动保存、一键发送、保留与自动清除 | 待测 |
 | dsh-sidebar-mode | [Meredith2328/dsh-sidebar-mode](https://github.com/Meredith2328/dsh-sidebar-mode) | 侧边栏「新会话」按钮内嵌 Agent 预设快速切换：点击弹出预设菜单即点即用，与设置里的「Agent 预设」双向同步 | 待测 |
 | dsh-oauth-mcp-client | [springbrand-lab/dsh-oauth-mcp-client](https://github.com/springbrand-lab/dsh-oauth-mcp-client) | 为 DSH 连接支持 OAuth 2.1 的 Streamable HTTP MCP 服务 | 待测 |
 | dsh-balance | [TwotwoPiggy/dsh-balance](https://github.com/TwotwoPiggy/dsh-balance) | 在 DSH Web 聊天框底部实时估算对话 Token 消耗并显示您的 DeepSeek 账户余额 | 待测 |
 | ds-api-usage | [Sev7een/ds-api-usage](https://github.com/Sev7een/ds-api-usage) | 在设置页展示 DeepSeek API 余额与最近 24 小时用量，包括估算消费、Token、请求次数和按小时时间线 | 待测 |
-| dsh-balance | [TwotwoPiggy/dsh-balance](https://github.com/TwotwoPiggy/dsh-balance) | 在 DSH Web 聊天框底部实时估算对话 Token 消耗并显示您的 DeepSeek 账户余额 | ✅ |
 | falsify-dsh | [shi275773124/falsify-dsh](https://github.com/shi275773124/falsify-dsh) | 公开 Falsify CLI 适配器：裁决收据（lint / review --json / gate）。不是第二意见工作流；selftest ≠ claim-bearing | 待测 |
 | billion-context-dsh | [Tyan66666/billion-context-dsh](https://github.com/Tyan66666/billion-context-dsh) | 模型驱动上下文压缩（ACP）：compress/decompress/search_context/acp_status 工具，模型决定何时压缩，移植自 billion-context-pi | 待测 |
 | dsh-web-search-firecrawl | [yangzhe1003/dsh-web-search-firecrawl](https://github.com/yangzhe1003/dsh-web-search-firecrawl) | Firecrawl 搜索提供方：内置 web_search 工具接入 Firecrawl 搜索 API（npm @yangzhe1003/dsh-web-search-firecrawl） | ✅ |
@@ -70,49 +68,39 @@
 | dsh-hdc-bridge | [1na-ko/dsh-hdc-bridge](https://github.com/1na-ko/dsh-hdc-bridge) | 鸿蒙设备桥：hdc 设备闭环（截图/装包/日志/崩溃/UI 自动化）+ 官方优先 API 知识层（SDK .d.ts + 离线 Tier-1 随包）+ DevEco CLI 构建/签名/lint；无头 DSH 实例真实 E2E 已验证 | 待测 |
 ## 🧰 插件集
 
-| 插件 | 仓库 | 说明 |
-|---|---|---|
 | dsh-subagent-tools | [lynx-gt/dsh-subagent-tools](https://github.com/lynx-gt/dsh-subagent-tools) | 子代理委派按次覆盖 model/provider/persona/toolFilter、@preset: 引用、provider/model 复合 id（bundle，不改官方文件）；rc.6 headless+web 实测通过 | ✅ |
 | dsh-subagent-cwd | [lynx-gt/dsh-subagent-cwd](https://github.com/lynx-gt/dsh-subagent-cwd) | dsh-subagent-tools 加按次 cwd（子代理工作目录），附两处进程内 provider 补丁；rc.6 前台/后台 cwd 实测通过 | ✅ |
 | （暂无手工登记；打标自动收录） | | |
 
 ## 🎓 技能
 
-| 插件 | 仓库 | 说明 |
-|---|---|---|
 | dsh-review-skills | [ben7am1n/dsh-review-skills](https://github.com/ben7am1n/dsh-review-skills) | Engineering-discipline skill pack — code-review, simplify, plan-then-execute, test-first, resolve-conflict; bundled ctx.skills provider |
 | project-blueprint | [shuguang1994/project-blueprint](https://github.com/shuguang1994/project-blueprint) | 为新项目一键建立 AI 编程规范体系：AGENTS.md/文档骨架/CI/CD/Git 规范/测试制度；自主发现引擎（7 语言 15 框架 70+ 组件）+ WebSearch 回退；DSH 插件复用官方 skill-filesystem 提供方，零构建 |
 
 ## 📡 远程渠道
 
-| 插件 | 仓库 | 说明 |
-|---|---|---|
 | dsh-telegram | [ben7am1n/dsh-telegram](https://github.com/ben7am1n/dsh-telegram) | Telegram runtime adapter — chat with dsh agents from Telegram; per-chat sessions, followup bridging, committed-text streaming, allowlist auth, zero runtime deps |
 | dsh-webhook-bridge | [ben7am1n/dsh-webhook-bridge](https://github.com/ben7am1n/dsh-webhook-bridge) | Generic webhook receiver — POST /hook/:channel wakes per-channel dsh agents; Bearer auth, reply_url callbacks, 200/401/400/413 |
 | dsh-lark-bot | [PlutoKeating/dsh-lark-bot](https://github.com/PlutoKeating/dsh-lark-bot) | Feishu / Lark bridge for DeepSeek Harness — streaming cards, git-worktree project isolation, official dsh SDK/ACP backends, approval & Q&A cards, SECURITY.md |
 
 ## 🛠 基础设施
 
-| 插件 | 仓库 | 说明 |
-|---|---|---|
 | dsh-work | [vibeinging/dsh-work](https://github.com/vibeinging/dsh-work) | 以 dsh 为骨、codex 为皮的桌面 app | 待测 |
 | deepseek-harness-desktop | [chyra-moon/deepseek-harness-desktop](https://github.com/chyra-moon/deepseek-harness-desktop) | Windows 原生桌面外壳:1:1 官方 Web UI、内置服务器托管、托盘驻留与掉线自动恢复 | 待测 |
 | dsh-remote-sandbox | [weijiafu14/dsh-remote-sandbox](https://github.com/weijiafu14/dsh-remote-sandbox) | 生产级远程执行世界：E2B 沙箱内纯 JS sidecar，fs/subprocess 单次往返、进程输出有界、心跳保活、崩溃透明恢复（resume/recreate）、tar 工作区同步；修复官方 e2b POC 两处 host 假设。43 项测试（含 6 项真机 E2E）全绿 | 已测 |
-| deepseek-harness-desktop | [cnskycn/deepseek-harness-desktop](https://github.com/cnskycn/deepseek-harness-desktop) | DeepSeek Harness (dsh) 官方 Web UI 的 Windows 桌面封装：一键安装包、内置完整 dsh 依赖、Node.js 自动检测与引导安装、原生窗口托管 | 待测 |
 | dsh-session-cleaner-cli | [ChenChen913/dsh-session-cleaner-cli](https://github.com/ChenChen913/dsh-session-cleaner-cli) | DSH 会话数据离线清理 CLI：按工作区交互/命令删除会话（回收站+恢复+自动备份）、同步工作区账目与投影缓存、修剪幽灵条目；零依赖 Node≥18，8 项端到端测试全绿 + CI | 待测 |
 
 ## ❓ 未分类
 
-| 插件 | 仓库 | 说明 |
-|---|---|---|
-| dsh-subagent-tools | [lynx-gt/dsh-subagent-tools](https://github.com/lynx-gt/dsh-subagent-tools) | 子代理委派按次覆盖 model/provider/persona/toolFilter、@preset: 引用、provider/model 复合 id（bundle，不改官方文件）；rc.6 headless+web 实测通过 | ✅ |
-| dsh-subagent-cwd | [lynx-gt/dsh-subagent-cwd](https://github.com/lynx-gt/dsh-subagent-cwd) | dsh-subagent-tools 加按次 cwd（子代理工作目录），附两处进程内 provider 补丁；rc.6 前台/后台 cwd 实测通过 | ✅ |
-| （暂无手工登记；打标自动收录） | | |
 
 <!-- 新增条目示例（复制下面一行修改后插入对应分类表格末尾）：
 | my-plugin | [你的账号/my-plugin](https://github.com/你的账号/my-plugin) | 一句话功能描述 | 待测 |
-| dsh-tianshu-tui | [huiliyi37/dsh-tianshu-tui](https://github.com/huiliyi37/dsh-tianshu-tui) | åºäºå®æ¹ DeepSeek Harness è£åªçäº¤äºå¼ç»ç«¯ UIï¼å®æ¶ä¼è¯ãå¾ç/è§è§æ¡¥ï¼å¹¶æ¥å¥æ¹é å·¥ä½æµãTDD è¯æ®é¨ä¸æºè½ç´¢å¼ | å¾æµ |
-| dsh-plugin-workshop | [yyyyukari/dsh-plugin-workshop](https://github.com/yyyyukari/dsh-plugin-workshop) | Ã¥ÂÂÃ¦ÂÂÃ¥Â·Â¥Ã¥ÂÂÃ¥Â¼ÂÃ¦ÂÂÃ¤Â»Â¶Ã¦ÂµÂÃ¨Â§ÂÃ¥ÂÂ¨Ã¯Â¼ÂÃ¤Â¾Â§Ã¦Â ÂÃ¥Â¸Â¸Ã©Â©Â»Ã¥ÂÂ¥Ã¥ÂÂ£Ã¯Â¼ÂÃ¦ÂÂÃ§Â´Â¢/Ã¦ÂÂÃ§ÂÂ­/Ã¦ÂÂÃ¦ÂÂ°/Ã¨Â¿Â 7-90 Ã¥Â¤Â©Ã©Â£ÂÃ¥ÂÂÃ¦Â¦ÂÃ£ÂÂÃ¤Â¸Â­Ã¦ÂÂÃ¥ÂÂ³Ã©ÂÂ®Ã¨Â¯ÂÃ¦ÂÂ Ã¥Â°ÂÃ£ÂÂÃ¦ÂÂÃ¨Â¿Â°Ã¤Â¸Â README Ã¦ÂÂºÃ§Â¿Â»Ã£ÂÂÃ¦ÂÂÃ¤Â»Â¶Ã§ÂÂ¹Ã¥Â¾ÂÃ©ÂªÂÃ¨Â¯ÂÃ¨Â¿ÂÃ¦Â»Â¤Ã£ÂÂÃ¤Â¸ÂÃ©ÂÂ®Ã¥Â®ÂÃ¨Â£Â/Ã¦ÂÂ´Ã¦ÂÂ°/Ã¥ÂÂ¸Ã¨Â½Â½Ã¯Â¼ÂÃ¥ÂÂÃ§Â½Â®Ã¥Â·Â²Ã¥Â®ÂÃ¨Â£ÂÃ¦ÂÂÃ¤Â»Â¶Ã§Â®Â¡Ã§ÂÂÃ¯Â¼ÂÃ©ÂÂ¶Ã¦ÂÂÃ¥ÂÂ¡Ã¥ÂÂ¨Ã¯Â¼ÂGitHub Ã§ÂÂ´Ã¨Â¿ÂÃ¯Â¼Â | Ã¢ÂÂ |-->
-| dsh-file-review | [left0ver/dsh-file-review](https://github.com/left0ver/dsh-file-review) | Ã¦ÂÂÃ¤Â»Â¶Ã¥Â®Â¡Ã¦ÂÂ¥Ã¦ÂÂÃ¤Â»Â¶Ã¯Â¼ÂdiffÃ§ÂÂÃ¥Â½Â¢Ã¥Â¼ÂÃ¦ÂÂ¥Ã§ÂÂÃ¦ÂÂÃ¤Â»Â¶Ã§ÂÂÃ¤Â¿Â®Ã¦ÂÂ¹Ã¥ÂÂÃ¥Â®Â¹Ã¯Â¼ÂÃ¦ÂÂ¹Ã¤Â¾Â¿Ã¥Â¯Â¹agentÃ§ÂÂÃ¤Â¿Â®Ã¦ÂÂ¹Ã¨Â¿ÂÃ¨Â¡ÂÃ¥Â®Â¡Ã¦ÂÂ¥ | Ã¢ÂÂ |-->
-| dsh-ui-quote-selection | [nekogpt/dsh-ui-quote-selection](https://github.com/nekogpt/dsh-ui-quote-selection) | å¨ DSH Web ä¸­éä¸­æå­ï¼ä¸é®å¼ç¨å°è¾å¥æ¡ï¼åéé®é¢æ¶èªå¨éä¸å®æ´åæ | å¾æµ || dsh-file-claim | [Nwflower/dsh-file-claim](https://github.com/Nwflower/dsh-file-claim) | Ã¥ÂÂÃ¤Â¸ÂÃ¥Â·Â¥Ã¤Â½ÂÃ¥ÂÂºÃ¥Â¹Â¶Ã¨Â¡ÂÃ¥Â¤ÂÃ¤Â¼ÂÃ¨Â¯ÂÃ§ÂÂÃ¦ÂÂÃ¤Â»Â¶Ã¨Â®Â¤Ã©Â¢ÂÃ¤Â¸ÂÃ¥ÂÂÃ¥ÂÂ¥Ã¤Â¿ÂÃ¦ÂÂ¤Ã¯Â¼Âclaim/releaseÃ£ÂÂÃ¥Â¿ÂÃ¨Â·Â³ stale Ã¦ÂÂ¥Ã§Â®Â¡Ã£ÂÂpending Ã¤Â¸ÂÃ¨Â·Â¯Ã¥ÂÂÃ¥Â¹Â¶Ã¯Â¼Â | Ã¥Â¾ÂÃ¦ÂµÂ |-->| dsh-memento | [PerryLink/dsh-memento](https://github.com/PerryLink/dsh-memento) | ÃÂ¦ÃÂÃÂÃÂ§ÃÂÃÂÃÂ£ÃÂÃÂÃÂ¥ÃÂÃÂÃÂ¥ÃÂ±ÃÂÃÂ£ÃÂÃÂÃÂ¥ÃÂ®ÃÂ¡ÃÂ¦ÃÂÃÂ¹ÃÂ©ÃÂÃÂ¨ÃÂ£ÃÂÃÂÃÂ¥ÃÂÃÂ¯ÃÂ¥ÃÂ®ÃÂ¡ÃÂ¨ÃÂ®ÃÂ¡ÃÂ§ÃÂÃÂÃÂ¨ÃÂ·ÃÂ¨ÃÂ¤ÃÂ¼ÃÂÃÂ¨ÃÂ¯ÃÂÃÂ¨ÃÂ®ÃÂ°ÃÂ¥ÃÂ¿ÃÂÃÂ¦ÃÂÃÂ¥ÃÂ§ÃÂ¼ÃÂÃÂ¯ÃÂ¼ÃÂctx.memory ÃÂ¦ÃÂÃÂÃÂ¥ÃÂÃÂ¡ + ÃÂ¦ÃÂÃÂ¬ÃÂ¥ÃÂÃÂ° SQLiteÃÂ¯ÃÂ¼ÃÂÃÂ©ÃÂÃÂ¶ÃÂ¤ÃÂ¾ÃÂÃÂ¨ÃÂµÃÂÃÂ¯ÃÂ¼ÃÂ+ memory ÃÂ¥ÃÂ·ÃÂ¥ÃÂ¥ÃÂÃÂ· + ÃÂ¥ÃÂÃÂ»ÃÂ§ÃÂ»ÃÂÃÂ¥ÃÂ¿ÃÂ«ÃÂ§ÃÂÃÂ§ÃÂ¦ÃÂ³ÃÂ¨ÃÂ¥ÃÂÃÂ¥ÃÂ¯ÃÂ¼ÃÂÃÂ¥ÃÂÃÂÃÂ¥ÃÂ¿ÃÂÃÂ¥ÃÂ®ÃÂ¡ÃÂ¦ÃÂÃÂ¹ÃÂ£ÃÂÃÂÃÂ¦ÃÂ¨ÃÂ¡ÃÂ¥ÃÂÃÂÃÂ¥ÃÂÃÂ¯ÃÂ¨ÃÂ§ÃÂ ÃÂ¢ÃÂÃÂº ÃÂ¨ÃÂÃÂ½ÃÂ§ÃÂÃÂ | ÃÂ¥ÃÂ¾ÃÂÃÂ¦ÃÂµÃÂ |-->| dsh-mcp-panel | [PerryLink/dsh-mcp-panel](https://github.com/PerryLink/dsh-mcp-panel) | Ã¥Â®ÂÃ¦ÂÂ¹ MCP Ã¥Â®Â¢Ã¦ÂÂ·Ã§Â«Â¯Ã¯Â¼Âdsh-mcp-clientÃ¯Â¼ÂÃ¥ÂÂªÃ¨Â¯Â»Ã¨Â¿ÂÃ¨Â¡ÂÃ¦ÂÂ¶Ã§Â®Â¡Ã§ÂÂÃ©ÂÂ¢Ã¦ÂÂ¿Ã¯Â¼Â/mcp Ã¥ÂÂ½Ã¤Â»Â¤ + Ã¨Â®Â¾Ã§Â½Â®Ã©Â¡Âµ MCP Ã©Â¡ÂµÃ§Â­Â¾Ã¥Â±ÂÃ§Â¤ÂºÃ¨Â¿ÂÃ¦ÂÂ¥Ã§ÂÂ¶Ã¦ÂÂ/Ã¥Â·Â²Ã¦Â³Â¨Ã¥ÂÂÃ¥Â·Â¥Ã¥ÂÂ·/Ã©ÂÂÃ¨Â¯Â¯/Ã©ÂÂÃ¨Â¿ÂÃ¨Â®Â¡Ã¦ÂÂ°Ã¯Â¼ÂÃ¨ÂÂ±Ã¦ÂÂÃ¥Â±ÂÃ§Â¤ÂºÃ¤Â¸ÂÃ¥ÂÂÃ¦ÂÂ§Ã¥ÂÂ¯Ã¥ÂÂ patch Ã¥Â»ÂºÃ¨Â®Â® | Ã¥Â¾ÂÃ¦ÂµÂ |-->| dsh-auto-continue | [HsiangNianian/dsh-auto-continue](https://github.com/HsiangNianian/dsh-auto-continue) | DSH Web Ã¨Â¯Â·Ã¦Â±ÂÃ¤Â¸Â­Ã¦ÂÂ­Ã¨ÂÂªÃ¥ÂÂ¨Ã§Â»Â­Ã¨Â·ÂÃ¦ÂÂÃ¤Â»Â¶Ã¯Â¼ÂÃ¥ÂÂÃ¥ÂÂÃ¥ÂÂ Ã§Â½ÂÃ§Â»Â/Ã¨Â¶ÂÃ¦ÂÂ¶Ã§Â­ÂÃ©ÂÂÃ¤ÂºÂºÃ¤Â¸ÂºÃ¥ÂÂÃ¥ÂÂ Ã¥Â¤Â±Ã¨Â´Â¥Ã¥ÂÂÃ¨ÂÂªÃ¥ÂÂ¨Ã¥ÂÂÃ©ÂÂÃ£ÂÂÃ§Â»Â§Ã§Â»Â­Ã£ÂÂÃ§Â»Â­Ã¨Â·ÂÃ¯Â¼ÂÃ¥ÂÂ«Ã¥Â®Â¿Ã¤Â¸Â»Ã¥Â´Â©Ã¦ÂºÂÃ©ÂÂÃ§ÂÂÃ¥ÂÂÃ¥ÂÂÃ¦ÂÂ«Ã¦ÂÂÃ¦ÂÂ¢Ã¥Â¤ÂÃ¯Â¼ÂÃ¯Â¼ÂÃ¥ÂÂ¨Ã©ÂÂ¨Ã¥ÂÂÃ¦ÂÂ°Ã¥ÂÂ¯Ã¥ÂÂ¨Ã¨Â®Â¾Ã§Â½Â®Ã¢ÂÂÃ¦ÂÂÃ¤Â»Â¶Ã©ÂÂÃ§Â½Â®Ã¤Â¸Â­Ã¨Â°ÂÃ¦ÂÂ´ | Ã¢ÂÂ |-->| [dsh-chat-import](https://github.com/Nwflower/dsh-chat-import) | ÃÂ°ÃÂÃÂÃÂ ÃÂ¦ÃÂÃÂ°ÃÂ¥ÃÂ¢ÃÂ |-->| sandbase-harness | [sandbaseai/sandbase-harness](https://github.com/sandbaseai/sandbase-harness) | DSH bundle for SandBase managed-agents, exposing agent discovery, durable sessions, streamed runs, artifacts, and cancellation over stdio MCP; verified against DSH 47f9438 | ✅ |
+| dsh-plugin-workshop | [yyyyukari/dsh-plugin-workshop](https://github.com/yyyyukari/dsh-plugin-workshop) | 创意工坊式插件浏览器：侧栏常驻入口，搜索/最热/最新/近 7-90 天飙升榜、中文关键词映射、描述与 README 机翻、插件特征验证过滤、一键安装/更新/卸载，内置已安装插件管理（零服务器，GitHub 直连） | ✅ |
+| dsh-file-review | [left0ver/dsh-file-review](https://github.com/left0ver/dsh-file-review) | 文件审查插件：diff 的形式查看文件的修改内容，方便对 agent 的修改进行审查 | ✅ |
+| dsh-ui-quote-selection | [nekogpt/dsh-ui-quote-selection](https://github.com/nekogpt/dsh-ui-quote-selection) | Web 选中文本一键引用到输入框：chip 显示、发送时自动展开为完整原文，走官方 input-trigger 引用管线 | 待测 |
+| dsh-file-claim | [Nwflower/dsh-file-claim](https://github.com/Nwflower/dsh-file-claim) | 同一工作区并行多会话的文件认领与写入保护（claim/release、心跳 stale 接管、pending 三路合并） | 待测 |
+| dsh-memento | [PerryLink/dsh-memento](https://github.com/PerryLink/dsh-memento) | 有界、分层、审批门、可审计的跨会话记忆接缝：ctx.memory 服务 + 本地 SQLite（零依赖）+ memory 工具 + 冻结快照注入；写必审批、模型可见 ⟺ 落盘 | 待测 |
+| dsh-mcp-panel | [PerryLink/dsh-mcp-panel](https://github.com/PerryLink/dsh-mcp-panel) | 官方 MCP 客户端（dsh-mcp-client）只读运行时管理面板：/mcp 命令 + 设置页 MCP 页签展示连接状态/已注册工具/错误/重连计数，脱敏展示与受控启停 patch 建议 | 待测 |
+| dsh-auto-continue | [HsiangNianian/dsh-auto-continue](https://github.com/HsiangNianian/dsh-auto-continue) | DSH Web 请求中断自动续跑插件：回合因网络/超时等非人为原因失败后自动发送「继续」续跑（含宿主崩溃遗留回合扫描恢复），全部参数可在设置→插件配置中调整 | ✅ |
+| sandbase-harness | [sandbaseai/sandbase-harness](https://github.com/sandbaseai/sandbase-harness) | DSH bundle for SandBase managed-agents, exposing agent discovery, durable sessions, streamed runs, artifacts, and cancellation over stdio MCP; verified against DSH 47f9438 | ✅ |
 | sandbase-skills | [sandbaseai/sandbase-skills](https://github.com/sandbaseai/sandbase-skills) | Research and growth skill collection with an npm CLI that installs complete bundles into DSH native .dsh/skills discovery root; verified against DSH 47f9438 | 待测 |
