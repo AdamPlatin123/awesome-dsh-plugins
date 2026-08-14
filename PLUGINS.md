@@ -138,3 +138,10 @@ index 181fc9f..3a2dc13 100644
 ++ b/PLUGINS.md
 @@ -90,6 +90,7 @@
 | dsh-feishucard | [cmfok/dsh-feishucard](https://github.com/cmfok/dsh-feishucard) | DSH ↔ 飞书桥（自研非 fork）：官方 SDK 长连接（无需公网）+ 流式回复卡片（过程话语内联/工具折叠面板/状态符号/限流退避熔断兜底），每聊天独立会话 + live 复用保上下文，配置独立 ~/.dsh-feishucard；npm dsh-feishucard v0.1.0，冒烟 18 项 + 实机链路实测通过 | ✅ |
+diff --git a/PLUGINS.md b/PLUGINS.md
+index 181fc9f..0f2d03d 100644
+--- a/PLUGINS.md
+++ b/PLUGINS.md
+@@ -30,6 +30,8 @@
+| dsh-remotion | [STARDUSTLC666/dsh-remotion](https://github.com/STARDUSTLC666/dsh-remotion) | 视频创作技能插件：注册 Remotion 官方移植技能（React 编程式视频，动画/音频/字幕/3D/图表/字体 + 38 个规则文件），安装即用 | 待测 |
+| dsh-hyperframes | [STARDUSTLC666/dsh-hyperframes](https://github.com/STARDUSTLC666/dsh-hyperframes) | 视频创作技能插件：注册 HyperFrames by HeyGen 官方移植技能五件套（HTML 写视频 / hyperframes CLI / 注册表 / 网址转视频 / GSAP 参考），安装即用 | 待测 |
