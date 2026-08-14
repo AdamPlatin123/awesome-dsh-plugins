@@ -132,3 +132,9 @@ index 181fc9f..bdf2b6f 100644
 ++ b/PLUGINS.md
 @@ -30,6 +30,7 @@
 | dsh-sql | [STARDUSTLC666/dsh-sql](https://github.com/STARDUSTLC666/dsh-sql) | 工程师级数据库插件：sql_list/query/exec/schema 四工具，SQLite/MySQL/PostgreSQL 三引擎、多连接、只读白名单、写操作审批门、行数钳制 | 待测 |
+diff --git a/PLUGINS.md b/PLUGINS.md
+index 181fc9f..3a2dc13 100644
+--- a/PLUGINS.md
+++ b/PLUGINS.md
+@@ -90,6 +90,7 @@
+| dsh-feishucard | [cmfok/dsh-feishucard](https://github.com/cmfok/dsh-feishucard) | DSH ↔ 飞书桥（自研非 fork）：官方 SDK 长连接（无需公网）+ 流式回复卡片（过程话语内联/工具折叠面板/状态符号/限流退避熔断兜底），每聊天独立会话 + live 复用保上下文，配置独立 ~/.dsh-feishucard；npm dsh-feishucard v0.1.0，冒烟 18 项 + 实机链路实测通过 | ✅ |
