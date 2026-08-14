@@ -63,6 +63,7 @@
 | dsh-ci-doctor | [jkrandom-sudo/dsh-ci-doctor](https://github.com/jkrandom-sudo/dsh-ci-doctor) | CI 失败自动诊断：ci_watch 后台监视新增失败运行（基线对比/退避/可取消）+ ci_diagnose 日志签名提取分类（嫌疑文件/裁剪摘录/markdown 诊断卡）+ 失败签名账本去重复发；85 单测 + web profile 进程内 boot 18 项 + headless 真实模型回路实测 | ✅ |
 
 | dsh-hdc-bridge | [1na-ko/dsh-hdc-bridge](https://github.com/1na-ko/dsh-hdc-bridge) | 鸿蒙设备桥：hdc 设备闭环（截图/装包/日志/崩溃/UI 自动化）+ 官方优先 API 知识层（SDK .d.ts + 离线 Tier-1 随包）+ DevEco CLI 构建/签名/lint；无头 DSH 实例真实 E2E 已验证 | 待测 |
+| dsh-difficulty-router | [1960697431/dsh-difficulty-router](https://github.com/1960697431/dsh-difficulty-router) | 难度+品味双通道模型路由：困难/含糊任务自动升级强模型、UI/设计任务走品味模型、简单活留在廉价默认，只在需要处花强模型的钱；provider 无关、默认只记账（装即无害）、中英双语分类器，真实 monorepo 盲测校准（29 单测全绿） | ✅ |
 ## 🧰 插件集
 
 | dsh-subagent-tools | [lynx-gt/dsh-subagent-tools](https://github.com/lynx-gt/dsh-subagent-tools) | 子代理委派按次覆盖 model/provider/persona/toolFilter、@preset: 引用、provider/model 复合 id（bundle，不改官方文件）；rc.6 headless+web 实测通过 | ✅ |
