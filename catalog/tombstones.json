@@ -1,5 +1,1283 @@
 {
   "schema_version": 1,
   "description": "Removed/blocked/renamed entries. Stable id keyed. Reappearance is blocked by policy.readd_policy.",
-  "entries": []
+  "entries": [
+    {
+      "id": "github:name:dsh-external/---",
+      "full_name": "dsh-external/---",
+      "removed_at": "2026-08-14",
+      "reason": "deleted_or_invisible",
+      "note": "anonymous GET https://github.com/dsh-external/--- returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:name:dsh-external/billion-context-dsh",
+      "full_name": "dsh-external/billion-context-dsh",
+      "removed_at": "2026-08-14",
+      "reason": "deleted_or_invisible",
+      "note": "anonymous GET https://github.com/dsh-external/billion-context-dsh returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:name:dsh-external/dsh-balance",
+      "full_name": "dsh-external/dsh-balance",
+      "removed_at": "2026-08-14",
+      "reason": "deleted_or_invisible",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-balance returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:name:dsh-external/dsh-chat",
+      "full_name": "dsh-external/dsh-chat",
+      "removed_at": "2026-08-14",
+      "reason": "deleted_or_invisible",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-chat returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:name:dsh-external/dsh-chat-import",
+      "full_name": "dsh-external/dsh-chat-import",
+      "removed_at": "2026-08-14",
+      "reason": "deleted_or_invisible",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-chat-import returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:name:dsh-external/dsh-cot-summary",
+      "full_name": "dsh-external/dsh-cot-summary",
+      "removed_at": "2026-08-14",
+      "reason": "deleted_or_invisible",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-cot-summary returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:name:dsh-external/dsh-event-auditor",
+      "full_name": "dsh-external/dsh-event-auditor",
+      "removed_at": "2026-08-14",
+      "reason": "deleted_or_invisible",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-event-auditor returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:name:dsh-external/dsh-ica",
+      "full_name": "dsh-external/dsh-ica",
+      "removed_at": "2026-08-14",
+      "reason": "deleted_or_invisible",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-ica returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:name:dsh-external/dsh-memory",
+      "full_name": "dsh-external/dsh-memory",
+      "removed_at": "2026-08-14",
+      "reason": "deleted_or_invisible",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-memory returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:name:dsh-external/dsh-oauth-mcp-client",
+      "full_name": "dsh-external/dsh-oauth-mcp-client",
+      "removed_at": "2026-08-14",
+      "reason": "deleted_or_invisible",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-oauth-mcp-client returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:name:dsh-external/dsh-remote-sandbox",
+      "full_name": "dsh-external/dsh-remote-sandbox",
+      "removed_at": "2026-08-14",
+      "reason": "deleted_or_invisible",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-remote-sandbox returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:name:dsh-external/dsh-review-skills",
+      "full_name": "dsh-external/dsh-review-skills",
+      "removed_at": "2026-08-14",
+      "reason": "deleted_or_invisible",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-review-skills returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:name:dsh-external/dsh-security-scan",
+      "full_name": "dsh-external/dsh-security-scan",
+      "removed_at": "2026-08-14",
+      "reason": "deleted_or_invisible",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-security-scan returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:name:dsh-external/dsh-sfw",
+      "full_name": "dsh-external/dsh-sfw",
+      "removed_at": "2026-08-14",
+      "reason": "deleted_or_invisible",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-sfw returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:name:dsh-external/dsh-telegram",
+      "full_name": "dsh-external/dsh-telegram",
+      "removed_at": "2026-08-14",
+      "reason": "deleted_or_invisible",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-telegram returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:name:dsh-external/dsh-test-runner",
+      "full_name": "dsh-external/dsh-test-runner",
+      "removed_at": "2026-08-14",
+      "reason": "deleted_or_invisible",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-test-runner returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:name:dsh-external/dsh-tray",
+      "full_name": "dsh-external/dsh-tray",
+      "removed_at": "2026-08-14",
+      "reason": "deleted_or_invisible",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-tray returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:name:dsh-external/dsh-turn-index",
+      "full_name": "dsh-external/dsh-turn-index",
+      "removed_at": "2026-08-14",
+      "reason": "deleted_or_invisible",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-turn-index returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:name:dsh-external/dsh-web",
+      "full_name": "dsh-external/dsh-web",
+      "removed_at": "2026-08-14",
+      "reason": "deleted_or_invisible",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-web returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:name:dsh-external/dsh-web-search-firecrawl",
+      "full_name": "dsh-external/dsh-web-search-firecrawl",
+      "removed_at": "2026-08-14",
+      "reason": "deleted_or_invisible",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-web-search-firecrawl returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:name:dsh-external/dsh_ide",
+      "full_name": "dsh-external/dsh_ide",
+      "removed_at": "2026-08-14",
+      "reason": "deleted_or_invisible",
+      "note": "anonymous GET https://github.com/dsh-external/dsh_ide returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:name:dsh-external/falsify-dsh",
+      "full_name": "dsh-external/falsify-dsh",
+      "removed_at": "2026-08-14",
+      "reason": "deleted_or_invisible",
+      "note": "anonymous GET https://github.com/dsh-external/falsify-dsh returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:name:dsh-external/group-chat-diary",
+      "full_name": "dsh-external/group-chat-diary",
+      "removed_at": "2026-08-14",
+      "reason": "deleted_or_invisible",
+      "note": "anonymous GET https://github.com/dsh-external/group-chat-diary returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:name:dsh-external/repo-visibility-guard",
+      "full_name": "dsh-external/repo-visibility-guard",
+      "removed_at": "2026-08-14",
+      "reason": "deleted_or_invisible",
+      "note": "anonymous GET https://github.com/dsh-external/repo-visibility-guard returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:name:dsh-external/toybox",
+      "full_name": "dsh-external/toybox",
+      "removed_at": "2026-08-14",
+      "reason": "deleted_or_invisible",
+      "note": "anonymous GET https://github.com/dsh-external/toybox returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1327869382",
+      "full_name": "dsh-external/DSH-UI4A",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/DSH-UI4A returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1324359006",
+      "full_name": "dsh-external/Recall",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/Recall returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1330504115",
+      "full_name": "dsh-external/Top",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/Top returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1330511601",
+      "full_name": "dsh-external/__perm_probe__",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/__perm_probe__ returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1323446119",
+      "full_name": "dsh-external/awesome-dsh-plugins",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/awesome-dsh-plugins returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1323704711",
+      "full_name": "dsh-external/chat-width",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/chat-width returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1328320932",
+      "full_name": "dsh-external/cross-harness-cite",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/cross-harness-cite returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1327763230",
+      "full_name": "dsh-external/deep-standard-skill",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/deep-standard-skill returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1323520702",
+      "full_name": "dsh-external/deepseek-harness-distro",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/deepseek-harness-distro returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1324942396",
+      "full_name": "dsh-external/ds_web_craw",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/ds_web_craw returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1332313345",
+      "full_name": "dsh-external/dsh-STAGE",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-STAGE returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1332301570",
+      "full_name": "dsh-external/dsh-STAR",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-STAR returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1323562182",
+      "full_name": "dsh-external/dsh-acp",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-acp returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1328370485",
+      "full_name": "dsh-external/dsh-activity-plugin",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-activity-plugin returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1330973859",
+      "full_name": "dsh-external/dsh-agent-rp",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-agent-rp returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1323603095",
+      "full_name": "dsh-external/dsh-agent-session-sources",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-agent-session-sources returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1326002818",
+      "full_name": "dsh-external/dsh-alphasolve",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-alphasolve returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1327582307",
+      "full_name": "dsh-external/dsh-android",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-android returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1327475600",
+      "full_name": "dsh-external/dsh-bash-encoding",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-bash-encoding returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1329025911",
+      "full_name": "dsh-external/dsh-browser-panel",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-browser-panel returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1330196324",
+      "full_name": "dsh-external/dsh-build",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-build returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1324053176",
+      "full_name": "dsh-external/dsh-cc-tui",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-cc-tui returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1331725608",
+      "full_name": "dsh-external/dsh-chat-thumb",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-chat-thumb returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1327698112",
+      "full_name": "dsh-external/dsh-client-ui-plan-execute",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-client-ui-plan-execute returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1328886875",
+      "full_name": "dsh-external/dsh-club",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-club returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1330025053",
+      "full_name": "dsh-external/dsh-code-map",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-code-map returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1329956060",
+      "full_name": "dsh-external/dsh-codex-bridge",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-codex-bridge returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1323240229",
+      "full_name": "dsh-external/dsh-coding-receipt",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-coding-receipt returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1330750566",
+      "full_name": "dsh-external/dsh-computer-use",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-computer-use returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1328698748",
+      "full_name": "dsh-external/dsh-context7",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-context7 returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1323873977",
+      "full_name": "dsh-external/dsh-cordis-examples",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-cordis-examples returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1329667764",
+      "full_name": "dsh-external/dsh-cordis-rocks",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-cordis-rocks returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1332391769",
+      "full_name": "dsh-external/dsh-custom-tool",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-custom-tool returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1329853751",
+      "full_name": "dsh-external/dsh-cyber-sec",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-cyber-sec returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1330604976",
+      "full_name": "dsh-external/dsh-deep-whale",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-deep-whale returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1332266153",
+      "full_name": "dsh-external/dsh-deepcel",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-deepcel returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1332215368",
+      "full_name": "dsh-external/dsh-deeplink",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-deeplink returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1333053713",
+      "full_name": "dsh-external/dsh-deeptag",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-deeptag returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1330750450",
+      "full_name": "dsh-external/dsh-design",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-design returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1323440641",
+      "full_name": "dsh-external/dsh-desktop",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-desktop returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1325080383",
+      "full_name": "dsh-external/dsh-desktop-mac",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-desktop-mac returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1327797357",
+      "full_name": "dsh-external/dsh-desktop-tools",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-desktop-tools returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1331456695",
+      "full_name": "dsh-external/dsh-easy-ctx-manager",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-easy-ctx-manager returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1330517221",
+      "full_name": "dsh-external/dsh-edu",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-edu returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1329031830",
+      "full_name": "dsh-external/dsh-engram-relay",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-engram-relay returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1323345719",
+      "full_name": "dsh-external/dsh-feishu-bot",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-feishu-bot returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1326723754",
+      "full_name": "dsh-external/dsh-feishu-notify",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-feishu-notify returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1330351918",
+      "full_name": "dsh-external/dsh-find-plugins",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-find-plugins returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1330353574",
+      "full_name": "dsh-external/dsh-fkin-vibe",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-fkin-vibe returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1328157801",
+      "full_name": "dsh-external/dsh-genui",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-genui returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1323589408",
+      "full_name": "dsh-external/dsh-gh-bridge",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-gh-bridge returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1324923261",
+      "full_name": "dsh-external/dsh-grok-tui",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-grok-tui returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1325553897",
+      "full_name": "dsh-external/dsh-hub-private-archive",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-hub-private-archive returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1327678558",
+      "full_name": "dsh-external/dsh-input-history",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-input-history returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1324706877",
+      "full_name": "dsh-external/dsh-island",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-island returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1323588197",
+      "full_name": "dsh-external/dsh-issue-filer",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-issue-filer returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1326821122",
+      "full_name": "dsh-external/dsh-issue-like-skill",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-issue-like-skill returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1329957084",
+      "full_name": "dsh-external/dsh-kimi-bridge",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-kimi-bridge returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1329503447",
+      "full_name": "dsh-external/dsh-latex",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-latex returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1327595379",
+      "full_name": "dsh-external/dsh-lazyfish",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-lazyfish returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1323126343",
+      "full_name": "dsh-external/dsh-live-stats",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-live-stats returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1332410706",
+      "full_name": "dsh-external/dsh-longbridge",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-longbridge returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1331029369",
+      "full_name": "dsh-external/dsh-mega",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-mega returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1330872924",
+      "full_name": "dsh-external/dsh-meme",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-meme returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1329746079",
+      "full_name": "dsh-external/dsh-minigames",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-minigames returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1328505280",
+      "full_name": "dsh-external/dsh-mobileweb-adapter",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-mobileweb-adapter returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1324782568",
+      "full_name": "dsh-external/dsh-multimedia-webui-input",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-multimedia-webui-input returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1331016001",
+      "full_name": "dsh-external/dsh-music-player",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-music-player returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1323437127",
+      "full_name": "dsh-external/dsh-my-rsi",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-my-rsi returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1326416032",
+      "full_name": "dsh-external/dsh-nowledge-mem",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-nowledge-mem returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1331063116",
+      "full_name": "dsh-external/dsh-office",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-office returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1323137781",
+      "full_name": "dsh-external/dsh-opencode-server",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-opencode-server returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1332253681",
+      "full_name": "dsh-external/dsh-openmaic",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-openmaic returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1327397334",
+      "full_name": "dsh-external/dsh-paste-input",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-paste-input returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1328636970",
+      "full_name": "dsh-external/dsh-pet",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-pet returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1323685640",
+      "full_name": "dsh-external/dsh-pi-adapter",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-pi-adapter returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1327394620",
+      "full_name": "dsh-external/dsh-plan-execute",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-plan-execute returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1329413857",
+      "full_name": "dsh-external/dsh-plugin-guide",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-plugin-guide returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1327822700",
+      "full_name": "dsh-external/dsh-plus",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-plus returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1327303992",
+      "full_name": "dsh-external/dsh-profile-bundle-example",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-profile-bundle-example returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1323442046",
+      "full_name": "dsh-external/dsh-pty-windows",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-pty-windows returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1325084585",
+      "full_name": "dsh-external/dsh-public-repo-monitor",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-public-repo-monitor returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1329356127",
+      "full_name": "dsh-external/dsh-qq2006",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-qq2006 returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1329498114",
+      "full_name": "dsh-external/dsh-question-collapse",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-question-collapse returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1327815505",
+      "full_name": "dsh-external/dsh-reuse-first",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-reuse-first returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1330310232",
+      "full_name": "dsh-external/dsh-save-intp",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-save-intp returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1326794031",
+      "full_name": "dsh-external/dsh-scholar",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-scholar returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1331143699",
+      "full_name": "dsh-external/dsh-security",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-security returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1329015759",
+      "full_name": "dsh-external/dsh-selection-chat",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-selection-chat returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1329926295",
+      "full_name": "dsh-external/dsh-self-control-guard",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-self-control-guard returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1327786545",
+      "full_name": "dsh-external/dsh-serenity-plugin",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-serenity-plugin returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1327839609",
+      "full_name": "dsh-external/dsh-session-cluster",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-session-cluster returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1326924928",
+      "full_name": "dsh-external/dsh-session-hub",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-session-hub returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1326874548",
+      "full_name": "dsh-external/dsh-session-repair-skill",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-session-repair-skill returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1323765298",
+      "full_name": "dsh-external/dsh-session-search",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-session-search returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1323442109",
+      "full_name": "dsh-external/dsh-shell-windows",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-shell-windows returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1329128612",
+      "full_name": "dsh-external/dsh-skill-session-recovery",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-skill-session-recovery returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1327476920",
+      "full_name": "dsh-external/dsh-skill-stats",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-skill-stats returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1323649303",
+      "full_name": "dsh-external/dsh-skills-manager",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-skills-manager returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1323197225",
+      "full_name": "dsh-external/dsh-skins",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-skins returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1332196608",
+      "full_name": "dsh-external/dsh-sonar",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-sonar returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1328698702",
+      "full_name": "dsh-external/dsh-spec-kit",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-spec-kit returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1323262556",
+      "full_name": "dsh-external/dsh-subagent-tree",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-subagent-tree returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1332154392",
+      "full_name": "dsh-external/dsh-suggested-replies",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-suggested-replies returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1331775919",
+      "full_name": "dsh-external/dsh-super-injector",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-super-injector returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1328698648",
+      "full_name": "dsh-external/dsh-superpowers",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-superpowers returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1329327512",
+      "full_name": "dsh-external/dsh-tavern-plugin",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-tavern-plugin returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1331171068",
+      "full_name": "dsh-external/dsh-teamwork",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-teamwork returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1327901659",
+      "full_name": "dsh-external/dsh-tps",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-tps returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1332145505",
+      "full_name": "dsh-external/dsh-travel-plugin",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-travel-plugin returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1325306548",
+      "full_name": "dsh-external/dsh-tui",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-tui returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1328727455",
+      "full_name": "dsh-external/dsh-tui-front-door",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-tui-front-door returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1328037719",
+      "full_name": "dsh-external/dsh-turn-rewind",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-turn-rewind returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1323954939",
+      "full_name": "dsh-external/dsh-ui-progress",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-ui-progress returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1330103117",
+      "full_name": "dsh-external/dsh-ui-webview",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-ui-webview returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1324261871",
+      "full_name": "dsh-external/dsh-ui-whale",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-ui-whale returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1330485314",
+      "full_name": "dsh-external/dsh-vision-toolkit",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-vision-toolkit returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1327889971",
+      "full_name": "dsh-external/dsh-visualize",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-visualize returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1329044778",
+      "full_name": "dsh-external/dsh-voice-chat",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-voice-chat returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1328717377",
+      "full_name": "dsh-external/dsh-vscode",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-vscode returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1323922499",
+      "full_name": "dsh-external/dsh-web-panel",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-web-panel returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1330105382",
+      "full_name": "dsh-external/dsh-web-review",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-web-review returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1326950016",
+      "full_name": "dsh-external/dsh-web-workflow-visualizer",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-web-workflow-visualizer returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1323358284",
+      "full_name": "dsh-external/dsh-wecom-bot",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-wecom-bot returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1323317860",
+      "full_name": "dsh-external/dsh-weixin-bot",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-weixin-bot returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1323440544",
+      "full_name": "dsh-external/dsh-win-port",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-win-port returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1323127834",
+      "full_name": "dsh-external/dsh-working-activity",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-working-activity returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1329828636",
+      "full_name": "dsh-external/dshfind",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dshfind returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1323528379",
+      "full_name": "dsh-external/dshx-update-check",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/dshx-update-check returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1323615099",
+      "full_name": "dsh-external/hub",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/hub returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1319444171",
+      "full_name": "dsh-external/issues",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/issues returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1323329644",
+      "full_name": "dsh-external/marisa",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/marisa returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1327063776",
+      "full_name": "dsh-external/official-plugins-port",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/official-plugins-port returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1330204357",
+      "full_name": "dsh-external/oh-my-deepseek",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/oh-my-deepseek returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1327064465",
+      "full_name": "dsh-external/oh-my-dsh",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/oh-my-dsh returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1330643749",
+      "full_name": "dsh-external/oh-my-dsh-distribution",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/oh-my-dsh-distribution returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1326364669",
+      "full_name": "dsh-external/onboarding",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/onboarding returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1323256072",
+      "full_name": "dsh-external/qqbot",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/qqbot returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1323283875",
+      "full_name": "dsh-external/review-panel",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/review-panel returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1331081248",
+      "full_name": "dsh-external/savemoneybenchmark",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/savemoneybenchmark returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1323371151",
+      "full_name": "dsh-external/session-chatlog",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/session-chatlog returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1329990734",
+      "full_name": "dsh-external/session-teleport",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/session-teleport returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1331621557",
+      "full_name": "dsh-external/show-bash-command",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/show-bash-command returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1323151983",
+      "full_name": "dsh-external/tg-bot",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/tg-bot returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1328856018",
+      "full_name": "dsh-external/tonghuashun-harness",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/tonghuashun-harness returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1327462773",
+      "full_name": "dsh-external/zephyr",
+      "removed_at": "2026-08-14",
+      "reason": "private_repository",
+      "note": "anonymous GET https://github.com/dsh-external/zephyr returned 404 on 2026-08-14; verified via authenticated GitHub API"
+    },
+    {
+      "id": "github:1329622271",
+      "full_name": "dsh-external/7d7d",
+      "removed_at": "2026-08-14",
+      "reason": "renamed_private",
+      "note": "anonymous GET https://github.com/dsh-external/7d7d returned 404 on 2026-08-14; verified via authenticated GitHub API",
+      "renamed_to": "dsh-external/7d7d-private-archive"
+    },
+    {
+      "id": "github:1331606591",
+      "full_name": "dsh-external/browser4-dsh",
+      "removed_at": "2026-08-14",
+      "reason": "renamed_private",
+      "note": "anonymous GET https://github.com/dsh-external/browser4-dsh returned 404 on 2026-08-14; verified via authenticated GitHub API",
+      "renamed_to": "dsh-external/dsh-browser4"
+    },
+    {
+      "id": "github:1332427308",
+      "full_name": "dsh-external/dsh-dzcf",
+      "removed_at": "2026-08-14",
+      "reason": "renamed_private",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-dzcf returned 404 on 2026-08-14; verified via authenticated GitHub API",
+      "renamed_to": "dsh-external/dsh-zcf"
+    },
+    {
+      "id": "github:1323294363",
+      "full_name": "dsh-external/dsh-github-integration",
+      "removed_at": "2026-08-14",
+      "reason": "renamed_private",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-github-integration returned 404 on 2026-08-14; verified via authenticated GitHub API",
+      "renamed_to": "dsh-external/dsh-github-integration-private-archive"
+    },
+    {
+      "id": "github:1331809278",
+      "full_name": "dsh-external/dsh-hmz",
+      "removed_at": "2026-08-14",
+      "reason": "renamed_private",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-hmz returned 404 on 2026-08-14; verified via authenticated GitHub API",
+      "renamed_to": "dsh-external/dsh-humanize2"
+    },
+    {
+      "id": "github:1325553897",
+      "full_name": "dsh-external/dsh-hub",
+      "removed_at": "2026-08-14",
+      "reason": "renamed_private",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-hub returned 404 on 2026-08-14; verified via authenticated GitHub API",
+      "renamed_to": "dsh-external/dsh-hub-private-archive"
+    },
+    {
+      "id": "github:1330514556",
+      "full_name": "dsh-external/dsh-kimi-browser",
+      "removed_at": "2026-08-14",
+      "reason": "renamed_private",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-kimi-browser returned 404 on 2026-08-14; verified via authenticated GitHub API",
+      "renamed_to": "dsh-external/dsh-better-browser"
+    },
+    {
+      "id": "github:1323446119",
+      "full_name": "dsh-external/dsh-plugin-radar",
+      "removed_at": "2026-08-14",
+      "reason": "renamed_private",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-plugin-radar returned 404 on 2026-08-14; verified via authenticated GitHub API",
+      "renamed_to": "dsh-external/awesome-dsh-plugins"
+    },
+    {
+      "id": "github:1323436301",
+      "full_name": "dsh-external/dsh-tool-browser",
+      "removed_at": "2026-08-14",
+      "reason": "renamed_private",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-tool-browser returned 404 on 2026-08-14; verified via authenticated GitHub API",
+      "renamed_to": "dsh-external/dsh-tool-browser-private-archive"
+    },
+    {
+      "id": "github:1323922499",
+      "full_name": "dsh-external/dsh-web-terminal",
+      "removed_at": "2026-08-14",
+      "reason": "renamed_private",
+      "note": "anonymous GET https://github.com/dsh-external/dsh-web-terminal returned 404 on 2026-08-14; verified via authenticated GitHub API",
+      "renamed_to": "dsh-external/dsh-web-panel"
+    }
+  ]
 }
