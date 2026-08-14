@@ -428,7 +428,7 @@ DeepSeek Harness（DSH）插件生态的**目录 + 兼容性情报站**。
 
 DSH 插件生态交流群（微信群）：插件作者、维护者与使用者都在这里，讨论插件开发、兼容性问题与新插件发布。
 
-<img src="assets/wechat-group-qr.png" width="300" alt="DSH-Plugins 交流群二维码">
+<img src="assets/community-welcome.png" width="300" alt="DSH 插件社区交流群">
 
 > 二维码 7 天内有效（2026-08-20 前）。
 
@@ -955,6 +955,6 @@ DSH 插件生态交流群（微信群）：插件作者、维护者与使用者�
 
 非常感谢各位一起参与内测的小伙伴们（合照仅为部分名单，还有更多朋友一起在内测中贡献力量）！
 
-![DSH 插件社区](assets/community-photo.png)
+![DSH 内测群合照](assets/dsh-miji-heying.png)
 
 Let's keep deep diving！
