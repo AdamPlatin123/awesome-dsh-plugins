@@ -226,3 +226,6 @@ PYEOF
 # 7. 分类目录块（参考 hub 九类体系，随 README 更新一并刷新）
 "$(dirname "$0")/gen-catalog.sh" >/dev/null 2>&1 || true
 exit 0
+# 热门插件 Top 20（Star 排行，每次刷新重新拉取）
+"$(dirname "$0")/gen-featured.sh" >/dev/null 2>&1 || true
+exit 0
