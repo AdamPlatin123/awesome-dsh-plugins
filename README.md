@@ -165,7 +165,7 @@ DeepSeek Harness（DSH）插件生态的**目录 + 兼容性情报站**。
 *增强 agent 本身的能力：子代理管理、记忆与上下文、会话控制、规划执行、唤醒/睡眠、提示词与技能注入*
 
 <details>
-<summary><h3>💻 编码开发（37）</h3></summary>
+<summary><h3>💻 编码开发（38）</h3></summary>
 
 *面向编程场景的工具：代码操作、git 集成、终端、diff 与编辑器、文档生成、语言支持与构建辅助*
 
@@ -204,6 +204,7 @@ DeepSeek Harness（DSH）插件生态的**目录 + 兼容性情报站**。
 | [official-plugins-port](https://github.com/dsh-external/official-plugins-port) | 合集 | 待调研 | Official Claude Code / Codex plugins ported to the DSH plugin protocol (23 plugi |
 | [zotero-wave-rag](https://github.com/dsh-external/zotero-wave-rag) | 插件 | 待调研 | 面向 Zotero 论文库的浪潮式 RAG 细节检索系统 —— DSH 外部插件 |
 | [dsh-claude-move](https://github.com/PerryLink/dsh-claude-move) | 插件 | 待调研 | DeepSeek Harness (dsh) plugin: migrate Claude Code sessions, memory, skills and  |
+| [dsh-TUI](https://github.com/ccch1mneyyy/dsh-TUI) | 插件 | 待调研 | Claude Code 风格全屏交互终端插件：像素鲸鱼顶栏、实时工作状态行、思考流式展开、双击 Esc 回滚 |
 | [dsh-build](https://github.com/dsh-external/dsh-build) | 插件 | 占位 | dsh-build |
 | [dsh-spec-kit](https://github.com/dsh-external/dsh-spec-kit) | 插件 | 占位 | Reserved DSH integration for GitHub Spec Kit: spec-driven requirements, planning |
 | [dsh-tui](https://github.com/dsh-external/dsh-tui) | 基建 | 占位 | — |
