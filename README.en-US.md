@@ -1,82 +1,86 @@
 # Awesome DSH Plugins
 
-**自动发现、证据验证的 DeepSeek Harness 插件生态雷达。**
-安装前就知道哪个插件能用、哪个要改。
+**A daily-updated radar that auto-discovers and compatibility-tests every plugin for DeepSeek Harness.**
+Know which plugins work before you install them.
 
 [![confirmed](https://img.shields.io/badge/confirmed-255-blue)](#热门插件star-top-20) [![scan](https://img.shields.io/badge/scan-every_8h-green)](#当前生态快照) [![tested](https://img.shields.io/badge/tested-242-orange)](#本仓库如何判定) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
-[English](README.md) | 简体中文
+[English](README.en-US.md) | [简体中文](README.md)
 
 ---
 
-> 扫描 1328 个候选仓库，255 个确认为 DSH 插件（clone 验证），242 个已通过 agent 运行级实测。
+**What is this?** DeepSeek Harness (DSH) is an open-source coding agent where everything is a plugin. This repo is a **radar** that automatically tracks its entire plugin ecosystem — **1328 candidates scanned**, **255 confirmed plugins** (verified by clone + package.json), **242 runtime-tested** by agent.
 
-## 工作原理
+## How it works
 
 ```mermaid
 graph TB
-    subgraph Discovery["🔍 自动发现（每 8 小时）"]
+    subgraph Discovery["🔍 Auto-Discovery every 8h"]
         A1[GitHub API<br/>org: dsh-external]
         A2[GitHub Search<br/>topic: dsh-plugin<br/>topic: dsh-external]
-        A3[已知列表<br/>兜底]
+        A3[Known list<br/>fallback]
     end
-    subgraph Validation["📋 插件验证"]
+    subgraph Validation["📋 Plugin Validation"]
         B1{package.json<br/>name + main/exports/dsh?}
-        B1 -->|通过| B2[✅ 确认插件]
-        B1 -->|失败| B3[❌ 跳过非插件]
+        B1 -->|pass| B2[✅ Confirmed]
+        B1 -->|fail| B3[❌ Skip]
     end
-    subgraph Analysis["🔬 克隆分析"]
-        C1[mainline<br/>blob:none]
-        C2[插件仓库<br/>depth:1]
+    subgraph Analysis["🔬 Clone & Analyze"]
+        C1[Mainline<br/>blob:none]
+        C2[Plugin<br/>depth:1]
     end
-    subgraph Compat["⚖️ 四维兼容检查"]
-        D1[补丁]
-        D2[seam 符号]
+    subgraph Compat["⚖️ 4D Compatibility"]
+        D1[Patch]
+        D2[Seam]
         D3[peerDeps]
-        D4[编译]
+        D4[Compile]
     end
-    subgraph Output["📊 证据输出"]
-        E1[reports/日期/]
-        E2[README<br/>分类目录]
+    subgraph Output["📊 Evidence"]
+        E1[reports/&#8203;date/]
+        E2[README<br/>catalog]
         E3[CHANGELOG]
     end
-    RT[🤖 运行级实测<br/>242 个插件]
+    RT[🤖 Runtime Test<br/>242 plugins]
     A1 --> B1
     A2 --> B1
     A3 --> B1
     B2 --> C1 & C2
     C1 & C2 --> D1 & D2 & D3 & D4
     D1 & D2 & D3 & D4 --> E1 & E2 & E3
-    RT -.->|证据| E1
+    RT -.->|evidence| E1
 ```
 
-## 快速导航
+**Quick Start**
 
-| 你的目标 | 跳转入口 |
+| Step | Link |
 |---|---|
-| 看热门插件 | [🔥 Star Top 20](#热门插件star-top-20) |
-| 按用途找 | [📋 分类目录](#分类目录) — 9 大功能领域 + 兼容性状态 |
-| 查证据 | [📊 当前生态快照](#当前生态快照) — 日期化兼容矩阵 |
-| 提交插件 | 加 `dsh-plugin` topic → 8h 自动收录 · [PR 模板](.github/PULL_REQUEST_TEMPLATE.md) |
+| Browse Star Top 20 | [🔥 热门插件](#热门插件star-top-20) |
+| Find by domain | [📋 分类目录](#分类目录) — 9 categories, compat status per plugin |
+| Check evidence | [📊 当前生态快照](#当前生态快照) — dated compatibility matrix |
+| Submit your plugin | Add `dsh-plugin` topic → auto-discovered within 8h · [PR template](.github/PULL_REQUEST_TEMPLATE.md) |
+
+[Browse catalog](#分类目录) · [Latest snapshot](#当前生态快照) · [CHANGELOG](CHANGELOG.md) · [Submit plugin](#提交插件) · [中文版](README.md)
 
 > [!IMPORTANT]
-> **收录不等于兼容，静态检查不等于运行可用，运行可用也不等于安全审计。**
-> 本仓库提供可追溯的筛选信号，不代表 DSH 官方背书。安装第三方插件前，请检查插件源码、权限、依赖、许可证及测试日期。
+> **Inclusion ≠ compatible, static check ≠ runtime-usable, runtime-usable ≠ security-audited.**
+> This repo provides traceable filtering signals, not official DSH endorsement. Always review plugin source, permissions, dependencies, and license before installing.
 
-## 从这里开始
+---
 
-| 你的目标 | 跳转入口 |
+## Getting Started
+
+| Goal | Link |
 |---|---|
-| 按用途找一个插件 | [📋 分类目录](#分类目录) · [PLUGINS.md](PLUGINS.md) |
-| 浏览自动发现的全部仓库 | [📊 当前生态快照](#当前生态快照) |
-| 了解最近发生了什么 | [📝 CHANGELOG](CHANGELOG.md) |
-| 登记或维护一个插件 | [🔧 给插件开发者](#给插件开发者) |
-| 维护本雷达 | [⚙️ 自动化 SOP](docs/SOP.md) |
-| 给插件使用者指南 | [📖 给插件使用者](#给插件使用者) |
-| 本仓库如何判定兼容性 | [🔍 本仓库如何判定](#本仓库如何判定) |
-| 加入社群交流 | [💬 欢迎加入讨论社群](#欢迎加入讨论社群) |
+| Find a plugin by use case | [📋 分类目录](#分类目录) · [PLUGINS.md](PLUGINS.md) |
+| Browse all auto-discovered repos | [📊 当前生态快照](#当前生态快照) |
+| See what changed recently | [📝 CHANGELOG](CHANGELOG.md) |
+| Register or maintain a plugin | [🔧 给插件开发者](#给插件开发者) |
+| Maintain this radar | [⚙️ 自动化 SOP](docs/SOP.md) |
+| Plugin user guide | [📖 给插件使用者](#给插件使用者) |
+| How we assess compatibility | [🔍 本仓库如何判定](#本仓库如何判定) |
+| Join the community | [💬 欢迎加入讨论社群](#欢迎加入讨论社群) |
 
-## 🔥 热门插件（Star Top 20）
+## 🔥 Star Top 20
 
 <!-- AUTO:featured:START -->
 
@@ -107,7 +111,7 @@ graph TB
 
 <!-- AUTO:featured:END -->
 
-## 分类目录
+## Plugin Catalog
 
 <!-- AUTO:catalog:START -->
 
@@ -500,15 +504,15 @@ graph TB
 
 <!-- AUTO:catalog:END -->
 
-## 🌐 欢迎加入讨论社群
+## 🌐 Join the Community
 
-[dshfind.com](https://dshfind.com) — DSH 原理学习、插件市场与最佳实践社区：从 Cordis 论文逐章精读到插件自动聚合市场。
+[dshfind.com](https://dshfind.com) — Learn DSH principles, discover plugins & share best practices.
 
-<a href="https://dshfind.com"><img src="assets/dshfind-zh.png" width="600" alt="dshfind.com — DSH 学习与分享社区"></a>
+<a href="https://dshfind.com"><img src="assets/dshfind-en.png" width="600" alt="dshfind.com — DSH learning & sharing community"></a>
 
 [🌐 dshfind.com](https://dshfind.com) · [GitHub](https://github.com/hikariming/dshfind)
 
-## 欢迎加入社群
+## Join the WeChat Group
 
 DSH 插件生态交流群（微信群）：插件作者、维护者与使用者都在这里，讨论插件开发、兼容性问题与新插件发布。
 
@@ -516,15 +520,15 @@ DSH 插件生态交流群（微信群）：插件作者、维护者与使用者�
 
 > 二维码 7 天内有效（2026-08-20 前）。
 
-## 给插件使用者
+## For Plugin Users
 
-### 1. 找到候选插件
+### 1. Find candidate plugins
 
 - 优先从 [PLUGINS.md](PLUGINS.md) 选择已有人工分类和说明的插件。
 - 若分类目录没有，再从[当前生态快照](#当前生态快照)进入当日完整索引，搜索仓库名或关键词。
 - 仓库无法公开访问、没有 README、没有许可证或长期无维护时，把它视为高风险候选，而不是“已验证插件”。
 
-### 2. 看懂状态
+### 2. Understand status
 
 | 状态 | 它说明什么 | 它不说明什么 |
 |---|---|---|
@@ -537,7 +541,7 @@ DSH 插件生态交流群（微信群）：插件作者、维护者与使用者�
 
 每个结论都应同时看四项：**插件 commit、mainline commit、测试日期、测试层级**。缺少其中任一项时，降低对结果的信任等级。
 
-### 3. 安装、验证和回滚
+### 3. Install, verify, and roll back
 
 本目录不是包管理器，也没有被本仓库验证过的统一安装命令。请以插件自身 README 的安装方式为准，并建议按以下顺序操作：
 
@@ -549,9 +553,9 @@ DSH 插件生态交流群（微信群）：插件作者、维护者与使用者�
 
 若插件安装或功能本身出错，请优先在插件仓库反馈；若目录链接、分类或状态证据有误，请在本仓库提交 issue 或 PR。
 
-## 给插件开发者
+## For Plugin Developers
 
-### 最低收录条件
+### Minimum inclusion criteria
 
 公开目录建议只列出普通访问者能够打开的仓库。自动发现候选至少应满足：
 
@@ -565,7 +569,7 @@ DSH 插件生态交流群（微信群）：插件作者、维护者与使用者�
 
 包名应使用你有权控制的命名空间。只有获得 `dsh-external` 维护权限的项目才应使用 `@dsh-external/*`；不要占用不属于你的组织或官方保留命名空间。
 
-### 一个合格的插件 README 至少包含
+### A qualified plugin README must include
 
 | 章节 | 应回答的问题 |
 |---|---|
@@ -579,7 +583,7 @@ DSH 插件生态交流群（微信群）：插件作者、维护者与使用者�
 | Development | 如何构建、测试和贡献？ |
 | License & security | 使用什么许可证？安全问题如何私下报告？ |
 
-### 提交插件
+### Submit a plugin
 
 1. 给插件仓库添加 `dsh-plugin` topic，等待下一次扫描。
 2. 在 [PLUGINS.md](PLUGINS.md) 的合适分类追加插件名、仓库链接和一句话说明。
@@ -588,7 +592,7 @@ DSH 插件生态交流群（微信群）：插件作者、维护者与使用者�
 
 仅修正链接、分类、描述或状态证据时，也欢迎直接提交小型 PR。请不要在目录 PR 中复制私有 issue、密钥、成员信息或大段第三方内容。
 
-## 本仓库如何判定
+## How We Assess Compatibility
 
 | 层级 | 当前检查 | 合理结论 |
 |---|---|---|
@@ -601,7 +605,7 @@ DSH 插件生态交流群（微信群）：插件作者、维护者与使用者�
 > [!NOTE]
 > 首页不把以上层级合并成一个模糊的“兼容率”。静态通过、编译通过和运行通过使用不同字段与分母；完整证据保留在日期化报告中。
 
-### 已知边界
+### Known limitations
 
 - mainline 和插件都在快速变化，旧结论可能很快失效。
 - 静态未发现问题不代表真实运行一定成功。
@@ -609,7 +613,7 @@ DSH 插件生态交流群（微信群）：插件作者、维护者与使用者�
 - 运行成功只覆盖报告中的最小任务，不代表全部功能、平台和配置。
 - 自动生成的 LLM 摘要只用于导航，不能替代原始矩阵和日志。
 
-## 仓库结构
+## Repository Structure
 
 | 路径 | 内容 |
 |---|---|
@@ -635,10 +639,10 @@ DSH 插件生态交流群（微信群）：插件作者、维护者与使用者�
 
 </details>
 
-## 当前生态快照
+## Ecosystem Snapshot
 
 <!-- AUTO:ecosystem:START -->
-> 更新于 2026-08-14 04:31 · 每 8 小时刷新 · mainline `7b9644f`
+> 更新于 2026-08-14 15:11 · 每 8 小时刷新 · mainline `7b9644f`
 
 | 证据层 | 当前结果 |
 |---|---:|
@@ -1016,10 +1020,10 @@ DSH 插件生态交流群（微信群）：插件作者、维护者与使用者�
 
 | 仓库 | PR | 标题 | 更新 |
 |---|---|---|---|
+| [awesome-dsh-plugins](https://github.com/dsh-external/awesome-dsh-plugins) | [#1](https://github.com/dsh-external/awesome-dsh-plugins/pull/1) | bot: agent 运行级测试报告 2026-08-14 | 2026-08-14 |
 | [dsh-deeptag](https://github.com/dsh-external/dsh-deeptag) | [#1](https://github.com/dsh-external/dsh-deeptag/pull/1) | Implement security-first DeepTag MVP | 2026-08-13 |
 | [dsh-web-review](https://github.com/dsh-external/dsh-web-review) | [#1](https://github.com/dsh-external/dsh-web-review/pull/1) | dsh-web-review: add managed multi-tab browser preview | 2026-08-13 |
-| [dsh-pi-adapter](https://github.com/dsh-external/dsh-pi-adapter) | [#6](https://github.com/dsh-external/dsh-pi-adapter/pull/6) | feat: register commands through cordis DI activation, not first session/created | 2026-08-12 |
-| [dsh-pi-adapter](https://github.com/dsh-external/dsh-pi-adapter) | [#5](https://github.com/dsh-external/dsh-pi-adapter/pull/5) | feat: adapt-interactive ctx.ui tier + session-log quarantine audit | 2026-08-12 |
+| [dsh-pi-adapter](https://github.com/dsh-external/dsh-pi-adapter) | [#6](https://github.com/dsh-external/dsh-pi-adapter/pull/6) | feat: register commands through cordis DI activation, not first session/created | 2026-08-14 |
 | [dsh-my-rsi](https://github.com/dsh-external/dsh-my-rsi) | [#50](https://github.com/dsh-external/dsh-my-rsi/pull/50) | feat: migrate to 20260811 snapshot and reuse upstream surfaces | 2026-08-11 |
 | [dsh-hub-private-archive](https://github.com/dsh-external/dsh-hub-private-archive) | [#15](https://github.com/dsh-external/dsh-hub-private-archive/pull/15) | Align optional host capabilities and legacy cleanup | 2026-08-11 |
 | [dsh-my-rsi](https://github.com/dsh-external/dsh-my-rsi) | [#49](https://github.com/dsh-external/dsh-my-rsi/pull/49) | docs: record external method provenance (#45) | 2026-08-11 |
@@ -1031,7 +1035,7 @@ DSH 插件生态交流群（微信群）：插件作者、维护者与使用者�
 
 快照只回答“当前证据是什么”，不在首页复制几百行仓库和变更记录。逐仓结论、失败原因、当日新增和开放 PR 以对应报告为准。
 
-## 项目边界与致谢
+## Boundaries & Credits
 
 本仓库维护目录、检测规则和证据报告，不托管第三方插件代码。感谢所有提交插件、复现问题、修正元数据和维护测试链路的贡献者。
 

@@ -230,11 +230,11 @@ exit 0
 "$(dirname "$0")/gen-featured.sh" >/dev/null 2>&1 || true
 exit 0
 
-# 8. 同步 AUTO 块到中文版 README（互为镜像）
+# 8. 同步 AUTO 块到英文版 README.en-US.md（互为镜像）
 python3 - << 'SYNCEOF'
 import re
 en = open("README.md", encoding="utf-8").read()
-zh_path = "README.zh-CN.md"
+zh_path = "README.en-US.md"
 try:
     zh = open(zh_path, encoding="utf-8").read()
 except FileNotFoundError:
@@ -251,5 +251,5 @@ for m in markers:
         else:
             print(f"[sync] {m} 块在 zh-CN 中不存在，跳过")
 open(zh_path, "w", encoding="utf-8").write(zh)
-print("SYNC_ZH_CN_OK")
+print("SYNC_EN_US_OK")
 SYNCEOF
