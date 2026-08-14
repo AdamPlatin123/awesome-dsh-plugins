@@ -3,7 +3,7 @@
 **自动发现、证据验证的 DeepSeek Harness 插件生态雷达。**
 安装前就知道哪个插件能用、哪个要改。
 
-[![confirmed](https://img.shields.io/badge/confirmed-92-blue)](#-热门插件star-top-20) [![scan](https://img.shields.io/badge/scan-every_8h-green)](#当前生态快照) [![tested](https://img.shields.io/badge/tested-59-orange)](#本仓库如何判定) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![confirmed](https://img.shields.io/badge/confirmed-1253-blue)](#-热门插件star-top-20) [![scan](https://img.shields.io/badge/scan-every_8h-green)](#当前生态快照) [![tested](https://img.shields.io/badge/tested-814-orange)](#本仓库如何判定) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
 简体中文 | [English](README.en-US.md)
 
@@ -13,42 +13,28 @@
 
 ## 工作原理
 
+<!-- AUTO:pipeline:START -->
 ```mermaid
-graph TB
-    subgraph Discovery["🔍 自动发现（每 8 小时）"]
-        A1["GitHub API<br/>org: dsh-external"]
-        A2["GitHub Search<br/>topic: dsh-plugin<br/>topic: dsh-external"]
-        A3["已知列表<br/>兜底"]
+flowchart TB
+    subgraph Discovery["🔍 发现（每 6 小时 · probe */15 巡检触发）"]
+        A1["GitHub Search<br/>topic ×2 + keyword ×5<br/>候选 2513 · 龄 357m"]
+        A2["本地库补全 · 去重 repo id"]
+        A3["🚫 私有 org 仓排除<br/>35s 错峰 · 403 退避 · dshow 黑名单"]
     end
-    subgraph Validation["📋 插件验证"]
+    subgraph Validation["📋 验证（driver 20s 流式循环）"]
         B1{"package.json<br/>name + main/exports/dsh?"}
-        B1 -->|通过| B2["✅ 确认插件"]
-        B1 -->|失败| B3["❌ 跳过非插件"]
     end
-    subgraph Analysis["🔬 克隆分析"]
-        C1["mainline<br/>blob:none"]
-        C2["插件仓库<br/>depth:1"]
-    end
-    subgraph Compat["⚖️ 四维兼容检查"]
-        D1[补丁]
-        D2[seam 符号]
-        D3[peerDeps]
-        D4[编译]
-    end
-    subgraph Output["📊 证据输出"]
-        E1["reports/日期/"]
-        E2["README<br/>分类目录"]
-        E3[CHANGELOG]
-    end
-    RT["🤖 运行级实测<br/>agent 驱动"]
-    A1 --> B1
-    A2 --> B1
-    A3 --> B1
-    B2 --> C1 & C2
-    C1 & C2 --> D1 & D2 & D3 & D4
-    D1 & D2 & D3 & D4 --> E1 & E2 & E3
-    RT -.->|证据| E1
+    B1 -->|"插件 1253"| C1["k8s 运行级测试<br/>一插件一 pod · 并发 10<br/>dsh agent + Qwen（de-stream）"]
+    B1 -->|"非插件（累计删 1064）"| B3["❌ 即删省空间"]
+    C1 --> D1{"判定 · 总 814"}
+    D1 -->|"✅ 628 / ❌ 130"| E1["聚合 + README 分类统计"]
+    D1 -->|"⚠️ 56 环境类重试"| C1
+    E1 --> E2["cadence 交付<br/>本周期增量 30/100<br/>双仓 bot PR（幂等 supersede）"]
+    S["⚖️ 静态四维轨（每日 02:00）"] -.-> E1
+    M["🛡 radar-probe */15 自愈<br/>7 指标流 × 60s · 完成累计 1126"] -.-> A1
+    M -.-> C1
 ```
+<!-- AUTO:pipeline:END -->
 
 ## 快速导航
 
@@ -1615,10 +1601,10 @@ DSH 插件生态交流群（微信群）：插件作者、维护者与使用者�
 | 静态综合判定 | 11 兼容 · 15 关注 · 4 需适配 |
 | 证据不足 | 94 待调研 |
 | 其他 | 0 占位 · 0 不适用 · 0 已删除 |
-| 运行级实测 | ✅628 可用 · 130 不兼容 · 0 待定（共 807 个，k8s agent 口径） | 0 可用 · 5 失败（共测试 5 个） |
+| 运行级实测 | ✅628 可用 · 130 不兼容 · 0 待定（共 814 个，k8s agent 口径）| 0 可用 · 5 失败（共测试 5 个） |
 | 正在跟踪的 PR | 0 |
 
-[完整索引](reports/2026-08-13/index.md) · [静态矩阵](reports/2026-08-13/mainline-compat.md) · [编译实验](reports/2026-08-13/compile-compat.md) · [运行实测](reports/2026-08-13/runtime-test.md)
+[完整索引](reports/2026-08-13/index.md) · [静态矩阵](reports/2026-08-13/mainline-compat.md) · [编译实验](reports/2026-08-13/compile-compat.md) · [运行实测](reports/2026-08-15/agent-test.md)
 
 <details><summary>插件状态明细（按判定分群 · 与上方分类目录互补 · 默认折叠）</summary>
 
