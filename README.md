@@ -489,7 +489,7 @@ graph LR
 
 <!-- AUTO:catalog:END -->
 
-## 🌐 推广位 · dshfind
+## 🌐 欢迎加入讨论社群
 
 [dshfind.com](https://dshfind.com) — DSH 原理学习、插件市场与最佳实践社区：从 Cordis 论文逐章精读到插件自动聚合市场。
 
