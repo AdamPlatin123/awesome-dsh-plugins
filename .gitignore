@@ -11,4 +11,3 @@ logs/
 .mainline-build/
 .dsh-radar.env
 generated/
-.rt-agent/
