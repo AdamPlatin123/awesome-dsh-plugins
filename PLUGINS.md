@@ -126,3 +126,9 @@
 | dsh-whale-animation | [LeemanCheung/dsh-whale-animation](https://github.com/LeemanCheung/dsh-whale-animation) | DSH Web 回合状态旁的闭环鲸鱼潜行动画：资源内嵌、运行时离线，并为 `prefers-reduced-motion` 用户提供静态 PNG 回退 | 待测 |
 | dsh-token-usage | [LeemanCheung/dsh-token-usage](https://github.com/LeemanCheung/dsh-token-usage) | 持久化 Token 用量记录与设置页仪表盘：按模型、会话和日期聚合，展示 52 周热力图、缓存命中率及完整输入输出 bucket，不保存提示词或回复正文 | 待测 |
 | dsh-task-dag | [LeemanCheung/dsh-task-dag](https://github.com/LeemanCheung/dsh-task-dag) | DSH Web 持久实时任务 DAG：统一展示会话、子代理与 workflow 阶段，支持状态联动和节点导航，不维护并行数据库或轮询 Host | 待测 |
+diff --git a/PLUGINS.md b/PLUGINS.md
+index 181fc9f..bdf2b6f 100644
+--- a/PLUGINS.md
+++ b/PLUGINS.md
+@@ -30,6 +30,7 @@
+| dsh-sql | [STARDUSTLC666/dsh-sql](https://github.com/STARDUSTLC666/dsh-sql) | 工程师级数据库插件：sql_list/query/exec/schema 四工具，SQLite/MySQL/PostgreSQL 三引擎、多连接、只读白名单、写操作审批门、行数钳制 | 待测 |
