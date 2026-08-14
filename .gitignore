@@ -10,4 +10,5 @@ logs/
 *.tmp
 .mainline-build/
 .dsh-radar.env
-generated/
+generated/*
+!generated/plugins-md-repos.json
