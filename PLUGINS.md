@@ -151,3 +151,9 @@ index 181fc9f..eab3970 100644
 ++ b/PLUGINS.md
 @@ -30,6 +30,7 @@
 | dsh-voice | [STARDUSTLC666/dsh-voice](https://github.com/STARDUSTLC666/dsh-voice) | 语音双件套：voice_tts（edge-tts 协议免费微软神经语音，Sec-MS-GEC 本地 DRM 生成）/ voice_stt（OpenAI 兼容 ASR）/ voice_list，WS 压缩 + 可选代理隧道 | 待测 |
+diff --git a/PLUGINS.md b/PLUGINS.md
+index 181fc9f..b130ffa 100644
+--- a/PLUGINS.md
+++ b/PLUGINS.md
+@@ -30,6 +30,7 @@
+| dsh-codex-port | [STARDUSTLC666/dsh-codex-port](https://github.com/STARDUSTLC666/dsh-codex-port) | Codex 技能移植插件：扫描 ~/.codex 把官方 Codex 插件（本机实测 186 个插件/583 技能，一次移植 577 成功）批量转为 DSH 技能（codex_list/port/status），frontmatter 自动转换、幂等跳过 | 待测 |
