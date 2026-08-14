@@ -111,5 +111,6 @@
 
 <!-- 新增条目示例（复制下面一行修改后插入对应分类表格末尾）：
 | my-plugin | [你的账号/my-plugin](https://github.com/你的账号/my-plugin) | 一句话功能描述 | 待测 |
+| dsh-tianshu-tui | [huiliyi37/dsh-tianshu-tui](https://github.com/huiliyi37/dsh-tianshu-tui) | åºäºå®æ¹ DeepSeek Harness è£åªçäº¤äºå¼ç»ç«¯ UIï¼å®æ¶ä¼è¯ãå¾ç/è§è§æ¡¥ï¼å¹¶æ¥å¥æ¹é å·¥ä½æµãTDD è¯æ®é¨ä¸æºè½ç´¢å¼ | å¾æµ |
 -->
 
