@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-14T19:03:35+00:00",
+  "generated_at": "2026-08-14T19:48:39+00:00",
   "source": "PLUGINS.md",
-  "count": 92,
+  "count": 94,
   "repos": [
     "1na-ko/dsh-hdc-bridge",
     "AmethystLuna/embedded-workbench",
@@ -18,6 +18,7 @@
     "Flyvhidbwo/dsh-vision-proxy",
     "GengDaPeng/dsh-agent-message",
     "HsiangNianian/dsh-auto-continue",
+    "JueMing2049/deepseek-skin-studio",
     "LeemanCheung/dsh-agent-preset-recommender",
     "LeemanCheung/dsh-task-dag",
     "LeemanCheung/dsh-token-usage",
@@ -39,6 +40,7 @@
     "STARDUSTLC666/dsh-calendar",
     "STARDUSTLC666/dsh-dingtalk",
     "STARDUSTLC666/dsh-email",
+    "STARDUSTLC666/dsh-ffmpeg",
     "STARDUSTLC666/dsh-slack",
     "Sdongmaker/vpshub",
     "Sev7een/ds-api-usage",
