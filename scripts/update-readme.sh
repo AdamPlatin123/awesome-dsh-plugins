@@ -222,10 +222,56 @@ with open(path, 'w', encoding='utf-8') as f:
     f.write(new)
 print('README 自动仪表盘已更新')
 PYEOF
+# 6.5 同步徽章与统计行数字到两文件（confirmed=矩阵收录数 TOTAL；tested=运行级累计去重）
+#      置于网络慢源（gen-featured 的 gh 拉取）之前，避免超时阻断徽章更新
+RT_ACC="$(cat reports/20*/runtime-test.md 2>/dev/null | grep -E '^\| [a-zA-Z0-9._/-]+ \|' | cut -d'|' -f2 | tr -d ' ' | sort -u | grep -c . || true)"
+[ -z "$RT_ACC" ] && RT_ACC="0"
+python3 - "$README" "README.en-US.md" "$TOTAL" "$RT_ACC" <<'BADGEEOF'
+import re, sys
+total, rt = sys.argv[3], sys.argv[4]
+for path in (sys.argv[1], sys.argv[2]):
+    try:
+        s = open(path, encoding="utf-8").read()
+    except FileNotFoundError:
+        continue
+    orig = s
+    s = re.sub(r"(badge/confirmed-)\d+", r"\g<1>" + total, s)
+    s = re.sub(r"(badge/tested-)\d+", r"\g<1>" + rt, s)
+    s = re.sub(r"收录 \d+ 个 DSH 插件仓库（clone 验证 package\.json），其中 \d+ 个有运行级测试记录。",
+               f"收录 {total} 个 DSH 插件仓库（clone 验证 package.json），其中 {rt} 个有运行级测试记录。", s)
+    s = re.sub(r"\*\*\d+ plugin repos indexed\*\* \(clone-verified package\.json\), \*\*\d+ with runtime test records\*\*",
+               f"**{total} plugin repos indexed** (clone-verified package.json), **{rt} with runtime test records**", s)
+    if s != orig:
+        open(path, "w", encoding="utf-8").write(s)
+        print(f"[badge] {path}: confirmed={total} tested={rt}")
+BADGEEOF
 
 # 7. 分类目录块（参考 hub 九类体系，随 README 更新一并刷新）
 "$(dirname "$0")/gen-catalog.sh" >/dev/null 2>&1 || true
-exit 0
-# 热门插件 Top 20（Star 排行，每次刷新重新拉取）
+# 7.5 热门插件 Top 20（Star 排行，每次刷新重新拉取）
 "$(dirname "$0")/gen-featured.sh" >/dev/null 2>&1 || true
-exit 0
+
+# 8. 同步 AUTO 块到英文版 README.en-US.md（互为镜像）
+python3 - << 'SYNCEOF'
+import re
+src = open("README.md", encoding="utf-8").read()
+en_path = "README.en-US.md"
+try:
+    en = open(en_path, encoding="utf-8").read()
+except FileNotFoundError:
+    raise SystemExit(0)
+
+markers = ["AUTO:featured", "AUTO:catalog", "AUTO:ecosystem"]
+for m in markers:
+    start = f"<!-- {m}:START -->"
+    end = f"<!-- {m}:END -->"
+    if start in src and end in src:
+        block = src[src.index(start):src.index(end) + len(end)]
+        if start in en:
+            en = en[:en.index(start)] + block + en[en.index(end) + len(end):]
+        else:
+            print(f"[sync] {m} 块在 en-US 中不存在，跳过")
+open(en_path, "w", encoding="utf-8").write(en)
+print("SYNC_EN_US_OK")
+SYNCEOF
+

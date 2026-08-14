@@ -1,74 +1,74 @@
 # Awesome DSH Plugins
 
-**自动发现、证据验证的 DeepSeek Harness 插件生态雷达。**
-安装前就知道哪个插件能用、哪个要改。
+**A daily-updated radar that auto-discovers and compatibility-tests every plugin for DeepSeek Harness.**
+Know which plugins work before you install them.
 
-[![confirmed](https://img.shields.io/badge/confirmed-288-blue)](#-热门插件star-top-20) [![scan](https://img.shields.io/badge/scan-every_8h-green)](#当前生态快照) [![tested](https://img.shields.io/badge/tested-5-orange)](#本仓库如何判定) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![confirmed](https://img.shields.io/badge/confirmed-288-blue)](#-star-top-20) [![scan](https://img.shields.io/badge/scan-every_8h-green)](#ecosystem-snapshot) [![tested](https://img.shields.io/badge/tested-5-orange)](#how-we-assess-compatibility) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
-简体中文 | [English](README.en-US.md)
+[English](README.en-US.md) | [简体中文](README.md)
 
 ---
 
-> 收录 288 个 DSH 插件仓库（clone 验证 package.json），其中 5 个有运行级测试记录。
+**What is this?** DeepSeek Harness (DSH) is an open-source coding agent where everything is a plugin. This repo is a **radar** that automatically tracks its plugin ecosystem — **288 plugin repos indexed** (clone-verified package.json), **5 with runtime test records**.
 
-## 工作原理
+## How it works
 
 ```mermaid
 graph TB
-    subgraph Discovery["🔍 自动发现（每 8 小时）"]
+    subgraph Discovery["🔍 Auto-Discovery every 8h"]
         A1["GitHub API<br/>org: dsh-external"]
         A2["GitHub Search<br/>topic: dsh-plugin<br/>topic: dsh-external"]
-        A3["已知列表<br/>兜底"]
+        A3["Known list<br/>fallback"]
     end
-    subgraph Validation["📋 插件验证"]
+    subgraph Validation["📋 Plugin Validation"]
         B1{"package.json<br/>name + main/exports/dsh?"}
-        B1 -->|通过| B2["✅ 确认插件"]
-        B1 -->|失败| B3["❌ 跳过非插件"]
+        B1 -->|pass| B2["✅ Confirmed"]
+        B1 -->|fail| B3["❌ Skip"]
     end
-    subgraph Analysis["🔬 克隆分析"]
-        C1["mainline<br/>blob:none"]
-        C2["插件仓库<br/>depth:1"]
+    subgraph Analysis["🔬 Clone & Analyze"]
+        C1["Mainline<br/>blob:none"]
+        C2["Plugin<br/>depth:1"]
     end
-    subgraph Compat["⚖️ 四维兼容检查"]
-        D1[补丁]
-        D2[seam 符号]
+    subgraph Compat["⚖️ 4D Compatibility"]
+        D1[Patch]
+        D2[Seam]
         D3[peerDeps]
-        D4[编译]
+        D4[Compile]
     end
-    subgraph Output["📊 证据输出"]
-        E1["reports/日期/"]
-        E2["README<br/>分类目录"]
+    subgraph Output["📊 Evidence"]
+        E1["reports/date/"]
+        E2["README<br/>catalog"]
         E3[CHANGELOG]
     end
-    RT["🤖 运行级实测<br/>agent 驱动"]
+    RT["🤖 Runtime Test<br/>agent-driven"]
     A1 --> B1
     A2 --> B1
     A3 --> B1
     B2 --> C1 & C2
     C1 & C2 --> D1 & D2 & D3 & D4
     D1 & D2 & D3 & D4 --> E1 & E2 & E3
-    RT -.->|证据| E1
+    RT -.->|evidence| E1
 ```
 
-## 快速导航
+## Quick Start
 
-| 你的目标 | 跳转入口 |
+| Goal | Link |
 |---|---|
-| 看热门插件 | [🔥 Star Top 20](#-热门插件star-top-20) |
-| 按用途找一个插件 | [📋 分类目录](#分类目录) · [PLUGINS.md](PLUGINS.md) — 9 大功能领域 + 兼容性状态 |
-| 浏览自动发现的全部仓库 | [📊 当前生态快照](#当前生态快照) — 日期化兼容矩阵 |
-| 了解最近发生了什么 | [📝 CHANGELOG](CHANGELOG.md) |
-| 登记或提交插件 | [🔧 给插件开发者](#给插件开发者) · 加 `dsh-plugin` topic → 8h 自动收录 · [PR 模板](.github/PULL_REQUEST_TEMPLATE.md) |
-| 维护本雷达 | [⚙️ 自动化 SOP](docs/SOP.md) |
-| 给插件使用者指南 | [📖 给插件使用者](#给插件使用者) |
-| 本仓库如何判定兼容性 | [🔍 本仓库如何判定](#本仓库如何判定) |
-| 加入社群交流 | [💬 DSH 学习社区](#-dsh-学习社区-dshfindcom) · [微信交流群](#微信交流群) |
+| Browse Star Top 20 | [🔥 Star Top 20](#-star-top-20) |
+| Find a plugin by use case | [📋 Plugin Catalog](#plugin-catalog) · [PLUGINS.md](PLUGINS.md) — 9 categories, compat status per plugin |
+| Browse all auto-discovered repos | [📊 Ecosystem Snapshot](#ecosystem-snapshot) — dated compatibility matrix |
+| See what changed recently | [📝 CHANGELOG](CHANGELOG.md) |
+| Register or submit a plugin | [🔧 For Plugin Developers](#for-plugin-developers) · add the `dsh-plugin` topic → discovered within 8h · [PR template](.github/PULL_REQUEST_TEMPLATE.md) |
+| Maintain this radar | [⚙️ Automation SOP](docs/SOP.md) |
+| Plugin user guide | [📖 For Plugin Users](#for-plugin-users) |
+| How we assess compatibility | [🔍 How We Assess Compatibility](#how-we-assess-compatibility) |
+| Join the community | [💬 dshfind.com](#-dsh-learning-community-dshfindcom) · [WeChat group](#wechat-group) |
 
 > [!IMPORTANT]
-> **收录不等于兼容，静态检查不等于运行可用，运行可用也不等于安全审计。**
-> 本仓库提供可追溯的筛选信号，不代表 DSH 官方背书。安装第三方插件前，请检查插件源码、权限、依赖、许可证及测试日期。
+> **Inclusion ≠ compatible, static check ≠ runtime-usable, runtime-usable ≠ security-audited.**
+> This repo provides traceable filtering signals, not official DSH endorsement. Always review plugin source, permissions, dependencies, and license before installing.
 
-## 🔥 热门插件（Star Top 20）
+## 🔥 Star Top 20
 
 <!-- AUTO:featured:START -->
 
@@ -99,7 +99,7 @@ graph TB
 
 <!-- AUTO:featured:END -->
 
-## 分类目录
+## Plugin Catalog
 
 <!-- AUTO:catalog:START -->
 
@@ -492,145 +492,145 @@ graph TB
 
 <!-- AUTO:catalog:END -->
 
-## 🌐 DSH 学习社区 dshfind.com
+## 🌐 DSH Learning Community dshfind.com
 
-[dshfind.com](https://dshfind.com) — DSH 原理学习、插件市场与最佳实践社区：从 Cordis 论文逐章精读到插件自动聚合市场。
+[dshfind.com](https://dshfind.com) — Learn DSH principles, discover plugins & share best practices.
 
-<a href="https://dshfind.com"><img src="assets/dshfind-zh.png" width="600" alt="dshfind.com — DSH 学习与分享社区"></a>
+<a href="https://dshfind.com"><img src="assets/dshfind-en.png" width="600" alt="dshfind.com — DSH learning & sharing community"></a>
 
 [🌐 dshfind.com](https://dshfind.com) · [GitHub](https://github.com/hikariming/dshfind)
 
-## 微信交流群
+## WeChat Group
 
-DSH 插件生态交流群（微信群）：插件作者、维护者与使用者都在这里，讨论插件开发、兼容性问题与新插件发布。
+The DSH plugin ecosystem group on WeChat: plugin authors, maintainers, and users discuss plugin development, compatibility issues, and new releases.
 
-<img src="assets/community-welcome.png" width="300" alt="DSH 插件社区交流群">
+<img src="assets/community-welcome.png" width="300" alt="DSH plugin community WeChat group">
 
-> 二维码 7 天内有效（2026-08-20 前）。
+> The QR code is valid for 7 days (before 2026-08-20).
 
-## 给插件使用者
+## For Plugin Users
 
-### 1. 找到候选插件
+### 1. Find candidate plugins
 
-- 优先从 [PLUGINS.md](PLUGINS.md) 选择已有人工分类和说明的插件。
-- 若分类目录没有，再从[当前生态快照](#当前生态快照)进入当日完整索引，搜索仓库名或关键词。
-- 仓库无法公开访问、没有 README、没有许可证或长期无维护时，把它视为高风险候选，而不是“已验证插件”。
+- Prefer [PLUGINS.md](PLUGINS.md) — plugins with manual curation and descriptions.
+- If the catalog misses it, search the repo name or keywords in the dated [Ecosystem Snapshot](#ecosystem-snapshot) index.
+- Treat repos that are inaccessible, lack a README or license, or sit unmaintained as high-risk candidates — not "verified plugins".
 
-### 2. 看懂状态
+### 2. Understand status
 
-| 状态 | 它说明什么 | 它不说明什么 |
+| Status | What it says | What it does not say |
 |---|---|---|
-| 已收录 | 发现流程找到了仓库及插件入口信号 | 未证明能安装、能运行或安全 |
-| 兼容（静态） | 在指定 mainline 快照上未发现当前规则定义的阻断信号 | 未经过真实加载时，不能等同于“可用” |
-| 关注 | 存在版本、扩展点或元数据变化，需要人工确认 | 不一定已经损坏 |
-| 需适配 | 已发现补丁冲突、接口漂移或其他明确阻断信号 | 不代表插件永远不可用；作者可能已在其他分支修复 |
-| 运行可用 | 在报告记录的环境、插件提交和 mainline 快照上完成了加载或任务测试 | 不是完整功能测试、性能测试或安全审计 |
-| 未知 / 待调研 | 当前证据不足 | 不应推断为兼容或不兼容 |
+| Listed | Discovery found the repo and a plugin entry signal | Does not prove it installs, runs, or is safe |
+| Compatible (static) | No blocking signal under current rules on the pinned mainline snapshot | Without a real load, not equivalent to "usable" |
+| Watch | Version, extension-point, or metadata changes need human confirmation | Not necessarily broken |
+| Needs adaptation | A patch conflict, interface drift, or another explicit blocking signal was found | Not permanently unusable; the author may have fixed it on another branch |
+| Runtime OK | Loaded or completed a task test on the recorded environment, plugin commit, and mainline snapshot | Not a full functional, performance, or security test |
+| Unknown / to investigate | Today's evidence is insufficient | Do not infer either compatibility or incompatibility |
 
-每个结论都应同时看四项：**插件 commit、mainline commit、测试日期、测试层级**。缺少其中任一项时，降低对结果的信任等级。
+Every conclusion carries four facts: **plugin commit, mainline commit, test date, test level**. If any one is missing, lower your trust in the result.
 
-### 3. 安装、验证和回滚
+### 3. Install, verify, and roll back
 
-本目录不是包管理器，也没有被本仓库验证过的统一安装命令。请以插件自身 README 的安装方式为准，并建议按以下顺序操作：
+This catalog is not a package manager and ships no install command verified by this repo. Follow the plugin's own README, ideally in this order:
 
-1. 阅读插件的安装、配置、权限和卸载说明。
-2. 固定插件版本或 commit，不直接依赖会漂移的默认分支。
-3. 先在隔离 profile 或测试环境加载，不提供生产密钥和敏感数据。
-4. 执行一个最小功能任务，记录 DSH 版本、插件版本和日志。
-5. 保留原配置与锁文件；失败时能移除插件并恢复环境。
+1. Read the plugin's install, configuration, permission, and uninstall instructions.
+2. Pin a plugin version or commit; do not ride a drifting default branch.
+3. Load it first in an isolated profile or test environment — no production keys or sensitive data.
+4. Run one minimal functional task; record the DSH version, plugin version, and logs.
+5. Keep the previous config and lockfile so a failure can be rolled back cleanly.
 
-若插件安装或功能本身出错，请优先在插件仓库反馈；若目录链接、分类或状态证据有误，请在本仓库提交 issue 或 PR。
+If the plugin itself misbehaves, report it in the plugin repo first; if a catalog link, category, or status evidence is wrong, open an issue or PR here.
 
-## 给插件开发者
+## For Plugin Developers
 
-### 最低收录条件
+### Minimum inclusion criteria
 
-公开目录建议只列出普通访问者能够打开的仓库。自动发现候选至少应满足：
+The public catalog should list only repos an ordinary visitor can open. An auto-discovered candidate should at least:
 
-- 仓库公开可访问，并添加 `dsh-plugin` topic；
-- 根目录存在合法的 `package.json` 和非空 `name`；
-- 提供 `main`、`exports` 或明确的 `dsh` 集成入口；
-- README 说明插件做什么、如何安装、如何卸载以及最小使用示例；
-- 所有运行时依赖在 `dependencies` / `peerDependencies` 中显式声明；
-- 声明支持的 DSH 版本、快照或已验证 commit；
-- 提供许可证，并避免把密钥、个人信息或私有仓库内容提交到公开目录。
+- Be publicly accessible and tagged with the `dsh-plugin` topic;
+- Have a valid root `package.json` with a non-empty `name`;
+- Provide `main`, `exports`, or an explicit `dsh` integration entry;
+- Ship a README covering what it does, how to install, how to uninstall, and a minimal usage example;
+- Declare every runtime dependency in `dependencies` / `peerDependencies`;
+- State the supported DSH version, snapshot, or verified commit;
+- Include a license, and never commit secrets, personal data, or private repo content to the public catalog.
 
-包名应使用你有权控制的命名空间。只有获得 `dsh-external` 维护权限的项目才应使用 `@dsh-external/*`；不要占用不属于你的组织或官方保留命名空间。
+Package names should use a namespace you control. Only projects granted `dsh-external` maintainer access should use `@dsh-external/*`; do not squat namespaces owned by others or reserved by the official project.
 
-### 一个合格的插件 README 至少包含
+### A qualified plugin README must include
 
-| 章节 | 应回答的问题 |
+| Section | Questions it should answer |
 |---|---|
-| Overview | 插件解决什么问题？适合谁？ |
-| Compatibility | 支持哪些 DSH 版本或 mainline commit？最后验证日期是什么？ |
-| Install / Uninstall | 如何安装、升级、禁用和彻底移除？ |
-| Quick start | 最小配置和一个可复现示例是什么？ |
-| Configuration | 配置项、默认值、环境变量和敏感项有哪些？ |
-| Permissions & data | 会访问哪些文件、网络、凭据或用户数据？ |
-| Troubleshooting | 常见错误、日志位置和回滚方式是什么？ |
-| Development | 如何构建、测试和贡献？ |
-| License & security | 使用什么许可证？安全问题如何私下报告？ |
+| Overview | What problem does the plugin solve, and for whom? |
+| Compatibility | Which DSH versions or mainline commits are supported? When was it last verified? |
+| Install / Uninstall | How to install, upgrade, disable, and fully remove? |
+| Quick start | What is the minimal config and one reproducible example? |
+| Configuration | Which settings, defaults, env vars, and sensitive entries exist? |
+| Permissions & data | Which files, network endpoints, credentials, or user data does it touch? |
+| Troubleshooting | Common errors, log locations, and rollback? |
+| Development | How to build, test, and contribute? |
+| License & security | Which license? How are security issues reported privately? |
 
-### 提交插件
+### Submit a plugin
 
-1. 给插件仓库添加 `dsh-plugin` topic，等待下一次扫描。
-2. 在 [PLUGINS.md](PLUGINS.md) 的合适分类追加插件名、仓库链接和一句话说明。
-3. 对照上面的最低条件完成自检。
-4. 使用 [PR 模板](.github/PULL_REQUEST_TEMPLATE.md) 提交变更，并附上测试环境与结果。
+1. Add the `dsh-plugin` topic to your repo and wait for the next scan.
+2. Append the plugin name, repo link, and a one-line description under the right category in [PLUGINS.md](PLUGINS.md).
+3. Self-check against the minimum criteria above.
+4. Open a PR using the [PR template](.github/PULL_REQUEST_TEMPLATE.md), including your test environment and results.
 
-仅修正链接、分类、描述或状态证据时，也欢迎直接提交小型 PR。请不要在目录 PR 中复制私有 issue、密钥、成员信息或大段第三方内容。
+Small PRs that just fix a link, category, description, or status evidence are always welcome. Do not copy private issues, secrets, member lists, or long third-party excerpts into catalog PRs.
 
-## 本仓库如何判定
+## How We Assess Compatibility
 
-| 层级 | 当前检查 | 合理结论 |
+| Level | Current check | Fair conclusion |
 |---|---|---|
-| L0 发现 | topic、仓库可见性、基本元数据 | 这是一个候选仓库 |
-| L1 清单 | `package.json`、名称、入口字段 | 它“看起来可安装”，但还未证明能加载 |
-| L2 静态兼容 | 补丁、扩展点（seam）、依赖版本范围 | 发现已知漂移信号，或暂未发现阻断信号 |
-| L3 编译实验 | 在指定 workspace 中执行类型或语法检查 | 仅对该构建环境有效；缺依赖和环境问题需与真实 API 漂移分开 |
-| L4 运行实测 | 安装、加载、最小任务或工具调用 | 在记录的环境和 commit 上观察到成功或失败 |
+| L0 Discovery | Topic, repo visibility, basic metadata | This is a candidate repo |
+| L1 Manifest | `package.json`, name, entry fields | It "looks installable", but loading is unproven |
+| L2 Static compat | Patches, extension points (seams), dependency ranges | Known drift signals found, or no blocking signal so far |
+| L3 Compile experiment | Type or syntax check in a pinned workspace | Valid only for that build setup; missing deps and environment issues must be separated from real API drift |
+| L4 Runtime test | Install, load, minimal task or tool call | Success or failure observed on the recorded environment and commits |
 
 > [!NOTE]
-> 首页不把以上层级合并成一个模糊的“兼容率”。静态通过、编译通过和运行通过使用不同字段与分母；完整证据保留在日期化报告中。
+> The front page never merges these levels into one fuzzy "compatibility rate". Static pass, compile pass, and runtime pass use different fields and denominators; full evidence lives in the dated reports.
 
-### 已知边界
+### Known limitations
 
-- mainline 和插件都在快速变化，旧结论可能很快失效。
-- 静态未发现问题不代表真实运行一定成功。
-- 编译失败可能来自测试环境、缺失依赖或配置错误，不应自动等同于 API 不兼容。
-- 运行成功只覆盖报告中的最小任务，不代表全部功能、平台和配置。
-- 自动生成的 LLM 摘要只用于导航，不能替代原始矩阵和日志。
+- Both mainline and plugins move fast; older conclusions expire quickly.
+- A clean static check does not guarantee a successful real run.
+- A compile failure may come from the test environment, missing dependencies, or misconfiguration — do not equate it with API incompatibility.
+- A runtime success covers only the minimal task in the report — not every feature, platform, or configuration.
+- Auto-generated LLM summaries are navigation aids only; they never replace the raw matrices and logs.
 
-## 仓库结构
+## Repository Structure
 
-| 路径 | 内容 |
+| Path | Contents |
 |---|---|
-| `PLUGINS.md` | 人工分类和登记的精选入口 |
-| `reports/<YYYY-MM-DD>/index.md` | 指定日期的完整扫描索引 |
-| `reports/<YYYY-MM-DD>/mainline-compat.md` | 指定日期的静态兼容性矩阵 |
-| `reports/<YYYY-MM-DD>/compile-compat.md` | 指定日期的编译与语法实验结果 |
-| `reports/<YYYY-MM-DD>/runtime-test.md` | 指定日期的运行级测试结果 |
-| `CHANGELOG.md` | 日期化生态变更摘要 |
-| `docs/SOP.md` | 自动化、构建与报告维护说明 |
-| `scripts/` | 发现、检查、测试和渲染脚本 |
+| `PLUGINS.md` | Manually curated and categorized entry list |
+| `reports/<YYYY-MM-DD>/index.md` | Full scan index for that date |
+| `reports/<YYYY-MM-DD>/mainline-compat.md` | Static compatibility matrix for that date |
+| `reports/<YYYY-MM-DD>/compile-compat.md` | Compile and syntax experiment results for that date |
+| `reports/<YYYY-MM-DD>/runtime-test.md` | Runtime-level test results for that date |
+| `CHANGELOG.md` | Dated ecosystem change log |
+| `docs/SOP.md` | Automation, build, and report maintenance notes |
+| `scripts/` | Discovery, checking, testing, and rendering scripts |
 
 <details>
-<summary>维护者：README 自动生成约定</summary>
+<summary>Maintainers: README auto-generation conventions</summary>
 
-- 人工内容放在自动标记块之外；生成器只替换 `AUTO:ecosystem` 块。
-- 首页只输出汇总和报告链接，不输出完整仓库表。
-- 新增/修改项最多显示 10 条，其余链接到 `CHANGELOG.md`。
-- 仓库链接必须使用扫描结果中的完整 `owner/name`，不得硬编码组织名。
-- 自动块使用真实日期路径；另生成普通文件 `reports/LATEST.md` 作为可验证的稳定入口，不依赖目录符号链接。
-- 报告缺失、为空或数字校验失败时显示“数据暂不可用”，不得沿用旧值或生成强结论。
-- 运行结果与静态结果使用不同字段、不同分母，并展示测试覆盖数。
+- Manual content lives outside the auto markers; generators only replace `AUTO:ecosystem` blocks.
+- The front page shows only summaries and report links, never full repo tables.
+- At most 10 new/changed entries are listed; the rest link to `CHANGELOG.md`.
+- Repo links must use the full `owner/name` from scan results — never hardcode an org name.
+- Auto blocks use real date paths; a plain `reports/LATEST.md` is also generated as a verifiable stable entry that does not depend on directory symlinks.
+- When a report is missing, empty, or fails numeric validation, show "data unavailable" — never reuse stale values or draw strong conclusions.
+- Runtime and static results use different fields and denominators, and show test coverage counts.
 
 </details>
 
-## 当前生态快照
+## Ecosystem Snapshot
 
 <!-- AUTO:ecosystem:START -->
-> 更新于 2026-08-14 16:29 · 每 8 小时刷新 · mainline `7b9644f`
+> 更新于 2026-08-14 15:11 · 每 8 小时刷新 · mainline `7b9644f`
 
 | 证据层 | 当前结果 |
 |---|---:|
@@ -1008,7 +1008,7 @@ DSH 插件生态交流群（微信群）：插件作者、维护者与使用者�
 
 | 仓库 | PR | 标题 | 更新 |
 |---|---|---|---|
-| [awesome-dsh-plugins](https://github.com/dsh-external/awesome-dsh-plugins) | [#2](https://github.com/dsh-external/awesome-dsh-plugins/pull/2) | bot: agent 运行级测试报告 2026-08-14 | 2026-08-14 |
+| [awesome-dsh-plugins](https://github.com/dsh-external/awesome-dsh-plugins) | [#1](https://github.com/dsh-external/awesome-dsh-plugins/pull/1) | bot: agent 运行级测试报告 2026-08-14 | 2026-08-14 |
 | [dsh-deeptag](https://github.com/dsh-external/dsh-deeptag) | [#1](https://github.com/dsh-external/dsh-deeptag/pull/1) | Implement security-first DeepTag MVP | 2026-08-13 |
 | [dsh-web-review](https://github.com/dsh-external/dsh-web-review) | [#1](https://github.com/dsh-external/dsh-web-review/pull/1) | dsh-web-review: add managed multi-tab browser preview | 2026-08-13 |
 | [dsh-pi-adapter](https://github.com/dsh-external/dsh-pi-adapter) | [#6](https://github.com/dsh-external/dsh-pi-adapter/pull/6) | feat: register commands through cordis DI activation, not first session/created | 2026-08-14 |
@@ -1021,16 +1021,16 @@ DSH 插件生态交流群（微信群）：插件作者、维护者与使用者�
 
 <!-- AUTO:ecosystem:END -->
 
-快照只回答“当前证据是什么”，不在首页复制几百行仓库和变更记录。逐仓结论、失败原因、当日新增和开放 PR 以对应报告为准。
+The snapshot only answers "what does today's evidence say" — the front page never copies hundreds of repo rows and change logs. Per-repo verdicts, failure reasons, daily additions, and open PRs live in the dated reports.
 
-## 项目边界与致谢
+## Boundaries & Credits
 
-本仓库维护目录、检测规则和证据报告，不托管第三方插件代码。感谢所有提交插件、复现问题、修正元数据和维护测试链路的贡献者。
+This repo maintains the catalog, detection rules, and evidence reports — it does not host third-party plugin code. Thanks to every contributor who submitted plugins, reproduced issues, corrected metadata, and kept the test pipeline alive.
 
-当前仓库尚未声明许可证；在复制、修改或再分发目录内容与脚本前，请先向维护者确认授权。维护者应在公开推广前补充明确的 `LICENSE`。
+No license has been declared yet; confirm authorization with the maintainers before copying, modifying, or redistributing catalog content and scripts. Maintainers should add an explicit `LICENSE` before public promotion.
 
-非常感谢各位一起参与内测的小伙伴们（合照仅为部分名单，还有更多朋友一起在内测中贡献力量）！
+Huge thanks to everyone who joined the beta test — the group photo shows only part of the list, and many more friends contributed along the way!
 
-![DSH 内测群合照](assets/dsh-miji-heying.png)
+![DSH beta group photo](assets/dsh-miji-heying.png)
 
-Let's keep deep diving！
+Let's keep deep diving!
