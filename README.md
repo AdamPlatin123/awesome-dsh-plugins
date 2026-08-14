@@ -955,6 +955,6 @@ DSH 插件生态交流群（微信群）：插件作者、维护者与使用者�
 
 非常感谢各位一起参与内测的小伙伴们（合照仅为部分名单，还有更多朋友一起在内测中贡献力量）！
 
-![DSH 内测群合照](assets/dsh-miji-heying.png)
+![DSH 插件社区](assets/community-photo.png)
 
 Let's keep deep diving！
