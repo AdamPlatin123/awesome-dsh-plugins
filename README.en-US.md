@@ -428,7 +428,7 @@ graph TB
 | [dsh-plugin-check](https://github.com/dsh-external/dsh-plugin-check) | 插件 | 待调研 | DSH 插件健康检查工具：扫描插件仓库的清单协议 / patch 格式 / 构建陷阱 / hub 收录状态，零依赖只读，注册 plugin_check 工具 |
 | [dsh-plugin-radar](https://github.com/dsh-external/dsh-plugin-radar) | 研究 | 待调研 | DSH 插件兼容性雷达：每日自动扫描 org 插件与 mainline 接口漂移（补丁/seam/peerDeps 四维对比 + 编译验证），公测前兼容性检查站 |
 | [dsh-public-repo-monitor](https://github.com/dsh-external/dsh-public-repo-monitor) | 基建 | 待调研 | — |
-| [dsh-remote](https://github.com/flymysql/dsh-remote) | 插件 | 已发布 | 远程工作区：SSH（密码或密钥）连接远程主机，选取远程工作区目录，用 remote_list_dir/remote_read_file/remote_exec 工具在远程上直接操作（npm: dsh-remote，v0.2） |
+| [dsh-remote](https://github.com/flymysql/dsh-remote) | 插件 | 已发布 | 远程工作区：SSH（密码或密钥）连接远程主机，选取远程工作区目录，用 rw_pick_workspace/rw_list_dir/rw_read_file/rw_exec 工具在远程上直接操作（npm: dsh-remote，v0.2） |
 | [dsh-security](https://github.com/dsh-external/dsh-security) | 研究 | 待调研 | DSH 现有的可行的攻击链 demo |
 | [dsh-security-audit](https://github.com/dsh-external/dsh-security-audit) | 插件 | 待调研 | DSH 本机安全审计插件：配置/插件来源/会话/网络暴露面，只读脱敏风险报告 |
 | [dsh-sonar](https://github.com/dsh-external/dsh-sonar) | 插件 | 待调研 | LLM 能看到的世界，统一 View 读写原语承载的上下文管理系统（memory, skill, teamwork, self-evolution or any |
