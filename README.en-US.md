@@ -72,19 +72,19 @@ graph TB
 
 <!-- AUTO:featured:START -->
 
-> 按 GitHub star 数排序，每 20 分钟自动刷新。数据截至 2026-08-14 22:14。
+> 按 GitHub star 数排序，每 20 分钟自动刷新。数据截至 2026-08-14 22:42。
 
 | # | 插件 | ⭐ | 说明 |
 |---|---|---|---|
-| 1 | [dsh-web-ui](https://github.com/zhu1090093659/dsh-web-ui) | 1922 | Plugin and skin collection for DeepSeek Harness (DSH) W… |
+| 1 | [dsh-web-ui](https://github.com/zhu1090093659/dsh-web-ui) | 1926 | Plugin and skin collection for DeepSeek Harness (DSH) W… |
 | 2 | [TokenTracker](https://github.com/xiufengsun/TokenTracker) | 1306 | Local-first AI token usage & cost tracker for 31 coding… |
 | 3 | [modlens](https://github.com/liustack/modlens) | 1286 | The first vision plugin for DeepSeek Harness, and the v… |
 | 4 | [PicGo-Core](https://github.com/PicGo/PicGo-Core) | 969 | :zap:The ultimate image uploading engine. Both CLI & AP… |
-| 5 | [dsh-TUI](https://github.com/ccch1mneyyy/dsh-TUI) | 889 | 解决DSH 官方尚无终端 TUI 痛点的补位之作，献给偏爱cli的各位极客：Claude Code 风格全屏交… |
-| 6 | [DSH-better-sidebar](https://github.com/omdsh-dev/DSH-better-sidebar) | 763 | 一个侧边栏的完整工作台，支持三方拓展注册新侧边栏页面。内置文件渲染编辑/终端/Git/子代理 |
+| 5 | [dsh-TUI](https://github.com/ccch1mneyyy/dsh-TUI) | 890 | 解决DSH 官方尚无终端 TUI 痛点的补位之作，献给偏爱cli的各位极客：Claude Code 风格全屏交… |
+| 6 | [DSH-better-sidebar](https://github.com/omdsh-dev/DSH-better-sidebar) | 767 | 一个侧边栏的完整工作台，支持三方拓展注册新侧边栏页面。内置文件渲染编辑/终端/Git/子代理 |
 | 7 | [sandbase-harness](https://github.com/sandbaseai/sandbase-harness) | 574 | Open-source CMA-compatible agent runtime for any model,… |
-| 8 | [dsh-ads](https://github.com/Nagi-ovo/dsh-ads) | 334 | 把 DSH 变成 2005 年门户网站｜Parody ads, fake games, and popups … |
-| 9 | [dsh-vision-toolkit](https://github.com/Anionex/dsh-vision-toolkit) | 328 | 让纯文本模型更好地做视觉任务的DeepSeek Harness插件：带意图的图片问答、长截图 OCR、UI 还… |
+| 8 | [dsh-ads](https://github.com/Nagi-ovo/dsh-ads) | 335 | 把 DSH 变成 2005 年门户网站｜Parody ads, fake games, and popups … |
+| 9 | [dsh-vision-toolkit](https://github.com/Anionex/dsh-vision-toolkit) | 329 | 让纯文本模型更好地做视觉任务的DeepSeek Harness插件：带意图的图片问答、长截图 OCR、UI 还… |
 | 10 | [Abu-Cowork](https://github.com/PM-Shawn/Abu-Cowork) | 323 | Open-source alternative to Claude Cowork — a local-firs… |
 | 11 | [dsh-agent-teams](https://github.com/NanmiCoder/dsh-agent-teams) | 246 | AgentTeams plugin for DeepSeek Harness |
 | 12 | [Bigfish](https://github.com/turtle2209/Bigfish) | 173 | Bigfish —— DeepSeek Harness 的第三方桌面端，内置 Node 运行时，双击即用，附带… |
