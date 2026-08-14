@@ -3,54 +3,82 @@
 **A daily-updated radar that auto-discovers and compatibility-tests every plugin for DeepSeek Harness.**
 Know which plugins work before you install them.
 
-[![plugins](https://img.shields.io/badge/confirmed-255-blue)](#热门插件star-top-20) [![scan](https://img.shields.io/badge/scan-every_8h-green)](#当前生态快照) [![evidence](https://img.shields.io/badge/tested-242-orange)](#本仓库如何判定) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![confirmed](https://img.shields.io/badge/confirmed-255-blue)](#热门插件star-top-20) [![scan](https://img.shields.io/badge/scan-every_8h-green)](#当前生态快照) [![tested](https://img.shields.io/badge/tested-242-orange)](#本仓库如何判定) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
-## English
+English | [简体中文](README.zh-CN.md)
 
-**What is this?** DeepSeek Harness (DSH) is an open-source coding agent where everything is a plugin. This repo is a **radar** that automatically tracks its entire plugin ecosystem — **1328 candidates scanned**, **255 confirmed plugins** (verified by clone + package.json), **242 runtime-tested** by agent:
+---
 
-- **Auto-discovered** — plugins tagged with the `dsh-plugin` topic are picked up by daily scans; no manual submission needed
-- **Evidence-tested** — every plugin gets a four-dimensional compatibility check (patches / API seams / peerDeps / compile) plus runtime tests against the latest DSH mainline
-- **Traceable** — every verdict links to a dated report with full evidence; no vague "it works" claims
-- **Continuously updated** — refreshed every 8 hours; DSH ships new versions almost daily, plugin drift is tracked in the [CHANGELOG](CHANGELOG.md)
+**What is this?** DeepSeek Harness (DSH) is an open-source coding agent where everything is a plugin. This repo is a **radar** that automatically tracks its entire plugin ecosystem — **1328 candidates scanned**, **255 confirmed plugins** (verified by clone + package.json), **242 runtime-tested** by agent.
+
+## How it works
 
 ```mermaid
-graph LR
-    A[GitHub API<br/>topic: dsh-plugin] -->|auto-discover| B[Clone & Analyze]
-    B --> C{4D Compat Check}
-    C -->|patch| D[seam]
-    C -->|peerDeps| E[compile]
-    D & E --> F[Runtime Test]
-    F --> G[Dated Report<br/>README + CHANGELOG]
-    G -->|every 8h| A
+graph TB
+    subgraph Discovery["🔍 Auto-Discovery every 8h"]
+        A1[GitHub API<br/>org: dsh-external]
+        A2[GitHub Search<br/>topic: dsh-plugin<br/>topic: dsh-external]
+        A3[Known list<br/>fallback]
+    end
+    subgraph Validation["📋 Plugin Validation"]
+        B1{package.json<br/>name + main/exports/dsh?}
+        B1 -->|pass| B2[✅ Confirmed]
+        B1 -->|fail| B3[❌ Skip]
+    end
+    subgraph Analysis["🔬 Clone & Analyze"]
+        C1[Mainline<br/>blob:none]
+        C2[Plugin<br/>depth:1]
+    end
+    subgraph Compat["⚖️ 4D Compatibility"]
+        D1[Patch]
+        D2[Seam]
+        D3[peerDeps]
+        D4[Compile]
+    end
+    subgraph Output["📊 Evidence"]
+        E1[reports/&#8203;date/]
+        E2[README<br/>catalog]
+        E3[CHANGELOG]
+    end
+    RT[🤖 Runtime Test<br/>242 plugins]
+    A1 --> B1
+    A2 --> B1
+    A3 --> B1
+    B2 --> C1 & C2
+    C1 & C2 --> D1 & D2 & D3 & D4
+    D1 & D2 & D3 & D4 --> E1 & E2 & E3
+    RT -.->|evidence| E1
 ```
 
 **Quick Start**
 
-1. Browse the [🔥 Star Top 20](#热门插件star-top-20) — see what the community uses most
-2. Find by domain in the [分类目录](#分类目录) — 9 functional categories with compatibility status
-3. Check evidence in the [当前生态快照](#当前生态快照) — dated compatibility matrix
-4. Submit your plugin: add the `dsh-plugin` topic to your repo → done (auto-discovered within 8 hours)
+| Step | Link |
+|---|---|
+| Browse Star Top 20 | [🔥 热门插件](#热门插件star-top-20) |
+| Find by domain | [📋 分类目录](#分类目录) — 9 categories, compat status per plugin |
+| Check evidence | [📊 当前生态快照](#当前生态快照) — dated compatibility matrix |
+| Submit your plugin | Add `dsh-plugin` topic → auto-discovered within 8h · [PR template](.github/PULL_REQUEST_TEMPLATE.md) |
 
-[Browse catalog](#分类目录) · [Latest snapshot](#当前生态快照) · [CHANGELOG](CHANGELOG.md) · [Submit plugin](#提交插件) · [中文](#从这里开始)
+[Browse catalog](#分类目录) · [Latest snapshot](#当前生态快照) · [CHANGELOG](CHANGELOG.md) · [Submit plugin](#提交插件) · [中文版](README.zh-CN.md)
+
+> [!IMPORTANT]
+> **Inclusion ≠ compatible, static check ≠ runtime-usable, runtime-usable ≠ security-audited.**
+> This repo provides traceable filtering signals, not official DSH endorsement. Always review plugin source, permissions, dependencies, and license before installing.
 
 ---
 
-## 中文
+## 从这里开始
 
-> 扫描 1328 个候选仓库，255 个确认为 DSH 插件（clone 验证），242 个已通过 agent 运行级实测。兼容性雷达：哪个能用、哪个要改，一眼看清。
-
-**找插件** · **避坑** · **跟上变化**
-
-- **找插件**：按功能领域浏览（Web UI / Agent 能力 / 编码开发 / 娱乐生活……），兼容性一目了然
-- **避坑**：每个插件对当日 mainline 做四维检查 + 运行级实测，兼容与否有证据
-- **跟上变化**：每 8 小时自动对比，插件漂移实时跟踪，变化进 CHANGELOG
-
-[浏览分类目录](PLUGINS.md) · [查看最新快照](#当前生态快照) · [浏览历史报告](reports/) · [查看变更](CHANGELOG.md) · [提交插件](#提交插件)
-
-> [!IMPORTANT]
-> **收录不等于兼容，静态检查不等于运行可用，运行可用也不等于安全审计。**
-> 本仓库提供可追溯的筛选信号，不代表 DSH 官方背书。安装第三方插件前，请检查插件源码、权限、依赖、许可证及测试日期。
+| 你的目标 | 跳转入口 |
+|---|---|
+| 按用途找一个插件 | [📋 分类目录](#分类目录) · [PLUGINS.md](PLUGINS.md) |
+| 浏览自动发现的全部仓库 | [📊 当前生态快照](#当前生态快照) |
+| 了解最近发生了什么 | [📝 CHANGELOG](CHANGELOG.md) |
+| 登记或维护一个插件 | [🔧 给插件开发者](#给插件开发者) |
+| 维护本雷达 | [⚙️ 自动化 SOP](docs/SOP.md) |
+| 给插件使用者指南 | [📖 给插件使用者](#给插件使用者) |
+| 本仓库如何判定兼容性 | [🔍 本仓库如何判定](#本仓库如何判定) |
+| 加入社群交流 | [💬 欢迎加入讨论社群](#欢迎加入讨论社群) |
 
 ## 从这里开始
 
