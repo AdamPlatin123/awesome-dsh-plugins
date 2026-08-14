@@ -3,13 +3,13 @@
 **自动发现、证据验证的 DeepSeek Harness 插件生态雷达。**
 安装前就知道哪个插件能用、哪个要改。
 
-[![confirmed](https://img.shields.io/badge/confirmed-255-blue)](#-热门插件star-top-20) [![scan](https://img.shields.io/badge/scan-every_8h-green)](#当前生态快照) [![tested](https://img.shields.io/badge/tested-242-orange)](#本仓库如何判定) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![confirmed](https://img.shields.io/badge/confirmed-288-blue)](#-热门插件star-top-20) [![scan](https://img.shields.io/badge/scan-every_8h-green)](#当前生态快照) [![tested](https://img.shields.io/badge/tested-5-orange)](#本仓库如何判定) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
 简体中文 | [English](README.en-US.md)
 
 ---
 
-> 扫描 1328 个候选仓库，255 个确认为 DSH 插件（clone 验证），242 个已通过 agent 运行级实测。
+> 收录 288 个 DSH 插件仓库（clone 验证 package.json），其中 5 个有运行级测试记录。
 
 ## 工作原理
 
@@ -40,7 +40,7 @@ graph TB
         E2["README<br/>分类目录"]
         E3[CHANGELOG]
     end
-    RT["🤖 运行级实测<br/>242 个插件"]
+    RT["🤖 运行级实测<br/>agent 驱动"]
     A1 --> B1
     A2 --> B1
     A3 --> B1
@@ -62,7 +62,7 @@ graph TB
 | 维护本雷达 | [⚙️ 自动化 SOP](docs/SOP.md) |
 | 给插件使用者指南 | [📖 给插件使用者](#给插件使用者) |
 | 本仓库如何判定兼容性 | [🔍 本仓库如何判定](#本仓库如何判定) |
-| 加入社群交流 | [💬 欢迎加入讨论社群](#-欢迎加入讨论社群) · [微信群](#欢迎加入社群) |
+| 加入社群交流 | [💬 DSH 学习社区](#-dsh-学习社区-dshfindcom) · [微信交流群](#微信交流群) |
 
 > [!IMPORTANT]
 > **收录不等于兼容，静态检查不等于运行可用，运行可用也不等于安全审计。**
@@ -492,7 +492,7 @@ graph TB
 
 <!-- AUTO:catalog:END -->
 
-## 🌐 欢迎加入讨论社群
+## 🌐 DSH 学习社区 dshfind.com
 
 [dshfind.com](https://dshfind.com) — DSH 原理学习、插件市场与最佳实践社区：从 Cordis 论文逐章精读到插件自动聚合市场。
 
@@ -500,7 +500,7 @@ graph TB
 
 [🌐 dshfind.com](https://dshfind.com) · [GitHub](https://github.com/hikariming/dshfind)
 
-## 欢迎加入社群
+## 微信交流群
 
 DSH 插件生态交流群（微信群）：插件作者、维护者与使用者都在这里，讨论插件开发、兼容性问题与新插件发布。
 
@@ -630,7 +630,7 @@ DSH 插件生态交流群（微信群）：插件作者、维护者与使用者�
 ## 当前生态快照
 
 <!-- AUTO:ecosystem:START -->
-> 更新于 2026-08-14 04:31 · 每 8 小时刷新 · mainline `7b9644f`
+> 更新于 2026-08-14 16:29 · 每 8 小时刷新 · mainline `7b9644f`
 
 | 证据层 | 当前结果 |
 |---|---:|
@@ -1008,10 +1008,10 @@ DSH 插件生态交流群（微信群）：插件作者、维护者与使用者�
 
 | 仓库 | PR | 标题 | 更新 |
 |---|---|---|---|
+| [awesome-dsh-plugins](https://github.com/dsh-external/awesome-dsh-plugins) | [#2](https://github.com/dsh-external/awesome-dsh-plugins/pull/2) | bot: agent 运行级测试报告 2026-08-14 | 2026-08-14 |
 | [dsh-deeptag](https://github.com/dsh-external/dsh-deeptag) | [#1](https://github.com/dsh-external/dsh-deeptag/pull/1) | Implement security-first DeepTag MVP | 2026-08-13 |
 | [dsh-web-review](https://github.com/dsh-external/dsh-web-review) | [#1](https://github.com/dsh-external/dsh-web-review/pull/1) | dsh-web-review: add managed multi-tab browser preview | 2026-08-13 |
-| [dsh-pi-adapter](https://github.com/dsh-external/dsh-pi-adapter) | [#6](https://github.com/dsh-external/dsh-pi-adapter/pull/6) | feat: register commands through cordis DI activation, not first session/created | 2026-08-12 |
-| [dsh-pi-adapter](https://github.com/dsh-external/dsh-pi-adapter) | [#5](https://github.com/dsh-external/dsh-pi-adapter/pull/5) | feat: adapt-interactive ctx.ui tier + session-log quarantine audit | 2026-08-12 |
+| [dsh-pi-adapter](https://github.com/dsh-external/dsh-pi-adapter) | [#6](https://github.com/dsh-external/dsh-pi-adapter/pull/6) | feat: register commands through cordis DI activation, not first session/created | 2026-08-14 |
 | [dsh-my-rsi](https://github.com/dsh-external/dsh-my-rsi) | [#50](https://github.com/dsh-external/dsh-my-rsi/pull/50) | feat: migrate to 20260811 snapshot and reuse upstream surfaces | 2026-08-11 |
 | [dsh-hub-private-archive](https://github.com/dsh-external/dsh-hub-private-archive) | [#15](https://github.com/dsh-external/dsh-hub-private-archive/pull/15) | Align optional host capabilities and legacy cleanup | 2026-08-11 |
 | [dsh-my-rsi](https://github.com/dsh-external/dsh-my-rsi) | [#49](https://github.com/dsh-external/dsh-my-rsi/pull/49) | docs: record external method provenance (#45) | 2026-08-11 |
