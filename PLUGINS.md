@@ -45,6 +45,7 @@
 | 插件 | 仓库 | 说明 |
 |---|---|---|
 | dsh-review-skills | [ben7am1n/dsh-review-skills](https://github.com/ben7am1n/dsh-review-skills) | Engineering-discipline skill pack — code-review, simplify, plan-then-execute, test-first, resolve-conflict; bundled ctx.skills provider |
+| project-blueprint | [shuguang1994/project-blueprint](https://github.com/shuguang1994/project-blueprint) | 为新项目一键建立 AI 编程规范体系：AGENTS.md/文档骨架/CI/CD/Git 规范/测试制度；自主发现引擎（7 语言 15 框架 70+ 组件）+ WebSearch 回退；DSH 插件复用官方 skill-filesystem 提供方，零构建 |
 
 ## 📡 远程渠道
 
