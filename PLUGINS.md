@@ -44,6 +44,7 @@
 | dsh-cost-ledger | [suimi8/dsh-cost-ledger](https://github.com/suimi8/dsh-cost-ledger) | 跨会话持久成本账本：订阅 llm/stream 自动记录每次模型调用的 token 用量到 SQLite，内置 DeepSeek 官方 CNY 定价（可热改），提供 record_cost/query_cost/set_budget 三个 agent 工具 + /api/cost-ledger/* HTTP API 供 WebUI 仪表盘 | 待测 |
 | dsh-mdbox | [Chi-hong22/dsh-mdbox](https://github.com/Chi-hong22/dsh-mdbox) | DSH Web 输入框 Markdown 编辑辅助：Shift+Enter 列表续行与空项退出、有序列表自动重编号、Tab/Shift+Tab 双向缩进；纯客户端零运行时依赖，不碰文件/网络/凭据 | 待测 |
 | vpshub | [Sdongmaker/vpshub](https://github.com/Sdongmaker/vpshub) | DSH 的 VPS Hub:本地 SSH 台账(Orca 风格 ssh-config/manual + tombstone),vps_* 工具让 AI 发现/测试/执行/传输,密钥仅路径引用;可选设置页 UI(真实会话闭环实测:发现/连接/增删/别名预填) | ✅ |
+| dsh-latexcp | [Chi-hong22/dsh-latexcp](https://github.com/Chi-hong22/dsh-latexcp) | DSH Web 界面 LaTeX 公式复制插件：悬停 KaTeX 公式复制按钮，一键复制 TeX 源码（$…$ / \(…\) 两种格式 | 待测 |
 
 ## 🧰 插件集
 
