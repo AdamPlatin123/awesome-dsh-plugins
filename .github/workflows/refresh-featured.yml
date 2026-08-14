@@ -44,9 +44,9 @@ jobs:
           git push
 
       - name: Push mirror to dsh-ext (optional)
-        if: ${{ hashFiles('README.md') != '' && secrets.DSH_EXT_TOKEN != '' }}
         env:
           DSH_EXT_TOKEN: ${{ secrets.DSH_EXT_TOKEN }}
         run: |
+          if [ -z "${DSH_EXT_TOKEN}" ]; then echo "[skip] 未配置 DSH_EXT_TOKEN，仅推 origin"; exit 0; fi
           git remote add dsh-ext "https://x-access-token:${DSH_EXT_TOKEN}@github.com/dsh-external/awesome-dsh-plugins.git" || true
-        if: ${{ secrets.DSH_EXT_TOKEN != '' }}
+          git push dsh-ext HEAD:main
