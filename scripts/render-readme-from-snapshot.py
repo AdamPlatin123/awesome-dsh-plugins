@@ -94,6 +94,14 @@ def main():
     v, d, c, t, dl = (snap[k] for k in ("verdict", "discovery", "clone", "test", "deliver"))
     topo = snap.get("topology", {})
 
+    # ⓪ 全量清单随每轮快照重生成（PLUGINS-ALL.md），并取九类分布供目录摘要卡使用
+    try:
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        from gen_plugins_all import main as gen_all
+        domain_stats = gen_all() or {}
+    except Exception as _e:
+        print(f"[render] WARN 清单生成跳过: {_e}")
+        domain_stats = {}
     for path in (ROOT / "README.md", ROOT / "README.en-US.md"):
         is_zh = path.name == "README.md"
         t_readme = path.read_text()
@@ -200,6 +208,33 @@ def main():
             t_readme = re.sub(r"\[静态矩阵\]\(reports/[0-9-]+/mainline-compat\.md\)", f"[静态矩阵](reports/{d_latest}/mainline-compat.md)", t_readme)
             t_readme = re.sub(r"\[编译实验\]\(reports/[0-9-]+/compile-compat\.md\)", f"[编译实验](reports/{d_latest}/compile-compat.md)", t_readme)
             t_readme = re.sub(r"\[运行实测\]\(reports/[0-9-]+/[^)]*\.md\)", f"[运行实测](reports/{d_latest}/agent-test.md)", t_readme)
+
+        def gh_slug(text):
+            """GitHub 标题锚点：剥离 emoji/标点（保留其占位空格转连字符），对齐 github-slugger。"""
+            t = re.sub(r'[^\w\u4e00-\u9fff\-\s]', '', str(text)).lower().lstrip('-')
+            return re.sub(r'\s+', '-', t)
+
+        # ④f 分类目录摘要卡：AUTO:catalog 整块重建为九类摘要列表（明细在 PLUGINS-ALL.md，根治大表格挤压）
+        if domain_stats:
+            if is_zh:
+                cards = ["逐插件明细（判定 · 定位 · 星标）见 **[PLUGINS-ALL.md](PLUGINS-ALL.md)**。", ""]
+                for dom, s in domain_stats.items():
+                    if not s["total"]:
+                        continue
+                    anchor = gh_slug(dom + f'（{s["total"]}）')
+                    cards.append(f'- **{dom}**（{s["total"]}）— 可用 {s["ok"]} · 不兼容 {s["bad"]} · '
+                                 f'待定 {s["inc"]} · 未测 {s["un"]} · 监测 {s["watch"]} — [明细](PLUGINS-ALL.md#{anchor})')
+            else:
+                cards = ["Per-plugin details (verdict · location · stars) in **PLUGINS-ALL.md**.", ""]
+                for dom, s in domain_stats.items():
+                    if not s["total"]:
+                        continue
+                    anchor = gh_slug(dom + f'（{s["total"]}）')
+                    cards.append(f'- **{dom}**（{s["total"]}）— OK {s["ok"]} · incompatible {s["bad"]} · '
+                                 f'pending {s["inc"]} · untested {s["un"]} · watching {s["watch"]} — [details](PLUGINS-ALL.md#{anchor})')
+            block = "<!-- AUTO:catalog:START -->\n\n" + "\n".join(cards) + "\n\n<!-- AUTO:catalog:END -->"
+            t_readme = re.sub(r"<!-- AUTO:catalog:START -->[\s\S]*?<!-- AUTO:catalog:END -->",
+                              lambda _: block, t_readme, count=1)
 
         path.write_text(t_readme)
 
