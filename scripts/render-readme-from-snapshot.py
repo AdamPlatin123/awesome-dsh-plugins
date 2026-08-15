@@ -39,6 +39,27 @@ flowchart TB
 ```"""
 
 
+DIAGRAM_EN = """```mermaid
+flowchart TB
+    subgraph Discovery["🔍 Discovery (every {discover_hours}h · probe {probe})"]
+        A1["GitHub Search<br/>topic ×{topic_n} + keyword ×{kw_n}<br/>candidates {cand} · age {age}m"]
+        A2["Local DB merge · dedupe by repo id"]
+        A3["🚫 Private org repos excluded<br/>{spacing}s stagger · 403 backoff · dshow blocklist"]
+    end
+    subgraph Validation["📋 Validation (driver 20s streaming loop)"]
+        B1{{"package.json<br/>name + main/exports/dsh?"}}
+    end
+    B1 -->|"plugins {plugins}"| C1["k8s runtime test<br/>1 pod per plugin · concurrency {cap}<br/>dsh agent + Qwen (de-stream)"]
+    B1 -->|"non-plugins (dropped {nonplugin})"| B3["❌ dropped to save space"]
+    C1 --> D1{{"verdict · total {total}"}}
+    D1 -->|"✅ {pass} / ❌ {fail}"| E1["aggregate + README stats"]
+    D1 -->|"⚠️ {inc} env retries"| C1
+    E1 --> E2["cadence deliver<br/>delta this cycle {delta}/{batch}<br/>dual-repo bot PRs (idempotent)"]
+    S["⚖️ static 4D track (daily 02:00)"] -.-> E1
+    M["🛡 radar-probe {probe} self-heal<br/>{streams} metric streams × {stream_sec}s · done {done}"] -.-> A1
+    M -.-> C1
+```"""
+
 def latest_snapshot():
     if not SNAP_DIR.exists():
         return None
@@ -74,6 +95,7 @@ def main():
     topo = snap.get("topology", {})
 
     for path in (ROOT / "README.md", ROOT / "README.en-US.md"):
+        is_zh = path.name == "README.md"
         t_readme = path.read_text()
 
         # ① 三徽章（两版通用）
@@ -101,11 +123,45 @@ def main():
             "done": fmt(t.get("succeeded")),
             "spacing": topo.get("spacing", 35),
         }
-        block = DIAGRAM.format(**params).replace("{{", "{").replace("}}", "}")
+        tmpl = DIAGRAM if is_zh else DIAGRAM_EN
+        block = tmpl.format(**params).replace("{{", "{").replace("}}", "}")
         a, b = "<!-- AUTO:pipeline:START -->", "<!-- AUTO:pipeline:END -->"
         if a in t_readme and b in t_readme:
             i, j = t_readme.find(a), t_readme.find(b) + len(b)
-            t_readme = t_readme[:i] + a + "\n" + block + "\n" + b + t_readme[j:]
+            seg = t_readme[i:j]
+            if '<img src="assets/pipeline-diagram' in seg:
+                # 预渲染 SVG 骨架版：保留 img 与 <details> 骨架，仅更新围栏内 mermaid 活数字源码
+                seg2, n = re.subn(r"```mermaid\n[\s\S]*?\n```", block, seg, count=1)
+                t_readme = t_readme[:i] + (seg2 if n else seg) + t_readme[j:]
+            else:
+                t_readme = t_readme[:i] + a + "\n" + block + "\n" + b + t_readme[j:]
+        svg_subs = [
+            (r"(候选 )\d+", rf"\g<1>{fmt(d.get('candidates'))}"),
+            (r"(龄 )\d+(m)", rf"\g<1>{fmt(d.get('age_min'))}\g<2>"),
+            (r"(插件 )\d+", rf"\g<1>{fmt(c.get('plugins'))}"),
+            (r"(累计删 )\d+", rf"\g<1>{fmt(c.get('nonplugin'))}"),
+            (r"(并发 )\d+", rf"\g<1>{fmt(topo.get('cap', 10))}"),
+            (r"(总 )\d+", rf"\g<1>{fmt(v.get('total'))}"),
+            (r"(✅ )\d+", rf"\g<1>{fmt(v.get('pass'))}"),
+            (r"(❌ )\d+", rf"\g<1>{fmt(v.get('fail'))}"),
+            (r"(增量 )\d+/\d+", rf"\g<1>{fmt(dl.get('delta_since'))}/{topo.get('batch', 100)}"),
+            (r"(完成累计 |累计 )\d+", rf"\g<1>{fmt(t.get('succeeded'))}"),
+            (r"(candidates )\d+", rf"\g<1>{fmt(d.get('candidates'))}"),
+            (r"(age )\d+(m)", rf"\g<1>{fmt(d.get('age_min'))}\g<2>"),
+            (r"(plugins )\d+", rf"\g<1>{fmt(c.get('plugins'))}"),
+            (r"(dropped )\d+", rf"\g<1>{fmt(c.get('nonplugin'))}"),
+            (r"(concurrency )\d+", rf"\g<1>{fmt(topo.get('cap', 10))}"),
+            (r"(total )\d+", rf"\g<1>{fmt(v.get('total'))}"),
+            (r"(delta this cycle )\d+/\d+", rf"\g<1>{fmt(dl.get('delta_since'))}/{topo.get('batch', 100)}"),
+            (r"(done )\d+", rf"\g<1>{fmt(t.get('succeeded'))}"),
+        ]
+        for svg_name in ("pipeline-diagram.svg", "pipeline-diagram-en.svg"):
+            svg_path = ROOT / "assets" / svg_name
+            if svg_path.exists():
+                s = svg_path.read_text()
+                for pat, val in svg_subs:
+                    s = re.sub(pat, val, s)
+                svg_path.write_text(s)
 
         # ④ 数据截至锚（中文版；英文版无「## 工作原理」标题，正则不命中）
         anchor_line = f"> 📌 数据截至快照 `{snap['run_id']}`（{bj(snap.get('generated_at', ''))} · 分类器 {snap.get('classifier', '')}）"

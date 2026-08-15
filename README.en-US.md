@@ -23,49 +23,35 @@ Know which plugins work before you install them.
 
 ## How it works
 
+<!-- AUTO:pipeline:START -->
 <img src="assets/pipeline-diagram-en.svg" alt="pipeline diagram（预渲染 SVG，不依赖 GitHub mermaid 渲染器）" width="100%" />
 
 <details>
 <summary>图源（mermaid 源码，可复制到任意 mermaid 渲染器）</summary>
 
-```
-graph TB
-    subgraph Discovery["🔍 Auto-Discovery every 8h"]
-        A1["GitHub API<br/>org: dsh-external"]
-        A2["GitHub Search<br/>topic: dsh-plugin<br/>topic: dsh-external"]
-        A3["Known list<br/>fallback"]
+```mermaid
+flowchart TB
+    subgraph Discovery["🔍 Discovery (every 6h · probe 每 15 分钟)"]
+        A1["GitHub Search<br/>topic ×2 + keyword ×5<br/>candidates 2513 · age 366m"]
+        A2["Local DB merge · dedupe by repo id"]
+        A3["🚫 Private org repos excluded<br/>35s stagger · 403 backoff · dshow blocklist"]
     end
-    subgraph Validation["📋 Plugin Validation"]
+    subgraph Validation["📋 Validation (driver 20s streaming loop)"]
         B1{"package.json<br/>name + main/exports/dsh?"}
-        B1 -->|pass| B2["✅ Confirmed"]
-        B1 -->|fail| B3["❌ Skip"]
     end
-    subgraph Analysis["🔬 Clone & Analyze"]
-        C1["Mainline<br/>blob:none"]
-        C2["Plugin<br/>depth:1"]
-    end
-    subgraph Compat["⚖️ 4D Compatibility"]
-        D1[Patch]
-        D2[Seam]
-        D3[peerDeps]
-        D4[Compile]
-    end
-    subgraph Output["📊 Evidence"]
-        E1["reports/date/"]
-        E2["README<br/>catalog"]
-        E3[CHANGELOG]
-    end
-    RT["🤖 Runtime Test<br/>agent-driven"]
-    A1 --> B1
-    A2 --> B1
-    A3 --> B1
-    B2 --> C1 & C2
-    C1 & C2 --> D1 & D2 & D3 & D4
-    D1 & D2 & D3 & D4 --> E1 & E2 & E3
-    RT -.->|evidence| E1
+    B1 -->|"plugins 1253"| C1["k8s runtime test<br/>1 pod per plugin · concurrency 10<br/>dsh agent + Qwen (de-stream)"]
+    B1 -->|"non-plugins (dropped 1064)"| B3["❌ dropped to save space"]
+    C1 --> D1{"verdict · total 814"}
+    D1 -->|"✅ 628 / ❌ 130"| E1["aggregate + README stats"]
+    D1 -->|"⚠️ 56 env retries"| C1
+    E1 --> E2["cadence deliver<br/>delta this cycle 23/100<br/>dual-repo bot PRs (idempotent)"]
+    S["⚖️ static 4D track (daily 02:00)"] -.-> E1
+    M["🛡 radar-probe 每 15 分钟 self-heal<br/>7 metric streams × 60s · done 1126"] -.-> A1
+    M -.-> C1
 ```
 
 </details>
+<!-- AUTO:pipeline:END -->
 
 ## Quick Start
 
