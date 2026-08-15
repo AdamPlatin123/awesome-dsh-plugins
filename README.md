@@ -27,7 +27,12 @@
 > 📌 数据截至快照 `20260814T213619Z`（2026-08-15 05:36:19 UTC+8 · 分类器 unified-v1）
 
 <!-- AUTO:pipeline:START -->
-```mermaid
+<img src="assets/pipeline-diagram.svg" alt="pipeline diagram（预渲染 SVG，不依赖 GitHub mermaid 渲染器）" width="100%" />
+
+<details>
+<summary>图源（mermaid 源码，可复制到任意 mermaid 渲染器）</summary>
+
+```
 flowchart TB
     subgraph Discovery["🔍 发现（每 6 小时 · probe 每 15 分钟 巡检触发）"]
         A1["GitHub Search<br/>topic ×2 + keyword ×5<br/>候选 2513 · 龄 366m"]
@@ -47,6 +52,8 @@ flowchart TB
     M["🛡 radar-probe 每 15 分钟 自愈<br/>7 指标流 × 60s · 完成累计 1126"] -.-> A1
     M -.-> C1
 ```
+
+</details>
 <!-- AUTO:pipeline:END -->
 
 ## 快速导航

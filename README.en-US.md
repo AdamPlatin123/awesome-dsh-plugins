@@ -23,7 +23,12 @@ Know which plugins work before you install them.
 
 ## How it works
 
-```mermaid
+<img src="assets/pipeline-diagram-en.svg" alt="pipeline diagram（预渲染 SVG，不依赖 GitHub mermaid 渲染器）" width="100%" />
+
+<details>
+<summary>图源（mermaid 源码，可复制到任意 mermaid 渲染器）</summary>
+
+```
 graph TB
     subgraph Discovery["🔍 Auto-Discovery every 8h"]
         A1["GitHub API<br/>org: dsh-external"]
@@ -59,6 +64,8 @@ graph TB
     D1 & D2 & D3 & D4 --> E1 & E2 & E3
     RT -.->|evidence| E1
 ```
+
+</details>
 
 ## Quick Start
 
