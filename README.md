@@ -978,6 +978,8 @@ flowchart TB
 <details>
 <summary><h3>🎮 娱乐生活（34）</h3></summary>
 
+<img src="assets/banner-entertainment.jpg" width="640" alt="娱乐生活分类 banner">
+
 *摸鱼与趣味：小游戏、桌面宠物、表情包、音乐、股票行情与旅行*
 
 | 插件 | 类型 | 兼容性 | 说明 |
