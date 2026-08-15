@@ -70,13 +70,13 @@ flowchart TB
 
 <!-- AUTO:featured:START -->
 
-> 按 GitHub star 数排序，每 20 分钟自动刷新。数据截至 2026-08-16 05:36（UTC+8）。
+> 按 GitHub star 数排序，每 20 分钟自动刷新。数据截至 2026-08-16 05:52（UTC+8）。
 
 | # | 插件 | ⭐ | 说明 |
 |---|---|---|---|
 | 1 | [headroom](https://github.com/headroomlabs-ai/headroom) | 66443 | Compress tool outputs, logs, files, and RAG chunks befo… |
-| 2 | [dsh-web-ui](https://github.com/zhu1090093659/dsh-web-ui) | 2688 | Plugin and skin collection for DeepSeek Harness (DSH) W… |
-| 3 | [modlens](https://github.com/liustack/modlens) | 1894 | The first vision plugin for DeepSeek Harness, and the v… |
+| 2 | [dsh-web-ui](https://github.com/zhu1090093659/dsh-web-ui) | 2691 | Plugin and skin collection for DeepSeek Harness (DSH) W… |
+| 3 | [modlens](https://github.com/liustack/modlens) | 1895 | The first vision plugin for DeepSeek Harness, and the v… |
 | 4 | [TokenTracker](https://github.com/xiufengsun/TokenTracker) | 1322 | Local-first AI token usage & cost tracker for 31 coding… |
 | 5 | [dsh-TUI](https://github.com/ccch1mneyyy/dsh-TUI) | 1253 | 解决DSH 官方尚无终端 TUI 痛点的补位之作，献给偏爱cli的各位极客：Claude Code 风格全屏交… |
 | 6 | [DSH-better-sidebar](https://github.com/omdsh-dev/DSH-better-sidebar) | 1253 | 一个侧边栏的完整工作台，支持三方拓展注册新侧边栏页面。内置文件渲染编辑/终端/Git/子代理 |
@@ -90,9 +90,9 @@ flowchart TB
 | 14 | [Bigfish](https://github.com/turtle2209/Bigfish) | 211 | Bigfish —— DeepSeek Harness 的第三方桌面端，内置 Node 运行时，双击即用，附带… |
 | 15 | [oh-dsh](https://github.com/hust-open-atom-club/oh-dsh) | 193 | 一套 DSH runtime，Desktop、Web 与 TUI 三种开发体验。 |
 | 16 | [dsh-tianshu-tui](https://github.com/huiliyi37/dsh-tianshu-tui) | 171 | dsh-tianshu-tui — DeepSeek Harness terminal UI +harness… |
-| 17 | [whale-girl](https://github.com/vlln/whale-girl) | 169 | DSH Web GUI 桌面宠物插件（QQ 宠物形态）：右下角悬浮、可拖拽/投喂/玩耍的积累型伙伴。 |
+| 17 | [whale-girl](https://github.com/vlln/whale-girl) | 170 | DSH Web GUI 桌面宠物插件（QQ 宠物形态）：右下角悬浮、可拖拽/投喂/玩耍的积累型伙伴。 |
 | 18 | [dsh-browser](https://github.com/Lum1104/dsh-browser) | 162 | dsh plugin: Chrome sidebar extension that lets DSH oper… |
-| 19 | [dsh-vision-router](https://github.com/ysr666/dsh-vision-router) | 141 | Eyes for text-only DeepSeek Harness agents: built-in fr… |
+| 19 | [dsh-vision-router](https://github.com/ysr666/dsh-vision-router) | 142 | Eyes for text-only DeepSeek Harness agents: built-in fr… |
 | 20 | [dsh-visualize](https://github.com/Nagi-ovo/dsh-visualize) | 121 | 在 DSH 对话中生成交互式可视化｜Render model-generated interactive ca… |
 
 <!-- AUTO:featured:END -->
