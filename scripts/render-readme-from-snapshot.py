@@ -89,7 +89,6 @@ def main():
     snap = latest_snapshot()
     if not snap or not str(snap.get("schema", "")).startswith("radar-snapshot/"):
         print("[render] 无有效快照（radar-snapshot/1）— 保持 README 现状（安全停旧）")
-        return 0
 
     v, d, c, t, dl = (snap[k] for k in ("verdict", "discovery", "clone", "test", "deliver"))
     topo = snap.get("topology", {})
@@ -112,7 +111,7 @@ def main():
         # ③ AUTO:pipeline 活数字图（中文版专属块；英文版无该标记，自动跳过）
         params = {
             "discover_hours": topo.get("discover_hours", 6),
-            "probe": ("每 15 分钟" if "*/" in str(topo.get("probe", "")) else topo.get("probe", "每 15 分钟")),
+            "probe": ("每 15 分钟" if is_zh else "every 15 min") if "*/" in str(topo.get("probe", "")) else topo.get("probe", "每 15 分钟" if is_zh else "every 15 min"),
             "topic_n": topo.get("topic_n", 2), "kw_n": topo.get("kw_n", 3),
             "cand": fmt(d.get("candidates")), "age": fmt(d.get("age_min")),
             "plugins": fmt(c.get("plugins")), "nonplugin": fmt(c.get("nonplugin")),
@@ -130,8 +129,8 @@ def main():
             i, j = t_readme.find(a), t_readme.find(b) + len(b)
             seg = t_readme[i:j]
             if '<img src="assets/pipeline-diagram' in seg:
-                # 预渲染 SVG 骨架版：保留 img 与 <details> 骨架，仅更新围栏内 mermaid 活数字源码
-                seg2, n = re.subn(r"```mermaid\n[\s\S]*?\n```", block, seg, count=1)
+                # 骨架版（mermaid 主显示或 SVG 主显示均适用）：仅替换围栏内活数字源码
+                seg2, n = re.subn(r"```(?:mermaid)?\n[\s\S]*?\n```", block, seg, count=1)
                 t_readme = t_readme[:i] + (seg2 if n else seg) + t_readme[j:]
             else:
                 t_readme = t_readme[:i] + a + "\n" + block + "\n" + b + t_readme[j:]

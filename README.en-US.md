@@ -24,14 +24,9 @@ Know which plugins work before you install them.
 ## How it works
 
 <!-- AUTO:pipeline:START -->
-<img src="assets/pipeline-diagram-en.svg" alt="pipeline diagram（预渲染 SVG，不依赖 GitHub mermaid 渲染器）" width="100%" />
-
-<details>
-<summary>图源（mermaid 源码，可复制到任意 mermaid 渲染器）</summary>
-
 ```mermaid
 flowchart TB
-    subgraph Discovery["🔍 Discovery (every 6h · probe 每 15 分钟)"]
+    subgraph Discovery["🔍 Discovery (every 6h · probe every 15 min)"]
         A1["GitHub Search<br/>topic ×2 + keyword ×5<br/>candidates 2513 · age 366m"]
         A2["Local DB merge · dedupe by repo id"]
         A3["🚫 Private org repos excluded<br/>35s stagger · 403 backoff · dshow blocklist"]
@@ -46,9 +41,14 @@ flowchart TB
     D1 -->|"⚠️ 56 env retries"| C1
     E1 --> E2["cadence deliver<br/>delta this cycle 23/100<br/>dual-repo bot PRs (idempotent)"]
     S["⚖️ static 4D track (daily 02:00)"] -.-> E1
-    M["🛡 radar-probe 每 15 分钟 self-heal<br/>7 metric streams × 60s · done 1126"] -.-> A1
+    M["🛡 radar-probe every 15 min self-heal<br/>7 metric streams × 60s · done 1126"] -.-> A1
     M -.-> C1
 ```
+
+<details>
+<summary>If the GitHub diagram fails to render, open this: static SVG (same numbers)</summary>
+
+<img src="assets/pipeline-diagram-en.svg" alt="pipeline diagram static" width="100%" />
 
 </details>
 <!-- AUTO:pipeline:END -->
