@@ -79,6 +79,10 @@
 | dsh-subagent-max | [aaravarr/dsh-subagent-max](https://github.com/aaravarr/dsh-subagent-max) | 子代理委派按次指定模型/提供商（host 侧 `subagent_with_model` 工具）+ 多面板实时流式子代理查看器（client 侧浮动面板 token 级流式输出、卡片网格、拖拽弹出、中英 i18n）；rc.6 headless 实测通过 | ✅ |
 | dsh-permission-rules | [PerryLink/dsh-permission-rules](https://github.com/PerryLink/dsh-permission-rules) | Claude Code 风格声明式权限规则：按序 allow/deny/ask YAML 规则，在 tools/pre-execute 瀑布上匹配工具名/参数/工作区路径/agent 身份，带会话日志审计、干跑模式与热重载；npm 已发布 | 待测 |
 | dsh-approve-for-me | [timeance/dsh-approve-for-me](https://github.com/timeance/dsh-approve-for-me) | DeepSeek Harness 沙箱扩权审批：Shell/PowerShell 字面命令前缀规则、固定高风险检查、可选无工具 LLM reviewer；成功仅授予一次 `allowed-once`，高危或不确定请求回原生人工审批，支持 Web/headless Profile | 待测 |
+| dsh-plugin-marketplace | [Scorp1o117/dsh-plugin-marketplace](https://github.com/Scorp1o117/dsh-plugin-marketplace) | Web UI 内置插件市场：设置页直接浏览 github.com/topics/dsh-plugin，搜索/按 Star 排序/README 摘要；settings 通道一键安装并自动挂载 cordis.patch.yml；AI 解释；npm 已发布 | 待测 |
+| dsh-soul-md | [Scorp1o117/dsh-soul-md](https://github.com/Scorp1o117/dsh-soul-md) | soul.md 风格人设 + 长期记忆：设置页输入人设卡名称和内容即可，文件由插件自动管理；按工作区指定人设、聊天框可给会话单独切人设；AI 可自行演化人设与记忆（soul_read/soul_update/memory_*）；npm 已发布 | 待测 |
+| dsh-tdai-memory | [Scorp1o117/dsh-tdai-memory](https://github.com/Scorp1o117/dsh-tdai-memory) | TencentDB Agent Memory 的 DSH 移植：L0 对话捕获 → L1 结构化记忆提取 → L2 场景/L3 画像，自动召回注入 + 记忆/对话搜索工具；复用现有 ~/.memory-tencentdb 数据；附 Web UI 设置栏 | 待测 |
+| dsh-tool-vision | [Scorp1o117/dsh-tool-vision](https://github.com/Scorp1o117/dsh-tool-vision) | 外置视觉模型插件：inspect_image 把本地图片或 http(s) 图片 URL 发给任意 OpenAI 兼容端点，视觉模型看图的文字回答直接带回对话；附 Web UI 设置栏 | ✅ |
 ## 🧰 插件集
 
 | 插件 | 仓库 | 说明 | 运行级 |
