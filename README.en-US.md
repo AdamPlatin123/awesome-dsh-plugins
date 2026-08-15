@@ -70,30 +70,30 @@ flowchart TB
 
 <!-- AUTO:featured:START -->
 
-> 按 GitHub star 数排序，每 20 分钟自动刷新。数据截至 2026-08-15 23:36（UTC+8）。
+> 按 GitHub star 数排序，每 20 分钟自动刷新。数据截至 2026-08-15 23:53（UTC+8）。
 
 | # | 插件 | ⭐ | 说明 |
 |---|---|---|---|
-| 1 | [dsh-web-ui](https://github.com/zhu1090093659/dsh-web-ui) | 2569 | Plugin and skin collection for DeepSeek Harness (DSH) W… |
-| 2 | [modlens](https://github.com/liustack/modlens) | 1802 | The first vision plugin for DeepSeek Harness, and the v… |
-| 3 | [TokenTracker](https://github.com/xiufengsun/TokenTracker) | 1318 | Local-first AI token usage & cost tracker for 31 coding… |
-| 4 | [dsh-TUI](https://github.com/ccch1mneyyy/dsh-TUI) | 1203 | 解决DSH 官方尚无终端 TUI 痛点的补位之作，献给偏爱cli的各位极客：Claude Code 风格全屏交… |
-| 5 | [DSH-better-sidebar](https://github.com/omdsh-dev/DSH-better-sidebar) | 1141 | 一个侧边栏的完整工作台，支持三方拓展注册新侧边栏页面。内置文件渲染编辑/终端/Git/子代理 |
+| 1 | [dsh-web-ui](https://github.com/zhu1090093659/dsh-web-ui) | 2578 | Plugin and skin collection for DeepSeek Harness (DSH) W… |
+| 2 | [modlens](https://github.com/liustack/modlens) | 1809 | The first vision plugin for DeepSeek Harness, and the v… |
+| 3 | [TokenTracker](https://github.com/xiufengsun/TokenTracker) | 1319 | Local-first AI token usage & cost tracker for 31 coding… |
+| 4 | [dsh-TUI](https://github.com/ccch1mneyyy/dsh-TUI) | 1209 | 解决DSH 官方尚无终端 TUI 痛点的补位之作，献给偏爱cli的各位极客：Claude Code 风格全屏交… |
+| 5 | [DSH-better-sidebar](https://github.com/omdsh-dev/DSH-better-sidebar) | 1154 | 一个侧边栏的完整工作台，支持三方拓展注册新侧边栏页面。内置文件渲染编辑/终端/Git/子代理 |
 | 6 | [PicGo-Core](https://github.com/PicGo/PicGo-Core) | 972 | :zap:The ultimate image uploading engine. Both CLI & AP… |
 | 7 | [sandbase-harness](https://github.com/sandbaseai/sandbase-harness) | 588 | Open-source CMA-compatible agent runtime for any model,… |
-| 8 | [dsh-vision-toolkit](https://github.com/Anionex/dsh-vision-toolkit) | 417 | 让纯文本模型更好地做视觉任务的DeepSeek Harness插件：带意图的图片问答、长截图 OCR、UI 还… |
+| 8 | [dsh-vision-toolkit](https://github.com/Anionex/dsh-vision-toolkit) | 418 | 让纯文本模型更好地做视觉任务的DeepSeek Harness插件：带意图的图片问答、长截图 OCR、UI 还… |
 | 9 | [dsh-ads](https://github.com/Nagi-ovo/dsh-ads) | 400 | 把 DSH 变成 2005 年门户网站｜Parody ads, fake games, and popups … |
 | 10 | [Abu-Cowork](https://github.com/PM-Shawn/Abu-Cowork) | 328 | Open-source alternative to Claude Cowork — a local-firs… |
 | 11 | [dsh-agent-teams](https://github.com/NanmiCoder/dsh-agent-teams) | 324 | AgentTeams plugin for DeepSeek Harness |
 | 12 | [dsh-at-file](https://github.com/omdsh-dev/dsh-at-file) | 208 | Codex-style @file mentions for DeepSeek Harness: search… |
 | 13 | [Bigfish](https://github.com/turtle2209/Bigfish) | 208 | Bigfish —— DeepSeek Harness 的第三方桌面端，内置 Node 运行时，双击即用，附带… |
-| 14 | [oh-dsh](https://github.com/hust-open-atom-club/oh-dsh) | 187 | 一站式 DeepSeek Harness 社区发行版：TUI、桌面端与 Web UI 三种形态统一体验。 |
+| 14 | [oh-dsh](https://github.com/hust-open-atom-club/oh-dsh) | 188 | 一站式 DeepSeek Harness 社区发行版：TUI、桌面端与 Web UI 三种形态统一体验。 |
 | 15 | [whale-girl](https://github.com/vlln/whale-girl) | 164 | DSH Web GUI 桌面宠物插件（QQ 宠物形态）：右下角悬浮、可拖拽/投喂/玩耍的积累型伙伴。 |
 | 16 | [dsh-tianshu-tui](https://github.com/huiliyi37/dsh-tianshu-tui) | 156 | dsh-tianshu-tui — DeepSeek Harness terminal UI +harness… |
-| 17 | [dsh-browser](https://github.com/Lum1104/dsh-browser) | 145 | dsh plugin: Chrome sidebar extension that lets DSH oper… |
-| 18 | [dsh-vision-router](https://github.com/ysr666/dsh-vision-router) | 123 | Eyes for text-only DeepSeek Harness agents: built-in fr… |
+| 17 | [dsh-browser](https://github.com/Lum1104/dsh-browser) | 147 | dsh plugin: Chrome sidebar extension that lets DSH oper… |
+| 18 | [dsh-vision-router](https://github.com/ysr666/dsh-vision-router) | 125 | Eyes for text-only DeepSeek Harness agents: built-in fr… |
 | 19 | [deepseek-harness-desktop-app](https://github.com/vibeinging/deepseek-harness-desktop-app) | 115 | DeepSeek Harness Desktop App: a local AI desktop worksp… |
-| 20 | [dsh-visualize](https://github.com/Nagi-ovo/dsh-visualize) | 110 | 在 DSH 对话中生成交互式可视化｜Render model-generated interactive ca… |
+| 20 | [dsh-visualize](https://github.com/Nagi-ovo/dsh-visualize) | 111 | 在 DSH 对话中生成交互式可视化｜Render model-generated interactive ca… |
 
 <!-- AUTO:featured:END -->
 
