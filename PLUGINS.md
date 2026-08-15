@@ -78,6 +78,7 @@
 | dsh-side-chat | [heartmove/dsh-side-chat](https://github.com/heartmove/dsh-side-chat) | DSH Web 侧边聊天：选中对话片段在右侧面板的侧边聊天提问（按会话隔离，继承主会话模型/思考难度/权限），AI 回复可原文或摘要带回主会话，问题弹框选项可一键带入 | 待测 |
 | dsh-subagent-max | [aaravarr/dsh-subagent-max](https://github.com/aaravarr/dsh-subagent-max) | 子代理委派按次指定模型/提供商（host 侧 `subagent_with_model` 工具）+ 多面板实时流式子代理查看器（client 侧浮动面板 token 级流式输出、卡片网格、拖拽弹出、中英 i18n）；rc.6 headless 实测通过 | ✅ |
 | dsh-permission-rules | [PerryLink/dsh-permission-rules](https://github.com/PerryLink/dsh-permission-rules) | Claude Code 风格声明式权限规则：按序 allow/deny/ask YAML 规则，在 tools/pre-execute 瀑布上匹配工具名/参数/工作区路径/agent 身份，带会话日志审计、干跑模式与热重载；npm 已发布 | 待测 |
+| dsh-approve-for-me | [timeance/dsh-approve-for-me](https://github.com/timeance/dsh-approve-for-me) | DeepSeek Harness 沙箱扩权审批：Shell/PowerShell 字面命令前缀规则、固定高风险检查、可选无工具 LLM reviewer；成功仅授予一次 `allowed-once`，高危或不确定请求回原生人工审批，支持 Web/headless Profile | 待测 |
 ## 🧰 插件集
 
 | 插件 | 仓库 | 说明 | 运行级 |
