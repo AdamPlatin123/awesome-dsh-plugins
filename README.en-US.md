@@ -24,7 +24,7 @@ Know which plugins work before you install them.
 ## How it works
 
 <!-- AUTO:pipeline:START -->
-<img src="assets/pipeline-diagram-en.svg" alt="pipeline diagram（预渲染 SVG，不依赖 GitHub mermaid 渲染器）" width="100%" />
+<img src="assets/pipeline-diagram-en.webp" alt="pipeline diagram（预渲染 SVG，不依赖 GitHub mermaid 渲染器）" width="100%" />
 
 <details>
 <summary>图源（mermaid 源码，可复制到任意 mermaid 渲染器）</summary>
