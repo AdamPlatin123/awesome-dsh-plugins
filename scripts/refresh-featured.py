@@ -15,6 +15,8 @@ import subprocess
 import sys
 import time
 from concurrent.futures import ThreadPoolExecutor
+from datetime import datetime
+from zoneinfo import ZoneInfo
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DRY = '--dry' in sys.argv
@@ -107,7 +109,7 @@ def main():
     if len(top) < TOP_N:
         sys.exit(f'[中止] 有效条目 {len(top)} < {TOP_N}')
 
-    ts = time.strftime('%Y-%m-%d %H:%M')
+    ts = datetime.now(ZoneInfo('Asia/Shanghai')).strftime('%Y-%m-%d %H:%M')
     rows = []
     for i, (repo, v) in enumerate(top, 1):
         name = repo.split('/')[1]
@@ -116,7 +118,7 @@ def main():
             desc = desc[:55] + '…'
         rows.append(f'| {i} | [{name}](https://github.com/{repo}) | {v["stars"]} | {desc} |')
     block = ('<!-- AUTO:featured:START -->\n\n'
-             f'> 按 GitHub star 数排序，{REFRESH_LABEL}。数据截至 {ts}。\n\n'
+             f'> 按 GitHub star 数排序，{REFRESH_LABEL}。数据截至 {ts}（UTC+8）。\n\n'
              '| # | 插件 | ⭐ | 说明 |\n|---|---|---|---|\n'
              + '\n'.join(rows) + '\n\n<!-- AUTO:featured:END -->')
 

@@ -8,6 +8,7 @@
 import json
 import re
 import sys
+from datetime import datetime, timedelta
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -46,6 +47,13 @@ def latest_snapshot():
         except json.JSONDecodeError:
             continue
     return None
+def bj(iso_str, fmt="%Y-%m-%d %H:%M:%S"):
+    """ISO UTC 时间串 → 北京时间显示（UTC+8）；解析失败原样返回。"""
+    try:
+        dt = datetime.fromisoformat(str(iso_str).replace("Z", "+00:00"))
+    except ValueError:
+        return str(iso_str)
+    return (dt + timedelta(hours=8)).strftime(fmt) + " UTC+8"
 
 
 def fmt(x):
@@ -77,7 +85,8 @@ def main():
 
     # ③ AUTO:pipeline 活数字图
     params = {
-        "discover_hours": topo.get("discover_hours", 6), "probe": topo.get("probe", "*/15"),
+        "discover_hours": topo.get("discover_hours", 6),
+        "probe": ("每 15 分钟" if "*/" in str(topo.get("probe", "")) else topo.get("probe", "每 15 分钟")),
         "topic_n": topo.get("topic_n", 2), "kw_n": topo.get("kw_n", 3),
         "cand": fmt(d.get("candidates")), "age": fmt(d.get("age_min")),
         "plugins": fmt(c.get("plugins")), "nonplugin": fmt(c.get("nonplugin")),
@@ -99,7 +108,7 @@ def main():
             t_readme = t_readme.replace(m.group(0), a + "\n" + block + "\n" + b, 1)
 
     # ④ 数据截至锚（数字对齐的显式凭证）
-    anchor_line = f"> 📌 数据截至快照 `{snap['run_id']}`（{snap.get('generated_at','')} · 分类器 {snap.get('classifier','')}）"
+    anchor_line = f"> 📌 数据截至快照 `{snap['run_id']}`（{bj(snap.get('generated_at',''))} · 分类器 {snap.get('classifier','')}）"
     # 坍缩式重插：先清旧锚（含其后空行），再把标题后的任意换行序列规整为 定长两段 —— 保证幂等
     t_readme = re.sub(r"> 📌 数据截至快照 `[^\n]*\n+", "", t_readme)
     t_readme = re.sub(r"(## 工作原理\n)\n+", "\\1\\n" + anchor_line.replace("\\", "\\\\") + "\\n\\n", t_readme, count=1)
@@ -128,8 +137,8 @@ def main():
         print(f"[render] WARN 目录对账跳过: {_e}")
 
     # ④d 生态快照块：头行时间戳 / 静态轨行（读仓内最新 mainline-compat）/ 跟踪 PR / 报告链接
-    t_readme = re.sub(r"更新于 [0-9-]+ [0-9:]+ · 每 \d+ 小时刷新[^\n]*",
-                      f"渲染于快照 {snap['run_id']}（{snap['generated_at'][:16]}）· 数据源 data/snapshots/（渲染即对齐）",
+    t_readme = re.sub(r"(更新于 [0-9-]+ [0-9:]+[^\n]*|渲染于快照 [0-9A-Za-z]+（[^\n]*）)",
+                      f"渲染于快照 {snap['run_id']}（{bj(snap['generated_at'], '%Y-%m-%d %H:%M')}）· 数据源 data/snapshots/（渲染即对齐）",
                       t_readme, count=1)
     # 静态轨：快照携带（Bot A 从远程最新 mainline-compat 读取入快照）
     st = snap.get("static") or {}
@@ -156,7 +165,7 @@ def main():
         ct = cl.read_text()
         entry_tag = f"<!-- snapshot:{snap['run_id']} -->"
         if entry_tag not in ct:
-            entry = (f"## {snap['generated_at'][:10]}（运行级 · {snap['run_id']}）{entry_tag}\n"
+            entry = (f"## {bj(snap['generated_at'], '%Y-%m-%d')}（运行级 · {snap['run_id']}）{entry_tag}\n"
                      f"- 运行级实测：总 {v.get('total')}：✅可用 {v.get('pass')} / ❌真不兼容 {v.get('fail')} / "
                      f"⚠️待定 {v.get('inc')}（k8s agent · 公有生态口径）\n"
                      f"- 快照：data/snapshots/{snap['run_id']}.json（本条目与其同源）\n\n")
