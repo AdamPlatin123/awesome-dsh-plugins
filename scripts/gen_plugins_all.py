@@ -16,11 +16,20 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / 'PLUGINS-ALL.md'
 LOCATE_CACHE = ROOT / 'data' / 'locate-cache.json'
+DESC_CACHE = ROOT / 'data' / 'desc-cache.json'
 
 MARK = {'✅ 运行级可用': '`[可用]`', '❌ 运行级不兼容': '`[不兼容]`',
         '⚠️ 待定': '`[待定]`', '⏳ 未测': '`[未测]`'}
-DOMAIN_ORDER = ['🔌 Web UI 增强', '🤖 Agent 能力', '💻 编码开发', '📡 消息通讯', '🗂 文件数据',
-                '🎮 娱乐生活', '🛠 基建部署', '📚 学习研究', '❓ 其他']
+DOMAIN_ORDER = ['🎓 技能包', '🧠 记忆增强', '🎨 主题皮肤', '🛒 市场与管理',
+                '🔌 Web UI 增强', '💻 编码开发', '🤖 Agent 能力', '📡 消息通讯',
+                '🗂 文件数据', '🎮 娱乐生活', '🛠 基建部署', '📚 学习研究', '❓ 其他']
+
+try:
+    from classify import classify
+except ImportError:
+    import sys as _sys
+    _sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from classify import classify
 
 
 def bj(iso):
@@ -57,6 +66,7 @@ def pr_registered_names():
 def main():
     entries, rounds = load_snapshots()
     locate = json.loads(LOCATE_CACHE.read_text()).get('entries', {}) if LOCATE_CACHE.exists() else {}
+    desc_cache = json.loads(DESC_CACHE.read_text()) if DESC_CACHE.exists() else {}
     pr_names = pr_registered_names()
 
     n_fix = n_empty = n_amb = n_unresolved = 0
@@ -78,6 +88,23 @@ def main():
                 n_unresolved += 1
         else:
             e['locate'] = 'located'
+
+    # desc 回填（GitHub 描述缓存）+「其他」兜底重分类（taxonomy v2 规则，仅动其他类）
+    n_desc = n_reclass = 0
+    for e in entries:
+        desc = (e.get('desc') or '').strip()
+        if (not desc or desc == '—' or desc.startswith('http')) and e.get('locate') == 'located':
+            full = e['url'].split('github.com/')[1].strip('/') if 'github.com/' in e.get('url', '') else ''
+            if full.count('/') == 1 and desc_cache.get(full):
+                e['desc'] = desc_cache[full]
+                n_desc += 1
+        if e.get('domain') == '❓ 其他':
+            dom, _hit = classify(e['name'], e.get('desc') or '')
+            if dom != '❓ 其他':
+                e['domain'] = dom
+                e['reclassed'] = True
+                n_reclass += 1
+    print(f'[gen-plugins-all] desc 回填 {n_desc} · 兜底重分类 {n_reclass}（taxonomy v2）')
 
     vc = Counter(e['verdict'] for e in entries if e['locate'] == 'located')
     src = ' ⊕ '.join(f'`{rid}` {bj(ts)}' for rid, ts in rounds[:3])
