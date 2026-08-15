@@ -66,7 +66,7 @@
 | dsh-visual-plugin | [jyh20030112/dsh-visual-plugin](https://github.com/jyh20030112/dsh-visual-plugin) | DSH 视觉桥接插件：主模型无视觉时把用户图片转发到任意 OpenAI 兼容视觉模型（DeepSeek (Vision) 包装适配器 + Web 右侧面板配置/测试/历史），自动拦截描述并支持按问题定向提示词 | ✅ |
 | dsh-vision-proxy | [Flyvhidbwo/dsh-vision-proxy](https://github.com/Flyvhidbwo/dsh-vision-proxy) | DeepSeek 大脑 + 自动识图：GUI 附加的每张图片自动经 OpenAI 兼容 VLM 转译成文字后交给纯文本 DeepSeek——有 key 自动走快速通道（默认 qwen3.7-flash，支持百炼/智谱/OpenRouter 等任意兼容端点），无 key 自动探测本地 Ollama（零配置） | ✅ |
 | DSH-Plugins-Marketplace | [bradeGithub/DSH-Plugins-Marketplace](https://github.com/bradeGithub/DSH-Plugins-Marketplace) | DSH 插件市场：聚合 GitHub `dsh-plugin` 话题插件，Web GUI 一键安装/更新/已安装识别（含预装插件自动比对），静态索引 CI 每 2 小时刷新，中英双语 | ✅ |
-| dsh-doublecheck | [PerryLink/dsh-doublecheck](https://github.com/PerryLink/dsh-doublecheck) | 工程纪律插件：交付前三查——需求审讯（grill-requirements 技能）+ 红绿测试证据门 + 对抗评审；原生实现于 DSH 扩展点（技能/工具策略/审批 seam/会话日志） | 待测 |
+| dsh-doublecheck | [PerryLink/dsh-doublecheck](https://github.com/PerryLink/dsh-doublecheck) | 工程纪律插件：交付前三查——需求审讯（grill-requirements 技能）+ 红绿测试证据门 + 对抗评审 + 交付报告与逐维度核对（verify 工作流）；/doublecheck 会话命令、en/zh 双语、npm 已发布 0.6.0 | 待测 |
 
 | dsh-mcp-adapter | [NexusAgentX/dsh-mcp-adapter](https://github.com/NexusAgentX/dsh-mcp-adapter) | 一个 mcp 代理工具：按需 search/describe/call，不把每个 MCP schema 塞进上下文；Web `/mcp` 菜单可添加/连接/授权 | ✅ |
 | logicprobe | [AmethystLuna/logicprobe](https://github.com/AmethystLuna/logicprobe) | 设计文档与重构计划声明核查：claim 枚举 + 代码库事实核对 + 逻辑原语验证（7 结构 + 7 对抗探针），dsh 原生 bundle 注入核查纪律门 | ✅ |
