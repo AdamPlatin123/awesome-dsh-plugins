@@ -1486,7 +1486,6 @@ flowchart TB
 
 DSH 插件生态交流群（微信群）：插件作者、维护者与使用者都在这里，讨论插件开发、兼容性问题与新插件发布。
 
-<img src="assets/community-welcome.png" width="300" alt="DSH 插件社区交流群">
 
 > 二维码 7 天内有效（2026-08-20 前）。
 
