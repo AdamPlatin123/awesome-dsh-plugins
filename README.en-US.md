@@ -46,9 +46,9 @@ flowchart TB
 ```
 
 <details>
-<summary>If the GitHub diagram fails to render, open this: static SVG (same numbers)</summary>
+<summary>If the GitHub diagram fails to render, open this: static fallback (numbers may lag)</summary>
 
-<img src="assets/pipeline-diagram-en.svg" alt="pipeline diagram static" width="100%" />
+<img src="assets/pipeline-diagram-en.webp" alt="pipeline diagram static" width="100%" />
 
 </details>
 <!-- AUTO:pipeline:END -->
