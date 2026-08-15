@@ -62,7 +62,7 @@ graph TB
 | Maintain this radar | [⚙️ Automation SOP](docs/SOP.md) |
 | Plugin user guide | [📖 For Plugin Users](#for-plugin-users) |
 | How we assess compatibility | [🔍 How We Assess Compatibility](#how-we-assess-compatibility) |
-| Join the community | [💬 dshfind.com](#-dsh-learning-community-dshfindcom) · [WeChat group](#wechat-group) |
+| Join the community | [💬 dshfind.com](#-dsh-learning-community-dshfindcom) · [Discussion group](#community-discussion-group) |
 
 > [!IMPORTANT]
 > **Inclusion ≠ compatible, static check ≠ runtime-usable, runtime-usable ≠ security-audited.**
@@ -345,13 +345,13 @@ graph TB
 
 [🌐 dshfind.com](https://dshfind.com) · [GitHub](https://github.com/hikariming/dshfind)
 
-## WeChat Group
+## Community Discussion Group
 
-The DSH plugin ecosystem group on WeChat: plugin authors, maintainers, and users discuss plugin development, compatibility issues, and new releases.
+The DSH plugin community discussion group on WeChat: plugin authors, maintainers, and users discuss plugin development, compatibility issues, and new releases.
 
-<img src="assets/community-welcome.png" width="300" alt="DSH plugin community WeChat group">
+<img src="assets/community-discussion.jpg" width="350" alt="DSH plugin community discussion group">
 
-> The QR code is valid for 7 days (before 2026-08-20).
+> The QR code is valid for 7 days (before 2026-08-21).
 
 ## For Plugin Users
 
