@@ -47,13 +47,6 @@ flowchart TB
     M["🛡 radar-probe 每 15 分钟 自愈<br/>7 指标流 × 60s · 完成累计 1126"] -.-> A1
     M -.-> C1
 ```
-
-<details>
-<summary>GitHub 图渲染失败时点开：静态版（预渲染 SVG，数字同源）</summary>
-
-<img src="assets/pipeline-diagram.svg" alt="pipeline diagram 静态版" width="100%" />
-
-</details>
 <!-- AUTO:pipeline:END -->
 
 ## 快速导航

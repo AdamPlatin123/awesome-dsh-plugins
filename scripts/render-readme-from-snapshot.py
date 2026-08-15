@@ -134,33 +134,6 @@ def main():
                 t_readme = t_readme[:i] + (seg2 if n else seg) + t_readme[j:]
             else:
                 t_readme = t_readme[:i] + a + "\n" + block + "\n" + b + t_readme[j:]
-        svg_subs = [
-            (r"(候选 )\d+", rf"\g<1>{fmt(d.get('candidates'))}"),
-            (r"(龄 )\d+(m)", rf"\g<1>{fmt(d.get('age_min'))}\g<2>"),
-            (r"(插件 )\d+", rf"\g<1>{fmt(c.get('plugins'))}"),
-            (r"(累计删 )\d+", rf"\g<1>{fmt(c.get('nonplugin'))}"),
-            (r"(并发 )\d+", rf"\g<1>{fmt(topo.get('cap', 10))}"),
-            (r"(总 )\d+", rf"\g<1>{fmt(v.get('total'))}"),
-            (r"(✅ )\d+", rf"\g<1>{fmt(v.get('pass'))}"),
-            (r"(❌ )\d+", rf"\g<1>{fmt(v.get('fail'))}"),
-            (r"(增量 )\d+/\d+", rf"\g<1>{fmt(dl.get('delta_since'))}/{topo.get('batch', 100)}"),
-            (r"(完成累计 |累计 )\d+", rf"\g<1>{fmt(t.get('succeeded'))}"),
-            (r"(candidates )\d+", rf"\g<1>{fmt(d.get('candidates'))}"),
-            (r"(age )\d+(m)", rf"\g<1>{fmt(d.get('age_min'))}\g<2>"),
-            (r"(plugins )\d+", rf"\g<1>{fmt(c.get('plugins'))}"),
-            (r"(dropped )\d+", rf"\g<1>{fmt(c.get('nonplugin'))}"),
-            (r"(concurrency )\d+", rf"\g<1>{fmt(topo.get('cap', 10))}"),
-            (r"(total )\d+", rf"\g<1>{fmt(v.get('total'))}"),
-            (r"(delta this cycle )\d+/\d+", rf"\g<1>{fmt(dl.get('delta_since'))}/{topo.get('batch', 100)}"),
-            (r"(done )\d+", rf"\g<1>{fmt(t.get('succeeded'))}"),
-        ]
-        for svg_name in ("pipeline-diagram.svg", "pipeline-diagram-en.svg"):
-            svg_path = ROOT / "assets" / svg_name
-            if svg_path.exists():
-                s = svg_path.read_text()
-                for pat, val in svg_subs:
-                    s = re.sub(pat, val, s)
-                svg_path.write_text(s)
 
         # ④ 数据截至锚（中文版；英文版无「## 工作原理」标题，正则不命中）
         anchor_line = f"> 📌 数据截至快照 `{snap['run_id']}`（{bj(snap.get('generated_at', ''))} · 分类器 {snap.get('classifier', '')}）"

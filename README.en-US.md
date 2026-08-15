@@ -44,13 +44,6 @@ flowchart TB
     M["🛡 radar-probe every 15 min self-heal<br/>7 metric streams × 60s · done 1126"] -.-> A1
     M -.-> C1
 ```
-
-<details>
-<summary>If the GitHub diagram fails to render, open this: static fallback (numbers may lag)</summary>
-
-<img src="assets/pipeline-diagram-en.webp" alt="pipeline diagram static" width="100%" />
-
-</details>
 <!-- AUTO:pipeline:END -->
 
 ## Quick Start
