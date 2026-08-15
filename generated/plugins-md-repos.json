@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-15T05:52:07+00:00",
+  "generated_at": "2026-08-15T07:37:47+00:00",
   "source": "PLUGINS.md",
-  "count": 106,
+  "count": 109,
   "repos": [
     "1na-ko/dsh-hdc-bridge",
     "AmethystLuna/embedded-workbench",
@@ -9,6 +9,7 @@
     "Asaiuta/dsh-session-hub",
     "BeiZi6/dsh-opencodego-usage",
     "BeiZi6/dsh-theme-plugin",
+    "Cassius0924/dsh-usage-dashboard",
     "ChenChen913/dsh-session-cleaner-cli",
     "Chi-hong22/dsh-latexcp",
     "Chi-hong22/dsh-mdbox",
@@ -59,8 +60,10 @@
     "Tyan66666/billion-context-dsh",
     "Visol-456/dsh-llm-fallback",
     "WolfGenerals/ncm-player",
+    "aaravarr/dsh-subagent-max",
     "alooshxl/dsh-session-pins",
     "amlyczz/dsh-lark-link",
+    "arvin-yd/dsh-update-notifier",
     "ben7am1n/dsh-review-skills",
     "ben7am1n/dsh-security-scan",
     "ben7am1n/dsh-telegram",

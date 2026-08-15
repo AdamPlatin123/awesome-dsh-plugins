@@ -13,7 +13,7 @@
 **A daily-updated radar that auto-discovers and compatibility-tests every plugin for DeepSeek Harness.**
 Know which plugins work before you install them.
 
-[![confirmed](https://img.shields.io/badge/confirmed-106-blue)](#-star-top-20) [![scan](https://img.shields.io/badge/scan-every_8h-green)](#ecosystem-snapshot) [![tested](https://img.shields.io/badge/tested-60-orange)](#how-we-assess-compatibility) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![confirmed](https://img.shields.io/badge/confirmed-109-blue)](#-star-top-20) [![scan](https://img.shields.io/badge/scan-every_8h-green)](#ecosystem-snapshot) [![tested](https://img.shields.io/badge/tested-61-orange)](#how-we-assess-compatibility) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
 [English](README.en-US.md) | [简体中文](README.md)
 
