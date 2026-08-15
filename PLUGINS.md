@@ -155,3 +155,4 @@
 | dsh-composer-history | [PerryLink/dsh-composer-history](https://github.com/PerryLink/dsh-composer-history) | 终端风格作曲器输入历史：边缘优先方向键召回并精确还原草稿与光标、浏览器本地持久化历史、Ctrl+R 反向搜索、滑动上下文感知（压缩摘要加入召回与搜索）；dsh.bundle manifest 可安装；rc.6 headless --patch 加载实测通过 | 待测 |
 | dsh-output-styles | [PerryLink/dsh-output-styles](https://github.com/PerryLink/dsh-output-styles) | Claude Code outputStyles 兼容的运行时输出风格切换：/style 命令、按会话持久化（output_style 域）、systemPrompt 注入、六个内置风格、自定义 Markdown/JSON 风格库与热重载、Web 选择器；npm dsh-output-styles 0.3.2；rc.6 真实 bundle 安装 + profile 加载实测通过（详见 PR 自检） | 待测 |
 | dsh-auto-review | [PerryLink/dsh-auto-review](https://github.com/PerryLink/dsh-auto-review) | 审批链上的第二模型 AI 自动审查：只读审查子代理返回带理由的 allow/deny 结构化裁决，fail-closed 兜底，全量会话日志审计；Web 审查面板；npm 可装 | 待测 |
+| dsh-image-gen | [LeemanCheung/dsh-image-gen](https://github.com/LeemanCheung/dsh-image-gen) | GPT Image 2 生图工具：真实流式局部图与 Codex 风格显影动画，成图经 DSH 附件持久化并支持回放/预览/下载；20 项 keyless 测试，rc.6 Web profile 已加载验证 | 待测 |
