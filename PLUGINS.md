@@ -135,3 +135,5 @@
 | dsh-voice | [STARDUSTLC666/dsh-voice](https://github.com/STARDUSTLC666/dsh-voice) | 语音双件套：voice_tts（edge-tts 协议免费微软神经语音，Sec-MS-GEC 本地 DRM 生成）/ voice_stt（OpenAI 兼容 ASR）/ voice_list，WS 压缩 + 可选代理隧道 | 待测 |
 | dsh-codex-port | [STARDUSTLC666/dsh-codex-port](https://github.com/STARDUSTLC666/dsh-codex-port) | Codex 技能移植插件：扫描 ~/.codex 把官方 Codex 插件（本机实测 186 个插件/583 技能，一次移植 577 成功）批量转为 DSH 技能（codex_list/port/status），frontmatter 自动转换、幂等跳过 | 待测 |
 | ncm-player | [WolfGenerals/ncm-player](https://github.com/WolfGenerals/ncm-player) | 网易云音乐浮窗播放器：歌单/歌词/歌词翻译/播放队列/账号登录，适配皮肤主题 | 待测 |
+| dsh-theme-plugin | [BeiZi6/dsh-theme-plugin](https://github.com/BeiZi6/dsh-theme-plugin) | DSH Web GUI 主题工作室：5 套内置预设（codex-warm / nord / solarized / graphite / stock）+ 完全可自定义的浅/深配色（强调色、背景、前景、UI 与代码字体、半透明侧栏、对比度），经官方 theme overrideTokens 即时热切换、localStorage 持久化，纯官方接缝无补丁文件 | 待测 |
+| dsh-opencodego-usage | [BeiZi6/dsh-opencodego-usage](https://github.com/BeiZi6/dsh-opencodego-usage) | OpenCodeGo 剩余额度监视器：输入框右下角呼吸灯（按剩余额度绿/黄/红）+ 液态玻璃面板（滚动/周/月三窗口用量与重置时间），每 30 秒自动刷新，Key 自动读取 DSH 凭据（opencode-go 提供商）也可手动覆盖 | 待测 |
