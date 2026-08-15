@@ -2,7 +2,10 @@
 """render-readme-from-snapshot.py — Bot B：从已合并快照渲染 README（仓库内运行，零外部依赖）。
 
 契约：只读 data/snapshots/*.json（取 run_id 最新），绝不访问网络/指标流。
-渲染面：三徽章 + 证据层运行级行 + AUTO:pipeline 活数字图 + 「数据截至」锚。
+渲染面（中英两版 README 同步渲染；语言专属正则不命中即安全跳过）：
+  三徽章 + 证据层运行级行 + AUTO:pipeline 活数字图（中文版）+ 「数据截至」锚（中文版）
+  + 头部数字面 + 目录对账 + 生态快照块头行/静态轨/PR/报告链接。
+时间戳统一输出北京时间（UTC+8）。
 幂等：同快照重复渲染输出逐字节一致。
 """
 import json
@@ -13,7 +16,6 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SNAP_DIR = ROOT / "data" / "snapshots"
-README = ROOT / "README.md"
 
 DIAGRAM = """```mermaid
 flowchart TB
@@ -47,6 +49,8 @@ def latest_snapshot():
         except json.JSONDecodeError:
             continue
     return None
+
+
 def bj(iso_str, fmt="%Y-%m-%d %H:%M:%S"):
     """ISO UTC 时间串 → 北京时间显示（UTC+8）；解析失败原样返回。"""
     try:
@@ -69,97 +73,95 @@ def main():
     v, d, c, t, dl = (snap[k] for k in ("verdict", "discovery", "clone", "test", "deliver"))
     topo = snap.get("topology", {})
 
-    t_readme = README.read_text()
+    for path in (ROOT / "README.md", ROOT / "README.en-US.md"):
+        t_readme = path.read_text()
 
-    # ① 三徽章
-    t_readme = re.sub(r"badge/confirmed-\d+", f"badge/confirmed-{fmt(c.get('plugins'))}", t_readme)
-    t_readme = re.sub(r"badge/tested-\d+", f"badge/tested-{fmt(v.get('total'))}", t_readme)
+        # ① 三徽章（两版通用）
+        t_readme = re.sub(r"badge/confirmed-\d+", f"badge/confirmed-{fmt(c.get('plugins'))}", t_readme)
+        t_readme = re.sub(r"badge/tested-\d+", f"badge/tested-{fmt(v.get('total'))}", t_readme)
 
-    # ② 证据层运行级行
-    # 整行替换（历史版本曾因 [^|]* 在含管道行上只换首段导致行膨胀）
-    t_readme = re.sub(
-        r"^\| 运行级实测 .*$",
-        f"| 运行级实测 | ✅{v.get('pass')} 可用 · {v.get('fail')} 不兼容 · {v.get('inc')} 待定"
-        f"（共 {v.get('total')} 个，k8s agent 口径）|",
-        t_readme, count=1, flags=re.M)
+        # ② 证据层运行级行（整行替换；两版该表均为中文）
+        t_readme = re.sub(
+            r"^\| 运行级实测 .*$",
+            f"| 运行级实测 | ✅{v.get('pass')} 可用 · {v.get('fail')} 不兼容 · {v.get('inc')} 待定"
+            f"（共 {v.get('total')} 个，k8s agent 口径）|",
+            t_readme, count=1, flags=re.M)
 
-    # ③ AUTO:pipeline 活数字图
-    params = {
-        "discover_hours": topo.get("discover_hours", 6),
-        "probe": ("每 15 分钟" if "*/" in str(topo.get("probe", "")) else topo.get("probe", "每 15 分钟")),
-        "topic_n": topo.get("topic_n", 2), "kw_n": topo.get("kw_n", 3),
-        "cand": fmt(d.get("candidates")), "age": fmt(d.get("age_min")),
-        "plugins": fmt(c.get("plugins")), "nonplugin": fmt(c.get("nonplugin")),
-        "cap": topo.get("cap", 10), "total": fmt(v.get("total")),
-        "pass": fmt(v.get("pass")), "fail": fmt(v.get("fail")), "inc": fmt(v.get("inc")),
-        "delta": fmt(dl.get("delta_since")), "batch": topo.get("batch", 100),
-        "streams": topo.get("streams", 7), "stream_sec": topo.get("stream_sec", 60),
-        "done": fmt(t.get("succeeded")),
-        "spacing": topo.get("spacing", 35),
-    }
-    block = DIAGRAM.format(**params).replace("{{", "{").replace("}}", "}")
-    a, b = "<!-- AUTO:pipeline:START -->", "<!-- AUTO:pipeline:END -->"
-    if a in t_readme and b in t_readme:
-        i, j = t_readme.find(a), t_readme.find(b) + len(b)
-        t_readme = t_readme[:i] + a + "\n" + block + "\n" + b + t_readme[j:]
-    else:
-        m = re.search(r"```mermaid\s*\n.*?```", t_readme, re.S)
-        if m:
-            t_readme = t_readme.replace(m.group(0), a + "\n" + block + "\n" + b, 1)
+        # ③ AUTO:pipeline 活数字图（中文版专属块；英文版无该标记，自动跳过）
+        params = {
+            "discover_hours": topo.get("discover_hours", 6),
+            "probe": ("每 15 分钟" if "*/" in str(topo.get("probe", "")) else topo.get("probe", "每 15 分钟")),
+            "topic_n": topo.get("topic_n", 2), "kw_n": topo.get("kw_n", 3),
+            "cand": fmt(d.get("candidates")), "age": fmt(d.get("age_min")),
+            "plugins": fmt(c.get("plugins")), "nonplugin": fmt(c.get("nonplugin")),
+            "cap": topo.get("cap", 10), "total": fmt(v.get("total")),
+            "pass": fmt(v.get("pass")), "fail": fmt(v.get("fail")), "inc": fmt(v.get("inc")),
+            "delta": fmt(dl.get("delta_since")), "batch": topo.get("batch", 100),
+            "streams": topo.get("streams", 7), "stream_sec": topo.get("stream_sec", 60),
+            "done": fmt(t.get("succeeded")),
+            "spacing": topo.get("spacing", 35),
+        }
+        block = DIAGRAM.format(**params).replace("{{", "{").replace("}}", "}")
+        a, b = "<!-- AUTO:pipeline:START -->", "<!-- AUTO:pipeline:END -->"
+        if a in t_readme and b in t_readme:
+            i, j = t_readme.find(a), t_readme.find(b) + len(b)
+            t_readme = t_readme[:i] + a + "\n" + block + "\n" + b + t_readme[j:]
 
-    # ④ 数据截至锚（数字对齐的显式凭证）
-    anchor_line = f"> 📌 数据截至快照 `{snap['run_id']}`（{bj(snap.get('generated_at',''))} · 分类器 {snap.get('classifier','')}）"
-    # 坍缩式重插：先清旧锚（含其后空行），再把标题后的任意换行序列规整为 定长两段 —— 保证幂等
-    t_readme = re.sub(r"> 📌 数据截至快照 `[^\n]*\n+", "", t_readme)
-    t_readme = re.sub(r"(## 工作原理\n)\n+", "\\1\\n" + anchor_line.replace("\\", "\\\\") + "\\n\\n", t_readme, count=1)
+        # ④ 数据截至锚（中文版；英文版无「## 工作原理」标题，正则不命中）
+        anchor_line = f"> 📌 数据截至快照 `{snap['run_id']}`（{bj(snap.get('generated_at', ''))} · 分类器 {snap.get('classifier', '')}）"
+        t_readme = re.sub(r"> 📌 数据截至快照 `[^\n]*\n+", "", t_readme)
+        t_readme = re.sub(r"(## 工作原理\n)\n+", "\\1\\n" + anchor_line.replace("\\", "\\\\") + "\\n\\n", t_readme, count=1)
 
-    # ④b 开头数字面（保留人工措辞，仅替换数字）：
-    #    口号候选数（2500+ 样式，向下取整百）/ 导语收录数与索引数 / 证据层自动收录行 / scan 徽章节奏
-    cand_n = d.get("candidates") or 0
-    slogan_n = (int(cand_n) // 100) * 100 if cand_n else None
-    if slogan_n:
-        t_readme = re.sub(r"(自动发现 )\d+\+?( 候选)", rf"\g<1>{slogan_n}+\g<2>", t_readme, count=1)
-    if c.get("plugins"):
-        t_readme = re.sub(r"(收录 )\d+( 个)", rf"\g<1>{c['plugins']}\g<2>", t_readme, count=1)
-        t_readme = re.sub(r"(索引到)\d+( ?个? ?repos)", rf"\g<1>{cand_n}\g<2>", t_readme, count=1)
-        t_readme = re.sub(r"^\| 自动收录 \| \d+ 个仓库 \|$", f"| 自动收录 | {c['plugins']} 个仓库 |",
-                          t_readme, count=1, flags=re.M)
-    dh = topo.get("discover_hours", 6)
-    t_readme = re.sub(r"badge/scan-every_\d+h", f"badge/scan-every_{dh}h", t_readme, count=1)
+        # ④b 开头数字面（中文文案；英文头部走 EN 专属正则）
+        cand_n = d.get("candidates") or 0
+        slogan_n = (int(cand_n) // 100) * 100 if cand_n else None
+        if slogan_n:
+            t_readme = re.sub(r"(自动发现 )\d+\+?( 候选)", rf"\g<1>{slogan_n}+\g<2>", t_readme, count=1)
+        if c.get("plugins"):
+            t_readme = re.sub(r"(收录 )\d+( 个)", rf"\g<1>{c['plugins']}\g<2>", t_readme, count=1)
+            t_readme = re.sub(r"(索引到)\d+( ?个? ?repos)", rf"\g<1>{cand_n}\g<2>", t_readme, count=1)
+            t_readme = re.sub(r"^\| 自动收录 \| \d+ 个仓库 \|$", f"| 自动收录 | {c['plugins']} 个仓库 |",
+                              t_readme, count=1, flags=re.M)
+        dh = topo.get("discover_hours", 6)
+        t_readme = re.sub(r"badge/scan-every_\d+h", f"badge/scan-every_{dh}h", t_readme, count=1)
+        t_readme = re.sub(
+            r"\*\*\d+ plugin repos indexed\*\*[^\n]*",
+            f"**{fmt(c.get('plugins'))} plugin repos indexed** (clone-verified package.json), "
+            f"**{fmt(v.get('total'))} runtime-tested on the k8s track**.", t_readme, count=1)
 
-    # ④c 目录对账：快照携带全量条目 → 补缺行 + 坍缩计数单值
-    try:
-        import sys as _sys
-        _sys.path.insert(0, str(Path(__file__).resolve().parent))
-        from reconcile_catalog import reconcile_catalog
-        t_readme = reconcile_catalog(t_readme, snap.get("catalog_entries") or [])
-    except Exception as _e:
-        print(f"[render] WARN 目录对账跳过: {_e}")
+        # ④c 目录对账：快照携带全量条目 → 补缺行 + 坍缩计数单值
+        try:
+            sys.path.insert(0, str(Path(__file__).resolve().parent))
+            from reconcile_catalog import reconcile_catalog
+            t_readme = reconcile_catalog(t_readme, snap.get("catalog_entries") or [])
+        except Exception as _e:
+            print(f"[render] WARN 目录对账跳过: {_e}")
 
-    # ④d 生态快照块：头行时间戳 / 静态轨行（读仓内最新 mainline-compat）/ 跟踪 PR / 报告链接
-    t_readme = re.sub(r"(更新于 [0-9-]+ [0-9:]+[^\n]*|渲染于快照 [0-9A-Za-z]+（[^\n]*）)",
-                      f"渲染于快照 {snap['run_id']}（{bj(snap['generated_at'], '%Y-%m-%d %H:%M')}）· 数据源 data/snapshots/（渲染即对齐）",
-                      t_readme, count=1)
-    # 静态轨：快照携带（Bot A 从远程最新 mainline-compat 读取入快照）
-    st = snap.get("static") or {}
-    if st.get("summary"):
-        t_readme = re.sub(r"^\| 静态综合判定 \|.+$",
-                          f"| 静态综合判定 | {st['summary']}（静态轨 {st.get('date','')} · 经快照入仓） |",
-                          t_readme, count=1, flags=re.M)
-    if dl.get("open_bot_prs") is not None:
-        t_readme = re.sub(r"^\| 正在跟踪的 PR \|.+$",
-                          f"| 正在跟踪的 PR | {dl.get('open_bot_prs')}（快照 deliver 口径） |",
-                          t_readme, count=1, flags=re.M)
-    # 报告链接指向最新日期目录
-    rd = sorted([d.name for d in (ROOT / "reports").iterdir() if d.is_dir() and d.name[:2] == "20"])
-    if rd:
-        d_latest = rd[-1]
-        t_readme = re.sub(r"\[完整索引\]\(reports/[0-9-]+/index\.md\)", f"[完整索引](reports/{d_latest}/index.md)", t_readme)
-        t_readme = re.sub(r"\[静态矩阵\]\(reports/[0-9-]+/mainline-compat\.md\)", f"[静态矩阵](reports/{d_latest}/mainline-compat.md)", t_readme)
-        t_readme = re.sub(r"\[编译实验\]\(reports/[0-9-]+/compile-compat\.md\)", f"[编译实验](reports/{d_latest}/compile-compat.md)", t_readme)
-        t_readme = re.sub(r"\[运行实测\]\(reports/[0-9-]+/[^)]*\.md\)", f"[运行实测](reports/{d_latest}/agent-test.md)", t_readme)
+        # ④d 生态快照块：头行时间戳 / 静态轨行 / 跟踪 PR / 报告链接（两版块内均中文）
+        t_readme = re.sub(r"(更新于 [0-9-]+ [0-9:]+[^\n]*|渲染于快照 [0-9A-Za-z]+（[^\n]*）)",
+                          f"渲染于快照 {snap['run_id']}（{bj(snap['generated_at'], '%Y-%m-%d %H:%M')}）· 数据源 data/snapshots/（渲染即对齐）",
+                          t_readme, count=1)
+        st = snap.get("static") or {}
+        if st.get("summary"):
+            t_readme = re.sub(r"^\| 静态综合判定 \|.+$",
+                              f"| 静态综合判定 | {st['summary']}（静态轨 {st.get('date', '')} · 经快照入仓） |",
+                              t_readme, count=1, flags=re.M)
+        if dl.get("open_bot_prs") is not None:
+            t_readme = re.sub(r"^\| 正在跟踪的 PR \|.+$",
+                              f"| 正在跟踪的 PR | {dl.get('open_bot_prs')}（快照 deliver 口径） |",
+                              t_readme, count=1, flags=re.M)
+        rd = sorted([x.name for x in (ROOT / "reports").iterdir() if x.is_dir() and x.name[:2] == "20"]) \
+            if (ROOT / "reports").exists() else []
+        if rd:
+            d_latest = rd[-1]
+            t_readme = re.sub(r"\[完整索引\]\(reports/[0-9-]+/index\.md\)", f"[完整索引](reports/{d_latest}/index.md)", t_readme)
+            t_readme = re.sub(r"\[静态矩阵\]\(reports/[0-9-]+/mainline-compat\.md\)", f"[静态矩阵](reports/{d_latest}/mainline-compat.md)", t_readme)
+            t_readme = re.sub(r"\[编译实验\]\(reports/[0-9-]+/compile-compat\.md\)", f"[编译实验](reports/{d_latest}/compile-compat.md)", t_readme)
+            t_readme = re.sub(r"\[运行实测\]\(reports/[0-9-]+/[^)]*\.md\)", f"[运行实测](reports/{d_latest}/agent-test.md)", t_readme)
 
-    # ⑤ CHANGELOG 运行级条目（快照模式下的唯一写入者；按 run_id 幂等）
+        path.write_text(t_readme)
+
+    # ⑤ CHANGELOG 运行级条目（快照模式下的唯一写入者；按 run_id 幂等；两文件渲染后单次执行）
     cl = ROOT / "CHANGELOG.md"
     if cl.exists():
         ct = cl.read_text()
@@ -173,9 +175,8 @@ def main():
             i2 = ct.find("## ")
             cl.write_text(ct[:i2] + entry + ct[i2:] if i2 >= 0 else entry + ct)
 
-    README.write_text(t_readme)
     print(f"[render] run_id={snap['run_id']} · 徽章 confirmed-{c.get('plugins')}/tested-{v.get('total')} · "
-          f"判定 ✅{v.get('pass')}/❌{v.get('fail')}/⚠️{v.get('inc')}")
+          f"判定 ✅{v.get('pass')}/❌{v.get('fail')}/⚠️{v.get('inc')} · 双文件渲染完成")
     return 0
 
 
