@@ -41,6 +41,6 @@ jobs:
           gh pr create --base main --head "$BR" \
             --title "[Readme-Render-Bot] README 渲染自快照 $(ls -t data/snapshots | head -1 | sed 's/.json//')" \
             --body "PR 类别：bot README 渲染（豁免插件登记模板）。
-数据源：本仓 \`data/snapshots/\` 最新已合并快照（渲染器只读快照，不访问外部流）——数字对齐由 run_id 锚定保证。
-由 \`readme-render\` workflow 在快照合入 main 后自动触发。" \
+            数据源：本仓 \`data/snapshots/\` 最新已合并快照（渲染器只读快照，不访问外部流）——数字对齐由 run_id 锚定保证。
+            由 \`readme-render\` workflow 在快照合入 main 后自动触发。" \
             || echo "PR 已存在或创建失败，分支已推送"
