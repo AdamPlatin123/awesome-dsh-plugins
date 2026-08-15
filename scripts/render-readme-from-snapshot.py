@@ -11,6 +11,7 @@
 import json
 import re
 import sys
+from collections import Counter
 from datetime import datetime, timedelta
 from pathlib import Path
 
@@ -101,13 +102,26 @@ def main():
         t_readme = re.sub(r"badge/confirmed-\d+", f"badge/confirmed-{fmt(c.get('plugins'))}", t_readme)
         t_readme = re.sub(r"badge/tested-\d+", f"badge/tested-{fmt(v.get('total'))}", t_readme)
 
+        # ①b 四档磁贴（累积口径：catalog_entries 全量统计；含中英两组徽章 URL）
+        vcnt = Counter(e.get("verdict", "") for e in (snap.get("catalog_entries") or []))
+        n_ok = vcnt.get("✅ 运行级可用", 0)
+        n_bad = vcnt.get("❌ 运行级不兼容", 0)
+        n_inc = vcnt.get("⚠️ 待定", 0)
+        n_un = vcnt.get("⏳ 未测", 0)
+        for pat, val in ((r"(badge/✅_运行级可用-)\d+", n_ok), (r"(badge/✅_runtime_OK-)\d+", n_ok),
+                         (r"(badge/❌_运行级不兼容-)\d+", n_bad), (r"(badge/❌_incompatible-)\d+", n_bad),
+                         (r"(badge/⚠️_待定-)\d+", n_inc), (r"(badge/⚠️_pending-)\d+", n_inc),
+                         (r"(badge/·_未测-)\d+", n_un), (r"(badge/untested-)\d+", n_un)):
+            t_readme = re.sub(pat, rf"\g<1>{val}", t_readme)
+        t_readme = re.sub(r"(（当前 `)[0-9A-Za-z]+(`)", rf"\g<1>{snap['run_id']}\g<2>", t_readme, count=1)
+        t_readme = re.sub(r"(currently `)[0-9A-Za-z]+(`)", rf"\g<1>{snap['run_id']}\g<2>", t_readme, count=1)
+
         # ② 证据层运行级行（整行替换；两版该表均为中文）
         t_readme = re.sub(
             r"^\| 运行级实测 .*$",
             f"| 运行级实测 | ✅{v.get('pass')} 可用 · {v.get('fail')} 不兼容 · {v.get('inc')} 待定"
             f"（共 {v.get('total')} 个，k8s agent 口径）|",
             t_readme, count=1, flags=re.M)
-
         # ③ AUTO:pipeline 活数字图（中文版专属块；英文版无该标记，自动跳过）
         params = {
             "discover_hours": topo.get("discover_hours", 6),

@@ -13,7 +13,9 @@
 **A daily-updated radar that auto-discovers and compatibility-tests every plugin for DeepSeek Harness.**
 Know which plugins work before you install them.
 
-[![confirmed](https://img.shields.io/badge/confirmed-118-blue)](#-star-top-20) [![scan](https://img.shields.io/badge/scan-every_6h-green)](#ecosystem-snapshot) [![tested](https://img.shields.io/badge/tested-62-orange)](#how-we-assess-compatibility) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![confirmed](https://img.shields.io/badge/confirmed-1253-blue)](#-star-top-20) [![scan](https://img.shields.io/badge/scan-every_6h-green)](#ecosystem-snapshot) [![tested](https://img.shields.io/badge/tested-814-orange)](#how-we-assess-compatibility) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+
+[![✅ runtime OK](https://img.shields.io/badge/✅_runtime_OK-616-brightgreen)](#2-understand-status-unified-4-tier-scale) [![❌ incompatible](https://img.shields.io/badge/❌_incompatible-127-red)](#2-understand-status-unified-4-tier-scale) [![⚠️ pending](https://img.shields.io/badge/⚠️_pending-56-yellow)](#2-understand-status-unified-4-tier-scale) [![untested](https://img.shields.io/badge/untested-454-lightgrey)](#2-understand-status-unified-4-tier-scale)
 
 [English](README.en-US.md) | [简体中文](README.md)
 
@@ -1505,16 +1507,20 @@ The DSH plugin community discussion group on WeChat: plugin authors, maintainers
 - If the catalog misses it, search the repo name or keywords in the dated [Ecosystem Snapshot](#ecosystem-snapshot) index.
 - Treat repos that are inaccessible, lack a README or license, or sit unmaintained as high-risk candidates — not "verified plugins".
 
-### 2. Understand status
+### 2. Understand status (unified 4-tier scale)
+
+All entries use a **single runtime scale** (k8s container tests — see the test version note below). The four tiers are mutually exclusive:
 
 | Status | What it says | What it does not say |
 |---|---|---|
-| Listed | Discovery found the repo and a plugin entry signal | Does not prove it installs, runs, or is safe |
-| Compatible (static) | No blocking signal under current rules on the pinned mainline snapshot | Without a real load, not equivalent to "usable" |
-| Watch | Version, extension-point, or metadata changes need human confirmation | Not necessarily broken |
-| Needs adaptation | A patch conflict, interface drift, or another explicit blocking signal was found | Not permanently unusable; the author may have fixed it on another branch |
-| Runtime OK | Loaded or completed a task test on the recorded environment, plugin commit, and mainline snapshot | Not a full functional, performance, or security test |
-| Unknown / to investigate | Today's evidence is insufficient | Do not infer either compatibility or incompatibility |
+| ✅ Runtime OK | Actually loaded and completed the verification task under the recorded test version | Not a full functional, performance, or security test |
+| ❌ Runtime incompatible | Hard failure — missing deps, read-only sandbox, missing internal packages (3 retries all failed) | Not permanently unusable; the author may have fixed it in a newer version |
+| ⚠️ Pending | Test-environment failure; the verdict is incomplete | **Not partially compatible** — awaiting a retest |
+| · Untested | Never dispatched to a runtime test | Do not infer either compatibility or incompatibility |
+
+> [!NOTE]
+> **Test version**: dsh (in-container agent) driven by Qwen3.6-35B (via the de-stream proxy) · k8s, 5 shards · each run is anchored by the snapshot `run_id` (currently `20260814T213619Z`). The DSH npm version is not recorded per snapshot — cross-check via run_id and the `reports/agent-test/` dates.
+> **Scale note**: "tested N" in badges and stats is the single-run scale; the catalog and full listing use the cross-run cumulative scale — the numbers legitimately differ.
 
 Every conclusion carries four facts: **plugin commit, mainline commit, test date, test level**. If any one is missing, lower your trust in the result.
 

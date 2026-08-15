@@ -14,7 +14,9 @@
 
 安装前就知道哪个能用，不用自己踩坑。
 
-[![confirmed](https://img.shields.io/badge/confirmed-118-blue)](#-热门插件star-top-20) [![scan](https://img.shields.io/badge/scan-every_6h-green)](#当前生态快照) [![tested](https://img.shields.io/badge/tested-62-orange)](#本仓库如何判定) [![dshfind](https://dshfind.com/api/badge/AdamPlatin123/awesome-dsh-plugins?lang=zh)](https://dshfind.com/zh/plugins/AdamPlatin123/awesome-dsh-plugins?ref=badge) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![confirmed](https://img.shields.io/badge/confirmed-1253-blue)](#-热门插件star-top-20) [![scan](https://img.shields.io/badge/scan-every_6h-green)](#当前生态快照) [![tested](https://img.shields.io/badge/tested-814-orange)](#本仓库如何判定) [![dshfind](https://dshfind.com/api/badge/AdamPlatin123/awesome-dsh-plugins?lang=zh)](https://dshfind.com/zh/plugins/AdamPlatin123/awesome-dsh-plugins?ref=badge) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+
+[![✅ 运行级可用](https://img.shields.io/badge/✅_运行级可用-616-brightgreen)](#2-看懂状态统一四档口径) [![❌ 运行级不兼容](https://img.shields.io/badge/❌_运行级不兼容-127-red)](#2-看懂状态统一四档口径) [![⚠️ 待定](https://img.shields.io/badge/⚠️_待定-56-yellow)](#2-看懂状态统一四档口径) [![未测](https://img.shields.io/badge/·_未测-454-lightgrey)](#2-看懂状态统一四档口径)
 
 简体中文 | [English](README.en-US.md)
 
@@ -357,6 +359,7 @@ flowchart TB
 | [dsh-TUI](https://github.com/ccch1mneyyy/dsh-TUI) | 社区 | 792 | ⏳ 未测 | 解决DSH 官方尚无终端 TUI 痛点的补位之作，献给偏爱cli的各位极客：Claude Code 风格全屏交互终端插件——像素鲸鱼顶栏、实时工作状态行、思考流 |
 | [dsh-sidechain](https://github.com/omdsh-dev/dsh-sidechain) | 社区 | 4 | ❌ 运行级不兼容 | DSH 侧会话插件：/side 持续性侧会话（Codex 风格）与 /btw 一次性侧问（Claude 风格）——在临时 fork 中运行、不写入主会话历史；W |
 | [dsh-Solarized](https://github.com/zhijun-dai/dsh-Solarized) | 社区 | 0 | ⚠️ 待定 | Solarized + Selenized themes for DeepSeek Harness (dsh): four faithful palettes  |
+| [dsh-lark-link](https://github.com/amlyczz/dsh-lark-link) | 社区 | 3 | ✅ 运行级可用 | High-reliability Feishu/Lark bridge for DeepSeek Harness — QR one-click auth, mu |
 </details>
 
 *界面与交互增强插件：侧边栏、输入框、皮肤主题、面板 dock、消息显示、状态栏与可视化，让 Web 界面更顺手更好看*
@@ -817,7 +820,7 @@ flowchart TB
 *面向编程场景的工具：代码操作、git 集成、终端、diff 与编辑器、文档生成、语言支持与构建辅助*
 
 <details>
-<summary><h3>📡 消息通讯（78）</h3></summary>
+<summary><h3>📡 消息通讯（79）</h3></summary>
 
 *把 dsh 接入各类沟通渠道：微信/QQ/Telegram/飞书机器人、桌面通知、消息分享与跨端回复*
 
@@ -1508,16 +1511,20 @@ DSH 插件社区讨论群（微信群）：插件作者、维护者与使用者�
 - 若分类目录没有，再从[当前生态快照](#当前生态快照)进入当日完整索引，搜索仓库名或关键词。
 - 仓库无法公开访问、没有 README、没有许可证或长期无维护时，把它视为高风险候选，而不是“已验证插件”。
 
-### 2. 看懂状态
+### 2. 看懂状态（统一四档口径）
+
+全部条目使用**单一运行级口径**（k8s 容器实测，测试版本见下），四档互斥：
 
 | 状态 | 它说明什么 | 它不说明什么 |
 |---|---|---|
-| 已收录 | 发现流程找到了仓库及插件入口信号 | 未证明能安装、能运行或安全 |
-| 兼容（静态） | 在指定 mainline 快照上未发现当前规则定义的阻断信号 | 未经过真实加载时，不能等同于“可用” |
-| 关注 | 存在版本、扩展点或元数据变化，需要人工确认 | 不一定已经损坏 |
-| 需适配 | 已发现补丁冲突、接口漂移或其他明确阻断信号 | 不代表插件永远不可用；作者可能已在其他分支修复 |
-| 运行可用 | 在报告记录的环境、插件提交和 mainline 快照上完成了加载或任务测试 | 不是完整功能测试、性能测试或安全审计 |
-| 未知 / 待调研 | 当前证据不足 | 不应推断为兼容或不兼容 |
+| ✅ 运行级可用 | 在记录的测试版本下真实加载并完成验证任务 | 不是完整功能测试、性能测试或安全审计 |
+| ❌ 运行级不兼容 | 依赖装不上、只读沙箱、缺内部包等硬失败（3 次重试全败） | 不代表永远不可用；作者可能已在新版本修复 |
+| ⚠️ 待定 | 测试环境故障，未完成判定 | **不是部分兼容**，待重测 |
+| · 未测 | 尚未派发运行级测试 | 不应推断为兼容或不兼容 |
+
+> [!NOTE]
+> **测试版本**：dsh（容器内 agent）+ Qwen3.6-35B 驱动（经 de-stream 代理）· k8s 5 分片 · 以快照 `run_id` 锚定具体轮次（当前 `20260814T213619Z`）。DSH 的 npm 版本号未随快照记录，以 run_id 与 `reports/agent-test/` 日期交叉核对。
+> **口径提示**：徽章与统计中的「已测 N」是单轮运行口径；分类目录与全量清单是跨轮累积口径，两者数字不同属正常。
 
 每个结论都应同时看四项：**插件 commit、mainline commit、测试日期、测试层级**。缺少其中任一项时，降低对结果的信任等级。
 
