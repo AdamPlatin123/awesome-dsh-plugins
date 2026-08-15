@@ -19,14 +19,14 @@
 
 
 <details>
-<summary>## 汇总：2148 条（已定位 1998 · 监测/未定位 150）· PR 登记 22 个</summary>
+<summary><b>汇总：2148 条（已定位 1998 · 监测/未定位 150）· PR 登记 22 个</b></summary>
 
 
 
 </details>
 
 <details>
-<summary>## 🎓 技能包（8）</summary>
+<summary><b>🎓 技能包（8）</b></summary>
 
 
 - `[未测]` [dsh-seismicx](https://github.com/MOLAaaaaaaa/dsh-seismicx) ★0 — DeepSeek Harness plugin for the SeismicX earthquake-catalog skill
@@ -34,7 +34,7 @@
 
 
 <details>
-<summary>## 🧠 记忆增强（15）</summary>
+<summary><b>🧠 记忆增强（15）</b></summary>
 
 
 - `[未测]` [nowledge-mem-deepseek-harness](https://github.com/nowledge-co/nowledge-mem-deepseek-harness) ★5 — Nowledge Mem community plugin bundle for DeepSeek Harness
@@ -46,7 +46,7 @@
 
 
 <details>
-<summary>## 🎨 主题皮肤（8）</summary>
+<summary><b>🎨 主题皮肤（8）</b></summary>
 
 
 - `[可用]` [dsh-plugin-background](https://github.com/gameswu/dsh-plugin-background) ★8 — dsh壁纸插件
@@ -56,7 +56,7 @@
 
 
 <details>
-<summary>## 🛒 市场与管理（31）</summary>
+<summary><b>🛒 市场与管理（31）</b></summary>
 
 
 - `[可用]` [dsh-mcp-manager](https://github.com/hyqhyq3/dsh-mcp-manager) ★6 — MCP server manager plugin for DeepSeek Harness: Settings → MCP page, OAuth (PKCE + dynamic client registration
@@ -78,7 +78,7 @@
 
 
 <details>
-<summary>## 🔌 Web UI 增强（360）</summary>
+<summary><b>🔌 Web UI 增强（360）</b></summary>
 
 
 - `[可用]` [modlens](https://github.com/liustack/modlens) ★1421 — The first vision plugin for DeepSeek Harness, and the vision bridge for every text-only coding agent
@@ -384,7 +384,7 @@
 
 
 <details>
-<summary>## 💻 编码开发（362）</summary>
+<summary><b>💻 编码开发（362）</b></summary>
 
 
 - `[未测]` [TokenTracker](https://github.com/xiufengsun/TokenTracker) ★1312 — Local-first AI token usage & cost tracker for 31 coding tools incl
@@ -689,7 +689,7 @@
 
 
 <details>
-<summary>## 🤖 Agent 能力（317）</summary>
+<summary><b>🤖 Agent 能力（317）</b></summary>
 
 
 - `[可用]` [sandbase-harness](https://github.com/sandbaseai/sandbase-harness) ★579 — Open-source CMA-compatible agent runtime for any model, with MCP tools, sandboxed sessions, audit, replay, and
@@ -950,7 +950,7 @@
 
 
 <details>
-<summary>## 📡 消息通讯（131）</summary>
+<summary><b>📡 消息通讯（131）</b></summary>
 
 
 - `[可用]` [dsh-chat-import](https://github.com/Nwflower/dsh-chat-import) ★30 — 从Claude Code、Codex、Reasonix等Agent工具导入迁移历史消息，并在DeepSeek Harness(DSH)中继续对话
@@ -1064,7 +1064,7 @@
 
 
 <details>
-<summary>## 🗂 文件数据（112）</summary>
+<summary><b>🗂 文件数据（112）</b></summary>
 
 
 - `[不兼容]` [dsh-vision-toolkit](https://github.com/Anionex/dsh-vision-toolkit) ★365 — 让纯文本模型更好地做视觉任务的DeepSeek Harness插件：带意图的图片问答、长截图 OCR、UI 还原等｜DeepSeek Harness-native integration for agent-vision
@@ -1163,7 +1163,7 @@
 
 
 <details>
-<summary>## 🎮 娱乐生活（55）</summary>
+<summary><b>🎮 娱乐生活（55）</b></summary>
 
 
 - `[可用]` [whale-girl](https://github.com/vlln/whale-girl) ★143 — DSH Web GUI 桌面宠物插件（QQ 宠物形态）：右下角悬浮、可拖拽/投喂/玩耍的积累型伙伴
@@ -1209,7 +1209,7 @@
 
 
 <details>
-<summary>## 🛠 基建部署（152）</summary>
+<summary><b>🛠 基建部署（152）</b></summary>
 
 
 - `[未测]` [Bigfish](https://github.com/turtle2209/Bigfish) ★184 — Bigfish —— DeepSeek Harness 的第三方桌面端，内置 Node 运行时，双击即用，附带桌面萌宠
@@ -1296,7 +1296,7 @@
 
 
 <details>
-<summary>## 📚 学习研究（26）</summary>
+<summary><b>📚 学习研究（26）</b></summary>
 
 
 - `[可用]` [dsh-scholar](https://github.com/lzszq/dsh-scholar) ★15 — dsh-scholar
@@ -1319,7 +1319,7 @@
 
 
 <details>
-<summary>## ❓ 其他（571）</summary>
+<summary><b>❓ 其他（571）</b></summary>
 
 
 - `[可用]` [dsh-toy](https://github.com/c3ll256/dsh-toy) ★33 — Toy Control Protocol for DSH
@@ -1705,7 +1705,7 @@
 
 
 <details>
-<summary>## 附录</summary>
+<summary><b>附录</b></summary>
 
 
 - 判定与定位正交；监测类条目的原始判定保留于 data/snapshots/，定位成功后自动恢复展示。
