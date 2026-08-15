@@ -1,6 +1,14 @@
 # Awesome DSH Plugins
 
-<img src="assets/banner-entertainment.jpg" width="880" alt="Awesome DSH Plugins banner">
+<p align="center">
+  <img src="assets/banner-entertainment.jpg" width="440" alt="Awesome DSH Plugins banner"><br>
+  <img src="assets/stickers/04-fish-philosophy.png" width="76" alt="鱼哲学">
+  <img src="assets/stickers/06-server-busy.png" width="76" alt="服务器繁忙">
+  <img src="assets/stickers/12-restart-myself.png" width="76" alt="重启我自己">
+  <img src="assets/stickers/17-memory-alive.png" width="76" alt="记忆还活着">
+  <img src="assets/stickers/21-tests-passed.png" width="76" alt="测试通过">
+  <img src="assets/stickers/24-fixed-review.png" width="76" alt="修好了求审">
+</p>
 
 **自动发现、证据验证的 DeepSeek Harness 插件生态雷达。自动发现 2500+ 候选、逐个 k8s 实测**
 
