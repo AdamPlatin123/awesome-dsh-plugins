@@ -1,5 +1,7 @@
 # Awesome DSH Plugins
 
+<img src="assets/banner-entertainment.jpg" width="880" alt="Awesome DSH Plugins banner">
+
 **自动发现、证据验证的 DeepSeek Harness 插件生态雷达。自动发现 2500+ 候选、逐个 k8s 实测**
 
 安装前就知道哪个能用，不用自己踩坑。
@@ -977,8 +979,6 @@ flowchart TB
 
 <details>
 <summary><h3>🎮 娱乐生活（34）</h3></summary>
-
-<img src="assets/banner-entertainment.jpg" width="640" alt="娱乐生活分类 banner">
 
 *摸鱼与趣味：小游戏、桌面宠物、表情包、音乐、股票行情与旅行*
 

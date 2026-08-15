@@ -1,5 +1,7 @@
 # Awesome DSH Plugins
 
+<img src="assets/banner-entertainment.jpg" width="880" alt="Awesome DSH Plugins banner">
+
 **A daily-updated radar that auto-discovers and compatibility-tests every plugin for DeepSeek Harness.**
 Know which plugins work before you install them.
 
@@ -252,8 +254,6 @@ graph TB
 
 <details>
 <summary><h3>🎮 娱乐生活（7）</h3></summary>
-
-<img src="assets/banner-entertainment.jpg" width="640" alt="Entertainment category banner">
 
 *摸鱼与趣味：小游戏、桌面宠物、表情包、音乐、股票行情与旅行*
 
