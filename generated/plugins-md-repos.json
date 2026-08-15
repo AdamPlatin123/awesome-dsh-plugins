@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-15T16:53:54+00:00",
+  "generated_at": "2026-08-15T19:00:31+00:00",
   "source": "PLUGINS.md",
-  "count": 130,
+  "count": 132,
   "repos": [
     "1na-ko/dsh-hdc-bridge",
     "AmethystLuna/embedded-workbench",
@@ -93,6 +93,7 @@
     "flyingtimes/dsh-trajectory-reader",
     "fuhefei/dsh-sentinel",
     "gtaifu/dsh-wechat-bridge",
+    "headroomlabs-ai/headroom",
     "heartmove/dsh-side-chat",
     "huiliyi37/dsh-tianshu-tui",
     "jkrandom-sudo/dsh-ci-doctor",
@@ -100,6 +101,7 @@
     "junhongchashui/dsh-plugin-web-access",
     "jyh20030112/dsh-visual-plugin",
     "left0ver/dsh-file-review",
+    "lifeodyssey/dsh-compressor",
     "lynx-gt/dsh-subagent-cwd",
     "lynx-gt/dsh-subagent-tools",
     "mario841859784/dsh-onebot",
