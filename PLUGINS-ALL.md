@@ -18,8 +18,11 @@
 > 〔PR〕= 经已合并 PR 正式登记；收录 ≠ 兼容 ≠ 运行可用 ≠ 安全审计。
 
 
+
 <details>
 <summary><b>汇总：2148 条（已定位 1998 · 监测/未定位 150）· PR 登记 22 个</b></summary>
+
+
 
 
 
@@ -33,6 +36,9 @@
 - `[待定]` [dsh-wanghong-handwritten-ppt](https://github.com/tjxj/dsh-wanghong-handwritten-ppt) ★0 — 王虹学术手写风 PPT Skill for DeepSeek Harness · Notability-style HTML slides and PNG ex
 
 
+
+</details>
+
 <details>
 <summary><b>🧠 记忆增强（15）</b></summary>
 
@@ -45,6 +51,9 @@
 - `[可用]` [dsh-ops-kit-legacy](https://github.com/LeslieWylie/dsh-ops-kit-legacy) ★0 — Archived: evidence-driven memory, multi-agent orchestration, benchmark, and plug
 
 
+
+</details>
+
 <details>
 <summary><b>🎨 主题皮肤（8）</b></summary>
 
@@ -54,6 +63,9 @@
 - `[未测]` [dsh-catnap-studio](https://github.com/luoyan96/dsh-catnap-studio) ★0 — DeepSeek Harness Web UI 的三合一猫咪主题皮肤插件，内置暖纸猫窝、月夜守护与猫咪工坊
 - `[待定]` [silk-background](https://github.com/z21for99/silk-background) ★0 — DSH Web GUI 客户端插件：WebGL Silk 丝绸动态背景 + 全站玻璃化皮肤（官方主题 token 覆盖，零依赖） \| WebGL silk sh
 
+
+
+</details>
 
 <details>
 <summary><b>🛒 市场与管理（31）</b></summary>
@@ -76,6 +88,9 @@
 - `[可用]` [dsh-mod-manager](https://github.com/HamSamMike/dsh-mod-manager) ★0 — A mod-style plugin manager for DeepSeek Harness web profiles.
 - `[未测]` [dsh-dynamic-plugins-manager](https://github.com/wacly/dsh-dynamic-plugins-manager) ★0 — deepseek harness 动态插件管理
 
+
+
+</details>
 
 <details>
 <summary><b>🔌 Web UI 增强（360）</b></summary>
@@ -383,6 +398,9 @@
 - `[待定]` [dsh-Solarized](https://github.com/zhijun-dai/dsh-Solarized) ★0 — Solarized + Selenized themes for DeepSeek Harness (dsh): four faithful palettes
 
 
+
+</details>
+
 <details>
 <summary><b>💻 编码开发（362）</b></summary>
 
@@ -688,6 +706,9 @@
 - `[可用]` [dshbase-catalog](https://github.com/ylwl1997/dshbase-catalog) ★0 — Search the dshbase plugin directory from inside DeepSeek Harness
 
 
+
+</details>
+
 <details>
 <summary><b>🤖 Agent 能力（317）</b></summary>
 
@@ -949,6 +970,9 @@
 - `[可用]` [dsh-vlm-bridge](https://github.com/me9rez/dsh-vlm-bridge) ★0 — DeepSeek Harness (dsh) bundle plugin: vision_analyze tool lets text-only LLM age
 
 
+
+</details>
+
 <details>
 <summary><b>📡 消息通讯（131）</b></summary>
 
@@ -1063,6 +1087,9 @@
 - `[不兼容]` [dsh-whale-diving](https://github.com/ZeroCode321/dsh-whale-diving) ★0 — A decorative whale-diving activity icon for the DeepSeek Harness Web chat flow:
 
 
+
+</details>
+
 <details>
 <summary><b>🗂 文件数据（112）</b></summary>
 
@@ -1162,6 +1189,9 @@
 - `[待定]` [dsh-workspace-enhance](https://github.com/yuanzehui313/dsh-workspace-enhance) ★0 — DeepSeek Harness workspace & session enhancement plugin: recycle bin, cross-work
 
 
+
+</details>
+
 <details>
 <summary><b>🎮 娱乐生活（55）</b></summary>
 
@@ -1207,6 +1237,9 @@
 - `[未测]` [dsh-desktop-pet](https://github.com/2002yxy/dsh-desktop-pet) ★0 — Unofficial customizable desktop-pet plugin for DeepSeek Harness
 - `[可用]` [dsh-memento](https://github.com/PerryLink/dsh-memento) ★0 — Bounded, layered, approval-gated, auditable cross-session memory for DeepSeek Harness (capability seam: ctx.me
 
+
+
+</details>
 
 <details>
 <summary><b>🛠 基建部署（152）</b></summary>
@@ -1295,6 +1328,9 @@
 - `[待定]` [dsh-plugin-ssh-remotes](https://github.com/zsmx233/dsh-plugin-ssh-remotes) ★0 — —
 
 
+
+</details>
+
 <details>
 <summary><b>📚 学习研究（26）</b></summary>
 
@@ -1317,6 +1353,9 @@
 - `[未测]` [dsh-plugin-wallpaper](https://github.com/Tree-Summer/dsh-plugin-wallpaper) ★0 — 可以在deepseek harness网页端自定义背景图片的插件
 - `[歧义监测]` **dsh-wallpaper** — 同名多仓，判定暂不展示
 
+
+
+</details>
 
 <details>
 <summary><b>❓ 其他（571）</b></summary>
@@ -1704,6 +1743,9 @@
 - `[可用]` [dsh-vision-tool](https://github.com/re-ITRT/dsh-vision-tool) ★0 — DeepSeek Harness vision plugin: vision_analyze tool with a Models-style settings
 
 
+
+</details>
+
 <details>
 <summary><b>附录</b></summary>
 
@@ -1713,7 +1755,6 @@
 - 同名覆盖与 URL 占位为快照原生限制，主键以 GitHub repo id 为准。
 
 
-</details>
 
 ---
 
@@ -3543,3 +3584,5 @@
 - `[待定]` [slcatwujian-dsh-vision-plugin](https://github.com/yan5236/slcatwujian-dsh-vision-plugin) ★0 — 让不支持图片输入的主模型通过已配置的视觉模型理解图片的 DSH 插件：自动桥接、像素坐标描述、vision_ask 追问工具与设置页
 - `[待定]` [slcatwujian-dsh-vision-plugin](https://github.com/yan5236/slcatwujian-dsh-vision-plugin) ★1 — 让不支持图片输入的主模型通过已配置的视觉模型理解图片的 DSH 插件：自动桥接、像素坐标描述、vision_ask 追问工具与设置页
 - `[可用]` [flomo-dsh-plugin](https://github.com/Richardcoder849/flomo-dsh-plugin) ★0 — 仿 flomo 便签 + 知识图谱 的 DeepSeek Harness (DSH) 动态 Cordis 插件 / flomo-style memo plugin with knowledge graph
+
+</details>
