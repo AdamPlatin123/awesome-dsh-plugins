@@ -139,6 +139,7 @@
 | dsh-whale-animation | [LeemanCheung/dsh-whale-animation](https://github.com/LeemanCheung/dsh-whale-animation) | DSH Web 回合状态旁的闭环鲸鱼潜行动画：资源内嵌、运行时离线，并为 `prefers-reduced-motion` 用户提供静态 PNG 回退 | 待测 |
 | dsh-token-usage | [LeemanCheung/dsh-token-usage](https://github.com/LeemanCheung/dsh-token-usage) | 持久化 Token 用量记录与设置页仪表盘：按模型、会话和日期聚合，展示 52 周热力图、缓存命中率及完整输入输出 bucket，不保存提示词或回复正文 | 待测 |
 | dsh-task-dag | [LeemanCheung/dsh-task-dag](https://github.com/LeemanCheung/dsh-task-dag) | DSH Web 持久实时任务 DAG：统一展示会话、子代理与 workflow 阶段，支持状态联动和节点导航，不维护并行数据库或轮询 Host | 待测 |
+| dsh-qq2007-skin | [LeemanCheung/dsh-qq2007-skin](https://github.com/LeemanCheung/dsh-qq2007-skin) | DSH Web GUI 的 QQ 2007 风格复古皮肤：注册 72 个原生主题 token、注入作用域三栏窗框与原创像素伙伴，支持设置页开关且只保存浏览器本地外观偏好 | 待测 |
 | dsh-sql | [STARDUSTLC666/dsh-sql](https://github.com/STARDUSTLC666/dsh-sql) | 工程师级数据库插件：sql_list/query/exec/schema 四工具，SQLite/MySQL/PostgreSQL 三引擎、多连接、只读白名单、写操作审批门、行数钳制 | 待测 |
 | dsh-feishucard | [cmfok/dsh-feishucard](https://github.com/cmfok/dsh-feishucard) | DSH ↔ 飞书桥（自研非 fork）：官方 SDK 长连接（无需公网）+ 流式回复卡片（过程话语内联/工具折叠面板/状态符号/限流退避熔断兜底），每聊天独立会话 + live 复用保上下文，配置独立 ~/.dsh-feishucard；npm dsh-feishucard v0.1.0，冒烟 18 项 + 实机链路实测通过 | ✅ |
 | dsh-remotion | [STARDUSTLC666/dsh-remotion](https://github.com/STARDUSTLC666/dsh-remotion) | 视频创作技能插件：注册 Remotion 官方移植技能（React 编程式视频，动画/音频/字幕/3D/图表/字体 + 38 个规则文件），安装即用 | 待测 |
