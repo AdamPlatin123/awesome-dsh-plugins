@@ -155,3 +155,17 @@
 | dsh-output-styles | [PerryLink/dsh-output-styles](https://github.com/PerryLink/dsh-output-styles) | Claude Code outputStyles 兼容的运行时输出风格切换：/style 命令、按会话持久化（output_style 域）、systemPrompt 注入、六个内置风格、自定义 Markdown/JSON 风格库与热重载、Web 选择器；npm dsh-output-styles 0.3.2；rc.6 真实 bundle 安装 + profile 加载实测通过（详见 PR 自检） | 待测 |
 | dsh-auto-review | [PerryLink/dsh-auto-review](https://github.com/PerryLink/dsh-auto-review) | 审批链上的第二模型 AI 自动审查：只读审查子代理返回带理由的 allow/deny 结构化裁决，fail-closed 兜底，全量会话日志审计；Web 审查面板；npm 可装 | 待测 |
 | dsh-image-gen | [LeemanCheung/dsh-image-gen](https://github.com/LeemanCheung/dsh-image-gen) | GPT Image 2 生图工具：真实流式局部图与 Codex 风格显影动画，成图经 DSH 附件持久化并支持回放/预览/下载；20 项 keyless 测试，rc.6 Web profile 已加载验证 | 待测 |
+| dsh-lsp-actions | [PerryLink/dsh-lsp-actions](https://github.com/PerryLink/dsh-lsp-actions) | LSP 动作面：诊断/格式化/补全/代码动作/符号/签名提示/inlay 提示/重命名 8 工具，官方 seam 优先 + 内置 stdio 客户端兜底；写入走 write-intent 与沙箱策略，其余只读；241 测试 + 真实 tsls e2e + CI 矩阵全绿，npm dsh-lsp-actions | 待测 |
+| 1 | [dsh-web-ui](https://github.com/zhu1090093659/dsh-web-ui) | 2255 | Plugin and skin collection for DeepSeek Harness (DSH) W… |
+| 2 | [modlens](https://github.com/liustack/modlens) | 1528 | The first vision plugin for DeepSeek Harness, and the v… |
+| 3 | [TokenTracker](https://github.com/xiufengsun/TokenTracker) | 1315 | Local-first AI token usage & cost tracker for 31 coding… |
+| 4 | [dsh-TUI](https://github.com/ccch1mneyyy/dsh-TUI) | 1049 | 解决DSH 官方尚无终端 TUI 痛点的补位之作，献给偏爱cli的各位极客：Claude Code 风格全屏交… |
+| 6 | [DSH-better-sidebar](https://github.com/omdsh-dev/DSH-better-sidebar) | 916 | 一个侧边栏的完整工作台，支持三方拓展注册新侧边栏页面。内置文件渲染编辑/终端/Git/子代理 |
+| 8 | [dsh-vision-toolkit](https://github.com/Anionex/dsh-vision-toolkit) | 385 | 让纯文本模型更好地做视觉任务的DeepSeek Harness插件：带意图的图片问答、长截图 OCR、UI 还… |
+| 9 | [dsh-ads](https://github.com/Nagi-ovo/dsh-ads) | 372 | 把 DSH 变成 2005 年门户网站｜Parody ads, fake games, and popups … |
+| 11 | [dsh-agent-teams](https://github.com/NanmiCoder/dsh-agent-teams) | 290 | AgentTeams plugin for DeepSeek Harness |
+| 14 | [dsh-at-file](https://github.com/omdsh-dev/dsh-at-file) | 171 | Codex-style @file mentions for DeepSeek Harness: search… |
+| 15 | [whale-girl](https://github.com/vlln/whale-girl) | 151 | DSH Web GUI 桌面宠物插件（QQ 宠物形态）：右下角悬浮、可拖拽/投喂/玩耍的积累型伙伴。官方 re… |
+| 17 | [dsh-browser](https://github.com/Lum1104/dsh-browser) | 115 | dsh plugin: Chrome sidebar extension that lets DSH oper… |
+| 18 | [deepseek-harness-desktop-app](https://github.com/vibeinging/deepseek-harness-desktop-app) | 111 | DeepSeek Harness Desktop App: a local AI desktop worksp… |
+| 19 | [modsearch](https://github.com/liustack/modsearch) | 99 | The web plugin for DeepSeek Harness, and the search bri… |
