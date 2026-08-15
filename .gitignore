@@ -12,3 +12,4 @@ logs/
 .dsh-radar.env
 generated/*
 !generated/plugins-md-repos.json
+__pycache__/
