@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-15T09:23:54+00:00",
+  "generated_at": "2026-08-15T12:47:08+00:00",
   "source": "PLUGINS.md",
-  "count": 118,
+  "count": 119,
   "repos": [
     "1na-ko/dsh-hdc-bridge",
     "AmethystLuna/embedded-workbench",
@@ -109,6 +109,7 @@
     "springbrand-lab/dsh-oauth-mcp-client",
     "suimi8/dsh-cost-ledger",
     "suimi8/dsh-test-runner",
+    "timeance/dsh-approve-for-me",
     "urzeye/dsh-outline",
     "vibeinging/dsh-work",
     "weijiafu14/dsh-remote-sandbox",
