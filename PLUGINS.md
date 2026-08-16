@@ -196,3 +196,4 @@
 | dsh-passwords | [slywalker2006/dsh-passwords](https://github.com/slywalker2006/dsh-passwords) | 登录网关（密码门）：让 dsh 安全远程访问——首次配置创建主账号、多用户管理、子用户权限/配额（工作区、token、时长、上传/git）、bcrypt + 静态加密、防爆破锁定、自动 HTTPS | ✅ |
 | dsh-feishu | [PGZXB/dsh-feishu](https://github.com/PGZXB/dsh-feishu) | DeepSeek Harness 的飞书 UI：面板驱动控制台，卡内审批与提问，流式卡片，扫码一键配置 | 待测 |
 | dsh-draw | [PerryLink/dsh-draw](https://github.com/PerryLink/dsh-draw) | 统一静态图像生成路由：单一 image_generate 工具 + 标准参数，配置驱动的 OpenAI 兼容引擎路由（OpenAI Images、智谱 CogView 及任意兼容端点）与健康感知回退，工作区持久附件结果、按会话配额记账、对话内结果卡片，API key 存为凭据引用 | 待测 |
+| dsh-library | [PerryLink/dsh-library](https://github.com/PerryLink/dsh-library) | 本地优先文档知识库：library_add/remove/list、语义+关键词混合 library_search（多样性重排、相关性过滤、避免 lost-in-the-middle）、引用感知注入与 library_cite_check/diagnose，SQLite 索引 + 本地嵌入，零模型下载 | 待测 |
