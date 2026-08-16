@@ -198,3 +198,4 @@
 | dsh-draw | [PerryLink/dsh-draw](https://github.com/PerryLink/dsh-draw) | 统一静态图像生成路由：单一 image_generate 工具 + 标准参数，配置驱动的 OpenAI 兼容引擎路由（OpenAI Images、智谱 CogView 及任意兼容端点）与健康感知回退，工作区持久附件结果、按会话配额记账、对话内结果卡片，API key 存为凭据引用 | 待测 |
 | dsh-library | [PerryLink/dsh-library](https://github.com/PerryLink/dsh-library) | 本地优先文档知识库：library_add/remove/list、语义+关键词混合 library_search（多样性重排、相关性过滤、避免 lost-in-the-middle）、引用感知注入与 library_cite_check/diagnose，SQLite 索引 + 本地嵌入，零模型下载 | 待测 |
 | dsh-budget | [PerryLink/dsh-budget](https://github.com/PerryLink/dsh-budget) | 成本治理：按模型/会话/天聚合 token 与费用计量，会话/日/月预算上限 + 阈值告警（桌面通知 + webhook）与超限 alert/block/degrade 策略，碳足迹估算、分模型延迟基准、Settings 预算页与 /budget 命令 | 待测 |
+| dsh-defend | [PerryLink/dsh-defend](https://github.com/PerryLink/dsh-defend) | 注入/越狱/密钥泄露检测 + 危险删除门禁：Aho-Corasick 引擎在用户消息、工具参数、工具结果三处按 allow/ask/block 拦截（脱敏 defend/detection 审计事件、defend_report 工具、/defend 命令），并拒绝工作区外的递归删除命令 | 待测 |
