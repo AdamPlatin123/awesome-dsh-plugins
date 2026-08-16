@@ -23,6 +23,7 @@ LOCATE_CACHE = ROOT / 'data' / 'locate-cache.json'
 DESC_CACHE = ROOT / 'data' / 'desc-cache.json'
 REPO_MAP = ROOT / 'data' / 'repo-map.json'
 URL_AUDIT = ROOT / 'data' / 'url-audit.json'
+CURATED_OVERRIDES = ROOT / 'data' / 'curated-overrides.json'
 
 REAL_URL_RE = re.compile(r'github\.com/([A-Za-z0-9_.-]+)/([A-Za-z0-9_.-]+)')
 # 互斥判定（✅/❌ 矛盾才降待定；待定/未测属非结论性，不参与冲突）
@@ -147,6 +148,19 @@ def pr_registered_names():
     return names
 
 
+def curated_overrides():
+    """Read manual curation overrides for ambiguous/placeholder radar entries."""
+    if not CURATED_OVERRIDES.exists():
+        return {}
+    try:
+        data = json.loads(CURATED_OVERRIDES.read_text(encoding='utf-8'))
+    except (json.JSONDecodeError, OSError):
+        return {}
+    entries = data.get('entries') if isinstance(data, dict) else None
+    return entries if isinstance(entries, dict) else {}
+
+
+
 def main():
     entries, rounds = load_snapshots()
     locate = json.loads(LOCATE_CACHE.read_text()).get('entries', {}) if LOCATE_CACHE.exists() else {}
@@ -160,25 +174,39 @@ def main():
     # 实时 star 映射（locate-cache 的 full_name → stargazerCount），对全部已定位条目生效
     live_star = {r['full_name'].lower(): r['star'] for r in locate.values()
                  if r.get('status') == 'found' and r.get('full_name') and isinstance(r.get('star'), int)}
+    curated = curated_overrides()
     url_audit = json.loads(URL_AUDIT.read_text()).get('entries', {}) if URL_AUDIT.exists() else {}
 
     n_fix = n_empty = n_amb = n_unresolved = n_star = 0
     for e in entries:
         if 'search?q=' in (e.get('url') or ''):
-            r = locate.get(e['name'], {})
-            if r.get('status') == 'found':
-                e['url'] = f"https://github.com/{r['full_name']}"
+            c = curated.get(e['name'])
+            if c:
+                e['url'] = c.get('url') or f"https://github.com/{c['full_name']}"
                 e['locate'] = 'located'
-                n_fix += 1
-            elif r.get('status') == 'not_found':
-                e['locate'] = 'empty_watch'
-                n_empty += 1
-            elif r.get('status'):
-                e['locate'] = 'ambiguous_watch'
-                n_amb += 1
+                if c.get('verdict'):
+                    e['verdict'] = c['verdict']
+                if c.get('desc'):
+                    e['desc'] = c['desc']
+                if c.get('star') is not None:
+                    e['star'] = c['star']
+                if c.get('domain'):
+                    e['domain'] = c['domain']
             else:
-                e['locate'] = 'unresolved'   # 新占位且无复核缓存
-                n_unresolved += 1
+                r = locate.get(e['name'], {})
+                if r.get('status') == 'found':
+                    e['url'] = f"https://github.com/{r['full_name']}"
+                    e['locate'] = 'located'
+                    n_fix += 1
+                elif r.get('status') == 'not_found':
+                    e['locate'] = 'empty_watch'
+                    n_empty += 1
+                elif r.get('status'):
+                    e['locate'] = 'ambiguous_watch'
+                    n_amb += 1
+                else:
+                    e['locate'] = 'unresolved'   # 新占位且无复核缓存
+                    n_unresolved += 1
         else:
             e['locate'] = 'located'
         # 消亡仓库降级（url-audit 判 gone：已删除/改名/转私有 → 空仓监测，不呈现链接）
