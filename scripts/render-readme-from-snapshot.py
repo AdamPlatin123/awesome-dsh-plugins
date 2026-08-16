@@ -12,7 +12,7 @@ import json
 import re
 import sys
 from collections import Counter
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -74,12 +74,14 @@ def latest_snapshot():
 
 
 def bj(iso_str, fmt="%Y-%m-%d %H:%M:%S"):
-    """ISO UTC 时间串 → 北京时间显示（UTC+8）；解析失败原样返回。"""
+    """ISO 时间串 → 北京时间显示（UTC+8）；带时区偏移按原偏移换算，避免二次加 8；解析失败原样返回。"""
     try:
         dt = datetime.fromisoformat(str(iso_str).replace("Z", "+00:00"))
     except ValueError:
         return str(iso_str)
-    return (dt + timedelta(hours=8)).strftime(fmt) + " UTC+8"
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return dt.astimezone(timezone(timedelta(hours=8))).strftime(fmt) + " UTC+8"
 
 
 def fmt(x):
@@ -112,13 +114,13 @@ def main():
 
         # ①b 四档磁贴（累积口径：catalog_entries 全量统计；含中英两组徽章 URL）
         vcnt = Counter(e.get("verdict", "") for e in (snap.get("catalog_entries") or []))
-        n_ok = vcnt.get(" 运行级可用", 0)
-        n_bad = vcnt.get(" 运行级不兼容", 0)
-        n_inc = vcnt.get(" 待定", 0)
+        n_ok = vcnt.get("✅ 运行级可用", 0) or vcnt.get("运行级可用", 0)
+        n_bad = vcnt.get("❌ 运行级不兼容", 0) or vcnt.get("运行级不兼容", 0)
+        n_inc = vcnt.get("⚠️ 待定", 0) or vcnt.get("待定", 0)
         n_un = vcnt.get("⏳ 未测", 0)
-        for pat, val in ((r"(badge/_运行级可用-)\d+", n_ok), (r"(badge/_runtime_OK-)\d+", n_ok),
-                         (r"(badge/_运行级不兼容-)\d+", n_bad), (r"(badge/_incompatible-)\d+", n_bad),
-                         (r"(badge/_待定-)\d+", n_inc), (r"(badge/_pending-)\d+", n_inc),
+        for pat, val in ((r"(badge/(?:✅_)?运行级可用-)\d+", n_ok), (r"(badge/(?:✅_)?runtime_OK-)\d+", n_ok),
+                         (r"(badge/(?:❌_)?运行级不兼容-)\d+", n_bad), (r"(badge/(?:❌_)?incompatible-)\d+", n_bad),
+                         (r"(badge/(?:⚠️_)?待定-)\d+", n_inc), (r"(badge/(?:⚠️_)?pending-)\d+", n_inc),
                          (r"(badge/·_未测-)\d+", n_un), (r"(badge/untested-)\d+", n_un)):
             t_readme = re.sub(pat, rf"\g<1>{val}", t_readme)
         t_readme = re.sub(r"(（当前 `)[0-9A-Za-z]+(`)", rf"\g<1>{snap['run_id']}\g<2>", t_readme, count=1)
@@ -158,8 +160,8 @@ def main():
                 t_readme = t_readme[:i] + a + "\n" + block + "\n" + b + t_readme[j:]
 
         # ④ 数据截至锚（中文版；英文版无「## 工作原理」标题，正则不命中）
-        anchor_line = f">  数据截至快照 `{snap['run_id']}`（{bj(snap.get('generated_at', ''))} · 分类器 {snap.get('classifier', '')}）"
-        t_readme = re.sub(r">  数据截至快照 `[^\n]*\n+", "", t_readme)
+        anchor_line = f"> 数据截至快照 `{snap['run_id']}`（{bj(snap.get('generated_at', ''))} · 分类器 {snap.get('classifier', '')}）"
+        t_readme = re.sub(r">\s*数据截至快照 `[^\n]*\n+", "", t_readme)
         t_readme = re.sub(r"(## 工作原理\n)\n+", "\\1\\n" + anchor_line.replace("\\", "\\\\") + "\\n\\n", t_readme, count=1)
 
         # ④b 开头数字面（中文文案；英文头部走 EN 专属正则）

@@ -14,7 +14,7 @@ import json
 import re
 import subprocess
 from collections import Counter
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -25,14 +25,14 @@ REPO_MAP = ROOT / 'data' / 'repo-map.json'
 URL_AUDIT = ROOT / 'data' / 'url-audit.json'
 
 REAL_URL_RE = re.compile(r'github\.com/([A-Za-z0-9_.-]+)/([A-Za-z0-9_.-]+)')
-# 互斥判定（/ 矛盾才降待定；=测不出、⏳=未测属非结论性，不参与冲突）
-CONFLICTING_VERDICTS = (' 运行级可用', ' 运行级不兼容')
+# 互斥判定（✅/❌ 矛盾才降待定；待定/未测属非结论性，不参与冲突）
+CONFLICTING_VERDICTS = ('✅ 运行级可用', '❌ 运行级不兼容')
 
-MARK = {' 运行级可用': '`[可用]`', ' 运行级不兼容': '`[不兼容]`',
-        ' 待定': '`[待定]`', '⏳ 未测': '`[未测]`'}
-DOMAIN_ORDER = [' 技能包', ' 记忆增强', ' 主题皮肤', ' 市场与管理',
-                ' Web UI 增强', ' 编码开发', ' Agent 能力', ' 消息通讯',
-                ' 文件数据', ' 娱乐生活', ' 基建部署', ' 学习研究', ' 其他']
+MARK = {'✅ 运行级可用': '`[可用]`', '❌ 运行级不兼容': '`[不兼容]`',
+        '⚠️ 待定': '`[待定]`', '⏳ 未测': '`[未测]`'}
+DOMAIN_ORDER = ['🎓 技能包', '🧠 记忆增强', '🎨 主题皮肤', '🛒 市场与管理',
+                '🔌 Web UI 增强', '💻 编码开发', '🤖 Agent 能力', '📡 消息通讯',
+                '🗂 文件数据', '🎮 娱乐生活', '🛠 基建部署', '📚 学习研究', '❓ 其他']
 
 try:
     from classify import classify
@@ -43,7 +43,11 @@ except ImportError:
 
 
 def bj(iso):
-    return (datetime.fromisoformat(str(iso).replace('Z', '+00:00')) + timedelta(hours=8)).strftime('%Y-%m-%d %H:%M') + ' UTC+8'
+    """ISO 时间串 → 北京时间（UTC+8）；带时区偏移的输入按原偏移换算，避免二次加 8。"""
+    dt = datetime.fromisoformat(str(iso).replace('Z', '+00:00'))
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return dt.astimezone(timezone(timedelta(hours=8))).strftime('%Y-%m-%d %H:%M') + ' UTC+8'
 
 
 def load_snapshots():
@@ -103,7 +107,7 @@ def merge_entry(a, b):
         elif va in CONFLICTING_VERDICTS and vb not in CONFLICTING_VERDICTS:
             pass
         elif va in CONFLICTING_VERDICTS and vb in CONFLICTING_VERDICTS:
-            out['verdict'] = ' 待定'
+            out['verdict'] = '⚠️ 待定'
             out['verdict_conflict'] = f'{va} ↔ {vb}'
     return out
 
@@ -200,9 +204,9 @@ def main():
             if full.count('/') == 1 and desc_cache.get(full):
                 e['desc'] = desc_cache[full]
                 n_desc += 1
-        if e.get('domain') == ' 其他':
+        if e.get('domain') == '❓ 其他':
             dom, _hit = classify(e['name'], e.get('desc') or '')
-            if dom != ' 其他':
+            if dom != '❓ 其他':
                 e['domain'] = dom
                 e['reclassed'] = True
                 n_reclass += 1
@@ -223,7 +227,7 @@ def main():
     L.append('')
     L.append(f'**判定维度**（运行级四档，仅已定位条目 {sum(vc.values())} 个进入统计；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：')
     L.append('')
-    L.append(f'- `[可用]`（{vc.get(" 运行级可用", 0)}）/ `[不兼容]`（{vc.get(" 运行级不兼容", 0)}）/ `[待定]`（{vc.get(" 待定", 0)}）/ `[未测]`（{vc.get("⏳ 未测", 0)}）')
+    L.append(f'- `[可用]`（{vc.get("✅ 运行级可用", 0)}）/ `[不兼容]`（{vc.get("❌ 运行级不兼容", 0)}）/ `[待定]`（{vc.get("⚠️ 待定", 0)}）/ `[未测]`（{vc.get("⏳ 未测", 0)}）')
     L.append('')
     L.append('**定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：')
     L.append('')
@@ -272,9 +276,9 @@ def main():
     print(f'[gen-plugins-all] {len(entries)} 条 → {OUT.name}（定位修复 {n_fix} / 空仓 {n_empty} / 歧义 {n_amb} / 未定位 {n_unresolved} / 实时星 {n_star}）')
     # 汇总卡数据（供 render 的目录摘要用）：返回每类分布
     return {dom: {'total': sum(1 for e in entries if e.get('domain') == dom),
-                  'ok': vc_local(entries, dom, ' 运行级可用'),
-                  'bad': vc_local(entries, dom, ' 运行级不兼容'),
-                  'inc': vc_local(entries, dom, ' 待定'),
+                  'ok': vc_local(entries, dom, '✅ 运行级可用'),
+                  'bad': vc_local(entries, dom, '❌ 运行级不兼容'),
+                  'inc': vc_local(entries, dom, '⚠️ 待定'),
                   'un': vc_local(entries, dom, '⏳ 未测'),
                   'watch': sum(1 for e in entries if e.get('domain') == dom and e.get('locate') != 'located')}
             for dom in DOMAIN_ORDER}
