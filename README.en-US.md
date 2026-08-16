@@ -13,7 +13,7 @@
 **A daily-updated radar that auto-discovers and compatibility-tests every plugin for DeepSeek Harness.**
 Know which plugins work before you install them.
 
-[![confirmed](https://img.shields.io/badge/confirmed-153-blue)](#star-top-20) [![scan](https://img.shields.io/badge/scan-every_6h-green)](#ecosystem-snapshot) [![tested](https://img.shields.io/badge/tested-75-orange)](#how-we-assess-compatibility) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![confirmed](https://img.shields.io/badge/confirmed-1253-blue)](#star-top-20) [![scan](https://img.shields.io/badge/scan-every_6h-green)](#ecosystem-snapshot) [![tested](https://img.shields.io/badge/tested-1299-orange)](#how-we-assess-compatibility) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
 [![runtime OK](https://img.shields.io/badge/runtime_OK-860-brightgreen)](#2-understand-status-unified-4-tier-scale) [![incompatible](https://img.shields.io/badge/incompatible-394-red)](#2-understand-status-unified-4-tier-scale) [![pending](https://img.shields.io/badge/pending-45-yellow)](#2-understand-status-unified-4-tier-scale) [![untested](https://img.shields.io/badge/untested-0-lightgrey)](#2-understand-status-unified-4-tier-scale)
 
@@ -103,7 +103,7 @@ flowchart TB
 
 Per-plugin details (verdict · location · stars) in **PLUGINS-ALL.md**.
 
-- **🎓 技能包**（18）— OK 13 · incompatible 3 · pending 2 · untested 0 · watching 0 — [details](PLUGINS-ALL.md#-技能包18)
+- **🎓 技能包**（19）— OK 14 · incompatible 3 · pending 2 · untested 0 · watching 0 — [details](PLUGINS-ALL.md#-技能包19)
 - **🧠 记忆增强**（19）— OK 10 · incompatible 7 · pending 2 · untested 0 · watching 0 — [details](PLUGINS-ALL.md#-记忆增强19)
 - **🎨 主题皮肤**（8）— OK 4 · incompatible 0 · pending 3 · untested 1 · watching 0 — [details](PLUGINS-ALL.md#-主题皮肤8)
 - **🛒 市场与管理**（40）— OK 28 · incompatible 8 · pending 1 · untested 2 · watching 1 — [details](PLUGINS-ALL.md#-市场与管理40)
@@ -111,11 +111,11 @@ Per-plugin details (verdict · location · stars) in **PLUGINS-ALL.md**.
 - **💻 编码开发**（252）— OK 133 · incompatible 38 · pending 24 · untested 28 · watching 29 — [details](PLUGINS-ALL.md#-编码开发252)
 - **🤖 Agent 能力**（240）— OK 135 · incompatible 42 · pending 20 · untested 22 · watching 21 — [details](PLUGINS-ALL.md#-agent-能力240)
 - **📡 消息通讯**（94）— OK 54 · incompatible 14 · pending 10 · untested 11 · watching 5 — [details](PLUGINS-ALL.md#-消息通讯94)
-- **🗂 文件数据**（76）— OK 40 · incompatible 17 · pending 8 · untested 6 · watching 5 — [details](PLUGINS-ALL.md#-文件数据76)
+- **🗂 文件数据**（76）— OK 41 · incompatible 17 · pending 8 · untested 6 · watching 4 — [details](PLUGINS-ALL.md#-文件数据76)
 - **🎮 娱乐生活**（47）— OK 30 · incompatible 5 · pending 5 · untested 3 · watching 4 — [details](PLUGINS-ALL.md#-娱乐生活47)
 - **🛠 基建部署**（201）— OK 102 · incompatible 60 · pending 14 · untested 10 · watching 15 — [details](PLUGINS-ALL.md#-基建部署201)
 - **📚 学习研究**（19）— OK 8 · incompatible 4 · pending 1 · untested 4 · watching 2 — [details](PLUGINS-ALL.md#-学习研究19)
-- **❓ 其他**（605）— OK 330 · incompatible 122 · pending 33 · untested 47 · watching 73 — [details](PLUGINS-ALL.md#-其他605)
+- **❓ 其他**（604）— OK 330 · incompatible 122 · pending 33 · untested 47 · watching 72 — [details](PLUGINS-ALL.md#-其他604)
 
 <!-- AUTO:catalog:END -->
 

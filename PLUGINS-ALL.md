@@ -5,21 +5,21 @@
 
 ## 统一度量衡
 
-**判定维度**（运行级四档，仅已定位条目 1682 个进入统计；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：
+**判定维度**（运行级四档，仅已定位条目 1684 个进入统计；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：
 
-- `[可用]`（1036）/ `[不兼容]`（356）/ `[待定]`（138）/ `[未测]`（152）
+- `[可用]`（1038）/ `[不兼容]`（356）/ `[待定]`（138）/ `[未测]`（152）
 
 **定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：
 
 - `[空仓监测]`（67）— GitHub 复核无此仓库；待重现后恢复判定显示
-- `[歧义监测]`（102）— 同名多仓无法锁定本体；锁定前不展示
+- `[歧义监测]`（100）— 同名多仓无法锁定本体；锁定前不展示
 - 定位复核累计修复 566 个占位 URL
 
 > 〔PR〕= 经已合并 PR 正式登记；收录 ≠ 兼容 ≠ 运行可用 ≠ 安全审计。
 
-## 汇总：1851 条（已定位 1682 · 监测/未定位 169）· PR 登记 22 个
+## 汇总：1851 条（已定位 1684 · 监测/未定位 167）· PR 登记 22 个
 
-## 🎓 技能包（18）
+## 🎓 技能包（19）
 
 - `[可用]` [forkprobe](https://github.com/Jayden-X-L/forkprobe) 66 — Compare multiple skills on the same task and pick the winner.
 - `[不兼容]` [mstar-harness](https://github.com/btspoony/mstar-harness) 46 — A Skill-driven Harness/Loop Engineering Workflow Agent Plugin
@@ -39,6 +39,7 @@
 - `[可用]` [DSH-plugin-switch](https://github.com/Nexus-Aethra/DSH-plugin-switch) 2 — DSH Plugin Switch is a marketplace for DeepSeek Harness plugins and skills
 - `[可用]` [dsh-data-ledger](https://github.com/Niuniu-Sir/dsh-data-ledger) 2 — 数据台账：DeepSeek Harness 本地数据统一看板——对话/账本/技能/记忆/日志的来源、位置与内容摘要，回收站删除、浏览器存储清理（dsh-plugin）
 - `[待定]` [dsh-wanghong-handwritten-ppt](https://github.com/tjxj/dsh-wanghong-handwritten-ppt) 2 — 王虹学术手写风 PPT Skill for DeepSeek Harness · Notability-style HTML slides and PNG ex
+- `[可用]` [embedded-workbench](https://github.com/AmethystLuna/embedded-workbench) 0 — 嵌入式 C/C++ 固件工程插件：8 skills（FreeRTOS/Keil/ARMCLANG/HardFault/状态机/LVGL/架构），dsh 原生 bundle 注入会话启动纪律门（1% Rule / Red Flags / Plan Verification Gate）
 
 ## 🧠 记忆增强（19）
 
@@ -1009,6 +1010,7 @@
 - `[可用]` [dsh-plugin-automations](https://github.com/Sev7een/dsh-plugin-automations) 1 — Scheduled tasks plugin for DeepSeek Harness Web Profile
 - `[可用]` [dsh-plugin-rag](https://github.com/YYTbit/dsh-plugin-rag) 1 — Local knowledge base RAG for DeepSeek Harness
 - `[未测]` [dsh-Unlimited-OCR-Skill](https://github.com/Aidenwu0209/dsh-Unlimited-OCR-Skill) 1 — —
+- `[可用]` [logicprobe](https://github.com/AmethystLuna/logicprobe) 1 — 设计文档与重构计划声明核查：claim 枚举 + 代码库事实核对 + 逻辑原语验证（7 结构 + 7 对抗探针），dsh 原生 bundle 注入核查纪律门
 - `[可用]` [noatmark-dsh-plugin](https://github.com/ylwl1997/noatmark-dsh-plugin) 1 — NoAtMark text hygiene as a DeepSeek Harness (dsh) plugin — sanitize untrusted text, scan invisible characters,
 - `[可用]` [dsh-data-extractor](https://github.com/jetheaven/dsh-data-extractor) 1 — DeepSeek Harness plugin
 - `[可用]` [harnessproof](https://github.com/fieldnote-ops/harnessproof) 0 — Independent clean-profile boot evidence for DeepSeek Harness plugins.
@@ -1019,7 +1021,6 @@
 - `[未测]` [dsh-file-checksum](https://github.com/yan9651688/dsh-file-checksum) 0 — Raw-file SHA-256 and SHA-512 verification plugin for DeepSeek Harness
 - `[歧义监测]` **dsh-mineru** — 同名多仓，判定暂不展示
 - `[未测]` [dsh-science-plugin](https://github.com/SPYfighting/dsh-science-plugin) 0 — 本地文件化、证据可审查的 DSH 科研工作区插件
-- `[歧义监测]` **embedded-workbench** — 同名多仓，判定暂不展示
 - `[待定]` [dsh-rich-file-reader](https://github.com/shixiliya1/dsh-rich-file-reader) 0 — Local image, Office, and PDF reader plugin for DeepSeek Harness
 - `[可用]` [dsh-plugin-recall](https://github.com/truelove-dreamer/dsh-plugin-recall) 0 — DeepSeek Harness plugin: cross-session memory for the model
 - `[待定]` [dsh-silly-plugin](https://github.com/xiagaogaozi/dsh-silly-plugin) 0 — DSH 酒馆模式：导入 SillyTavern 角色卡（PNG/JSON），自动拆分世界书/正则/脚本并创建同名工作区（#dsh-plugin）
@@ -1301,7 +1302,7 @@
 - `[未测]` [dsh-plugin-wallpaper](https://github.com/Tree-Summer/dsh-plugin-wallpaper) 0 — 可以在deepseek harness网页端自定义背景图片的插件
 - `[歧义监测]` **dsh-wallpaper** — 同名多仓，判定暂不展示
 
-## ❓ 其他（605）
+## ❓ 其他（604）
 
 - `[可用]` [deepseek-ai-deepseek-harness](https://github.com/deepseek-ai/deepseek-harness) 124593 — —
 - `[可用]` [devin-axis-ipollowork](https://github.com/Devin-AXIS/iPolloWork) 4131 — —
@@ -1877,7 +1878,6 @@
 - `[歧义监测]` **harness-doctor** — 同名多仓，判定暂不展示
 - `[未测]` [koishi-plugin-adapter-harness](https://github.com/nazidada/koishi-plugin-adapter-harness) 0 — —
 - `[未测]` [LanternDesk](https://github.com/zh667/LanternDesk) 0 — —
-- `[歧义监测]` **logicprobe** — 同名多仓，判定暂不展示
 - `[歧义监测]` **mimo-vision** — 同名多仓，判定暂不展示
 - `[空仓监测]` **silly-harness** — GitHub 无此仓库，判定暂不展示
 - `[歧义监测]` **token-statistics** — 同名多仓，判定暂不展示
