@@ -8,8 +8,7 @@
 </p>
 
 **自动发现、证据验证的 DeepSeek Harness 插件生态雷达。自动发现 2800+ 候选、逐个 k8s 实测**
-
- <img src="assets/stickers/21-tests-passed.png" width="76" alt="测试通过">
+<img src="assets/stickers/21-tests-passed.png" width="76" alt="测试通过">
 
 安装前就知道哪个能用，不用自己踩坑。
 
