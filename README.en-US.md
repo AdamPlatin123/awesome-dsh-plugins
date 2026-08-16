@@ -42,7 +42,6 @@ flowchart TB
     D1 -->|" 879 /  451"| E1["aggregate + README stats"]
     D1 -->|" 63 env retries"| C1
     E1 --> E2["cadence deliver<br/>delta this cycle —/100<br/>dual-repo bot PRs (idempotent)"]
-    S[" static 4D track (daily 02:00)"] -.-> E1
     M[" radar-probe every 15 min self-heal<br/>7 metric streams × 60s · done 0"] -.-> A1
     M -.-> C1
 ```
@@ -267,23 +266,11 @@ Small PRs that just fix a link, category, description, or status evidence are al
 | 证据层 | 当前结果 |
 |---|---:|
 | 自动收录 | 1253 个仓库 |
-| 静态综合判定 | 277 / 286 兼容，9 需适配（静态轨 2026-08-13 · 经快照入仓） |
-| 证据不足 | 94 待调研 |
-| 其他 | 0 占位 · 0 不适用 · 0 已删除 |
 | 运行级实测 | 879 可用 · 451 不兼容 · 63 待定（共 1393 个，k8s agent 口径）|
-| 正在跟踪的 PR | 2（快照 deliver 口径） |
 
 [完整索引](PLUGINS-ALL.md) · [运行实测](reports/2026-08-16/agent-test-v2.md)
 
-<details><summary>插件状态明细（按判定分群 · 与上方分类目录互补 · 默认折叠）</summary>
-
-** 正在跟踪的 open PR**
-
-| 仓库 | PR | 标题 | 更新 |
-|---|---|---|---|
-| （暂无公开可访问的 open PR） | | | |
-
-</details>
+<!-- AUTO:ecosystem:END -->
 
 <!-- AUTO:ecosystem:END -->
 

@@ -4,7 +4,7 @@
 契约：只读 data/snapshots/*.json（取 run_id 最新），绝不访问网络/指标流。
 渲染面（中英两版 README 同步渲染；语言专属正则不命中即安全跳过）：
   三徽章 + 证据层运行级行 + AUTO:pipeline 活数字图（中文版）+ 「数据截至」锚（中文版）
-  + 头部数字面 + 目录对账 + 生态快照块头行/静态轨/PR/报告链接。
+  + 头部数字面 + 目录对账 + 生态快照块头行/报告链接。
 时间戳统一输出北京时间（UTC+8）。
 幂等：同快照重复渲染输出逐字节一致。
 """
@@ -34,7 +34,6 @@ flowchart TB
     D1 -->|" {pass} /  {fail}"| E1["聚合 + README 分类统计"]
     D1 -->|" {inc} 环境类重试"| C1
     E1 --> E2["cadence 交付<br/>本周期增量 {delta}/{batch}<br/>双仓 bot PR（幂等 supersede）"]
-    S[" 静态四维轨（每日 02:00）"] -.-> E1
     M[" radar-probe {probe} 自愈<br/>{streams} 指标流 × {stream_sec}s · 完成累计 {done}"] -.-> A1
     M -.-> C1
 ```"""
@@ -56,7 +55,6 @@ flowchart TB
     D1 -->|" {pass} /  {fail}"| E1["aggregate + README stats"]
     D1 -->|" {inc} env retries"| C1
     E1 --> E2["cadence deliver<br/>delta this cycle {delta}/{batch}<br/>dual-repo bot PRs (idempotent)"]
-    S[" static 4D track (daily 02:00)"] -.-> E1
     M[" radar-probe {probe} self-heal<br/>{streams} metric streams × {stream_sec}s · done {done}"] -.-> A1
     M -.-> C1
 ```"""
@@ -193,15 +191,6 @@ def main():
         t_readme = re.sub(r"(更新于 [0-9-]+ [0-9:]+[^\n]*|渲染于快照 [0-9A-Za-z]+（[^\n]*）)",
                           f"渲染于快照 {snap['run_id']}（{bj(snap['generated_at'], '%Y-%m-%d %H:%M')}）· 数据源 data/snapshots/（渲染即对齐）",
                           t_readme, count=1)
-        st = snap.get("static") or {}
-        if st.get("summary"):
-            t_readme = re.sub(r"^\| 静态综合判定 \|.+$",
-                              f"| 静态综合判定 | {st['summary']}（静态轨 {st.get('date', '')} · 经快照入仓） |",
-                              t_readme, count=1, flags=re.M)
-        if dl.get("open_bot_prs") is not None:
-            t_readme = re.sub(r"^\| 正在跟踪的 PR \|.+$",
-                              f"| 正在跟踪的 PR | {dl.get('open_bot_prs')}（快照 deliver 口径） |",
-                              t_readme, count=1, flags=re.M)
         rd = sorted([x.name for x in (ROOT / "reports").iterdir() if x.is_dir() and x.name[:2] == "20"]) \
             if (ROOT / "reports").exists() else []
         if rd:
