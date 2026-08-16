@@ -53,7 +53,7 @@ flowchart TB
 | Goal | Link |
 |---|---|
 | Browse Star Top 20 | [ Star Top 20](#star-top-20) |
-| Find a plugin by use case | [ Plugin Catalog](#plugin-catalog) · [PLUGINS.md](PLUGINS.md) — 9 categories, compat status per plugin |
+| Find a plugin by use case | [Plugin Catalog](#plugin-catalog) — 13 categories · per-plugin details in [PLUGINS-ALL.md](PLUGINS-ALL.md); [PLUGINS.md](PLUGINS.md) is the PR-registered list |
 | Browse all auto-discovered repos | [ Ecosystem Snapshot](#ecosystem-snapshot) — dated compatibility matrix |
 | See what changed recently | [ CHANGELOG](CHANGELOG.md) |
 | Register or submit a plugin | [ For Plugin Developers](#for-plugin-developers) · add the `dsh-plugin` topic → discovered within 8h · [PR template](.github/PULL_REQUEST_TEMPLATE.md) |
@@ -139,8 +139,9 @@ The DSH plugin community discussion group on WeChat: plugin authors, maintainers
 
 ### 1. Find candidate plugins
 
-- Prefer [PLUGINS.md](PLUGINS.md) — plugins with manual curation and descriptions.
-- If the catalog misses it, search the repo name or keywords in the dated [Ecosystem Snapshot](#ecosystem-snapshot) index.
+- Browse the [Plugin Catalog](#plugin-catalog) first, with per-plugin details in [PLUGINS-ALL.md](PLUGINS-ALL.md) — the auto-discovered, runtime-tested full listing (verdict · location · stars per entry).
+- [PLUGINS.md](PLUGINS.md) is the PR-registered community list (manual descriptions + reported runtime results); it complements the auto-discovered catalog.
+- If both miss it, search the repo name or keywords in the dated [Ecosystem Snapshot](#ecosystem-snapshot) index.
 - Treat repos that are inaccessible, lack a README or license, or sit unmaintained as high-risk candidates — not "verified plugins".
 
 ### 2. Understand status (unified 4-tier scale)
