@@ -49,4 +49,10 @@ jobs:
         run: |
           if [ -z "${DSH_EXT_TOKEN}" ]; then echo "[skip] 未配置 DSH_EXT_TOKEN，仅推 origin"; exit 0; fi
           git remote add dsh-ext "https://x-access-token:${DSH_EXT_TOKEN}@github.com/dsh-external/awesome-dsh-plugins.git" || true
+          git fetch dsh-ext main
+          if ! git rebase dsh-ext/main; then
+            echo "[skip] 与 org main 分叉冲突，跳过镜像（需人工同步）"
+            git rebase --abort || true
+            exit 0
+          fi
           git push dsh-ext HEAD:main
