@@ -13,7 +13,7 @@
 **A daily-updated radar that auto-discovers and compatibility-tests every plugin for DeepSeek Harness.**
 Know which plugins work before you install them.
 
-[![confirmed](https://img.shields.io/badge/confirmed-2560-blue)](#-star-top-20) [![scan](https://img.shields.io/badge/scan-every_6h-green)](#ecosystem-snapshot) [![tested](https://img.shields.io/badge/tested-1305-orange)](#how-we-assess-compatibility) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![confirmed](https://img.shields.io/badge/confirmed-2560-blue)](#star-top-20) [![scan](https://img.shields.io/badge/scan-every_6h-green)](#ecosystem-snapshot) [![tested](https://img.shields.io/badge/tested-1305-orange)](#how-we-assess-compatibility) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
 [![runtime OK](https://img.shields.io/badge/runtime_OK-860-brightgreen)](#2-understand-status-unified-4-tier-scale) [![incompatible](https://img.shields.io/badge/incompatible-394-red)](#2-understand-status-unified-4-tier-scale) [![pending](https://img.shields.io/badge/pending-51-yellow)](#2-understand-status-unified-4-tier-scale) [![untested](https://img.shields.io/badge/untested-0-lightgrey)](#2-understand-status-unified-4-tier-scale)
 
@@ -52,7 +52,7 @@ flowchart TB
 
 | Goal | Link |
 |---|---|
-| Browse Star Top 20 | [ Star Top 20](#-star-top-20) |
+| Browse Star Top 20 | [ Star Top 20](#star-top-20) |
 | Find a plugin by use case | [ Plugin Catalog](#plugin-catalog) · [PLUGINS.md](PLUGINS.md) — 9 categories, compat status per plugin |
 | Browse all auto-discovered repos | [ Ecosystem Snapshot](#ecosystem-snapshot) — dated compatibility matrix |
 | See what changed recently | [ CHANGELOG](CHANGELOG.md) |
@@ -60,7 +60,7 @@ flowchart TB
 | Maintain this radar | [ Automation SOP](docs/SOP.md) |
 | Plugin user guide | [ For Plugin Users](#for-plugin-users) |
 | How we assess compatibility | [ How We Assess Compatibility](#how-we-assess-compatibility) |
-| Join the community | [ dshfind.com](#-dsh-learning-community-dshfindcom) · [Discussion group](#community-discussion-group) |
+| Join the community | [ dshfind.com](#dsh-learning-community-dshfindcom) · [Discussion group](#community-discussion-group) |
 
 > [!IMPORTANT]
 > **Inclusion ≠ compatible, static check ≠ runtime-usable, runtime-usable ≠ security-audited.**
