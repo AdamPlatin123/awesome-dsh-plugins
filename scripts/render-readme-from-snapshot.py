@@ -204,10 +204,13 @@ def main():
             if (ROOT / "reports").exists() else []
         if rd:
             d_latest = rd[-1]
-            t_readme = re.sub(r"\[完整索引\]\(reports/[0-9-]+/index\.md\)", f"[完整索引](reports/{d_latest}/index.md)", t_readme)
-            t_readme = re.sub(r"\[静态矩阵\]\(reports/[0-9-]+/mainline-compat\.md\)", f"[静态矩阵](reports/{d_latest}/mainline-compat.md)", t_readme)
-            t_readme = re.sub(r"\[编译实验\]\(reports/[0-9-]+/compile-compat\.md\)", f"[编译实验](reports/{d_latest}/compile-compat.md)", t_readme)
-            t_readme = re.sub(r"\[运行实测\]\(reports/[0-9-]+/[^)]*\.md\)", f"[运行实测](reports/{d_latest}/agent-test.md)", t_readme)
+            # 证据链只链现存资源：静态轨产物（index/mainline-compat/compile-compat）已随资产分离移除；
+            # 运行实测指向当日实际存在的 agent-test*.md（bot 交付名为 agent-test-v2.md）
+            agent = next((p.name for p in sorted((ROOT / "reports" / d_latest).glob("agent-test*.md"), reverse=True)), None)
+            chain = ["[完整索引](PLUGINS-ALL.md)"]
+            if agent:
+                chain.append(f"[运行实测](reports/{d_latest}/{agent})")
+            t_readme = re.sub(r"^\[完整索引\].*$", " · ".join(chain), t_readme, count=1, flags=re.M)
 
         def gh_slug(text):
             """GitHub 标题锚点：剥离 emoji/标点（保留其占位空格转连字符），对齐 github-slugger。"""
