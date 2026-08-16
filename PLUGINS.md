@@ -10,6 +10,7 @@
 
 | 插件 | 仓库 | 说明 | 运行级 |
 |---|---|---|---|
+| dsh-plugin-guard | [lxzy-7/dsh-plugin-guard](https://github.com/lxzy-7/dsh-plugin-guard) | 插件安装安全网：装/卸/开关插件前自动快照备份，启动健康检查失败自动回退最后良好快照并重试一次，设置>备份管理面板 + 双击一键回退脚本，事故报告自动触发 Agent 分析；零运行时依赖，引擎冒烟测试 + 三种安装布局实测通过 | ✅ |
 | dsh-office | [Fayelin12/dsh-office](https://github.com/Fayelin12/dsh-office) | 办公室工作区/会话仪表盘：悬浮 6 列精灵面板，可视化工作区、会话、token 用量与子代理（web bundle） | ✅ |
 | deepseek-heartflow | [yun520-1/deepseek-heartflow](https://github.com/yun520-1/deepseek-heartflow) | 心虫（AGI 第1层辨别门禁）：47 维纯规则文本判别 heartflow_check 工具 + tools/post-execute 自动输出监督（block 拦截 / rewrite 提醒），引擎缺失 fail-closed；dsh.bundle manifest 可安装 | ✅ |
 | dsh-repo-context | [qing3a/dsh-repo-context](https://github.com/qing3a/dsh-repo-context) | 把 git 状态与仓库规范动态注入 system prompt（section/context/variable，官方 system-prompt 缝隙插件）；dsh-plugin-verify 0.1.2 实测 7/7 waterfall + 工具真实执行（R3 isError:false） | ✅ |
