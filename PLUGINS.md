@@ -193,3 +193,4 @@
 | dsh-observe | [PerryLink/dsh-observe](https://github.com/PerryLink/dsh-observe) | 可观测性导出：session/event 流转为 OTLP traces+metrics 与 Langfuse 观测（turn/step/tool/LLM span、token/成本计数、脱敏 prompt/completion），异步批量 + 有界持久离线缓冲 + 退避重试，默认关闭显式开启 | 待测 |
 | dsh-enhancement-suite | [Scorp1o117/dsh-enhancement-suite](https://github.com/Scorp1o117/dsh-enhancement-suite) | 四个 Scorp1o117 DSH 插件的官方总入口 + 一键安装器（list/install/update/doctor，--profile/--only/--dry-run）：零依赖，走官方 dsh plugin CLI 并安全自动挂载；npm 已发布 | 待测 |
 | dsh-passwords | [slywalker2006/dsh-passwords](https://github.com/slywalker2006/dsh-passwords) | 登录网关（密码门）：让 dsh 安全远程访问——首次配置创建主账号、多用户管理、子用户权限/配额（工作区、token、时长、上传/git）、bcrypt + 静态加密、防爆破锁定、自动 HTTPS | ✅ |
+| dsh-feishu | [PGZXB/dsh-feishu](https://github.com/PGZXB/dsh-feishu) | DeepSeek Harness 的飞书 UI：面板驱动控制台，卡内审批与提问，流式卡片，扫码一键配置 | 待测 |
