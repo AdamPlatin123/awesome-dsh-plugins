@@ -5,8 +5,8 @@
 ⊕ data/locate-cache.json 定位复核（含实时 star）。
 合并主键以 GitHub 仓库全名（repo-map / 真实 URL / locate-cache 三源归一）为准，同一仓库的
 v1 键（纯仓库名）与 v2 键（owner-repo local_key）合并为单条：URL 取真实值、star 取最大/实时值、
-判定冲突（如 v1✅ vs v2❌）降级为 [待定] 并记录冲突详情；展示名优先纯仓库名。
-呈现：分组列表（文字标签状态 · 名称 ★ · 一句话说明），零表格；监测中条目不显示对错判定。
+判定冲突（如 v1 vs v2）降级为 [待定] 并记录冲突详情；展示名优先纯仓库名。
+呈现：分组列表（文字标签状态 · 名称  · 一句话说明），零表格；监测中条目不显示对错判定。
 被 render-readme-from-snapshot.py 每轮渲染调用；也可独立运行。
 """
 import glob
@@ -25,14 +25,14 @@ REPO_MAP = ROOT / 'data' / 'repo-map.json'
 URL_AUDIT = ROOT / 'data' / 'url-audit.json'
 
 REAL_URL_RE = re.compile(r'github\.com/([A-Za-z0-9_.-]+)/([A-Za-z0-9_.-]+)')
-# 互斥判定（✅/❌ 矛盾才降待定；⚠️=测不出、⏳=未测属非结论性，不参与冲突）
-CONFLICTING_VERDICTS = ('✅ 运行级可用', '❌ 运行级不兼容')
+# 互斥判定（/ 矛盾才降待定；=测不出、⏳=未测属非结论性，不参与冲突）
+CONFLICTING_VERDICTS = (' 运行级可用', ' 运行级不兼容')
 
-MARK = {'✅ 运行级可用': '`[可用]`', '❌ 运行级不兼容': '`[不兼容]`',
-        '⚠️ 待定': '`[待定]`', '⏳ 未测': '`[未测]`'}
-DOMAIN_ORDER = ['🎓 技能包', '🧠 记忆增强', '🎨 主题皮肤', '🛒 市场与管理',
-                '🔌 Web UI 增强', '💻 编码开发', '🤖 Agent 能力', '📡 消息通讯',
-                '🗂 文件数据', '🎮 娱乐生活', '🛠 基建部署', '📚 学习研究', '❓ 其他']
+MARK = {' 运行级可用': '`[可用]`', ' 运行级不兼容': '`[不兼容]`',
+        ' 待定': '`[待定]`', '⏳ 未测': '`[未测]`'}
+DOMAIN_ORDER = [' 技能包', ' 记忆增强', ' 主题皮肤', ' 市场与管理',
+                ' Web UI 增强', ' 编码开发', ' Agent 能力', ' 消息通讯',
+                ' 文件数据', ' 娱乐生活', ' 基建部署', ' 学习研究', ' 其他']
 
 try:
     from classify import classify
@@ -103,7 +103,7 @@ def merge_entry(a, b):
         elif va in CONFLICTING_VERDICTS and vb not in CONFLICTING_VERDICTS:
             pass
         elif va in CONFLICTING_VERDICTS and vb in CONFLICTING_VERDICTS:
-            out['verdict'] = '⚠️ 待定'
+            out['verdict'] = ' 待定'
             out['verdict_conflict'] = f'{va} ↔ {vb}'
     return out
 
@@ -200,9 +200,9 @@ def main():
             if full.count('/') == 1 and desc_cache.get(full):
                 e['desc'] = desc_cache[full]
                 n_desc += 1
-        if e.get('domain') == '❓ 其他':
+        if e.get('domain') == ' 其他':
             dom, _hit = classify(e['name'], e.get('desc') or '')
-            if dom != '❓ 其他':
+            if dom != ' 其他':
                 e['domain'] = dom
                 e['reclassed'] = True
                 n_reclass += 1
@@ -217,13 +217,13 @@ def main():
     L.append('# 全量插件清单（统一四档口径）')
     L.append('')
     L.append(f'> 数据源：radar 快照并集（{src}）⊕ GitHub 定位复核缓存（data/locate-cache.json）。')
-    L.append('> 呈现：分组列表（状态 · 名称 ★ · 一句话说明），不使用大表格。')
+    L.append('> 呈现：分组列表（状态 · 名称  · 一句话说明），不使用大表格。')
     L.append('')
     L.append('## 统一度量衡')
     L.append('')
     L.append(f'**判定维度**（运行级四档，仅已定位条目 {sum(vc.values())} 个进入统计；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：')
     L.append('')
-    L.append(f'- `[可用]`（{vc.get("✅ 运行级可用", 0)}）/ `[不兼容]`（{vc.get("❌ 运行级不兼容", 0)}）/ `[待定]`（{vc.get("⚠️ 待定", 0)}）/ `[未测]`（{vc.get("⏳ 未测", 0)}）')
+    L.append(f'- `[可用]`（{vc.get(" 运行级可用", 0)}）/ `[不兼容]`（{vc.get(" 运行级不兼容", 0)}）/ `[待定]`（{vc.get(" 待定", 0)}）/ `[未测]`（{vc.get("⏳ 未测", 0)}）')
     L.append('')
     L.append('**定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：')
     L.append('')
@@ -258,7 +258,7 @@ def main():
             elif loc == 'unresolved':
                 L.append(f'- `[未定位]` **{name}** — 占位待复核，判定暂不展示{pr}')
             else:
-                L.append(f'- {MARK.get(e.get("verdict"), "`[未测]`")} [{name}]({e["url"]}) ★{star} — {desc}{pr}')
+                L.append(f'- {MARK.get(e.get("verdict"), "`[未测]`")} [{name}]({e["url"]}) {star} — {desc}{pr}')
         L.append('')
 
     L.append('## 附录')
@@ -272,9 +272,9 @@ def main():
     print(f'[gen-plugins-all] {len(entries)} 条 → {OUT.name}（定位修复 {n_fix} / 空仓 {n_empty} / 歧义 {n_amb} / 未定位 {n_unresolved} / 实时星 {n_star}）')
     # 汇总卡数据（供 render 的目录摘要用）：返回每类分布
     return {dom: {'total': sum(1 for e in entries if e.get('domain') == dom),
-                  'ok': vc_local(entries, dom, '✅ 运行级可用'),
-                  'bad': vc_local(entries, dom, '❌ 运行级不兼容'),
-                  'inc': vc_local(entries, dom, '⚠️ 待定'),
+                  'ok': vc_local(entries, dom, ' 运行级可用'),
+                  'bad': vc_local(entries, dom, ' 运行级不兼容'),
+                  'inc': vc_local(entries, dom, ' 待定'),
                   'un': vc_local(entries, dom, '⏳ 未测'),
                   'watch': sum(1 for e in entries if e.get('domain') == dom and e.get('locate') != 'located')}
             for dom in DOMAIN_ORDER}
