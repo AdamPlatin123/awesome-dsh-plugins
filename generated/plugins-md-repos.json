@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-16T10:00:22+00:00",
+  "generated_at": "2026-08-16T11:26:23+00:00",
   "source": "PLUGINS.md",
-  "count": 140,
+  "count": 141,
   "repos": [
     "1na-ko/dsh-hdc-bridge",
     "AmethystLuna/embedded-workbench",
@@ -110,6 +110,7 @@
     "jyh20030112/dsh-visual-plugin",
     "left0ver/dsh-file-review",
     "lifeodyssey/dsh-compressor",
+    "lxzy-7/dsh-plugin-guard",
     "lynx-gt/dsh-subagent-cwd",
     "lynx-gt/dsh-subagent-tools",
     "mario841859784/dsh-onebot",
