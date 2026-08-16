@@ -86,7 +86,7 @@
 | dsh-tdai-memory | [Scorp1o117/dsh-tdai-memory](https://github.com/Scorp1o117/dsh-tdai-memory) | TencentDB Agent Memory 的 DSH 移植：L0 对话捕获 → L1 结构化记忆提取 → L2 场景/L3 画像，自动召回注入 + 记忆/对话搜索工具；复用现有 ~/.memory-tencentdb 数据；附 Web UI 设置栏 | 待测 |
 | dsh-tool-vision | [Scorp1o117/dsh-tool-vision](https://github.com/Scorp1o117/dsh-tool-vision) | 外置视觉模型插件：inspect_image 把本地图片或 http(s) 图片 URL 发给任意 OpenAI 兼容端点，视觉模型看图的文字回答直接带回对话；附 Web UI 设置栏 | ✅ |
 | dsh-compressor | [lifeodyssey/dsh-compressor](https://github.com/lifeodyssey/dsh-compressor) | [Headroom](https://github.com/headroomlabs-ai/headroom) 的精简移植，在不影响模型上下文缓存以及 Agent 性能的情况下，压缩工具的输出，至多减少 20% 的上下文。 | 待测 |
-| dsh-anchored-subagent | [GY-Bai/dsh-anchored-subagent](https://github.com/GY-Bai/dsh-anchored-subagent) | DSH 插件：主 agent 和子代理首轮以 Minimal（bash + str_replace_editor + Minimal persona）开局，第二轮恢复完整工具；自定义子代理 persona 首轮剥离、第二轮后恢复；dsh.bundle 自动安装 agent preset | ✅ |
+| dsh-anchored-subagent | [GY-Bai/dsh-anchored-subagent](https://github.com/GY-Bai/dsh-anchored-subagent) | 让 DSH 主 agent 和子代理别一开口就 `Let me...`：首轮用 Minimal 开局进入满血状态，第二轮恢复全部工具；自定义子代理角色首轮先收起来，第二轮再放出来 | ✅ |
 
 ## 🧰 插件集
 
