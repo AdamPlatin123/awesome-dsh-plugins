@@ -2,12 +2,7 @@
 
 <p align="center">
   <img src="assets/banner-entertainment.jpg" width="440" alt="Awesome DSH Plugins banner"><br>
-  <img src="assets/stickers/04-fish-philosophy.png" width="76" alt="Fish philosophy">
-  <img src="assets/stickers/06-server-busy.png" width="76" alt="Server busy">
-  <img src="assets/stickers/12-restart-myself.png" width="76" alt="Restart myself">
-  <img src="assets/stickers/17-memory-alive.png" width="76" alt="Memory alive">
-  <img src="assets/stickers/21-tests-passed.png" width="76" alt="Tests passed">
-  <img src="assets/stickers/24-fixed-review.png" width="76" alt="Fixed, review please">
+  <img src="assets/stickers/21-tests-passed.png" width="126" alt="Tests passed">
 </p>
 
 **A daily-updated radar that auto-discovers and compatibility-tests every plugin for DeepSeek Harness.**
