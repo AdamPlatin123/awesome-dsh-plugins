@@ -14,7 +14,8 @@
       "url": "https://github.com/AmethystLuna/logicprobe",
       "verdict": "✅ 运行级可用",
       "desc": "设计文档与重构计划声明核查：claim 枚举 + 代码库事实核对 + 逻辑原语验证（7 结构 + 7 对抗探针），dsh 原生 bundle 注入核查纪律门",
-      "star": 1
+      "star": 1,
+      "domain": "💻 编码开发"
     }
   }
 }

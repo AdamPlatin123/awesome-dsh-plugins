@@ -189,6 +189,8 @@ def main():
                     e['desc'] = c['desc']
                 if c.get('star') is not None:
                     e['star'] = c['star']
+                if c.get('domain'):
+                    e['domain'] = c['domain']
             else:
                 r = locate.get(e['name'], {})
                 if r.get('status') == 'found':
