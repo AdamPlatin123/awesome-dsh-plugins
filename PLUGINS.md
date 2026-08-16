@@ -188,3 +188,4 @@
 | dsh-github | [PerryLink/dsh-github](https://github.com/PerryLink/dsh-github) | 官方级 GitHub CI 集成：composite action.yml、轮询 PR 评审机器人（幂等行内评论 + status-check 门禁）、/pr /review /issue 命令族与 12 个 PR/issue 工具，所有写入走人工审批门；npm @perrylink/dsh-github 0.6.1 | 待测 |
 | dsh-headroom | [WanYanTianDe/dsh-headroom](https://github.com/WanYanTianDe/dsh-headroom) | Headroom 上下文压缩：历史区间压缩（替代 LLM 总结）+ 大工具输出压缩（超阈值自动瘦身）+ CCR 原文取回（headroom_retrieve 工具）；本地代理自动安装/生命周期管理 + 设置卡片；npm 已发布（@wanyantiande/dsh-headroom） | 待测 |
 | dsh-click | [PerryLink/dsh-click](https://github.com/PerryLink/dsh-click) | Windows 优先的原生桌面控制：截图、无障碍树结构化读取、点击/输入/滚动/按键、应用启动，变更性操作过审批门禁、屏幕变化拒绝执行、操作前后校验进程身份 | 待测 |
+| dsh-session-sync | [PerryLink/dsh-session-sync](https://github.com/PerryLink/dsh-session-sync) | 跨设备会话同步：专用 git 镜像 + 仅追加的双方保留冲突裁决（本地保留、远端留存 fork 文件，绝不静默覆盖），/sync 命令与 sync_status/sync_pull/sync_push 工具，自动推拉可配；49 测试 + 真实 git e2e 全绿，rc.6 --patch 加载实测通过 | 待测 |
