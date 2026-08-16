@@ -143,7 +143,7 @@
 | dsh-file-review | [left0ver/dsh-file-review](https://github.com/left0ver/dsh-file-review) | 文件审查插件：diff 的形式查看文件的修改内容，方便对 agent 的修改进行审查 | ✅ |
 | dsh-file-claim | [Nwflower/dsh-file-claim](https://github.com/Nwflower/dsh-file-claim) | 同一工作区并行多会话的文件认领与写入保护（claim/release、心跳 stale 接管、pending 三路合并） | ✅ |
 | dsh-memento | [PerryLink/dsh-memento](https://github.com/PerryLink/dsh-memento) | 有界、分层、审批门、可审计的跨会话记忆接缝：ctx.memory 服务 + 本地 SQLite（零依赖）+ memory 工具 + 冻结快照注入；写必审批、模型可见 ⟺ 落盘 | ✅ |
-| dsh-mcp-panel | [PerryLink/dsh-mcp-panel](https://github.com/PerryLink/dsh-mcp-panel) | 官方 MCP 客户端（dsh-mcp-client）只读运行时管理面板：/mcp 命令 + 设置页 MCP 页签展示连接状态/已注册工具/错误/重连计数，脱敏展示与受控启停 patch 建议 | 待测 |
+| dsh-mcp-panel | [PerryLink/dsh-mcp-panel](https://github.com/PerryLink/dsh-mcp-panel) | 官方 MCP 客户端（dsh-mcp-client）管理控制台：/mcp 命令 + 设置页 MCP 页签提供服务器增删改（审批门 + 自动备份的只追加 profile 写入）、走官方工具管线的工具试用台、健康诊断与连接状态；npm 0.4.0，全量门禁绿（142 测试） | 待测 |
 | dsh-auto-continue | [HsiangNianian/dsh-auto-continue](https://github.com/HsiangNianian/dsh-auto-continue) | DSH Web 请求中断自动续跑插件：回合因网络/超时等非人为原因失败后自动发送「继续」续跑（含宿主崩溃遗留回合扫描恢复），全部参数可在设置→插件配置中调整 | ✅ |
 | sandbase-harness | [sandbaseai/sandbase-harness](https://github.com/sandbaseai/sandbase-harness) | DSH bundle for SandBase managed-agents, exposing agent discovery, durable sessions, streamed runs, artifacts, and cancellation over stdio MCP; verified against DSH 47f9438 | ✅ |
 | sandbase-skills | [sandbaseai/sandbase-skills](https://github.com/sandbaseai/sandbase-skills) | Research and growth skill collection with an npm CLI that installs complete bundles into DSH native .dsh/skills discovery root; verified against DSH 47f9438 | 待测 |
