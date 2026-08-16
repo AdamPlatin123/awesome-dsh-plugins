@@ -186,3 +186,4 @@
 | dsh-quant-data-mcp | [helibeiqi/dsh-quant-data-mcp](https://github.com/helibeiqi/dsh-quant-data-mcp) | 零依赖 MCP stdio server 模板 + 开箱即用 A 股数据工具：无需 API Key、纯 NDJSON 协议、路径全走环境变量、可 `dsh plugin add` 一键挂载的 dsh bundle | 待测 |
 | dsh-self-evolving | [timwhitez/dsh-self-evolving](https://github.com/timwhitez/dsh-self-evolving) | 证据优先的 DSH 自进化引擎（标准 Cordis controller/service）：有界生成 Cordis 候选插件，一次性真实 Loader 隔离准入，Harbor 评估，可崩溃恢复的 journal 谱系；291 单测 + 36 Loader E2E | 待测 |
 | dsh-github | [PerryLink/dsh-github](https://github.com/PerryLink/dsh-github) | 官方级 GitHub CI 集成：composite action.yml、轮询 PR 评审机器人（幂等行内评论 + status-check 门禁）、/pr /review /issue 命令族与 12 个 PR/issue 工具，所有写入走人工审批门；npm @perrylink/dsh-github 0.6.1 | 待测 |
+| dsh-headroom | [WanYanTianDe/dsh-headroom](https://github.com/WanYanTianDe/dsh-headroom) | Headroom 上下文压缩：历史区间压缩（替代 LLM 总结）+ 大工具输出压缩（超阈值自动瘦身）+ CCR 原文取回（headroom_retrieve 工具）；本地代理自动安装/生命周期管理 + 设置卡片；npm 已发布（@wanyantiande/dsh-headroom） | 待测 |
