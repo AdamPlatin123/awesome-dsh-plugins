@@ -1,0 +1,63 @@
+name: refresh-stars
+
+# PLUGINS-ALL.md 行内星数每日全量刷新（Bot C）：
+#   - schedule 每日一次（19:23 UTC = 北京 03:23 低峰，避开整点）
+#   - GraphQL 每 50 仓一批，GITHUB_TOKEN 限额内完成全部 1600+ 仓库
+#   - 仅改行内星数数字；渲染区块归 Bot B（readme-render），二者文本不重叠：
+#     Bot B 渲染会以快照星数覆盖，本 bot 次日再刷——24h 内收敛
+#   - 变化时提交推送 origin；配置 DSH_EXT_TOKEN 时 PLUGINS-ALL.md 单文件同步 dsh-ext
+on:
+  schedule:
+    - cron: "23 19 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-stars
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Refresh stars in PLUGINS-ALL.md
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/refresh-stars.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "stars-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add PLUGINS-ALL.md
+          if git diff --cached --quiet; then
+            echo "[skip] 星数无变化，不提交"
+            exit 0
+          fi
+          git commit -m "auto: PLUGINS-ALL 星数日刷 $(date -u '+%Y-%m-%d %H:%M') UTC"
+          git push
+
+      - name: Push mirror to dsh-ext (optional)
+        env:
+          DSH_EXT_TOKEN: ${{ secrets.DSH_EXT_TOKEN }}
+        run: |
+          if [ -z "${DSH_EXT_TOKEN}" ]; then echo "[skip] 未配置 DSH_EXT_TOKEN，仅推 origin"; exit 0; fi
+          BASE=$(git rev-parse HEAD)
+          git config --unset-all http.https://github.com/.extraheader || true
+          git remote add dsh-ext "https://x-access-token:${DSH_EXT_TOKEN}@github.com/dsh-external/awesome-dsh-plugins.git" || true
+          git fetch dsh-ext main
+          # 双仓历史分叉：不整仓 rebase，只在 org main 之上同步 PLUGINS-ALL.md 单文件
+          git checkout -q -B stars-mirror-sync dsh-ext/main
+          git checkout -q "$BASE" -- PLUGINS-ALL.md
+          if git diff --cached --quiet; then echo "[skip] org 的 PLUGINS-ALL.md 已同步"; exit 0; fi
+          git -c user.name="stars-bot" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+            commit -m "auto: PLUGINS-ALL 星数镜像同步 personal→org"
+          git push dsh-ext stars-mirror-sync:main
