@@ -105,6 +105,7 @@
 | project-blueprint | [shuguang1994/project-blueprint](https://github.com/shuguang1994/project-blueprint) | ❌ | ❌ |
 | dsh-plugin-guide | [PerryLink/dsh-plugin-guide](https://github.com/PerryLink/dsh-plugin-guide) | DSH 插件开发知识库：官方约束、任务工作流、API 参考与社区踩坑，作为按需加载的智能体技能（bundle 可安装，注册 ctx.skills 技能） | 待测 |
 | dsh-chinese-traditional-wisdom-skill | [dhicoc/dsh-chinese-traditional-wisdom-skill](https://github.com/dhicoc/dsh-chinese-traditional-wisdom-skill) | 中华传统智慧（玄枢）AI Agent 技能包：八字/紫微/六爻/梅花/奇门/风水/五运六气/体质全融合，本地确定性引擎 + 可视化 Dashboard；dsh.bundle manifest 可安装 | ✅ |
+| dsh-skill-pack-security | [PerryLink/dsh-skill-pack-security](https://github.com/PerryLink/dsh-skill-pack-security) | 安全审计方法论技能包：八个 agent 技能（密钥扫描、依赖审计、供应链评审、提示注入审查、审计总编排、威胁建模、漏洞情报、事件响应），中英双版本；`dsh plugin add @perrylink/dsh-skill-pack-security-provider` 一键挂载 | 待测 |
 
 ## 📡 远程渠道
 
