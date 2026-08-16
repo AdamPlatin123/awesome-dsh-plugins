@@ -93,6 +93,7 @@
 | dsh-subagent-tools | [lynx-gt/dsh-subagent-tools](https://github.com/lynx-gt/dsh-subagent-tools) | 子代理委派按次覆盖 model/provider/persona/toolFilter、@preset: 引用、provider/model 复合 id（bundle，不改官方文件）；rc.6 headless+web 实测通过 | ✅ |
 | dsh-subagent-cwd | [lynx-gt/dsh-subagent-cwd](https://github.com/lynx-gt/dsh-subagent-cwd) | dsh-subagent-tools 加按次 cwd（子代理工作目录），附两处进程内 provider 补丁；rc.6 前台/后台 cwd 实测通过 | ✅ |
 | dsh-update-notifier | [arvin-yd/dsh-update-notifier](https://github.com/arvin-yd/dsh-update-notifier) | DSH 本体更新提醒：npm latest 高于本地版本时侧边栏左下角红点+Modal（复制更新命令/忽略此版本/稍后再说），官方 ui-primitives 渲染，无更新零 UI；零构建、25 单测、rc.5/rc.6 加载与端点 E2E 实测 | 待测 |
+| dsh-enhancement-suite | [Scorp1o117/dsh-enhancement-suite](https://github.com/Scorp1o117/dsh-enhancement-suite) | 四个 Scorp1o117 DSH 插件的官方总入口 + 一键安装器（list/install/update/doctor，--profile/--only/--dry-run）：零依赖，走官方 dsh plugin CLI 并安全自动挂载；npm 已发布 | 待测 |
 
 ## 🎓 技能
 
