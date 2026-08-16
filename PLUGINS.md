@@ -89,6 +89,7 @@
 | dsh-tool-vision | [Scorp1o117/dsh-tool-vision](https://github.com/Scorp1o117/dsh-tool-vision) | 外置视觉模型插件：inspect_image 把本地图片或 http(s) 图片 URL 发给任意 OpenAI 兼容端点，视觉模型看图的文字回答直接带回对话；附 Web UI 设置栏 | ✅ |
 | dsh-compressor | [lifeodyssey/dsh-compressor](https://github.com/lifeodyssey/dsh-compressor) | [Headroom](https://github.com/headroomlabs-ai/headroom) 的精简移植，在不影响模型上下文缓存以及 Agent 性能的情况下，压缩工具的输出，至多减少 20% 的上下文。 | 待测 |
 | dsh-anchored-subagent | [GY-Bai/dsh-anchored-subagent](https://github.com/GY-Bai/dsh-anchored-subagent) | 让 DSH 主 agent 和子代理别一开口就 `Let me...`：首轮用 Minimal 开局进入满血状态，第二轮恢复全部工具；自定义子代理角色首轮先收起来，第二轮再放出来 | ✅ |
+| dsh-passwords | [slywalker2006/dsh-passwords](https://github.com/slywalker2006/dsh-passwords) | 登录网关（密码门）：让 dsh 安全远程访问——首次配置创建主账号、多用户管理、子用户权限/配额（工作区、token、时长、上传/git）、bcrypt + 静态加密、防爆破锁定、自动 HTTPS | ✅ |
 
 ## 🧰 插件集
 
