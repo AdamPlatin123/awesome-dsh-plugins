@@ -20,44 +20,44 @@ SNAP_DIR = ROOT / "data" / "snapshots"
 
 DIAGRAM = """```mermaid
 flowchart TB
-    subgraph Discovery["🔍 发现（每 {discover_hours} 小时 · probe {probe} 巡检触发）"]
+    subgraph Discovery[" 发现（每 {discover_hours} 小时 · probe {probe} 巡检触发）"]
         A1["GitHub Search<br/>topic ×{topic_n} + keyword ×{kw_n}<br/>候选 {cand} · 龄 {age}m"]
         A2["本地库补全 · 去重 repo id"]
-        A3["🚫 私有 org 仓排除<br/>{spacing}s 错峰 · 403 退避 · dshow 黑名单"]
+        A3[" 私有 org 仓排除<br/>{spacing}s 错峰 · 403 退避 · dshow 黑名单"]
     end
-    subgraph Validation["📋 验证（driver 20s 流式循环）"]
+    subgraph Validation[" 验证（driver 20s 流式循环）"]
         B1{{"package.json<br/>name + main/exports/dsh?"}}
     end
     B1 -->|"插件 {plugins}"| C1["k8s 运行级测试<br/>一插件一 pod · 并发 {cap}<br/>dsh agent + Qwen（de-stream）"]
-    B1 -->|"非插件（累计删 {nonplugin}）"| B3["❌ 即删省空间"]
+    B1 -->|"非插件（累计删 {nonplugin}）"| B3[" 即删省空间"]
     C1 --> D1{{"判定 · 总 {total}"}}
-    D1 -->|"✅ {pass} / ❌ {fail}"| E1["聚合 + README 分类统计"]
-    D1 -->|"⚠️ {inc} 环境类重试"| C1
+    D1 -->|" {pass} /  {fail}"| E1["聚合 + README 分类统计"]
+    D1 -->|" {inc} 环境类重试"| C1
     E1 --> E2["cadence 交付<br/>本周期增量 {delta}/{batch}<br/>双仓 bot PR（幂等 supersede）"]
-    S["⚖️ 静态四维轨（每日 02:00）"] -.-> E1
-    M["🛡 radar-probe {probe} 自愈<br/>{streams} 指标流 × {stream_sec}s · 完成累计 {done}"] -.-> A1
+    S[" 静态四维轨（每日 02:00）"] -.-> E1
+    M[" radar-probe {probe} 自愈<br/>{streams} 指标流 × {stream_sec}s · 完成累计 {done}"] -.-> A1
     M -.-> C1
 ```"""
 
 
 DIAGRAM_EN = """```mermaid
 flowchart TB
-    subgraph Discovery["🔍 Discovery (every {discover_hours}h · probe {probe})"]
+    subgraph Discovery[" Discovery (every {discover_hours}h · probe {probe})"]
         A1["GitHub Search<br/>topic ×{topic_n} + keyword ×{kw_n}<br/>candidates {cand} · age {age}m"]
         A2["Local DB merge · dedupe by repo id"]
-        A3["🚫 Private org repos excluded<br/>{spacing}s stagger · 403 backoff · dshow blocklist"]
+        A3[" Private org repos excluded<br/>{spacing}s stagger · 403 backoff · dshow blocklist"]
     end
-    subgraph Validation["📋 Validation (driver 20s streaming loop)"]
+    subgraph Validation[" Validation (driver 20s streaming loop)"]
         B1{{"package.json<br/>name + main/exports/dsh?"}}
     end
     B1 -->|"plugins {plugins}"| C1["k8s runtime test<br/>1 pod per plugin · concurrency {cap}<br/>dsh agent + Qwen (de-stream)"]
-    B1 -->|"non-plugins (dropped {nonplugin})"| B3["❌ dropped to save space"]
+    B1 -->|"non-plugins (dropped {nonplugin})"| B3[" dropped to save space"]
     C1 --> D1{{"verdict · total {total}"}}
-    D1 -->|"✅ {pass} / ❌ {fail}"| E1["aggregate + README stats"]
-    D1 -->|"⚠️ {inc} env retries"| C1
+    D1 -->|" {pass} /  {fail}"| E1["aggregate + README stats"]
+    D1 -->|" {inc} env retries"| C1
     E1 --> E2["cadence deliver<br/>delta this cycle {delta}/{batch}<br/>dual-repo bot PRs (idempotent)"]
-    S["⚖️ static 4D track (daily 02:00)"] -.-> E1
-    M["🛡 radar-probe {probe} self-heal<br/>{streams} metric streams × {stream_sec}s · done {done}"] -.-> A1
+    S[" static 4D track (daily 02:00)"] -.-> E1
+    M[" radar-probe {probe} self-heal<br/>{streams} metric streams × {stream_sec}s · done {done}"] -.-> A1
     M -.-> C1
 ```"""
 
@@ -112,13 +112,13 @@ def main():
 
         # ①b 四档磁贴（累积口径：catalog_entries 全量统计；含中英两组徽章 URL）
         vcnt = Counter(e.get("verdict", "") for e in (snap.get("catalog_entries") or []))
-        n_ok = vcnt.get("✅ 运行级可用", 0)
-        n_bad = vcnt.get("❌ 运行级不兼容", 0)
-        n_inc = vcnt.get("⚠️ 待定", 0)
+        n_ok = vcnt.get(" 运行级可用", 0)
+        n_bad = vcnt.get(" 运行级不兼容", 0)
+        n_inc = vcnt.get(" 待定", 0)
         n_un = vcnt.get("⏳ 未测", 0)
-        for pat, val in ((r"(badge/✅_运行级可用-)\d+", n_ok), (r"(badge/✅_runtime_OK-)\d+", n_ok),
-                         (r"(badge/❌_运行级不兼容-)\d+", n_bad), (r"(badge/❌_incompatible-)\d+", n_bad),
-                         (r"(badge/⚠️_待定-)\d+", n_inc), (r"(badge/⚠️_pending-)\d+", n_inc),
+        for pat, val in ((r"(badge/_运行级可用-)\d+", n_ok), (r"(badge/_runtime_OK-)\d+", n_ok),
+                         (r"(badge/_运行级不兼容-)\d+", n_bad), (r"(badge/_incompatible-)\d+", n_bad),
+                         (r"(badge/_待定-)\d+", n_inc), (r"(badge/_pending-)\d+", n_inc),
                          (r"(badge/·_未测-)\d+", n_un), (r"(badge/untested-)\d+", n_un)):
             t_readme = re.sub(pat, rf"\g<1>{val}", t_readme)
         t_readme = re.sub(r"(（当前 `)[0-9A-Za-z]+(`)", rf"\g<1>{snap['run_id']}\g<2>", t_readme, count=1)
@@ -127,7 +127,7 @@ def main():
         # ② 证据层运行级行（整行替换；两版该表均为中文）
         t_readme = re.sub(
             r"^\| 运行级实测 .*$",
-            f"| 运行级实测 | ✅{v.get('pass')} 可用 · {v.get('fail')} 不兼容 · {v.get('inc')} 待定"
+            f"| 运行级实测 | {v.get('pass')} 可用 · {v.get('fail')} 不兼容 · {v.get('inc')} 待定"
             f"（共 {v.get('total')} 个，k8s agent 口径）|",
             t_readme, count=1, flags=re.M)
         # ③ AUTO:pipeline 活数字图（中文版专属块；英文版无该标记，自动跳过）
@@ -158,8 +158,8 @@ def main():
                 t_readme = t_readme[:i] + a + "\n" + block + "\n" + b + t_readme[j:]
 
         # ④ 数据截至锚（中文版；英文版无「## 工作原理」标题，正则不命中）
-        anchor_line = f"> 📌 数据截至快照 `{snap['run_id']}`（{bj(snap.get('generated_at', ''))} · 分类器 {snap.get('classifier', '')}）"
-        t_readme = re.sub(r"> 📌 数据截至快照 `[^\n]*\n+", "", t_readme)
+        anchor_line = f">  数据截至快照 `{snap['run_id']}`（{bj(snap.get('generated_at', ''))} · 分类器 {snap.get('classifier', '')}）"
+        t_readme = re.sub(r">  数据截至快照 `[^\n]*\n+", "", t_readme)
         t_readme = re.sub(r"(## 工作原理\n)\n+", "\\1\\n" + anchor_line.replace("\\", "\\\\") + "\\n\\n", t_readme, count=1)
 
         # ④b 开头数字面（中文文案；英文头部走 EN 专属正则）
@@ -245,15 +245,15 @@ def main():
         entry_tag = f"<!-- snapshot:{snap['run_id']} -->"
         if entry_tag not in ct:
             entry = (f"## {bj(snap['generated_at'], '%Y-%m-%d')}（运行级 · {snap['run_id']}）{entry_tag}\n"
-                     f"- 运行级实测：总 {v.get('total')}：✅可用 {v.get('pass')} / ❌真不兼容 {v.get('fail')} / "
-                     f"⚠️待定 {v.get('inc')}（k8s agent · 公有生态口径）\n"
+                     f"- 运行级实测：总 {v.get('total')}：可用 {v.get('pass')} / 真不兼容 {v.get('fail')} / "
+                     f"待定 {v.get('inc')}（k8s agent · 公有生态口径）\n"
                      f"- 快照：data/snapshots/{snap['run_id']}.json（本条目与其同源）\n\n")
             ct = re.sub(r"<!-- snapshot:[^>]+>\n## [^\n]*\n(?:- [^\n]*\n){2}\n?", "", ct)
             i2 = ct.find("## ")
             cl.write_text(ct[:i2] + entry + ct[i2:] if i2 >= 0 else entry + ct)
 
     print(f"[render] run_id={snap['run_id']} · 徽章 confirmed-{c.get('plugins')}/tested-{v.get('total')} · "
-          f"判定 ✅{v.get('pass')}/❌{v.get('fail')}/⚠️{v.get('inc')} · 双文件渲染完成")
+          f"判定 {v.get('pass')}/{v.get('fail')}/{v.get('inc')} · 双文件渲染完成")
     return 0
 
 

@@ -13,9 +13,9 @@
 **A daily-updated radar that auto-discovers and compatibility-tests every plugin for DeepSeek Harness.**
 Know which plugins work before you install them.
 
-[![confirmed](https://img.shields.io/badge/confirmed-138-blue)](#-star-top-20) [![scan](https://img.shields.io/badge/scan-every_6h-green)](#ecosystem-snapshot) [![tested](https://img.shields.io/badge/tested-72-orange)](#how-we-assess-compatibility) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![confirmed](https://img.shields.io/badge/confirmed-2560-blue)](#-star-top-20) [![scan](https://img.shields.io/badge/scan-every_6h-green)](#ecosystem-snapshot) [![tested](https://img.shields.io/badge/tested-1305-orange)](#how-we-assess-compatibility) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
-[![✅ runtime OK](https://img.shields.io/badge/✅_runtime_OK-379-brightgreen)](#2-understand-status-unified-4-tier-scale) [![❌ incompatible](https://img.shields.io/badge/❌_incompatible-155-red)](#2-understand-status-unified-4-tier-scale) [![⚠️ pending](https://img.shields.io/badge/⚠️_pending-14-yellow)](#2-understand-status-unified-4-tier-scale) [![untested](https://img.shields.io/badge/untested-0-lightgrey)](#2-understand-status-unified-4-tier-scale)
+[![runtime OK](https://img.shields.io/badge/runtime_OK-860-brightgreen)](#2-understand-status-unified-4-tier-scale) [![incompatible](https://img.shields.io/badge/incompatible-394-red)](#2-understand-status-unified-4-tier-scale) [![pending](https://img.shields.io/badge/pending-51-yellow)](#2-understand-status-unified-4-tier-scale) [![untested](https://img.shields.io/badge/untested-0-lightgrey)](#2-understand-status-unified-4-tier-scale)
 
 [English](README.en-US.md) | [简体中文](README.md)
 
@@ -28,22 +28,22 @@ Know which plugins work before you install them.
 <!-- AUTO:pipeline:START -->
 ```mermaid
 flowchart TB
-    subgraph Discovery["🔍 Discovery (every 6h · probe every 15 min)"]
-        A1["GitHub Search<br/>topic ×2 + keyword ×3<br/>candidates 2823 · age 208m"]
-        A2["Local DB merge · dedupe by repo id"]
-        A3["🚫 Private org repos excluded<br/>35s stagger · 403 backoff · dshow blocklist"]
+    subgraph Discovery["发现（每 6 小时 · probe 每 15 分钟 巡检触发）"]
+        A1["GitHub Search<br/>topic + keyword<br/>候选 2855 · 实时"]
+        A2["本地库补全 · 去重 repo id"]
+        A3["私有 org 仓排除<br/>35s 错峰 · 403 退避 · dshow 黑名单"]
     end
-    subgraph Validation["📋 Validation (driver 20s streaming loop)"]
+    subgraph Validation["验证（driver 流式循环）"]
         B1{"package.json<br/>name + main/exports/dsh?"}
     end
-    B1 -->|"plugins 1253"| C1["k8s runtime test<br/>1 pod per plugin · concurrency 10<br/>dsh agent + Qwen (de-stream)"]
-    B1 -->|"non-plugins (dropped 1064)"| B3["❌ dropped to save space"]
-    C1 --> D1{"verdict · total 548"}
-    D1 -->|"✅ 379 / ❌ 155"| E1["aggregate + README stats"]
-    D1 -->|"⚠️ 14 env retries"| C1
-    E1 --> E2["cadence deliver<br/>delta this cycle —/100<br/>dual-repo bot PRs (idempotent)"]
-    S["⚖️ static 4D track (daily 02:00)"] -.-> E1
-    M["🛡 radar-probe every 15 min self-heal<br/>7 metric streams × 60s · done 0"] -.-> A1
+    B1 -->|"插件 2560"| C1["k8s 运行级测试<br/>一插件一 pod · 并发 10<br/>dsh agent + Qwen（de-stream）"]
+    B1 -->|"非插件（累计删 1064）"| B3["即删省空间"]
+    C1 --> D1{"判定 · 总 1305"}
+    D1 -->|"860 可用 / 394 不兼容"| E1["聚合 + README 分类统计"]
+    D1 -->|"51 待定"| C1
+    E1 --> E2["cadence 交付<br/>已交付 1305 · 双仓 bot PR（幂等 supersede）"]
+    S["静态四维轨（每日 02:00）"] -.-> E1
+    M["radar-probe 每 15 分钟 自愈<br/>7 指标流 × 60s · 完成累计 1305"] -.-> A1
     M -.-> C1
 ```
 <!-- AUTO:pipeline:END -->
@@ -52,27 +52,27 @@ flowchart TB
 
 | Goal | Link |
 |---|---|
-| Browse Star Top 20 | [🔥 Star Top 20](#-star-top-20) |
-| Find a plugin by use case | [📋 Plugin Catalog](#plugin-catalog) · [PLUGINS.md](PLUGINS.md) — 9 categories, compat status per plugin |
-| Browse all auto-discovered repos | [📊 Ecosystem Snapshot](#ecosystem-snapshot) — dated compatibility matrix |
-| See what changed recently | [📝 CHANGELOG](CHANGELOG.md) |
-| Register or submit a plugin | [🔧 For Plugin Developers](#for-plugin-developers) · add the `dsh-plugin` topic → discovered within 8h · [PR template](.github/PULL_REQUEST_TEMPLATE.md) |
-| Maintain this radar | [⚙️ Automation SOP](docs/SOP.md) |
-| Plugin user guide | [📖 For Plugin Users](#for-plugin-users) |
-| How we assess compatibility | [🔍 How We Assess Compatibility](#how-we-assess-compatibility) |
-| Join the community | [💬 dshfind.com](#-dsh-learning-community-dshfindcom) · [Discussion group](#community-discussion-group) |
+| Browse Star Top 20 | [ Star Top 20](#-star-top-20) |
+| Find a plugin by use case | [ Plugin Catalog](#plugin-catalog) · [PLUGINS.md](PLUGINS.md) — 9 categories, compat status per plugin |
+| Browse all auto-discovered repos | [ Ecosystem Snapshot](#ecosystem-snapshot) — dated compatibility matrix |
+| See what changed recently | [ CHANGELOG](CHANGELOG.md) |
+| Register or submit a plugin | [ For Plugin Developers](#for-plugin-developers) · add the `dsh-plugin` topic → discovered within 8h · [PR template](.github/PULL_REQUEST_TEMPLATE.md) |
+| Maintain this radar | [ Automation SOP](docs/SOP.md) |
+| Plugin user guide | [ For Plugin Users](#for-plugin-users) |
+| How we assess compatibility | [ How We Assess Compatibility](#how-we-assess-compatibility) |
+| Join the community | [ dshfind.com](#-dsh-learning-community-dshfindcom) · [Discussion group](#community-discussion-group) |
 
 > [!IMPORTANT]
 > **Inclusion ≠ compatible, static check ≠ runtime-usable, runtime-usable ≠ security-audited.**
 > This repo provides traceable filtering signals, not official DSH endorsement. Always review plugin source, permissions, dependencies, and license before installing.
 
-## 🔥 Star Top 20
+##  Star Top 20
 
 <!-- AUTO:featured:START -->
 
 > 按 GitHub star 数排序，每 20 分钟自动刷新。数据截至 2026-08-16 19:53（UTC+8）。
 
-| # | 插件 | ⭐ | 说明 |
+| # | 插件 |  | 说明 |
 |---|---|---|---|
 | 1 | [headroom](https://github.com/headroomlabs-ai/headroom) | 66493 | Compress tool outputs, logs, files, and RAG chunks befo… |
 | 2 | [dsh-web-ui](https://github.com/zhu1090093659/dsh-web-ui) | 3143 | Plugin and skin collection for DeepSeek Harness (DSH) W… |
@@ -103,29 +103,29 @@ flowchart TB
 
 Per-plugin details (verdict · location · stars) in **PLUGINS-ALL.md**.
 
-- **🎓 技能包**（8）— OK 5 · incompatible 1 · pending 1 · untested 1 · watching 0 — [details](PLUGINS-ALL.md#-技能包8)
-- **🧠 记忆增强**（15）— OK 10 · incompatible 2 · pending 1 · untested 2 · watching 0 — [details](PLUGINS-ALL.md#-记忆增强15)
-- **🎨 主题皮肤**（8）— OK 4 · incompatible 0 · pending 3 · untested 1 · watching 0 — [details](PLUGINS-ALL.md#-主题皮肤8)
-- **🛒 市场与管理**（31）— OK 21 · incompatible 2 · pending 0 · untested 7 · watching 1 — [details](PLUGINS-ALL.md#-市场与管理31)
-- **🔌 Web UI 增强**（360）— OK 204 · incompatible 47 · pending 18 · untested 78 · watching 13 — [details](PLUGINS-ALL.md#-web-ui-增强360)
-- **💻 编码开发**（362）— OK 168 · incompatible 39 · pending 11 · untested 122 · watching 22 — [details](PLUGINS-ALL.md#-编码开发362)
-- **🤖 Agent 能力**（317）— OK 158 · incompatible 39 · pending 13 · untested 89 · watching 18 — [details](PLUGINS-ALL.md#-agent-能力317)
-- **📡 消息通讯**（131）— OK 71 · incompatible 16 · pending 3 · untested 36 · watching 5 — [details](PLUGINS-ALL.md#-消息通讯131)
-- **🗂 文件数据**（112）— OK 46 · incompatible 22 · pending 8 · untested 30 · watching 6 — [details](PLUGINS-ALL.md#-文件数据112)
-- **🎮 娱乐生活**（55）— OK 34 · incompatible 4 · pending 1 · untested 11 · watching 5 — [details](PLUGINS-ALL.md#-娱乐生活55)
-- **🛠 基建部署**（152）— OK 76 · incompatible 32 · pending 6 · untested 29 · watching 9 — [details](PLUGINS-ALL.md#-基建部署152)
-- **📚 学习研究**（26）— OK 11 · incompatible 6 · pending 0 · untested 7 · watching 2 — [details](PLUGINS-ALL.md#-学习研究26)
-- **❓ 其他**（571）— OK 268 · incompatible 73 · pending 13 · untested 148 · watching 69 — [details](PLUGINS-ALL.md#-其他571)
+- ** 技能包**（8）— OK 5 · incompatible 1 · pending 1 · untested 1 · watching 0 — [details](PLUGINS-ALL.md#-技能包8)
+- ** 记忆增强**（15）— OK 10 · incompatible 2 · pending 1 · untested 2 · watching 0 — [details](PLUGINS-ALL.md#-记忆增强15)
+- ** 主题皮肤**（8）— OK 4 · incompatible 0 · pending 3 · untested 1 · watching 0 — [details](PLUGINS-ALL.md#-主题皮肤8)
+- ** 市场与管理**（31）— OK 21 · incompatible 2 · pending 0 · untested 7 · watching 1 — [details](PLUGINS-ALL.md#-市场与管理31)
+- ** Web UI 增强**（360）— OK 204 · incompatible 47 · pending 18 · untested 78 · watching 13 — [details](PLUGINS-ALL.md#-web-ui-增强360)
+- ** 编码开发**（362）— OK 168 · incompatible 39 · pending 11 · untested 122 · watching 22 — [details](PLUGINS-ALL.md#-编码开发362)
+- ** Agent 能力**（317）— OK 158 · incompatible 39 · pending 13 · untested 89 · watching 18 — [details](PLUGINS-ALL.md#-agent-能力317)
+- ** 消息通讯**（131）— OK 71 · incompatible 16 · pending 3 · untested 36 · watching 5 — [details](PLUGINS-ALL.md#-消息通讯131)
+- ** 文件数据**（112）— OK 46 · incompatible 22 · pending 8 · untested 30 · watching 6 — [details](PLUGINS-ALL.md#-文件数据112)
+- ** 娱乐生活**（55）— OK 34 · incompatible 4 · pending 1 · untested 11 · watching 5 — [details](PLUGINS-ALL.md#-娱乐生活55)
+- ** 基建部署**（152）— OK 76 · incompatible 32 · pending 6 · untested 29 · watching 9 — [details](PLUGINS-ALL.md#-基建部署152)
+- ** 学习研究**（26）— OK 11 · incompatible 6 · pending 0 · untested 7 · watching 2 — [details](PLUGINS-ALL.md#-学习研究26)
+- ** 其他**（571）— OK 268 · incompatible 73 · pending 13 · untested 148 · watching 69 — [details](PLUGINS-ALL.md#-其他571)
 
 <!-- AUTO:catalog:END -->
 
-## 🌐 DSH Learning Community dshfind.com
+##  DSH Learning Community dshfind.com
 
 [dshfind.com](https://dshfind.com) — Learn DSH principles, discover plugins & share best practices.
 
 <a href="https://dshfind.com"><img src="assets/dshfind-en.png" width="600" alt="dshfind.com — DSH learning & sharing community"></a>
 
-[🌐 dshfind.com](https://dshfind.com) · [GitHub](https://github.com/hikariming/dshfind)
+[ dshfind.com](https://dshfind.com) · [GitHub](https://github.com/hikariming/dshfind)
 
 ## Community Discussion Group
 
@@ -149,9 +149,9 @@ All entries use a **single runtime scale** (k8s container tests — see the test
 
 | Status | What it says | What it does not say |
 |---|---|---|
-| ✅ Runtime OK | Actually loaded and completed the verification task under the recorded test version | Not a full functional, performance, or security test |
-| ❌ Runtime incompatible | Hard failure — missing deps, read-only sandbox, missing internal packages (3 retries all failed) | Not permanently unusable; the author may have fixed it in a newer version |
-| ⚠️ Pending | Test-environment failure; the verdict is incomplete | **Not partially compatible** — awaiting a retest |
+|  Runtime OK | Actually loaded and completed the verification task under the recorded test version | Not a full functional, performance, or security test |
+|  Runtime incompatible | Hard failure — missing deps, read-only sandbox, missing internal packages (3 retries all failed) | Not permanently unusable; the author may have fixed it in a newer version |
+|  Pending | Test-environment failure; the verdict is incomplete | **Not partially compatible** — awaiting a retest |
 | · Untested | Never dispatched to a runtime test | Do not infer either compatibility or incompatibility |
 
 > [!NOTE]
@@ -269,14 +269,14 @@ Small PRs that just fix a link, category, description, or status evidence are al
 | 静态综合判定 | 277 / 286 兼容，9 需适配（静态轨 2026-08-13 · 经快照入仓） |
 | 证据不足 | 94 待调研 |
 | 其他 | 0 占位 · 0 不适用 · 0 已删除 |
-| 运行级实测 | ✅379 可用 · 155 不兼容 · 14 待定（共 548 个，k8s agent 口径）|
+| 运行级实测 | 379 可用 · 155 不兼容 · 14 待定（共 548 个，k8s agent 口径）|
 | 正在跟踪的 PR | 2（快照 deliver 口径） |
 
 [完整索引](reports/2026-08-15/index.md) · [静态矩阵](reports/2026-08-15/mainline-compat.md) · [编译实验](reports/2026-08-15/compile-compat.md) · [运行实测](reports/2026-08-15/agent-test.md)
 
 <details><summary>插件状态明细（按判定分群 · 与上方分类目录互补 · 默认折叠）</summary>
 
-**🐙 正在跟踪的 open PR**
+** 正在跟踪的 open PR**
 
 | 仓库 | PR | 标题 | 更新 |
 |---|---|---|---|
