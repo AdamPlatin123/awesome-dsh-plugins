@@ -48,6 +48,7 @@ jobs:
           DSH_EXT_TOKEN: ${{ secrets.DSH_EXT_TOKEN }}
         run: |
           if [ -z "${DSH_EXT_TOKEN}" ]; then echo "[skip] 未配置 DSH_EXT_TOKEN，仅推 origin"; exit 0; fi
+          git config --unset-all http.https://github.com/.extraheader || true
           git remote add dsh-ext "https://x-access-token:${DSH_EXT_TOKEN}@github.com/dsh-external/awesome-dsh-plugins.git" || true
           git fetch dsh-ext main
           if ! git rebase dsh-ext/main; then
