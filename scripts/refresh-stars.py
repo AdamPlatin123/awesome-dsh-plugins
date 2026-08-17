@@ -51,10 +51,16 @@ def gql_batch(repos):
              'https://api.github.com/graphql'],
             capture_output=True, text=True)
         try:
-            data = json.loads(p.stdout).get('data') or {}
+            payload = json.loads(p.stdout)
+            data = payload.get('data') or {}
             if data:
                 break
-        except Exception:
+            if payload.get('errors'):
+                print('[gql-diag] errors:', str(payload['errors'])[:300], file=sys.stderr)
+            elif not p.stdout.strip():
+                print(f'[gql-diag] empty stdout, curl rc={p.returncode}', file=sys.stderr)
+        except Exception as exc:
+            print(f'[gql-diag] parse fail: {exc}; rc={p.returncode}; body[:200]={p.stdout[:200]}', file=sys.stderr)
             data = None
     if data is None:
         return {}
