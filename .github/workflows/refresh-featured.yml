@@ -1,12 +1,13 @@
 name: refresh-featured
 
-# 星标榜（Star Top 20）自动刷新：
-#   - schedule 每 20 分钟（GitHub Actions 高峰期可能延迟数分钟到数十分钟）
+# 精选插件榜（Featured Top 50，人工策展成员）自动刷新星标：
+#   - schedule 每 6 小时（成员固定，星标变化慢；避开整点高峰）
 #   - workflow_dispatch 支持手动触发
+# 成员与分类在 data/awesome-50.json 人工维护，本工作流只刷星标不改成员；
 # 变化时提交并推送 origin；配置了 DSH_EXT_TOKEN secret 时同步推送 dsh-ext 镜像。
 on:
   schedule:
-    - cron: "*/20 * * * *"
+    - cron: "23 */6 * * *"
   workflow_dispatch: {}
 
 permissions:
@@ -40,7 +41,7 @@ jobs:
             echo "[skip] 榜单无变化，不提交"
             exit 0
           fi
-          git commit -m "auto: 星标榜刷新 $(date -u '+%Y-%m-%d %H:%M') UTC"
+          git commit -m "auto: 精选50星标刷新 $(date -u '+%Y-%m-%d %H:%M') UTC"
           git push
 
       - name: Push mirror to dsh-ext (optional)

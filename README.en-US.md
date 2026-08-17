@@ -8,7 +8,7 @@
 **A daily-updated radar that auto-discovers and compatibility-tests every plugin for DeepSeek Harness.**
 Know which plugins work before you install them.
 
-[![confirmed](https://img.shields.io/badge/confirmed-159-blue)](#star-top-20) [![scan](https://img.shields.io/badge/scan-every_6h-green)](#ecosystem-snapshot) [![tested](https://img.shields.io/badge/tested-75-orange)](#how-we-assess-compatibility) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![confirmed](https://img.shields.io/badge/confirmed-159-blue)](#featured-top-50) [![scan](https://img.shields.io/badge/scan-every_6h-green)](#ecosystem-snapshot) [![tested](https://img.shields.io/badge/tested-75-orange)](#how-we-assess-compatibility) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
 [![runtime OK](https://img.shields.io/badge/runtime_OK-879-brightgreen)](#2-understand-status-unified-4-tier-scale) [![incompatible](https://img.shields.io/badge/incompatible-451-red)](#2-understand-status-unified-4-tier-scale) [![pending](https://img.shields.io/badge/pending-63-yellow)](#2-understand-status-unified-4-tier-scale) [![untested](https://img.shields.io/badge/untested-0-lightgrey)](#2-understand-status-unified-4-tier-scale)
 
@@ -46,7 +46,7 @@ flowchart TB
 
 | Goal | Link |
 |---|---|
-| Browse Star Top 20 | [ Star Top 20](#star-top-20) |
+| Browse featured plugins | [Featured Top 50](#featured-top-50) — curated · 11 categories |
 | Find a plugin by use case | [Plugin Catalog](#plugin-catalog) — 13 categories · per-plugin details in [PLUGINS-ALL.md](PLUGINS-ALL.md); [PLUGINS.md](PLUGINS.md) is the PR-registered list |
 | Browse all auto-discovered repos | [ Ecosystem Snapshot](#ecosystem-snapshot) — dated compatibility matrix |
 | See what changed recently | [ CHANGELOG](CHANGELOG.md) |
@@ -60,34 +60,118 @@ flowchart TB
 > **Inclusion ≠ compatible, static check ≠ runtime-usable, runtime-usable ≠ security-audited.**
 > This repo provides traceable filtering signals, not official DSH endorsement. Always review plugin source, permissions, dependencies, and license before installing.
 
-##  Star Top 20
+## Featured Top 50
 
 <!-- AUTO:featured:START -->
 
-> 按 GitHub star 数排序，每 20 分钟自动刷新。数据截至 2026-08-17 16:03（UTC+8）。
+> 人工策展 50 个高价值插件，按 11 类分组；星标每 6 小时自动刷新（成员调整请提 PR 修改 data/awesome-50.json）。数据截至 2026-08-17 16:51（UTC+8）。
 
-| # | 插件 | ⭐ | 说明 |
-|---|---|---|---|
-| 1 | [headroom](https://github.com/headroomlabs-ai/headroom) | 66575 | Compress tool outputs, logs, files, and RAG chunks befo… |
-| 2 | [dsh-web-ui](https://github.com/zhu1090093659/dsh-web-ui) | 3813 | Plugin and skin collection for DeepSeek Harness (DSH) W… |
-| 3 | [modlens](https://github.com/liustack/modlens) | 2598 | The first vision plugin for DeepSeek Harness, and the v… |
-| 4 | [DSH-better-sidebar](https://github.com/omdsh-dev/DSH-better-sidebar) | 1816 | 开放的侧边栏底座，支持三方拓展注册新侧边栏页面。内置文件渲染编辑/终端/Git/子代理页面 |
-| 5 | [dsh-TUI](https://github.com/ccch1mneyyy/dsh-TUI) | 1712 | DSH 官方公众号收录的 TUI 补位插件：Claude Code 风，鲸鱼顶栏/实时状态/流式思考/双击 E… |
-| 6 | [TokenTracker](https://github.com/xiufengsun/TokenTracker) | 1343 | Local-first AI token usage & cost tracker for 31 coding… |
-| 7 | [PicGo-Core](https://github.com/PicGo/PicGo-Core) | 975 | :zap:The ultimate image uploading engine. Both CLI & AP… |
-| 8 | [sandbase-harness](https://github.com/sandbaseai/sandbase-harness) | 611 | Open-source CMA-compatible agent runtime for any model,… |
-| 9 | [dsh-vision-toolkit](https://github.com/Anionex/dsh-vision-toolkit) | 581 | 让纯文本模型更好地做视觉任务的DeepSeek Harness插件：带意图的图片问答、长截图 OCR、UI 还… |
-| 10 | [dsh-vision-router](https://github.com/ysr666/dsh-vision-router) | 527 | Eyes for text-only DeepSeek Harness agents: built-in fr… |
-| 11 | [dsh-ads](https://github.com/Nagi-ovo/dsh-ads) | 475 | 把 DSH 变成 2005 年门户网站｜Parody ads, fake games, and popups … |
-| 12 | [dsh-agent-teams](https://github.com/NanmiCoder/dsh-agent-teams) | 456 | AgentTeams plugin for DeepSeek Harness |
-| 13 | [Abu-Cowork](https://github.com/PM-Shawn/Abu-Cowork) | 332 | Open-source alternative to Claude Cowork — a local-firs… |
-| 14 | [deepseek-harness-desktop-app](https://github.com/vibeinging/deepseek-harness-desktop-app) | 312 | DeepSeek Harness Desktop App: a local AI desktop worksp… |
-| 15 | [dsh-at-file](https://github.com/omdsh-dev/dsh-at-file) | 302 | Codex-style @file mentions for DeepSeek Harness: search… |
-| 16 | [Bigfish](https://github.com/turtle2209/Bigfish) | 243 | Bigfish —— DeepSeek Harness 的第三方桌面端，内置 Node 运行时，双击即用，附带… |
-| 17 | [oh-dsh](https://github.com/hust-open-atom-club/oh-dsh) | 234 | 一套 DSH runtime，Desktop、Web 与 TUI 三种开发体验。 |
-| 18 | [dsh-browser](https://github.com/Lum1104/dsh-browser) | 227 | dsh plugin: Chrome sidebar extension that lets DSH oper… |
-| 19 | [whale-girl](https://github.com/vlln/whale-girl) | 208 | DSH Web GUI 桌面宠物插件（QQ 宠物形态）：右下角悬浮、可拖拽/投喂/玩耍的积累型伙伴。 |
-| 20 | [dsh-tianshu-tui](https://github.com/huiliyi37/dsh-tianshu-tui) | 196 | dsh-tianshu-tui — 是官方 Dsh web端的交互式终端极简风格 UI 插件。以自研ansi为… |
+### 🖥 界面与工作台（7）
+
+| 插件 | ⭐ | 实测 | 说明 |
+|---|---:|---|---|
+| [dsh-web-ui](https://github.com/zhu1090093659/dsh-web-ui) | 3848 | ✅ | Web UI 增强与皮肤合集：任务看板、Git 图、移动端、皮肤中心 |
+| [DSH-better-sidebar](https://github.com/omdsh-dev/DSH-better-sidebar) | 1834 | ✅ | 侧边栏变完整工作台：文件编辑/终端/Git/子代理，支持三方注册扩展页 |
+| [dsh-visualize](https://github.com/Nagi-ovo/dsh-visualize) | 165 | ✅ | 对话中生成交互式可视化卡片 |
+| [dsh-genui](https://github.com/omdsh-dev/dsh-genui) | 161 | ✅ | GenUI 内联组件：图表/表单/测验/3D 场景 + action 事件环 |
+| [dsh-outline](https://github.com/urzeye/dsh-outline) | 10 | ✅ | 会话页实时大纲：流式更新、点击定位、搜索与收藏 |
+| [dsh-annotation](https://github.com/omdsh-dev/dsh-annotation) | 69 | ✅ | 划选文字→批注→随消息发送，回复逐条对照 |
+| [dsh-turn-index](https://github.com/Simon314620/dsh-turn-index) | 1 | ✅ | 对话轮次索引侧栏，点击跳转 + 滚动联动 |
+
+### ⌨️ 终端与桌面端（5）
+
+| 插件 | ⭐ | 实测 | 说明 |
+|---|---:|---|---|
+| [dsh-TUI](https://github.com/ccch1mneyyy/dsh-TUI) | 1732 | ✅ | Claude Code 风全屏 TUI：鲸鱼顶栏/流式思考/双击 Esc 回滚 |
+| [dsh-tianshu-tui](https://github.com/huiliyi37/dsh-tianshu-tui) | 197 | 待定 | 自研 ANSI 渲染的极简终端 UI |
+| [Bigfish](https://github.com/turtle2209/Bigfish) | 244 | — | 第三方桌面端：内置 Node 运行时，双击即用 |
+| [oh-dsh](https://github.com/hust-open-atom-club/oh-dsh) | 234 | ✅ | 社区发行版：桌面/Web/TUI 三形态统一体验 |
+| [dsh-bash-terminal](https://github.com/MAXeaglet/dsh-bash-terminal) | 11 | ✅ | Windows 三终端（PowerShell/Git Bash/WSL）+ 交互式 PTY |
+
+### 👁 视觉与多模态（3）
+
+| 插件 | ⭐ | 实测 | 说明 |
+|---|---:|---|---|
+| [modlens](https://github.com/liustack/modlens) | 2622 | ✅ | 生态第一个视觉插件，视觉工作流的基准方案 |
+| [dsh-vision-router](https://github.com/ysr666/dsh-vision-router) | 543 | ✅ | 内置免费视觉模型路由，给文本 agent 装眼睛 |
+| [dsh-vision-toolkit](https://github.com/Anionex/dsh-vision-toolkit) | 583 | 需适配 | 带意图图片问答、长截图 OCR、UI 还原 |
+
+### 🤖 Agent 能力与编排（5）
+
+| 插件 | ⭐ | 实测 | 说明 |
+|---|---:|---|---|
+| [sandbase-harness](https://github.com/sandbaseai/sandbase-harness) | 611 | ✅ | CMA 兼容开源 agent 运行时，任意模型可驱动 |
+| [dsh-agent-teams](https://github.com/NanmiCoder/dsh-agent-teams) | 462 | 待定 | 多代理团队编排 |
+| [helloagents](https://github.com/hellowind777/helloagents) | 687 | ✅ | agent 能力合集 |
+| [rea](https://github.com/morluto/rea) | 342 | ✅ | 用 agent 逆向工程任何东西：从应用行为到原生二进制 |
+| [harmony-next.skills](https://github.com/linhay/harmony-next.skills) | 325 | ✅ | 技能驱动的工作流增强 |
+
+### 💻 编码与效率（5）
+
+| 插件 | ⭐ | 实测 | 说明 |
+|---|---:|---|---|
+| [TokenTracker](https://github.com/xiufengsun/TokenTracker) | 1344 | 未测 | 本地优先的 31 种编码工具 token 用量与成本追踪 |
+| [mobius](https://github.com/nutshellai-tech/mobius) | 284 | ✅ | 编码增强 |
+| [dsh-at-file](https://github.com/omdsh-dev/dsh-at-file) | 305 | 需适配 | Codex 风格 @file 引用：搜索并挂载工作区文件 |
+| [dsh-repo-context](https://github.com/qing3a/dsh-repo-context) | 0 | ✅ | 把 git 状态与仓库规范动态注入 system prompt |
+| [dsh-spend](https://github.com/nonewind/dsh-spend) | 5 | ✅ | Token 费用悬浮窗：按模型/天/会话聚合，自动识别计费计划 |
+
+### 🧠 记忆与上下文（3）
+
+| 插件 | ⭐ | 实测 | 说明 |
+|---|---:|---|---|
+| [mnemon](https://github.com/mnemon-dev/mnemon) | 466 | ✅ | 跨 agent、本地优先的持久记忆 |
+| [dsh-memory-evolve](https://github.com/csyangwen/dsh-memory-evolve) | 142 | — | 五轨记忆 + git 分支托管 + 后台自我进化 |
+| [dsh-plugin-jinji](https://github.com/quan2005/dsh-plugin-jinji) | 3 | ✅ | 极简双轨文本记忆：流水日志 + 实体画像 |
+
+### 🎓 技能包（3）
+
+| 插件 | ⭐ | 实测 | 说明 |
+|---|---:|---|---|
+| [forkprobe](https://github.com/Jayden-X-L/forkprobe) | 66 | ✅ | 同一任务跑多个技能对比，自动选优 |
+| [superpowers-dsh](https://github.com/LayneChai/superpowers-dsh) | 46 | ✅ | TDD/调试/计划等开发技能集 |
+| [dsh-claude-move](https://github.com/PerryLink/dsh-claude-move) | 7 | ✅ | 从 Claude Code 迁移会话/技能/配置到 DSH |
+
+### 📡 消息通讯与 IM（6）
+
+| 插件 | ⭐ | 实测 | 说明 |
+|---|---:|---|---|
+| [ChatCCC](https://github.com/wzj998/ChatCCC) | 19 | ✅ | 飞书/微信聊天控制 DSH / Claude Code |
+| [dsh-lark-bot](https://github.com/PlutoKeating/dsh-lark-bot) | 19 | ✅ | 完整的飞书/Lark bot 桥接 |
+| [dsh-message-edit](https://github.com/Moeblack/dsh-message-edit) | 26 | ✅ | 分支式消息编辑、reroll、重试、多版本 |
+| [dsh-dingtalk](https://github.com/STARDUSTLC666/dsh-dingtalk) | 3 | ✅ | 钉钉群机器人通知（webhook+加签，零依赖） |
+| [dsh-interconnect](https://github.com/Chinesezjc/dsh-interconnect) | 30 | 待定 | 跨 DSH 实例消息/事件交接 |
+| [dsh-focus-chat](https://github.com/dingyi222666/dsh-focus-chat) | 20 | 待定 | 聚焦会话精简视图，只看最终产出 |
+
+### 🗂 文件、数据与浏览（4）
+
+| 插件 | ⭐ | 实测 | 说明 |
+|---|---:|---|---|
+| [dsh-openpencil](https://github.com/ZSeven-W/dsh-openpencil) | 104 | ✅ | OpenPencil 设计稿预览与编辑 |
+| [dsh-plugin-mineru](https://github.com/HuanLinOTO/dsh-plugin-mineru) | 30 | 待定 | PDF/图片/Office 转结构化 Markdown |
+| [dsh-web-search-pro](https://github.com/anweat/dsh-web-search-pro) | 20 | ✅ | 增强型持久网页搜索 |
+| [dsh-browser](https://github.com/Lum1104/dsh-browser) | 230 | — | Chrome 侧栏扩展，让 DSH 直接操作浏览器 |
+
+### 🛒 市场与管理（4）
+
+| 插件 | ⭐ | 实测 | 说明 |
+|---|---:|---|---|
+| [dsh-market](https://github.com/dsh-market/dsh-market) | 746 | ✅ | 持续收录 1000+ 插件的市场：中文搜索 + 五维评分 |
+| [dsh-web-plugin-manager](https://github.com/LX2000WASD/dsh-web-plugin-manager) | 53 | ✅ | Web UI 一键管理插件：启停/装卸/环境管理 |
+| [dsh-plugin-check](https://github.com/omdsh-dev/dsh-plugin-check) | 23 | ✅ | 插件健康检查：清单协议/patch 格式/构建陷阱 |
+| [dsh-plugin-guard](https://github.com/lxzy-7/dsh-plugin-guard) | 8 | ✅ | 安装安全网：装卸前快照，失败自动回退 |
+
+### 🎮 娱乐生活（5）
+
+| 插件 | ⭐ | 实测 | 说明 |
+|---|---:|---|---|
+| [petdex](https://github.com/crafter-station/petdex) | 3863 | ✅ | 生态最高星桌宠图鉴 |
+| [dsh-deep-whale](https://github.com/Small-tailqwq/dsh-deep-whale) | 1182 | 待定 | 深海鲸鱼养成 |
+| [whale-girl](https://github.com/vlln/whale-girl) | 211 | ✅ | QQ 宠物形态桌宠：可拖拽/投喂/玩耍 |
+| [dsh-ads](https://github.com/Nagi-ovo/dsh-ads) | 477 | ✅ | 把 DSH 变回 2005 门户网站：怀旧广告/小游戏/弹窗 |
+| [dsh-stock-watch](https://github.com/Awu12277/dsh-stock-watch) | 37 | ✅ | 股票盯盘小组件 |
+
+> 实测 = 雷达 k8s 运行级判定（✅ 可用 · 待定重测中 · 需适配 = 当前 mainline 不兼容 · 未测），逐轮判定以 [PLUGINS-ALL.md](PLUGINS-ALL.md) 为准；安装第三方插件前请审查源码并固定 commit。
 
 <!-- AUTO:featured:END -->
 
