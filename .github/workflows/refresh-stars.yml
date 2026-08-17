@@ -30,7 +30,7 @@ jobs:
 
       - name: Refresh stars in PLUGINS-ALL.md
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.DSH_EXT_TOKEN || secrets.GITHUB_TOKEN }}
         run: python3 scripts/refresh-stars.py
 
       - name: Commit and push
