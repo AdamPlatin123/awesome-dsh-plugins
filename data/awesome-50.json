@@ -6,7 +6,6 @@
     {
       "name": "🚀 智力增强 Booster",
       "plugins": [
-        {"repo": "fengshenx/dsh-recall", "name": "dsh-recall（风神）", "verdict": "ok", "desc": "recall 工具：模型可搜索并读取自己会话的完整事件日志，包括被 compaction 压缩遮蔽的内容"},
         {"repo": "linhay/harmony-next.skills", "name": "harmony-next.skills", "verdict": "ok", "desc": "技能驱动的工作流增强"},
         {"repo": "Jayden-X-L/forkprobe", "name": "forkprobe", "verdict": "ok", "desc": "同一任务跑多个技能对比，自动选优"},
         {"repo": "LayneChai/superpowers-dsh", "name": "superpowers-dsh", "verdict": "ok", "desc": "TDD/调试/计划等开发技能集"},
@@ -95,7 +94,8 @@
       "plugins": [
         {"repo": "dsh-market/dsh-market", "name": "dsh-market", "verdict": "ok", "desc": "持续收录 1000+ 插件的市场：中文搜索 + 五维评分"},
         {"repo": "LX2000WASD/dsh-web-plugin-manager", "name": "dsh-web-plugin-manager", "verdict": "ok", "desc": "Web UI 一键管理插件：启停/装卸/环境管理"},
-        {"repo": "omdsh-dev/dsh-plugin-check", "name": "dsh-plugin-check", "verdict": "ok", "desc": "插件健康检查：清单协议/patch 格式/构建陷阱"}
+        {"repo": "omdsh-dev/dsh-plugin-check", "name": "dsh-plugin-check", "verdict": "ok", "desc": "插件健康检查：清单协议/patch 格式/构建陷阱"},
+        {"repo": "Ericwong5021/deepseek-plugin-store", "name": "deepseek-plugin-store", "verdict": "ok", "desc": "独立社区插件商店：发现/安装/提交经验证的插件"}
       ]
     },
     {
