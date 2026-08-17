@@ -10,7 +10,7 @@
         {"repo": "linhay/harmony-next.skills", "name": "harmony-next.skills", "verdict": "ok", "desc": "技能驱动的工作流增强"},
         {"repo": "Jayden-X-L/forkprobe", "name": "forkprobe", "verdict": "ok", "desc": "同一任务跑多个技能对比，自动选优"},
         {"repo": "LayneChai/superpowers-dsh", "name": "superpowers-dsh", "verdict": "ok", "desc": "TDD/调试/计划等开发技能集"},
-        {"repo": "yjh051108/dsh-super-injector", "name": "dsh-super-injector", "verdict": "pending", "desc": "系统提示/上下文超级注入器"},
+        {"repo": "yjh051108/dsh-routing-suite", "name": "dsh-routing-suite", "verdict": null, "desc": "注入器 × 思维模式路由套装：免重启运行时注入器 + 任务感知推理模式路由预设（P1-P23 实测）"},
         {"repo": "Electricitysheep/dsh-tool-turbo", "name": "dsh-tool-turbo", "verdict": "ok", "desc": "按轮次自动优化 reasoning_effort（推理力度）"},
         {"repo": "JuneLearn/dsh-reasoning-settings", "name": "dsh-reasoning-settings", "verdict": "ok", "desc": "推理设置控制：让模型按任务切换思考档位"}
       ]

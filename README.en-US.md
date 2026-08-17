@@ -64,7 +64,7 @@ flowchart TB
 
 <!-- AUTO:featured:START -->
 
-> 人工策展 50 个高价值插件，按 11 类分组；星标每 6 小时自动刷新（成员调整请提 PR 修改 data/awesome-50.json）。数据截至 2026-08-17 18:49（UTC+8）。
+> 人工策展 50 个高价值插件，按 11 类分组；星标每 6 小时自动刷新（成员调整请提 PR 修改 data/awesome-50.json）。数据截至 2026-08-17 18:51（UTC+8）。
 
 ### 🚀 智力增强 Booster（7）
 
@@ -74,7 +74,7 @@ flowchart TB
 | [harmony-next.skills](https://github.com/linhay/harmony-next.skills) | 325 | ✅ | 技能驱动的工作流增强 |
 | [forkprobe](https://github.com/Jayden-X-L/forkprobe) | 66 | ✅ | 同一任务跑多个技能对比，自动选优 |
 | [superpowers-dsh](https://github.com/LayneChai/superpowers-dsh) | 46 | ✅ | TDD/调试/计划等开发技能集 |
-| [dsh-super-injector](https://github.com/yjh051108/dsh-super-injector) | 93 | 待定 | 系统提示/上下文超级注入器 |
+| [dsh-routing-suite](https://github.com/yjh051108/dsh-routing-suite) | 3240 | — | 注入器 × 思维模式路由套装：免重启运行时注入器 + 任务感知推理模式路由预设（P1-P23 实测） |
 | [dsh-tool-turbo](https://github.com/Electricitysheep/dsh-tool-turbo) | 4 | ✅ | 按轮次自动优化 reasoning_effort（推理力度） |
 | [dsh-reasoning-settings](https://github.com/JuneLearn/dsh-reasoning-settings) | 5 | ✅ | 推理设置控制：让模型按任务切换思考档位 |
 
@@ -82,7 +82,7 @@ flowchart TB
 
 | 插件 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
-| [dsh-web-ui](https://github.com/zhu1090093659/dsh-web-ui) | 3934 | ✅ | Web UI 增强与皮肤合集：任务看板、Git 图、移动端、皮肤中心 |
+| [dsh-web-ui](https://github.com/zhu1090093659/dsh-web-ui) | 3936 | ✅ | Web UI 增强与皮肤合集：任务看板、Git 图、移动端、皮肤中心 |
 | [DSH-better-sidebar](https://github.com/omdsh-dev/DSH-better-sidebar) | 1870 | ✅ | 侧边栏变完整工作台：文件编辑/终端/Git/子代理，支持三方注册扩展页 |
 | [dsh-visualize](https://github.com/Nagi-ovo/dsh-visualize) | 164 | ✅ | 对话中生成交互式可视化卡片 |
 | [dsh-genui](https://github.com/omdsh-dev/dsh-genui) | 170 | ✅ | GenUI 内联组件：图表/表单/测验/3D 场景 + action 事件环 |
@@ -94,7 +94,7 @@ flowchart TB
 
 | 插件 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
-| [dsh-TUI](https://github.com/ccch1mneyyy/dsh-TUI) | 1761 | ✅ | Claude Code 风全屏 TUI：鲸鱼顶栏/流式思考/双击 Esc 回滚 |
+| [dsh-TUI](https://github.com/ccch1mneyyy/dsh-TUI) | 1762 | ✅ | Claude Code 风全屏 TUI：鲸鱼顶栏/流式思考/双击 Esc 回滚 |
 | [deepseek-harness-desktop](https://github.com/hairyf/deepseek-harness-desktop) | 406 | ✅ | Tauri 桌面版：5MB 安装包零环境配置，Win/macOS/Linux |
 | [Bigfish](https://github.com/turtle2209/Bigfish) | 248 | — | 第三方桌面端：内置 Node 运行时，双击即用 |
 | [oh-dsh](https://github.com/hust-open-atom-club/oh-dsh) | 237 | ✅ | 社区发行版：桌面/Web/TUI 三形态统一体验 |
