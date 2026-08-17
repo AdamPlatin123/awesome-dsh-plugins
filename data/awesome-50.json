@@ -1,8 +1,20 @@
 {
   "updated": "2026-08-17",
-  "source": "雷达 k8s 运行级实测（PLUGINS-ALL.md）+ 联网调研交叉验证（量子位 / awesome-dsh-plugin / dshfind）",
-  "contract": "成员与分类人工策展，bot 只刷新星标不改成员；入选门槛 ≥15★；verdict: ok=运行级可用, pending=待定, incompatible=需适配, untested=未测, null=无雷达判定",
+  "source": "雷达 k8s 运行级实测（PLUGINS-ALL.md）+ 联网调研交叉验证（量子位 / awesome-dsh-plugin / dshfind / linux.do）",
+  "contract": "成员与分类人工策展，bot 只刷新星标不改成员；常规类目门槛 ≥15★；智力增强类经人工点名收录、豁免星标门槛（功能稀缺性优先）；verdict: ok=运行级可用, pending=待定, incompatible=需适配, untested=未测, null=无雷达判定",
   "categories": [
+    {
+      "name": "🚀 智力增强 Booster",
+      "plugins": [
+        {"repo": "fengshenx/dsh-recall", "name": "dsh-recall（风神）", "verdict": "ok", "desc": "recall 工具：模型可搜索并读取自己会话的完整事件日志，包括被 compaction 压缩遮蔽的内容"},
+        {"repo": "linhay/harmony-next.skills", "name": "harmony-next.skills", "verdict": "ok", "desc": "技能驱动的工作流增强"},
+        {"repo": "Jayden-X-L/forkprobe", "name": "forkprobe", "verdict": "ok", "desc": "同一任务跑多个技能对比，自动选优"},
+        {"repo": "LayneChai/superpowers-dsh", "name": "superpowers-dsh", "verdict": "ok", "desc": "TDD/调试/计划等开发技能集"},
+        {"repo": "yjh051108/dsh-super-injector", "name": "dsh-super-injector", "verdict": "pending", "desc": "系统提示/上下文超级注入器"},
+        {"repo": "Electricitysheep/dsh-tool-turbo", "name": "dsh-tool-turbo", "verdict": "ok", "desc": "按轮次自动优化 reasoning_effort（推理力度）"},
+        {"repo": "JuneLearn/dsh-reasoning-settings", "name": "dsh-reasoning-settings", "verdict": "ok", "desc": "推理设置控制：让模型按任务切换思考档位"}
+      ]
+    },
     {
       "name": "🖥 界面与工作台",
       "plugins": [
@@ -40,7 +52,6 @@
         {"repo": "sandbaseai/sandbase-harness", "name": "sandbase-harness", "verdict": "ok", "desc": "CMA 兼容开源 agent 运行时，任意模型可驱动"},
         {"repo": "NanmiCoder/dsh-agent-teams", "name": "dsh-agent-teams", "verdict": "pending", "desc": "多代理团队编排"},
         {"repo": "morluto/rea", "name": "rea", "verdict": "ok", "desc": "用 agent 逆向工程任何东西：从应用行为到原生二进制"},
-        {"repo": "linhay/harmony-next.skills", "name": "harmony-next.skills", "verdict": "ok", "desc": "技能驱动的工作流增强"},
         {"repo": "cofy-x/axern", "name": "axern", "verdict": "ok", "desc": "AI agent 开源沙箱：不可信代码执行与持久服务"},
         {"repo": "humblebanana/open-record-replay", "name": "open-record-replay", "verdict": "ok", "desc": "macOS 录制回放：把鼠标/键盘/UI 事件存为结构化轨迹供 agent 学习重放"}
       ]
@@ -62,21 +73,12 @@
       ]
     },
     {
-      "name": "🎓 技能包",
-      "plugins": [
-        {"repo": "Jayden-X-L/forkprobe", "name": "forkprobe", "verdict": "ok", "desc": "同一任务跑多个技能对比，自动选优"},
-        {"repo": "LayneChai/superpowers-dsh", "name": "superpowers-dsh", "verdict": "ok", "desc": "TDD/调试/计划等开发技能集"}
-      ]
-    },
-    {
       "name": "📡 消息通讯与 IM",
       "plugins": [
-        {"repo": "Chinesezjc/dsh-interconnect", "name": "dsh-interconnect", "verdict": "pending", "desc": "跨 DSH 实例消息/事件交接"},
         {"repo": "omdsh-dev/dsh-lark", "name": "dsh-lark", "verdict": "ok", "desc": "飞书 IM bot 频道（官方渠道插件）"},
         {"repo": "Moeblack/dsh-message-edit", "name": "dsh-message-edit", "verdict": "ok", "desc": "分支式消息编辑、reroll、重试、多版本"},
-        {"repo": "dingyi222666/dsh-focus-chat", "name": "dsh-focus-chat", "verdict": "pending", "desc": "聚焦会话精简视图，只看最终产出"},
-        {"repo": "wzj998/ChatCCC", "name": "ChatCCC", "verdict": "ok", "desc": "飞书/微信聊天控制 DSH / Claude Code"},
-        {"repo": "PlutoKeating/dsh-lark-bot", "name": "dsh-lark-bot", "verdict": "ok", "desc": "完整的飞书/Lark bot 桥接"}
+        {"repo": "Chinesezjc/dsh-interconnect", "name": "dsh-interconnect", "verdict": "pending", "desc": "跨 DSH 实例消息/事件交接"},
+        {"repo": "wzj998/ChatCCC", "name": "ChatCCC", "verdict": "ok", "desc": "飞书/微信聊天控制 DSH / Claude Code"}
       ]
     },
     {
@@ -93,8 +95,7 @@
       "plugins": [
         {"repo": "dsh-market/dsh-market", "name": "dsh-market", "verdict": "ok", "desc": "持续收录 1000+ 插件的市场：中文搜索 + 五维评分"},
         {"repo": "LX2000WASD/dsh-web-plugin-manager", "name": "dsh-web-plugin-manager", "verdict": "ok", "desc": "Web UI 一键管理插件：启停/装卸/环境管理"},
-        {"repo": "omdsh-dev/dsh-plugin-check", "name": "dsh-plugin-check", "verdict": "ok", "desc": "插件健康检查：清单协议/patch 格式/构建陷阱"},
-        {"repo": "Ericwong5021/deepseek-plugin-store", "name": "deepseek-plugin-store", "verdict": "ok", "desc": "独立社区插件商店：发现/安装/提交经验证的插件"}
+        {"repo": "omdsh-dev/dsh-plugin-check", "name": "dsh-plugin-check", "verdict": "ok", "desc": "插件健康检查：清单协议/patch 格式/构建陷阱"}
       ]
     },
     {
@@ -104,8 +105,7 @@
         {"repo": "Small-tailqwq/dsh-deep-whale", "name": "dsh-deep-whale", "verdict": "pending", "desc": "深海鲸鱼养成"},
         {"repo": "Nagi-ovo/dsh-ads", "name": "dsh-ads", "verdict": "ok", "desc": "把 DSH 变回 2005 门户网站：怀旧广告/小游戏/弹窗"},
         {"repo": "vlln/whale-girl", "name": "whale-girl", "verdict": "ok", "desc": "QQ 宠物形态桌宠：可拖拽/投喂/玩耍"},
-        {"repo": "liyupi/dsh-kun-like-pet", "name": "dsh-kun-like-pet", "verdict": "ok", "desc": "小坤桌宠：随 Agent 工作状态切换 9 种动作"},
-        {"repo": "Awu12277/dsh-stock-watch", "name": "dsh-stock-watch", "verdict": "ok", "desc": "股票盯盘小组件"}
+        {"repo": "liyupi/dsh-kun-like-pet", "name": "dsh-kun-like-pet", "verdict": "ok", "desc": "小坤桌宠：随 Agent 工作状态切换 9 种动作"}
       ]
     }
   ]
