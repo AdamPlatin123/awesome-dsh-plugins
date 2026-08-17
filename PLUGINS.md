@@ -100,6 +100,7 @@
 | dsh-vision-tools | [moon09300731/dsh-vision-tools](https://github.com/moon09300731/dsh-vision-tools) | 视觉能力全家桶：vision_understand 工具（OpenAI 兼容视觉 API，默认免费智谱 GLM-4V-Flash）+ 粘贴/拖拽/按钮三入口识图 | 待测 |
 | dsh-approval-gate | [moon09300731/dsh-approval-gate](https://github.com/moon09300731/dsh-approval-gate) | 自动审批门控：Flash 预判写入/命令是否不可回补，安全操作自动批准、危险操作转人工（fail-safe） | 待测 |
 | dsh-routing-suite | [yjh051108/dsh-routing-suite](https://github.com/yjh051108/dsh-routing-suite) | 注入器 × 思维模式路由套装（3300+★ 正主仓，勿与同名仿品混）：免重启运行时注入器 + 任务感知推理模式路由预设（P1-P23 实测）；injector 子目录 `dsh plugin add` 安装 | 待测（registry 插队实测） |
+| Bigfish | [turtle2209/Bigfish](https://github.com/turtle2209/Bigfish) | DeepSeek Harness 第三方桌面端：内置 Node 运行时双击即用（Top50 精选成员，registry 插队实测） | 待测（registry 插队实测） |
 ## 🧰 插件集
 
 | 插件 | 仓库 | 说明 | 运行级 |
