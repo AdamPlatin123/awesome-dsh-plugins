@@ -17,6 +17,7 @@
 | dsh-repo-context | [qing3a/dsh-repo-context](https://github.com/qing3a/dsh-repo-context) | 把 git 状态与仓库规范动态注入 system prompt（section/context/variable，官方 system-prompt 缝隙插件）；dsh-plugin-verify 0.1.2 实测 7/7 waterfall + 工具真实执行（R3 isError:false） | ✅ |
 | dsh-event-auditor | [qing3a/dsh-event-auditor](https://github.com/qing3a/dsh-event-auditor) | Harness 事件流审计面板：观察事件类型/分发模式/计数/最近事件，settings 热改 + /audit 会话命令；已用 mock-llm 运行时验证（74 事件/12 waterfall） | ✅ |
 | dsh-spend | [nonewind/dsh-spend](https://github.com/nonewind/dsh-spend) | Token 用量统计与预计费用：右下角悬浮窗，按模型/按天/按会话多维聚合，内置供应商知识库自动识别计费计划（web bundle） | ✅ |
+| dsh-tokstat | [kongjianguan/dsh-tokstat](https://github.com/kongjianguan/dsh-tokstat) | DSH 使用量与性能统计：设置页「统计」面板（概览/模型/会话/请求，TTFT/TPS/Tokens/成本）+ Python TUI；Node half + client web bundle | ✅ |
 | dsh-tray | [qing3a/dsh-tray](https://github.com/qing3a/dsh-tray) | DeepSeek Harness Windows 系统托盘插件（trayicon exe 宿主，无 native 编译）；菜单/通知/headless 降级，双 profile 已验证 | ✅ |
 | dsh-lan-access | [Leon0555/dsh-lan-access](https://github.com/Leon0555/dsh-lan-access) | 局域网访问：Web GUI 绑定 0.0.0.0 + crypto.randomUUID polyfill（修复非安全上下文下 RPC 崩溃），npm 可装 | ✅ |
 | dsh-full-remote | [JUANWANG-BUAA/dsh-full-remote](https://github.com/JUANWANG-BUAA/dsh-full-remote) | 令牌反向代理：改写 Host/Origin，远程恢复 `settings.*`/`credentials.*`/`host.listDirectory`（通用隧道会 403）；一次性扫码邀请、按设备会话；npm `dsh-full-remote` | ✅ |
