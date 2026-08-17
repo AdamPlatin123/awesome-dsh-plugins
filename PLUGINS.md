@@ -96,6 +96,8 @@
 
 | dsh-background-agents | [PerryLink/dsh-background-agents](https://github.com/PerryLink/dsh-background-agents) | 交互式长会话后台 agent：官方 subagent 接缝上的可持久/可继续子 agent，Web UI 侧边栏实时进度、随时消息/打断、autoReport 进度注入、空闲归档；npm 0.5.0 已发布 | 待测 |
 | dsh-talk | [PerryLink/dsh-talk](https://github.com/PerryLink/dsh-talk) | 语音优先会话闭环：作曲器麦克风按钮 + 浏览器/本地语音转写（Web Speech、FunASR、whisper.cpp），speak 工具朗读回复（browser、edge-tts、piper），事件播报带静音开关，说话打断 | 待测 |
+| dsh-vision-tools | [moon09300731/dsh-vision-tools](https://github.com/moon09300731/dsh-vision-tools) | 视觉能力全家桶：vision_understand 工具（OpenAI 兼容视觉 API，默认免费智谱 GLM-4V-Flash）+ 粘贴/拖拽/按钮三入口识图 | 待测 |
+| dsh-approval-gate | [moon09300731/dsh-approval-gate](https://github.com/moon09300731/dsh-approval-gate) | 自动审批门控：Flash 预判写入/命令是否不可回补，安全操作自动批准、危险操作转人工（fail-safe） | 待测 |
 ## 🧰 插件集
 
 | 插件 | 仓库 | 说明 | 运行级 |
