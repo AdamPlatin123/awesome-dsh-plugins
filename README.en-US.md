@@ -359,7 +359,7 @@ The snapshot only answers "what does today's evidence say" — the front page ne
 
 This repo maintains the catalog, detection rules, and evidence reports — it does not host third-party plugin code. Thanks to every contributor who submitted plugins, reproduced issues, corrected metadata, and kept the test pipeline alive.
 
-No license has been declared yet; confirm authorization with the maintainers before copying, modifying, or redistributing catalog content and scripts. Maintainers should add an explicit `LICENSE` before public promotion.
+This repository's catalog content and scripts are available under the [MIT License](LICENSE); third-party plugins remain governed by the licenses declared in their own repositories.
 
 Huge thanks to everyone who joined the beta test — the group photo shows only part of the list, and many more friends contributed along the way!
 
