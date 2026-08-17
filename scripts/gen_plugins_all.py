@@ -249,7 +249,7 @@ def main():
     L.append('# 全量插件清单（统一四档口径）')
     L.append('')
     L.append(f'> 数据源：radar 快照并集（{src}）⊕ GitHub 定位复核缓存（data/locate-cache.json）。')
-    L.append('> 呈现：分组列表（状态 · 名称  · 一句话说明），不使用大表格。')
+    L.append('> 呈现：分组表格（插件 · 星数 · 描述 · 可用性记录），星数每日 bot 刷新。')
     L.append('')
     L.append('## 统一度量衡')
     L.append('')
@@ -276,6 +276,8 @@ def main():
             continue
         L.append(f'## {dom}（{len(group)}）')
         L.append('')
+        L.append('| 插件 | ★ | 描述 | 可用性记录 |')
+        L.append('| --- | ---: | --- | --- |')
         for e in group:
             name, star = e['name'], e.get('star') or 0
             desc = (e.get('desc') or '—').strip()
@@ -284,13 +286,14 @@ def main():
             pr = ' 〔PR〕' if name in pr_names else ''
             loc = e.get('locate')
             if loc == 'empty_watch':
-                L.append(f'- `[空仓监测]` **{name}** — GitHub 无此仓库，判定暂不展示{pr}')
+                L.append(f'| **{name}**{pr} | — | GitHub 无此仓库 | `[空仓监测]` |')
             elif loc == 'ambiguous_watch':
-                L.append(f'- `[歧义监测]` **{name}** — 同名多仓，判定暂不展示{pr}')
+                L.append(f'| **{name}**{pr} | — | 同名多仓 | `[歧义监测]` |')
             elif loc == 'unresolved':
-                L.append(f'- `[未定位]` **{name}** — 占位待复核，判定暂不展示{pr}')
+                L.append(f'| **{name}**{pr} | — | 占位待复核 | `[未定位]` |')
             else:
-                L.append(f'- {MARK.get(e.get("verdict"), "`[未测]`")} [{name}]({e["url"]}) {star} — {desc}{pr}')
+                desc = desc.replace('|', '\\|')  # 表格行防竖线破格（列表格式时代无此约束）
+                L.append(f'| [{name}]({e["url"]}){pr} | {star} | {desc} | {MARK.get(e.get("verdict"), "`[未测]`")} |')
         L.append('')
 
     L.append('## 附录')

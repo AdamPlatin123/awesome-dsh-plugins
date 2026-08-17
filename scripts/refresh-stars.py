@@ -26,9 +26,11 @@ TOKEN = os.environ.get('GH_TOKEN') or subprocess.run(
 if not TOKEN:
     sys.exit('[错误] 缺少 GH_TOKEN（且 gh auth token 不可用）')
 
-# 行内格式：[name](https://github.com/owner/repo) 123 — desc（星数可空，空则跳过不改）
+# 表格行格式：| [name](https://github.com/owner/repo) | 123 | desc | 判定 |
+# （星数列可空，空则整行不匹配、跳过不改；分组编号与旧列表格式一致：3=owner 4=repo 5=星数 6=尾部）
 LINE_RE = re.compile(
-    r'(\[([^\]]+)\]\(https://github\.com/([A-Za-z0-9_.-]+)/([A-Za-z0-9_.-]+)\)) (\d+)( —)')
+    r'(\|[ \t]*\[([^\]]+)\]\(https://github\.com/([A-Za-z0-9_.-]+)/([A-Za-z0-9_.-]+)\)[ \t]*\|[ \t]*)'
+    r'(\d+)([ \t]*\|)')
 
 
 def gql_batch(repos):
@@ -39,20 +41,26 @@ def gql_batch(repos):
             f'r{i}: repository(owner:"{o}",name:"{n}")'
             '{ stargazerCount }')
     query = '{ ' + ' '.join(parts) + ' }'
-    p = subprocess.run(
-        ['curl', '-sL', '--max-time', '30',
-         '-H', f'Authorization: Bearer {TOKEN}',
-         '-H', 'Content-Type: application/json',
-         '-d', json.dumps({'query': query}),
-         'https://api.github.com/graphql'],
-        capture_output=True, text=True)
-    try:
-        data = json.loads(p.stdout)
-    except Exception:
+    data = None
+    for _attempt in (1, 2):  # 代理下批量查询偶发整批失败：重试一次
+        p = subprocess.run(
+            ['curl', '-sL', '--max-time', '30',
+             '-H', f'Authorization: Bearer {TOKEN}',
+             '-H', 'Content-Type: application/json',
+             '-d', json.dumps({'query': query}),
+             'https://api.github.com/graphql'],
+            capture_output=True, text=True)
+        try:
+            data = json.loads(p.stdout).get('data') or {}
+            if data:
+                break
+        except Exception:
+            data = None
+    if data is None:
         return {}
     out = {}
     for i, (o, n) in enumerate(repos):
-        node = (data.get('data') or {}).get(f'r{i}')
+        node = data.get(f'r{i}')
         if node is not None:
             out[f'{o}/{n}'.lower()] = node.get('stargazerCount')
     return out
@@ -83,7 +91,7 @@ def main():
         key = f'{m.group(3)}/{m.group(4)}'.lower()
         if key in stars and stars[key] != int(m.group(5)):
             changed[0] += 1
-            return f'{m.group(1)} {stars[key]}{m.group(6)}'
+            return f'{m.group(1)}{stars[key]}{m.group(6)}'
         return m.group(0)
 
     new_text = LINE_RE.sub(sub, text)
