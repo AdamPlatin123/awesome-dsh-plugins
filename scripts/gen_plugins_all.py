@@ -230,6 +230,35 @@ def main():
         if n_floor or n_floor_gone:
             print(f'[gen-plugins-all] 登记兜底：补 [未测] {n_floor} 行 · 空仓监测 {n_floor_gone} 行（PLUGINS.md ⊕ 快照并集）')
 
+    # canonical 改名跟随（README 全覆盖轮）：repo-map（含 aliases 历史名）映射到引擎登记的最新全名，
+    # 覆盖已定位行的链接；名称文本仅在等于旧仓名时同步改写。实时改名纠正由 refresh-stars 的 REST 301 回退日更承担。
+    rm_canon = {}
+    for v in repo_map.values():
+        fn = (v.get('full_name') or '').strip()
+        if not fn:
+            continue
+        for a in ([fn] + list(v.get('aliases') or [])):
+            al = (a or '').strip().lower()
+            if al and al != fn.lower():
+                rm_canon[al] = fn
+    n_rename = 0
+    for e in entries:
+        if e.get('locate') != 'located':
+            continue
+        m1 = REAL_URL_RE.search(e.get('url') or '')
+        if not m1:
+            continue
+        cur = f"{m1.group(1)}/{m1.group(2)}".lower()
+        canon = rm_canon.get(cur)
+        if not canon or canon.lower() == cur:
+            continue
+        if e['name'].lower() == cur.split('/')[1]:
+            e['name'] = canon.split('/')[1]
+        e['url'] = f"https://github.com/{canon}"
+        n_rename += 1
+    if n_rename:
+        print(f'[gen-plugins-all] canonical 改名跟随：{n_rename} 行（repo-map aliases）')
+
     # desc 回填（GitHub 描述缓存）+「其他」兜底重分类（taxonomy v2 规则，仅动其他类）
     n_desc = n_reclass = 0
     for e in entries:
