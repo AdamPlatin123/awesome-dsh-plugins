@@ -4,6 +4,10 @@ on:
   push:
     branches: [main]
     paths: ['data/snapshots/**']
+  schedule:
+    # 每日 21:47 UTC（北京 05:47 低峰）：快照节流/星标榜覆盖等任何原因导致的 README 停更，
+    # 由本调度兜底自愈（渲染幂等，无变化自动跳过）
+    - cron: "47 21 * * *"
   workflow_dispatch: {}
 
 permissions:
