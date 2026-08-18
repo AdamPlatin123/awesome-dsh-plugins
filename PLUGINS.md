@@ -107,6 +107,7 @@
 | dsh-agent-team-gui | [toolclub/dsh-agent-team-gui](https://github.com/toolclub/dsh-agent-team-gui) | 持久化多模型 Agent 小队：主 Agent 按成员特性动态编排有界 DAG，成员独立配置模型与工具策略；在 Settings/Composer 管理和选择小队，Run Center 支持追踪、重试与取消，并提供逐 Agent Token 成本洞察；v0.5.0 通过 117 Host + 62 Client 测试及 DSH rc.6 全新 Web profile 安装/浏览器冒烟 | 待测 |
 | dsh-ssh | [dmz2922990/dsh-ssh](https://github.com/dmz2922990/dsh-ssh) | SSH 主机管理 + 远程执行：ssh_host_list/add/update/remove/ssh_bash 五工具，主机台账持久化到 ~/.dsh/ssh-hosts.json，支持 agent/key/password 三种认证（password 走 SSH_ASKPASS，沙箱可用）；提供 Agent 预设与 Cordis 插件两种形态 | 待测 |
 | dsh-mcp-list | [dmz2922990/dsh-mcp-list](https://github.com/dmz2922990/dsh-mcp-list) | 设置面板新增 MCP 页：按服务器分组列出全部已挂载 MCP 服务器与工具，扫描最近会话统计各工具调用次数，一键在系统编辑器打开 cordis.patch.yml 的 MCP 配置 | 待测 |
+| dsh-thinkmeter | [dmz2922990/dsh-thinkmeter](https://github.com/dmz2922990/dsh-thinkmeter) | Think 思考行 Token 计量表：把聊天视图流式 Think 预览替换为实时 token 数显示（Thinking ≈ N tokens），落定时精确取 usage.reasoningTokens、缺失时启发式估算，点击可展开/收起完整思考文本（web client 插件，dsh.bundle 一键安装） | 待测 |
 | dsh-mmx-bridge | [welsione/dsh-mmx-bridge](https://github.com/welsione/dsh-mmx-bridge) | MiniMax 多模态桥接插件：一个 mmx_bridge 工具覆盖图像理解（VLM）/文生图/文图生视频/语音合成/音乐生成/音频翻唱/联网搜索/用量查询，生成产物经 /mmx-files/ 同源内嵌图片预览与音视频播放器，附 Web 设置页管理卡片；零 npm 运行时依赖 | 待测 |
 ## 🧰 插件集
 
