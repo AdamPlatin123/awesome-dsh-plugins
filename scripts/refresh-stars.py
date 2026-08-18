@@ -30,7 +30,7 @@ if not TOKEN:
 # 数字段可省（星数未知——登记兜底行渲染留空）：缺数字时首次刷新补入，此后与普通行同刷。
 # 分组：1=前缀 2=owner 3=repo 4=可选数字 5=尾部（—）
 LIST_RE = re.compile(
-    r'(- `\[[^\]]+\]\` \[[^\]]+\]\(https://github\.com/([A-Za-z0-9_.-]+)/([A-Za-z0-9_.-]+)\)[ \t]*)'
+    r'- `\[([^\]]+)\]` \[([^\]]+)\]\(https://github\.com/([A-Za-z0-9_.-]+)/([A-Za-z0-9_.-]+)\)[ \t]*'
     r'(?:(\d+)[ \t]*)?(—)')
 # 兼容旧表格行：| [name](url) | 123 |（分组：1=前缀 3=owner 4=repo 5=数字 6=尾部）
 TABLE_RE = re.compile(
@@ -82,7 +82,7 @@ def main():
     entries = []  # (owner, name)
     seen = set()
     for m in LIST_RE.finditer(text):
-        key = (m.group(2), m.group(3))
+        key = (m.group(3), m.group(4))
         if key not in seen:
             seen.add(key)
             entries.append(key)
@@ -97,6 +97,30 @@ def main():
     stars = {}
     for i in range(0, len(entries), BATCH):
         stars.update(gql_batch(entries[i:i + BATCH]))
+
+    # REST 301 回退（改名仓）：GraphQL repository(owner,name) 对旧名返回 null（不跟 301）；
+    # REST /repos/<old> 跟随重定向取新 full_name + stargazers_count——补星数并记改名映射
+    renames = {}
+    for o, n in [(o, n) for o, n in entries if f'{o}/{n}'.lower() not in stars]:
+        p = subprocess.run(['curl', '-sL', '--max-time', '15',
+                            '-H', f'Authorization: Bearer {TOKEN}',
+                            f'https://api.github.com/repos/{o}/{n}'],
+                           capture_output=True, text=True)
+        try:
+            d = json.loads(p.stdout)
+        except Exception:
+            continue
+        full, sc = d.get('full_name'), d.get('stargazers_count')
+        if not full or not isinstance(sc, int):
+            continue
+        key = f'{o}/{n}'.lower()
+        stars[key] = sc
+        if full.lower() != key:
+            renames[key] = full
+    if renames:
+        print(f'[stars] REST 回退改名仓 {len(renames)} 个：' +
+              ', '.join(f'{k} → {v}' for k, v in list(renames.items())[:5]))
+
     resolved = sum(1 for o, n in entries if f'{o}/{n}'.lower() in stars)
     if resolved < len(entries) * MIN_RESOLVE_RATIO:
         sys.exit(f'[中止] GraphQL 解析率过低：{resolved}/{len(entries)}')
@@ -104,11 +128,20 @@ def main():
     changed = [0]
 
     def sub_list(m):
-        key = f'{m.group(2)}/{m.group(3)}'.lower()
-        cur = int(m.group(4)) if m.group(4) is not None else None
-        if key in stars and stars[key] != cur:
+        # 分组：1=判定 2=名称 3=owner 4=repo 5=可选数字 6=—
+        key = f'{m.group(3)}/{m.group(4)}'.lower()
+        cur = int(m.group(5)) if m.group(5) is not None else None
+        if key not in stars:
+            return m.group(0)
+        if key in renames:
+            full = renames[key]
+            o2, n2 = full.split('/')
+            name = n2 if m.group(2).lower() == m.group(4).lower() else m.group(2)
             changed[0] += 1
-            return f'{m.group(1)}{stars[key]} {m.group(5)}'
+            return f'- `[{m.group(1)}]` [{name}](https://github.com/{full}) {stars[key]} {m.group(6)}'
+        if stars[key] != cur:
+            changed[0] += 1
+            return f'- `[{m.group(1)}]` [{m.group(2)}](https://github.com/{m.group(3)}/{m.group(4)}) {stars[key]} {m.group(6)}'
         return m.group(0)
 
     def sub_table(m):
