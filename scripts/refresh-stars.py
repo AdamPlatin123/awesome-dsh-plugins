@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """每日全量刷新 PLUGINS-ALL.md 行内星数。
 
-候选 = PLUGINS-ALL.md 全部 GitHub 引用；GraphQL 每 50 仓一批查 stargazerCount
+候选 = PLUGINS-ALL.md 全部 GitHub 引用（列表行含无数字兜底行 + 兼容旧表格行）；GraphQL 每 50 仓一批查 stargazerCount
 （REST 逐仓会超 GITHUB_TOKEN 每小时限额）。仅改写行内星数数字，其余文本不动；
 查不到（私有/删除/改名）的条目保留原值。成功解析低于候选半数时中止（防
 token 失效产生大面积误写）。
@@ -26,9 +26,14 @@ TOKEN = os.environ.get('GH_TOKEN') or subprocess.run(
 if not TOKEN:
     sys.exit('[错误] 缺少 GH_TOKEN（且 gh auth token 不可用）')
 
-# 表格行格式：| [name](https://github.com/owner/repo) | 123 | desc | 判定 |
-# （星数列可空，空则整行不匹配、跳过不改；分组编号与旧列表格式一致：3=owner 4=repo 5=星数 6=尾部）
-LINE_RE = re.compile(
+# 列表行格式（PLUGINS-ALL 现行统一口径）：- `[判定]` [name](url) 123 — desc
+# 数字段可省（星数未知——登记兜底行渲染留空）：缺数字时首次刷新补入，此后与普通行同刷。
+# 分组：1=前缀 2=owner 3=repo 4=可选数字 5=尾部（—）
+LIST_RE = re.compile(
+    r'(- `\[[^\]]+\]\` \[[^\]]+\]\(https://github\.com/([A-Za-z0-9_.-]+)/([A-Za-z0-9_.-]+)\)[ \t]*)'
+    r'(?:(\d+)[ \t]*)?(—)')
+# 兼容旧表格行：| [name](url) | 123 |（分组：1=前缀 3=owner 4=repo 5=数字 6=尾部）
+TABLE_RE = re.compile(
     r'(\|[ \t]*\[([^\]]+)\]\(https://github\.com/([A-Za-z0-9_.-]+)/([A-Za-z0-9_.-]+)\)[ \t]*\|[ \t]*)'
     r'(\d+)([ \t]*\|)')
 
@@ -76,13 +81,18 @@ def main():
     text = open(TARGET, encoding='utf-8').read()
     entries = []  # (owner, name)
     seen = set()
-    for m in LINE_RE.finditer(text):
+    for m in LIST_RE.finditer(text):
+        key = (m.group(2), m.group(3))
+        if key not in seen:
+            seen.add(key)
+            entries.append(key)
+    for m in TABLE_RE.finditer(text):
         key = (m.group(3), m.group(4))
         if key not in seen:
             seen.add(key)
             entries.append(key)
     if not entries:
-        sys.exit('[错误] PLUGINS-ALL.md 未解析到任何带星数的条目')
+        sys.exit('[错误] PLUGINS-ALL.md 未解析到任何条目')
 
     stars = {}
     for i in range(0, len(entries), BATCH):
@@ -93,14 +103,23 @@ def main():
 
     changed = [0]
 
-    def sub(m):
+    def sub_list(m):
+        key = f'{m.group(2)}/{m.group(3)}'.lower()
+        cur = int(m.group(4)) if m.group(4) is not None else None
+        if key in stars and stars[key] != cur:
+            changed[0] += 1
+            return f'{m.group(1)}{stars[key]} {m.group(5)}'
+        return m.group(0)
+
+    def sub_table(m):
         key = f'{m.group(3)}/{m.group(4)}'.lower()
         if key in stars and stars[key] != int(m.group(5)):
             changed[0] += 1
             return f'{m.group(1)}{stars[key]}{m.group(6)}'
         return m.group(0)
 
-    new_text = LINE_RE.sub(sub, text)
+    new_text = LIST_RE.sub(sub_list, text)
+    new_text = TABLE_RE.sub(sub_table, new_text)
     print(f'[stars] 候选 {len(entries)} | 解析 {resolved} | 星数变化 {changed[0]}')
     if changed[0] == 0 or DRY:
         return
