@@ -7,6 +7,11 @@
 
 </p>
 
+<p align="center">
+  <a href="https://trendshift.io/repositories/147500" title="GitHub Trending 日榜 #22 · 2026-08-14 · 全语言口径"><img src="https://trendshift.io/api/badge/trendshift/repositories/147500/daily" alt="Trendshift"></a>
+</p>
+
+
 **自动发现、证据验证的 DeepSeek Harness 插件生态雷达。自动发现 7000+ 候选、逐个 k8s 实测**
 
 
@@ -16,9 +21,6 @@
 
 [![运行级可用](https://img.shields.io/badge/运行级可用-879-brightgreen)](#2-看懂状态统一四档口径) [![运行级不兼容](https://img.shields.io/badge/运行级不兼容-451-red)](#2-看懂状态统一四档口径) [![待定](https://img.shields.io/badge/待定-63-yellow)](#2-看懂状态统一四档口径) [![未测](https://img.shields.io/badge/·_未测-0-lightgrey)](#2-看懂状态统一四档口径)
 
-<p align="center">
-  <a href="https://trendshift.io/repositories/147500" title="GitHub Trending 日榜 #22 · 2026-08-14 · 全语言口径"><img src="https://trendshift.io/api/badge/trendshift/repositories/147500/daily" alt="Trendshift"></a>
-</p>
 
 
 简体中文 | [English](README.en-US.md)
