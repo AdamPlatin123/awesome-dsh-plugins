@@ -47,7 +47,7 @@ def gql_batch(repos):
     for i, (o, n) in enumerate(repos):
         parts.append(
             f'r{i}: repository(owner:"{o}",name:"{n}")'
-            '{ stargazerCount }')
+            '{ stargazerCount nameWithOwner }')
     query = '{ ' + ' '.join(parts) + ' }'
     data = None
     for _attempt in (1, 2):  # 代理下批量查询偶发整批失败：重试一次
