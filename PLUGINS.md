@@ -101,6 +101,7 @@
 | dsh-approval-gate | [moon09300731/dsh-approval-gate](https://github.com/moon09300731/dsh-approval-gate) | 自动审批门控：Flash 预判写入/命令是否不可回补，安全操作自动批准、危险操作转人工（fail-safe） | 待测 |
 | dsh-routing-suite | [yjh051108/dsh-routing-suite](https://github.com/yjh051108/dsh-routing-suite) | 注入器 × 思维模式路由套装（3300+★ 正主仓，勿与同名仿品混）：免重启运行时注入器 + 任务感知推理模式路由预设（P1-P23 实测）；injector 子目录 `dsh plugin add` 安装 | 待测（registry 插队实测） |
 | Bigfish | [turtle2209/Bigfish](https://github.com/turtle2209/Bigfish) | DeepSeek Harness 第三方桌面端：内置 Node 运行时双击即用（Top50 精选成员，registry 插队实测） | 待测（registry 插队实测） |
+| dsh-trading-toolkit | [kentleenot/dsh-trading-toolkit](https://github.com/kentleenot/dsh-trading-toolkit) | A股+美股行情工具箱：实时行情/OHLCV K线/ADX 三状态信号/回测预览，东方财富免 Key 直连，只读永不下单 | ? |
 ## 🧰 插件集
 
 | 插件 | 仓库 | 说明 | 运行级 |
