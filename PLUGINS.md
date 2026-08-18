@@ -105,6 +105,8 @@
 | Bigfish | [turtle2209/Bigfish](https://github.com/turtle2209/Bigfish) | DeepSeek Harness 第三方桌面端：内置 Node 运行时双击即用（Top50 精选成员，registry 插队实测） | 待测（registry 插队实测） |
 | dsh-open-file | [Hyp6666/dsh-open-file](https://github.com/Hyp6666/dsh-open-file) | DSH Web 工作区文件附件插件：多文件选择与全页拖放，读取文本、PDF、DOCX、PPTX、XLSX、ZIP 和图片，提供英中 OCR、页面渲染及 `file_inspect` / `file_read` / `file_ocr` / `file_render` 四个可追溯工具；npm `dsh-open-file` 0.1.1 | 待测 |
 | dsh-agent-team-gui | [toolclub/dsh-agent-team-gui](https://github.com/toolclub/dsh-agent-team-gui) | 持久化多模型 Agent 小队：主 Agent 按成员特性动态编排有界 DAG，成员独立配置模型与工具策略；在 Settings/Composer 管理和选择小队，Run Center 支持追踪、重试与取消，并提供逐 Agent Token 成本洞察；v0.5.0 通过 117 Host + 62 Client 测试及 DSH rc.6 全新 Web profile 安装/浏览器冒烟 | 待测 |
+| dsh-ssh | [dmz2922990/dsh-ssh](https://github.com/dmz2922990/dsh-ssh) | SSH 主机管理 + 远程执行：ssh_host_list/add/update/remove/ssh_bash 五工具，主机台账持久化到 ~/.dsh/ssh-hosts.json，支持 agent/key/password 三种认证（password 走 SSH_ASKPASS，沙箱可用）；提供 Agent 预设与 Cordis 插件两种形态 | 待测 |
+| dsh-mcp-list | [dmz2922990/dsh-mcp-list](https://github.com/dmz2922990/dsh-mcp-list) | 设置面板新增 MCP 页：按服务器分组列出全部已挂载 MCP 服务器与工具，扫描最近会话统计各工具调用次数，一键在系统编辑器打开 cordis.patch.yml 的 MCP 配置 | 待测 |
 | dsh-mmx-bridge | [welsione/dsh-mmx-bridge](https://github.com/welsione/dsh-mmx-bridge) | MiniMax 多模态桥接插件：一个 mmx_bridge 工具覆盖图像理解（VLM）/文生图/文图生视频/语音合成/音乐生成/音频翻唱/联网搜索/用量查询，生成产物经 /mmx-files/ 同源内嵌图片预览与音视频播放器，附 Web 设置页管理卡片；零 npm 运行时依赖 | 待测 |
 ## 🧰 插件集
 
