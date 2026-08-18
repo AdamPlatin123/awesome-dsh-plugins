@@ -120,7 +120,7 @@
 
 ## 🔌 Web UI 增强（380）
 
-- `[可用]` [modlens](https://github.com/liustack/modlens) 3091 — The first vision plugin for DeepSeek Harness, and the vision bridge for every text-only coding agent
+- `[可用]` [modlens](https://github.com/liustack/modlens) 3092 — The first vision plugin for DeepSeek Harness, and the vision bridge for every text-only coding agent
 - `[可用]` [DSH-better-sidebar](https://github.com/omdsh-dev/DSH-better-sidebar) 2171 — 一个侧边栏的完整工作台，支持三方拓展注册新侧边栏页面
 - `[可用]` [dsh-TUI](https://github.com/ccch1mneyyy/dsh-TUI) 1965 — 解决DSH 官方尚无终端 TUI 痛点的补位之作，献给偏爱cli的各位极客：Claude Code 风格全屏交互终端插件——像素鲸鱼顶栏、实时工作状态行、思考流式展开、双击 Esc 回滚、上下文进度条 + TPS 仪表
 - `[不兼容]` [paean-ai-deeptide](https://github.com/paean-ai/deeptide) 1080 — Built by DeepSeek, for DeepSeek — a Swift-native macOS coding agent
@@ -503,11 +503,11 @@
 
 ## 💻 编码开发（344）
 
-- `[不兼容]` [nexu-io-open-design](https://github.com/nexu-io/open-design) 88836 — 🎨 Best DeepSeek Harness Design Plugin
-- `[不兼容]` [titanwings-colleague-skill](https://github.com/titanwings/colleague-skill) 23382 — 将冰冷的离别化为温暖的 Skill，欢迎加入数字生命1.0！Transforming cold farewells into warm skills? It's giving rebirth era
+- `[不兼容]` [nexu-io-open-design](https://github.com/nexu-io/open-design) 88841 — 🎨 Best DeepSeek Harness Design Plugin
+- `[不兼容]` [titanwings-colleague-skill](https://github.com/titanwings/colleague-skill) 23383 — 将冰冷的离别化为温暖的 Skill，欢迎加入数字生命1.0！Transforming cold farewells into warm skills? It's giving rebirth era
 - `[未测]` [TokenTracker](https://github.com/xiufengsun/TokenTracker) 1360 — Local-first AI token usage & cost tracker for 31 coding tools incl
 - `[可用]` [mnemon-dev-mnemon](https://github.com/mnemon-dev/mnemon) 480 — LLM-supervised persistent memory for AI agents — graph-based recall, cross-session knowledge, single binary
-- `[可用]` [dsh-market-dsh-market](https://github.com/dsh-market/dsh-market) 1033 — The plugin market inside DeepSeek Harness — browse, search, one-click install · DSH 可视化插件市场
+- `[可用]` [dsh-market-dsh-market](https://github.com/dsh-market/dsh-market) 1035 — The plugin market inside DeepSeek Harness — browse, search, one-click install · DSH 可视化插件市场
 - `[待定]` [dsh-agent-teams](https://github.com/NanmiCoder/dsh-agent-teams) 551 — AgentTeams plugin for DeepSeek Harness
 - `[不兼容]` [dsh-at-file](https://github.com/omdsh-dev/dsh-at-file) 378 — Codex-style @file mentions for DeepSeek Harness: search workspace files in the composer and attach their path
 - `[可用]` [cofy-x-axern](https://github.com/cofy-x/axern) 56 — Open-source sandboxes for AI agents, untrusted code execution, and durable services.
@@ -850,7 +850,7 @@
 
 ## 🤖 Agent 能力（287）
 
-- `[待定]` [tt-a1i-archify](https://github.com/tt-a1i/archify) 14193 — Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self
+- `[待定]` [tt-a1i-archify](https://github.com/tt-a1i/archify) 14196 — Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self
 - `[可用]` [foryourhealth111-pixel-vibe-skills](https://github.com/foryourhealth111-pixel/Vibe-Skills) 2883 — —
 - `[不兼容]` [anionex-agent-vision-toolkit](https://github.com/Anionex/agent-vision-toolkit) 1040 — —
 - `[可用]` [hellowind777-helloagents](https://github.com/hellowind777/helloagents) 689 — —
@@ -1349,7 +1349,7 @@
 ## 🎮 娱乐生活（52）
 
 - `[可用]` [crafter-station-petdex](https://github.com/crafter-station/petdex) 3895 — A public gallery of animated pets for Codex, Claude Code, DeepSeek Harness, Hermes, OpenCode, Gemini CLI, and
-- `[待定]` [small-tailqwq-dsh-deep-whale](https://github.com/Small-tailqwq/dsh-deep-whale) 1366 — —
+- `[待定]` [small-tailqwq-dsh-deep-whale](https://github.com/Small-tailqwq/dsh-deep-whale) 1369 — —
 - `[可用]` [dsh-memento](https://github.com/PerryLink/dsh-memento) 57 — Bounded, layered, approval-gated, auditable cross-session memory for DeepSeek Harness (capability seam: ctx.me
 - `[不兼容]` [pc2005-cloud-dsh-pet](https://github.com/PC2005-cloud/dsh-pet) 143 — —
 - `[可用]` [liyupi-dsh-kun-like-pet](https://github.com/liyupi/dsh-kun-like-pet) 63 — Kun Like 桌宠 —— DeepSeek Harness 桌面宠物插件：右下角小坤宠随 Agent 工作状态切换 9 种动作，任务完成播放「你干嘛~哎哟」
@@ -1403,9 +1403,9 @@
 
 ## 🛠 基建部署（217）
 
-- `[不兼容]` [anywhere-labs-deepseek-harness-desktop](https://github.com/anywhere-labs/deepseek-harness-desktop) 13529 — 为 DeepSeek Harness (DSH) 插件生态打造的现代化桌面端解决方案
-- `[不兼容]` [dataelement-dsh-desktop](https://github.com/dataelement/dsh-desktop) 928 — DeepSeek Harness Desktop
-- `[可用]` [hairyf-deepseek-harness-desktop](https://github.com/hairyf/deepseek-harness-desktop) 526 — DeepSeek Harness Tauri 桌面版 \| Only 5mb installer, zero environment setup
+- `[不兼容]` [anywhere-labs-deepseek-harness-desktop](https://github.com/anywhere-labs/deepseek-harness-desktop) 13532 — 为 DeepSeek Harness (DSH) 插件生态打造的现代化桌面端解决方案
+- `[不兼容]` [dataelement-dsh-desktop](https://github.com/dataelement/dsh-desktop) 930 — DeepSeek Harness Desktop
+- `[可用]` [hairyf-deepseek-harness-desktop](https://github.com/hairyf/deepseek-harness-desktop) 528 — DeepSeek Harness Tauri 桌面版 \| Only 5mb installer, zero environment setup
 - `[不兼容]` [Bigfish](https://github.com/turtle2209/Bigfish) 268 — Bigfish —— DeepSeek Harness 的第三方桌面端，内置 Node 运行时，双击即用，附带桌面萌宠
 - `[可用]` [sepinetam-mcp-for-stata](https://github.com/SepineTam/mcp-for-stata) 245 — —
 - `[不兼容]` [lum1104-dsh-browser](https://github.com/Lum1104/dsh-browser) 297 — —
@@ -1438,7 +1438,7 @@
 - `[不兼容]` [luo-ross-dsh-desktop](https://github.com/luo-ross/dsh-desktop) 6 — Unofficial community desktop edition of DeepSeek Harness for Windows
 - `[不兼容]` [rzx00-deepseek-harness-desktop](https://github.com/RZX00/deepseek-harness-desktop) 7 — —
 - `[可用]` [feiyang-dev-deepseek-harness-desktop](https://github.com/feiyang-dev/DeepSeek-Harness-Desktop) 6 — —
-- `[待定]` [sorsama-deepseek-harness-mobile](https://github.com/sorsama/deepseek-harness-mobile) 18 — Android companion for DeepSeek Harness \| chat, goals, approvals & notifications from your phone, over your LAN
+- `[待定]` [sorsama-deepseek-harness-mobile](https://github.com/sorsama/deepseek-harness-mobile) 19 — Android companion for DeepSeek Harness \| chat, goals, approvals & notifications from your phone, over your LAN
 - `[待定]` [dsh-tensorlake-sandbox](https://github.com/tensorlakeai/dsh-tensorlake-sandbox) 6 — A deepseek harness plugin for tensorlake sandbox
 - `[不兼容]` [wangshunnn-oh-my-dsh](https://github.com/wangshunnn/oh-my-dsh) 5 — 🐋 All you need is oh-my-dsh ｜ DeepSeek Harness 社区插件索引与精选（自动更新）
 - `[可用]` [dsh-desk](https://github.com/majiayu000/dsh-desk) 9 — Installable Tauri desktop distribution for DeepSeek Harness with a bundled runtime, trusted plugin review, and
@@ -1642,17 +1642,17 @@
 
 ## ❓ 其他（595）
 
-- `[可用]` [deepseek-ai-deepseek-harness](https://github.com/deepseek-ai/deepseek-harness) 159781 — DeepSeek Harness: Everything is a Plugin.
-- `[未测]` [dsh-routing-suite](https://github.com/yjh051108/dsh-routing-suite) 6008 — 注入器 × 思维模式路由套装（3300+★ 正主仓，勿与同名仿品混）：免重启运行时注入器 + 任务感知推理模式路由预设（P1-P23 实测）；injector 子目录 `dsh plugin add` 安装
-- `[可用]` [devin-axis-ipollowork](https://github.com/Devin-AXIS/iPolloWork) 4161 — —
-- `[不兼容]` [awesome-dsh-plugin-awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin) 8777 — A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表
+- `[可用]` [deepseek-ai-deepseek-harness](https://github.com/deepseek-ai/deepseek-harness) 159840 — DeepSeek Harness: Everything is a Plugin.
+- `[未测]` [dsh-routing-suite](https://github.com/yjh051108/dsh-routing-suite) 6011 — 注入器 × 思维模式路由套装（3300+★ 正主仓，勿与同名仿品混）：免重启运行时注入器 + 任务感知推理模式路由预设（P1-P23 实测）；injector 子目录 `dsh plugin add` 安装
+- `[可用]` [devin-axis-ipollowork](https://github.com/Devin-AXIS/iPolloWork) 4162 — —
+- `[不兼容]` [awesome-dsh-plugin-awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin) 8791 — A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表
 - `[可用]` [adamplatin123-awesome-dsh-plugins](https://github.com/AdamPlatin123/awesome-dsh-plugins) 1213 — —
 - `[可用]` [PicGo-Core](https://github.com/PicGo/PicGo-Core) 978 — :zap:The ultimate image uploading engine
 - `[不兼容]` [tong-io-tongflow](https://github.com/tong-io/tongflow) 856 — TongFlow — multimodal AIGC workflow engine (canvas + Python plugin engine) and dsh-tongflow, the DeepSeek Harn
 - `[不兼容]` [0xsline-awesome-deepseek-harness](https://github.com/0xsline/awesome-deepseek-harness) 726 — DeepSeek Harness (DSH) ecosystem: curated plugins, tools, and infrastructure from dsh-external/hub and the pub
 - `[不兼容]` [electricitysheep-dsh-handbook](https://github.com/Electricitysheep/dsh-handbook) 491 — —
 - `[可用]` [tencentcloud-tencentmeeting-cli](https://github.com/TencentCloud/tencentmeeting-cli) 221 — —
-- `[不兼容]` [ariestar-sivtr](https://github.com/Ariestar/sivtr) 158 — —
+- `[不兼容]` [ariestar-sivtr](https://github.com/Ariestar/sivtr) 159 — —
 - `[不兼容]` [ruler4396-dsh-launcher](https://github.com/Ruler4396/dsh-launcher) 147 — —
 - `[可用]` [nagi-ovo-dsh-find-plugins](https://github.com/Nagi-ovo/dsh-find-plugins) 146 — —
 - `[可用]` [sikao-engine-kimix](https://github.com/Sikao-Engine/KimiX) 106 — —
