@@ -2,7 +2,8 @@
 """gen-plugins-all.py — 全量插件清单生成器（PLUGINS-ALL.md）。
 
 数据：data/snapshots/ 全部快照按 run_id 新→旧合并 ⊕ data/repo-map.json（v2 local_key → 真实仓库）
-⊕ data/locate-cache.json 定位复核（含实时 star）。
+⊕ data/locate-cache.json 定位复核（含实时 star）⊕ PLUGINS.md 登记表兜底（登记轨 ⊕ 快照轨并集：
+登记有而快照无的仓补 [未测] 行，API 判消亡的进空仓监测——#189）。
 合并主键以 GitHub 仓库全名（repo-map / 真实 URL / locate-cache 三源归一）为准，同一仓库的
 v1 键（纯仓库名）与 v2 键（owner-repo local_key）合并为单条：URL 取真实值、star 取最大/实时值、
 判定冲突（如 v1 vs v2）降级为 [待定] 并记录冲突详情；展示名优先纯仓库名。
@@ -23,7 +24,6 @@ LOCATE_CACHE = ROOT / 'data' / 'locate-cache.json'
 DESC_CACHE = ROOT / 'data' / 'desc-cache.json'
 REPO_MAP = ROOT / 'data' / 'repo-map.json'
 URL_AUDIT = ROOT / 'data' / 'url-audit.json'
-CURATED_OVERRIDES = ROOT / 'data' / 'curated-overrides.json'
 
 REAL_URL_RE = re.compile(r'github\.com/([A-Za-z0-9_.-]+)/([A-Za-z0-9_.-]+)')
 # 互斥判定（✅/❌ 矛盾才降待定；待定/未测属非结论性，不参与冲突）
@@ -148,19 +148,6 @@ def pr_registered_names():
     return names
 
 
-def curated_overrides():
-    """Read manual curation overrides for ambiguous/placeholder radar entries."""
-    if not CURATED_OVERRIDES.exists():
-        return {}
-    try:
-        data = json.loads(CURATED_OVERRIDES.read_text(encoding='utf-8'))
-    except (json.JSONDecodeError, OSError):
-        return {}
-    entries = data.get('entries') if isinstance(data, dict) else None
-    return entries if isinstance(entries, dict) else {}
-
-
-
 def main():
     entries, rounds = load_snapshots()
     locate = json.loads(LOCATE_CACHE.read_text()).get('entries', {}) if LOCATE_CACHE.exists() else {}
@@ -174,39 +161,25 @@ def main():
     # 实时 star 映射（locate-cache 的 full_name → stargazerCount），对全部已定位条目生效
     live_star = {r['full_name'].lower(): r['star'] for r in locate.values()
                  if r.get('status') == 'found' and r.get('full_name') and isinstance(r.get('star'), int)}
-    curated = curated_overrides()
     url_audit = json.loads(URL_AUDIT.read_text()).get('entries', {}) if URL_AUDIT.exists() else {}
 
     n_fix = n_empty = n_amb = n_unresolved = n_star = 0
     for e in entries:
         if 'search?q=' in (e.get('url') or ''):
-            c = curated.get(e['name'])
-            if c:
-                e['url'] = c.get('url') or f"https://github.com/{c['full_name']}"
+            r = locate.get(e['name'], {})
+            if r.get('status') == 'found':
+                e['url'] = f"https://github.com/{r['full_name']}"
                 e['locate'] = 'located'
-                if c.get('verdict'):
-                    e['verdict'] = c['verdict']
-                if c.get('desc'):
-                    e['desc'] = c['desc']
-                if c.get('star') is not None:
-                    e['star'] = c['star']
-                if c.get('domain'):
-                    e['domain'] = c['domain']
+                n_fix += 1
+            elif r.get('status') == 'not_found':
+                e['locate'] = 'empty_watch'
+                n_empty += 1
+            elif r.get('status'):
+                e['locate'] = 'ambiguous_watch'
+                n_amb += 1
             else:
-                r = locate.get(e['name'], {})
-                if r.get('status') == 'found':
-                    e['url'] = f"https://github.com/{r['full_name']}"
-                    e['locate'] = 'located'
-                    n_fix += 1
-                elif r.get('status') == 'not_found':
-                    e['locate'] = 'empty_watch'
-                    n_empty += 1
-                elif r.get('status'):
-                    e['locate'] = 'ambiguous_watch'
-                    n_amb += 1
-                else:
-                    e['locate'] = 'unresolved'   # 新占位且无复核缓存
-                    n_unresolved += 1
+                e['locate'] = 'unresolved'   # 新占位且无复核缓存
+                n_unresolved += 1
         else:
             e['locate'] = 'located'
         # 消亡仓库降级（url-audit 判 gone：已删除/改名/转私有 → 空仓监测，不呈现链接）
@@ -222,6 +195,40 @@ def main():
             if ls is not None:
                 e['star'] = ls
                 n_star += 1
+
+    # 登记表兜底（#189）：PLUGINS.md 表行有、已定位集合没有的仓，按登记信息补行（判定 [未测]；
+    # url-audit 判 gone 的登记仓进空仓监测）。登记轨与快照轨在此并集，登记不再单向依赖测试覆盖。
+    n_floor = n_floor_gone = 0
+    reg_md = ROOT / 'PLUGINS.md'
+    if reg_md.is_file():
+        have = set()
+        for e in entries:
+            mh = REAL_URL_RE.search(e.get('url') or '')
+            if mh:
+                have.add(f"{mh.group(1)}/{mh.group(2)}".lower())
+            have.add(e['name'].lower().replace('/', '-'))
+        for line in reg_md.read_text().splitlines():
+            rm = re.match(r'^\|\s*([^|]+?)\s*\|\s*\[[^\]]*\]\('
+                          r'(https://github\.com/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+?)/?\)\s*\|\s*([^|]*)', line)
+            if not rm:
+                continue
+            name, url, desc = rm.group(1).strip(), rm.group(2), rm.group(3).strip()
+            full = url.split('github.com/')[1].strip('/').lower()
+            if full in have:
+                continue
+            dom, _hit = classify(name, desc)
+            fe = {'name': name or full.split('/')[1], 'url': f"https://github.com/{full}",
+                  'star': live_star.get(full, 0), 'verdict': '⏳ 未测',
+                  'domain': dom, 'desc': desc or '—', 'locate': 'located'}
+            if url_audit.get(full, {}).get('status') == 'gone':
+                fe['locate'] = 'empty_watch'
+                n_floor_gone += 1
+            else:
+                n_floor += 1
+            entries.append(fe)
+            have.add(full)
+        if n_floor or n_floor_gone:
+            print(f'[gen-plugins-all] 登记兜底：补 [未测] {n_floor} 行 · 空仓监测 {n_floor_gone} 行（PLUGINS.md ⊕ 快照并集）')
 
     # desc 回填（GitHub 描述缓存）+「其他」兜底重分类（taxonomy v2 规则，仅动其他类）
     n_desc = n_reclass = 0
@@ -249,7 +256,7 @@ def main():
     L.append('# 全量插件清单（统一四档口径）')
     L.append('')
     L.append(f'> 数据源：radar 快照并集（{src}）⊕ GitHub 定位复核缓存（data/locate-cache.json）。')
-    L.append('> 呈现：分组表格（插件 · 星数 · 描述 · 可用性记录），星数每日 bot 刷新。')
+    L.append('> 呈现：分组列表（状态 · 名称  · 一句话说明），不使用大表格。')
     L.append('')
     L.append('## 统一度量衡')
     L.append('')
@@ -276,8 +283,6 @@ def main():
             continue
         L.append(f'## {dom}（{len(group)}）')
         L.append('')
-        L.append('| 插件 | ★ | 描述 | 可用性记录 |')
-        L.append('| --- | ---: | --- | --- |')
         for e in group:
             name, star = e['name'], e.get('star') or 0
             desc = (e.get('desc') or '—').strip()
@@ -286,14 +291,13 @@ def main():
             pr = ' 〔PR〕' if name in pr_names else ''
             loc = e.get('locate')
             if loc == 'empty_watch':
-                L.append(f'| **{name}**{pr} | — | GitHub 无此仓库 | `[空仓监测]` |')
+                L.append(f'- `[空仓监测]` **{name}** — GitHub 无此仓库，判定暂不展示{pr}')
             elif loc == 'ambiguous_watch':
-                L.append(f'| **{name}**{pr} | — | 同名多仓 | `[歧义监测]` |')
+                L.append(f'- `[歧义监测]` **{name}** — 同名多仓，判定暂不展示{pr}')
             elif loc == 'unresolved':
-                L.append(f'| **{name}**{pr} | — | 占位待复核 | `[未定位]` |')
+                L.append(f'- `[未定位]` **{name}** — 占位待复核，判定暂不展示{pr}')
             else:
-                desc = desc.replace('|', '\\|')  # 表格行防竖线破格（列表格式时代无此约束）
-                L.append(f'| [{name}]({e["url"]}){pr} | {star} | {desc} | {MARK.get(e.get("verdict"), "`[未测]`")} |')
+                L.append(f'- {MARK.get(e.get("verdict"), "`[未测]`")} [{name}]({e["url"]}) {star} — {desc}{pr}')
         L.append('')
 
     L.append('## 附录')
