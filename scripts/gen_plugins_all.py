@@ -218,7 +218,7 @@ def main():
                 continue
             dom, _hit = classify(name, desc)
             fe = {'name': name or full.split('/')[1], 'url': f"https://github.com/{full}",
-                  'star': live_star.get(full, 0), 'verdict': '⏳ 未测',
+                  'star': live_star.get(full), 'verdict': '⏳ 未测',
                   'domain': dom, 'desc': desc or '—', 'locate': 'located'}
             if url_audit.get(full, {}).get('status') == 'gone':
                 fe['locate'] = 'empty_watch'
@@ -284,7 +284,9 @@ def main():
         L.append(f'## {dom}（{len(group)}）')
         L.append('')
         for e in group:
-            name, star = e['name'], e.get('star') or 0
+            name = e['name']
+            star = e.get('star')
+            star_part = f'{star} ' if isinstance(star, int) else ''   # 星数未知留空不印 0（防污染排序，bot 日更补齐）
             desc = (e.get('desc') or '—').strip()
             if desc.startswith('http'):
                 desc = '—'
@@ -297,7 +299,7 @@ def main():
             elif loc == 'unresolved':
                 L.append(f'- `[未定位]` **{name}** — 占位待复核，判定暂不展示{pr}')
             else:
-                L.append(f'- {MARK.get(e.get("verdict"), "`[未测]`")} [{name}]({e["url"]}) {star} — {desc}{pr}')
+                L.append(f'- {MARK.get(e.get("verdict"), "`[未测]`")} [{name}]({e["url"]}) {star_part}— {desc}{pr}')
         L.append('')
 
     L.append('## 附录')
