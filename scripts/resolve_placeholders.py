@@ -187,6 +187,58 @@ def run_batch(batch, out):
     return False
 
 
+def fetch_stars(batch):
+    """GraphQL 批量查 stargazerCount；返回 {full_name_lower: stars}。失败批次返回空。"""
+    defs = ', '.join(f'$o{j}: String! $n{j}: String!' for j in range(len(batch)))
+    sel = ' '.join(f'r{j}: repository(owner: $o{j}, name: $n{j}) {{ stargazerCount }}' for j in range(len(batch)))
+    q = f'query ({defs}) {{ {sel} }}'
+    vars = {}
+    for j, full in enumerate(batch):
+        o, n = full.split('/')
+        vars[f'o{j}'], vars[f'n{j}'] = o, n
+    for _ in range(3):
+        p = subprocess.run(['curl', '-s', '--max-time', '50',
+                            '-H', f'Authorization: Bearer {token()}',
+                            '-H', 'Content-Type: application/json',
+                            '-X', 'POST', 'https://api.github.com/graphql',
+                            '-d', json.dumps({'query': q, 'variables': vars})],
+                           capture_output=True, text=True)
+        try:
+            data = json.loads(p.stdout).get('data') or {}
+        except Exception:
+            data = {}
+        if len(data) >= len(batch) * 0.8:
+            return {full: (data.get(f'r{j}') or {}).get('stargazerCount')
+                    for j, full in enumerate(batch) if data.get(f'r{j}') is not None}
+        time.sleep(3)
+    return {}
+
+
+def reg_star_backfill(known):
+    """登记轨星数回填（#189 兜底行星数失真）：PLUGINS.md 链接仓库缺星记录的（locate-cache 以
+    full_name 为键，与占位 local_key 键不冲突），批量查 stargazerCount 写入——渲染端 live_star 直接消费。"""
+    reg_md = ROOT / 'PLUGINS.md'
+    if not reg_md.is_file():
+        return
+    fulls = sorted({u.split('github.com/')[1].strip('/').lower()
+                    for u in re.findall(r'\]\((https://github\.com/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)/?\)',
+                                        reg_md.read_text())})
+    todo = [f for f in fulls
+            if f.count('/') == 1 and not isinstance(known.get(f, {}).get('star'), int)]
+    print(f'[reg-stars] 登记轨仓库待补星 {len(todo)} 个（登记链接 {len(fulls)}）')
+    n = 0
+    for i in range(0, len(todo), BATCH):
+        res = fetch_stars(todo[i:i + BATCH])
+        for full, stars in res.items():
+            if isinstance(stars, int):
+                known[full] = {'status': 'found', 'full_name': full, 'star': stars, 'src': 'registry'}
+                n += 1
+        if res:
+            print(f'  {min(i + BATCH, len(todo))}/{len(todo)}', flush=True)
+        time.sleep(2)
+    print(f'[reg-stars] 回填 {n} 条（locate-cache full_name 键）')
+
+
 def main():
     cache = {'resolved_at': '', 'entries': {}}
     if CACHE.exists():
@@ -212,6 +264,7 @@ def main():
 
     for n in failed:
         known.pop(n, None)
+    reg_star_backfill(known)
     cache['resolved_at'] = time.strftime('%Y-%m-%d')
     CACHE.parent.mkdir(parents=True, exist_ok=True)
     CACHE.write_text(json.dumps(cache, ensure_ascii=False, indent=0))
