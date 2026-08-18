@@ -10,11 +10,11 @@ Know which plugins work before you install them.
 
 [![confirmed](https://img.shields.io/badge/confirmed-1253-blue)](#featured-top-50) [![scan](https://img.shields.io/badge/scan-every_6h-green)](#ecosystem-snapshot) [![tested](https://img.shields.io/badge/tested-1393-orange)](#how-we-assess-compatibility) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
+[![runtime OK](https://img.shields.io/badge/runtime_OK-879-brightgreen)](#2-understand-status-unified-4-tier-scale) [![incompatible](https://img.shields.io/badge/incompatible-451-red)](#2-understand-status-unified-4-tier-scale) [![pending](https://img.shields.io/badge/pending-63-yellow)](#2-understand-status-unified-4-tier-scale) [![untested](https://img.shields.io/badge/untested-0-lightgrey)](#2-understand-status-unified-4-tier-scale)
+
 <p align="center">
   <a href="https://trendshift.io/repositories/147500" title="GitHub Trending Daily #22 · 2026-08-14 · all languages"><img src="https://trendshift.io/api/badge/trendshift/repositories/147500/daily" alt="Trendshift"></a>
 </p>
-
-[![runtime OK](https://img.shields.io/badge/runtime_OK-879-brightgreen)](#2-understand-status-unified-4-tier-scale) [![incompatible](https://img.shields.io/badge/incompatible-451-red)](#2-understand-status-unified-4-tier-scale) [![pending](https://img.shields.io/badge/pending-63-yellow)](#2-understand-status-unified-4-tier-scale) [![untested](https://img.shields.io/badge/untested-0-lightgrey)](#2-understand-status-unified-4-tier-scale)
 
 [English](README.en-US.md) | [简体中文](README.md)
 
