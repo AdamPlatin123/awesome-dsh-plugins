@@ -272,7 +272,7 @@
           "repo": "Lum1104/dsh-browser",
           "name": "dsh-browser",
           "verdict": "incompatible",
-          "desc": "Chrome 侧栏扩展，让 DSH 直接操作浏览器"
+          "desc": "Chrome 侧栏扩展让 DSH 直接操控浏览器；双件套需专用 install.sh + Chrome 手动装载（非一行安装，判定待新契约重测）"
         },
         {
           "repo": "ZSeven-W/dsh-openpencil",
