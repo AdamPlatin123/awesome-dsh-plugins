@@ -166,7 +166,9 @@ def main():
         cand_n = d.get("candidates") or 0
         slogan_n = (int(cand_n) // 100) * 100 if cand_n else None
         if slogan_n:
-            t_readme = re.sub(r"(自动发现 )\d+\+?( 候选)", rf"\g<1>{slogan_n}+\g<2>", t_readme, count=1)
+            # 口号与正文导语句共用动态候选数（百位取整 + 号后缀，README 全覆盖轮）
+            t_readme = re.sub(r"(自动发现 )\d+\+?( 候选)", rf"\g<1>{slogan_n}+\g<2>", t_readme)
+            t_readme = re.sub(r"(发现 )\d+\+?( 候选)", rf"\g<1>{slogan_n}+\g<2>", t_readme, count=1)
         if c.get("plugins"):
             t_readme = re.sub(r"(收录 )\d+( 个)", rf"\g<1>{c['plugins']}\g<2>", t_readme, count=1)
             t_readme = re.sub(r"(索引到)\d+( ?个? ?repos)", rf"\g<1>{cand_n}\g<2>", t_readme, count=1)
