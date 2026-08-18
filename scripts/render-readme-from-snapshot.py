@@ -157,10 +157,13 @@ def main():
             else:
                 t_readme = t_readme[:i] + a + "\n" + block + "\n" + b + t_readme[j:]
 
-        # ④ 数据截至锚（中文版；英文版无「## 工作原理」标题，正则不命中）
+        # ④ 数据截至锚（中英双版同步维护；对应标题不存在的版本正则不命中、安全跳过）
         anchor_line = f"> 数据截至快照 `{snap['run_id']}`（{bj(snap.get('generated_at', ''))} · 分类器 {snap.get('classifier', '')}）"
+        anchor_en = f"> Data as of snapshot `{snap['run_id']}` ({bj(snap.get('generated_at', ''))} · classifier {snap.get('classifier', '')})"
         t_readme = re.sub(r">\s*数据截至快照 `[^\n]*\n+", "", t_readme)
+        t_readme = re.sub(r">\s*Data as of snapshot `[^\n]*\n+", "", t_readme)
         t_readme = re.sub(r"(## 工作原理\n)\n+", "\\1\\n" + anchor_line.replace("\\", "\\\\") + "\\n\\n", t_readme, count=1)
+        t_readme = re.sub(r"(## How it works\n)\n+", "\\1\\n" + anchor_en.replace("\\", "\\\\") + "\\n\\n", t_readme, count=1)
 
         # ④b 开头数字面（中文文案；英文头部走 EN 专属正则）
         cand_n = d.get("candidates") or 0
