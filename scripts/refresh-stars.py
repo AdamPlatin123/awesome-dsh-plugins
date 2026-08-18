@@ -38,6 +38,9 @@ TABLE_RE = re.compile(
     r'(\d+)([ \t]*\|)')
 
 
+GQL_RENAMES = {}   # GraphQL 名实不符的改名映射（请求名lower → 解析出的新全名）
+
+
 def gql_batch(repos):
     """一批 GraphQL 查询：{o}/{n} -> stargazerCount；返回 {full_name_lower: stars}。"""
     parts = []
@@ -73,7 +76,11 @@ def gql_batch(repos):
     for i, (o, n) in enumerate(repos):
         node = data.get(f'r{i}')
         if node is not None:
-            out[f'{o}/{n}'.lower()] = node.get('stargazerCount')
+            key = f'{o}/{n}'.lower()
+            out[key] = node.get('stargazerCount')
+            full = (node.get('nameWithOwner') or '').strip()
+            if full and full.lower() != key:
+                GQL_RENAMES[key] = full   # GraphQL 解析名与请求名不符 = 已改名
     return out
 
 
@@ -117,6 +124,7 @@ def main():
         stars[key] = sc
         if full.lower() != key:
             renames[key] = full
+    renames.update(GQL_RENAMES)   # GraphQL 侧捕获的改名并入（REST 回退仅兜 null 场景）
     if renames:
         print(f'[stars] REST 回退改名仓 {len(renames)} 个：' +
               ', '.join(f'{k} → {v}' for k, v in list(renames.items())[:5]))
