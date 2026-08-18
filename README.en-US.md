@@ -184,16 +184,16 @@ Per-plugin details (verdict · location · stars) in **PLUGINS-ALL.md**.
 - **🎓 技能包**（21）— OK 8 · incompatible 1 · pending 1 · untested 11 · watching 0 — [details](PLUGINS-ALL.md#-技能包21)
 - **🧠 记忆增强**（14）— OK 6 · incompatible 4 · pending 2 · untested 2 · watching 0 — [details](PLUGINS-ALL.md#-记忆增强14)
 - **🎨 主题皮肤**（12）— OK 3 · incompatible 1 · pending 2 · untested 6 · watching 0 — [details](PLUGINS-ALL.md#-主题皮肤12)
-- **🛒 市场与管理**（37）— OK 20 · incompatible 7 · pending 4 · untested 3 · watching 3 — [details](PLUGINS-ALL.md#-市场与管理37)
-- **🔌 Web UI 增强**（341）— OK 210 · incompatible 59 · pending 31 · untested 26 · watching 15 — [details](PLUGINS-ALL.md#-web-ui-增强341)
-- **💻 编码开发**（316）— OK 164 · incompatible 58 · pending 25 · untested 38 · watching 31 — [details](PLUGINS-ALL.md#-编码开发316)
-- **🤖 Agent 能力**（266）— OK 133 · incompatible 55 · pending 25 · untested 28 · watching 25 — [details](PLUGINS-ALL.md#-agent-能力266)
+- **🛒 市场与管理**（37）— OK 20 · incompatible 8 · pending 4 · untested 3 · watching 2 — [details](PLUGINS-ALL.md#-市场与管理37)
+- **🔌 Web UI 增强**（341）— OK 211 · incompatible 59 · pending 31 · untested 26 · watching 14 — [details](PLUGINS-ALL.md#-web-ui-增强341)
+- **💻 编码开发**（316）— OK 164 · incompatible 58 · pending 27 · untested 38 · watching 29 — [details](PLUGINS-ALL.md#-编码开发316)
+- **🤖 Agent 能力**（266）— OK 134 · incompatible 57 · pending 26 · untested 28 · watching 21 — [details](PLUGINS-ALL.md#-agent-能力266)
 - **📡 消息通讯**（105）— OK 57 · incompatible 21 · pending 13 · untested 9 · watching 5 — [details](PLUGINS-ALL.md#-消息通讯105)
 - **🗂 文件数据**（87）— OK 44 · incompatible 18 · pending 12 · untested 8 · watching 5 — [details](PLUGINS-ALL.md#-文件数据87)
-- **🎮 娱乐生活**（49）— OK 29 · incompatible 7 · pending 6 · untested 1 · watching 6 — [details](PLUGINS-ALL.md#-娱乐生活49)
-- **🛠 基建部署**（201）— OK 84 · incompatible 69 · pending 20 · untested 8 · watching 20 — [details](PLUGINS-ALL.md#-基建部署201)
+- **🎮 娱乐生活**（49）— OK 30 · incompatible 7 · pending 6 · untested 1 · watching 5 — [details](PLUGINS-ALL.md#-娱乐生活49)
+- **🛠 基建部署**（201）— OK 84 · incompatible 73 · pending 20 · untested 8 · watching 16 — [details](PLUGINS-ALL.md#-基建部署201)
 - **📚 学习研究**（14）— OK 5 · incompatible 5 · pending 1 · untested 1 · watching 2 — [details](PLUGINS-ALL.md#-学习研究14)
-- **❓ 其他**（558）— OK 276 · incompatible 98 · pending 34 · untested 58 · watching 92 — [details](PLUGINS-ALL.md#-其他558)
+- **❓ 其他**（557）— OK 278 · incompatible 104 · pending 41 · untested 57 · watching 77 — [details](PLUGINS-ALL.md#-其他557)
 
 <!-- AUTO:catalog:END -->
 
