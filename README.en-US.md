@@ -182,18 +182,18 @@ flowchart TB
 Per-plugin details (verdict · location · stars) in **PLUGINS-ALL.md**.
 
 - **🎓 技能包**（29）— OK 14 · incompatible 3 · pending 1 · untested 11 · watching 0 — [details](PLUGINS-ALL.md#-技能包29)
-- **🧠 记忆增强**（22）— OK 10 · incompatible 7 · pending 3 · untested 2 · watching 0 — [details](PLUGINS-ALL.md#-记忆增强22)
+- **🧠 记忆增强**（23）— OK 10 · incompatible 7 · pending 3 · untested 3 · watching 0 — [details](PLUGINS-ALL.md#-记忆增强23)
 - **🎨 主题皮肤**（14）— OK 4 · incompatible 0 · pending 3 · untested 7 · watching 0 — [details](PLUGINS-ALL.md#-主题皮肤14)
-- **🛒 市场与管理**（44）— OK 28 · incompatible 9 · pending 2 · untested 4 · watching 1 — [details](PLUGINS-ALL.md#-市场与管理44)
-- **🔌 Web UI 增强**（246）— OK 148 · incompatible 37 · pending 19 · untested 28 · watching 14 — [details](PLUGINS-ALL.md#-web-ui-增强246)
-- **💻 编码开发**（267）— OK 133 · incompatible 39 · pending 26 · untested 40 · watching 29 — [details](PLUGINS-ALL.md#-编码开发267)
-- **🤖 Agent 能力**（252）— OK 134 · incompatible 44 · pending 24 · untested 29 · watching 21 — [details](PLUGINS-ALL.md#-agent-能力252)
+- **🛒 市场与管理**（45）— OK 28 · incompatible 9 · pending 2 · untested 5 · watching 1 — [details](PLUGINS-ALL.md#-市场与管理45)
+- **🔌 Web UI 增强**（248）— OK 148 · incompatible 37 · pending 19 · untested 30 · watching 14 — [details](PLUGINS-ALL.md#-web-ui-增强248)
+- **💻 编码开发**（268）— OK 133 · incompatible 39 · pending 26 · untested 41 · watching 29 — [details](PLUGINS-ALL.md#-编码开发268)
+- **🤖 Agent 能力**（254）— OK 134 · incompatible 44 · pending 24 · untested 31 · watching 21 — [details](PLUGINS-ALL.md#-agent-能力254)
 - **📡 消息通讯**（95）— OK 49 · incompatible 17 · pending 14 · untested 10 · watching 5 — [details](PLUGINS-ALL.md#-消息通讯95)
-- **🗂 文件数据**（81）— OK 39 · incompatible 19 · pending 10 · untested 8 · watching 5 — [details](PLUGINS-ALL.md#-文件数据81)
-- **🎮 娱乐生活**（50）— OK 31 · incompatible 6 · pending 6 · untested 2 · watching 5 — [details](PLUGINS-ALL.md#-娱乐生活50)
+- **🗂 文件数据**（83）— OK 39 · incompatible 19 · pending 10 · untested 10 · watching 5 — [details](PLUGINS-ALL.md#-文件数据83)
+- **🎮 娱乐生活**（51）— OK 31 · incompatible 6 · pending 6 · untested 3 · watching 5 — [details](PLUGINS-ALL.md#-娱乐生活51)
 - **🛠 基建部署**（216）— OK 103 · incompatible 71 · pending 17 · untested 9 · watching 16 — [details](PLUGINS-ALL.md#-基建部署216)
 - **📚 学习研究**（18）— OK 7 · incompatible 5 · pending 1 · untested 3 · watching 2 — [details](PLUGINS-ALL.md#-学习研究18)
-- **❓ 其他**（638）— OK 334 · incompatible 131 · pending 40 · untested 58 · watching 75 — [details](PLUGINS-ALL.md#-其他638)
+- **❓ 其他**（639）— OK 334 · incompatible 131 · pending 40 · untested 59 · watching 75 — [details](PLUGINS-ALL.md#-其他639)
 
 <!-- AUTO:catalog:END -->
 
@@ -347,7 +347,7 @@ Small PRs that just fix a link, category, description, or status evidence are al
 | 自动收录 | 1253 个仓库 |
 | 运行级实测 | 879 可用 · 451 不兼容 · 63 待定（共 1393 个，k8s agent 口径）|
 
-[完整索引](PLUGINS-ALL.md) · [运行实测](reports/2026-08-18/agent-test-v2.md)
+[完整索引](PLUGINS-ALL.md) · [运行实测](reports/2026-08-19/agent-test-v2.md)
 
 <!-- AUTO:ecosystem:END -->
 

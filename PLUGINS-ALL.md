@@ -5,9 +5,9 @@
 
 ## 统一度量衡
 
-**判定维度**（运行级四档，仅已定位条目 1799 个进入统计；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：
+**判定维度**（运行级四档，仅已定位条目 1810 个进入统计；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：
 
-- `[可用]`（1034）/ `[不兼容]`（388）/ `[待定]`（166）/ `[未测]`（211）
+- `[可用]`（1034）/ `[不兼容]`（388）/ `[待定]`（166）/ `[未测]`（222）
 
 **定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：
 
@@ -17,7 +17,7 @@
 
 > 〔PR〕= 经已合并 PR 正式登记；收录 ≠ 兼容 ≠ 运行可用 ≠ 安全审计。
 
-## 汇总：1972 条（已定位 1799 · 监测/未定位 173）· PR 登记 22 个
+## 汇总：1983 条（已定位 1810 · 监测/未定位 173）· PR 登记 22 个
 
 ## 🎓 技能包（29）
 
@@ -51,7 +51,7 @@
 - `[未测]` [dsh-mcp-skill-panel](https://github.com/lilyblessing/dsh-mcp-skill-panel) 1 — MCP 与技能管理面板：MCP 服务器/Skill 实时启停释放上下文（停用态回填目录工具数）；可选 AI 中间层（mcp_search/mcp_call）按 server 状态过滤可见性、保活启用 + 空闲 30s 回收
 - `[未测]` [embedded-workbench](https://github.com/amethystluna/embedded-workbench) 0 — 嵌入式 C/C++ 固件工程插件：8 skills（FreeRTOS/Keil/ARMCLANG/HardFault/状态机/LVGL/架构），dsh 原生 bundle 注入会话启动纪律门（1% Rule / Red Flags / Plan Verification Gate）
 
-## 🧠 记忆增强（22）
+## 🧠 记忆增强（23）
 
 - `[可用]` [dsh-mnemon](https://github.com/omdsh-dev/dsh-mnemon) 87 — Cross-agent, local-first persistent memory plugin for DeepSeek Harness (DSH), powered by Mnemon
 - `[不兼容]` [nowledge-mem-deepseek-harness](https://github.com/nowledge-co/nowledge-mem-deepseek-harness) 5 — Nowledge Mem community plugin bundle for DeepSeek Harness
@@ -75,6 +75,7 @@
 - `[不兼容]` [dsh-plugin-reme](https://github.com/lovedheart/dsh-plugin-reme) 1 — DeepSeek Harness plugin for ReMe long-term memory integration
 - `[可用]` [dsh-ops-kit-legacy](https://github.com/LeslieWylie/dsh-ops-kit-legacy) 1 — Archived: evidence-driven memory, multi-agent orchestration, benchmark, and plug
 - `[未测]` [dsh-plugin](https://github.com/plur-ai/dsh-plugin) 0 — PLUR 持久记忆：engram 在每次 assembly 渲染进 system prompt（section 的 text 为函数），而非藏在工具调用后——记忆块被替换而非追加，上下文长度不随会话增长（实测 60 轮恒定）；全本地 BM25 + BGE 混合检索（RRF 融合，零 API 调用）、可编辑的纯 YAML 存储、按工作区划分 scope、/plur 与 /plur-memory 命令
+- `[未测]` [dsh-simple-wiki-memory](https://github.com/rainow/dsh-simple-wiki-memory) — 简易 Wiki 持久记忆（DSWM）：一个索引文档自动注入 + 每主题一个 md 文件按需读取，省 token 轻量无压力；pending 准入→确认晋升→archive 归档三区 + memory-log 审计 + git 自动备份；纯 Markdown 所见即所得，跨 harness 共享
 
 ## 🎨 主题皮肤（14）
 
@@ -93,7 +94,7 @@
 - `[未测]` [dsh-agfs](https://github.com/openagfs/dsh-agfs) 1 — 文件浏览器 Web 插件（npm `@open-agfs/dsh-agfs`，`dsh plugin add` 一行安装）：宿主 webserver 同进程托管 React 前端 + REST API + `/dsh-agfs` 命令 + `browse_files`/`read_file` 模型工具；一键AI分析（右键建工作区并唤醒新会话，与手动创建一致的 agent preset 工具集）、本地打开（系统文件管理器）、三种显示尺寸、Win10 文件管理器主题（Segoe MDL2 Assets 官方图标）；109 单测 + 真实 Loader/HTTP 组合测试全绿，rc.6 web profile 实测通过（一键分析真实运行 55 次工具调用 0 错误）
 - `[未测]` [deepseek-skin-studio](https://github.com/jueming2049/deepseek-skin-studio) 0 — DSH 换肤工作室：一张图一套皮肤，三通道注入（书签/CDP/原生插件）+ 可视化工坊 + 13 套内置主题 + DSH-SKIN-SPEC 导出
 
-## 🛒 市场与管理（44）
+## 🛒 市场与管理（45）
 
 - `[可用]` [dsh-market-dsh-market](https://github.com/dsh-market/dsh-market) 450 — —
 - `[不兼容]` [zat-dsh-engine](https://github.com/mishibeikejie/zat-dsh-engine) 53 — Visual plugin marketplace for DeepSeek Harness — browse, search and install community plugins
@@ -139,8 +140,9 @@
 - `[空仓监测]` **dsh-dynamic-plugins-manager** — GitHub 无此仓库，判定暂不展示
 - `[可用]` [dsh-marketplace-entry](https://github.com/yangyuehan058/dsh-marketplace-entry) 0 — A plugin marketplace next to the composer + button in the DeepSeek Harness Web G
 - `[未测]` [dsh-dynamic-plugins-manager](https://github.com/wacly/dsh-dynamic-plugins-manager) 0 — deepseek harness 动态插件管理
+- `[未测]` [CiteCiter](https://github.com/kirkchinese/citeciter) — 在 DSH Web 中选中已完成的助手回复，右键 `Citer!` 后从真实会话边界创建只读子会话，并在 details 侧栏流式解释；不写入父会话日志，支持 Markdown、代码、KaTeX、安全 SVG 与无网络 HTML 预览；npm `@kirkchinese/dsh-citeciter` 0.1.1，17 项测试及真实 registry 安装、浏览器 smoke 均通过
 
-## 🔌 Web UI 增强（246）
+## 🔌 Web UI 增强（248）
 
 - `[可用]` [DSH-better-sidebar](https://github.com/omdsh-dev/DSH-better-sidebar) 1475 — 一个侧边栏的完整工作台，支持三方拓展注册新侧边栏页面
 - `[可用]` [dsh-TUI](https://github.com/ccch1mneyyy/dsh-TUI) 1432 — 解决DSH 官方尚无终端 TUI 痛点的补位之作，献给偏爱cli的各位极客：Claude Code 风格全屏交互终端插件——像素鲸鱼顶栏、实时工作状态行、思考流式展开、双击 Esc 回滚、上下文进度条 + TPS 仪表
@@ -385,11 +387,13 @@
 - `[未测]` [dsh-deepseek-balance](https://github.com/wangxiang0605qvq/dsh-deepseek-balance) 0 — DeepSeek 余额插件：模型工具 + 侧边栏余额胶囊 \| DeepSeek balance plugin for DSH: model tool + sid
 - `[不兼容]` [dsh-tui-app](https://github.com/kouyichi/dsh-tui-app) 0 — DeepSeek Harness terminal UI plugin (Ink/React)
 - `[待定]` [dsh-Solarized](https://github.com/zhijun-dai/dsh-Solarized) 0 — Solarized + Selenized themes for DeepSeek Harness (dsh): four faithful palettes
+- `[未测]` [dsh-tokstat](https://github.com/kongjianguan/dsh-tokstat) — DSH 使用量与性能统计：设置页「统计」面板（概览/模型/会话/请求，TTFT/TPS/Tokens/成本）+ Python TUI；Node half + client web bundle
 - `[未测]` [dsh-web-access](https://github.com/nexusagentx/dsh-web-access) 0 — 多提供方联网：web_search / fetch_content / source_check，注册 ctx.web 的 web-access 搜索/抓取提供方，Web 面板改配置与策展；npm `dsh-web-access`
 - `[未测]` [dsh-lens](https://github.com/nexusagentx/dsh-lens) 0 — 写/改文件时的实时代码反馈：LSP / linter / formatter / ast-grep / symbol_search，Web chip+dock；npm `dsh-lens`
+- `[未测]` [dsh-mcp-list](https://github.com/dmz2922990/dsh-mcp-list) — 设置面板新增 MCP 页：按服务器分组列出全部已挂载 MCP 服务器与工具，扫描最近会话统计各工具调用次数，一键在系统编辑器打开 cordis.patch.yml 的 MCP 配置
 - `[未测]` [cc-dsh-notifier](https://github.com/baobaolaodie/cc-dsh-notifier) 0 — Windows 桌面通知:Claude Code hooks 与 dsh web/tui 双 surface 事件(权限请求/提问/工具报错/等待输入)→ 原生 Toast + 点击跳转;聚焦感知静默、多会话、tarball 零手工安装;Windows 10/11 专用
 
-## 💻 编码开发（267）
+## 💻 编码开发（268）
 
 - `[未测]` [TokenTracker](https://github.com/xiufengsun/TokenTracker) 1312 — Local-first AI token usage & cost tracker for 31 coding tools incl
 - `[不兼容]` [paean-ai-deeptide](https://github.com/paean-ai/deeptide) 1066 — —
@@ -655,11 +659,12 @@
 - `[未测]` [dsh-repo-context](https://github.com/qing3a/dsh-repo-context) 0 — 把 git 状态与仓库规范动态注入 system prompt（section/context/variable，官方 system-prompt 缝隙插件）；dsh-plugin-verify 0.1.2 实测 7/7 waterfall + 工具真实执行（R3 isError:false）
 - `[未测]` [dsh-tray](https://github.com/qing3a/dsh-tray) 0 — DeepSeek Harness Windows 系统托盘插件（trayicon exe 宿主，无 native 编译）；菜单/通知/headless 降级，双 profile 已验证
 - `[未测]` [dsh-git-plugin](https://github.com/it-coder-yy/dsh-git-plugin) 0 — 面向 DSH Web 的可视化 Git 工作台：查看仓库状态、Diff、分支、提交历史与贮藏，点击执行常用 Git 操作，并安全运行 AI 生成的分步骤 Git 提议；npm `dsh-easygit-plugin` 0.2.1，DSH 0.1.0-rc.6 实测
+- `[未测]` [dsh-agent-team-gui](https://github.com/toolclub/dsh-agent-team-gui) — 持久化多模型 Agent 小队：主 Agent 按成员特性动态编排有界 DAG，成员独立配置模型与工具策略；在 Settings/Composer 管理和选择小队，Run Center 支持追踪、重试与取消，并提供逐 Agent Token 成本洞察；v0.5.0 通过 117 Host + 62 Client 测试及 DSH rc.6 全新 Web profile 安装/浏览器冒烟
 - `[未测]` [dsh-onebot](https://github.com/mario841859784/dsh-onebot) 0 — QQ 渠道插件（OneBot 11 / NapCat）：反向/正向 WS、dm/群聊访问策略与 @ 门控、入站图片/语音/视频/文件解析 + whisper 转写、t2i 文字图卡片、斜杠命令、loop 合并转发+撤回（99 测试全绿，真实 QQ 链路实测）
 - `[未测]` [dsh-remote-sandbox](https://github.com/weijiafu14/dsh-remote-sandbox) 0 — 生产级远程执行世界：E2B 沙箱内纯 JS sidecar，fs/subprocess 单次往返、进程输出有界、心跳保活、崩溃透明恢复（resume/recreate）、tar 工作区同步；修复官方 e2b POC 两处 host 假设。43 项测试（含 6 项真机 E2E）全绿
 - `[未测]` [dsh-session-cleaner-cli](https://github.com/chenchen913/dsh-session-cleaner-cli) 0 — DSH 会话数据离线清理 CLI：按工作区交互/命令删除会话（回收站+恢复+自动备份）、同步工作区账目与投影缓存、修剪幽灵条目；零依赖 Node≥18，8 项端到端测试全绿 + CI
 
-## 🤖 Agent 能力（252）
+## 🤖 Agent 能力（254）
 
 - `[待定]` [titanwings-colleague-skill](https://github.com/titanwings/colleague-skill) 22798 — —
 - `[可用]` [foryourhealth111-pixel-vibe-skills](https://github.com/foryourhealth111-pixel/Vibe-Skills) 2833 — —
@@ -911,6 +916,8 @@
 - `[空仓监测]` **dsh-plugin-ptc-context** — GitHub 无此仓库，判定暂不展示
 - `[未测]` [deepseek-heartflow](https://github.com/yun520-1/deepseek-heartflow) — 心虫（AGI 第1层辨别门禁）：47 维纯规则文本判别 heartflow_check 工具 + tools/post-execute 自动输出监督（block 拦截 / rewrite 提醒），引擎缺失 fail-closed；dsh.bundle manifest 可安装
 - `[未测]` [dsh-anchored-subagent](https://github.com/gy-bai/dsh-anchored-subagent) 0 — 让 DSH 主 agent 和子代理别一开口就 `Let me...`：首轮用 Minimal 开局进入满血状态，第二轮恢复全部工具；自定义子代理角色首轮先收起来，第二轮再放出来
+- `[未测]` [dsh-ssh](https://github.com/dmz2922990/dsh-ssh) — SSH 主机管理 + 远程执行：ssh_host_list/add/update/remove/ssh_bash 五工具，主机台账持久化到 ~/.dsh/ssh-hosts.json，支持 agent/key/password 三种认证（password 走 SSH_ASKPASS，沙箱可用）；提供 Agent 预设与 Cordis 插件两种形态
+- `[未测]` [dsh-daily-kit](https://github.com/zhouwei713/dsh-daily-kit) — 日常插件集合 monorepo：16 个插件（审批门/桌面与Webhook通知/成本计量/会话导出/Ollama 本地模型/上下文水位/办公文档解析/本地文件夹索引/cron 全局调度/RSS与网页内容监控/日历/Gmail/待办/天气地点/票据识别/音视频转录）+ 4 个一键 bundle（dev-buddy/evidence-wall/inbox-zero/daily-briefing）；权限透明、读取优先、零 native 依赖，596 单测，dsh rc.6/rc.7 真实加载与 npm 安装实测通过
 - `[未测]` [dsh-click](https://github.com/perrylink/dsh-click) 0 — Windows 优先的原生桌面控制：截图、无障碍树结构化读取、点击/输入/滚动/按键、应用启动，变更性操作过审批门禁、屏幕变化拒绝执行、操作前后校验进程身份
 - `[未测]` [dsh-translate](https://github.com/perrylink/dsh-translate) 0 — 厂商参数翻译与确定性 JSON 修复：/translate 命令映射 11 家厂商的 13 个规范参数；post-execute 修复层 + fix_json 工具修复工具输出中的坏 JSON（转义/去尾逗号/截断闭合/null 占位补全），绝不编造数据
 
@@ -1012,7 +1019,7 @@
 - `[不兼容]` [dsh-whale-diving](https://github.com/ZeroCode321/dsh-whale-diving) 0 — A decorative whale-diving activity icon for the DeepSeek Harness Web chat flow:
 - `[未测]` [dsh-defend](https://github.com/perrylink/dsh-defend) 0 — 注入/越狱/密钥泄露检测 + 危险删除门禁：Aho-Corasick 引擎在用户消息、工具参数、工具结果三处按 allow/ask/block 拦截（脱敏 defend/detection 审计事件、defend_report 工具、/defend 命令），并拒绝工作区外的递归删除命令
 
-## 🗂 文件数据（81）
+## 🗂 文件数据（83）
 
 - `[可用]` [dsh-openpencil](https://github.com/ZSeven-W/dsh-openpencil) 67 — OpenPencil design preview and editing plugin for DSH
 - `[待定]` [dsh-plugin-mineru](https://github.com/HuanLinOTO/dsh-plugin-mineru) 26 — 向模型暴露 MinerU 文档解析工具，将 PDF/图片/DOCX/PPTX/XLSX 转为结构化 Markdown/JSON \| Exposes MinerU document-parsing tools to the
@@ -1092,11 +1099,13 @@
 - `[待定]` [dsh-rich-file-reader](https://github.com/shixiliya1/dsh-rich-file-reader) 0 — Local image, Office, and PDF reader plugin for DeepSeek Harness
 - `[可用]` [dsh-plugin-recall](https://github.com/truelove-dreamer/dsh-plugin-recall) 0 — DeepSeek Harness plugin: cross-session memory for the model
 - `[待定]` [dsh-silly-plugin](https://github.com/xiagaogaozi/dsh-silly-plugin) 0 — DSH 酒馆模式：导入 SillyTavern 角色卡（PNG/JSON），自动拆分世界书/正则/脚本并创建同名工作区（#dsh-plugin）
+- `[未测]` [dsh-open-file](https://github.com/hyp6666/dsh-open-file) — DSH Web 工作区文件附件插件：多文件选择与全页拖放，读取文本、PDF、DOCX、PPTX、XLSX、ZIP 和图片，提供英中 OCR、页面渲染及 `file_inspect` / `file_read` / `file_ocr` / `file_render` 四个可追溯工具；npm `dsh-open-file` 0.1.1
+- `[未测]` [dsh-mmx-bridge](https://github.com/welsione/dsh-mmx-bridge) — MiniMax 多模态桥接插件：一个 mmx_bridge 工具覆盖图像理解（VLM）/文生图/文图生视频/语音合成/音乐生成/音频翻唱/联网搜索/用量查询，生成产物经 /mmx-files/ 同源内嵌图片预览与音视频播放器，附 Web 设置页管理卡片；零 npm 运行时依赖
 - `[未测]` [dsh-quant-data-mcp](https://github.com/helibeiqi/dsh-quant-data-mcp) 0 — 零依赖 MCP stdio server 模板 + 开箱即用 A 股数据工具：无需 API Key、纯 NDJSON 协议、路径全走环境变量、可 `dsh plugin add` 一键挂载的 dsh bundle
 - `[未测]` [dsh-enhancement-suite](https://github.com/scorp1o117/dsh-enhancement-suite) 0 — 四个 Scorp1o117 DSH 插件的官方总入口 + 一键安装器（list/install/update/doctor，--profile/--only/--dry-run）：零依赖，走官方 dsh plugin CLI 并安全自动挂载；npm 已发布
 - `[未测]` [dsh-library](https://github.com/perrylink/dsh-library) 0 — 本地优先文档知识库：library_add/remove/list、语义+关键词混合 library_search（多样性重排、相关性过滤、避免 lost-in-the-middle）、引用感知注入与 library_cite_check/diagnose，SQLite 索引 + 本地嵌入，零模型下载
 
-## 🎮 娱乐生活（50）
+## 🎮 娱乐生活（51）
 
 - `[可用]` [crafter-station-petdex](https://github.com/crafter-station/petdex) 3844 — —
 - `[待定]` [small-tailqwq-dsh-deep-whale](https://github.com/Small-tailqwq/dsh-deep-whale) 1011 — —
@@ -1148,6 +1157,7 @@
 - `[空仓监测]` **dsh-pet-web** — GitHub 无此仓库，判定暂不展示
 - `[空仓监测]` **dsh-sfw** — GitHub 无此仓库，判定暂不展示
 - `[歧义监测]` **dsh-pets** — 同名多仓，判定暂不展示
+- `[未测]` [dsh-trading-toolkit](https://github.com/kentleenot/dsh-trading-toolkit) — A股+美股行情工具箱：实时行情/OHLCV K线/ADX 三状态信号/回测预览，东方财富免 Key 直连，只读永不下单
 
 ## 🛠 基建部署（216）
 
@@ -1389,7 +1399,7 @@
 - `[未测]` [dsh-plugin-wallpaper](https://github.com/Tree-Summer/dsh-plugin-wallpaper) 0 — 可以在deepseek harness网页端自定义背景图片的插件
 - `[歧义监测]` **dsh-wallpaper** — 同名多仓，判定暂不展示
 
-## ❓ 其他（638）
+## ❓ 其他（639）
 
 - `[可用]` [deepseek-ai-deepseek-harness](https://github.com/deepseek-ai/deepseek-harness) 124593 — —
 - `[未测]` [dsh-routing-suite](https://github.com/yjh051108/dsh-routing-suite) 5725 — 注入器 × 思维模式路由套装（3300+★ 正主仓，勿与同名仿品混）：免重启运行时注入器 + 任务感知推理模式路由预设（P1-P23 实测）；injector 子目录 `dsh plugin add` 安装
@@ -2027,6 +2037,7 @@
 - `[未测]` [token-statistics](https://github.com/YlLVTECH/token-statistics) 0 — a token statistics plugin for dsh (deepseek-harness)
 - `[可用]` [dsh-vision-tool](https://github.com/re-ITRT/dsh-vision-tool) 0 — DeepSeek Harness vision plugin: vision_analyze tool with a Models-style settings
 - `[未测]` [dsh-talk](https://github.com/perrylink/dsh-talk) 0 — 语音优先会话闭环：作曲器麦克风按钮 + 浏览器/本地语音转写（Web Speech、FunASR、whisper.cpp），speak 工具朗读回复（browser、edge-tts、piper），事件播报带静音开关，说话打断
+- `[未测]` [dsh-thinkmeter](https://github.com/dmz2922990/dsh-thinkmeter) — Think 思考行 Token 计量表：把聊天视图流式 Think 预览替换为实时 token 数显示（Thinking ≈ N tokens），落定时精确取 usage.reasoningTokens、缺失时启发式估算，点击可展开/收起完整思考文本（web client 插件，dsh.bundle 一键安装）
 - `[未测]` [dsh-observe](https://github.com/perrylink/dsh-observe) 0 — 可观测性导出：session/event 流转为 OTLP traces+metrics 与 Langfuse 观测（turn/step/tool/LLM span、token/成本计数、脱敏 prompt/completion），异步批量 + 有界持久离线缓冲 + 退避重试，默认关闭显式开启
 - `[未测]` [dsh-draw](https://github.com/perrylink/dsh-draw) 0 — 统一静态图像生成路由：单一 image_generate 工具 + 标准参数，配置驱动的 OpenAI 兼容引擎路由（OpenAI Images、智谱 CogView 及任意兼容端点）与健康感知回退，工作区持久附件结果、按会话配额记账、对话内结果卡片，API key 存为凭据引用
 
