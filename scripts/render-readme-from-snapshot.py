@@ -181,7 +181,7 @@ def main():
         t_readme = re.sub(r"badge/scan-every_\d+h", f"badge/scan-every_{dh}h", t_readme, count=1)
         t_readme = re.sub(
             r"\*\*\d+ plugin repos indexed\*\*[^\n]*",
-            f"**{fmt(c.get('plugins'))} plugin repos indexed** (clone-verified package.json), "
+            f"**{fmt(c.get('plugins'))} plugin repos indexed** (manifest-level classification, v2 engine), "
             f"**{fmt(v.get('total'))} runtime-tested on the k8s track**.", t_readme, count=1)
 
         # ④c 目录对账：快照携带全量条目 → 补缺行 + 坍缩计数单值

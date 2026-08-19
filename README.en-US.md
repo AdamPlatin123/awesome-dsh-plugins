@@ -20,7 +20,7 @@ Know which plugins work before you install them.
 
 ---
 
-**What is this?** DeepSeek Harness (DSH) is an open-source coding agent where everything is a plugin. This repo is a **radar** that automatically tracks its plugin ecosystem — **1258 plugin repos indexed** (clone-verified package.json), **1673 runtime-tested on the k8s track**.
+**What is this?** DeepSeek Harness (DSH) is an open-source coding agent where everything is a plugin. This repo is a **radar** that automatically tracks its plugin ecosystem — **1258 plugin repos indexed** (manifest-level classification, v2 engine), **1673 runtime-tested on the k8s track**.
 
 ## How it works
 
