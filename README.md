@@ -77,13 +77,13 @@ flowchart TB
 
 <!-- AUTO:featured:START -->
 
-> 人工策展 50 个高价值插件，按 11 类分组、类内按星标排序；星标每 6 小时自动刷新（成员调整请提 PR 修改 data/awesome-50.json）。数据截至 2026-08-19 03:01（UTC+8）。
+> 人工策展 50 个高价值插件，按 11 类分组、类内按星标排序；星标每 6 小时自动刷新（成员调整请提 PR 修改 data/awesome-50.json）。数据截至 2026-08-19 09:55（UTC+8）。
 
 ### 🚀 智力增强 Booster（6）
 
 | 插件 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
-| [dsh-routing-suite](https://github.com/yjh051108/dsh-routing-suite) | 6007 | — | 注入器 × 思维模式路由套装：免重启运行时注入器 + 任务感知推理模式路由预设（P1-P23 实测） |
+| [dsh-routing-suite](https://github.com/yjh051108/dsh-routing-suite) | 6064 | — | 注入器 × 思维模式路由套装：免重启运行时注入器 + 任务感知推理模式路由预设（P1-P23 实测） |
 | [harmony-next.skills](https://github.com/linhay/harmony-next.skills) | 330 | ✅ | 技能驱动的工作流增强 |
 | [forkprobe](https://github.com/Jayden-X-L/forkprobe) | 67 | ✅ | 同一任务跑多个技能对比，自动选优 |
 | [superpowers-dsh](https://github.com/LayneChai/superpowers-dsh) | 57 | ✅ | TDD/调试/计划等开发技能集 |
@@ -94,31 +94,31 @@ flowchart TB
 
 | 插件 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
-| [dsh-web-ui](https://github.com/zhu1090093659/dsh-web-ui) | 4552 | ✅ | Web UI 增强与皮肤合集：任务看板、Git 图、移动端、皮肤中心 |
-| [DSH-better-sidebar](https://github.com/omdsh-dev/DSH-better-sidebar) | 2170 | ✅ | 侧边栏变完整工作台：文件编辑/终端/Git/子代理，支持三方注册扩展页 |
+| [dsh-web-ui](https://github.com/zhu1090093659/dsh-web-ui) | 4598 | ✅ | Web UI 增强与皮肤合集：任务看板、Git 图、移动端、皮肤中心 |
+| [DSH-better-sidebar](https://github.com/omdsh-dev/DSH-better-sidebar) | 2181 | ✅ | 侧边栏变完整工作台：文件编辑/终端/Git/子代理，支持三方注册扩展页 |
 | [dsh-genui](https://github.com/omdsh-dev/dsh-genui) | 223 | ✅ | GenUI 内联组件：图表/表单/测验/3D 场景 + action 事件环 |
 | [dsh-visualize](https://github.com/Nagi-ovo/dsh-visualize) | 178 | ✅ | 对话中生成交互式可视化卡片 |
 | [Liang-Saint-Slider](https://github.com/BruzWJ/Liang-Saint-Slider) | 88 | ✅ | 模型与思考力度选择滑条 |
-| [dsh-annotation](https://github.com/omdsh-dev/dsh-annotation) | 75 | ✅ | 划选文字→批注→随消息发送，回复逐条对照 |
+| [dsh-annotation](https://github.com/omdsh-dev/dsh-annotation) | 76 | ✅ | 划选文字→批注→随消息发送，回复逐条对照 |
 | [dsh-navbar](https://github.com/vlln/dsh-navbar) | 40 | ✅ | 对话节点导航条：右缘节点串快速跳转（官方 bundle 插件） |
 
 ### ⌨️ 终端与桌面端（5）
 
 | 插件 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
-| [dsh-TUI](https://github.com/ccch1mneyyy/dsh-TUI) | 1964 | ✅ | Claude Code 风全屏 TUI：鲸鱼顶栏/流式思考/双击 Esc 回滚 |
-| [deepseek-harness-desktop](https://github.com/hairyf/deepseek-harness-desktop) | 526 | ✅ | Tauri 桌面版：5MB 安装包零环境配置，Win/macOS/Linux |
-| [Bigfish](https://github.com/turtle2209/Bigfish) | 268 | 未测 | 第三方桌面端：内置 Node 运行时，双击即用 |
+| [dsh-TUI](https://github.com/ccch1mneyyy/dsh-TUI) | 1981 | ✅ | Claude Code 风全屏 TUI：鲸鱼顶栏/流式思考/双击 Esc 回滚 |
+| [deepseek-harness-desktop](https://github.com/hairyf/deepseek-harness-desktop) | 537 | ✅ | Tauri 桌面版：5MB 安装包零环境配置，Win/macOS/Linux |
+| [Bigfish](https://github.com/turtle2209/Bigfish) | 269 | 未测 | 第三方桌面端：内置 Node 运行时，双击即用 |
 | [oh-dsh](https://github.com/hust-open-atom-club/oh-dsh) | 250 | ✅ | 社区发行版：桌面/Web/TUI 三形态统一体验 |
-| [dsh-tianshu-tui](https://github.com/huiliyi37/dsh-tianshu-tui) | 212 | 待定 | 自研 ANSI 渲染的极简终端 UI |
+| [dsh-tianshu-tui](https://github.com/huiliyi37/dsh-tianshu-tui) | 216 | 待定 | 自研 ANSI 渲染的极简终端 UI |
 
 ### 👁 视觉与多模态（3）
 
 | 插件 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
-| [modlens](https://github.com/liustack/modlens) | 3090 | ✅ | 生态第一个视觉插件，视觉工作流的基准方案 |
-| [dsh-vision-router](https://github.com/ysr666/dsh-vision-router) | 753 | ✅ | 内置免费视觉模型路由，给文本 agent 装眼睛 |
-| [dsh-vision-toolkit](https://github.com/Anionex/dsh-vision-toolkit) | 700 | 需适配 | 带意图图片问答、长截图 OCR、UI 还原 |
+| [modlens](https://github.com/liustack/modlens) | 3117 | ✅ | 生态第一个视觉插件，视觉工作流的基准方案 |
+| [dsh-vision-router](https://github.com/ysr666/dsh-vision-router) | 762 | ✅ | 内置免费视觉模型路由，给文本 agent 装眼睛 |
+| [dsh-vision-toolkit](https://github.com/Anionex/dsh-vision-toolkit) | 703 | 需适配 | 带意图图片问答、长截图 OCR、UI 还原 |
 
 ### 🤖 Agent 能力与编排（6）
 
@@ -126,8 +126,8 @@ flowchart TB
 |---|---:|---|---|
 | [helloagents](https://github.com/hellowind777/helloagents) | 689 | ✅ | agent 能力合集 |
 | [sandbase-harness](https://github.com/sandbaseai/sandbase-harness) | 621 | ✅ | CMA 兼容开源 agent 运行时，任意模型可驱动 |
-| [dsh-agent-teams](https://github.com/NanmiCoder/dsh-agent-teams) | 551 | 待定 | 多代理团队编排 |
-| [rea](https://github.com/morluto/rea) | 349 | ✅ | 用 agent 逆向工程任何东西：从应用行为到原生二进制 |
+| [dsh-agent-teams](https://github.com/NanmiCoder/dsh-agent-teams) | 558 | 待定 | 多代理团队编排 |
+| [rea](https://github.com/morluto/rea) | 351 | ✅ | 用 agent 逆向工程任何东西：从应用行为到原生二进制 |
 | [open-record-replay](https://github.com/humblebanana/open-record-replay) | 138 | ✅ | macOS 录制回放：把鼠标/键盘/UI 事件存为结构化轨迹供 agent 学习重放 |
 | [axern](https://github.com/cofy-x/axern) | 56 | ✅ | AI agent 开源沙箱：不可信代码执行与持久服务 |
 
@@ -135,8 +135,8 @@ flowchart TB
 
 | 插件 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
-| [TokenTracker](https://github.com/xiufengsun/TokenTracker) | 1360 | 未测 | 本地优先的 31 种编码工具 token 用量与成本追踪 |
-| [dsh-at-file](https://github.com/omdsh-dev/dsh-at-file) | 378 | 需适配 | Codex 风格 @file 引用：搜索并挂载工作区文件 |
+| [TokenTracker](https://github.com/xiufengsun/TokenTracker) | 1361 | 未测 | 本地优先的 31 种编码工具 token 用量与成本追踪 |
+| [dsh-at-file](https://github.com/omdsh-dev/dsh-at-file) | 387 | 需适配 | Codex 风格 @file 引用：搜索并挂载工作区文件 |
 | [claude-paper](https://github.com/alaliqing/claude-paper) | 319 | ✅ | 跨 agent 论文工具箱：速读摘要/深度研读材料/代码演示 + 本地 Web 阅读器 |
 | [mobius](https://github.com/nutshellai-tech/mobius) | 284 | ✅ | 编码增强 |
 
@@ -144,8 +144,8 @@ flowchart TB
 
 | 插件 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
-| [mnemon](https://github.com/mnemon-dev/mnemon) | 480 | ✅ | 跨 agent、本地优先的持久记忆 |
-| [dsh-memory-evolve](https://github.com/csyangwen/dsh-memory-evolve) | 176 | ✅ | 五轨记忆 + git 分支托管 + 后台自我进化 |
+| [mnemon](https://github.com/mnemon-dev/mnemon) | 482 | ✅ | 跨 agent、本地优先的持久记忆 |
+| [dsh-memory-evolve](https://github.com/csyangwen/dsh-memory-evolve) | 179 | ✅ | 五轨记忆 + git 分支托管 + 后台自我进化 |
 
 ### 📡 消息通讯与 IM（4）
 
@@ -160,16 +160,16 @@ flowchart TB
 
 | 插件 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
-| [dsh-browser](https://github.com/Lum1104/dsh-browser) | 297 | 需适配 | Chrome 侧栏扩展让 DSH 直接操控浏览器；双件套需专用 install.sh + Chrome 手动装载（非一行安装，判定待新契约重测） |
+| [dsh-browser](https://github.com/Lum1104/dsh-browser) | 300 | 需适配 | Chrome 侧栏扩展让 DSH 直接操控浏览器；双件套需专用 install.sh + Chrome 手动装载（非一行安装，判定待新契约重测） |
 | [dsh-openpencil](https://github.com/ZSeven-W/dsh-openpencil) | 119 | ✅ | OpenPencil 设计稿预览与编辑 |
-| [dsh-plugin-mineru](https://github.com/HuanLinOTO/dsh-plugin-mineru) | 36 | 待定 | PDF/图片/Office 转结构化 Markdown |
+| [dsh-plugin-mineru](https://github.com/HuanLinOTO/dsh-plugin-mineru) | 37 | 待定 | PDF/图片/Office 转结构化 Markdown |
 | [dsh-web-search-pro](https://github.com/anweat/dsh-web-search-pro) | 26 | ✅ | 增强型持久网页搜索 |
 
 ### 🛒 市场与管理（4）
 
 | 插件 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
-| [dsh-market](https://github.com/dsh-market/dsh-market) | 1032 | ✅ | 持续收录 1000+ 插件的市场：中文搜索 + 五维评分 |
+| [dsh-market](https://github.com/dsh-market/dsh-market) | 1060 | ✅ | 持续收录 1000+ 插件的市场：中文搜索 + 五维评分 |
 | [dsh-web-plugin-manager](https://github.com/LX2000WASD/dsh-web-plugin-manager) | 58 | ✅ | Web UI 一键管理插件：启停/装卸/环境管理 |
 | [dsh-plugin-check](https://github.com/omdsh-dev/dsh-plugin-check) | 24 | ✅ | 插件健康检查：清单协议/patch 格式/构建陷阱 |
 | [deepseek-plugin-store](https://github.com/Ericwong5021/deepseek-plugin-store) | 22 | ✅ | 独立社区插件商店：发现/安装/提交经验证的插件 |
@@ -178,11 +178,11 @@ flowchart TB
 
 | 插件 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
-| [petdex](https://github.com/crafter-station/petdex) | 3895 | ✅ | 生态最高星桌宠图鉴 |
-| [dsh-deep-whale](https://github.com/Small-tailqwq/dsh-deep-whale) | 1365 | 待定 | 深海鲸鱼养成 |
-| [dsh-ads](https://github.com/Nagi-ovo/dsh-ads) | 499 | ✅ | 把 DSH 变回 2005 门户网站：怀旧广告/小游戏/弹窗 |
-| [whale-girl](https://github.com/vlln/whale-girl) | 234 | ✅ | QQ 宠物形态桌宠：可拖拽/投喂/玩耍 |
-| [dsh-kun-like-pet](https://github.com/liyupi/dsh-kun-like-pet) | 62 | ✅ | 小坤桌宠：随 Agent 工作状态切换 9 种动作 |
+| [petdex](https://github.com/crafter-station/petdex) | 3897 | ✅ | 生态最高星桌宠图鉴 |
+| [dsh-deep-whale](https://github.com/Small-tailqwq/dsh-deep-whale) | 1382 | 待定 | 深海鲸鱼养成 |
+| [dsh-ads](https://github.com/Nagi-ovo/dsh-ads) | 500 | ✅ | 把 DSH 变回 2005 门户网站：怀旧广告/小游戏/弹窗 |
+| [whale-girl](https://github.com/vlln/whale-girl) | 235 | ✅ | QQ 宠物形态桌宠：可拖拽/投喂/玩耍 |
+| [dsh-kun-like-pet](https://github.com/liyupi/dsh-kun-like-pet) | 64 | ✅ | 小坤桌宠：随 Agent 工作状态切换 9 种动作 |
 
 > 实测 = 雷达 k8s 运行级判定（✅ 可用 · 待定重测中 · 需适配 = 当前 mainline 不兼容 · 未测），逐轮判定以 [PLUGINS-ALL.md](PLUGINS-ALL.md) 为准；Booster 类按功能稀缺性豁免星标门槛；安装第三方插件前请审查源码并固定 commit。
 
