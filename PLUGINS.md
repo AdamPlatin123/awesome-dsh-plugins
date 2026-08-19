@@ -151,6 +151,7 @@
 | dsh-remote-sandbox | [weijiafu14/dsh-remote-sandbox](https://github.com/weijiafu14/dsh-remote-sandbox) | 生产级远程执行世界：E2B 沙箱内纯 JS sidecar，fs/subprocess 单次往返、进程输出有界、心跳保活、崩溃透明恢复（resume/recreate）、tar 工作区同步；修复官方 e2b POC 两处 host 假设。43 项测试（含 6 项真机 E2E）全绿 | 已测 |
 | dsh-session-cleaner-cli | [ChenChen913/dsh-session-cleaner-cli](https://github.com/ChenChen913/dsh-session-cleaner-cli) | DSH 会话数据离线清理 CLI：按工作区交互/命令删除会话（回收站+恢复+自动备份）、同步工作区账目与投影缓存、修剪幽灵条目；零依赖 Node≥18，8 项端到端测试全绿 + CI | 待测 |
 | dsh-suite | [whyihaveyou/dsh-suite](https://github.com/whyihaveyou/dsh-suite) | DSH 插件活目录 + 脚手架 + 内置插件商店：785+ 插件每小时刷新、每日兼容 CI 实测、中英双语可搜索目录站；含 create-dsh-plugin 脚手架与 plugin-manager / plugin-notify / plugin-session-export / plugin-team-board 五个 npm 包 | 已测 |
+| dsh-change-budget | [Raphaelutumn/dsh-change-budget](https://github.com/Raphaelutumn/dsh-change-budget) | 为每个 DSH Agent 回合设置文件数、修改调用数与 UTF-8 载荷额度；在受支持的文件修改工具执行前阻止超额修改，并对并行调用同步预留额度 | 待测 |
 
 ## ❓ 未分类
 
