@@ -17,7 +17,7 @@
 
 安装前就知道哪个能用，不用自己踩坑。
 
-[![confirmed](https://img.shields.io/badge/confirmed-1258-blue)](#精选插件-top-50) [![scan](https://img.shields.io/badge/scan-every_6h-green)](#当前生态快照) [![tested](https://img.shields.io/badge/tested-1673-orange)](#本仓库如何判定) [![dshfind](https://dshfind.com/api/badge/AdamPlatin123/awesome-dsh-plugins?lang=zh)](https://dshfind.com/zh/plugins/AdamPlatin123/awesome-dsh-plugins?ref=badge) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![confirmed](https://img.shields.io/badge/confirmed-5075-blue)](#精选插件-top-50) [![scan](https://img.shields.io/badge/scan-every_6h-green)](#当前生态快照) [![tested](https://img.shields.io/badge/tested-1673-orange)](#本仓库如何判定) [![dshfind](https://dshfind.com/api/badge/AdamPlatin123/awesome-dsh-plugins?lang=zh)](https://dshfind.com/zh/plugins/AdamPlatin123/awesome-dsh-plugins?ref=badge) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
 [![运行级可用](https://img.shields.io/badge/运行级可用-979-brightgreen)](#2-看懂状态统一四档口径) [![运行级不兼容](https://img.shields.io/badge/运行级不兼容-600-red)](#2-看懂状态统一四档口径) [![待定](https://img.shields.io/badge/待定-94-yellow)](#2-看懂状态统一四档口径) [![未测](https://img.shields.io/badge/·_未测-0-lightgrey)](#2-看懂状态统一四档口径)
 
@@ -27,7 +27,7 @@
 
 ---
 
-> 收录 1258 个 DSH 插件仓库（索引到9247个repos，正由专用K8s集群，动态在DSH最新版本下验证可用性，目前高速迭代中）。
+> 收录 5075 个 DSH 插件仓库（索引到9247个repos，正由专用K8s集群，动态在DSH最新版本下验证可用性，目前高速迭代中）。
 
 ## 工作原理
 
@@ -44,7 +44,7 @@ flowchart TB
     subgraph Validation[" 验证（driver 20s 流式循环）"]
         B1{"package.json<br/>name + main/exports/dsh?"}
     end
-    B1 -->|"插件 1258"| C1["k8s 运行级测试<br/>一插件一 pod · 并发 10<br/>dsh agent + Qwen（de-stream）"]
+    B1 -->|"插件 5075"| C1["k8s 运行级测试<br/>一插件一 pod · 并发 10<br/>dsh agent + Qwen（de-stream）"]
     B1 -->|"非插件（累计删 1064）"| B3[" 即删省空间"]
     C1 --> D1{"判定 · 总 1673"}
     D1 -->|" 979 /  600"| E1["聚合 + README 分类统计"]
@@ -357,7 +357,7 @@ DSH 插件社区讨论群（微信群）：插件作者、维护者与使用者�
 
 | 证据层 | 当前结果 |
 |---|---:|
-| 自动收录 | 1258 个仓库 |
+| 自动收录 | 5075 个仓库 |
 | 运行级实测 | 979 可用 · 600 不兼容 · 94 待定（共 1673 个，k8s agent 口径）|
 
 [完整索引](PLUGINS-ALL.md) · [运行实测](reports/2026-08-19/agent-test-v2.md)
