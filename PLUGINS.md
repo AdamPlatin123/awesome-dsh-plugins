@@ -114,6 +114,7 @@
 | dsh-mmx-bridge | [welsione/dsh-mmx-bridge](https://github.com/welsione/dsh-mmx-bridge) | MiniMax 多模态桥接插件：一个 mmx_bridge 工具覆盖图像理解（VLM）/文生图/文图生视频/语音合成/音乐生成/音频翻唱/联网搜索/用量查询，生成产物经 /mmx-files/ 同源内嵌图片预览与音视频播放器，附 Web 设置页管理卡片；零 npm 运行时依赖 | 待测 |
 | dsh-trading-toolkit | [kentleenot/dsh-trading-toolkit](https://github.com/kentleenot/dsh-trading-toolkit) | A股+美股行情工具箱：实时行情/OHLCV K线/ADX 三状态信号/回测预览，东方财富免 Key 直连，只读永不下单 | ? |
 | dsh-univer-office | [dream-num/dsh-univer-office](https://github.com/dream-num/dsh-univer-office) | Univer 办公插件：在 DSH 中创建/编辑/检查/交付表格、文档、演示文稿、多维表格和画布，支持 xlsx/docx/pptx 导入导出、实时预览与 worktree 审阅；npm `dsh-univer-office` 0.2.5 | 待测 |
+| dsh-prompt-optimizer | [Y1X1n/dsh-prompt-optimizer](https://github.com/Y1X1n/dsh-prompt-optimizer) | 发送栏「优化」按钮：跟随会话当前模型（可固定，支持回退路由自动 failover）一键分析并改写提示词草稿，SSE 流式逐段上屏；输入卡上方 dock 面板展示五维诊断与优化稿，可替换/撤回/复制/重试；设置页折叠卡十项配置（快速模式、推理钳档、Token 上限自适应等）；40 例自动化测试，rc.7 真实 profile 端到端实测 | 待测 |
 | dsh-research-report | [PerryLink/dsh-research-report](https://github.com/PerryLink/dsh-research-report) | 证据账本与可验证报告引擎：内容寻址的声明-快照绑定与逐字节核查，产出带逐条判定与 SHA-256 清单封存的版本化报告；npm 0.1.0 已发布 | 待测 |
 ## 🧰 插件集
 
