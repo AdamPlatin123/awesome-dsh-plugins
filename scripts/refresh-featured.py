@@ -91,7 +91,7 @@ def main():
         ranked = sorted(c['plugins'], key=lambda p: (-stars[p['repo']], p['repo'].lower()))
         parts.append(f"### {c['name']}（{len(ranked)}）")
         parts.append('')
-        parts.append('| 插件 | ⭐ | 实测 | 说明 |')
+        parts.append('| 插件 | ⭐ | rc.8 实测 | 说明 |')
         parts.append('|---|---:|---|---|')
         for p in ranked:
             desc = p['desc'].replace('|', '\\|')

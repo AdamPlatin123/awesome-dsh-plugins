@@ -70,28 +70,28 @@ flowchart TB
 
 <!-- AUTO:featured:START -->
 
-> 人工策展 34 款 rc.8 实测可用插件（v4flash 全量重测通过者，2026-08-21），类序与类内均按星标降序；星标每 6 小时自动刷新（成员调整请提 PR 修改 data/awesome-50.json）。数据截至 2026-08-21 05:01（UTC+8）。
+> 人工策展 34 款 rc.8 实测可用插件（v4flash 全量重测通过者，2026-08-21），类序与类内均按星标降序；星标每 6 小时自动刷新（成员调整请提 PR 修改 data/awesome-50.json）。数据截至 2026-08-21 05:50（UTC+8）。
 
 ### ⌨️ 终端与桌面端（3）
 
-| 插件 | ⭐ | 实测 | 说明 |
+| 插件 | ⭐ | rc.8 实测 | 说明 |
 |---|---:|---|---|
-| [deepseek-harness-desktop](https://github.com/anywhere-labs/deepseek-harness-desktop) | 16418 | ✅ | 为 DSH 插件生态打造的现代化桌面端（雷达判需适配，星数两日翻倍） |
-| [deepseek-harness-desktop](https://github.com/hairyf/deepseek-harness-desktop) | 723 | ✅ | Tauri 桌面版：5MB 安装包零环境配置，Win/macOS/Linux |
+| [deepseek-harness-desktop](https://github.com/anywhere-labs/deepseek-harness-desktop) | 16425 | ✅ | 为 DSH 插件生态打造的现代化桌面端（雷达判需适配，星数两日翻倍） |
+| [deepseek-harness-desktop](https://github.com/hairyf/deepseek-harness-desktop) | 725 | ✅ | Tauri 桌面版：5MB 安装包零环境配置，Win/macOS/Linux |
 | [Bigfish](https://github.com/turtle2209/Bigfish) | 285 | ✅ | 第三方桌面端发行版：内置 Node 运行时双击即用（雷达判需适配——发行版形态非单插件安装） |
 
 ### 🧠 记忆与上下文（2）
 
-| 插件 | ⭐ | 实测 | 说明 |
+| 插件 | ⭐ | rc.8 实测 | 说明 |
 |---|---:|---|---|
-| [EverOS](https://github.com/EverMind-AI/EverOS) | 12261 | ✅ | 全 agent 便携记忆层：本地优先、Markdown-native |
+| [EverOS](https://github.com/EverMind-AI/EverOS) | 12264 | ✅ | 全 agent 便携记忆层：本地优先、Markdown-native |
 | [mnemon](https://github.com/mnemon-dev/mnemon) | 494 | ✅ | 跨 agent、本地优先的持久记忆 |
 
 ### 🚀 智力增强 Booster（6）
 
-| 插件 | ⭐ | 实测 | 说明 |
+| 插件 | ⭐ | rc.8 实测 | 说明 |
 |---|---:|---|---|
-| [dsh-routing-suite](https://github.com/yjh051108/dsh-routing-suite) | 6445 | ✅ | 注入器 × 思维模式路由套装：免重启运行时注入器 + 任务感知推理模式路由预设（P1-P23 实测） |
+| [dsh-routing-suite](https://github.com/yjh051108/dsh-routing-suite) | 6446 | ✅ | 注入器 × 思维模式路由套装：免重启运行时注入器 + 任务感知推理模式路由预设（P1-P23 实测） |
 | [ouroboros](https://github.com/Q00/ouroboros) | 5591 | ✅ | Agent OS：agent 自我变强、人只守底线——自进化运行时 |
 | [dsh-anchored-standard](https://github.com/xiaobright/dsh-anchored-standard) | 3680 | ✅ | 两阶段 DSH 预设：极简模式对齐启动 → 全量装载（智力增强向） |
 | [harmony-next.skills](https://github.com/linhay/harmony-next.skills) | 332 | ✅ | 技能驱动的工作流增强 |
@@ -100,16 +100,16 @@ flowchart TB
 
 ### 🗂 文件、数据与浏览（2）
 
-| 插件 | ⭐ | 实测 | 说明 |
+| 插件 | ⭐ | rc.8 实测 | 说明 |
 |---|---:|---|---|
-| [openpencil](https://github.com/ZSeven-W/openpencil) | 5473 | ✅ | OpenPencil 设计工具本体（DSH 适配器另列下行） |
+| [openpencil](https://github.com/ZSeven-W/openpencil) | 5475 | ✅ | OpenPencil 设计工具本体（DSH 适配器另列下行） |
 | [dsh-browser](https://github.com/Lum1104/dsh-browser) | 348 | ✅ | Chrome 侧栏扩展让 DSH 直接操控浏览器；双件套（桥插件+扩展），rc.8 实测桥插件可装可用 |
 
 ### 🖥 界面与工作台（5）
 
-| 插件 | ⭐ | 实测 | 说明 |
+| 插件 | ⭐ | rc.8 实测 | 说明 |
 |---|---:|---|---|
-| [dsh-web-ui](https://github.com/zhu1090093659/dsh-web-ui) | 5150 | ✅ | Web UI 增强与皮肤合集：任务看板、Git 图、移动端、皮肤中心 |
+| [dsh-web-ui](https://github.com/zhu1090093659/dsh-web-ui) | 5152 | ✅ | Web UI 增强与皮肤合集：任务看板、Git 图、移动端、皮肤中心 |
 | [dsh-genui](https://github.com/omdsh-dev/dsh-genui) | 267 | ✅ | GenUI 内联组件：图表/表单/测验/3D 场景 + action 事件环 |
 | [dsh-visualize](https://github.com/Nagi-ovo/dsh-visualize) | 191 | ✅ | 对话中生成交互式可视化卡片 |
 | [Liang-Saint-Slider](https://github.com/BruzWJ/Liang-Saint-Slider) | 89 | ✅ | 模型与思考力度选择滑条 |
@@ -117,7 +117,7 @@ flowchart TB
 
 ### 🎮 娱乐生活（3）
 
-| 插件 | ⭐ | 实测 | 说明 |
+| 插件 | ⭐ | rc.8 实测 | 说明 |
 |---|---:|---|---|
 | [petdex](https://github.com/crafter-station/petdex) | 3939 | ✅ | 生态最高星桌宠图鉴 |
 | [dsh-deep-whale](https://github.com/Small-tailqwq/dsh-deep-whale) | 1511 | ✅ | 深海鲸鱼养成 |
@@ -125,15 +125,15 @@ flowchart TB
 
 ### 👁 视觉与多模态（3）
 
-| 插件 | ⭐ | 实测 | 说明 |
+| 插件 | ⭐ | rc.8 实测 | 说明 |
 |---|---:|---|---|
-| [modlens](https://github.com/liustack/modlens) | 3394 | ✅ | 生态第一个视觉插件，视觉工作流的基准方案 |
+| [modlens](https://github.com/liustack/modlens) | 3396 | ✅ | 生态第一个视觉插件，视觉工作流的基准方案 |
 | [dsh-vision-router](https://github.com/ysr666/dsh-vision-router) | 903 | ✅ | 内置免费视觉模型路由，给文本 agent 装眼睛 |
 | [dsh-vision-toolkit](https://github.com/Anionex/dsh-vision-toolkit) | 787 | ✅ | 带意图图片问答、长截图 OCR、UI 还原 |
 
 ### 💻 编码与生产力（3）
 
-| 插件 | ⭐ | 实测 | 说明 |
+| 插件 | ⭐ | rc.8 实测 | 说明 |
 |---|---:|---|---|
 | [TokenTracker](https://github.com/xiufengsun/TokenTracker) | 1381 | ✅ | 本地优先的 31 种编码工具 token 用量与成本追踪 |
 | [dsh-at-file](https://github.com/omdsh-dev/dsh-at-file) | 439 | ✅ | Codex 风格 @file 引用：搜索并挂载工作区文件 |
@@ -141,7 +141,7 @@ flowchart TB
 
 ### 🤖 Agent 能力与编排（3）
 
-| 插件 | ⭐ | 实测 | 说明 |
+| 插件 | ⭐ | rc.8 实测 | 说明 |
 |---|---:|---|---|
 | [helloagents](https://github.com/hellowind777/helloagents) | 693 | ✅ | agent 能力合集 |
 | [rea](https://github.com/morluto/rea) | 361 | ✅ | 用 agent 逆向工程任何东西：从应用行为到原生二进制 |
@@ -149,7 +149,7 @@ flowchart TB
 
 ### 🛒 市场与管理（3）
 
-| 插件 | ⭐ | 实测 | 说明 |
+| 插件 | ⭐ | rc.8 实测 | 说明 |
 |---|---:|---|---|
 | [dsh-market](https://github.com/dsh-market/dsh-market) | 1444 | ✅ | 持续收录 1000+ 插件的市场：中文搜索 + 五维评分 |
 | [dsh-web-plugin-manager](https://github.com/LX2000WASD/dsh-web-plugin-manager) | 61 | ✅ | Web UI 一键管理插件：启停/装卸/环境管理 |
@@ -157,7 +157,7 @@ flowchart TB
 
 ### 📡 消息通讯与 IM（1）
 
-| 插件 | ⭐ | 实测 | 说明 |
+| 插件 | ⭐ | rc.8 实测 | 说明 |
 |---|---:|---|---|
 | [dsh-lark](https://github.com/omdsh-dev/dsh-lark) | 39 | ✅ | 飞书 IM bot 频道（官方渠道插件） |
 
