@@ -77,7 +77,7 @@ flowchart TB
 
 <!-- AUTO:featured:START -->
 
-> 人工策展 50 个高价值插件，按 11 类分组、类内按星标排序；星标每 6 小时自动刷新（成员调整请提 PR 修改 data/awesome-50.json）。数据截至 2026-08-21 00:23（UTC+8）。
+> 人工策展 50 个高价值插件，按 11 类分组、类内按星标排序；星标每 6 小时自动刷新（成员调整请提 PR 修改 data/awesome-50.json）。数据截至 2026-08-21 00:24（UTC+8）。
 
 ### 🚀 智力增强 Booster（7）
 
@@ -136,7 +136,7 @@ flowchart TB
 
 | 插件 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
-| [TokenTracker](https://github.com/xiufengsun/TokenTracker) | 1382 | 未测 | 本地优先的 31 种编码工具 token 用量与成本追踪 |
+| [TokenTracker](https://github.com/xiufengsun/TokenTracker) | 1381 | 未测 | 本地优先的 31 种编码工具 token 用量与成本追踪 |
 | [dsh-at-file](https://github.com/omdsh-dev/dsh-at-file) | 438 | 需适配 | Codex 风格 @file 引用：搜索并挂载工作区文件 |
 | [claude-paper](https://github.com/alaliqing/claude-paper) | 323 | ✅ | 跨 agent 论文工具箱：速读摘要/深度研读材料/代码演示 + 本地 Web 阅读器 |
 | [mobius](https://github.com/nutshellai-tech/mobius) | 285 | ✅ | 编码增强 |
@@ -145,7 +145,7 @@ flowchart TB
 
 | 插件 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
-| [EverOS](https://github.com/EverMind-AI/EverOS) | 12251 | — | 全 agent 便携记忆层：本地优先、Markdown-native |
+| [EverOS](https://github.com/EverMind-AI/EverOS) | 12252 | — | 全 agent 便携记忆层：本地优先、Markdown-native |
 | [mnemon](https://github.com/mnemon-dev/mnemon) | 494 | ✅ | 跨 agent、本地优先的持久记忆 |
 | [dsh-memory-evolve](https://github.com/csyangwen/dsh-memory-evolve) | 205 | ✅ | 五轨记忆 + git 分支托管 + 后台自我进化 |
 
