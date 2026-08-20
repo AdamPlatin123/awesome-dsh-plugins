@@ -59,9 +59,10 @@ def main():
     data = json.load(open(CURATED, encoding='utf-8'))
     cats = data['categories']
     repos = [p['repo'] for c in cats for p in c['plugins']]
-    if len(repos) != 50:
-        sys.exit(f'[中止] 策展成员 {len(repos)} != 50，JSON 需人工校对')
-    if len(set(repos)) != 50:
+    # 成员数随实测口径动态变化（rc.8 重测通过者）；下限防 JSON 误删，去重防误加
+    if len(repos) < 20:
+        sys.exit(f'[中止] 策展成员仅 {len(repos)} 个（<20），疑似 JSON 损坏，需人工校对')
+    if len(set(repos)) != len(repos):
         sys.exit('[中止] 策展成员存在重复仓库，JSON 需人工校对')
 
     with ThreadPoolExecutor(max_workers=16) as ex:
