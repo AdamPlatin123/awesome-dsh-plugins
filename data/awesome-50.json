@@ -115,8 +115,8 @@
         {
           "repo": "turtle2209/Bigfish",
           "name": "Bigfish",
-          "verdict": "untested",
-          "desc": "第三方桌面端：内置 Node 运行时，双击即用"
+          "verdict": "incompatible",
+          "desc": "第三方桌面端发行版：内置 Node 运行时双击即用（雷达判需适配——发行版形态非单插件安装）"
         },
         {
           "repo": "hust-open-atom-club/oh-dsh",
