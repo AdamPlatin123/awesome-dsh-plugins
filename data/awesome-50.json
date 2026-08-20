@@ -37,10 +37,16 @@
           "desc": "按轮次自动优化 reasoning_effort（推理力度）"
         },
         {
-          "repo": "JuneLearn/dsh-reasoning-settings",
-          "name": "dsh-reasoning-settings",
-          "verdict": "ok",
-          "desc": "推理设置控制：让模型按任务切换思考档位"
+          "repo": "Q00/ouroboros",
+          "name": "ouroboros",
+          "verdict": null,
+          "desc": "Agent OS：agent 自我变强、人只守底线——自进化运行时"
+        },
+        {
+          "repo": "xiaobright/dsh-anchored-standard",
+          "name": "dsh-anchored-standard",
+          "verdict": null,
+          "desc": "两阶段 DSH 预设：极简模式对齐启动 → 全量装载（智力增强向）"
         }
       ]
     },
@@ -84,10 +90,10 @@
           "desc": "划选文字→批注→随消息发送，回复逐条对照"
         },
         {
-          "repo": "vlln/dsh-navbar",
-          "name": "dsh-navbar",
-          "verdict": "ok",
-          "desc": "对话节点导航条：右缘节点串快速跳转（官方 bundle 插件）"
+          "repo": "nexu-io/open-design",
+          "name": "open-design",
+          "verdict": null,
+          "desc": "DSH 设计插件：开源 Claude Design 替代，AI 设计工作流（生态最高星）"
         }
       ]
     },
@@ -123,6 +129,12 @@
           "name": "dsh-tianshu-tui",
           "verdict": "pending",
           "desc": "自研 ANSI 渲染的极简终端 UI"
+        },
+        {
+          "repo": "anywhere-labs/deepseek-harness-desktop",
+          "name": "deepseek-harness-desktop",
+          "verdict": "incompatible",
+          "desc": "为 DSH 插件生态打造的现代化桌面端（雷达判需适配，星数两日翻倍）"
         }
       ]
     },
@@ -177,12 +189,6 @@
           "desc": "用 agent 逆向工程任何东西：从应用行为到原生二进制"
         },
         {
-          "repo": "cofy-x/axern",
-          "name": "axern",
-          "verdict": "ok",
-          "desc": "AI agent 开源沙箱：不可信代码执行与持久服务"
-        },
-        {
           "repo": "humblebanana/open-record-replay",
           "name": "open-record-replay",
           "verdict": "ok",
@@ -233,6 +239,12 @@
           "name": "dsh-memory-evolve",
           "verdict": "ok",
           "desc": "五轨记忆 + git 分支托管 + 后台自我进化"
+        },
+        {
+          "repo": "EverMind-AI/EverOS",
+          "name": "EverOS",
+          "verdict": null,
+          "desc": "全 agent 便携记忆层：本地优先、Markdown-native"
         }
       ]
     },
@@ -256,12 +268,6 @@
           "name": "dsh-interconnect",
           "verdict": "pending",
           "desc": "跨 DSH 实例消息/事件交接"
-        },
-        {
-          "repo": "wzj998/ChatCCC",
-          "name": "ChatCCC",
-          "verdict": "ok",
-          "desc": "飞书/微信聊天控制 DSH / Claude Code"
         }
       ]
     },
@@ -281,16 +287,10 @@
           "desc": "OpenPencil 设计稿预览与编辑"
         },
         {
-          "repo": "HuanLinOTO/dsh-plugin-mineru",
-          "name": "dsh-plugin-mineru",
-          "verdict": "pending",
-          "desc": "PDF/图片/Office 转结构化 Markdown"
-        },
-        {
-          "repo": "anweat/dsh-web-search-pro",
-          "name": "dsh-web-search-pro",
-          "verdict": "ok",
-          "desc": "增强型持久网页搜索"
+          "repo": "ZSeven-W/openpencil",
+          "name": "openpencil",
+          "verdict": null,
+          "desc": "OpenPencil 设计工具本体（DSH 适配器另列下行）"
         }
       ]
     },
@@ -316,10 +316,10 @@
           "desc": "插件健康检查：清单协议/patch 格式/构建陷阱"
         },
         {
-          "repo": "Ericwong5021/deepseek-plugin-store",
-          "name": "deepseek-plugin-store",
-          "verdict": "ok",
-          "desc": "独立社区插件商店：发现/安装/提交经验证的插件"
+          "repo": "edison7009/EchoBird",
+          "name": "EchoBird",
+          "verdict": null,
+          "desc": "多引擎一键安装与模型切换（Claude Code/Codex/Grok/DSH…）"
         }
       ]
     },
