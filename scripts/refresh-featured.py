@@ -79,9 +79,11 @@ def main():
         sys.exit(f'[中止] 策展成员查询失败 {len(fails)} 个: {fails[:5]}')
 
     ts = datetime.now(ZoneInfo('Asia/Shanghai')).strftime('%Y-%m-%d %H:%M')
+    total = sum(len(c['plugins']) for c in cats)
     parts = [
         '<!-- AUTO:featured:START -->', '',
-        f'> 人工策展 50 个高价值插件，按 11 类分组、类内按星标排序；星标{REFRESH_LABEL}（成员调整请提 PR 修改 data/awesome-50.json）。数据截至 {ts}（UTC+8）。',
+        f'> 人工策展 {total} 款 rc.8 实测可用插件（v4flash 全量重测通过者，2026-08-21），类序与类内均按星标降序；'
+        f'星标{REFRESH_LABEL}（成员调整请提 PR 修改 data/awesome-50.json）。数据截至 {ts}（UTC+8）。',
         '',
     ]
     for c in cats:
@@ -95,7 +97,7 @@ def main():
             parts.append(f"| [{p['name']}](https://github.com/{p['repo']}) | {stars[p['repo']]} |"
                          f" {VERDICT_MARK.get(p.get('verdict'), '—')} | {desc} |")
         parts.append('')
-    parts.append('> 实测 = 雷达 k8s 运行级判定（✅ 可用 · 待定重测中 · 需适配 = 当前 mainline 不兼容 · 未测），逐轮判定以 [PLUGINS-ALL.md](PLUGINS-ALL.md) 为准；Booster 类按功能稀缺性豁免星标门槛；安装第三方插件前请审查源码并固定 commit。')
+    parts.append('> 实测 = rc.8 + v4flash 标准安装与单任务验证（2026-08-21 对 50 仓全量重测，仅收录通过者；逐仓日志见 data/rc8-retest-20260821/）；雷达 k8s 历史判定见 [PLUGINS-ALL.md](PLUGINS-ALL.md)；安装第三方插件前请审查源码并固定 commit。')
     block = '\n'.join(parts) + '\n\n<!-- AUTO:featured:END -->'
 
     changed = False

@@ -17,7 +17,7 @@
 
 安装前就知道哪个能用，不用自己踩坑。
 
-[![confirmed](https://img.shields.io/badge/confirmed-5075-blue)](#精选插件-top-50) [![scan](https://img.shields.io/badge/scan-every_6h-green)](#当前生态快照) [![tested](https://img.shields.io/badge/tested-1673-orange)](#本仓库如何判定) [![dshfind](https://dshfind.com/api/badge/AdamPlatin123/awesome-dsh-plugins?lang=zh)](https://dshfind.com/zh/plugins/AdamPlatin123/awesome-dsh-plugins?ref=badge) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![confirmed](https://img.shields.io/badge/confirmed-5075-blue)](#精选插件榜) [![scan](https://img.shields.io/badge/scan-every_6h-green)](#当前生态快照) [![tested](https://img.shields.io/badge/tested-1673-orange)](#本仓库如何判定) [![dshfind](https://dshfind.com/api/badge/AdamPlatin123/awesome-dsh-plugins?lang=zh)](https://dshfind.com/zh/plugins/AdamPlatin123/awesome-dsh-plugins?ref=badge) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
 [![运行级可用](https://img.shields.io/badge/运行级可用-979-brightgreen)](#2-看懂状态统一四档口径) [![运行级不兼容](https://img.shields.io/badge/运行级不兼容-600-red)](#2-看懂状态统一四档口径) [![待定](https://img.shields.io/badge/待定-94-yellow)](#2-看懂状态统一四档口径) [![未测](https://img.shields.io/badge/·_未测-0-lightgrey)](#2-看懂状态统一四档口径)
 
@@ -59,7 +59,7 @@ flowchart TB
 
 | 你的目标 | 跳转入口 |
 |---|---|
-| 看精选插件 | [精选 Top 50](#精选插件-top-50) — 人工策展 · 11 类 |
+| 看精选插件 | [精选插件榜](#精选插件榜) — rc.8 实测可用 · 类序星标降序 |
 | 按用途找一个插件 | [分类目录](#分类目录) — 13 类功能领域 · 逐插件明细见 [PLUGINS-ALL.md](PLUGINS-ALL.md)；[PLUGINS.md](PLUGINS.md) 为 PR 登记清单 |
 | 浏览自动发现的全部仓库 | [ 当前生态快照](#当前生态快照) — 日期化兼容矩阵 |
 | 了解最近发生了什么 | [ CHANGELOG](CHANGELOG.md) |
@@ -73,7 +73,7 @@ flowchart TB
 > **收录不等于兼容，静态检查不等于运行可用，运行可用也不等于安全审计。**
 > 本仓库提供可追溯的筛选信号，不代表 DSH 官方背书。安装第三方插件前，请检查插件源码、权限、依赖、许可证及测试日期。
 
-## 精选插件 Top 50
+## 精选插件榜
 
 <!-- AUTO:featured:START -->
 

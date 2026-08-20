@@ -12,7 +12,7 @@
 **A daily-updated radar that auto-discovers and compatibility-tests every plugin for DeepSeek Harness.**
 Know which plugins work before you install them.
 
-[![confirmed](https://img.shields.io/badge/confirmed-5075-blue)](#featured-top-50) [![scan](https://img.shields.io/badge/scan-every_6h-green)](#ecosystem-snapshot) [![tested](https://img.shields.io/badge/tested-1673-orange)](#how-we-assess-compatibility) [![dshfind](https://dshfind.com/api/badge/AdamPlatin123/awesome-dsh-plugins?lang=en)](https://dshfind.com/plugins/AdamPlatin123/awesome-dsh-plugins?ref=badge) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![confirmed](https://img.shields.io/badge/confirmed-5075-blue)](#featured) [![scan](https://img.shields.io/badge/scan-every_6h-green)](#ecosystem-snapshot) [![tested](https://img.shields.io/badge/tested-1673-orange)](#how-we-assess-compatibility) [![dshfind](https://dshfind.com/api/badge/AdamPlatin123/awesome-dsh-plugins?lang=en)](https://dshfind.com/plugins/AdamPlatin123/awesome-dsh-plugins?ref=badge) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
 [![runtime OK](https://img.shields.io/badge/runtime_OK-979-brightgreen)](#2-understand-status-unified-4-tier-scale) [![incompatible](https://img.shields.io/badge/incompatible-600-red)](#2-understand-status-unified-4-tier-scale) [![pending](https://img.shields.io/badge/pending-94-yellow)](#2-understand-status-unified-4-tier-scale) [![untested](https://img.shields.io/badge/untested-0-lightgrey)](#2-understand-status-unified-4-tier-scale)
 
@@ -52,7 +52,7 @@ flowchart TB
 
 | Goal | Link |
 |---|---|
-| Browse featured plugins | [Featured Top 50](#featured-top-50) — curated · 11 categories |
+| Browse featured plugins | [Featured](#featured) — rc.8 verified · sorted by stars |
 | Find a plugin by use case | [Plugin Catalog](#plugin-catalog) — 13 categories · per-plugin details in [PLUGINS-ALL.md](PLUGINS-ALL.md); [PLUGINS.md](PLUGINS.md) is the PR-registered list |
 | Browse all auto-discovered repos | [ Ecosystem Snapshot](#ecosystem-snapshot) — dated compatibility matrix |
 | See what changed recently | [ CHANGELOG](CHANGELOG.md) |
@@ -66,7 +66,7 @@ flowchart TB
 > **Inclusion ≠ compatible, static check ≠ runtime-usable, runtime-usable ≠ security-audited.**
 > This repo provides traceable filtering signals, not official DSH endorsement. Always review plugin source, permissions, dependencies, and license before installing.
 
-## Featured Top 50
+## Featured
 
 <!-- AUTO:featured:START -->
 
