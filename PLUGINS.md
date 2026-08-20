@@ -129,6 +129,7 @@
 | EverOS | [EverMind-AI/EverOS](https://github.com/EverMind-AI/EverOS) | 全 agent 便携记忆层：本地优先 Markdown-native（Top50 成员，registry 插队实测） | 待测（registry 插队实测） |
 | openpencil | [ZSeven-W/openpencil](https://github.com/ZSeven-W/openpencil) | OpenPencil 设计工具本体（DSH 适配器 dsh-openpencil 已另有条目；本体插队实测） | 待测（registry 插队实测） |
 | EchoBird | [edison7009/EchoBird](https://github.com/edison7009/EchoBird) | 多引擎一键安装与模型切换（Top50 成员，registry 插队实测） | 待测（registry 插队实测） |
+| dsh-easyrewrite | [Renzic-Stone/DSH-EasyRewrite](https://github.com/Renzic-Stone/DSH-EasyRewrite) | DSH Web 用户消息气泡内联编辑与撤回插件：惰性提交、无痕替换、版本翻页器、草稿自动备份、三语 i18n（中/英/日）；npm `dsh-easyrewrite`（dsh.bundle.patch → cordis.patch.yml，`dsh plugin add` 一键安装） | 待测 |
 | tabbit-browser | [Tabbit-Browser/dsh-plugin](https://github.com/Tabbit-Browser/dsh-plugin) | 让 DSH Agent 通过 Tabbit 浏览器自带的 `tabbit-cli`（任务隔离的 Playwright CLI）控制真实网页、复用真实登录态，完成网页自动化、信息提取、QA 与基准测试；bundle 随安装自动注册 `tabbit-browser` skill（持久化任务空间、locator 与等待、截图、回执与恢复）+ `tabbit_browser_install` 环境预检工具（要求正式版 ≥ 1.9.0，缺失或过低时按系统地区后台下载国内 `tabbit.com` / 国际 `tabbit.ai` 对应安装包到 Downloads 并通知绝对路径）；MIT，npm `tabbit-browser` | 待测 |
 ## 🧰 插件集
 
