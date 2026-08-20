@@ -7,10 +7,10 @@
 > 约定：插件名与 repo 名一致；scope 使用 `@dsh-external/*`（勿占用 `@deepseek-ai/*` 保留命名空间）；repo 打 `dsh-plugin` topic。
 
 ## 🔌 单插件
-| dsh-session-pin | [PerryLink/dsh-session-pin](https://github.com/PerryLink/dsh-session-pin) | 会话与工作区置顶（双面 host+client）：行级图钉与换色、会话头开关、已置顶面板、持久化 settings 命名空间；0.4.0 再加会话导航组织器——Pin 分组（boards）、标签与保存视图、会话健康摘要（只读脱敏）与 /goto 模糊跳转；全部浏览器本地零网络 | 待测 |
 
 | 插件 | 仓库 | 说明 | 运行级 |
 |---|---|---|---|
+| dsh-session-pin | [PerryLink/dsh-session-pin](https://github.com/PerryLink/dsh-session-pin) | 会话与工作区置顶（双面 host+client）：行级图钉与换色、会话头开关、已置顶面板、持久化 settings 命名空间；0.4.0 再加会话导航组织器——Pin 分组（boards）、标签与保存视图、会话健康摘要（只读脱敏）与 /goto 模糊跳转；全部浏览器本地零网络 | 待测 |
 | dsh-agentfuse-plugin | [MkaliezZ/dsh-agentfuse-plugin](https://github.com/MkaliezZ/dsh-agentfuse-plugin) | 确定性 fail-closed 工具调用授权门：allow/block/ask 策略门 + 审批链延后 + agentfuse-evidence-schema 证据；配 dsh-policy-test 闭环回归；已获本雷达运行级 [可用] 判定 | ✅ |
 | dsh-evidence-task-board | [MkaliezZ/dsh-evidence-task-board](https://github.com/MkaliezZ/dsh-evidence-task-board) | 持久化确定性任务状态原语（创建/状态/证据转移）；npm 包 @mkaliezz/dsh-task-board | 待测 |
 | dsh-test-normalizer | [MkaliezZ/dsh-test-normalizer](https://github.com/MkaliezZ/dsh-test-normalizer) | pytest / Vitest / Jest / Cargo 测试结果归一化为稳定结构；npm 包 @mkaliezz/dsh-test-runner | 待测 |
@@ -122,6 +122,7 @@
 | dsh-research-report | [PerryLink/dsh-research-report](https://github.com/PerryLink/dsh-research-report) | 证据账本与可验证报告引擎：内容寻址的声明-快照绑定与逐字节核查，产出带逐条判定与 SHA-256 清单封存的版本化报告；npm 0.1.0 已发布 | 待测 |
 | dsh-socrates | [Cruciforms/dsh-socrates](https://github.com/Cruciforms/dsh-socrates) | 苏格拉底式澄清优先的深度研究插件：自适应多轮研究、交叉验证（声明级三分裁决+单跳回补）、程序化引用审计、学术三源（arXiv/PubMed/S2）、模型分层降本（Pro/Flash） | 待测 |
 | dsh-plugin-hub | [Noob-stupid/dsh-plugin-hub](https://github.com/Noob-stupid/dsh-plugin-hub) | DSH 插件管理面板：一键启停 + 多源市场（GitHub/Gitee/自定义）+ 静态索引市场（500+ 插件/300 技能）+ 技能安装/停用 + 套装一键装配 + 框架升级适配 | 待测 |
+| dsh-simple-wiki-memory | [rainow/dsh-simple-wiki-memory](https://github.com/rainow/dsh-simple-wiki-memory) | 简易 Wiki 持久记忆（DSWM）：一个索引文档自动注入 + 每主题一个 md 文件按需读取，省 token 轻量无压力；pending 准入→确认晋升→archive 归档三区 + memory-log 审计 + git 自动备份；纯 Markdown 所见即所得，跨 harness 共享 | 待测 |
 | open-design | [nexu-io/open-design](https://github.com/nexu-io/open-design) | DSH 设计插件：开源 Claude Design 替代（Top50 精选成员，registry 插队实测） | 待测（registry 插队实测） |
 | ouroboros | [Q00/ouroboros](https://github.com/Q00/ouroboros) | Agent OS：agent 自我变强、人只守底线（Top50 Booster 成员，registry 插队实测） | 待测（registry 插队实测） |
 | dsh-anchored-standard | [xiaobright/dsh-anchored-standard](https://github.com/xiaobright/dsh-anchored-standard) | 两阶段 DSH 预设：极简模式对齐启动 → 全量装载（Top50 Booster 成员，registry 插队实测） | 待测（registry 插队实测） |
@@ -179,11 +180,12 @@
 | dsh-fund-research | [PerryLink/dsh-fund-research](https://github.com/PerryLink/dsh-fund-research) | 中国公募基金确定性研究：天天基金/东方财富公开数据采集（pingzhongdata JS 块、F10 持仓与经理页、个股估值 + push2delay 兜底主机），业绩拆解/持仓穿透/风格归因/经理画像纯函数计算，版本化 Markdown 报告附每个关键数字可回溯到 sha256 源快照的附录；npm dsh-fund-research 已发布；仅供研究，不构成投资建议 | 待测 |
 ## ❓ 未分类
 
-| 插件 | 仓库 | 说明 | 运行级 |
-|---|---|---|---|
 <!-- 新增条目示例（复制下面一行修改后插入对应分类表格末尾）：
 | my-plugin | [你的账号/my-plugin](https://github.com/你的账号/my-plugin) | 一句话功能描述 | 待测 |
 -->
+
+| 插件 | 仓库 | 说明 | 运行级 |
+|---|---|---|---|
 | dsh-plugin-workshop | [yyyyukari/dsh-plugin-workshop](https://github.com/yyyyukari/dsh-plugin-workshop) | 创意工坊式插件浏览器：侧栏常驻入口，搜索/最热/最新/近 7-90 天飙升榜、中文关键词映射、描述与 README 机翻、插件特征验证过滤、一键安装/更新/卸载，内置已安装插件管理（零服务器，GitHub 直连） | ✅ |
 | dsh-file-review | [left0ver/dsh-file-review](https://github.com/left0ver/dsh-file-review) | 文件审查插件：diff 的形式查看文件的修改内容，方便对 agent 的修改进行审查 | ✅ |
 | dsh-file-claim | [Nwflower/dsh-file-claim](https://github.com/Nwflower/dsh-file-claim) | 同一工作区并行多会话的文件认领与写入保护（claim/release、心跳 stale 接管、pending 三路合并） | ✅ |
@@ -242,5 +244,4 @@
 | dsh-library | [PerryLink/dsh-library](https://github.com/PerryLink/dsh-library) | 本地优先文档知识库：library_add/remove/list、语义+关键词混合 library_search（多样性重排、相关性过滤、避免 lost-in-the-middle）、引用感知注入与 library_cite_check/diagnose，SQLite 索引 + 本地嵌入，零模型下载 | 待测 |
 | dsh-budget | [PerryLink/dsh-budget](https://github.com/PerryLink/dsh-budget) | 成本治理：按模型/会话/天聚合 token 与费用计量，会话/日/月预算上限 + 阈值告警（桌面通知 + webhook）与超限 alert/block/degrade 策略，碳足迹估算、分模型延迟基准、Settings 预算页与 /budget 命令 | 待测 |
 | dsh-defend | [PerryLink/dsh-defend](https://github.com/PerryLink/dsh-defend) | 注入/越狱/密钥泄露检测 + 危险删除门禁：Aho-Corasick 引擎在用户消息、工具参数、工具结果三处按 allow/ask/block 拦截（脱敏 defend/detection 审计事件、defend_report 工具、/defend 命令），并拒绝工作区外的递归删除命令 | 待测 |
-| dsh-simple-wiki-memory | [rainow/dsh-simple-wiki-memory](https://github.com/rainow/dsh-simple-wiki-memory) | 简易 Wiki 持久记忆（DSWM）：一个索引文档自动注入 + 每主题一个 md 文件按需读取，省 token 轻量无压力；pending 准入→确认晋升→archive 归档三区 + memory-log 审计 + git 自动备份；纯 Markdown 所见即所得，跨 harness 共享 | 待测 |
 
