@@ -42,7 +42,17 @@ jobs:
             exit 0
           fi
           git commit -m "auto: 精选50星标刷新 $(date -u '+%Y-%m-%d %H:%M') UTC"
-          git push
+          # 并发防护：main 可能在本次运行期间被其他 bot/人工推进——变基后重试推送，最多三轮
+          for i in 1 2 3; do
+            if git pull --rebase origin main && git push; then
+              echo "[push] 第 $i 轮成功"
+              exit 0
+            fi
+            echo "[push] 第 $i 轮冲突，变基重试"
+            sleep 5
+          done
+          echo "[push] 三轮均失败，留待下轮 cron 重试"
+          exit 1
 
       - name: Push mirror to dsh-ext (optional)
         env:

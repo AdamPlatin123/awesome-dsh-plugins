@@ -20,42 +20,44 @@ SNAP_DIR = ROOT / "data" / "snapshots"
 
 DIAGRAM = """```mermaid
 flowchart TB
-    subgraph Discovery[" 发现（每 {discover_hours} 小时 · probe {probe} 巡检触发）"]
+    subgraph Discovery["发现（每 {discover_hours} 小时 · probe {probe} 巡检触发）"]
         A1["GitHub Search<br/>topic ×{topic_n} + keyword ×{kw_n}<br/>候选 {cand} · 龄 {age}m"]
         A2["本地库补全 · 去重 repo id"]
-        A3[" 私有 org 仓排除<br/>{spacing}s 错峰 · 403 退避 · dshow 黑名单"]
+        A3["私有 org 仓排除<br/>{spacing}s 错峰 · 403 退避 · dshow 黑名单"]
     end
-    subgraph Validation[" 验证（driver 20s 流式循环）"]
+    subgraph Validation["验证（driver 20s 流式循环）"]
         B1{{"package.json<br/>name + main/exports/dsh?"}}
     end
     B1 -->|"插件 {plugins}"| C1["k8s 运行级测试<br/>一插件一 pod · 并发 {cap}<br/>dsh agent + Qwen（de-stream）"]
-    B1 -->|"非插件（累计删 {nonplugin}）"| B3[" 即删省空间"]
+    B1 -->|"非插件（累计删 {nonplugin}）"| B3["即删省空间"]
     C1 --> D1{{"判定 · 总 {total}"}}
-    D1 -->|" {pass} /  {fail}"| E1["聚合 + README 分类统计"]
-    D1 -->|" {inc} 环境类重试"| C1
+    D1 -->|"{pass} / {fail}"| E1["聚合 + README 分类统计"]
+    D1 -->|"{inc} 环境类重试"| C1
     E1 --> E2["cadence 交付<br/>本周期增量 {delta}/{batch}<br/>双仓 bot PR（幂等 supersede）"]
-    M[" radar-probe {probe} 自愈<br/>{streams} 指标流 × {stream_sec}s · 完成累计 {done}"] -.-> A1
+    M["radar-probe {probe} 自愈<br/>{streams} 指标流 × {stream_sec}s · 完成累计 {done}"]
+    M -.-> A1
     M -.-> C1
 ```"""
 
 
 DIAGRAM_EN = """```mermaid
 flowchart TB
-    subgraph Discovery[" Discovery (every {discover_hours}h · probe {probe})"]
+    subgraph Discovery["Discovery (every {discover_hours}h · probe {probe})"]
         A1["GitHub Search<br/>topic ×{topic_n} + keyword ×{kw_n}<br/>candidates {cand} · age {age}m"]
         A2["Local DB merge · dedupe by repo id"]
-        A3[" Private org repos excluded<br/>{spacing}s stagger · 403 backoff · dshow blocklist"]
+        A3["Private org repos excluded<br/>{spacing}s stagger · 403 backoff · dshow blocklist"]
     end
-    subgraph Validation[" Validation (driver 20s streaming loop)"]
+    subgraph Validation["Validation (driver 20s streaming loop)"]
         B1{{"package.json<br/>name + main/exports/dsh?"}}
     end
     B1 -->|"plugins {plugins}"| C1["k8s runtime test<br/>1 pod per plugin · concurrency {cap}<br/>dsh agent + Qwen (de-stream)"]
-    B1 -->|"non-plugins (dropped {nonplugin})"| B3[" dropped to save space"]
+    B1 -->|"non-plugins (dropped {nonplugin})"| B3["dropped to save space"]
     C1 --> D1{{"verdict · total {total}"}}
-    D1 -->|" {pass} /  {fail}"| E1["aggregate + README stats"]
-    D1 -->|" {inc} env retries"| C1
+    D1 -->|"{pass} / {fail}"| E1["aggregate + README stats"]
+    D1 -->|"{inc} env retries"| C1
     E1 --> E2["cadence deliver<br/>delta this cycle {delta}/{batch}<br/>dual-repo bot PRs (idempotent)"]
-    M[" radar-probe {probe} self-heal<br/>{streams} metric streams × {stream_sec}s · done {done}"] -.-> A1
+    M["radar-probe {probe} self-heal<br/>{streams} metric streams × {stream_sec}s · done {done}"]
+    M -.-> A1
     M -.-> C1
 ```"""
 

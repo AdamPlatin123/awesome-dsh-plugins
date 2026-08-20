@@ -36,21 +36,22 @@
 <!-- AUTO:pipeline:START -->
 ```mermaid
 flowchart TB
-    subgraph Discovery[" 发现（每 6 小时 · probe 每 15 分钟 巡检触发）"]
+    subgraph Discovery["发现（每 6 小时 · probe 每 15 分钟 巡检触发）"]
         A1["GitHub Search<br/>topic ×2 + keyword ×3<br/>候选 9247 · 龄 58m"]
         A2["本地库补全 · 去重 repo id"]
-        A3[" 私有 org 仓排除<br/>35s 错峰 · 403 退避 · dshow 黑名单"]
+        A3["私有 org 仓排除<br/>35s 错峰 · 403 退避 · dshow 黑名单"]
     end
-    subgraph Validation[" 验证（driver 20s 流式循环）"]
+    subgraph Validation["验证（driver 20s 流式循环）"]
         B1{"package.json<br/>name + main/exports/dsh?"}
     end
     B1 -->|"插件 5075"| C1["k8s 运行级测试<br/>一插件一 pod · 并发 10<br/>dsh agent + Qwen（de-stream）"]
-    B1 -->|"非插件（累计删 1064）"| B3[" 即删省空间"]
+    B1 -->|"非插件（累计删 1064）"| B3["即删省空间"]
     C1 --> D1{"判定 · 总 1673"}
-    D1 -->|" 979 /  600"| E1["聚合 + README 分类统计"]
-    D1 -->|" 94 环境类重试"| C1
+    D1 -->|"979 / 600"| E1["聚合 + README 分类统计"]
+    D1 -->|"94 环境类重试"| C1
     E1 --> E2["cadence 交付<br/>本周期增量 —/100<br/>双仓 bot PR（幂等 supersede）"]
-    M[" radar-probe 每 15 分钟 自愈<br/>7 指标流 × 60s · 完成累计 0"] -.-> A1
+    M["radar-probe 每 15 分钟 自愈<br/>7 指标流 × 60s · 完成累计 0"]
+    M -.-> A1
     M -.-> C1
 ```
 <!-- AUTO:pipeline:END -->

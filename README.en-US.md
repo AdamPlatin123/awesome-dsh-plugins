@@ -29,21 +29,22 @@ Know which plugins work before you install them.
 <!-- AUTO:pipeline:START -->
 ```mermaid
 flowchart TB
-    subgraph Discovery[" Discovery (every 6h · probe every 15 min)"]
+    subgraph Discovery["Discovery (every 6h · probe every 15 min)"]
         A1["GitHub Search<br/>topic ×2 + keyword ×3<br/>candidates 9247 · age 58m"]
         A2["Local DB merge · dedupe by repo id"]
-        A3[" Private org repos excluded<br/>35s stagger · 403 backoff · dshow blocklist"]
+        A3["Private org repos excluded<br/>35s stagger · 403 backoff · dshow blocklist"]
     end
-    subgraph Validation[" Validation (driver 20s streaming loop)"]
+    subgraph Validation["Validation (driver 20s streaming loop)"]
         B1{"package.json<br/>name + main/exports/dsh?"}
     end
     B1 -->|"plugins 5075"| C1["k8s runtime test<br/>1 pod per plugin · concurrency 10<br/>dsh agent + Qwen (de-stream)"]
-    B1 -->|"non-plugins (dropped 1064)"| B3[" dropped to save space"]
+    B1 -->|"non-plugins (dropped 1064)"| B3["dropped to save space"]
     C1 --> D1{"verdict · total 1673"}
-    D1 -->|" 979 /  600"| E1["aggregate + README stats"]
-    D1 -->|" 94 env retries"| C1
+    D1 -->|"979 / 600"| E1["aggregate + README stats"]
+    D1 -->|"94 env retries"| C1
     E1 --> E2["cadence deliver<br/>delta this cycle —/100<br/>dual-repo bot PRs (idempotent)"]
-    M[" radar-probe every 15 min self-heal<br/>7 metric streams × 60s · done 0"] -.-> A1
+    M["radar-probe every 15 min self-heal<br/>7 metric streams × 60s · done 0"]
+    M -.-> A1
     M -.-> C1
 ```
 <!-- AUTO:pipeline:END -->
