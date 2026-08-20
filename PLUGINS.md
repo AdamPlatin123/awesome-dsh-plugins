@@ -120,6 +120,7 @@
 | dsh-experts | [fuchao2pku/dsh-experts](https://github.com/fuchao2pku/dsh-experts) | DSH 设置页内置「专家市场」：浏览/搜索社区专家与专家团、查看详情并复制到输入框；默认消费 awesome-dsh-experts 目录（7 个种子专家/团），rc.6 web profile 实测 0 加载错误、27 测试全绿 | ✅ |
 | dsh-desk-pet | [anneheartrecord/dsh-desk-pet](https://github.com/anneheartrecord/dsh-desk-pet) | macOS 桌宠：真的 AppKit 置顶窗口而不是页面里的挂件，全屏 Space 也盖得住；六种状态跟着本地 DSH 走（空闲／干活／等你确认／报错／刚跑完／打盹），原生右键菜单含免打扰与会话清单；自带的 skill 用你自己的画图工具和额度把一张照片扩成整套十八个姿势的皮肤，装在包外，升级不会删。跑系统自带的 Python 与 ctypes，零运行时依赖，不用 Electron。**仅 macOS** | 待测 |
 | dsh-research-report | [PerryLink/dsh-research-report](https://github.com/PerryLink/dsh-research-report) | 证据账本与可验证报告引擎：内容寻址的声明-快照绑定与逐字节核查，产出带逐条判定与 SHA-256 清单封存的版本化报告；npm 0.1.0 已发布 | 待测 |
+| dsh-socrates | [Cruciforms/dsh-socrates](https://github.com/Cruciforms/dsh-socrates) | 苏格拉底式澄清优先的深度研究插件：自适应多轮研究、交叉验证（声明级三分裁决+单跳回补）、程序化引用审计、学术三源（arXiv/PubMed/S2）、模型分层降本（Pro/Flash） | 待测 |
 | open-design | [nexu-io/open-design](https://github.com/nexu-io/open-design) | DSH 设计插件：开源 Claude Design 替代（Top50 精选成员，registry 插队实测） | 待测（registry 插队实测） |
 | ouroboros | [Q00/ouroboros](https://github.com/Q00/ouroboros) | Agent OS：agent 自我变强、人只守底线（Top50 Booster 成员，registry 插队实测） | 待测（registry 插队实测） |
 | dsh-anchored-standard | [xiaobright/dsh-anchored-standard](https://github.com/xiaobright/dsh-anchored-standard) | 两阶段 DSH 预设：极简模式对齐启动 → 全量装载（Top50 Booster 成员，registry 插队实测） | 待测（registry 插队实测） |
