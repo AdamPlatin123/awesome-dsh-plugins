@@ -49,6 +49,14 @@ flowchart TB
 ```
 <!-- AUTO:pipeline:END -->
 
+**🔌 Open-Source Plan — this page is produced automatically by the DSH Plugin Radar, which is being open-sourced in stages:**
+
+| Phase | Content | Status |
+|---|---|---|
+| Phase 1 | Pipeline docs: [overview & roadmap](docs/radar/overview.md) · [architecture](docs/radar/architecture.md) · [data contracts](docs/radar/data-contracts.md) | ✅ Open-sourced |
+| Phase 2 | Radar engine source (discovery · aggregation · rendering · distribution) | 🔜 After stabilization |
+| Phase 3 | Test engine source: lightweight edition (no k8s · runs locally) · server edition (k8s cluster) | 🔜 After stabilization |
+
 ## Quick Start
 
 | Goal | Link |
