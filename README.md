@@ -65,7 +65,7 @@ flowchart TB
 | 浏览自动发现的全部仓库 | [ 当前生态快照](#当前生态快照) — 日期化兼容矩阵 |
 | 了解最近发生了什么 | [ CHANGELOG](CHANGELOG.md) |
 | 登记或提交插件 | [ 给插件开发者](#给插件开发者) · 加 `dsh-plugin` topic → 8h 自动收录 · [PR 模板](.github/PULL_REQUEST_TEMPLATE.md) |
-| 维护本雷达 | [ 自动化 SOP](docs/SOP.md) |
+| 了解本雷达与开源计划 | [ 雷达总览与路线图](docs/radar/overview.md) · 架构与数据契约见 [docs/radar/](docs/radar/) |
 | 给插件使用者指南 | [ 给插件使用者](#给插件使用者) |
 | 本仓库如何判定兼容性 | [ 本仓库如何判定](#本仓库如何判定) |
 | 加入社群交流 | [ DSH 学习社区](#dsh-学习社区-dshfindcom) · [社区讨论群](#社区讨论群) |
@@ -328,7 +328,8 @@ DSH 插件社区讨论群（微信群）：插件作者、维护者与使用者�
 | `reports/<YYYY-MM-DD>/compile-compat.md` | 指定日期的编译与语法实验结果 |
 | `reports/<YYYY-MM-DD>/runtime-test.md` | 指定日期的运行级测试结果 |
 | `CHANGELOG.md` | 日期化生态变更摘要 |
-| `docs/SOP.md` | 自动化、构建与报告维护说明 |
+| `docs/radar/` | 雷达总览、架构与数据契约（含开源路线图） |
+| `docs/CATALOGING.md` | 插件分类标准（与 `scripts/classify.py` 同源） |
 | `scripts/` | 发现、检查、测试和渲染脚本 |
 
 <details>

@@ -58,7 +58,7 @@ flowchart TB
 | Browse all auto-discovered repos | [ Ecosystem Snapshot](#ecosystem-snapshot) — dated compatibility matrix |
 | See what changed recently | [ CHANGELOG](CHANGELOG.md) |
 | Register or submit a plugin | [ For Plugin Developers](#for-plugin-developers) · add the `dsh-plugin` topic → discovered within 8h · [PR template](.github/PULL_REQUEST_TEMPLATE.md) |
-| Maintain this radar | [ Automation SOP](docs/SOP.md) |
+| Learn about the radar & open-source plan | [ Radar overview & roadmap](docs/radar/overview.md) · architecture in [docs/radar/](docs/radar/) |
 | Plugin user guide | [ For Plugin Users](#for-plugin-users) |
 | How we assess compatibility | [ How We Assess Compatibility](#how-we-assess-compatibility) |
 | Join the community | [ dshfind.com](#dsh-learning-community-dshfindcom) · [Discussion group](#community-discussion-group) |
@@ -321,7 +321,8 @@ Small PRs that just fix a link, category, description, or status evidence are al
 | `reports/<YYYY-MM-DD>/compile-compat.md` | Compile and syntax experiment results for that date |
 | `reports/<YYYY-MM-DD>/runtime-test.md` | Runtime-level test results for that date |
 | `CHANGELOG.md` | Dated ecosystem change log |
-| `docs/SOP.md` | Automation, build, and report maintenance notes |
+| `docs/radar/` | Radar overview, architecture, and data contracts (incl. open-source roadmap) |
+| `docs/CATALOGING.md` | Plugin taxonomy (kept in sync with `scripts/classify.py`) |
 | `scripts/` | Discovery, checking, testing, and rendering scripts |
 
 <details>
