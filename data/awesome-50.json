@@ -81,6 +81,18 @@
           "name": "dsh-anchored-standard",
           "verdict": "ok",
           "desc": "两阶段 DSH 预设：极简模式对齐启动 → 全量装载（智力增强向）"
+        },
+        {
+          "repo": "GanyuanRan/Aegis",
+          "name": "Aegis",
+          "verdict": "ok",
+          "desc": "软件工程方法论技能包：baseline-first 规划、系统性重构（对方清单 1089★）"
+        },
+        {
+          "repo": "superdesigndev/superdesign-skill",
+          "name": "superdesign-skill",
+          "verdict": "ok",
+          "desc": "UI 与营销图形设计技能（Superdesign 画布，读仓取上下文）"
         }
       ]
     },
@@ -98,6 +110,24 @@
           "name": "openpencil",
           "verdict": "ok",
           "desc": "OpenPencil 设计工具本体（DSH 适配器另列下行）"
+        },
+        {
+          "repo": "superdesigndev/treg",
+          "name": "treg",
+          "verdict": "ok",
+          "desc": "工具目录：检索约 2600 个外部端点（SEO/SERP/外链/社媒/人脉）"
+        },
+        {
+          "repo": "liustack/modsearch",
+          "name": "modsearch",
+          "verdict": "ok",
+          "desc": "纯文本 agent 的网页搜索桥：web/X 结构化 JSON 证据（modlens 同作者）"
+        },
+        {
+          "repo": "EdgeTypE/better-deepseek",
+          "name": "better-deepseek",
+          "verdict": "ok",
+          "desc": "Better DeepSeek Chrome 扩展桥接插件"
         }
       ]
     },
@@ -202,6 +232,24 @@
           "name": "mobius",
           "verdict": "ok",
           "desc": "编码增强"
+        },
+        {
+          "repo": "toby-bridges/api-relay-audit",
+          "name": "api-relay-audit",
+          "verdict": "ok",
+          "desc": "从 DSH 发起 AI API 中继/LLM 代理本地安全审计，产出 Markdown 报告"
+        },
+        {
+          "repo": "Han-1413141/dsh-cost-meter",
+          "name": "dsh-cost-meter",
+          "verdict": "ok",
+          "desc": "按会话/按日 API 成本、预算与用量、官方余额、历史看板"
+        },
+        {
+          "repo": "zh667/TokenLedger",
+          "name": "TokenLedger",
+          "verdict": "ok",
+          "desc": "侧栏用量面板：把 token 归因到实际服务请求的中继站"
         }
       ]
     },
@@ -225,6 +273,12 @@
           "name": "open-record-replay",
           "verdict": "ok",
           "desc": "macOS 录制回放：把鼠标/键盘/UI 事件存为结构化轨迹供 agent 学习重放"
+        },
+        {
+          "repo": "V1ki/dsh-plugin-subscriptions",
+          "name": "dsh-plugin-subscriptions",
+          "verdict": "ok",
+          "desc": "把 ChatGPT(Codex)/Claude/Grok 订阅作为 DSH 的 LLM 供应商，设置页管理"
         }
       ]
     },
