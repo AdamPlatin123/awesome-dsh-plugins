@@ -39,7 +39,8 @@ jobs:
           fi
           BR="readme/render-$(date -u +%Y%m%dT%H%M%SZ)"
           git checkout -b "$BR"
-          git add README.md README.en-US.md PLUGINS-ALL.md CHANGELOG.md
+          python3 scripts/export-data.py .
+          git add README.md README.en-US.md PLUGINS-ALL.md CHANGELOG.md data/latest.json data/plugins-all.json
           git commit -m "readme-render: 从快照 $(ls -t data/snapshots | head -1 | sed 's/.json//') 渲染（Bot B，merge 门控）"
           git push origin "$BR"
           gh pr create --base main --head "$BR" \
