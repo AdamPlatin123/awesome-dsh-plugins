@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "github:1334076307",
+  "repository": {
+    "full_name": "Tabbit-Browser/dsh-plugin",
+    "url": "https://github.com/Tabbit-Browser/dsh-plugin"
+  },
+  "package": {
+    "name": "tabbit-browser",
+    "entry": "./index.js"
+  },
+  "curation": {
+    "state": "candidate",
+    "category": "🗂 文件数据",
+    "description_zh": "让 DSH Agent 通过 Tabbit 浏览器自带的 tabbit-cli（任务隔离的 Playwright CLI）控制真实网页、复用真实登录态，完成网页自动化、信息提取、QA 与基准测试；bundle 随安装自动注册 tabbit-browser skill + tabbit_browser_install 环境预检/按地区下载安装包工具"
+  },
+  "ownership": {
+    "method": "maintainer_pr",
+    "verified_at": "2026-08-21"
+  },
+  "lifecycle": {
+    "state": "active"
+  },
+  "disclosures": {
+    "risk": "medium",
+    "network": true,
+    "filesystem": "arbitrary",
+    "credentials": [],
+    "data_handling_url": ""
+  }
+}
