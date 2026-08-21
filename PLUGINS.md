@@ -129,6 +129,15 @@
 | EverOS | [EverMind-AI/EverOS](https://github.com/EverMind-AI/EverOS) | 全 agent 便携记忆层：本地优先 Markdown-native（Top50 成员，registry 插队实测） | 待测（registry 插队实测） |
 | openpencil | [ZSeven-W/openpencil](https://github.com/ZSeven-W/openpencil) | OpenPencil 设计工具本体（DSH 适配器 dsh-openpencil 已另有条目；本体插队实测） | 待测（registry 插队实测） |
 | EchoBird | [edison7009/EchoBird](https://github.com/edison7009/EchoBird) | 多引擎一键安装与模型切换（Top50 成员，registry 插队实测） | 待测（registry 插队实测） |
+| Aegis | [GanyuanRan/Aegis](https://github.com/GanyuanRan/Aegis) | 软件工程方法论技能包：baseline-first 规划、系统性重构等技能（对方清单 1089★，rc.8 实测 ✅） | ✅ |
+| api-relay-audit | [toby-bridges/api-relay-audit](https://github.com/toby-bridges/api-relay-audit) | 从 DSH 发起 AI API 中继/LLM 代理的本地安全审计，产出 Markdown 报告（797★，rc.8 实测 ✅） | ✅ |
+| treg | [superdesigndev/treg](https://github.com/superdesigndev/treg) | 工具目录：可检索约 2600 个外部端点（SEO/SERP/外链/社媒/人脉挖掘，536★，rc.8 实测 ✅） | ✅ |
+| superdesign-skill | [superdesigndev/superdesign-skill](https://github.com/superdesigndev/superdesign-skill) | UI 与营销图形设计技能（Superdesign 画布，读仓取上下文，436★，rc.8 实测 ✅） | ✅ |
+| better-deepseek | [EdgeTypE/better-deepseek](https://github.com/EdgeTypE/better-deepseek) | Better DeepSeek Chrome 扩展桥接插件（398★，rc.8 实测 ✅） | ✅ |
+| dsh-plugin-subscriptions | [V1ki/dsh-plugin-subscriptions](https://github.com/V1ki/dsh-plugin-subscriptions) | 把 ChatGPT(Codex)/Claude/Grok 订阅作为 DSH 的 LLM 供应商，含设置页管理（216★，rc.8 实测 ✅） | ✅ |
+| modsearch | [liustack/modsearch](https://github.com/liustack/modsearch) | 纯文本 agent 的网页搜索桥：问 web 或 X，返回结构化 JSON 证据（modlens 同作者，205★，rc.8 实测 ✅） | ✅ |
+| dsh-cost-meter | [Han-1413141/dsh-cost-meter](https://github.com/Han-1413141/dsh-cost-meter) | 按会话/按日 API 成本、预算与用量百分比、官方余额、历史看板（138★，rc.8 实测 ✅） | ✅ |
+| TokenLedger | [zh667/TokenLedger](https://github.com/zh667/TokenLedger) | 侧栏用量面板：把 token 归因到实际服务请求的中继站（121★，rc.8 实测 ✅） | ✅ |
 | dsh-easyrewrite | [Renzic-Stone/DSH-EasyRewrite](https://github.com/Renzic-Stone/DSH-EasyRewrite) | DSH Web 用户消息气泡内联编辑与撤回插件：惰性提交、无痕替换、版本翻页器、草稿自动备份、三语 i18n（中/英/日）；npm `dsh-easyrewrite`（dsh.bundle.patch → cordis.patch.yml，`dsh plugin add` 一键安装） | 待测 |
 | tabbit-browser | [Tabbit-Browser/dsh-plugin](https://github.com/Tabbit-Browser/dsh-plugin) | 让 DSH Agent 通过 Tabbit 浏览器自带的 `tabbit-cli`（任务隔离的 Playwright CLI）控制真实网页、复用真实登录态，完成网页自动化、信息提取、QA 与基准测试；bundle 随安装自动注册 `tabbit-browser` skill（持久化任务空间、locator 与等待、截图、回执与恢复）+ `tabbit_browser_install` 环境预检工具（要求正式版 ≥ 1.9.0，缺失或过低时按系统地区后台下载国内 `tabbit.com` / 国际 `tabbit.ai` 对应安装包到 Downloads 并通知绝对路径）；MIT，npm `tabbit-browser` | 待测 |
 ## 🧰 插件集
