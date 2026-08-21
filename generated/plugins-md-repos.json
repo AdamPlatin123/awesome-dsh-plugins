@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-20T19:19:42+00:00",
+  "generated_at": "2026-08-21T08:05:41+00:00",
   "source": "PLUGINS.md",
-  "count": 201,
+  "count": 204,
   "repos": [
     "1na-ko/dsh-hdc-bridge",
     "AmethystLuna/embedded-workbench",
@@ -84,6 +84,7 @@
     "PlutoKeating/dsh-lark-bot",
     "Q00/ouroboros",
     "Raphaelutumn/dsh-change-budget",
+    "Renzic-Stone/DSH-EasyRewrite",
     "Rxiain/dsh-openviking",
     "STARDUSTLC666/dsh-calendar",
     "STARDUSTLC666/dsh-codex-port",
@@ -105,6 +106,8 @@
     "Sev7een/ds-api-usage",
     "Sev7een/dsh-plugin-automations",
     "Simon314620/dsh-turn-index",
+    "TOBYCAI/dsh-sessions-manager",
+    "Tabbit-Browser/dsh-plugin",
     "TwotwoPiggy/dsh-balance",
     "Tyan66666/billion-context-dsh",
     "Visol-456/dsh-llm-fallback",
