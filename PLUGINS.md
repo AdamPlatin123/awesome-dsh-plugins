@@ -140,6 +140,7 @@
 | TokenLedger | [zh667/TokenLedger](https://github.com/zh667/TokenLedger) | 侧栏用量面板：把 token 归因到实际服务请求的中继站（121★，rc.8 实测 ✅） | ✅ |
 | dsh-easyrewrite | [Renzic-Stone/DSH-EasyRewrite](https://github.com/Renzic-Stone/DSH-EasyRewrite) | DSH Web 用户消息气泡内联编辑与撤回插件：惰性提交、无痕替换、版本翻页器、草稿自动备份、三语 i18n（中/英/日）；npm `dsh-easyrewrite`（dsh.bundle.patch → cordis.patch.yml，`dsh plugin add` 一键安装） | 待测 |
 | tabbit-browser | [Tabbit-Browser/dsh-plugin](https://github.com/Tabbit-Browser/dsh-plugin) | 让 DSH Agent 通过 Tabbit 浏览器自带的 `tabbit-cli`（任务隔离的 Playwright CLI）控制真实网页、复用真实登录态，完成网页自动化、信息提取、QA 与基准测试；bundle 随安装自动注册 `tabbit-browser` skill（持久化任务空间、locator 与等待、截图、回执与恢复）+ `tabbit_browser_install` 环境预检工具（要求正式版 ≥ 1.9.0，缺失或过低时按系统地区后台下载国内 `tabbit.com` / 国际 `tabbit.ai` 对应安装包到 Downloads 并通知绝对路径）；MIT，npm `tabbit-browser` | 待测 |
+| dsh-browser-firefox | [tuojc/dsh-browser-firefox](https://github.com/tuojc/dsh-browser-firefox) | Firefox 浏览器控制（插件 + Firefox 扩展两件套）：DSH 插件经 token 认证 WebSocket 驱动用户自己的 Firefox，文本优先工具集——快照/点击/输入/按键/滚动/导航/前进后退/标签栈/取文本/等待，截图仅作视觉兜底且看完即清理；每会话一个 tab group（新旧标签全归组、检测复用不出组），新 tab 自动跟随，Firefox MV3 CSP 下 evaluate 用预编译操作（无任意 JS）；自 Lum1104/dsh-browser（MIT）移植，Firefox 扩展已在 AMO 上架：[DSH 浏览器助手](https://addons.mozilla.org/en-GB/firefox/addon/dsh-%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8A%A9%E6%89%8B/) | 待测 |
 ## 🧰 插件集
 
 | 插件 | 仓库 | 说明 | 运行级 |
