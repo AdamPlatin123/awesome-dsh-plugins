@@ -1,0 +1,27 @@
+{
+  "schema": "radar-sentinel/1",
+  "created": "2026-08-24",
+  "note": "legacy 口径哨兵基线（0.5 步，autoplan D3）。条目全部来自 2026-08-17/18 实测记录（#2582 前后），预期结论锚定当时的 runner 口径。用途：环境变更（镜像/dsh/pnpm/Qwen/提示词）后跑 sentinel-check.py——任何 mismatch 阻断墓碑与发布。新契约 v4 上线后本文件扩充事件序列断言并升 schema/2。",
+  "entries": [
+    {"local_key": "1514100951-dsh-usage-footer", "expect": "pass", "shape": "good-npm", "why": "08-18 实测 L1 9s/L2 1s/L3 PASS"},
+    {"local_key": "alonelypigeon-dsh-plugin-session-out", "expect": "pass", "shape": "good-npm", "why": "同批实测干净通过"},
+    {"local_key": "titanwings-colleague-skill", "expect": "pass", "shape": "good-git-skills", "why": "误杀复活后 git-url(skills) 路径 PASS——L0 多形态的守门案例"},
+    {"local_key": "shenzhantu-dsh-subagent-model", "expect": "pass", "shape": "good-web-load", "why": "L3.5 web 复核 PASS(server+boot+plugin)——web_verify 链路守门"},
+    {"local_key": "chenxuhl-dsh-tool-jwt", "expect": "pass_or_gate", "shape": "good-allowbuilds", "why": "docker 实测 dangerouslyAllowAllBuilds 放行后 added 72 包——白名单放行机制守门（新契约下预期=blocked→approved pass）"},
+    {"local_key": "tkwkeven-dsh-lark-all", "expect": "fail", "shape": "bad-unbuilt-source", "why": "git 源缺 dist/index.js + npm 404——unbuilt-source 分诊守门；新契约下独立轨应 fail、published 轨待重验"},
+    {"local_key": "muyangplus-dsh-oi-workbench", "expect": "fail", "shape": "bad-unbuilt-source", "why": "同族 ESM resolve 崩溃（esm/loader 栈）"},
+    {"local_key": "whyihaveyou-dsh-plugin-tutorial", "expect": "skipped", "shape": "bad-no-structure", "why": "no-plugin-structure 秒判——L0 真噪音守门"},
+    {"local_key": "whyihaveyou-dsh-workstation", "expect": "skipped", "shape": "bad-no-structure", "why": "同上，双例防单例漂移"},
+    {"local_key": "lynkas-dsh-think-flow-flow", "expect": "clone_fail_or_pass", "shape": "bad-clone", "why": "代理断流常客——若持续 clone-fail 提示桥故障而非插件问题"},
+    {"local_key": "gtc2080-deepseek-harness-desktop", "expect": "clone_fail_or_pass", "shape": "bad-clone", "why": "同上"},
+    {"local_key": "songqikong-dash", "expect": "fail", "shape": "bad-boot-crash", "why": "module resolve 启动崩（#2582 报告成员）"},
+    {"local_key": "sjscy05-matlab-modelsim-vivado-plugi", "expect": "fail", "shape": "bad-boot-crash", "why": "同族（esm/resolve 栈）"},
+    {"local_key": "030611-dsh-telemetry-redactor", "expect": "pass_or_webgate", "shape": "good-web-verified", "why": "L3.5 首批 PASS: web-load 之一（若 key 有出入以 web-load 双例另一条替换）"},
+    {"local_key": "dsh-external-dsh-luna-vision-bridge", "expect": "web_gate", "shape": "gate-webhost", "why": "waiting webServer 分诊族——新契约下应产出 env-unsupported boot 事件而非无限待定"}
+  ],
+  "rules": {
+    "mismatch_action": "block_tombstone_and_publish",
+    "ambiguous_expects": "pass_or_gate/clone_fail_or_pass 类弹性预期：命中任一可接受值即 pass",
+    "missing_entry": "results 目录无该 key 判定 → 视为 mismatch（哨兵必须有判定）"
+  }
+}
