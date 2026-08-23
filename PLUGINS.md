@@ -141,6 +141,7 @@
 | TokenLedger | [zh667/TokenLedger](https://github.com/zh667/TokenLedger) | 侧栏用量面板：把 token 归因到实际服务请求的中继站（121★，rc.8 实测 ✅） | ✅ |
 | dsh-easyrewrite | [Renzic-Stone/DSH-EasyRewrite](https://github.com/Renzic-Stone/DSH-EasyRewrite) | DSH Web 用户消息气泡内联编辑与撤回插件：惰性提交、无痕替换、版本翻页器、草稿自动备份、三语 i18n（中/英/日）；npm `dsh-easyrewrite`（dsh.bundle.patch → cordis.patch.yml，`dsh plugin add` 一键安装） | 待测 |
 | tabbit-browser | [Tabbit-Browser/dsh-plugin](https://github.com/Tabbit-Browser/dsh-plugin) | 让 DSH Agent 通过 Tabbit 浏览器自带的 `tabbit-cli`（任务隔离的 Playwright CLI）控制真实网页、复用真实登录态，完成网页自动化、信息提取、QA 与基准测试；bundle 随安装自动注册 `tabbit-browser` skill（持久化任务空间、locator 与等待、截图、回执与恢复）+ `tabbit_browser_install` 环境预检工具（要求正式版 ≥ 1.9.0，缺失或过低时按系统地区后台下载国内 `tabbit.com` / 国际 `tabbit.ai` 对应安装包到 Downloads 并通知绝对路径）；MIT，npm `tabbit-browser` | 待测 |
+| dsh-mask | [PerryLink/dsh-mask](https://github.com/PerryLink/dsh-mask) | PII 脱敏中间件：在模型边界前把姓名/电话/邮箱/身份证/银行卡/密钥/地址替换为占位符，展示层还原，明文绝不入会话日志；/mask 命令 + mask_test 工具；npm dsh-mask 0.1.4 已发布 | 待测 |
 | dsh-fast | [PerryLink/dsh-fast](https://github.com/PerryLink/dsh-fast) | 只读性能诊断：会话加载/恢复耗时、spill 命中计数、压缩次数与触发、上下文注入体量（AGENTS.md/技能/工具 schema 的 token 占比）与 LLM 缓存命中率，经 /fast 命令与 fast_report 工具呈现，异步采样不阻塞模型路径；npm `dsh-fast` 0.1.3 | 待测 |
 | dsh-data-quality | [PerryLink/dsh-data-quality](https://github.com/PerryLink/dsh-data-quality) | 确定性的数据画像、清洗与校验：data_profile / data_clean / data_verify 三个模型工具 + 冻结的跨插件 verifyCitations 引用核验契约，报告持久化到 data_quality 存储域；npm `dsh-data-quality` 已发布 0.1.3 | 待测 |
 ## 🧰 插件集
