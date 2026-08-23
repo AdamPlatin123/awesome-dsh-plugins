@@ -1,3 +1,4 @@
+<!-- /autoplan restore point: /home/adam/.gstack/projects/AdamPlatin123-dsh-external-research/main-autoplan-restore-20260824-063414.md -->
 # 多轴证据系统设计（Multi-Axis Verdict）
 
 - 日期：2026-08-24
@@ -122,3 +123,26 @@ provenance:  repo_commit, package_integrity
 - PLUGINS-ALL 渲染层：四档 → 多轴呈现（published/source/gate/boot/function 分列或折叠徽章）
 - RESULT_CONTRACT_REVISION 进 input_hash：升版自动触发全量重测（现有机制，无需新代码）
 - 墓碑/复活机制不变，但终局动作走 ⑤ 状态机
+
+## 9. /autoplan 评审记录（2026-08-24，codex-only voice）
+
+### 终门决策（用户已批，2026-08-24）
+1. **D1=B 事件流+派生视图**（推翻 §3 的轴固化结构）：runner 产出不可变证据事件（install_attempt / boot_attempt / function_probe 各带完整上下文），五轴改为渲染层派生视图——契约 v4 只定事件 schema 不定判定结构，下次争议不再升契约
+2. **D2=A 主受众=装插件的用户**：主判定=「用户按发布命令装能不能用」；作者明细、治理队列是派生报表——渲染层与 divergence 仲裁以此为收敛基准
+3. **D3=A 哨兵折中前置**：实施序插入第 0.5 步——立即以 legacy 口径建哨兵基线保护校准期，契约 v4 后扩充新维度哨兵并加版本治理
+4. **D4=A calibration 抽样 100 先行**：覆盖 npm/github/tarball/allowBuilds/web 各形态各 ~20 条，divergence matrix 初版有效再分批扩全量
+
+### Decision Audit Trail
+
+| # | 阶段 | 决策 | 分类 | 原则 | 依据 |
+|---|------|------|------|------|------|
+| 1 | CEO | 维持多轴方向（暂），事件流方案升级为 User Challenge 待用户裁断 | User Challenge | — | codex：轴系因果链非正交；事件流（不可变事实+派生视图）免固化 schema |
+| 2 | CEO | 主受众未定义 → User Challenge：建议定为「装插件的用户」，治理/作者为派生视图 | User Challenge | P1 | codex：无主用户旅程则多轴=一组含混证据 |
+| 3 | CEO | 哨兵（⑥）从第 6 步提前：先以 legacy 口径建哨兵基线（第 0.5 步），新契约后再扩 | taste | P1 | codex：校准阶段自身需可信基线；哨兵需版本治理防历史偏见 |
+| 4 | CEO | calibration run 缩样：1837 → 先抽样 ~100 条影子运行，证明分歧改变决策再扩 | taste | P3 | codex：全量前先证明信号价值 |
+| 5 | CEO | spec 补遗：divergence 仲裁规则、run_suspect runbook、哨兵版本治理三处开放问题待补 | mechanical | P1 | 主审 §2/§4/§3 核查 |
+
+### 评审降级声明
+预算所限未跑 Claude subagent voice（单 codex voice）与 Eng/DX 全深度阶段。若采纳本 spec，建议在 152 环境对新会话补跑 /plan-eng-review。
+
+NO UNRESOLVED DECISIONS
