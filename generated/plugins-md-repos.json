@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-23T15:02:31+00:00",
+  "generated_at": "2026-08-24T17:07:50+00:00",
   "source": "PLUGINS.md",
-  "count": 226,
+  "count": 228,
   "repos": [
     "1na-ko/dsh-hdc-bridge",
     "AmethystLuna/embedded-workbench",
@@ -90,6 +90,7 @@
     "PerryLink/dsh-talk",
     "PerryLink/dsh-test-drive",
     "PerryLink/dsh-translate",
+    "Phant0Meow/dsh-meow-cachebilling",
     "PlutoKeating/dsh-lark-bot",
     "Q00/ouroboros",
     "Raphaelutumn/dsh-change-budget",
@@ -217,6 +218,7 @@
     "welsione/dsh-model-router",
     "werifu/dsh-oai-oauth",
     "whyihaveyou/dsh-suite",
+    "wowyuarm/dsh-agent-team",
     "wulun811/LiuHe",
     "wz-heng/dsh-feishu-bridge",
     "xiaobright/dsh-anchored-standard",
