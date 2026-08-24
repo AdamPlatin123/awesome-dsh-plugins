@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-24T17:07:50+00:00",
+  "generated_at": "2026-08-24T17:08:10+00:00",
   "source": "PLUGINS.md",
-  "count": 228,
+  "count": 229,
   "repos": [
     "1na-ko/dsh-hdc-bridge",
     "AmethystLuna/embedded-workbench",
@@ -128,6 +128,7 @@
     "YEYEYEYESHIFU/dsh-result-only-view",
     "YEYEYEYESHIFU/dsh-session-hotkeys",
     "ZSeven-W/openpencil",
+    "Zn-Dk/dsh-session-repair",
     "aaravarr/dsh-subagent-max",
     "alooshxl/dsh-session-pins",
     "amlyczz/dsh-lark-link",
