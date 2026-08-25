@@ -116,7 +116,7 @@ def main():
     btotal = len(brepos)
     bparts = [
         '<!-- AUTO:bundles:START -->', '',
-        f'> 人工策展 {btotal} 个整合包，覆盖预设套件 / 能力合集 / 发行版 / 配方管理器四种形态，'
+        f'> 人工策展 {btotal} 个整合包：内测成员作品置顶，其下按预设套件 / 能力合集 / 发行版 / 配方管理器四形态分组，'
         f'类内按星标排序；星标{REFRESH_LABEL}（成员调整请提 PR 修改 data/bundles.json）。数据截至 {ts}（UTC+8）。',
         '',
     ]

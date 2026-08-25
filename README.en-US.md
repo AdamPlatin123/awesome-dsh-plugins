@@ -172,7 +172,7 @@ flowchart TB
 
 | 插件 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
-| [dsh-market](https://github.com/dsh-market/dsh-market) | 2320 | ✅ | 持续收录 1000+ 插件的市场：中文搜索 + 五维评分 |
+| [dsh-market](https://github.com/dsh-market/dsh-market) | 2321 | ✅ | 持续收录 1000+ 插件的市场：中文搜索 + 五维评分 |
 | [dsh-web-plugin-manager](https://github.com/LX2000WASD/dsh-web-plugin-manager) | 67 | ✅ | Web UI 一键管理插件：启停/装卸/环境管理 |
 | [dsh-plugin-check](https://github.com/omdsh-dev/dsh-plugin-check) | 27 | ✅ | 插件健康检查：清单协议/patch 格式/构建陷阱 |
 | [deepseek-plugin-store](https://github.com/Ericwong5021/deepseek-plugin-store) | 24 | ✅ | 独立社区插件商店：发现/安装/提交经验证的插件 |
@@ -195,7 +195,7 @@ flowchart TB
 
 <!-- AUTO:bundles:START -->
 
-> 人工策展 14 个整合包，覆盖预设套件 / 能力合集 / 发行版 / 配方管理器四种形态，类内按星标排序；星标每 6 小时自动刷新（成员调整请提 PR 修改 data/bundles.json）。数据截至 2026-08-25 19:04（UTC+8）。
+> 人工策展 14 个整合包：内测成员作品置顶，其下按预设套件 / 能力合集 / 发行版 / 配方管理器四形态分组，类内按星标排序；星标每 6 小时自动刷新（成员调整请提 PR 修改 data/bundles.json）。数据截至 2026-08-25 19:04（UTC+8）。
 
 ### ⭐ 内测成员作品（1）
 
