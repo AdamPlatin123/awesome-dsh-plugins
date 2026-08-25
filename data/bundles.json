@@ -1,0 +1,39 @@
+{
+  "contract": "整合包=组合形态收录：预设与配置套件 / 能力合集 / 发行版 / 配方管理器。人工策展，bot 只刷新星标不改成员；常规门槛 ≥15★，形态稀缺者（如配方管理器）豁免星标门槛；实测列沿用雷达四档口径，rc.8 源码路径重测证据另附 data/rc8-retest-20260821/",
+  "updated": "2026-08-25",
+  "forms": [
+    {
+      "name": "🎚 预设与配置套件",
+      "plugins": [
+        {"repo": "yjh051108/dsh-routing-suite", "name": "dsh-routing-suite", "verdict": "ok", "desc": "注入器 × 思维模式路由套装：免重启运行时注入器 + P1-P23 任务感知推理模式路由（rc.8 实测 ✅）"},
+        {"repo": "xiaobright/dsh-anchored-standard", "name": "dsh-anchored-standard", "verdict": "ok", "desc": "两阶段预设：极简模式对齐启动 → 全量装载（rc.8 实测 ✅）"},
+        {"repo": "liceses/dsh-gitbash-preset", "name": "dsh-gitbash-preset", "verdict": "untested", "desc": "Windows 一键「极简模式 Git Bash」预设：把自带极简模式的 bash 调用映射到 Git Bash"},
+        {"repo": "oliblue-evan/dsh-roleplay-preset", "name": "dsh-roleplay-preset", "verdict": "untested", "desc": "沉浸式角色扮演预设：零工具纯对话、酒馆式演出格式、文件记忆库"}
+      ]
+    },
+    {
+      "name": "🧩 能力合集",
+      "plugins": [
+        {"repo": "GanyuanRan/Aegis", "name": "Aegis", "verdict": "ok", "desc": "软件工程方法论技能包：baseline-first 规划、系统性重构（rc.8 实测 ✅）"},
+        {"repo": "hellowind777/helloagents", "name": "helloagents", "verdict": "ok", "desc": "agent 能力合集（rc.8 实测 ✅）"},
+        {"repo": "linhay/harmony-next.skills", "name": "harmony-next.skills", "verdict": "ok", "desc": "技能驱动的工作流增强（rc.8 实测 ✅）"},
+        {"repo": "Unclecheng-li/DeepSec", "name": "DeepSec", "verdict": "untested", "desc": "AI 安全攻防一体化合集：Android · Web · Native · 协议 · 恶意代码 · AI 六域"},
+        {"repo": "LayneChai/superpowers-dsh", "name": "superpowers-dsh", "verdict": "ok", "desc": "TDD/调试/计划等开发技能集（rc.8 实测 ✅）"},
+        {"repo": "dhicoc/dsh-reverse-skill", "name": "dsh-reverse-skill", "verdict": "untested", "desc": "完整逆向工程技能合集（85 个 SKILL.md）"}
+      ]
+    },
+    {
+      "name": "📀 发行版",
+      "plugins": [
+        {"repo": "turtle2209/Bigfish", "name": "Bigfish", "verdict": "untested", "desc": "第三方桌面端发行版：内置 Node 运行时，双击即用（雷达判需适配——发行版形态非单插件安装）"},
+        {"repo": "hust-open-atom-club/oh-dsh", "name": "oh-dsh", "verdict": "untested", "desc": "社区发行版：桌面/Web/TUI 三形态统一体验"}
+      ]
+    },
+    {
+      "name": "📑 配方管理器",
+      "plugins": [
+        {"repo": "863683348/dsh-recipe", "name": "dsh-recipe", "verdict": "untested", "desc": "场景配方管理器（插件界的 dotfiles）：列出/搜索/安装插件组合（形态稀缺，豁免星标门槛）"}
+      ]
+    }
+  ]
+}
