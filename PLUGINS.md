@@ -153,6 +153,7 @@
 | meow-cachebilling | [Phant0Meow/dsh-meow-cachebilling](https://github.com/Phant0Meow/dsh-meow-cachebilling) | 喵账单：点开输入框旁的上下文圆环即见本轮账单——缓存命中/未命中/输出各花多少钱（¥），官方峰谷价与模型分价自动判定，仅 DeepSeek 官方 API 显示；lib 随 git 发布零构建直装 | 待测 |
 | dsh-session-repair (Zn-Dk) | [Zn-Dk/dsh-session-repair](https://github.com/Zn-Dk/dsh-session-repair) | 会话日志诊断与安全修复：raw zstd/JSONL 工件校验、空 tool-call ID 链的确定性修复、单槽 pre-repair 备份与恢复、审计记录；Web「会话体检」面板 + 只读诊断工具 dsh_session_repair；npm `dsh-session-repair` 0.5.3 | 待测 |
 | dsh-rss-daily | [shangjian2023/dsh-rss-daily](https://github.com/shangjian2023/dsh-rss-daily) | 每日定时抓取 46 个精选 RSS 源，由 dsh 内已配置的模型编辑成新闻简报，经 webhook 推送到企业微信/Telegram/Server酱/Bark/Gotify；错过时段自动补跑；Web 面板 + rss_daily agent 工具；npm `dsh-rss-daily` | 待测 |
+| dsh-humanize | [Guard42/dsh-humanize](https://github.com/Guard42/dsh-humanize) | Humanize 模式 agent 预设：把多阶段目标编排为可恢复的 Flow（draft→check→lock→终局评审→run/resume），SHA-256 流锁身份 + HMAC 终局门禁 + 事件溯源断点续跑；15 个 flow_* 工具，纯 `node:` 内置零 npm 依赖，`dsh plugin add github:Guard42/dsh-humanize` 即装，v0.1.1 起兼容原版 harness 持久层（不写自定义会话事件） | 待测 |
 ## 🧰 插件集
 
 | 插件 | 仓库 | 说明 | 运行级 |
