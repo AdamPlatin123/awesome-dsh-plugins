@@ -413,7 +413,7 @@ Small PRs that just fix a link, category, description, or status evidence are al
 | 自动收录 | 5075 个仓库 |
 | 运行级实测 | 979 可用 · 600 不兼容 · 94 待定（共 1673 个，k8s agent 口径）|
 
-[完整索引](PLUGINS-ALL.md) · [运行实测](reports/2026-08-19/agent-test-v2.md)
+[完整索引](PLUGINS-ALL.md) · [运行实测](reports/2026-08-25/agent-test-v2.md)
 
 <!-- AUTO:ecosystem:END -->
 
