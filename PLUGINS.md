@@ -215,6 +215,7 @@
 ## ❓ 未分类
 
 <!-- 新增条目示例（复制下面一行修改后插入对应分类表格末尾）：
+| dsh-pr-checks | [pauloapoloni/dsh-pr-checks](https://github.com/pauloapoloni/dsh-pr-checks) | 打开 PR 的 GitHub Actions 检查状态与进度：按工作区/项目分组，侧边栏底部常驻展示；dsh bundle（host + web client），npm dsh-pr-checks 0.1.1，dsh 0.1.1-rc.2 实测，MIT | 待测 |
 | dsh-verify | [263311487-ux/dsh-verify](https://github.com/263311487-ux/dsh-verify) | 真实浏览器验收测试：对 agent 交付的 Web 应用执行可证伪的端到端验收（CLI + MCP + DSH 插件三入口，dsh/plugin.mjs Cordis 可安装，npm `dsh-verify`） | 待测 |
 | dsh-qingagent | [void2anything/dsh-qingagent](https://github.com/void2anything/dsh-qingagent) | 把开源 AI 写作客户端「青简 QingAgent」接进 DSH：对话里起草改稿，右侧宣纸面板排版渲染（mermaid/drawio/表格/KaTeX），每处修改先摆在纸上供审阅、提交才落稿（opt-out：撤销不要的，其余一次提交）；10 个 qing_ 宿主工具，npm `dsh-qingagent` 0.1.46（无 install 期脚本，lib 随 git 零构建直装）；需本机运行青简桌面客户端（qingagent.com，MIT） | 待测 |
 | dsh-task-dispatcher | [zhengjy01/dsh-task-dispatcher](https://github.com/zhengjy01/dsh-task-dispatcher) | 滴答清单任务派发器：按间隔拉取今天到期任务（有变化才通知 flomo+macOS），可选自动执行（每任务一个 headless 会话）、执行会话工作区选择、dispatcher_report flomo 汇总工具与 Web 任务看板；npm `dsh-task-dispatcher` 0.1.0 | 待测 |
