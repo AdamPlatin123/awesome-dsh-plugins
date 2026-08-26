@@ -50,7 +50,7 @@ jobs:
             由 \`readme-render\` workflow 在快照合入 main 后自动触发。" \
             || echo "PR 已存在或创建失败，分支已推送"
           # 白名单守卫：渲染 PR 只含渲染产物文件才自动合并（镜像 allow_auto_merge 已开）
-          BAD=$(gh pr view "$BR" --json files --jq '[.files[].path | select((. == "README.md" or . == "README.en-US.md" or . == "PLUGINS-ALL.md" or . == "CHANGELOG.md") | not)] | length' 2>/dev/null)
+          BAD=$(gh pr view "$BR" --json files --jq '[.files[].path | select((. == "README.md" or . == "README.en-US.md" or . == "PLUGINS-ALL.md" or . == "CHANGELOG.md" or . == "data/latest.json" or . == "data/plugins-all.json") | not)] | length' 2>/dev/null)
           if [ "${BAD:-1}" = "0" ]; then
             gh pr merge "$BR" --merge --auto >/dev/null 2>&1 \
               || gh pr merge "$BR" --merge >/dev/null 2>&1 \
