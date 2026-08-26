@@ -244,6 +244,7 @@
 | dsh-hyperframes | [STARDUSTLC666/dsh-hyperframes](https://github.com/STARDUSTLC666/dsh-hyperframes) | HyperFrames by HeyGen 五件套：HTML 写视频、GSAP 动画、字幕、配音、音频响应、网址转视频，附 hyperframes_health 随包技能资源自检 | ✅ |
 | dsh-voice | [STARDUSTLC666/dsh-voice](https://github.com/STARDUSTLC666/dsh-voice) | 语音双件套：voice_tts（edge-tts 免费微软神经语音）/ voice_stt（OpenAI 兼容 ASR）/ voice_list / voice_preview 音色批量试听 / voice_health 自检，WebSocket 直连，插件级代理 | ✅ |
 | dsh-codex-port | [STARDUSTLC666/dsh-codex-port](https://github.com/STARDUSTLC666/dsh-codex-port) | 把 ~/.codex 官方插件（186 插件、583 技能）一键移植为 DSH 技能：codex_list/port/status/health，frontmatter 转换、幂等跳过、Codex 目录自检，技能可跨 harness | ✅ |
+| dsh-dream | [STARDUSTLC666/dsh-dream](https://github.com/STARDUSTLC666/dsh-dream) | 做梦插件：会话回放（多帧 zstd 零依赖解析）→ 反思 → 梦境日记，dream_digest/save/journal/recall/health 五工具 + 做梦协议技能，记忆巩固向 | ✅ |
 | dsh-ppt | [STARDUSTLC666/dsh-ppt](https://github.com/STARDUSTLC666/dsh-ppt) | PPT 技能 + 工具：一句话/文档 → HTML 放映 + PPTX 导出，5 套主题，中英双语，裸 SKILL.md 跨 harness | ✅ |
 | dsh-minimal-ptc | [STARDUSTLC666/dsh-minimal-ptc](https://github.com/STARDUSTLC666/dsh-minimal-ptc) | 极简 PTC 模式 Agent 预设：一句 RL 对齐提示词 + PTC 全量工具，安装即物化到用户预设目录，不覆盖用户自建预设 | ✅ |
 | ncm-player | [WolfGenerals/ncm-player](https://github.com/WolfGenerals/ncm-player) | 网易云音乐浮窗播放器：歌单/歌词/歌词翻译/播放队列/账号登录，适配皮肤主题 | 待测 |
