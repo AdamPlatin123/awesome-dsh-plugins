@@ -146,12 +146,6 @@
      "name": "dsh-vision-router",
      "verdict": "ok",
      "desc": "内置免费视觉模型路由，给文本 agent 装眼睛"
-    },
-    {
-     "repo": "shanliuling/dsh-image-gen",
-     "name": "dsh-image-gen",
-     "verdict": null,
-     "desc": "DSH 原生生图与图片编辑，支持对话直出与画廊查看"
     }
    ]
   },
