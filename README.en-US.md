@@ -12,25 +12,25 @@
 **A daily-updated radar that auto-discovers and compatibility-tests every plugin for DeepSeek Harness.**
 Know which plugins work before you install them.
 
-[![confirmed](https://img.shields.io/badge/confirmed-1258-blue)](#featured) [![scan](https://img.shields.io/badge/scan-every_6h-green)](#ecosystem-snapshot) [![tested](https://img.shields.io/badge/tested-2177-orange)](#how-we-assess-compatibility) [![dshfind](https://dshfind.com/api/badge/AdamPlatin123/awesome-dsh-plugins?lang=en)](https://dshfind.com/plugins/AdamPlatin123/awesome-dsh-plugins?ref=badge) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![confirmed](https://img.shields.io/badge/confirmed-1258-blue)](#featured) [![scan](https://img.shields.io/badge/scan-every_6h-green)](#ecosystem-snapshot) [![tested](https://img.shields.io/badge/tested-2197-orange)](#how-we-assess-compatibility) [![dshfind](https://dshfind.com/api/badge/AdamPlatin123/awesome-dsh-plugins?lang=en)](https://dshfind.com/plugins/AdamPlatin123/awesome-dsh-plugins?ref=badge) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
-[![runtime OK](https://img.shields.io/badge/runtime_OK-1446-brightgreen)](#2-understand-status-unified-4-tier-scale) [![incompatible](https://img.shields.io/badge/incompatible-440-red)](#2-understand-status-unified-4-tier-scale) [![pending](https://img.shields.io/badge/pending-291-yellow)](#2-understand-status-unified-4-tier-scale) [![untested](https://img.shields.io/badge/untested-0-lightgrey)](#2-understand-status-unified-4-tier-scale)
+[![runtime OK](https://img.shields.io/badge/runtime_OK-1517-brightgreen)](#2-understand-status-unified-4-tier-scale) [![incompatible](https://img.shields.io/badge/incompatible-460-red)](#2-understand-status-unified-4-tier-scale) [![pending](https://img.shields.io/badge/pending-220-yellow)](#2-understand-status-unified-4-tier-scale) [![untested](https://img.shields.io/badge/untested-0-lightgrey)](#2-understand-status-unified-4-tier-scale)
 
 [English](README.en-US.md) | [简体中文](README.md)
 
 ---
 
-**What is this?** DeepSeek Harness (DSH) is an open-source coding agent where everything is a plugin. This repo is a **radar** that automatically tracks its plugin ecosystem — **1258 plugin repos indexed** (manifest-level classification, v2 engine), **2177 runtime-tested on the k8s track**.
+**What is this?** DeepSeek Harness (DSH) is an open-source coding agent where everything is a plugin. This repo is a **radar** that automatically tracks its plugin ecosystem — **1258 plugin repos indexed** (manifest-level classification, v2 engine), **2197 runtime-tested on the k8s track**.
 
 ## How it works
 
-> Data as of snapshot `20260827T170001Z` (2026-08-28 01:00:02 UTC+8 · classifier unified-v2-bridge)
+> Data as of snapshot `20260827T174501Z` (2026-08-28 01:45:01 UTC+8 · classifier unified-v2-bridge)
 
 <!-- AUTO:pipeline:START -->
 ```mermaid
 flowchart TB
     subgraph Discovery["Discovery (every 6h · probe every 15 min)"]
-        A1["GitHub Search<br/>topic ×2 + keyword ×3<br/>candidates 15312 · age 212m"]
+        A1["GitHub Search<br/>topic ×2 + keyword ×3<br/>candidates 15312 · age 256m"]
         A2["Local DB merge · dedupe by repo id"]
         A3["Private org repos excluded<br/>35s stagger · 403 backoff · dshow blocklist"]
     end
@@ -39,9 +39,9 @@ flowchart TB
     end
     B1 -->|"plugins 1258"| C1["k8s runtime test<br/>1 pod per plugin · concurrency 10<br/>dsh agent + Qwen (de-stream)"]
     B1 -->|"non-plugins (dropped 1064)"| B3["dropped to save space"]
-    C1 --> D1{"verdict · total 2177"}
-    D1 -->|"1446 / 440"| E1["aggregate + README stats"]
-    D1 -->|"291 env retries"| C1
+    C1 --> D1{"verdict · total 2197"}
+    D1 -->|"1517 / 460"| E1["aggregate + README stats"]
+    D1 -->|"220 env retries"| C1
     E1 --> E2["cadence deliver<br/>delta this cycle —/100<br/>dual-repo bot PRs (idempotent)"]
     M["radar-probe every 15 min self-heal<br/>7 metric streams × 60s · done 0"]
     M -.-> A1
@@ -247,18 +247,18 @@ flowchart TB
 Per-plugin details (verdict · location · stars) in **PLUGINS-ALL.md**.
 
 - **🎓 技能包**（30）— OK 7 · incompatible 1 · pending 2 · untested 17 · watching 3 — [details](PLUGINS-ALL.md#-技能包30)
-- **🧠 记忆增强**（20）— OK 10 · incompatible 2 · pending 3 · untested 5 · watching 0 — [details](PLUGINS-ALL.md#-记忆增强20)
+- **🧠 记忆增强**（21）— OK 11 · incompatible 2 · pending 2 · untested 5 · watching 1 — [details](PLUGINS-ALL.md#-记忆增强21)
 - **🎨 主题皮肤**（14）— OK 3 · incompatible 0 · pending 2 · untested 8 · watching 1 — [details](PLUGINS-ALL.md#-主题皮肤14)
 - **🛒 市场与管理**（66）— OK 30 · incompatible 13 · pending 4 · untested 11 · watching 8 — [details](PLUGINS-ALL.md#-市场与管理66)
-- **🔌 Web UI 增强**（511）— OK 298 · incompatible 102 · pending 53 · untested 32 · watching 26 — [details](PLUGINS-ALL.md#-web-ui-增强511)
-- **💻 编码开发**（426）— OK 215 · incompatible 73 · pending 64 · untested 39 · watching 35 — [details](PLUGINS-ALL.md#-编码开发426)
-- **🤖 Agent 能力**（355）— OK 169 · incompatible 86 · pending 52 · untested 19 · watching 29 — [details](PLUGINS-ALL.md#-agent-能力355)
-- **📡 消息通讯**（134）— OK 72 · incompatible 35 · pending 15 · untested 4 · watching 8 — [details](PLUGINS-ALL.md#-消息通讯134)
-- **🗂 文件数据**（110）— OK 51 · incompatible 21 · pending 20 · untested 12 · watching 6 — [details](PLUGINS-ALL.md#-文件数据110)
-- **🎮 娱乐生活**（63）— OK 38 · incompatible 11 · pending 6 · untested 1 · watching 7 — [details](PLUGINS-ALL.md#-娱乐生活63)
-- **🛠 基建部署**（278）— OK 136 · incompatible 60 · pending 48 · untested 6 · watching 28 — [details](PLUGINS-ALL.md#-基建部署278)
-- **📚 学习研究**（19）— OK 10 · incompatible 4 · pending 0 · untested 2 · watching 3 — [details](PLUGINS-ALL.md#-学习研究19)
-- **❓ 其他**（739）— OK 362 · incompatible 151 · pending 64 · untested 45 · watching 117 — [details](PLUGINS-ALL.md#-其他739)
+- **🔌 Web UI 增强**（510）— OK 300 · incompatible 102 · pending 50 · untested 32 · watching 26 — [details](PLUGINS-ALL.md#-web-ui-增强510)
+- **💻 编码开发**（426）— OK 222 · incompatible 79 · pending 52 · untested 38 · watching 35 — [details](PLUGINS-ALL.md#-编码开发426)
+- **🤖 Agent 能力**（355）— OK 174 · incompatible 87 · pending 47 · untested 18 · watching 29 — [details](PLUGINS-ALL.md#-agent-能力355)
+- **📡 消息通讯**（135）— OK 72 · incompatible 36 · pending 15 · untested 4 · watching 8 — [details](PLUGINS-ALL.md#-消息通讯135)
+- **🗂 文件数据**（112）— OK 51 · incompatible 22 · pending 21 · untested 12 · watching 6 — [details](PLUGINS-ALL.md#-文件数据112)
+- **🎮 娱乐生活**（64）— OK 39 · incompatible 11 · pending 6 · untested 1 · watching 7 — [details](PLUGINS-ALL.md#-娱乐生活64)
+- **🛠 基建部署**（277）— OK 136 · incompatible 60 · pending 48 · untested 5 · watching 28 — [details](PLUGINS-ALL.md#-基建部署277)
+- **📚 学习研究**（20）— OK 11 · incompatible 4 · pending 0 · untested 2 · watching 3 — [details](PLUGINS-ALL.md#-学习研究20)
+- **❓ 其他**（742）— OK 368 · incompatible 148 · pending 63 · untested 44 · watching 119 — [details](PLUGINS-ALL.md#-其他742)
 
 <!-- AUTO:catalog:END -->
 
@@ -299,7 +299,7 @@ All entries use a **single runtime scale** (k8s container tests — see the test
 | · Untested | Never dispatched to a runtime test | Do not infer either compatibility or incompatibility |
 
 > [!NOTE]
-> **Test version**: dsh (in-container agent) driven by Qwen3.6-35B (via the de-stream proxy) · k8s, 5 shards · each run is anchored by the snapshot `run_id` (currently `20260827T170001Z`). The DSH npm version is not recorded per snapshot — cross-check via run_id and the `reports/agent-test/` dates.
+> **Test version**: dsh (in-container agent) driven by Qwen3.6-35B (via the de-stream proxy) · k8s, 5 shards · each run is anchored by the snapshot `run_id` (currently `20260827T174501Z`). The DSH npm version is not recorded per snapshot — cross-check via run_id and the `reports/agent-test/` dates.
 > **Scale note**: "tested N" in badges and stats is the single-run scale; the catalog and full listing use the cross-run cumulative scale — the numbers legitimately differ.
 
 Every conclusion carries four facts: **plugin commit, mainline commit, test date, test level**. If any one is missing, lower your trust in the result.
@@ -406,12 +406,12 @@ Small PRs that just fix a link, category, description, or status evidence are al
 ## Ecosystem Snapshot
 
 <!-- AUTO:ecosystem:START -->
-> 渲染于快照 20260827T170001Z（2026-08-28 01:00 UTC+8）· 数据源 data/snapshots/（渲染即对齐）
+> 渲染于快照 20260827T174501Z（2026-08-28 01:45 UTC+8）· 数据源 data/snapshots/（渲染即对齐）
 
 | 证据层 | 当前结果 |
 |---|---:|
 | 自动收录 | 1258 个仓库 |
-| 运行级实测 | 1446 可用 · 440 不兼容 · 291 待定（共 2177 个，k8s agent 口径）|
+| 运行级实测 | 1517 可用 · 460 不兼容 · 220 待定（共 2197 个，k8s agent 口径）|
 
 [完整索引](PLUGINS-ALL.md) · [运行实测](reports/2026-08-27/agent-test-v2.md)
 
