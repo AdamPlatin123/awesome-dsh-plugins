@@ -1,6 +1,6 @@
 {
  "schema": "dsh-radar/v1",
- "generated_at": "2026-08-27T07:45:20Z",
+ "generated_at": "2026-08-27T08:00:21Z",
  "plugins": [
   {
    "repo": "ganyuanran/aegis",
@@ -5099,6 +5099,13 @@
    "desc": "Observe-only provenance ledger over public DeepSeek Harness runtime evidence"
   },
   {
+   "repo": "agent-plaza/agent-plaza",
+   "name": "agent-plaza-agent-plaza",
+   "verdict": "pending",
+   "stars": 3,
+   "desc": "Zero-signup public commons for AI agents — HTTP API + Agent Skill (Codex, Cursor, Hermes)"
+  },
+  {
    "repo": "akira399/dsh-plugin-publisher",
    "name": "dsh-plugin-publisher",
    "verdict": "ok",
@@ -5995,6 +6002,13 @@
    "desc": "让 DeepSeek Harness 安全读取并继续 Codex 与 Claude Code 的历史会话"
   },
   {
+   "repo": "dhatfieldai/agentvest",
+   "name": "dhatfieldai-agentvest",
+   "verdict": "pending",
+   "stars": 1,
+   "desc": "A provider-agnostic financial-agent harness for running Anthropic, OpenAI, Gemini, xAI, DeepSeek, GLM, and Ope"
+  },
+  {
    "repo": "disc0nct/dsh-memory-plugin",
    "name": "disc0nct-dsh-memory-plugin",
    "verdict": "incompatible",
@@ -6611,6 +6625,13 @@
    "desc": "DeepSeek Harness web plugin: git branch pill in the session header with UI branc"
   },
   {
+   "repo": "nullskymc/aureways",
+   "name": "aureways",
+   "verdict": "ok",
+   "stars": 0,
+   "desc": "Persistent, interruptible, and resumable agents for DeepSeek Harness"
+  },
+  {
    "repo": "nzfern/dsh-codex-auth",
    "name": "dsh-codex-auth",
    "verdict": "ok",
@@ -6653,6 +6674,13 @@
    "desc": "Adapter plugin đưa `codebase-memory-mcp` vào DeepSeek Harness (DSH)."
   },
   {
+   "repo": "sybolization/agent-jit",
+   "name": "agent-jit",
+   "verdict": "pending",
+   "stars": 0,
+   "desc": "DeepSeek Harness (dsh) 插件：把 LLM agent loop 中确定性的执行路径编译成 DSL 程序并直接执行，显著降低 token、往返轮次与上下文暴露"
+  },
+  {
    "repo": "synmindai/dsh-nanobananapro",
    "name": "dsh-nanobananapro",
    "verdict": "ok",
@@ -6665,6 +6693,13 @@
    "verdict": "ok",
    "stars": 0,
    "desc": "DeepSeek Harness plugin for Seedance 2 image and video generation"
+  },
+  {
+   "repo": "szhipeng625/desktop",
+   "name": "szhipeng625-desktop",
+   "verdict": "pending",
+   "stars": 0,
+   "desc": "Extensible macOS workbench for DeepSeek Harness with a native PTY, workspace tools, live bilingual plugins, an"
   },
   {
    "repo": "weiyuou-chowbus/dsh-git-status",
@@ -9078,13 +9113,6 @@
    "repo": "Yogioo/dsh-agentmemory",
    "name": "yogioo-dsh-agentmemory",
    "verdict": "incompatible",
-   "stars": 0,
-   "desc": "—"
-  },
-  {
-   "repo": "sybolization/agent-jit",
-   "name": "agent-jit",
-   "verdict": "untested",
    "stars": 0,
    "desc": "—"
   },
@@ -16201,6 +16229,13 @@
    "desc": "—"
   },
   {
+   "repo": "young-ds1/cascade",
+   "name": "young-ds1-cascade",
+   "verdict": "pending",
+   "stars": 1,
+   "desc": "一行命令让中国开发者用任何国产模型驱动任何 AI 编程工具 — 多供应商 AI 编程 Harness"
+  },
+  {
    "repo": "YukunR/dsh-ezprot-plugin",
    "name": "yukunr-dsh-ezprot-plugin",
    "verdict": "ok",
@@ -17233,13 +17268,6 @@
    "repo": "SouleyMoni1/dsh-experience-plugin",
    "name": "dsh-experience-plugin",
    "verdict": "incompatible",
-   "stars": 0,
-   "desc": "—"
-  },
-  {
-   "repo": "nullskymc/aureways",
-   "name": "aureways",
-   "verdict": "ok",
    "stars": 0,
    "desc": "—"
   },
