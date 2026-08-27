@@ -1,6 +1,6 @@
 {
  "schema": "dsh-radar/v1",
- "generated_at": "2026-08-27T20:25:25Z",
+ "generated_at": "2026-08-27T20:30:22Z",
  "plugins": [
   {
    "repo": "ganyuanran/aegis",
@@ -1396,6 +1396,13 @@
    "desc": "DSH 分层插件管理器：原生插件按 系统层/WebUI 层/工具层 只读展示，用户扩展支持停用/启用、补登记、卸载与可编辑描述"
   },
   {
+   "repo": "jiezeng2004-design/dsh-requirements-alignment",
+   "name": "jiezeng2004-design-dsh-requirements-alignment",
+   "verdict": "incompatible",
+   "stars": 9,
+   "desc": "Lightweight requirement alignment for DeepSeek Harness — align important decisions before execution without a"
+  },
+  {
    "repo": "jyh20030112/dsh-visual-plugin",
    "name": "jyh20030112-dsh-visual-plugin",
    "verdict": "pending",
@@ -1548,6 +1555,13 @@
    "verdict": "ok",
    "stars": 7,
    "desc": "Terminal-native interactive TUI for DeepSeek Harness (dsh) — built with Ink, React for terminals"
+  },
+  {
+   "repo": "invalidnaaaame/dsh-scroll-timeline",
+   "name": "invalidnaaaame-dsh-scroll-timeline",
+   "verdict": "ok",
+   "stars": 7,
+   "desc": "DSH web plugin: ChatGPT-style scroll timeline on the chat sidebar — magnetic mountain hover, click to jump to"
   },
   {
    "repo": "moxisuki/dsh-lan",
@@ -5204,6 +5218,13 @@
    "desc": "DeepSeek Harness (DSH) Web 插件: 余额 + 峰谷计价潮汐提示"
   },
   {
+   "repo": "jiesou/dsh-commandcode-go-provider",
+   "name": "jiesou-dsh-commandcode-go-provider",
+   "verdict": "ok",
+   "stars": 4,
+   "desc": "Command Code Go API provider for dsh"
+  },
+  {
    "repo": "jiesou/dsh-stream-rules",
    "name": "dsh-stream-rules",
    "verdict": "ok",
@@ -7423,6 +7444,13 @@
    "desc": "Portable Agent Skill for developing and auditing DeepSeek Harness plugins, with an optional profile-installabl"
   },
   {
+   "repo": "isomoes/ikanban",
+   "name": "isomoes-ikanban",
+   "verdict": "ok",
+   "stars": 13,
+   "desc": "iKanban 是一个面向键盘操作、基于 DeepSeek Harness 的多智能体编码工作空间"
+  },
+  {
    "repo": "shuguang1994/project-blueprint",
    "name": "project-blueprint",
    "verdict": "pending",
@@ -9593,6 +9621,13 @@
    "desc": "dsh-lark-bot：把 DeepSeek Harness (dsh) 桥接进飞书/Lark 的 bot，含完整项目工作区管理、并行任务、多角色 Agent、会话归档与安全网守护（dsh 崩溃后飞书仍可自救）"
   },
   {
+   "repo": "jiezeng2004-design/dsh-chatgpt-bridge",
+   "name": "jiezeng2004-design-dsh-chatgpt-bridge",
+   "verdict": "incompatible",
+   "stars": 13,
+   "desc": "MCP bridge that lets ChatGPT web create, view, continue, and control DeepSeek Harness (DSH) agent sessions."
+  },
+  {
    "repo": "dingkaihu63/dsh-robotic-harness",
    "name": "dingkaihu63-dsh-robotic-harness",
    "verdict": "pending",
@@ -9997,6 +10032,13 @@
    "verdict": "ok",
    "stars": 2,
    "desc": "DeepSeek usage & cost dashboard for the DSH bottom status bar: per-session token/cost aggregation with low-bal"
+  },
+  {
+   "repo": "invalidnaaaame/dsh-side-workspace",
+   "name": "invalidnaaaame-dsh-side-workspace",
+   "verdict": "incompatible",
+   "stars": 2,
+   "desc": "DSH plugin: Codex-style side conversations (/side, /btw), an integrated right workspace (Side/Subagents/Goal)"
   },
   {
    "repo": "itr-del/dsh-feishu",
@@ -15429,6 +15471,13 @@
    "verdict": "pending",
    "stars": 2,
    "desc": "—"
+  },
+  {
+   "repo": "javaxiaov/deepseek-herness-login",
+   "name": "javaxiaov-deepseek-herness-login",
+   "verdict": "ok",
+   "stars": 2,
+   "desc": "dsh-login-plugin"
   },
   {
    "repo": "Jesse-njx/dsh-crosstalk",
