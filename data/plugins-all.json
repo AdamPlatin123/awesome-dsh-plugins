@@ -1,6 +1,6 @@
 {
  "schema": "dsh-radar/v1",
- "generated_at": "2026-08-26T23:15:46Z",
+ "generated_at": "2026-08-27T00:00:21Z",
  "plugins": [
   {
    "repo": "ganyuanran/aegis",
@@ -2012,6 +2012,13 @@
    "desc": "Adjust the width of dsh's reply."
   },
   {
+   "repo": "chenzhexii/obsidian-dsh",
+   "name": "obsidian-dsh",
+   "verdict": "pending",
+   "stars": 3,
+   "desc": "Obsidian 右侧栏原生 DeepSeek Harness 对话插件"
+  },
+  {
    "repo": "crayonlu/dsh-web-search-tavily",
    "name": "dsh-web-search-tavily",
    "verdict": "ok",
@@ -2593,6 +2600,13 @@
    "desc": "DeepSeek Harness (DSH) system-level task notifications: approval required / awaiting reply / task finished (ba"
   },
   {
+   "repo": "kouyichi/dsh-tui-app",
+   "name": "dsh-tui-app",
+   "verdict": "incompatible",
+   "stars": 2,
+   "desc": "DeepSeek Harness terminal UI plugin (Ink/React)"
+  },
+  {
    "repo": "LCJ-up/dsh-fs-explorer",
    "name": "dsh-fs-explorer",
    "verdict": "ok",
@@ -2976,13 +2990,6 @@
    "verdict": "pending",
    "stars": 2,
    "desc": "DSH Skills 可视化管理器：在 DSH Web 界面可视化查看、编辑、创建、删除 Skills（用户级 ~/.dsh/skills 与项目级 .dsh/skills）"
-  },
-  {
-   "repo": "chenzhexii/obsidian-dsh",
-   "name": "obsidian-dsh",
-   "verdict": "pending",
-   "stars": 2,
-   "desc": "Obsidian 右侧栏原生 DeepSeek Harness 对话插件"
   },
   {
    "repo": "yeyeyeyeshifu/dsh-session-hotkeys",
@@ -3489,6 +3496,13 @@
    "desc": "DSH plugin: add a \"Delete\" item to the sidebar session menu with a confirmation dialog."
   },
   {
+   "repo": "Viveksssss/DeepSeekHarness-Tui",
+   "name": "DeepSeekHarness-Tui",
+   "verdict": "pending",
+   "stars": 1,
+   "desc": "A desktop version of deepseek-harness in a linux environment."
+  },
+  {
    "repo": "weekitmo/dsh-notify",
    "name": "weekitmo-dsh-notify",
    "verdict": "incompatible",
@@ -3536,13 +3550,6 @@
    "verdict": "ok",
    "stars": 1,
    "desc": "—"
-  },
-  {
-   "repo": "Viveksssss/DeepSeekHarness-Tui",
-   "name": "DeepSeekHarness-Tui",
-   "verdict": "untested",
-   "stars": 1,
-   "desc": "A desktop version of deepseek-harness in a linux environment."
   },
   {
    "repo": "ZhuXinAI/sidesight",
@@ -4026,13 +4033,6 @@
    "verdict": "ok",
    "stars": 0,
    "desc": "Turns the DeepSeek Harness web UI red and shaky the longer a turn runs — the \"re"
-  },
-  {
-   "repo": "kouyichi/dsh-tui-app",
-   "name": "dsh-tui-app",
-   "verdict": "incompatible",
-   "stars": 0,
-   "desc": "DeepSeek Harness terminal UI plugin (Ink/React)"
   },
   {
    "repo": "zhijun-dai/dsh-Solarized",
@@ -6070,6 +6070,13 @@
    "verdict": "ok",
    "stars": 1,
    "desc": "deepseek-harness reaxcode"
+  },
+  {
+   "repo": "lsjspl/dsh-plugin-grok2api-media-tool",
+   "name": "dsh-plugin-grok2api-media-tool",
+   "verdict": "ok",
+   "stars": 1,
+   "desc": "让 dsh 通过 grok2api 的 API 获得图片与视频生成能力（generate_image / generate_video）"
   },
   {
    "repo": "LTctfer/dsh-opencode-go-usage",
@@ -10335,6 +10342,13 @@
    "desc": "—"
   },
   {
+   "repo": "s3yf1337/dsh-desktop",
+   "name": "s3yf1337-dsh-desktop",
+   "verdict": "pending",
+   "stars": 2,
+   "desc": "Desktop profile for the DeepSeek Harness: a native Tauri window over the harness web surface — tray, single-in"
+  },
+  {
    "repo": "saurtone/dsh-tool-somark",
    "name": "dsh-tool-somark",
    "verdict": "incompatible",
@@ -11203,6 +11217,13 @@
    "desc": "—"
   },
   {
+   "repo": "jiji262/awesome-deepseek-harness",
+   "name": "jiji262-awesome-deepseek-harness",
+   "verdict": "pending",
+   "stars": 13,
+   "desc": "A curated list of DeepSeek Harness (DSH) plugins, desktop clients, marketplaces & tutorials · DeepSeek Harness"
+  },
+  {
    "repo": "WJZ-P/deepseek-harness-desktop",
    "name": "wjz-p-deepseek-harness-desktop",
    "verdict": "incompatible",
@@ -11803,6 +11824,13 @@
    "verdict": "incompatible",
    "stars": 2,
    "desc": "—"
+  },
+  {
+   "repo": "k4its1t/deepseek-harness-desktop-community",
+   "name": "k4its1t-deepseek-harness-desktop-community",
+   "verdict": "pending",
+   "stars": 2,
+   "desc": "Unofficial open-source desktop client for DeepSeek Harness on macOS and Windows"
   },
   {
    "repo": "KnCRJVirX/dsh-desktop",
@@ -15543,6 +15571,13 @@
    "desc": "deepseek harness 账单插件"
   },
   {
+   "repo": "JasperJiangCS/deepseek-harness-web-vsix",
+   "name": "deepseek-harness-web-vsix",
+   "verdict": "pending",
+   "stars": 1,
+   "desc": "—"
+  },
+  {
    "repo": "jetheaven/dsh-content-rewriter",
    "name": "dsh-content-rewriter",
    "verdict": "ok",
@@ -16259,20 +16294,6 @@
   {
    "repo": "omdsh-dev/omdsh-runtime",
    "name": "omdsh-runtime",
-   "verdict": "ok",
-   "stars": 1,
-   "desc": "—"
-  },
-  {
-   "repo": "JasperJiangCS/deepseek-harness-web-vsix",
-   "name": "deepseek-harness-web-vsix",
-   "verdict": "untested",
-   "stars": 1,
-   "desc": "—"
-  },
-  {
-   "repo": "lsjspl/dsh-plugin-grok2api-media-tool",
-   "name": "dsh-plugin-grok2api-media-tool",
    "verdict": "ok",
    "stars": 1,
    "desc": "—"
