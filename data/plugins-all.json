@@ -1,6 +1,6 @@
 {
  "schema": "dsh-radar/v1",
- "generated_at": "2026-08-27T20:45:52Z",
+ "generated_at": "2026-08-27T20:52:47Z",
  "plugins": [
   {
    "repo": "ganyuanran/aegis",
