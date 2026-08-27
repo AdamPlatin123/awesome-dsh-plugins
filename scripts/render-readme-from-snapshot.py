@@ -175,12 +175,12 @@ def main():
             t_readme = re.sub(r"(自动发现 )\d+\+?( 候选)", rf"\g<1>{slogan_n}+\g<2>", t_readme)
             t_readme = re.sub(r"(发现 )\d+\+?( 候选)", rf"\g<1>{slogan_n}+\g<2>", t_readme, count=1)
         if c.get("plugins"):
-            # 三段式收录口径（ADR-0003 展示层）：全量索引 · 收录（克隆验证）· 当前版本已测
+            # 四段式递进口径（ADR-0003 展示层）：索引 → 克隆验证 → 清单呈现 → 当前版本实测
             _all_n = sum(int(s.get("total", 0)) for s in domain_stats.values()) if domain_stats else c['plugins']
             _cur = v.get("cur_tested") or 0
             _img = (v.get("cur_image") or "").rsplit(":", 1)[-1] or "current"
-            _trio = f"全量索引 {_all_n} · 收录（克隆验证）{c['plugins']} · 当前版本（{_img}）已测 {_cur}"
-            t_readme = re.sub(r"(收录 )[^（\n]*?( 个)", rf"\g<1>{_trio}\g<2>", t_readme, count=1)
+            _trio = f"已索引 {cand_n} repos · 克隆验证为 DSH 插件 {c['plugins']} · 清单呈现 {_all_n} · 当前版本 {_img} 实测 {_cur} 个"
+            t_readme = re.sub(r"收录 \d+ 个", _trio, t_readme, count=1)
             t_readme = re.sub(r"(索引到)\d+( ?个? ?repos)", rf"\g<1>{cand_n}\g<2>", t_readme, count=1)
             t_readme = re.sub(r"(索引到)\d+( ?个? ?repos)", rf"\g<1>{cand_n}\g<2>", t_readme, count=1)
             t_readme = re.sub(r"^\| 自动收录 \| \d+ 个仓库 \|$", f"| 自动收录 | {c['plugins']} 个仓库 |",
