@@ -1,6 +1,6 @@
 {
  "schema": "dsh-radar/v1",
- "generated_at": "2026-08-27T07:30:22Z",
+ "generated_at": "2026-08-27T07:45:20Z",
  "plugins": [
   {
    "repo": "ganyuanran/aegis",
@@ -225,6 +225,13 @@
    "verdict": "ok",
    "stars": 4,
    "desc": "Per-host personalization for DSH: custom instructions, local long-term memory, and reply-tone presets."
+  },
+  {
+   "repo": "ZSeven-W/dsh-noema",
+   "name": "dsh-noema",
+   "verdict": "pending",
+   "stars": 4,
+   "desc": "Noema long-term memory plugin for DSH: durable, inspectable agent memory with recall tools and a settings page"
   },
   {
    "repo": "A-Dawn/A_memorix-deepseek-harness",
@@ -1485,6 +1492,13 @@
    "verdict": "pending",
    "stars": 8,
    "desc": "A curated list of plugins, tools, skins, and extensions for DeepSeek Harness (DSH)."
+  },
+  {
+   "repo": "zsyu9779/dsh-desktop",
+   "name": "zsyu9779-dsh-desktop",
+   "verdict": "pending",
+   "stars": 8,
+   "desc": "Unofficial cross-platform desktop app for DeepSeek Harness"
   },
   {
    "repo": "heartmove/dsh-side-chat",
@@ -3559,6 +3573,13 @@
    "desc": "First-run health check for DeepSeek Harness (dsh): verifies Node/pnpm/dsh toolchain, profile, API key (names o"
   },
   {
+   "repo": "ZRui-C/openclaw-plugin-dsh",
+   "name": "openclaw-plugin-dsh",
+   "verdict": "pending",
+   "stars": 1,
+   "desc": "OpenClaw plugin that runs agent turns through an embedded DeepSeek Harness (DSH) agent — written entirely by D"
+  },
+  {
    "repo": "RealAlexandreAI/dsh-atuin",
    "name": "dsh-atuin",
    "verdict": "ok",
@@ -4315,6 +4336,13 @@
    "desc": "Codex Switch 是一个 macOS 工具，一键配置 Codex 的自定义 API，同时保留官方 OpenAI 登录"
   },
   {
+   "repo": "ZSeven-W/dsh-openpencil",
+   "name": "dsh-openpencil",
+   "verdict": "ok",
+   "stars": 67,
+   "desc": "OpenPencil design preview and editing plugin for DSH"
+  },
+  {
    "repo": "Nwflower/dsh-chat-import",
    "name": "dsh-chat-import",
    "verdict": "ok",
@@ -4742,6 +4770,13 @@
    "desc": "DeepSeek Harness plugin: token usage & conversation stats as a native settings page - today / 7d / 30d totals,"
   },
   {
+   "repo": "ziyou979/dsh-llm-oauth",
+   "name": "dsh-llm-oauth",
+   "verdict": "pending",
+   "stars": 7,
+   "desc": "DeepSeek Harness plugin: OAuth / subscription-plan LLM providers (Grok, GitHub Copilot, OpenAI Codex, Anthropi"
+  },
+  {
    "repo": "Civitasv/dsh-plugin-diff-review",
    "name": "dsh-plugin-diff-review",
    "verdict": "ok",
@@ -4880,13 +4915,6 @@
    "verdict": "ok",
    "stars": 5,
    "desc": "OpenAI Codex provider for DeepSeek Harness with device-code OAuth, Codex CLI import, token refresh, and a web"
-  },
-  {
-   "repo": "ZK-Andy/dsh-continual-evolve",
-   "name": "dsh-continual-evolve",
-   "verdict": "ok",
-   "stars": 5,
-   "desc": "Continual self-evolution plugin for DeepSeek Harness: versioned, auditable, rollback-safe harness state refine"
   },
   {
    "repo": "PerryLink/dsh-lsp-actions",
@@ -5372,11 +5400,11 @@
    "desc": "Minimal Windows agent preset + Git Bash tool for DeepSeek Harness: gitbash & pwsh & str_replace_editor, drop-i"
   },
   {
-   "repo": "ziyou979/dsh-llm-oauth",
-   "name": "dsh-llm-oauth",
-   "verdict": "untested",
+   "repo": "zneoxlab/deepseek-harness-app",
+   "name": "zneoxlab-deepseek-harness-app",
+   "verdict": "pending",
    "stars": 3,
-   "desc": "DeepSeek Harness plugin: OAuth / subscription-plan LLM providers (Grok, GitHub Copilot, OpenAI Codex, Anthropi"
+   "desc": "DeepSeek Harness Desktop — A native desktop app for DeepSeek Harness (dsh)"
   },
   {
    "repo": "PerryLink/dsh-output-styles",
@@ -6385,13 +6413,6 @@
    "verdict": "ok",
    "stars": 1,
    "desc": "—"
-  },
-  {
-   "repo": "zimai233/dsh-figma-to-lottie",
-   "name": "dsh-figma-to-lottie",
-   "verdict": "ok",
-   "stars": 1,
-   "desc": "Figma/SVG to Lottie animation compiler for DeepSeek Harness"
   },
   {
    "repo": "t479842598/dsh-upstream-watch",
@@ -7500,13 +7521,6 @@
    "desc": "—"
   },
   {
-   "repo": "ZSeven-W/dsh-noema",
-   "name": "dsh-noema",
-   "verdict": "pending",
-   "stars": 4,
-   "desc": "Noema long-term memory plugin for DSH: durable, inspectable agent memory with recall tools and a settings page"
-  },
-  {
    "repo": "030611/dsh-telemetry-redactor",
    "name": "dsh-telemetry-redactor",
    "verdict": "incompatible",
@@ -8193,6 +8207,13 @@
    "desc": "Local-first long-term memory and temporal knowledge graph plugin for DeepSeek Harness"
   },
   {
+   "repo": "zytsyj/dsh-gpu",
+   "name": "dsh-gpu",
+   "verdict": "pending",
+   "stars": 2,
+   "desc": "GPU-aware execution layer for DeepSeek Harness: gpu_status / gpu_exec / gpu_run_bg tools, auto card selection,"
+  },
+  {
    "repo": "zzh-newlearner/dsh-postmortem",
    "name": "dsh-postmortem",
    "verdict": "ok",
@@ -8212,13 +8233,6 @@
    "verdict": "incompatible",
    "stars": 2,
    "desc": "—"
-  },
-  {
-   "repo": "zytsyj/dsh-gpu",
-   "name": "dsh-gpu",
-   "verdict": "pending",
-   "stars": 2,
-   "desc": "GPU-aware execution layer for DeepSeek Harness: gpu_status / gpu_exec / gpu_run_"
   },
   {
    "repo": "moon09300731/dsh-approval-gate",
@@ -8688,13 +8702,6 @@
    "verdict": "ok",
    "stars": 1,
    "desc": "—"
-  },
-  {
-   "repo": "ZRui-C/openclaw-plugin-dsh",
-   "name": "openclaw-plugin-dsh",
-   "verdict": "untested",
-   "stars": 1,
-   "desc": "OpenClaw plugin that runs agent turns through an embedded DeepSeek Harness (DSH) agent — written entirely by D"
   },
   {
    "repo": "aimaoge/timemspace-dsh-memory",
@@ -10041,18 +10048,18 @@
    "desc": "Univer 办公插件：在 DSH 中创建/编辑/检查/交付表格、文档、演示文稿、多维表格和画布，支持 xlsx/docx/pptx 导入导出、实时预览与 worktree 审阅；npm `dsh-univer-office` 0.2.5"
   },
   {
-   "repo": "ZSeven-W/dsh-openpencil",
-   "name": "dsh-openpencil",
-   "verdict": "ok",
-   "stars": 67,
-   "desc": "OpenPencil design preview and editing plugin for DSH"
-  },
-  {
    "repo": "HuanLinOTO/dsh-plugin-mineru",
    "name": "dsh-plugin-mineru",
    "verdict": "pending",
    "stars": 26,
    "desc": "向模型暴露 MinerU 文档解析工具，将 PDF/图片/DOCX/PPTX/XLSX 转为结构化 Markdown/JSON \\| Exposes MinerU document-parsing tools to the"
+  },
+  {
+   "repo": "zp-home/dsh-recommend",
+   "name": "dsh-recommend",
+   "verdict": "pending",
+   "stars": 19,
+   "desc": "DSH 插件生态透明排行与推荐：每日自动抓取 dsh-plugin 话题 + 公开评分模型 + 排行/推荐插件与静态站"
   },
   {
    "repo": "zhouwumu2-lab/dsh-vision-fix",
@@ -10074,13 +10081,6 @@
    "verdict": "incompatible",
    "stars": 11,
    "desc": "DSH 插件开发踩坑与做法档案（skill + 文档）：cordis 双副本、tsconfig 三件套、Windows junction、多帧 zstd 等实测记录"
-  },
-  {
-   "repo": "zp-home/dsh-recommend",
-   "name": "dsh-recommend",
-   "verdict": "untested",
-   "stars": 11,
-   "desc": "DSH 插件生态透明排行与推荐：每日自动抓取 dsh-plugin 话题 + 公开评分模型 + 排行/推荐插件与静态站"
   },
   {
    "repo": "cyijun/surfing-plugin",
@@ -10592,6 +10592,13 @@
    "verdict": "ok",
    "stars": 1,
    "desc": "—"
+  },
+  {
+   "repo": "zimai233/dsh-figma-to-lottie",
+   "name": "dsh-figma-to-lottie",
+   "verdict": "ok",
+   "stars": 1,
+   "desc": "Figma/SVG to Lottie animation compiler for DeepSeek Harness"
   },
   {
    "repo": "zoahdev/dsh-readme-forge",
@@ -13639,6 +13646,13 @@
    "desc": "Ramify 是 DeepSeek Harness 的创意分支画布插件，用树状工作区生成、对比和迭代多个可交互方案"
   },
   {
+   "repo": "zjl88858/dsh-huadongbianzuqi",
+   "name": "dsh-huadongbianzuqi",
+   "verdict": "ok",
+   "stars": 7,
+   "desc": "DeepSeek Harness的滑动变祖器插件"
+  },
+  {
    "repo": "Acidmoon/DIzzy-DSH",
    "name": "DIzzy-DSH",
    "verdict": "ok",
@@ -13758,13 +13772,6 @@
    "desc": "DeepSeek Harness plugin: describe_image — give a text-only model vision through an OpenAI-compatible VLM endpo"
   },
   {
-   "repo": "zjl88858/dsh-huadongbianzuqi",
-   "name": "dsh-huadongbianzuqi",
-   "verdict": "ok",
-   "stars": 6,
-   "desc": "DeepSeek Harness的滑动变祖器插件"
-  },
-  {
    "repo": "Cassius0924/dsh-usage-dashboard",
    "name": "dsh-usage-dashboard",
    "verdict": "ok",
@@ -13861,6 +13868,20 @@
    "verdict": "pending",
    "stars": 5,
    "desc": "【编排模式】为 DeepSeek Harness 提供多智能体编排模式：主智能体分解分派、worker 全网格互通，支持逐 worker 指定模型与思考强度"
+  },
+  {
+   "repo": "ZK-Andy/dsh-continual-evolve",
+   "name": "dsh-continual-evolve",
+   "verdict": "ok",
+   "stars": 5,
+   "desc": "Continual self-evolution plugin for DeepSeek Harness: versioned, auditable, rollback-safe harness state refine"
+  },
+  {
+   "repo": "zuoguyoupan2023/adhdgofly-dsh-ext",
+   "name": "zuoguyoupan2023-adhdgofly-dsh-ext",
+   "verdict": "pending",
+   "stars": 5,
+   "desc": "ADHDGoFly POS highlighting plugin for DeepSeek Harness Web: nouns green, verbs red, adjectives/adverbs purple,"
   },
   {
    "repo": "030611/dsh-verification-receipt",
