@@ -87,15 +87,15 @@ flowchart TB
 
 <!-- AUTO:featured:START -->
 
-> 人工策展 50 款插件，按 11 类分组、类内按星标排序；星标每 6 小时自动刷新（成员调整请提 PR 修改 data/awesome-50.json）。数据截至 2026-08-27 04:11（UTC+8）。
+> 人工策展 50 款插件，按 11 类分组、类内按星标排序；星标每 6 小时自动刷新（成员调整请提 PR 修改 data/awesome-50.json）。数据截至 2026-08-27 17:58（UTC+8）。
 
 ### 🚀 智力增强 Booster（6）
 
 | 插件 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
-| [dsh-routing-suite](https://github.com/yjh051108/dsh-routing-suite) | 6851 | — | 注入器 × 思维模式路由套装：免重启运行时注入器 + 任务感知推理模式路由预设（P1-P23 实测） |
+| [dsh-routing-suite](https://github.com/yjh051108/dsh-routing-suite) | 6877 | — | 注入器 × 思维模式路由套装：免重启运行时注入器 + 任务感知推理模式路由预设（P1-P23 实测） |
 | [harmony-next.skills](https://github.com/linhay/harmony-next.skills) | 340 | ✅ | 技能驱动的工作流增强 |
-| [superpowers-dsh](https://github.com/LayneChai/superpowers-dsh) | 94 | ✅ | TDD/调试/计划等开发技能集 |
+| [superpowers-dsh](https://github.com/LayneChai/superpowers-dsh) | 97 | ✅ | TDD/调试/计划等开发技能集 |
 | [forkprobe](https://github.com/Jayden-X-L/forkprobe) | 71 | ✅ | 同一任务跑多个技能对比，自动选优 |
 | [dsh-tool-turbo](https://github.com/Electricitysheep/dsh-tool-turbo) | 7 | ✅ | 按轮次自动优化 reasoning_effort（推理力度） |
 | [dsh-reasoning-settings](https://github.com/JuneLearn/dsh-reasoning-settings) | 6 | ✅ | 推理设置控制：让模型按任务切换思考档位 |
@@ -104,40 +104,40 @@ flowchart TB
 
 | 插件 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
-| [dsh-web-ui](https://github.com/zhu1090093659/dsh-web-ui) | 6180 | ✅ | Web UI 增强与皮肤合集：任务看板、Git 图、移动端、皮肤中心 |
-| [DSH-better-sidebar](https://github.com/omdsh-dev/DSH-better-sidebar) | 2966 | ✅ | 侧边栏变完整工作台：文件编辑/终端/Git/子代理，支持三方注册扩展页 |
-| [dsh-genui](https://github.com/omdsh-dev/dsh-genui) | 345 | ✅ | GenUI 内联组件：图表/表单/测验/3D 场景 + action 事件环 |
-| [dsh-visualize](https://github.com/Nagi-ovo/dsh-visualize) | 218 | ✅ | 对话中生成交互式可视化卡片 |
+| [dsh-web-ui](https://github.com/zhu1090093659/dsh-web-ui) | 6248 | ✅ | Web UI 增强与皮肤合集：任务看板、Git 图、移动端、皮肤中心 |
+| [DSH-better-sidebar](https://github.com/omdsh-dev/DSH-better-sidebar) | 3003 | ✅ | 侧边栏变完整工作台：文件编辑/终端/Git/子代理，支持三方注册扩展页 |
+| [dsh-genui](https://github.com/omdsh-dev/dsh-genui) | 354 | ✅ | GenUI 内联组件：图表/表单/测验/3D 场景 + action 事件环 |
+| [dsh-visualize](https://github.com/Nagi-ovo/dsh-visualize) | 221 | ✅ | 对话中生成交互式可视化卡片 |
 | [dsh-annotation](https://github.com/omdsh-dev/dsh-annotation) | 101 | ✅ | 划选文字→批注→随消息发送，回复逐条对照 |
-| [Liang-Saint-Slider](https://github.com/BruzWJ/Liang-Saint-Slider) | 94 | ✅ | 模型与思考力度选择滑条 |
+| [Liang-Saint-Slider](https://github.com/BruzWJ/Liang-Saint-Slider) | 95 | ✅ | 模型与思考力度选择滑条 |
 | [dsh-navbar](https://github.com/vlln/dsh-navbar) | 59 | ✅ | 对话节点导航条：右缘节点串快速跳转（官方 bundle 插件） |
 
 ### ⌨️ 终端与桌面端（5）
 
 | 插件 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
-| [dsh-TUI](https://github.com/ccch1mneyyy/dsh-TUI) | 2590 | ✅ | Claude Code 风全屏 TUI：鲸鱼顶栏/流式思考/双击 Esc 回滚 |
-| [deepseek-harness-desktop](https://github.com/hairyf/deepseek-harness-desktop) | 1236 | ✅ | Tauri 桌面版：5MB 安装包零环境配置，Win/macOS/Linux |
+| [dsh-TUI](https://github.com/ccch1mneyyy/dsh-TUI) | 2612 | ✅ | Claude Code 风全屏 TUI：鲸鱼顶栏/流式思考/双击 Esc 回滚 |
+| [deepseek-harness-desktop](https://github.com/hairyf/deepseek-harness-desktop) | 1272 | ✅ | Tauri 桌面版：5MB 安装包零环境配置，Win/macOS/Linux |
 | [Bigfish](https://github.com/turtle2209/Bigfish) | 303 | 未测 | 第三方桌面端：内置 Node 运行时，双击即用 |
-| [oh-dsh](https://github.com/hust-open-atom-club/oh-dsh) | 282 | ✅ | 社区发行版：桌面/Web/TUI 三形态统一体验 |
-| [dsh-tianshu-tui](https://github.com/huiliyi37/dsh-tianshu-tui) | 238 | 待定 | 自研 ANSI 渲染的极简终端 UI |
+| [oh-dsh](https://github.com/hust-open-atom-club/oh-dsh) | 285 | ✅ | 社区发行版：桌面/Web/TUI 三形态统一体验 |
+| [dsh-tianshu-tui](https://github.com/huiliyi37/dsh-tianshu-tui) | 239 | 待定 | 自研 ANSI 渲染的极简终端 UI |
 
 ### 👁 视觉与多模态（3）
 
 | 插件 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
-| [modlens](https://github.com/liustack/modlens) | 3696 | ✅ | 生态第一个视觉插件，视觉工作流的基准方案 |
-| [dsh-vision-router](https://github.com/ysr666/dsh-vision-router) | 997 | ✅ | 内置免费视觉模型路由，给文本 agent 装眼睛 |
-| [dsh-vision-toolkit](https://github.com/Anionex/dsh-vision-toolkit) | 834 | 需适配 | 带意图图片问答、长截图 OCR、UI 还原 |
+| [modlens](https://github.com/liustack/modlens) | 3715 | ✅ | 生态第一个视觉插件，视觉工作流的基准方案 |
+| [dsh-vision-router](https://github.com/ysr666/dsh-vision-router) | 1004 | ✅ | 内置免费视觉模型路由，给文本 agent 装眼睛 |
+| [dsh-vision-toolkit](https://github.com/Anionex/dsh-vision-toolkit) | 836 | 需适配 | 带意图图片问答、长截图 OCR、UI 还原 |
 
 ### 🤖 Agent 能力与编排（6）
 
 | 插件 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
-| [dsh-agent-teams](https://github.com/NanmiCoder/dsh-agent-teams) | 1070 | 待定 | 多代理团队编排 |
+| [dsh-agent-teams](https://github.com/NanmiCoder/dsh-agent-teams) | 1103 | 待定 | 多代理团队编排 |
 | [helloagents](https://github.com/hellowind777/helloagents) | 699 | ✅ | agent 能力合集 |
 | [sandbase-harness](https://github.com/sandbaseai/sandbase-harness) | 634 | ✅ | CMA 兼容开源 agent 运行时，任意模型可驱动 |
-| [rea](https://github.com/morluto/rea) | 376 | ✅ | 用 agent 逆向工程任何东西：从应用行为到原生二进制 |
+| [rea](https://github.com/morluto/rea) | 378 | ✅ | 用 agent 逆向工程任何东西：从应用行为到原生二进制 |
 | [open-record-replay](https://github.com/humblebanana/open-record-replay) | 141 | ✅ | macOS 录制回放：把鼠标/键盘/UI 事件存为结构化轨迹供 agent 学习重放 |
 | [axern](https://github.com/cofy-x/axern) | 58 | ✅ | AI agent 开源沙箱：不可信代码执行与持久服务 |
 
@@ -145,16 +145,16 @@ flowchart TB
 
 | 插件 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
-| [TokenTracker](https://github.com/xiufengsun/TokenTracker) | 1429 | 未测 | 本地优先的 31 种编码工具 token 用量与成本追踪 |
+| [TokenTracker](https://github.com/xiufengsun/TokenTracker) | 1438 | 未测 | 本地优先的 31 种编码工具 token 用量与成本追踪 |
 | [claude-paper](https://github.com/alaliqing/claude-paper) | 327 | ✅ | 跨 agent 论文工具箱：速读摘要/深度研读材料/代码演示 + 本地 Web 阅读器 |
 | [mobius](https://github.com/nutshellai-tech/mobius) | 286 | ✅ | 编码增强 |
-| [dsh-remote](https://github.com/flymysql/dsh-remote) | 37 | ✅ | 多机远程工作区：SSH 连接管理、远程目录→本地镜像→原生工作区收养、SFTP 双向同步与 rw_* 工具族 |
+| [dsh-remote](https://github.com/flymysql/dsh-remote) | 38 | ✅ | 多机远程工作区：SSH 连接管理、远程目录→本地镜像→原生工作区收养、SFTP 双向同步与 rw_* 工具族 |
 
 ### 🧠 记忆与上下文（2）
 
 | 插件 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
-| [mnemon](https://github.com/mnemon-dev/mnemon) | 529 | ✅ | 跨 agent、本地优先的持久记忆 |
+| [mnemon](https://github.com/mnemon-dev/mnemon) | 531 | ✅ | 跨 agent、本地优先的持久记忆 |
 | [dsh-memory-evolve](https://github.com/csyangwen/dsh-memory-evolve) | 251 | ✅ | 五轨记忆 + git 分支托管 + 后台自我进化 |
 
 ### 📡 消息通讯与 IM（4）
@@ -162,7 +162,7 @@ flowchart TB
 | 插件 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
 | [dsh-lark](https://github.com/omdsh-dev/dsh-lark) | 46 | ✅ | 飞书 IM bot 频道（官方渠道插件） |
-| [dsh-message-edit](https://github.com/Moeblack/dsh-message-edit) | 43 | ✅ | 分支式消息编辑、reroll、重试、多版本 |
+| [dsh-message-edit](https://github.com/Moeblack/dsh-message-edit) | 44 | ✅ | 分支式消息编辑、reroll、重试、多版本 |
 | [dsh-interconnect](https://github.com/Chinesezjc/dsh-interconnect) | 34 | 待定 | 跨 DSH 实例消息/事件交接 |
 | [ChatCCC](https://github.com/wzj998/ChatCCC) | 22 | ✅ | 飞书/微信聊天控制 DSH / Claude Code |
 
@@ -170,16 +170,16 @@ flowchart TB
 
 | 插件 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
-| [dsh-browser](https://github.com/Lum1104/dsh-browser) | 469 | 需适配 | Chrome 侧栏扩展，让 DSH 直接操作浏览器 |
+| [dsh-browser](https://github.com/Lum1104/dsh-browser) | 475 | 需适配 | Chrome 侧栏扩展，让 DSH 直接操作浏览器 |
 | [dsh-openpencil](https://github.com/ZSeven-W/dsh-openpencil) | 153 | ✅ | OpenPencil 设计稿预览与编辑 |
-| [dsh-web-search-pro](https://github.com/anweat/dsh-web-search-pro) | 50 | ✅ | 增强型持久网页搜索 |
+| [dsh-web-search-pro](https://github.com/anweat/dsh-web-search-pro) | 51 | ✅ | 增强型持久网页搜索 |
 | [dsh-plugin-mineru](https://github.com/HuanLinOTO/dsh-plugin-mineru) | 43 | 待定 | PDF/图片/Office 转结构化 Markdown |
 
 ### 🛒 市场与管理（4）
 
 | 插件 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
-| [dsh-market](https://github.com/dsh-market/dsh-market) | 2502 | ✅ | 持续收录 1000+ 插件的市场：中文搜索 + 五维评分 |
+| [dsh-market](https://github.com/dsh-market/dsh-market) | 2570 | ✅ | 持续收录 1000+ 插件的市场：中文搜索 + 五维评分 |
 | [dsh-web-plugin-manager](https://github.com/LX2000WASD/dsh-web-plugin-manager) | 67 | ✅ | Web UI 一键管理插件：启停/装卸/环境管理 |
 | [dsh-plugin-check](https://github.com/omdsh-dev/dsh-plugin-check) | 28 | ✅ | 插件健康检查：清单协议/patch 格式/构建陷阱 |
 | [deepseek-plugin-store](https://github.com/Ericwong5021/deepseek-plugin-store) | 24 | ✅ | 独立社区插件商店：发现/安装/提交经验证的插件 |
@@ -188,11 +188,11 @@ flowchart TB
 
 | 插件 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
-| [petdex](https://github.com/crafter-station/petdex) | 3979 | ✅ | 生态最高星桌宠图鉴 |
-| [dsh-deep-whale](https://github.com/Small-tailqwq/dsh-deep-whale) | 1743 | 待定 | 深海鲸鱼养成 |
-| [dsh-ads](https://github.com/Nagi-ovo/dsh-ads) | 569 | ✅ | 把 DSH 变回 2005 门户网站：怀旧广告/小游戏/弹窗 |
-| [whale-girl](https://github.com/vlln/whale-girl) | 285 | ✅ | QQ 宠物形态桌宠：可拖拽/投喂/玩耍 |
-| [dsh-kun-like-pet](https://github.com/liyupi/dsh-kun-like-pet) | 84 | ✅ | 小坤桌宠：随 Agent 工作状态切换 9 种动作 |
+| [petdex](https://github.com/crafter-station/petdex) | 3983 | ✅ | 生态最高星桌宠图鉴 |
+| [dsh-deep-whale](https://github.com/Small-tailqwq/dsh-deep-whale) | 1763 | 待定 | 深海鲸鱼养成 |
+| [dsh-ads](https://github.com/Nagi-ovo/dsh-ads) | 572 | ✅ | 把 DSH 变回 2005 门户网站：怀旧广告/小游戏/弹窗 |
+| [whale-girl](https://github.com/vlln/whale-girl) | 288 | ✅ | QQ 宠物形态桌宠：可拖拽/投喂/玩耍 |
+| [dsh-kun-like-pet](https://github.com/liyupi/dsh-kun-like-pet) | 86 | ✅ | 小坤桌宠：随 Agent 工作状态切换 9 种动作 |
 
 > 实测 = 雷达 k8s 运行级判定（✅ 可用 · 待定 · 需适配 · 未测，四档口径见下文）；rc.8 + v4flash 源码路径重测（2026-08-21，50 仓 + 对方清单高星 22 仓）证据见 [data/rc8-retest-20260821/](data/rc8-retest-20260821/) 与 [PLUGINS-ALL.md](PLUGINS-ALL.md)；安装第三方插件前请审查源码并固定 commit。
 
@@ -202,7 +202,7 @@ flowchart TB
 
 <!-- AUTO:bundles:START -->
 
-> 人工策展 14 个整合包：内测成员作品置顶，其下按预设套件 / 能力合集 / 发行版 / 配方管理器四形态分组，类内按星标排序；星标每 6 小时自动刷新（成员调整请提 PR 修改 data/bundles.json）。数据截至 2026-08-27 04:11（UTC+8）。
+> 人工策展 14 个整合包：内测成员作品置顶，其下按预设套件 / 能力合集 / 发行版 / 配方管理器四形态分组，类内按星标排序；星标每 6 小时自动刷新（成员调整请提 PR 修改 data/bundles.json）。数据截至 2026-08-27 17:58（UTC+8）。
 
 ### ⭐ 内测成员作品（1）
 
@@ -214,8 +214,8 @@ flowchart TB
 
 | 整合包 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
-| [dsh-routing-suite](https://github.com/yjh051108/dsh-routing-suite) | 6851 | ✅ | 注入器 × 思维模式路由套装：免重启运行时注入器 + P1-P23 任务感知推理模式路由（rc.8 实测 ✅） |
-| [dsh-anchored-standard](https://github.com/xiaobright/dsh-anchored-standard) | 3774 | ✅ | 两阶段预设：极简模式对齐启动 → 全量装载（rc.8 实测 ✅） |
+| [dsh-routing-suite](https://github.com/yjh051108/dsh-routing-suite) | 6877 | ✅ | 注入器 × 思维模式路由套装：免重启运行时注入器 + P1-P23 任务感知推理模式路由（rc.8 实测 ✅） |
+| [dsh-anchored-standard](https://github.com/xiaobright/dsh-anchored-standard) | 3778 | ✅ | 两阶段预设：极简模式对齐启动 → 全量装载（rc.8 实测 ✅） |
 | [dsh-gitbash-preset](https://github.com/liceses/dsh-gitbash-preset) | 137 | 未测 | Windows 一键「极简模式 Git Bash」预设：把自带极简模式的 bash 调用映射到 Git Bash |
 | [dsh-roleplay-preset](https://github.com/oliblue-evan/dsh-roleplay-preset) | 19 | 未测 | 沉浸式角色扮演预设：零工具纯对话、酒馆式演出格式、文件记忆库 |
 
@@ -223,19 +223,19 @@ flowchart TB
 
 | 整合包 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
-| [Aegis](https://github.com/GanyuanRan/Aegis) | 1133 | ✅ | 软件工程方法论技能包：baseline-first 规划、系统性重构（rc.8 实测 ✅） |
+| [Aegis](https://github.com/GanyuanRan/Aegis) | 1134 | ✅ | 软件工程方法论技能包：baseline-first 规划、系统性重构（rc.8 实测 ✅） |
 | [helloagents](https://github.com/hellowind777/helloagents) | 699 | ✅ | agent 能力合集（rc.8 实测 ✅） |
+| [DeepSec](https://github.com/Unclecheng-li/DeepSec) | 344 | 未测 | AI 安全攻防一体化合集：Android · Web · Native · 协议 · 恶意代码 · AI 六域 |
 | [harmony-next.skills](https://github.com/linhay/harmony-next.skills) | 340 | ✅ | 技能驱动的工作流增强（rc.8 实测 ✅） |
-| [DeepSec](https://github.com/Unclecheng-li/DeepSec) | 340 | 未测 | AI 安全攻防一体化合集：Android · Web · Native · 协议 · 恶意代码 · AI 六域 |
-| [superpowers-dsh](https://github.com/LayneChai/superpowers-dsh) | 94 | ✅ | TDD/调试/计划等开发技能集（rc.8 实测 ✅） |
-| [dsh-reverse-skill](https://github.com/dhicoc/dsh-reverse-skill) | 82 | 未测 | 完整逆向工程技能合集（85 个 SKILL.md） |
+| [superpowers-dsh](https://github.com/LayneChai/superpowers-dsh) | 97 | ✅ | TDD/调试/计划等开发技能集（rc.8 实测 ✅） |
+| [dsh-reverse-skill](https://github.com/dhicoc/dsh-reverse-skill) | 88 | 未测 | 完整逆向工程技能合集（85 个 SKILL.md） |
 
 ### 📀 发行版（2）
 
 | 整合包 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
 | [Bigfish](https://github.com/turtle2209/Bigfish) | 303 | 未测 | 第三方桌面端发行版：内置 Node 运行时，双击即用（雷达判需适配——发行版形态非单插件安装） |
-| [oh-dsh](https://github.com/hust-open-atom-club/oh-dsh) | 282 | 未测 | 社区发行版：桌面/Web/TUI 三形态统一体验 |
+| [oh-dsh](https://github.com/hust-open-atom-club/oh-dsh) | 285 | 未测 | 社区发行版：桌面/Web/TUI 三形态统一体验 |
 
 ### 📑 配方管理器（1）
 
