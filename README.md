@@ -303,9 +303,9 @@ flowchart TB
 
 DSH 插件社区讨论群（微信群）：插件作者、维护者与使用者都在这里，讨论插件开发、兼容性问题与新插件发布。
 
-<img src="assets/community-discussion.jpg" width="350" alt="DSH 插件社区讨论群">
+<img src="assets/community-discussion-20260829.jpg" width="350" alt="DSH 插件社区讨论群">
 
-> 二维码 7 天内有效（2026-08-26 前）。
+> 二维码 7 天内有效（2026-09-05 前）。
 
 ## 给插件使用者
 

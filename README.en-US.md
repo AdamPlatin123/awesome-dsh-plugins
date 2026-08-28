@@ -296,9 +296,9 @@ Per-plugin details (verdict · location · stars) in **PLUGINS-ALL.md**.
 
 The DSH plugin community discussion group on WeChat: plugin authors, maintainers, and users discuss plugin development, compatibility issues, and new releases.
 
-<img src="assets/community-discussion.jpg" width="350" alt="DSH plugin community discussion group">
+<img src="assets/community-discussion-20260829.jpg" width="350" alt="DSH plugin community discussion group">
 
-> The QR code is valid for 7 days (before 2026-08-26).
+> The QR code is valid for 7 days (before 2026-09-05).
 
 ## For Plugin Users
 
