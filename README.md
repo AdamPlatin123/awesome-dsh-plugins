@@ -1,9 +1,9 @@
-# Awesome DSH Plugins
+# DSH Plugin Radar
 
 <p align="center">
-  <img src="assets/banner-entertainment.jpg" width="440" alt="Awesome DSH Plugins banner"><br>
+  <img src="assets/banner-entertainment.jpg" width="440" alt="DSH Plugin Radar banner"><br>
   <img src="assets/stickers/21-tests-passed.png" width="126" alt="测试通过">
- 
+
 
 </p>
 
@@ -12,7 +12,7 @@
 </p>
 
 
-**自动发现、证据验证的 DeepSeek Harness 插件生态雷达。自动发现 15900+ 候选、逐个 k8s 实测**
+**开源的 DeepSeek Harness 插件生态雷达——持续发现、运行级验证、15 分钟快照。你看到的插件目录，只是它自动生成的 artifact。**
 
 
 安装前就知道哪个能用，不用自己踩坑。
@@ -28,6 +28,21 @@
 ---
 
 > 已索引 15443 repos · 克隆验证为 DSH 插件 2996 · 清单呈现 2943 · 当前版本 0.1.1-rc.2 实测 345 个 DSH 插件仓库
+
+**架构原则：目录是构建产物（Catalog is a build artifact）。**
+
+```text
+Radar Engine（开源 → engine/）
+     ↓
+机器可读快照（data/snapshots/，每 15 分钟）
+     ↓
+目录渲染器（聚合 · 分类 · 双语渲染）
+     ↓
+┌─ PLUGINS-ALL.md 全量清单
+├─ 精选插件榜 / 整合包
+├─ 生态快照 / 兼容矩阵
+└─ dshfind 等下游消费方
+```
 
 ## 工作原理
 
@@ -68,6 +83,7 @@ flowchart TB
 
 | 你的目标 | 跳转入口 |
 |---|---|
+| 了解这个雷达系统本身 | [工作原理](#工作原理) · [架构原则](#工作原理) · [开源引擎源码 engine/](engine/) · [管线文档](docs/radar/overview.md) |
 | 看精选插件 | [精选插件榜](#精选插件榜) — 人工策展 · 11 类 |
 | 一把装好不挑单品 | [整合包](#-整合包) — 预设套件 / 能力合集 / 发行版 / 配方管理器 |
 | 按用途找一个插件 | [分类目录](#分类目录) — 13 类功能领域 · 逐插件明细见 [PLUGINS-ALL.md](PLUGINS-ALL.md)；[PLUGINS.md](PLUGINS.md) 为 PR 登记清单 |
@@ -83,7 +99,11 @@ flowchart TB
 > **收录不等于兼容，静态检查不等于运行可用，运行可用也不等于安全审计。**
 > 本仓库提供可追溯的筛选信号，不代表 DSH 官方背书。安装第三方插件前，请检查插件源码、权限、依赖、许可证及测试日期。
 
-## 精选插件榜
+## 🛒 生态目录（雷达生成的 artifact）
+
+以下所有目录内容——精选榜、整合包、分类目录、兼容矩阵——均由上述雷达管线自动生产与刷新（精选榜与整合包成员为人工策展，星标与状态由 bot 持续更新）。
+
+### 精选插件榜
 
 <!-- AUTO:featured:START -->
 
