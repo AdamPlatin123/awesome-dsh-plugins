@@ -61,7 +61,7 @@ flowchart TB
 | 阶段 | 开源内容 | 状态 |
 |---|---|---|
 | Phase 1 | 管线文档：[总览与路线图](docs/radar/overview.md) · [架构](docs/radar/architecture.md) · [数据契约](docs/radar/data-contracts.md) | ✅ 已开源 |
-| Phase 2 | 雷达引擎源码（发现 · 聚合 · 渲染 · 分发） | 🔜 稳定后开源 |
+| Phase 2 | 雷达引擎源码（发现 · 聚合 · 渲染 · 分发 + 运维自愈） | ✅ 已开源 → [engine/](engine/) |
 | Phase 3 | 测试引擎源码：轻量版（无需 k8s · 本地直跑）· 服务器版（k8s 集群） | 🔜 稳定后开源 |
 
 ## 快速导航
