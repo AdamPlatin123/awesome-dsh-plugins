@@ -277,6 +277,7 @@ def main():
     print(f'[gen-plugins-all] desc 回填 {n_desc} · 兜底重分类 {n_reclass}（taxonomy v2）')
 
     vc = Counter(e['verdict'] for e in entries if e['locate'] == 'located')
+    v_all = Counter(e['verdict'] for e in entries)   # 全量口径：含监测/未定位条目的判定
     src = ' ⊕ '.join(f'`{rid}` {bj(ts)}' for rid, ts in rounds[:3])
     if len(rounds) > 3:
         src += f' 等 {len(rounds)} 轮'
@@ -289,9 +290,12 @@ def main():
     L.append('')
     L.append('## 统一度量衡')
     L.append('')
-    L.append(f'**判定维度**（运行级四档，仅已定位条目 {sum(vc.values())} 个进入统计；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：')
+    L.append('**判定维度**（运行级四档；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：')
     L.append('')
-    L.append(f'- `[可用]`（{vc.get("✅ 运行级可用", 0)}）/ `[不兼容]`（{vc.get("❌ 运行级不兼容", 0)}）/ `[待定]`（{vc.get("⚠️ 待定", 0)}）/ `[未测]`（{vc.get("⏳ 未测", 0)}）')
+    L.append(f'- 全量判定 {sum(v_all.values())}（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：'
+             f'`[可用]`（{v_all.get("✅ 运行级可用", 0)}）/ `[不兼容]`（{v_all.get("❌ 运行级不兼容", 0)}）/ `[待定]`（{v_all.get("⚠️ 待定", 0)}）')
+    L.append(f'- 已定位明细 {sum(vc.values())}（本列表展示口径，另 {len(entries) - sum(vc.values())} 条监测/未定位的判定暂不展示）：'
+             f'`[可用]`（{vc.get("✅ 运行级可用", 0)}）/ `[不兼容]`（{vc.get("❌ 运行级不兼容", 0)}）/ `[待定]`（{vc.get("⚠️ 待定", 0)}）/ `[未测]`（{vc.get("⏳ 未测", 0)}）')
     L.append('')
     L.append('**定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：')
     L.append('')
@@ -336,18 +340,20 @@ def main():
     L.append('- 判定与定位正交；监测类条目的原始判定保留于 data/snapshots/，定位成功后自动恢复展示。')
     L.append('- 占位 URL 由发现管线 clone 库通道产生；定位复核：`python3 scripts/resolve_placeholders.py`（结果写 data/locate-cache.json，命中附实时 star）。')
     L.append('- 合并主键以 GitHub 仓库全名为准（真实 URL / data/repo-map.json / 定位缓存三源归一）：同一仓库的不同命名键合并为单条，判定冲突降级 [待定] 待重测仲裁。')
+    L.append('- 口径对齐说明：README 磁贴/徽章与「运行级实测」行为单快照即时全量口径；本清单为多轮快照并集归并口径（同名多键合一、判定冲突降 [待定]、刷新随日更）。两者存在时滞与归并差，属设计特性；判定真相以 data/snapshots/ 逐轮快照为准。')
     L.append('')
 
     OUT.write_text('\n'.join(L) + '\n', encoding='utf-8')
     print(f'[gen-plugins-all] {len(entries)} 条 → {OUT.name}（定位修复 {n_fix} / 空仓 {n_empty} / 歧义 {n_amb} / 未定位 {n_unresolved} / 实时星 {n_star}）')
-    # 汇总卡数据（供 render 的目录摘要用）：返回每类分布
-    return {dom: {'total': sum(1 for e in entries if e.get('domain') == dom),
+    # 汇总卡数据（供 render 的目录摘要用）：每类分布 + 全局统计（磁贴「未测」=登记兜底口径，快照层不产 ⏳）
+    return {'domains': {dom: {'total': sum(1 for e in entries if e.get('domain') == dom),
                   'ok': vc_local(entries, dom, '✅ 运行级可用'),
                   'bad': vc_local(entries, dom, '❌ 运行级不兼容'),
                   'inc': vc_local(entries, dom, '⚠️ 待定'),
                   'un': vc_local(entries, dom, '⏳ 未测'),
                   'watch': sum(1 for e in entries if e.get('domain') == dom and e.get('locate') != 'located')}
-            for dom in DOMAIN_ORDER}
+            for dom in DOMAIN_ORDER},
+            'global': {'un': vc.get('⏳ 未测', 0), 'located': sum(vc.values()), 'all': len(entries)}}
 
 
 def vc_local(entries, dom, verdict):
