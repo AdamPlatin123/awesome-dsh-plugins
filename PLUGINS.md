@@ -168,6 +168,7 @@
 |---|---|---|---|
 | dsh-plugins | [MkaliezZ/dsh-plugins](https://github.com/MkaliezZ/dsh-plugins) | DSH 插件家族索引：16 个插件（fail-closed 授权安全线 / 策略测试与诊断 / 工作区生产力 / 运行时基础设施），统一 dsh-plugin topic | 待测 |
 | dsh-subagent-tools | [lynx-gt/dsh-subagent-tools](https://github.com/lynx-gt/dsh-subagent-tools) | 子代理委派按次覆盖 model/provider/persona/toolFilter、@preset: 引用、provider/model 复合 id（bundle，不改官方文件）；rc.6 headless+web 实测通过 | ✅ |
+| dsh-web-workbench | [yth1120/dsh-web-workbench](https://github.com/yth1120/dsh-web-workbench) | 官方 Web UI 增强套件：右侧工作台（Browser/File Viewer/Jobs/Activity/Review）、底部终端、问题历史时间轴；经官方 packages/* 扩展点接入（org 源仓私有，登记用公开镜像；Release v0.1.0） | 待测 |
 | dsh-subagent-cwd | [lynx-gt/dsh-subagent-cwd](https://github.com/lynx-gt/dsh-subagent-cwd) | dsh-subagent-tools 加按次 cwd（子代理工作目录），附两处进程内 provider 补丁；rc.6 前台/后台 cwd 实测通过 | ✅ |
 | dsh-update-notifier | [arvin-yd/dsh-update-notifier](https://github.com/arvin-yd/dsh-update-notifier) | DSH 本体版本徽标：常驻侧边栏 Settings 行右侧，三色状态点（红=有更新/绿=最新/黄=检查中或失败），点开五态弹窗（复制更新命令/忽略/稍后/立即检查），启动 10s 首查+6h 复查；零构建、29 单测、mock-llm headless L4 实测（mainline 47f9438，证据见 [VERIFICATION.md](https://github.com/arvin-yd/dsh-update-notifier/blob/main/VERIFICATION.md)） | ✅ |
 | dsh-daily-kit | [zhouwei713/dsh-daily-kit](https://github.com/zhouwei713/dsh-daily-kit) | 日常插件集合 monorepo：16 个插件（审批门/桌面与Webhook通知/成本计量/会话导出/Ollama 本地模型/上下文水位/办公文档解析/本地文件夹索引/cron 全局调度/RSS与网页内容监控/日历/Gmail/待办/天气地点/票据识别/音视频转录）+ 4 个一键 bundle（dev-buddy/evidence-wall/inbox-zero/daily-briefing）；权限透明、读取优先、零 native 依赖，596 单测，dsh rc.6/rc.7 真实加载与 npm 安装实测通过 | ✅ |
@@ -214,6 +215,14 @@
 | 插件 | 仓库 | 说明 | 运行级 |
 |---|---|---|---|
 | dsh-fund-research | [PerryLink/dsh-fund-research](https://github.com/PerryLink/dsh-fund-research) | 中国公募基金确定性研究：天天基金/东方财富公开数据采集（pingzhongdata JS 块、F10 持仓与经理页、个股估值 + push2delay 兜底主机），业绩拆解/持仓穿透/风格归因/经理画像纯函数计算，版本化 Markdown 报告附每个关键数字可回溯到 sha256 源快照的附录；npm dsh-fund-research 已发布；仅供研究，不构成投资建议 | 待测 |
+## 🚢 发行版
+
+完整替代/重发行形态（非 drop-in 插件，从源码运行）：
+
+| 插件 | 仓库 | 说明 | 运行级 |
+|---|---|---|---|
+| deepseek-harness-ux | [ayuanwong/deepseek-harness-ux](https://github.com/ayuanwong/deepseek-harness-ux) | 面向长任务的 DeepSeek Harness Web UX 社区源码版：保留上游 agent/runtime 与插件架构，强化任务进度、运行详情、会话恢复、长文阅读、工作区与交付物体验；当前从源码运行，非独立 npm 插件（#152） | 源码运行 |
+
 ## ❓ 未分类
 
 <!-- 新增条目示例（复制下面一行修改后插入对应分类表格末尾）：
