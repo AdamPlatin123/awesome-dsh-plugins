@@ -1,7 +1,7 @@
 # DSH Plugin Radar
 
 <p align="center">
-  <img src="assets/banner-entertainment.jpg" width="440" alt="DSH Plugin Radar banner"><br>
+  <img src="assets/banner-radar.jpg" width="560" alt="DSH Plugin Radar banner"><br>
   <img src="assets/stickers/21-tests-passed.png" width="126" alt="测试通过">
 
 
