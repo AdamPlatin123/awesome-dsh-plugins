@@ -97,6 +97,8 @@ def merge_entry(a, b):
         out['url'] = b['url']
     if (out.get('star') or 0) < (b.get('star') or 0):
         out['star'] = b['star']
+    if not out.get('bundle') and b.get('bundle'):
+        out['bundle'] = b['bundle']
     if not _ok_desc(out.get('desc')) and _ok_desc(b.get('desc')):
         out['desc'] = b['desc']
     if not out.get('domain') and b.get('domain'):
@@ -286,7 +288,7 @@ def main():
     L.append('# 全量插件清单（统一四档口径）')
     L.append('')
     L.append(f'> 数据源：radar 快照并集（{src}）⊕ GitHub 定位复核缓存（data/locate-cache.json）。')
-    L.append('> 呈现：分组列表（状态 · 名称  · 一句话说明），不使用大表格。')
+    L.append('> 呈现：分组列表（状态 · 名称 · ★星标 · 一句话说明），不使用大表格；〔📦〕= 整合包（根 dsh.bundle / workspaces 多子包）。')
     L.append('')
     L.append('## 统一度量衡')
     L.append('')
@@ -311,7 +313,9 @@ def main():
     L.append('')
 
     for dom in DOMAIN_ORDER:
-        group = sorted([e for e in entries if e.get('domain') == dom], key=lambda x: -(x.get('star') or 0))
+        # 组内排序：星标降序；[不兼容] 整体沉组尾（组内仍按星标）——排除信息不占组头
+        group = sorted([e for e in entries if e.get('domain') == dom],
+                       key=lambda x: (x.get('verdict') == '❌ 运行级不兼容', -(x.get('star') or 0)))
         if not group:
             continue
         L.append(f'## {dom}（{len(group)}）')
@@ -319,7 +323,7 @@ def main():
         for e in group:
             name = e['name']
             star = e.get('star')
-            star_part = f'{star} ' if isinstance(star, int) else ''   # 星数未知留空不印 0（防污染排序，bot 日更补齐）
+            star_part = f'★{star} ' if isinstance(star, int) else ''   # 星数未知留空不印 0（防污染排序，bot 日更补齐）
             desc = (e.get('desc') or '—').strip()
             if desc.startswith('http'):
                 desc = '—'
@@ -332,7 +336,8 @@ def main():
             elif loc == 'unresolved':
                 L.append(f'- `[未定位]` **{name}** — 占位待复核，判定暂不展示{pr}')
             else:
-                L.append(f'- {MARK.get(e.get("verdict"), "`[未测]`")} [{name}]({e["url"]}) {star_part}— {desc}{pr}')
+                bundle_part = '〔📦〕' if e.get('bundle') else ''   # 整合包（dsh.bundle / workspaces 结构）
+                L.append(f'- {MARK.get(e.get("verdict"), "`[未测]`")} [{name}]({e["url"]}) {star_part}— {desc}{pr}{bundle_part}')
         L.append('')
 
     L.append('## 附录')
