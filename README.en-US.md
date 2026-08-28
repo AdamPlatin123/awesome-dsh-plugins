@@ -100,13 +100,14 @@ Everything catalog-shaped below — the featured board, bundles, category direct
 
 <!-- AUTO:featured:START -->
 
-> 人工策展 50 款插件，按 11 类分组、类内按星标排序；星标每 6 小时自动刷新（成员调整请提 PR 修改 data/awesome-50.json）。数据截至 2026-08-29 06:27（UTC+8）。
+> 人工策展 56 款插件，按 11 类分组、类内按星标排序；星标每 6 小时自动刷新（成员调整请提 PR 修改 data/awesome-50.json）。数据截至 2026-08-29 06:52（UTC+8）。
 
-### 🚀 智力增强 Booster（6）
+### 🚀 智力增强 Booster（7）
 
 | 插件 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
 | [dsh-routing-suite](https://github.com/yjh051108/dsh-routing-suite) | 6929 | — | 注入器 × 思维模式路由套装：免重启运行时注入器 + 任务感知推理模式路由预设（P1-P23 实测） |
+| [ouroboros](https://github.com/Q00/ouroboros) | 5721 | 未测 | Agent OS：agent 自我变强、人只守底线——自进化运行时（5.7k★；rc.8 实测 ✅） |
 | [harmony-next.skills](https://github.com/linhay/harmony-next.skills) | 342 | ✅ | 技能驱动的工作流增强 |
 | [superpowers-dsh](https://github.com/LayneChai/superpowers-dsh) | 106 | ✅ | TDD/调试/计划等开发技能集 |
 | [forkprobe](https://github.com/Jayden-X-L/forkprobe) | 71 | ✅ | 同一任务跑多个技能对比，自动选优 |
@@ -117,7 +118,7 @@ Everything catalog-shaped below — the featured board, bundles, category direct
 
 | 插件 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
-| [dsh-web-ui](https://github.com/zhu1090093659/dsh-web-ui) | 6384 | ✅ | Web UI 增强与皮肤合集：任务看板、Git 图、移动端、皮肤中心 |
+| [dsh-web-ui](https://github.com/zhu1090093659/dsh-web-ui) | 6385 | ✅ | Web UI 增强与皮肤合集：任务看板、Git 图、移动端、皮肤中心 |
 | [DSH-better-sidebar](https://github.com/omdsh-dev/DSH-better-sidebar) | 3067 | ✅ | 侧边栏变完整工作台：文件编辑/终端/Git/子代理，支持三方注册扩展页 |
 | [dsh-genui](https://github.com/omdsh-dev/dsh-genui) | 363 | ✅ | GenUI 内联组件：图表/表单/测验/3D 场景 + action 事件环 |
 | [dsh-visualize](https://github.com/Nagi-ovo/dsh-visualize) | 225 | ✅ | 对话中生成交互式可视化卡片 |
@@ -129,24 +130,26 @@ Everything catalog-shaped below — the featured board, bundles, category direct
 
 | 插件 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
-| [dsh-TUI](https://github.com/ccch1mneyyy/dsh-TUI) | 2661 | ✅ | Claude Code 风全屏 TUI：鲸鱼顶栏/流式思考/双击 Esc 回滚 |
+| [dsh-desktop](https://github.com/anywhere-labs/dsh-desktop) | 21534 | 待定 | 生态最高星桌面客户端（21.5k★，原 deepseek-harness-desktop 再改名）：万物皆插件、桌面本身也是插件（雷达重测中；rc.8 源码路径实测 ✅） |
 | [deepseek-harness-desktop](https://github.com/hairyf/deepseek-harness-desktop) | 1356 | ✅ | Tauri 桌面版：5MB 安装包零环境配置，Win/macOS/Linux |
-| [Bigfish](https://github.com/turtle2209/Bigfish) | 302 | 未测 | 第三方桌面端：内置 Node 运行时，双击即用 |
+| [Bigfish](https://github.com/turtle2209/Bigfish) | 302 | 需适配 | 第三方桌面端：内置 Node 运行时，双击即用 |
 | [oh-dsh](https://github.com/hust-open-atom-club/oh-dsh) | 288 | ✅ | 社区发行版：桌面/Web/TUI 三形态统一体验 |
 | [dsh-tianshu-tui](https://github.com/huiliyi37/dsh-tianshu-tui) | 246 | 待定 | 自研 ANSI 渲染的极简终端 UI |
 
-### 👁 视觉与多模态（3）
+### 👁 视觉与多模态（4）
 
 | 插件 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
 | [modlens](https://github.com/liustack/modlens) | 3740 | ✅ | 生态第一个视觉插件，视觉工作流的基准方案 |
+| [agent-vision-toolkit](https://github.com/Anionex/agent-vision-toolkit) | 1117 | ✅ | 通用 agent 视觉工具箱：多图理解/图片问答/前端 UI 还原/GUI 自动化（dsh-vision-toolkit 同作者） |
 | [dsh-vision-router](https://github.com/ysr666/dsh-vision-router) | 1015 | ✅ | 内置免费视觉模型路由，给文本 agent 装眼睛 |
 | [dsh-vision-toolkit](https://github.com/Anionex/dsh-vision-toolkit) | 838 | 需适配 | 带意图图片问答、长截图 OCR、UI 还原 |
 
-### 🤖 Agent 能力与编排（6）
+### 🤖 Agent 能力与编排（7）
 
 | 插件 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
+| [distilly](https://github.com/titanwings/distilly) | 24092 | ✅ | 把专家思维蒸馏为可复用 Skills 的平台（24k★，Agent 域之最，原名 colleague-skill；雷达判可用） |
 | [dsh-agent-teams](https://github.com/NanmiCoder/dsh-agent-teams) | 1153 | 待定 | 多代理团队编排 |
 | [helloagents](https://github.com/hellowind777/helloagents) | 702 | ✅ | agent 能力合集 |
 | [sandbase-harness](https://github.com/sandbaseai/sandbase-harness) | 636 | ✅ | CMA 兼容开源 agent 运行时，任意模型可驱动 |
@@ -154,19 +157,21 @@ Everything catalog-shaped below — the featured board, bundles, category direct
 | [open-record-replay](https://github.com/humblebanana/open-record-replay) | 142 | ✅ | macOS 录制回放：把鼠标/键盘/UI 事件存为结构化轨迹供 agent 学习重放 |
 | [axern](https://github.com/cofy-x/axern) | 58 | ✅ | AI agent 开源沙箱：不可信代码执行与持久服务 |
 
-### 💻 编码与生产力（4）
+### 💻 编码与生产力（5）
 
 | 插件 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
-| [TokenTracker](https://github.com/xiufengsun/TokenTracker) | 1447 | 未测 | 本地优先的 31 种编码工具 token 用量与成本追踪 |
+| [TokenTracker](https://github.com/xiufengsun/TokenTracker) | 1448 | 未测 | 本地优先的 31 种编码工具 token 用量与成本追踪 |
+| [api-relay-audit](https://github.com/toby-bridges/api-relay-audit) | 817 | ✅ | AI API 中继/LLM 代理本地安全审计，产出 Markdown 报告（rc.8 实测 ✅） |
 | [claude-paper](https://github.com/alaliqing/claude-paper) | 330 | ✅ | 跨 agent 论文工具箱：速读摘要/深度研读材料/代码演示 + 本地 Web 阅读器 |
 | [mobius](https://github.com/nutshellai-tech/mobius) | 286 | ✅ | 编码增强 |
 | [dsh-remote](https://github.com/flymysql/dsh-remote) | 39 | ✅ | 多机远程工作区：SSH 连接管理、远程目录→本地镜像→原生工作区收养、SFTP 双向同步与 rw_* 工具族 |
 
-### 🧠 记忆与上下文（2）
+### 🧠 记忆与上下文（3）
 
 | 插件 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
+| [EverOS](https://github.com/EverMind-AI/EverOS) | 12518 | 未测 | 全 agent 便携记忆层：本地优先、Markdown-native（12.4k★ 记忆域之最；rc.8 实测 ✅） |
 | [mnemon](https://github.com/mnemon-dev/mnemon) | 535 | ✅ | 跨 agent、本地优先的持久记忆 |
 | [dsh-memory-evolve](https://github.com/csyangwen/dsh-memory-evolve) | 256 | ✅ | 五轨记忆 + git 分支托管 + 后台自我进化 |
 
@@ -192,17 +197,18 @@ Everything catalog-shaped below — the featured board, bundles, category direct
 
 | 插件 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
-| [dsh-market](https://github.com/dsh-market/dsh-market) | 2697 | ✅ | 持续收录 1000+ 插件的市场：中文搜索 + 五维评分 |
+| [dsh-market](https://github.com/dsh-market/dsh-market) | 2698 | ✅ | 持续收录 1000+ 插件的市场：中文搜索 + 五维评分 |
 | [dsh-web-plugin-manager](https://github.com/LX2000WASD/dsh-web-plugin-manager) | 67 | ✅ | Web UI 一键管理插件：启停/装卸/环境管理 |
 | [dsh-plugin-check](https://github.com/omdsh-dev/dsh-plugin-check) | 27 | ✅ | 插件健康检查：清单协议/patch 格式/构建陷阱 |
 | [deepseek-plugin-store](https://github.com/Ericwong5021/deepseek-plugin-store) | 26 | ✅ | 独立社区插件商店：发现/安装/提交经验证的插件 |
 
-### 🎮 娱乐生活（5）
+### 🎮 娱乐生活（6）
 
 | 插件 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
 | [petdex](https://github.com/crafter-station/petdex) | 3989 | ✅ | 生态最高星桌宠图鉴 |
 | [dsh-deep-whale](https://github.com/Small-tailqwq/dsh-deep-whale) | 1787 | 待定 | 深海鲸鱼养成 |
+| [openpets](https://github.com/alvinunreal/openpets) | 1131 | ✅ | 本地优先桌面伴侣平台：动画宠物 + 插件 SDK（娱乐域第二位） |
 | [dsh-ads](https://github.com/Nagi-ovo/dsh-ads) | 581 | ✅ | 把 DSH 变回 2005 门户网站：怀旧广告/小游戏/弹窗 |
 | [whale-girl](https://github.com/vlln/whale-girl) | 297 | ✅ | QQ 宠物形态桌宠：可拖拽/投喂/玩耍 |
 | [dsh-kun-like-pet](https://github.com/liyupi/dsh-kun-like-pet) | 86 | ✅ | 小坤桌宠：随 Agent 工作状态切换 9 种动作 |
@@ -215,7 +221,7 @@ Everything catalog-shaped below — the featured board, bundles, category direct
 
 <!-- AUTO:bundles:START -->
 
-> 人工策展 16 个整合包：内测成员作品置顶，其下按预设套件 / 能力合集 / 发行版 / 配方管理器四形态分组，类内按星标排序；星标每 6 小时自动刷新（成员调整请提 PR 修改 data/bundles.json）。数据截至 2026-08-29 06:27（UTC+8）。
+> 人工策展 16 个整合包：内测成员作品置顶，其下按预设套件 / 能力合集 / 发行版 / 配方管理器四形态分组，类内按星标排序；星标每 6 小时自动刷新（成员调整请提 PR 修改 data/bundles.json）。数据截至 2026-08-29 06:52（UTC+8）。
 
 ### ⭐ 内测成员作品（1）
 
