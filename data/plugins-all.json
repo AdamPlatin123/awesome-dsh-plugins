@@ -1,6 +1,6 @@
 {
  "schema": "dsh-radar/v1",
- "generated_at": "2026-08-28T07:00:22Z",
+ "generated_at": "2026-08-28T07:15:24Z",
  "plugins": [
   {
    "repo": "ganyuanran/aegis",
@@ -689,6 +689,13 @@
    "desc": "—"
   },
   {
+   "repo": "space-spacee-clamation/dsh-package-manager",
+   "name": "space-spacee-clamation-dsh-package-manager",
+   "verdict": "ok",
+   "stars": 2,
+   "desc": "dsh包管理器中间件，对原有的add的模式进行的封装，支持预设和插件  （内容还在迭代!!!!）"
+  },
+  {
    "repo": "UntR/dsh-plugin-marketplace",
    "name": "untr-dsh-plugin-marketplace",
    "verdict": "ok",
@@ -981,6 +988,13 @@
    "verdict": "ok",
    "stars": 0,
    "desc": "—"
+  },
+  {
+   "repo": "songoao25/dsh-plugin-guardian",
+   "name": "songoao25-dsh-plugin-guardian",
+   "verdict": "ok",
+   "stars": 0,
+   "desc": "Safe uninstall with snapshot rollback for DeepSeek Harness plugins — clean residue, health check, no command l"
   },
   {
    "repo": "truelove-dreamer/dsh-plugin-security-audit",
@@ -6611,6 +6625,13 @@
    "desc": "DeepSeek Harness Nachoneko Theme"
   },
   {
+   "repo": "thooy/dsh-client-ui-theme-manager",
+   "name": "thooy-dsh-client-ui-theme-manager",
+   "verdict": "ok",
+   "stars": 1,
+   "desc": "—"
+  },
+  {
    "repo": "tieveto666-code/dsh-client-ui-trace-graph",
    "name": "tieveto666-code-dsh-client-ui-trace-graph",
    "verdict": "incompatible",
@@ -7374,6 +7395,13 @@
    "desc": "Third-party Windows Agent Desktop built on the official DeepSeek Harness web profile"
   },
   {
+   "repo": "terrywangcode/dsh-mermaid-web",
+   "name": "terrywangcode-dsh-mermaid-web",
+   "verdict": "ok",
+   "stars": 0,
+   "desc": "DeepSeek Harness Web UI plugin for rendering Mermaid diagrams with zoom and a fullscreen workspace"
+  },
+  {
    "repo": "thirsty5034/dsh-git-forge",
    "name": "thirsty5034-dsh-git-forge",
    "verdict": "incompatible",
@@ -7890,6 +7918,13 @@
    "verdict": "incompatible",
    "stars": 736,
    "desc": "把 DeepSeek Harness 装进你的口袋：电脑上跑 dsh web，手机扫码即同步访问（局域网 + 公网，实时同屏）Put DeepSeek Harness in your pocket: run dsh we"
+  },
+  {
+   "repo": "syncable-dev/memtrace-public",
+   "name": "syncable-dev-memtrace-public",
+   "verdict": "pending",
+   "stars": 466,
+   "desc": "Structural memory for AI coding agents"
   },
   {
    "repo": "mnemon-dev/mnemon",
@@ -11805,6 +11840,20 @@
    "desc": "DeepSeek Harness 独立桌面应用：免终端启动 dsh web，独立窗口 + 自动管理后台服务"
   },
   {
+   "repo": "studyinglx/dsh-cli",
+   "name": "studyinglx-dsh-cli",
+   "verdict": "incompatible",
+   "stars": 1,
+   "desc": "Interactive terminal (REPL) profile bundle for DeepSeek Harness — a Claude Code-style CLI surface over dsh-bas"
+  },
+  {
+   "repo": "syncable-dev/dsh-plugin-memtrace",
+   "name": "syncable-dev-dsh-plugin-memtrace",
+   "verdict": "incompatible",
+   "stars": 1,
+   "desc": "🧠 Local-first code intelligence graph for DeepSeek Harness"
+  },
+  {
    "repo": "the-ninth-moon/dsh-preset-switch",
    "name": "the-ninth-moon-dsh-preset-switch",
    "verdict": "ok",
@@ -12636,6 +12685,13 @@
    "verdict": "incompatible",
    "stars": 0,
    "desc": "Evidence-based delivery acceptance for DeepSeek Harness."
+  },
+  {
+   "repo": "troywjz/arc",
+   "name": "troywjz-arc",
+   "verdict": "ok",
+   "stars": 0,
+   "desc": "Agent Research Copilot (ARC) is a set of skills and tools (MCP) for theoretical physics literature review, ide"
   },
   {
    "repo": "weekitmo/vision-mcp",
@@ -15942,6 +15998,13 @@
    "desc": "The authority layer for agentic AI, as a DeepSeek Harness plugin"
   },
   {
+   "repo": "toustifer/agentflow",
+   "name": "toustifer-agentflow",
+   "verdict": "ok",
+   "stars": 1,
+   "desc": "Lightweight task state machine engine with MCP stdio interface"
+  },
+  {
    "repo": "w210548735-art/dsh-session-collaboration",
    "name": "w210548735-art-dsh-session-collaboration",
    "verdict": "ok",
@@ -17837,6 +17900,13 @@
    "verdict": "pending",
    "stars": 2,
    "desc": "DSH plugin for live notification"
+  },
+  {
+   "repo": "ttmouse/dsh-dingtalk-channel",
+   "name": "ttmouse-dsh-dingtalk-channel",
+   "verdict": "ok",
+   "stars": 2,
+   "desc": "DingTalk IM channel for DeepSeek Harness: Stream-mode bot that turns each chat into a tool-capable agent — emo"
   },
   {
    "repo": "wendayuan/dsh-weixin",
@@ -27919,6 +27989,13 @@
    "desc": "Publish HTML from DeepSeek Harness to a private, live URL"
   },
   {
+   "repo": "superrabbit123/dsh-viper-recap",
+   "name": "superrabbit123-dsh-viper-recap",
+   "verdict": "incompatible",
+   "stars": 1,
+   "desc": "dsh-viper-recap is a Plugin."
+  },
+  {
    "repo": "syncended/deepseek-harness-picture-in-picture",
    "name": "syncended-deepseek-harness-picture-in-picture",
    "verdict": "ok",
@@ -27959,6 +28036,13 @@
    "verdict": "ok",
    "stars": 1,
    "desc": "—"
+  },
+  {
+   "repo": "trapstreet/dsh-trapstreet",
+   "name": "trapstreet-dsh-trapstreet",
+   "verdict": "ok",
+   "stars": 1,
+   "desc": "Check which DeepSeek Harness plugins actually loaded, and look up public evaluation boards on trapstreet.run"
   },
   {
    "repo": "TTTPOB/dsh-task-models",
