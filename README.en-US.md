@@ -100,13 +100,13 @@ Everything catalog-shaped below — the featured board, bundles, category direct
 
 <!-- AUTO:featured:START -->
 
-> 人工策展 56 款插件，按 11 类分组、类内按星标排序；星标每 6 小时自动刷新（成员调整请提 PR 修改 data/awesome-50.json）。数据截至 2026-08-29 06:52（UTC+8）。
+> 人工策展 56 款插件，按 11 类分组、类内按星标排序；星标每 6 小时自动刷新（成员调整请提 PR 修改 data/awesome-50.json）。数据截至 2026-08-29 07:02（UTC+8）。
 
 ### 🚀 智力增强 Booster（7）
 
 | 插件 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
-| [dsh-routing-suite](https://github.com/yjh051108/dsh-routing-suite) | 6929 | — | 注入器 × 思维模式路由套装：免重启运行时注入器 + 任务感知推理模式路由预设（P1-P23 实测） |
+| [dsh-routing-suite](https://github.com/yjh051108/dsh-routing-suite) | 6929 | 需适配 | 注入器 × 思维模式路由套装：免重启运行时注入器 + 任务感知推理模式路由预设（P1-P23 实测） |
 | [ouroboros](https://github.com/Q00/ouroboros) | 5721 | 未测 | Agent OS：agent 自我变强、人只守底线——自进化运行时（5.7k★；rc.8 实测 ✅） |
 | [harmony-next.skills](https://github.com/linhay/harmony-next.skills) | 342 | ✅ | 技能驱动的工作流增强 |
 | [superpowers-dsh](https://github.com/LayneChai/superpowers-dsh) | 106 | ✅ | TDD/调试/计划等开发技能集 |
@@ -120,7 +120,7 @@ Everything catalog-shaped below — the featured board, bundles, category direct
 |---|---:|---|---|
 | [dsh-web-ui](https://github.com/zhu1090093659/dsh-web-ui) | 6385 | ✅ | Web UI 增强与皮肤合集：任务看板、Git 图、移动端、皮肤中心 |
 | [DSH-better-sidebar](https://github.com/omdsh-dev/DSH-better-sidebar) | 3067 | ✅ | 侧边栏变完整工作台：文件编辑/终端/Git/子代理，支持三方注册扩展页 |
-| [dsh-genui](https://github.com/omdsh-dev/dsh-genui) | 363 | ✅ | GenUI 内联组件：图表/表单/测验/3D 场景 + action 事件环 |
+| [dsh-genui](https://github.com/omdsh-dev/dsh-genui) | 363 | 需适配 | GenUI 内联组件：图表/表单/测验/3D 场景 + action 事件环 |
 | [dsh-visualize](https://github.com/Nagi-ovo/dsh-visualize) | 225 | ✅ | 对话中生成交互式可视化卡片 |
 | [dsh-annotation](https://github.com/omdsh-dev/dsh-annotation) | 101 | ✅ | 划选文字→批注→随消息发送，回复逐条对照 |
 | [Liang-Saint-Slider](https://github.com/BruzWJ/Liang-Saint-Slider) | 95 | ✅ | 模型与思考力度选择滑条 |
@@ -130,17 +130,17 @@ Everything catalog-shaped below — the featured board, bundles, category direct
 
 | 插件 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
-| [dsh-desktop](https://github.com/anywhere-labs/dsh-desktop) | 21534 | 待定 | 生态最高星桌面客户端（21.5k★，原 deepseek-harness-desktop 再改名）：万物皆插件、桌面本身也是插件（雷达重测中；rc.8 源码路径实测 ✅） |
+| [dsh-desktop](https://github.com/anywhere-labs/dsh-desktop) | 21537 | ✅ | 生态最高星桌面客户端（21.5k★，原 deepseek-harness-desktop 再改名）：万物皆插件、桌面本身也是插件（雷达重测中；rc.8 源码路径实测 ✅） |
 | [deepseek-harness-desktop](https://github.com/hairyf/deepseek-harness-desktop) | 1356 | ✅ | Tauri 桌面版：5MB 安装包零环境配置，Win/macOS/Linux |
 | [Bigfish](https://github.com/turtle2209/Bigfish) | 302 | 需适配 | 第三方桌面端：内置 Node 运行时，双击即用 |
-| [oh-dsh](https://github.com/hust-open-atom-club/oh-dsh) | 288 | ✅ | 社区发行版：桌面/Web/TUI 三形态统一体验 |
-| [dsh-tianshu-tui](https://github.com/huiliyi37/dsh-tianshu-tui) | 246 | 待定 | 自研 ANSI 渲染的极简终端 UI |
+| [oh-dsh](https://github.com/hust-open-atom-club/oh-dsh) | 288 | 待定 | 社区发行版：桌面/Web/TUI 三形态统一体验 |
+| [dsh-tianshu-tui](https://github.com/huiliyi37/dsh-tianshu-tui) | 246 | 需适配 | 自研 ANSI 渲染的极简终端 UI |
 
 ### 👁 视觉与多模态（4）
 
 | 插件 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
-| [modlens](https://github.com/liustack/modlens) | 3740 | ✅ | 生态第一个视觉插件，视觉工作流的基准方案 |
+| [modlens](https://github.com/liustack/modlens) | 3741 | ✅ | 生态第一个视觉插件，视觉工作流的基准方案 |
 | [agent-vision-toolkit](https://github.com/Anionex/agent-vision-toolkit) | 1117 | ✅ | 通用 agent 视觉工具箱：多图理解/图片问答/前端 UI 还原/GUI 自动化（dsh-vision-toolkit 同作者） |
 | [dsh-vision-router](https://github.com/ysr666/dsh-vision-router) | 1015 | ✅ | 内置免费视觉模型路由，给文本 agent 装眼睛 |
 | [dsh-vision-toolkit](https://github.com/Anionex/dsh-vision-toolkit) | 838 | 需适配 | 带意图图片问答、长截图 OCR、UI 还原 |
@@ -165,21 +165,21 @@ Everything catalog-shaped below — the featured board, bundles, category direct
 | [api-relay-audit](https://github.com/toby-bridges/api-relay-audit) | 817 | ✅ | AI API 中继/LLM 代理本地安全审计，产出 Markdown 报告（rc.8 实测 ✅） |
 | [claude-paper](https://github.com/alaliqing/claude-paper) | 330 | ✅ | 跨 agent 论文工具箱：速读摘要/深度研读材料/代码演示 + 本地 Web 阅读器 |
 | [mobius](https://github.com/nutshellai-tech/mobius) | 286 | ✅ | 编码增强 |
-| [dsh-remote](https://github.com/flymysql/dsh-remote) | 39 | ✅ | 多机远程工作区：SSH 连接管理、远程目录→本地镜像→原生工作区收养、SFTP 双向同步与 rw_* 工具族 |
+| [dsh-remote](https://github.com/flymysql/dsh-remote) | 39 | 需适配 | 多机远程工作区：SSH 连接管理、远程目录→本地镜像→原生工作区收养、SFTP 双向同步与 rw_* 工具族 |
 
 ### 🧠 记忆与上下文（3）
 
 | 插件 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
 | [EverOS](https://github.com/EverMind-AI/EverOS) | 12518 | 未测 | 全 agent 便携记忆层：本地优先、Markdown-native（12.4k★ 记忆域之最；rc.8 实测 ✅） |
-| [mnemon](https://github.com/mnemon-dev/mnemon) | 535 | ✅ | 跨 agent、本地优先的持久记忆 |
-| [dsh-memory-evolve](https://github.com/csyangwen/dsh-memory-evolve) | 256 | ✅ | 五轨记忆 + git 分支托管 + 后台自我进化 |
+| [mnemon](https://github.com/mnemon-dev/mnemon) | 535 | 需适配 | 跨 agent、本地优先的持久记忆 |
+| [dsh-memory-evolve](https://github.com/csyangwen/dsh-memory-evolve) | 256 | 需适配 | 五轨记忆 + git 分支托管 + 后台自我进化 |
 
 ### 📡 消息通讯与 IM（4）
 
 | 插件 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
-| [dsh-lark](https://github.com/omdsh-dev/dsh-lark) | 47 | ✅ | 飞书 IM bot 频道（官方渠道插件） |
+| [dsh-lark](https://github.com/omdsh-dev/dsh-lark) | 47 | 需适配 | 飞书 IM bot 频道（官方渠道插件） |
 | [dsh-message-edit](https://github.com/Moeblack/dsh-message-edit) | 44 | ✅ | 分支式消息编辑、reroll、重试、多版本 |
 | [dsh-interconnect](https://github.com/Chinesezjc/dsh-interconnect) | 34 | 待定 | 跨 DSH 实例消息/事件交接 |
 | [ChatCCC](https://github.com/wzj998/ChatCCC) | 22 | ✅ | 飞书/微信聊天控制 DSH / Claude Code |
@@ -190,7 +190,7 @@ Everything catalog-shaped below — the featured board, bundles, category direct
 |---|---:|---|---|
 | [dsh-browser](https://github.com/Lum1104/dsh-browser) | 504 | 需适配 | Chrome 侧栏扩展，让 DSH 直接操作浏览器 |
 | [dsh-openpencil](https://github.com/ZSeven-W/dsh-openpencil) | 154 | ✅ | OpenPencil 设计稿预览与编辑 |
-| [dsh-web-search-pro](https://github.com/anweat/dsh-web-search-pro) | 54 | ✅ | 增强型持久网页搜索 |
+| [dsh-web-search-pro](https://github.com/anweat/dsh-web-search-pro) | 54 | 需适配 | 增强型持久网页搜索 |
 | [dsh-plugin-mineru](https://github.com/HuanLinOTO/dsh-plugin-mineru) | 43 | 待定 | PDF/图片/Office 转结构化 Markdown |
 
 ### 🛒 市场与管理（4）
@@ -213,7 +213,7 @@ Everything catalog-shaped below — the featured board, bundles, category direct
 | [whale-girl](https://github.com/vlln/whale-girl) | 297 | ✅ | QQ 宠物形态桌宠：可拖拽/投喂/玩耍 |
 | [dsh-kun-like-pet](https://github.com/liyupi/dsh-kun-like-pet) | 86 | ✅ | 小坤桌宠：随 Agent 工作状态切换 9 种动作 |
 
-> 实测 = 雷达 k8s 运行级判定（✅ 可用 · 待定 · 需适配 · 未测，四档口径见下文）；rc.8 + v4flash 源码路径重测（2026-08-21，50 仓 + 对方清单高星 22 仓）证据见 [data/rc8-retest-20260821/](data/rc8-retest-20260821/) 与 [PLUGINS-ALL.md](PLUGINS-ALL.md)；安装第三方插件前请审查源码并固定 commit。
+> 实测 = 雷达 k8s 运行级判定（✅ 可用 · 待定 · 需适配 · 未测，四档口径见下文），**本列由 bot 按最新快照自动回写**，榜内成员走插队重测通道优先轮测；rc.8 + v4flash 源码路径重测（2026-08-21，50 仓 + 对方清单高星 22 仓）证据见 [data/rc8-retest-20260821/](data/rc8-retest-20260821/) 与 [PLUGINS-ALL.md](PLUGINS-ALL.md)；安装第三方插件前请审查源码并固定 commit。
 
 <!-- AUTO:featured:END -->
 
@@ -221,7 +221,7 @@ Everything catalog-shaped below — the featured board, bundles, category direct
 
 <!-- AUTO:bundles:START -->
 
-> 人工策展 16 个整合包：内测成员作品置顶，其下按预设套件 / 能力合集 / 发行版 / 配方管理器四形态分组，类内按星标排序；星标每 6 小时自动刷新（成员调整请提 PR 修改 data/bundles.json）。数据截至 2026-08-29 06:52（UTC+8）。
+> 人工策展 16 个整合包：内测成员作品置顶，其下按预设套件 / 能力合集 / 发行版 / 配方管理器四形态分组，类内按星标排序；星标每 6 小时自动刷新（成员调整请提 PR 修改 data/bundles.json）。数据截至 2026-08-29 07:02（UTC+8）。
 
 ### ⭐ 内测成员作品（1）
 
@@ -233,10 +233,10 @@ Everything catalog-shaped below — the featured board, bundles, category direct
 
 | 整合包 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
-| [dsh-routing-suite](https://github.com/yjh051108/dsh-routing-suite) | 6929 | ✅ | 注入器 × 思维模式路由套装：免重启运行时注入器 + P1-P23 任务感知推理模式路由（rc.8 实测 ✅） |
+| [dsh-routing-suite](https://github.com/yjh051108/dsh-routing-suite) | 6929 | 需适配 | 注入器 × 思维模式路由套装：免重启运行时注入器 + P1-P23 任务感知推理模式路由（rc.8 实测 ✅） |
 | [dsh-anchored-standard](https://github.com/xiaobright/dsh-anchored-standard) | 3789 | ✅ | 两阶段预设：极简模式对齐启动 → 全量装载（rc.8 实测 ✅） |
-| [dsh-gitbash-preset](https://github.com/liceses/dsh-gitbash-preset) | 138 | 未测 | Windows 一键「极简模式 Git Bash」预设：把自带极简模式的 bash 调用映射到 Git Bash |
-| [dsh-roleplay-preset](https://github.com/oliblue-evan/dsh-roleplay-preset) | 19 | 未测 | 沉浸式角色扮演预设：零工具纯对话、酒馆式演出格式、文件记忆库 |
+| [dsh-gitbash-preset](https://github.com/liceses/dsh-gitbash-preset) | 138 | ✅ | Windows 一键「极简模式 Git Bash」预设：把自带极简模式的 bash 调用映射到 Git Bash |
+| [dsh-roleplay-preset](https://github.com/oliblue-evan/dsh-roleplay-preset) | 19 | 待定 | 沉浸式角色扮演预设：零工具纯对话、酒馆式演出格式、文件记忆库 |
 
 ### 🧩 能力合集（8）
 
@@ -247,8 +247,8 @@ Everything catalog-shaped below — the featured board, bundles, category direct
 | [DeepSec](https://github.com/Unclecheng-li/DeepSec) | 355 | 未测 | AI 安全攻防一体化合集：Android · Web · Native · 协议 · 恶意代码 · AI 六域 |
 | [harmony-next.skills](https://github.com/linhay/harmony-next.skills) | 342 | ✅ | 技能驱动的工作流增强（rc.8 实测 ✅） |
 | [superpowers-dsh](https://github.com/LayneChai/superpowers-dsh) | 106 | ✅ | TDD/调试/计划等开发技能集（rc.8 实测 ✅） |
-| [dsh-reverse-skill](https://github.com/dhicoc/dsh-reverse-skill) | 89 | 未测 | 完整逆向工程技能合集（85 个 SKILL.md） |
-| [dsh-daily-kit](https://github.com/zhouwei713/dsh-daily-kit) | 2 | 未测 | 日常插件集合：16 插件 monorepo + 4 bundle，含 596 单测 |
+| [dsh-reverse-skill](https://github.com/dhicoc/dsh-reverse-skill) | 89 | ✅ | 完整逆向工程技能合集（85 个 SKILL.md） |
+| [dsh-daily-kit](https://github.com/zhouwei713/dsh-daily-kit) | 2 | ✅ | 日常插件集合：16 插件 monorepo + 4 bundle，含 596 单测 |
 | [dsh-plugins](https://github.com/MkaliezZ/dsh-plugins) | 0 | 未测 | DSH 插件家族索引：agentfuse / evidence-task-board / test-normalizer 等 16 插件合集（monorepo） |
 
 ### 📀 发行版（2）
@@ -256,13 +256,13 @@ Everything catalog-shaped below — the featured board, bundles, category direct
 | 整合包 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
 | [Bigfish](https://github.com/turtle2209/Bigfish) | 302 | 未测 | 第三方桌面端发行版：内置 Node 运行时，双击即用（雷达判需适配——发行版形态非单插件安装） |
-| [oh-dsh](https://github.com/hust-open-atom-club/oh-dsh) | 288 | 未测 | 社区发行版：桌面/Web/TUI 三形态统一体验 |
+| [oh-dsh](https://github.com/hust-open-atom-club/oh-dsh) | 288 | 待定 | 社区发行版：桌面/Web/TUI 三形态统一体验 |
 
 ### 📑 配方管理器（1）
 
 | 整合包 | ⭐ | 实测 | 说明 |
 |---|---:|---|---|
-| [dsh-recipe](https://github.com/863683348/dsh-recipe) | 1 | 未测 | 场景配方管理器（插件界的 dotfiles）：列出/搜索/安装插件组合（形态稀缺，豁免星标门槛） |
+| [dsh-recipe](https://github.com/863683348/dsh-recipe) | 1 | 需适配 | 场景配方管理器（插件界的 dotfiles）：列出/搜索/安装插件组合（形态稀缺，豁免星标门槛） |
 
 > 实测口径同精选榜；整合包安装方式以各仓库 README 为准（预设类多为 `dsh plugin add` 后在设置中启用，发行版类需按其自身安装器操作）。
 

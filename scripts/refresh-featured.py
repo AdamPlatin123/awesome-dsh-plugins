@@ -23,8 +23,32 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DRY = '--dry' in sys.argv
 CURATED = os.path.join(ROOT, 'data', 'awesome-50.json')
 BUNDLES = os.path.join(ROOT, 'data', 'bundles.json')
+SNAP_DIR = os.path.join(ROOT, 'data', 'snapshots')
 REFRESH_LABEL = '每 6 小时自动刷新'
 VERDICT_MARK = {'ok': '✅', 'pending': '待定', 'incompatible': '需适配', 'untested': '未测', None: '—'}
+# 快照四档 → 榜单判定键（渲染期覆盖 JSON 种子值；快照缺失/未定位时回落种子）
+SNAP_VERDICT = {'✅ 运行级可用': 'ok', '运行级可用': 'ok', '❌ 运行级不兼容': 'incompatible',
+                '运行级不兼容': 'incompatible', '⚠️ 待定': 'pending', '待定': 'pending',
+                '⏳ 未测': 'untested', '未测': 'untested'}
+
+
+def radar_verdicts():
+    """最新快照 catalog_entries → {owner/repo 小写: 判定键}；无快照返回空表（渲染回落 JSON 种子）。"""
+    try:
+        snaps = sorted(f for f in os.listdir(SNAP_DIR) if f.endswith('.json'))
+        data = json.load(open(os.path.join(SNAP_DIR, snaps[-1]), encoding='utf-8'))
+        out = {}
+        for e in data.get('catalog_entries') or []:
+            url = str(e.get('url', ''))
+            if 'github.com/' in url:
+                repo = url.split('github.com/', 1)[1].strip('/').lower()
+                v = SNAP_VERDICT.get(str(e.get('verdict', '')).strip())
+                if repo and v:
+                    out[repo] = v
+        return out
+    except Exception as e:
+        print(f'[warn] 快照判定加载失败，回落 JSON 种子: {e}')
+        return {}
 
 TOKEN = os.environ.get('GH_TOKEN') or subprocess.run(
     ['gh', 'auth', 'token'], capture_output=True, text=True).stdout.strip()
@@ -59,6 +83,8 @@ def fetch(repo):
 def main():
     data = json.load(open(CURATED, encoding='utf-8'))
     bdata = json.load(open(BUNDLES, encoding='utf-8'))
+    rv = radar_verdicts()
+    print(f'[verdict] 快照判定映射 {len(rv)} 条（渲染期覆盖，缺者回落 JSON 种子）')
     cats = data['categories']
     forms = bdata['forms']
     repos = [p['repo'] for c in cats for p in c['plugins']]
@@ -104,9 +130,10 @@ def main():
         for p in ranked:
             desc = p['desc'].replace('|', '\\|')
             parts.append(f"| [{p['name']}](https://github.com/{p['repo']}) | {stars[p['repo']]} |"
-                         f" {VERDICT_MARK.get(p.get('verdict'), '—')} | {desc} |")
+                         f" {VERDICT_MARK.get(rv.get(p['repo'].lower(), p.get('verdict')), '—')} | {desc} |")
         parts.append('')
-    parts.append('> 实测 = 雷达 k8s 运行级判定（✅ 可用 · 待定 · 需适配 · 未测，四档口径见下文）；'
+    parts.append('> 实测 = 雷达 k8s 运行级判定（✅ 可用 · 待定 · 需适配 · 未测，四档口径见下文），'
+                 '**本列由 bot 按最新快照自动回写**，榜内成员走插队重测通道优先轮测；'
                  'rc.8 + v4flash 源码路径重测（2026-08-21，50 仓 + 对方清单高星 22 仓）证据见 '
                  '[data/rc8-retest-20260821/](data/rc8-retest-20260821/) 与 [PLUGINS-ALL.md](PLUGINS-ALL.md)；'
                  '安装第三方插件前请审查源码并固定 commit。')
@@ -129,7 +156,7 @@ def main():
         for p in ranked:
             desc = p['desc'].replace('|', '\\|')
             bparts.append(f"| [{p['name']}](https://github.com/{p['repo']}) | {stars[p['repo']]} |"
-                          f" {VERDICT_MARK.get(p.get('verdict'), '—')} | {desc} |")
+                          f" {VERDICT_MARK.get(rv.get(p['repo'].lower(), p.get('verdict')), '—')} | {desc} |")
         bparts.append('')
     bparts.append('> 实测口径同精选榜；整合包安装方式以各仓库 README 为准（预设类多为 `dsh plugin add` 后在设置中启用，发行版类需按其自身安装器操作）。')
     bblock = '\n'.join(bparts) + '\n\n<!-- AUTO:bundles:END -->'
