@@ -1,17 +1,17 @@
 {
  "schema": "dsh-radar/v1",
- "generated_at": "2026-08-28T11:01:31Z",
- "snapshot_run_id": "20260828T110001Z",
+ "generated_at": "2026-08-28T11:15:55Z",
+ "snapshot_run_id": "20260828T111501Z",
  "stats": {
-  "ok": 3155,
-  "incompatible": 1015,
-  "pending": 703,
+  "ok": 3189,
+  "incompatible": 1029,
+  "pending": 711,
   "untested": 121,
   "gone": 133,
   "ambiguous": 103,
-  "unlocated": 1940
+  "unlocated": 1975
  },
- "total_listed": 4994,
+ "total_listed": 5050,
  "data": {
   "plugins_all": "data/plugins-all.json",
   "snapshots_dir": "data/snapshots/"
