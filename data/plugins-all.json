@@ -1,6 +1,6 @@
 {
  "schema": "dsh-radar/v1",
- "generated_at": "2026-08-28T07:15:24Z",
+ "generated_at": "2026-08-28T08:00:22Z",
  "plugins": [
   {
    "repo": "ganyuanran/aegis",
@@ -1195,7 +1195,7 @@
   {
    "repo": "huiliyi37/dsh-tianshu-tui",
    "name": "dsh-tianshu-tui",
-   "verdict": "ok",
+   "verdict": "pending",
    "stars": 211,
    "desc": "官方 DeepSeek Harness 的交互式终端 UI 插件：自研 ANSI 极简交互渲染、流式 Markdown/工具卡、16+ 主题、slash 命令与选择器、输入历史与本地偏好持久化、LSP 诊断、memory"
   },
@@ -3956,6 +3956,13 @@
    "verdict": "ok",
    "stars": 3,
    "desc": "A DeepSeek Harness (dsh) bundle that shows OpenCode Go subscription usage in the Web GUI's composer dock — the"
+  },
+  {
+   "repo": "valuz-ai/dsh-valuz-genui",
+   "name": "valuz-ai-dsh-valuz-genui",
+   "verdict": "ok",
+   "stars": 3,
+   "desc": "DeepSeek Harness plugin: generate_ui — the model authors A2UI documents rendered as interactive surfaces in th"
   },
   {
    "repo": "wuwuzhige-sudo/dsh-remote-acces",
@@ -13156,6 +13163,13 @@
    "desc": "DeepSeek Harness Token 余额监控插件：鲸鱼娘待机/扣费/复苏动画、峰谷计费、连续扣费飘字与会话费用统计"
   },
   {
+   "repo": "dream-num/dsh-univer-plugin",
+   "name": "dsh-univer-plugin",
+   "verdict": "untested",
+   "stars": 129,
+   "desc": "为 DeepSeek Harness 打造一个真正的办公环境。Univer Office 插件将电子表格、文档、幻灯片、画布、多维表格等汇聚到同一个运行时——数据互联、修改经过校验、变更按版本管理，并以隔离工作树支持多 Agent 协作。"
+  },
+  {
    "repo": "eri64/dsh-claude-ux",
    "name": "eri64-dsh-claude-ux",
    "verdict": "ok",
@@ -16628,6 +16642,13 @@
    "desc": "Deterministic aggregate media budgets and safe request projections for DeepSeek Harness (dsh)"
   },
   {
+   "repo": "useorgx/orgx-deepseek-harness-plugin",
+   "name": "useorgx-orgx-deepseek-harness-plugin",
+   "verdict": "incompatible",
+   "stars": 0,
+   "desc": "OrgX Work Ledger, MCP tools, skills, proof, and governed execution for DeepSeek Harness"
+  },
+  {
    "repo": "wangweber/dsh-my-todo",
    "name": "wangweber-dsh-my-todo",
    "verdict": "incompatible",
@@ -18161,6 +18182,13 @@
    "desc": "接口测试生成：解析 OpenAPI 3.x，生成覆盖成功/缺参/非法枚举的 pytest/vitest 接口测试骨架"
   },
   {
+   "repo": "walnut-a/dsh-user-message-navigation",
+   "name": "walnut-a-dsh-user-message-navigation",
+   "verdict": "ok",
+   "stars": 1,
+   "desc": "DSH User Message Minimap（用户消息导航轨）— 长对话中的用户指令快速导航插件"
+  },
+  {
    "repo": "werifu/dsh-oai-oauth",
    "name": "dsh-oai-oauth",
    "verdict": "ok",
@@ -18495,13 +18523,6 @@
    "verdict": "incompatible",
    "stars": 2821,
    "desc": "竹知了 —— 一转就哇哇叫的传统玩具，Web 模拟版"
-  },
-  {
-   "repo": "dream-num/dsh-univer-plugin",
-   "name": "dsh-univer-plugin",
-   "verdict": "untested",
-   "stars": 129,
-   "desc": "Univer 办公插件：在 DSH 中创建/编辑/检查/交付表格、文档、演示文稿、多维表格和画布，支持 xlsx/docx/pptx 导入导出、实时预览与 worktree 审阅；npm `dsh-univer-office` 0.2.5"
   },
   {
    "repo": "chen731215-dev/dsh-tavern",
@@ -22464,6 +22485,13 @@
    "verdict": "ok",
    "stars": 1,
    "desc": "DeepSeek Harness Desktop"
+  },
+  {
+   "repo": "wang1413520/deepseek-harness-desktop",
+   "name": "wang1413520-deepseek-harness-desktop",
+   "verdict": "ok",
+   "stars": 1,
+   "desc": "—"
   },
   {
    "repo": "wang291010/deepseek-harness-desktop",
@@ -26818,6 +26846,13 @@
    "verdict": "pending",
    "stars": 2,
    "desc": "—"
+  },
+  {
+   "repo": "web-casa/dsh-plugin-pkgseek",
+   "name": "web-casa-dsh-plugin-pkgseek",
+   "verdict": "ok",
+   "stars": 2,
+   "desc": "PkgSeek Linux package, command and CVE intelligence as native DeepSeek Harness (dsh) tools"
   },
   {
    "repo": "wefio/dsh-cache-miss",
