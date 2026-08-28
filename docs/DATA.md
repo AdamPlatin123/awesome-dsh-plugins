@@ -13,7 +13,7 @@
 消费示例：
 
 ```sh
-curl -s https://raw.githubusercontent.com/AdamPlatin123/awesome-dsh-plugins/main/data/latest.json
+curl -s https://raw.githubusercontent.com/AdamPlatin123/dsh-plugin-radar/main/data/latest.json
 ```
 
 ## 字段
