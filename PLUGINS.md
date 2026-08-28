@@ -163,6 +163,7 @@
 | dsh-humanize | [Guard42/dsh-humanize](https://github.com/Guard42/dsh-humanize) | Humanize 模式 agent 预设：把多阶段目标编排为可恢复的 Flow（draft→check→lock→终局评审→run/resume），SHA-256 流锁身份 + HMAC 终局门禁 + 事件溯源断点续跑；15 个 flow_* 工具，纯 `node:` 内置零 npm 依赖，`dsh plugin add github:Guard42/dsh-humanize` 即装，v0.1.1 起兼容原版 harness 持久层（不写自定义会话事件） | 待测 |
 | dsh-forge | [maxmilian/dsh-forge](https://github.com/maxmilian/dsh-forge) | 自建 Gitea / Forgejo 的只读工具，走两者共用的 REST API：实例版本、仓库列表、议题与 PR 搜索和读取、PR diff 与变更文件，以及 Actions 运行、任务与纯文本日志；11 个工具全部只读，npm `@maxhsu/dsh-forge` 0.3.3 | 待测 |
 | dsh-backup | [xiaoyuyu6420/dsh-backup](https://github.com/xiaoyuyu6420/dsh-backup) | 一键备份与恢复 ~/.dsh 用户数据：定时自动备份（重启不中断）、sha256 完整性校验与轮换、宿主升级前自动快照、会话日志体检与定点修复（doctor）、DSH 起不来也能用的零依赖救援通道、凭据默认脱敏只存本机 vault、跨机云端同步；npm `@xiaoyuyu6420/dsh-backup` 0.9.0 | 待测 |
+| weiwen-law-dsh | [Shaky77/weiwen-law-dsh](https://github.com/Shaky77/weiwen-law-dsh) | 通用型因果约束中间件（白箱呈现）：R→S→D→H→M 五元因果链白箱裁决引擎，给 DSH Agent 挂 6 白箱工具 + 3 道硬性闸门（模型之外、执行之内，不侵内 H）；跨 11 场景双模型决策层 100% 收敛、引擎确定性 100% 实测（npm test 44/44 基础版 + 活系统 101 单测全绿） | 待测 |
 | dsh-personal-directive | [PerryLink/dsh-personal-directive](https://github.com/PerryLink/dsh-personal-directive) | 个人指令注入插件：Web 顶部运行时开关切换自定义系统提示词段，中性占位指令随包发布（Minglink/dsh-infinite-gen-1 的框架再版，上游归属保留） | 待测 |
 ## 🧰 插件集
 
