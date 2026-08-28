@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-26T22:29:41+00:00",
+  "generated_at": "2026-08-28T07:43:38+00:00",
   "source": "PLUGINS.md",
-  "count": 252,
+  "count": 253,
   "repos": [
     "1na-ko/dsh-hdc-bridge",
     "263311487-ux/dsh-verify",
@@ -245,6 +245,7 @@
     "wulun811/LiuHe",
     "wz-heng/dsh-feishu-bridge",
     "xiaobright/dsh-anchored-standard",
+    "xiaoyuyu6420/dsh-backup",
     "yangzhe1003/dsh-web-search-firecrawl",
     "yjh051108/dsh-routing-suite",
     "ysr666/dsh-vision-router",
