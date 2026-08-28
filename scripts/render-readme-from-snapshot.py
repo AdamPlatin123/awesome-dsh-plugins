@@ -96,11 +96,15 @@ def main():
     v, d, c, t, dl = (snap[k] for k in ("verdict", "discovery", "clone", "test", "deliver"))
     topo = snap.get("topology", {})
 
-    # ⓪ 全量清单随每轮快照重生成（PLUGINS-ALL.md），并取九类分布供目录摘要卡使用
+    # ⓪ 全量清单随每轮快照重生成（PLUGINS-ALL.md），并取九类分布供目录摘要卡使用；
+    #    global.un = 登记兜底口径的未测数（快照 catalog 不产 ⏳，磁贴未测恒 0 的修复数据源）
+    g_un = None
     try:
         sys.path.insert(0, str(Path(__file__).resolve().parent))
         from gen_plugins_all import main as gen_all
-        domain_stats = gen_all() or {}
+        stats = gen_all() or {}
+        domain_stats = stats.get('domains') or stats   # 兼容旧返回结构（裸 dict）
+        g_un = (stats.get('global') or {}).get('un')
     except Exception as _e:
         print(f"[render] WARN 清单生成跳过: {_e}")
         domain_stats = {}
@@ -117,7 +121,7 @@ def main():
         n_ok = vcnt.get("✅ 运行级可用", 0) or vcnt.get("运行级可用", 0)
         n_bad = vcnt.get("❌ 运行级不兼容", 0) or vcnt.get("运行级不兼容", 0)
         n_inc = vcnt.get("⚠️ 待定", 0) or vcnt.get("待定", 0)
-        n_un = vcnt.get("⏳ 未测", 0)
+        n_un = g_un if isinstance(g_un, int) else vcnt.get("⏳ 未测", 0)
         for pat, val in ((r"(badge/(?:✅_)?运行级可用-)\d+", n_ok), (r"(badge/(?:✅_)?runtime_OK-)\d+", n_ok),
                          (r"(badge/(?:❌_)?运行级不兼容-)\d+", n_bad), (r"(badge/(?:❌_)?incompatible-)\d+", n_bad),
                          (r"(badge/(?:⚠️_)?待定-)\d+", n_inc), (r"(badge/(?:⚠️_)?pending-)\d+", n_inc),
