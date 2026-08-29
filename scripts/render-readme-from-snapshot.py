@@ -116,19 +116,32 @@ def main():
         t_readme = re.sub(r"badge/confirmed-\d+", f"badge/confirmed-{fmt(c.get('plugins'))}", t_readme)
         t_readme = re.sub(r"badge/tested-\d+", f"badge/tested-{fmt(v.get('total'))}", t_readme)
 
-        # ①b 三态汇总磁贴（与榜单磁贴同体系：flat-square + labelColor 左彩右灰，3 字标签严格等宽；
-        #     累积口径：catalog_entries 全量统计，待定+未测合并为「待测试」；含中英两组徽章 URL）
+        # ①b 三色磁贴（整行重建）：绿=可用 红→黄=需适配（原「不兼容」） 灰=待测（待定+未测）；
+        #     左半「档名 数量」，右半 = runner 镜像版本（快照 verdict.cur_image，与 results 的
+        #     runner_image_digest 同源统一；shields 徽章 message 中的 '-' 按惯例转义 '--'）
         vcnt = Counter(e.get("verdict", "") for e in (snap.get("catalog_entries") or []))
         n_ok = vcnt.get("✅ 运行级可用", 0) or vcnt.get("运行级可用", 0)
         n_bad = vcnt.get("❌ 运行级不兼容", 0) or vcnt.get("运行级不兼容", 0)
         n_inc = vcnt.get("⚠️ 待定", 0) or vcnt.get("待定", 0)
         n_un = g_un if isinstance(g_un, int) else vcnt.get("⏳ 未测", 0)
-        n_tbd = (n_inc or 0) + (n_un or 0)
-        for pat, val in (
-                (r"(badge/已兼容-)\d+", n_ok), (r"(badge/compatible-)\d+", n_ok),
-                (r"(badge/需适配-)\d+", n_bad), (r"(badge/adapt-)\d+", n_bad),
-                (r"(badge/待测试-)\d+", n_tbd), (r"(badge/untested-)\d+", n_tbd)):
-            t_readme = re.sub(pat, rf"\g<1>{val}", t_readme)
+        img = str(v.get("cur_image", "") or "").strip()
+        ver = (img.split(":", 1)[1] if ":" in img else img).replace("-", "--")
+        n_test = n_inc + n_un
+
+        def _badge(label, count, color, ver_str):
+            msg = f"{label}_{count}-{ver_str}" if ver_str else f"{label}-{count}"
+            return f"https://img.shields.io/badge/{msg}-{color}"
+
+        if is_zh:
+            tiles = (f"[![运行级可用]({_badge('运行级可用', n_ok, 'brightgreen', ver)})](#2-看懂状态统一四档口径) "
+                     f"[![待测]({_badge('待测', n_test, 'lightgrey', ver)})](#2-看懂状态统一四档口径) "
+                     f"[![需适配]({_badge('需适配', n_bad, 'yellow', ver)})](#2-看懂状态统一四档口径)")
+            t_readme = re.sub(r"^\[!\[运行级可用\][^\n]*$", lambda _: tiles, t_readme, count=1, flags=re.M)
+        else:
+            tiles = (f"[![runtime OK]({_badge('runtime_OK', n_ok, 'brightgreen', ver)})](#2-understand-status-unified-4-tier-scale) "
+                     f"[![to test]({_badge('to_test', n_test, 'lightgrey', ver)})](#2-understand-status-unified-4-tier-scale) "
+                     f"[![needs adapt]({_badge('needs_adapt', n_bad, 'yellow', ver)})](#2-understand-status-unified-4-tier-scale)")
+            t_readme = re.sub(r"^\[!\[runtime OK\][^\n]*$", lambda _: tiles, t_readme, count=1, flags=re.M)
         t_readme = re.sub(r"(（当前 `)[0-9A-Za-z]+(`)", rf"\g<1>{snap['run_id']}\g<2>", t_readme, count=1)
         t_readme = re.sub(r"(currently `)[0-9A-Za-z]+(`)", rf"\g<1>{snap['run_id']}\g<2>", t_readme, count=1)
 
