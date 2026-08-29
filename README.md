@@ -12,7 +12,7 @@
 </p>
 
 
-**开源的 DeepSeek Harness 插件生态雷达——持续发现、运行级验证、15 分钟快照。你看到的插件目录，只是它自动生成的 artifact。**
+**开源的 DeepSeek Harness 插件生态雷达——持续发现、运行级验证、15 分钟快照。自动生成 artifact同步在在本repo[PLUGINS-ALL.md](PLUGINS-ALL.md)中更新。**
 
 
 安装前就知道哪个能用，不用自己踩坑。
