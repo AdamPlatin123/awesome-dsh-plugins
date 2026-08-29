@@ -59,10 +59,26 @@ def radar_version():
         return ''
 
 
+_TILE_W = {}
+
+
+def _probe_width(url):
+    """探测 shields SVG 的 intrinsic 宽度（按 URL 缓存），用于钉死 <img> 尺寸防 GitHub 表格自动缩放。"""
+    if url not in _TILE_W:
+        try:
+            p = subprocess.run(['curl', '-s', '--max-time', '15', url],
+                               capture_output=True, text=True)
+            m = re.search(r'<svg[^>]*width="(\d+)"', p.stdout)
+            _TILE_W[url] = int(m.group(1)) if m else 108
+        except Exception:
+            _TILE_W[url] = 108
+    return _TILE_W[url]
+
+
 def tile(verdict_key, ver):
     """三态磁贴：左半兼容状态（绿=已兼容 · 黄=需适配 · 灰=待测试），右半该轮测试版本。
-    三词统一 3 字以确保等宽（实测均 132px）；labelColor 把状态色赋给左段、右段固定中性灰
-    （shields 默认左灰右彩，不显式指定会装反）。"""
+    三词统一 3 字以确保等宽；labelColor 把状态色赋给左段、右段固定中性灰；
+    以 <img width height> 输出——markdown 图片在 GitHub 表格中会被自适应缩放，显式钉尺寸可免疫。"""
     from urllib.parse import quote
     v = ver.replace('-', '--').replace('_', '__').replace(' ', '_')
     if verdict_key == 'ok':
@@ -71,8 +87,10 @@ def tile(verdict_key, ver):
         label, lc = '需适配', 'DFB317'    # yellow
     else:
         label, lc = '待测试', '9F9F9F'    # lightgrey
-    return (f'![{label}](https://img.shields.io/badge/{quote(label)}-{v}-555555'
-            f'?style=flat-square&labelColor={lc})')
+    url = (f'https://img.shields.io/badge/{quote(label)}-{v}-555555'
+           f'?style=flat-square&labelColor={lc}')
+    w = _probe_width(url)
+    return f'<img src="{url}" alt="{label}" width="{w}" height="20">'
 
 TOKEN = os.environ.get('GH_TOKEN') or subprocess.run(
     ['gh', 'auth', 'token'], capture_output=True, text=True).stdout.strip()
