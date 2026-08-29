@@ -1,25 +1,25 @@
 # 全量插件清单（统一四档口径）
 
-> 数据源：radar 快照并集（`20260829T181501Z` 2026-08-30 02:15 UTC+8 ⊕ `20260829T104501Z` 2026-08-29 18:45 UTC+8 ⊕ `20260829T054501Z` 2026-08-29 13:45 UTC+8 等 202 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
+> 数据源：radar 快照并集（`20260829T200001Z` 2026-08-30 04:00 UTC+8 ⊕ `20260829T181501Z` 2026-08-30 02:15 UTC+8 ⊕ `20260829T104501Z` 2026-08-29 18:45 UTC+8 等 203 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
 > 呈现：分组列表（状态 · 名称 · ★星标 · 一句话说明），不使用大表格；〔📦〕= 整合包（根 dsh.bundle / workspaces 多子包）。
 
 ## 统一度量衡
 
 **判定维度**（运行级四档；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：
 
-- 全量判定 11949（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（7844）/ `[不兼容]`（2502）/ `[待定]`（1452）
-- 已定位明细 7886（本列表展示口径，另 4063 条监测/未定位的判定暂不展示）：`[可用]`（5187）/ `[不兼容]`（1620）/ `[待定]`（973）/ `[未测]`（106）
+- 全量判定 11950（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（7847）/ `[不兼容]`（2502）/ `[待定]`（1450）
+- 已定位明细 7886（本列表展示口径，另 4064 条监测/未定位的判定暂不展示）：`[可用]`（5189）/ `[不兼容]`（1620）/ `[待定]`（971）/ `[未测]`（106）
 
 **定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：
 
 - `[空仓监测]`（133）— GitHub 复核无此仓库；待重现后恢复判定显示
 - `[歧义监测]`（103）— 同名多仓无法锁定本体；锁定前不展示
-- `[未定位]`（3825）— 新占位条目，待下一轮定位复核（scripts/resolve_placeholders.py）
+- `[未定位]`（3826）— 新占位条目，待下一轮定位复核（scripts/resolve_placeholders.py）
 - 定位复核累计修复 539 个占位 URL
 
 > 〔PR〕= 经已合并 PR 正式登记；收录 ≠ 兼容 ≠ 运行可用 ≠ 安全审计。
 
-## 汇总：11949 条（已定位 7886 · 监测/未定位 4063）· PR 登记 23 个
+## 汇总：11950 条（已定位 7886 · 监测/未定位 4064）· PR 登记 23 个
 
 ## 🎓 技能包（24）
 
@@ -2436,7 +2436,7 @@
 - `[歧义监测]` **dsh-tui-app** — 同名多仓，判定暂不展示
 - `[歧义监测]` **dsh-live-stats** — 同名多仓，判定暂不展示 〔PR〕
 
-## 💻 编码开发（1576）
+## 💻 编码开发（1577）
 
 - `[待定]` [zilliztech-memsearch](https://github.com/zilliztech/memsearch) ★2529 — A persistent, unified memory layer for all your AI agents (e.g
 - `[可用]` [hyhmrright-brooks-lint](https://github.com/hyhmrright/brooks-lint) ★1428 — AI code reviews grounded in 12 classic engineering books — decay risk diagnostics with book citations, severit
@@ -3202,6 +3202,7 @@
 - `[未定位]` **chriszhangwg-dsh-codex-meter** — 占位待复核，判定暂不展示
 - `[可用]` [cinderzhan-dsh-plugin-dew](https://github.com/cinderzhan/dsh-plugin-dew) ★0 — See what your other coding agents are doing from inside DSH: Claude Code, Codex, Cursor and DSH sessions, thei
 - `[可用]` [cindyguyuehu123-oh-story-dsh](https://github.com/cindyguyuehu123/oh-story-dsh) ★0 — DSH-native web-fiction writing skill pack (from oh-story-claudecode): scan, teardown analysis, writing, de-AI,
+- `[未定位]` **citrusli2026-dsh-electron-shell** — 占位待复核，判定暂不展示
 - `[未定位]` **cjylzs-dsh-commandcode-plan-autosync** — 占位待复核，判定暂不展示
 - `[未定位]` **cjylzs-dsh-opencode-go-autosync** — 占位待复核，判定暂不展示
 - `[未定位]` **cn-wenyu-dsh-git-conventions** — 占位待复核，判定暂不展示
@@ -8007,7 +8008,7 @@
 - `[可用]` [dsh-cost-meter](https://github.com/Han-1413141/dsh-cost-meter) ★193 — DeepSeek Harness 会话费用统计插件:本会话费用、当日费用、历史记录与官方价格同步
 - `[可用]` [pi2dsh](https://github.com/weijiafu14/pi2dsh) ★174 — Bridge the Pi and DeepSeek Harness ecosystems: one Pi Host ABI runs unmodified Pi extensions as native DSH plu
 - `[可用]` [cocofhu-anime-find](https://github.com/cocofhu/anime-find) ★164 — DeepSeek Harness 搜番插件：对话内多源搜索番剧，卡片展示 Bangumi 评分与详情，支持复制磁力
-- `[待定]` [TokenLedger](https://github.com/zh667/TokenLedger) ★153 — Token usage accounting for DeepSeek Harness, reconciled against New API and Sub2API relay-site billing
+- `[可用]` [TokenLedger](https://github.com/zh667/TokenLedger) ★153 — Token usage accounting for DeepSeek Harness, reconciled against New API and Sub2API relay-site billing
 - `[可用]` [dsheval-dsh-top100](https://github.com/dsheval/dsh-top100) ★136 — —〔📦〕
 - `[可用]` [ariestar-sivtr](https://github.com/Ariestar/sivtr) ★135 — —
 - `[可用]` [ychris12138-dsh-usage-stats](https://github.com/Ychris12138/dsh-usage-stats) ★126 — —
@@ -8080,7 +8081,7 @@
 - `[待定]` [nowint-oh-my-dsh](https://github.com/NoWint/Oh-My-DSH) ★9 — —
 - `[待定]` [small-tailqwq-dsh-deepcel](https://github.com/Small-tailqwq/dsh-deepcel) ★9 — —
 - `[可用]` [tma1-ai-dsh-otel](https://github.com/tma1-ai/dsh-otel) ★9 — What a DeepSeek Harness run costs in tokens, money, and time
-- `[待定]` [twotwopiggy-dsh-balance](https://github.com/TwotwoPiggy/dsh-balance) ★9 — —
+- `[可用]` [twotwopiggy-dsh-balance](https://github.com/TwotwoPiggy/dsh-balance) ★9 — —
 - `[可用]` [williamliiii-deepseek-harness-billing-plugin](https://github.com/WilliamLIiii/DeepSeek-Harness-billing-plugin) ★9 — —
 - `[可用]` [ch4acko3-dsh-harmony](https://github.com/CH4ACKO3/dsh-harmony) ★9 — —
 - `[可用]` [dsh-web-billing](https://github.com/bpc-oss/dsh-web-billing) ★8 — RMB/USD token-billing plugin for DeepSeek Harness (dsh web): official-policy auto pricing with peak/off-peak h
