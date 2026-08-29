@@ -61,16 +61,18 @@ def radar_version():
 
 def tile(verdict_key, ver):
     """三态磁贴：左半兼容状态（绿=已兼容 · 黄=需适配 · 灰=待测试），右半该轮测试版本。
-    三词统一 3 字以确保磁贴等宽（shields 按文本计宽，已实测均 132px）。"""
+    三词统一 3 字以确保等宽（实测均 132px）；labelColor 把状态色赋给左段、右段固定中性灰
+    （shields 默认左灰右彩，不显式指定会装反）。"""
     from urllib.parse import quote
     v = ver.replace('-', '--').replace('_', '__').replace(' ', '_')
     if verdict_key == 'ok':
-        label, color = '已兼容', 'brightgreen'
+        label, lc = '已兼容', '97CA00'    # brightgreen
     elif verdict_key == 'incompatible':
-        label, color = '需适配', 'yellow'
+        label, lc = '需适配', 'DFB317'    # yellow
     else:
-        label, color = '待测试', 'lightgrey'
-    return f'![{label}](https://img.shields.io/badge/{quote(label)}-{v}-{color}?style=flat-square)'
+        label, lc = '待测试', '9F9F9F'    # lightgrey
+    return (f'![{label}](https://img.shields.io/badge/{quote(label)}-{v}-555555'
+            f'?style=flat-square&labelColor={lc})')
 
 TOKEN = os.environ.get('GH_TOKEN') or subprocess.run(
     ['gh', 'auth', 'token'], capture_output=True, text=True).stdout.strip()
