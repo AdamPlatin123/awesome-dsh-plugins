@@ -58,8 +58,8 @@ def load_snapshots():
     for fp in files:
         try:
             d = json.loads(Path(fp).read_text())
-        except json.JSONDecodeError:
-            continue
+        except (json.JSONDecodeError, UnicodeDecodeError, OSError):
+            continue   # 单文件截断/损坏跳过（镜像仓实测案例），不阻断清单生成
         if not str(d.get('schema', '')).startswith('radar-snapshot/'):
             continue
         rounds.append((d['run_id'], d.get('generated_at', '')))
@@ -143,18 +143,28 @@ def canonical_merge(entries, repo_map, locate):
 def pr_registered_names():
     names = set()
     for fp in glob.glob(str(ROOT / 'catalog' / 'plugins' / '*.json')):
-        d = json.loads(Path(fp).read_text())
+        d = _read_json_safe(fp, None)
+        if not isinstance(d, dict):
+            continue
         full = d.get('repository', {}).get('full_name', '')
         if full:
             names.add(full.split('/')[-1])
     return names
 
 
+def _read_json_safe(p, default):
+    """缓存文件损坏（截断/无效 UTF-8/坏 JSON）时降级返回默认值，不阻断清单生成。"""
+    try:
+        return json.loads(Path(p).read_text())
+    except (json.JSONDecodeError, UnicodeDecodeError, OSError):
+        return default
+
+
 def main():
     entries, rounds = load_snapshots()
-    locate = json.loads(LOCATE_CACHE.read_text()).get('entries', {}) if LOCATE_CACHE.exists() else {}
-    repo_map = json.loads(REPO_MAP.read_text()).get('entries', {}) if REPO_MAP.exists() else {}
-    desc_cache = json.loads(DESC_CACHE.read_text()) if DESC_CACHE.exists() else {}
+    locate = (_read_json_safe(LOCATE_CACHE, {}) or {}).get('entries', {}) if LOCATE_CACHE.exists() else {}
+    repo_map = (_read_json_safe(REPO_MAP, {}) or {}).get('entries', {}) if REPO_MAP.exists() else {}
+    desc_cache = _read_json_safe(DESC_CACHE, {}) if DESC_CACHE.exists() else {}
     pr_names = pr_registered_names()
 
     entries, (n_dedup, n_conflict) = canonical_merge(entries, repo_map, locate)
@@ -163,7 +173,7 @@ def main():
     # 实时 star 映射（locate-cache 的 full_name → stargazerCount），对全部已定位条目生效
     live_star = {r['full_name'].lower(): r['star'] for r in locate.values()
                  if r.get('status') == 'found' and r.get('full_name') and isinstance(r.get('star'), int)}
-    url_audit = json.loads(URL_AUDIT.read_text()).get('entries', {}) if URL_AUDIT.exists() else {}
+    url_audit = (_read_json_safe(URL_AUDIT, {}) or {}).get('entries', {}) if URL_AUDIT.exists() else {}
 
     n_fix = n_empty = n_amb = n_unresolved = n_star = 0
     for e in entries:
