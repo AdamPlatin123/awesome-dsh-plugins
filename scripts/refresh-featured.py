@@ -60,15 +60,16 @@ def radar_version():
 
 
 def tile(verdict_key, ver):
-    """三态磁贴：左半兼容状态（绿=可用 · 黄=需适配 · 灰=待测），右半该轮测试版本。"""
+    """三态磁贴：左半兼容状态（绿=已兼容 · 黄=需适配 · 灰=待测试），右半该轮测试版本。
+    三词统一 3 字以确保磁贴等宽（shields 按文本计宽，已实测均 132px）。"""
     from urllib.parse import quote
     v = ver.replace('-', '--').replace('_', '__').replace(' ', '_')
     if verdict_key == 'ok':
-        label, color = '可用', 'brightgreen'
+        label, color = '已兼容', 'brightgreen'
     elif verdict_key == 'incompatible':
         label, color = '需适配', 'yellow'
     else:
-        label, color = '待测', 'lightgrey'
+        label, color = '待测试', 'lightgrey'
     return f'![{label}](https://img.shields.io/badge/{quote(label)}-{v}-{color}?style=flat-square)'
 
 TOKEN = os.environ.get('GH_TOKEN') or subprocess.run(
@@ -154,7 +155,7 @@ def main():
             parts.append(f"| [{p['name']}](https://github.com/{p['repo']}) | {stars[p['repo']]} |"
                          f" {tile(rv.get(p['repo'].lower(), p.get('verdict')), ver)} | {desc} |")
         parts.append('')
-    parts.append('> 兼容状态磁贴 = 雷达 k8s 运行级判定（🟩 可用 · 🟨 需适配 · ⬜ 待测，四档口径见下文），'
+    parts.append('> 兼容状态磁贴 = 雷达 k8s 运行级判定（🟩 已兼容 · 🟨 需适配 · ⬜ 待测试，三态等宽；四档口径见下文），'
                  '右半为该轮 runner 测试版本（与 [data/radar-env.json](data/radar-env.json) 同源），'
                  '**本列由 bot 按最新快照自动回写**，榜内成员走插队重测通道优先轮测；'
                  'rc.8 + v4flash 源码路径重测（2026-08-21，50 仓 + 对方清单高星 22 仓）证据见 '
