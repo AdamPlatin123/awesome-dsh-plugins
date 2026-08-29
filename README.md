@@ -19,7 +19,7 @@
 
 [![confirmed](https://img.shields.io/badge/confirmed-8030-blue)](#精选插件榜) [![scan](https://img.shields.io/badge/scan-every_6h-green)](#当前生态快照) [![tested](https://img.shields.io/badge/tested-11129-orange)](#本仓库如何判定) [![dshfind](https://dshfind.com/api/badge/AdamPlatin123/dsh-plugin-radar?lang=zh)](https://dshfind.com/zh/plugins/AdamPlatin123/dsh-plugin-radar?ref=badge) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
-[![运行级可用](https://img.shields.io/badge/运行级可用-7424-brightgreen)](#2-看懂状态统一四档口径) [![运行级不兼容](https://img.shields.io/badge/运行级不兼容-2505-red)](#2-看懂状态统一四档口径) [![待定](https://img.shields.io/badge/待定-1200-yellow)](#2-看懂状态统一四档口径) [![未测](https://img.shields.io/badge/·_未测-106-lightgrey)](#2-看懂状态统一四档口径)
+[![已兼容](https://img.shields.io/badge/已兼容-7424-555555?style=flat-square&labelColor=97CA00)](#2-看懂状态统一四档口径) [![需适配](https://img.shields.io/badge/需适配-2505-555555?style=flat-square&labelColor=DFB317)](#2-看懂状态统一四档口径) [![待测试](https://img.shields.io/badge/待测试-1306-555555?style=flat-square&labelColor=9F9F9F)](#2-看懂状态统一四档口径)
 
 
 

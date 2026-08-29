@@ -14,7 +14,7 @@ Know which plugins work before you install them.
 
 [![confirmed](https://img.shields.io/badge/confirmed-8030-blue)](#featured) [![scan](https://img.shields.io/badge/scan-every_6h-green)](#ecosystem-snapshot) [![tested](https://img.shields.io/badge/tested-11129-orange)](#how-we-assess-compatibility) [![dshfind](https://dshfind.com/api/badge/AdamPlatin123/dsh-plugin-radar?lang=en)](https://dshfind.com/plugins/AdamPlatin123/dsh-plugin-radar?ref=badge) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
-[![runtime OK](https://img.shields.io/badge/runtime_OK-7424-brightgreen)](#2-understand-status-unified-4-tier-scale) [![incompatible](https://img.shields.io/badge/incompatible-2505-red)](#2-understand-status-unified-4-tier-scale) [![pending](https://img.shields.io/badge/pending-1200-yellow)](#2-understand-status-unified-4-tier-scale) [![untested](https://img.shields.io/badge/untested-106-lightgrey)](#2-understand-status-unified-4-tier-scale)
+[![compatible](https://img.shields.io/badge/compatible-7424-555555?style=flat-square&labelColor=97CA00)](#2-understand-status-unified-4-tier-scale) [![adapt](https://img.shields.io/badge/adapt-2505-555555?style=flat-square&labelColor=DFB317)](#2-understand-status-unified-4-tier-scale) [![untested](https://img.shields.io/badge/untested-1306-555555?style=flat-square&labelColor=9F9F9F)](#2-understand-status-unified-4-tier-scale)
 
 [English](README.en-US.md) | [简体中文](README.md)
 

@@ -116,16 +116,18 @@ def main():
         t_readme = re.sub(r"badge/confirmed-\d+", f"badge/confirmed-{fmt(c.get('plugins'))}", t_readme)
         t_readme = re.sub(r"badge/tested-\d+", f"badge/tested-{fmt(v.get('total'))}", t_readme)
 
-        # ①b 四档磁贴（累积口径：catalog_entries 全量统计；含中英两组徽章 URL）
+        # ①b 三态汇总磁贴（与榜单磁贴同体系：flat-square + labelColor 左彩右灰，3 字标签严格等宽；
+        #     累积口径：catalog_entries 全量统计，待定+未测合并为「待测试」；含中英两组徽章 URL）
         vcnt = Counter(e.get("verdict", "") for e in (snap.get("catalog_entries") or []))
         n_ok = vcnt.get("✅ 运行级可用", 0) or vcnt.get("运行级可用", 0)
         n_bad = vcnt.get("❌ 运行级不兼容", 0) or vcnt.get("运行级不兼容", 0)
         n_inc = vcnt.get("⚠️ 待定", 0) or vcnt.get("待定", 0)
         n_un = g_un if isinstance(g_un, int) else vcnt.get("⏳ 未测", 0)
-        for pat, val in ((r"(badge/(?:✅_)?运行级可用-)\d+", n_ok), (r"(badge/(?:✅_)?runtime_OK-)\d+", n_ok),
-                         (r"(badge/(?:❌_)?运行级不兼容-)\d+", n_bad), (r"(badge/(?:❌_)?incompatible-)\d+", n_bad),
-                         (r"(badge/(?:⚠️_)?待定-)\d+", n_inc), (r"(badge/(?:⚠️_)?pending-)\d+", n_inc),
-                         (r"(badge/·_未测-)\d+", n_un), (r"(badge/untested-)\d+", n_un)):
+        n_tbd = (n_inc or 0) + (n_un or 0)
+        for pat, val in (
+                (r"(badge/已兼容-)\d+", n_ok), (r"(badge/compatible-)\d+", n_ok),
+                (r"(badge/需适配-)\d+", n_bad), (r"(badge/adapt-)\d+", n_bad),
+                (r"(badge/待测试-)\d+", n_tbd), (r"(badge/untested-)\d+", n_tbd)):
             t_readme = re.sub(pat, rf"\g<1>{val}", t_readme)
         t_readme = re.sub(r"(（当前 `)[0-9A-Za-z]+(`)", rf"\g<1>{snap['run_id']}\g<2>", t_readme, count=1)
         t_readme = re.sub(r"(currently `)[0-9A-Za-z]+(`)", rf"\g<1>{snap['run_id']}\g<2>", t_readme, count=1)
