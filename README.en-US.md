@@ -100,7 +100,7 @@ Everything catalog-shaped below — the featured board, bundles, category direct
 
 <!-- AUTO:featured:START -->
 
-> 人工策展 56 款插件，按 11 类分组、类内按星标排序；星标每 6 小时自动刷新（成员调整请提 PR 修改 data/awesome-50.json）。数据截至 2026-08-30 04:57（UTC+8）。
+> 人工策展 56 款插件，按 11 类分组、类内按星标排序；星标每 6 小时自动刷新（成员调整请提 PR 修改 data/awesome-50.json）。数据截至 2026-08-30 04:58（UTC+8）。
 
 ### 🚀 智力增强 Booster（7）
 
@@ -199,7 +199,7 @@ Everything catalog-shaped below — the featured board, bundles, category direct
 
 <!-- AUTO:bundles:START -->
 
-> 人工策展 16 个整合包：内测成员作品置顶，其下按预设套件 / 能力合集 / 发行版 / 配方管理器四形态分组，类内按星标排序；星标每 6 小时自动刷新（成员调整请提 PR 修改 data/bundles.json）。数据截至 2026-08-30 04:57（UTC+8）。
+> 人工策展 16 个整合包：内测成员作品置顶，其下按预设套件 / 能力合集 / 发行版 / 配方管理器四形态分组，类内按星标排序；星标每 6 小时自动刷新（成员调整请提 PR 修改 data/bundles.json）。数据截至 2026-08-30 04:58（UTC+8）。
 
 ### ⭐ 内测成员作品（1）
 
