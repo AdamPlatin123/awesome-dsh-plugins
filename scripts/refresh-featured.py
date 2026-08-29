@@ -186,12 +186,12 @@ def main():
         ranked = sorted(c['plugins'], key=lambda p: (-stars[p['repo']], p['repo'].lower()))
         parts.append(f"### {c['name']}（{len(ranked)}）")
         parts.append('')
-        parts.append('| 插件 | ⭐ | 兼容状态 | 说明 |')
-        parts.append('|---|---:|---|---|')
+        # 列表布局（非表格）：GitHub 表格对单元格图片强制 max-width:100%+height:auto 缩放无法规避；
+        # 列表行内图片保持原尺寸，磁贴开头统一 108px 亦使全页文本列自然对齐
         for p in ranked:
-            desc = wbr(p['desc'].replace('|', '\\|'))
-            parts.append(f"| [{wbr(p['name'])}](https://github.com/{p['repo']}) | {stars[p['repo']]} |"
-                         f" {tile(rv.get(p['repo'].lower(), p.get('verdict')), ver)} | {desc} |")
+            t = tile(rv.get(p['repo'].lower(), p.get('verdict')), ver)
+            parts.append(f"- {t} **[{p['name']}](https://github.com/{p['repo']})** · {stars[p['repo']]}★"
+                         f" — {p['desc'].replace('|', '\\|')}")
         parts.append('')
     parts.append('> 兼容状态磁贴 = 雷达 k8s 运行级判定（🟩 已兼容 · 🟨 需适配 · ⬜ 待测试，三态等宽；四档口径见下文），'
                  '右半为该轮 runner 测试版本（与 [data/radar-env.json](data/radar-env.json) 同源），'
@@ -213,12 +213,10 @@ def main():
         ranked = sorted(f['plugins'], key=lambda p: (-stars[p['repo']], p['repo'].lower()))
         bparts.append(f"### {f['name']}（{len(ranked)}）")
         bparts.append('')
-        bparts.append('| 整合包 | ⭐ | 兼容状态 | 说明 |')
-        bparts.append('|---|---:|---|---|')
         for p in ranked:
-            desc = wbr(p['desc'].replace('|', '\\|'))
-            bparts.append(f"| [{wbr(p['name'])}](https://github.com/{p['repo']}) | {stars[p['repo']]} |"
-                          f" {tile(rv.get(p['repo'].lower(), p.get('verdict')), ver)} | {desc} |")
+            t = tile(rv.get(p['repo'].lower(), p.get('verdict')), ver)
+            bparts.append(f"- {t} **[{p['name']}](https://github.com/{p['repo']})** · {stars[p['repo']]}★"
+                          f" — {p['desc'].replace('|', '\\|')}")
         bparts.append('')
     bparts.append('> 磁贴口径同精选榜（三态 · 右半 runner 版本）；整合包安装方式以各仓库 README 为准（预设类多为 `dsh plugin add` 后在设置中启用，发行版类需按其自身安装器操作）。')
     bblock = '\n'.join(bparts) + '\n\n<!-- AUTO:bundles:END -->'
