@@ -94,21 +94,25 @@ def _probe_width(url):
 
 
 def tile(verdict_key, ver):
-    """三态磁贴：左半兼容状态（绿=已兼容 · 黄=需适配 · 灰=待测试），右半该轮测试版本。
-    三词统一 3 字以确保等宽；labelColor 把状态色赋给左段、右段固定中性灰；
-    以 <img width height> 输出——markdown 图片在 GitHub 表格中会被自适应缩放，显式钉尺寸可免疫。"""
+    """三态磁贴：仓内 SVG 资产优先（assets/tile-{ok,adapt,test}.svg，版本烤入、零外部请求、
+    与 PLUGINS-ALL 同源）；资产缺失时回落 shields 在线徽章。"""
     from urllib.parse import quote
+    label_map = {'ok': ('已兼容', '97CA00'), 'adapt': ('需适配', 'DFB317'), 'test': ('待测试', '9F9F9F')}
+    key = {'ok': 'ok', 'incompatible': 'adapt'}.get(verdict_key, 'test')
+    label = label_map[key][0]
+    try:
+        import tile_assets
+        tw = tile_assets.tile_widths()
+        if key in tw:
+            return f'<img src="assets/tile-{key}.svg" alt="{label}" width="{tw[key]}" height="20">'
+    except Exception:
+        pass
     v = ver.replace('-', '--').replace('_', '__').replace(' ', '_')
-    if verdict_key == 'ok':
-        label, lc = '已兼容', '97CA00'    # brightgreen
-    elif verdict_key == 'incompatible':
-        label, lc = '需适配', 'DFB317'    # yellow
-    else:
-        label, lc = '待测试', '9F9F9F'    # lightgrey
     url = (f'https://img.shields.io/badge/{quote(label)}-{v}-555555'
-           f'?style=flat-square&labelColor={lc}')
+           f'?style=flat-square&labelColor={label_map[key][1]}')
     w = _probe_width(url)
     return f'<img src="{url}" alt="{label}" width="{w}" height="20">'
+
 
 TOKEN = os.environ.get('GH_TOKEN') or subprocess.run(
     ['gh', 'auth', 'token'], capture_output=True, text=True).stdout.strip()

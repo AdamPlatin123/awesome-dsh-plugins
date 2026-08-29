@@ -29,8 +29,8 @@ REAL_URL_RE = re.compile(r'github\.com/([A-Za-z0-9_.-]+)/([A-Za-z0-9_.-]+)')
 # 互斥判定（✅/❌ 矛盾才降待定；待定/未测属非结论性，不参与冲突）
 CONFLICTING_VERDICTS = ('✅ 运行级可用', '❌ 运行级不兼容')
 
-MARK = {'✅ 运行级可用': '🟩 `已兼容`', '❌ 运行级不兼容': '🟨 `需适配`',
-        '⚠️ 待定': '⬜ `待测试`', '⏳ 未测': '⬜ `待测试`'}
+MARK = {'✅ 运行级可用': '![已兼容](assets/tile-ok.svg)', '❌ 运行级不兼容': '![需适配](assets/tile-adapt.svg)',
+        '⚠️ 待定': '![待测试](assets/tile-test.svg)', '⏳ 未测': '![待测试](assets/tile-test.svg)'}
 DOMAIN_ORDER = ['🎓 技能包', '🧠 记忆增强', '🎨 主题皮肤', '🛒 市场与管理',
                 '🔌 Web UI 增强', '💻 编码开发', '🤖 Agent 能力', '📡 消息通讯',
                 '🗂 文件数据', '🎮 娱乐生活', '🛠 基建部署', '📚 学习研究', '❓ 其他']
@@ -161,6 +161,13 @@ def _read_json_safe(p, default):
 
 
 def main():
+    radar_ver = ''
+    try:
+        import tile_assets
+        tile_assets.write_tiles()
+        radar_ver = tile_assets.current_version()
+    except Exception:
+        pass
     entries, rounds = load_snapshots()
     locate = (_read_json_safe(LOCATE_CACHE, {}) or {}).get('entries', {}) if LOCATE_CACHE.exists() else {}
     repo_map = (_read_json_safe(REPO_MAP, {}) or {}).get('entries', {}) if REPO_MAP.exists() else {}
@@ -302,9 +309,11 @@ def main():
     L.append('')
     L.append('## 统一度量衡')
     L.append('')
-    L.append('**判定维度**（运行级四档，呈现与 README 磁贴同体系：🟩 已兼容 · 🟨 需适配 · ⬜ 待测试=待定+未测；'
+    L.append('**判定维度**（运行级四档，呈现与 README 磁贴同体系（仓内 SVG，版本烤入）：🟩 已兼容 · 🟨 需适配 · ⬜ 待测试=待定+未测；'
              '测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：')
     L.append('')
+    if radar_ver:
+        L.append(f'- 测试版本：`{radar_ver}`（runner 镜像 cur_image，烤入本页磁贴右段）')
     L.append(f'- 全量判定 {sum(v_all.values())}（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：'
              f'🟩 `已兼容`（{v_all.get("✅ 运行级可用", 0)}）/ 🟨 `需适配`（{v_all.get("❌ 运行级不兼容", 0)}）/ ⬜ `待测试`（{v_all.get("⚠️ 待定", 0)}）')
     L.append(f'- 已定位明细 {sum(vc.values())}（本列表展示口径，另 {len(entries) - sum(vc.values())} 条监测/未定位的判定暂不展示）：'
@@ -349,7 +358,7 @@ def main():
                 L.append(f'- `[未定位]` **{name}** — 占位待复核，判定暂不展示{pr}')
             else:
                 bundle_part = '〔📦〕' if e.get('bundle') else ''   # 整合包（dsh.bundle / workspaces 结构）
-                L.append(f'- {MARK.get(e.get("verdict"), "⬜ `待测试`")} [{name}]({e["url"]}) {star_part}— {desc}{pr}{bundle_part}')
+                L.append(f'- {MARK.get(e.get("verdict"), "![待测试](assets/tile-test.svg)")} [{name}]({e["url"]}) {star_part}— {desc}{pr}{bundle_part}')
         L.append('')
 
     L.append('## 附录')
