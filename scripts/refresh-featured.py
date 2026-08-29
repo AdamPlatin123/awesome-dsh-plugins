@@ -51,6 +51,13 @@ def radar_verdicts():
         return {}
 
 
+def wbr(s):
+    """在 ASCII 长词内注入 <wbr> 断点（连字符/斜杠/点后）。
+    统一各表换行逻辑：GitHub 表格超宽时按可断行性压缩列宽，长词不可断会使不同表的
+    列宽谈判结果不同、挤压磁贴列；统一断点后所有表行为一致（<wbr> 在 sanitize 白名单内）。"""
+    return re.sub(r'([\-/.])(?=[A-Za-z0-9])', r'\1<wbr>', s)
+
+
 def radar_version():
     """runner 钉定的 DSH 测试版本（data/radar-env.json，与 .9 runner 镜像钉定同源）。"""
     try:
@@ -171,8 +178,8 @@ def main():
         parts.append('| 插件 | ⭐ | 兼容状态 | 说明 |')
         parts.append('|---|---:|---|---|')
         for p in ranked:
-            desc = p['desc'].replace('|', '\\|')
-            parts.append(f"| [{p['name']}](https://github.com/{p['repo']}) | {stars[p['repo']]} |"
+            desc = wbr(p['desc'].replace('|', '\\|'))
+            parts.append(f"| [{wbr(p['name'])}](https://github.com/{p['repo']}) | {stars[p['repo']]} |"
                          f" {tile(rv.get(p['repo'].lower(), p.get('verdict')), ver)} | {desc} |")
         parts.append('')
     parts.append('> 兼容状态磁贴 = 雷达 k8s 运行级判定（🟩 已兼容 · 🟨 需适配 · ⬜ 待测试，三态等宽；四档口径见下文），'
@@ -198,8 +205,8 @@ def main():
         bparts.append('| 整合包 | ⭐ | 兼容状态 | 说明 |')
         bparts.append('|---|---:|---|---|')
         for p in ranked:
-            desc = p['desc'].replace('|', '\\|')
-            bparts.append(f"| [{p['name']}](https://github.com/{p['repo']}) | {stars[p['repo']]} |"
+            desc = wbr(p['desc'].replace('|', '\\|'))
+            bparts.append(f"| [{wbr(p['name'])}](https://github.com/{p['repo']}) | {stars[p['repo']]} |"
                           f" {tile(rv.get(p['repo'].lower(), p.get('verdict')), ver)} | {desc} |")
         bparts.append('')
     bparts.append('> 磁贴口径同精选榜（三态 · 右半 runner 版本）；整合包安装方式以各仓库 README 为准（预设类多为 `dsh plugin add` 后在设置中启用，发行版类需按其自身安装器操作）。')
