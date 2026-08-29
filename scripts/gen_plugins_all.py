@@ -29,8 +29,8 @@ REAL_URL_RE = re.compile(r'github\.com/([A-Za-z0-9_.-]+)/([A-Za-z0-9_.-]+)')
 # 互斥判定（✅/❌ 矛盾才降待定；待定/未测属非结论性，不参与冲突）
 CONFLICTING_VERDICTS = ('✅ 运行级可用', '❌ 运行级不兼容')
 
-MARK = {'✅ 运行级可用': '![已兼容](assets/tile-ok.svg)', '❌ 运行级不兼容': '![需适配](assets/tile-adapt.svg)',
-        '⚠️ 待定': '![待测试](assets/tile-test.svg)', '⏳ 未测': '![待测试](assets/tile-test.svg)'}
+MARK = {'✅ 运行级可用': '`[可用]`', '❌ 运行级不兼容': '`[不兼容]`',
+        '⚠️ 待定': '`[待定]`', '⏳ 未测': '`[未测]`'}
 DOMAIN_ORDER = ['🎓 技能包', '🧠 记忆增强', '🎨 主题皮肤', '🛒 市场与管理',
                 '🔌 Web UI 增强', '💻 编码开发', '🤖 Agent 能力', '📡 消息通讯',
                 '🗂 文件数据', '🎮 娱乐生活', '🛠 基建部署', '📚 学习研究', '❓ 其他']
@@ -161,13 +161,6 @@ def _read_json_safe(p, default):
 
 
 def main():
-    radar_ver = ''
-    try:
-        import tile_assets
-        tile_assets.write_tiles()
-        radar_ver = tile_assets.current_version()
-    except Exception:
-        pass
     entries, rounds = load_snapshots()
     locate = (_read_json_safe(LOCATE_CACHE, {}) or {}).get('entries', {}) if LOCATE_CACHE.exists() else {}
     repo_map = (_read_json_safe(REPO_MAP, {}) or {}).get('entries', {}) if REPO_MAP.exists() else {}
@@ -309,16 +302,12 @@ def main():
     L.append('')
     L.append('## 统一度量衡')
     L.append('')
-    L.append('**判定维度**（运行级四档，呈现与 README 磁贴同体系（仓内 SVG，版本烤入）：🟩 已兼容 · 🟨 需适配 · ⬜ 待测试=待定+未测；'
-             '测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：')
+    L.append('**判定维度**（运行级四档；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：')
     L.append('')
-    if radar_ver:
-        L.append(f'- 测试版本：`{radar_ver}`（runner 镜像 cur_image，烤入本页磁贴右段）')
     L.append(f'- 全量判定 {sum(v_all.values())}（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：'
-             f'🟩 `已兼容`（{v_all.get("✅ 运行级可用", 0)}）/ 🟨 `需适配`（{v_all.get("❌ 运行级不兼容", 0)}）/ ⬜ `待测试`（{v_all.get("⚠️ 待定", 0)}）')
+             f'`[可用]`（{v_all.get("✅ 运行级可用", 0)}）/ `[不兼容]`（{v_all.get("❌ 运行级不兼容", 0)}）/ `[待定]`（{v_all.get("⚠️ 待定", 0)}）')
     L.append(f'- 已定位明细 {sum(vc.values())}（本列表展示口径，另 {len(entries) - sum(vc.values())} 条监测/未定位的判定暂不展示）：'
-             f'🟩 `已兼容`（{vc.get("✅ 运行级可用", 0)}）/ 🟨 `需适配`（{vc.get("❌ 运行级不兼容", 0)}）/ '
-             f'⬜ `待测试`（{vc.get("⚠️ 待定", 0) + vc.get("⏳ 未测", 0)}，其中待定 {vc.get("⚠️ 待定", 0)} · 未测 {vc.get("⏳ 未测", 0)}）')
+             f'`[可用]`（{vc.get("✅ 运行级可用", 0)}）/ `[不兼容]`（{vc.get("❌ 运行级不兼容", 0)}）/ `[待定]`（{vc.get("⚠️ 待定", 0)}）/ `[未测]`（{vc.get("⏳ 未测", 0)}）')
     L.append('')
     L.append('**定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：')
     L.append('')
@@ -333,18 +322,14 @@ def main():
     L.append(f'## 汇总：{len(entries)} 条（已定位 {sum(vc.values())} · 监测/未定位 {len(entries) - sum(vc.values())}）· PR 登记 {len(pr_names)} 个')
     L.append('')
 
-    # 按域拆分：GitHub markdown 渲染上限 1MB，单文件清单超限即按源码显示不渲染——
-    # 明细写 catalog/all/<域>.md（每域独立远小于上限），PLUGINS-ALL.md 降为索引页
-    dom_dir = ROOT / 'catalog' / 'all'
-    dom_dir.mkdir(parents=True, exist_ok=True)
     for dom in DOMAIN_ORDER:
         # 组内排序：星标降序；[不兼容] 整体沉组尾（组内仍按星标）——排除信息不占组头
         group = sorted([e for e in entries if e.get('domain') == dom],
                        key=lambda x: (x.get('verdict') == '❌ 运行级不兼容', -(x.get('star') or 0)))
         if not group:
             continue
-        dl = [f'# {dom}（{len(group)}）', '',
-              f'> 数据源与口径见 [PLUGINS-ALL.md](../../PLUGINS-ALL.md)（索引页）；磁贴图例同 README。', '']
+        L.append(f'## {dom}（{len(group)}）')
+        L.append('')
         for e in group:
             name = e['name']
             star = e.get('star')
@@ -355,24 +340,15 @@ def main():
             pr = ' 〔PR〕' if name in pr_names else ''
             loc = e.get('locate')
             if loc == 'empty_watch':
-                dl.append(f'- `[空仓监测]` **{name}** — GitHub 无此仓库，判定暂不展示{pr}')
+                L.append(f'- `[空仓监测]` **{name}** — GitHub 无此仓库，判定暂不展示{pr}')
             elif loc == 'ambiguous_watch':
-                dl.append(f'- `[歧义监测]` **{name}** — 同名多仓，判定暂不展示{pr}')
+                L.append(f'- `[歧义监测]` **{name}** — 同名多仓，判定暂不展示{pr}')
             elif loc == 'unresolved':
-                dl.append(f'- `[未定位]` **{name}** — 占位待复核，判定暂不展示{pr}')
+                L.append(f'- `[未定位]` **{name}** — 占位待复核，判定暂不展示{pr}')
             else:
                 bundle_part = '〔📦〕' if e.get('bundle') else ''   # 整合包（dsh.bundle / workspaces 结构）
-                dl.append(f'- {MARK.get(e.get("verdict"), "![待测试](assets/tile-test.svg)")} [{name}]({e["url"]}) {star_part}— {desc}{pr}{bundle_part}')
-        # 域文件独立成页（SVG 相对路径在 catalog/all/ 深度下需 ../../ 前缀）
-        dom_slug = dom.split(' ', 1)[-1]
-        dom_file = dom_dir / f'{dom_slug}.md'
-        dom_file.write_text('\n'.join(dl).replace('](assets/', '](../../assets/') + '\n', encoding='utf-8')
-        # 索引页只留一行摘要 + 链接
-        g_ok = vc_local(entries, dom, '✅ 运行级可用')
-        g_bad = vc_local(entries, dom, '❌ 运行级不兼容')
-        g_inc = vc_local(entries, dom, '⚠️ 待定') + vc_local(entries, dom, '⏳ 未测')
-        L.append(f'- **{dom}**（{len(group)}）— 🟩 {g_ok} · 🟨 {g_bad} · ⬜ {g_inc} — [明细]({dom_file.relative_to(ROOT)})')
-    L.append('')
+                L.append(f'- {MARK.get(e.get("verdict"), "`[未测]`")} [{name}]({e["url"]}) {star_part}— {desc}{pr}{bundle_part}')
+        L.append('')
 
     L.append('## 附录')
     L.append('')
