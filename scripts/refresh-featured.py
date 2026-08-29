@@ -59,7 +59,18 @@ def wbr(s):
 
 
 def radar_version():
-    """runner 钉定的 DSH 测试版本（data/radar-env.json，与 .9 runner 镜像钉定同源）。"""
+    """runner 测试版本：优先取最新快照 verdict.cur_image（runner 返回的正源，如 dsh-test-runner:0.1.1-rc.2），
+    缺失时回落 data/radar-env.json（人工维护的镜像钉定锚）。"""
+    try:
+        snaps = sorted(f for f in os.listdir(SNAP_DIR) if f.endswith('.json'))
+        data = json.load(open(os.path.join(SNAP_DIR, snaps[-1]), encoding='utf-8'))
+        img = str(data.get('verdict', {}).get('cur_image', '') or '')
+        if ':' in img:
+            return img.split(':', 1)[1]
+        if img:
+            return img
+    except Exception:
+        pass
     try:
         return json.load(open(os.path.join(ROOT, 'data', 'radar-env.json'), encoding='utf-8'))['dsh_version']
     except Exception:
