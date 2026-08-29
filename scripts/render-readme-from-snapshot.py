@@ -240,24 +240,25 @@ def main():
             t = re.sub(r'[^\w\u4e00-\u9fff\-\s]', '', str(text)).lower().lstrip('-')
             return re.sub(r'\s+', '-', t)
 
-        # ④f 分类目录摘要卡：AUTO:catalog 整块重建为九类摘要列表（明细在 PLUGINS-ALL.md，根治大表格挤压）
+        # ④f 分类目录摘要卡：AUTO:catalog 整块重建为九类摘要列表
+        #     （明细自 1MB 拆分案起在 catalog/all/<域>.md 域文件，PLUGINS-ALL.md 为索引页）
         if domain_stats:
             if is_zh:
-                cards = ["逐插件明细（判定 · 定位 · 星标）见 **[PLUGINS-ALL.md](PLUGINS-ALL.md)**。", ""]
+                cards = ["逐插件明细（判定 · 定位 · 星标）按域分页见 **[PLUGINS-ALL.md](PLUGINS-ALL.md)** 索引。", ""]
                 for dom, s in domain_stats.items():
                     if not s["total"]:
                         continue
-                    anchor = gh_slug(dom + f'（{s["total"]}）')
+                    dom_path = f"catalog/all/{dom.split(' ', 1)[-1]}.md"
                     cards.append(f'- **{dom}**（{s["total"]}）— 可用 {s["ok"]} · 不兼容 {s["bad"]} · '
-                                 f'待定 {s["inc"]} · 未测 {s["un"]} · 监测 {s["watch"]} — [明细](PLUGINS-ALL.md#{anchor})')
+                                 f'待定 {s["inc"]} · 未测 {s["un"]} · 监测 {s["watch"]} — [明细]({dom_path})')
             else:
-                cards = ["Per-plugin details (verdict · location · stars) in **PLUGINS-ALL.md**.", ""]
+                cards = ["Per-plugin details (verdict · location · stars) paginated per domain — index in **PLUGINS-ALL.md**.", ""]
                 for dom, s in domain_stats.items():
                     if not s["total"]:
                         continue
-                    anchor = gh_slug(dom + f'（{s["total"]}）')
+                    dom_path = f"catalog/all/{dom.split(' ', 1)[-1]}.md"
                     cards.append(f'- **{dom}**（{s["total"]}）— OK {s["ok"]} · incompatible {s["bad"]} · '
-                                 f'pending {s["inc"]} · untested {s["un"]} · watching {s["watch"]} — [details](PLUGINS-ALL.md#{anchor})')
+                                 f'pending {s["inc"]} · untested {s["un"]} · watching {s["watch"]} — [details]({dom_path})')
             block = "<!-- AUTO:catalog:START -->\n\n" + "\n".join(cards) + "\n\n<!-- AUTO:catalog:END -->"
             t_readme = re.sub(r"<!-- AUTO:catalog:START -->[\s\S]*?<!-- AUTO:catalog:END -->",
                               lambda _: block, t_readme, count=1)
