@@ -14,7 +14,7 @@ Know which plugins work before you install them.
 
 [![confirmed](https://img.shields.io/badge/confirmed-8030-blue)](#featured) [![scan](https://img.shields.io/badge/scan-every_6h-green)](#ecosystem-snapshot) [![tested](https://img.shields.io/badge/tested-11129-orange)](#how-we-assess-compatibility) [![dshfind](https://dshfind.com/api/badge/AdamPlatin123/dsh-plugin-radar?lang=en)](https://dshfind.com/plugins/AdamPlatin123/dsh-plugin-radar?ref=badge) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
-[![runtime OK](https://img.shields.io/badge/runtime_OK-7424-brightgreen)](#2-understand-status-unified-4-tier-scale) [![incompatible](https://img.shields.io/badge/incompatible-2505-red)](#2-understand-status-unified-4-tier-scale) [![pending](https://img.shields.io/badge/pending-1200-yellow)](#2-understand-status-unified-4-tier-scale) [![untested](https://img.shields.io/badge/untested-0-lightgrey)](#2-understand-status-unified-4-tier-scale)
+[![runtime OK](https://img.shields.io/badge/runtime_OK-7424-brightgreen)](#2-understand-status-unified-4-tier-scale) [![incompatible](https://img.shields.io/badge/incompatible-2505-red)](#2-understand-status-unified-4-tier-scale) [![pending](https://img.shields.io/badge/pending-1200-yellow)](#2-understand-status-unified-4-tier-scale) [![untested](https://img.shields.io/badge/untested-106-lightgrey)](#2-understand-status-unified-4-tier-scale)
 
 [English](README.en-US.md) | [简体中文](README.md)
 
@@ -275,18 +275,18 @@ Everything catalog-shaped below — the featured board, bundles, category direct
 Per-plugin details (verdict · location · stars) in **PLUGINS-ALL.md**.
 
 - **🎓 技能包**（24）— OK 6 · incompatible 1 · pending 3 · untested 11 · watching 3 — [details](PLUGINS-ALL.md#-技能包24)
-- **🧠 记忆增强**（26）— OK 14 · incompatible 1 · pending 3 · untested 3 · watching 5 — [details](PLUGINS-ALL.md#-记忆增强26)
-- **🎨 主题皮肤**（15）— OK 6 · incompatible 0 · pending 2 · untested 5 · watching 2 — [details](PLUGINS-ALL.md#-主题皮肤15)
-- **🛒 市场与管理**（176）— OK 74 · incompatible 15 · pending 12 · untested 7 · watching 68 — [details](PLUGINS-ALL.md#-市场与管理176)
-- **🔌 Web UI 增强**（1521）— OK 846 · incompatible 264 · pending 143 · untested 21 · watching 247 — [details](PLUGINS-ALL.md#-web-ui-增强1521)
-- **💻 编码开发**（1165）— OK 606 · incompatible 210 · pending 127 · untested 20 · watching 202 — [details](PLUGINS-ALL.md#-编码开发1165)
-- **🤖 Agent 能力**（974）— OK 444 · incompatible 166 · pending 106 · untested 12 · watching 246 — [details](PLUGINS-ALL.md#-agent-能力974)
-- **📡 消息通讯**（389）— OK 162 · incompatible 84 · pending 36 · untested 3 · watching 104 — [details](PLUGINS-ALL.md#-消息通讯389)
-- **🗂 文件数据**（322）— OK 148 · incompatible 58 · pending 37 · untested 9 · watching 70 — [details](PLUGINS-ALL.md#-文件数据322)
-- **🎮 娱乐生活**（204）— OK 100 · incompatible 16 · pending 22 · untested 0 · watching 66 — [details](PLUGINS-ALL.md#-娱乐生活204)
-- **🛠 基建部署**（760）— OK 309 · incompatible 95 · pending 105 · untested 3 · watching 248 — [details](PLUGINS-ALL.md#-基建部署760)
-- **📚 学习研究**（73）— OK 22 · incompatible 5 · pending 3 · untested 2 · watching 41 — [details](PLUGINS-ALL.md#-学习研究73)
-- **❓ 其他**（2401）— OK 757 · incompatible 215 · pending 153 · untested 21 · watching 1255 — [details](PLUGINS-ALL.md#-其他2401)
+- **🧠 记忆增强**（32）— OK 13 · incompatible 4 · pending 5 · untested 2 · watching 8 — [details](PLUGINS-ALL.md#-记忆增强32)
+- **🎨 主题皮肤**（17）— OK 7 · incompatible 0 · pending 2 · untested 5 · watching 3 — [details](PLUGINS-ALL.md#-主题皮肤17)
+- **🛒 市场与管理**（226）— OK 89 · incompatible 20 · pending 14 · untested 7 · watching 96 — [details](PLUGINS-ALL.md#-市场与管理226)
+- **🔌 Web UI 增强**（2101）— OK 1152 · incompatible 377 · pending 189 · untested 16 · watching 367 — [details](PLUGINS-ALL.md#-web-ui-增强2101)
+- **💻 编码开发**（1576）— OK 787 · incompatible 301 · pending 154 · untested 18 · watching 316 — [details](PLUGINS-ALL.md#-编码开发1576)
+- **🤖 Agent 能力**（1555）— OK 703 · incompatible 284 · pending 137 · untested 10 · watching 421 — [details](PLUGINS-ALL.md#-agent-能力1555)
+- **📡 消息通讯**（532）— OK 217 · incompatible 119 · pending 42 · untested 3 · watching 151 — [details](PLUGINS-ALL.md#-消息通讯532)
+- **🗂 文件数据**（473）— OK 222 · incompatible 78 · pending 45 · untested 9 · watching 119 — [details](PLUGINS-ALL.md#-文件数据473)
+- **🎮 娱乐生活**（304）— OK 143 · incompatible 29 · pending 29 · untested 0 · watching 103 — [details](PLUGINS-ALL.md#-娱乐生活304)
+- **🛠 基建部署**（988）— OK 390 · incompatible 117 · pending 125 · untested 3 · watching 353 — [details](PLUGINS-ALL.md#-基建部署988)
+- **📚 学习研究**（104）— OK 28 · incompatible 9 · pending 8 · untested 2 · watching 57 — [details](PLUGINS-ALL.md#-学习研究104)
+- **❓ 其他**（4017）— OK 1430 · incompatible 281 · pending 220 · untested 20 · watching 2066 — [details](PLUGINS-ALL.md#-其他4017)
 
 <!-- AUTO:catalog:END -->
 
