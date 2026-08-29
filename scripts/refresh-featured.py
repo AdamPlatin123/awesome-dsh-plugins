@@ -50,6 +50,27 @@ def radar_verdicts():
         print(f'[warn] 快照判定加载失败，回落 JSON 种子: {e}')
         return {}
 
+
+def radar_version():
+    """runner 钉定的 DSH 测试版本（data/radar-env.json，与 .9 runner 镜像钉定同源）。"""
+    try:
+        return json.load(open(os.path.join(ROOT, 'data', 'radar-env.json'), encoding='utf-8'))['dsh_version']
+    except Exception:
+        return ''
+
+
+def tile(verdict_key, ver):
+    """三态磁贴：左半兼容状态（绿=可用 · 黄=需适配 · 灰=待测），右半该轮测试版本。"""
+    from urllib.parse import quote
+    v = ver.replace('-', '--').replace('_', '__').replace(' ', '_')
+    if verdict_key == 'ok':
+        label, color = '可用', 'brightgreen'
+    elif verdict_key == 'incompatible':
+        label, color = '需适配', 'yellow'
+    else:
+        label, color = '待测', 'lightgrey'
+    return f'![{label}](https://img.shields.io/badge/{quote(label)}-{v}-{color}?style=flat-square)'
+
 TOKEN = os.environ.get('GH_TOKEN') or subprocess.run(
     ['gh', 'auth', 'token'], capture_output=True, text=True).stdout.strip()
 if not TOKEN:
@@ -84,7 +105,8 @@ def main():
     data = json.load(open(CURATED, encoding='utf-8'))
     bdata = json.load(open(BUNDLES, encoding='utf-8'))
     rv = radar_verdicts()
-    print(f'[verdict] 快照判定映射 {len(rv)} 条（渲染期覆盖，缺者回落 JSON 种子）')
+    ver = radar_version()
+    print(f'[verdict] 快照判定映射 {len(rv)} 条（渲染期覆盖，缺者回落 JSON 种子）· 测试版本 {ver}')
     cats = data['categories']
     forms = bdata['forms']
     repos = [p['repo'] for c in cats for p in c['plugins']]
@@ -125,14 +147,15 @@ def main():
         ranked = sorted(c['plugins'], key=lambda p: (-stars[p['repo']], p['repo'].lower()))
         parts.append(f"### {c['name']}（{len(ranked)}）")
         parts.append('')
-        parts.append('| 插件 | ⭐ | 实测 | 说明 |')
+        parts.append('| 插件 | ⭐ | 兼容状态 | 说明 |')
         parts.append('|---|---:|---|---|')
         for p in ranked:
             desc = p['desc'].replace('|', '\\|')
             parts.append(f"| [{p['name']}](https://github.com/{p['repo']}) | {stars[p['repo']]} |"
-                         f" {VERDICT_MARK.get(rv.get(p['repo'].lower(), p.get('verdict')), '—')} | {desc} |")
+                         f" {tile(rv.get(p['repo'].lower(), p.get('verdict')), ver)} | {desc} |")
         parts.append('')
-    parts.append('> 实测 = 雷达 k8s 运行级判定（✅ 可用 · 待定 · 需适配 · 未测，四档口径见下文），'
+    parts.append('> 兼容状态磁贴 = 雷达 k8s 运行级判定（🟩 可用 · 🟨 需适配 · ⬜ 待测，四档口径见下文），'
+                 '右半为该轮 runner 测试版本（与 [data/radar-env.json](data/radar-env.json) 同源），'
                  '**本列由 bot 按最新快照自动回写**，榜内成员走插队重测通道优先轮测；'
                  'rc.8 + v4flash 源码路径重测（2026-08-21，50 仓 + 对方清单高星 22 仓）证据见 '
                  '[data/rc8-retest-20260821/](data/rc8-retest-20260821/) 与 [PLUGINS-ALL.md](PLUGINS-ALL.md)；'
@@ -151,14 +174,14 @@ def main():
         ranked = sorted(f['plugins'], key=lambda p: (-stars[p['repo']], p['repo'].lower()))
         bparts.append(f"### {f['name']}（{len(ranked)}）")
         bparts.append('')
-        bparts.append('| 整合包 | ⭐ | 实测 | 说明 |')
+        bparts.append('| 整合包 | ⭐ | 兼容状态 | 说明 |')
         bparts.append('|---|---:|---|---|')
         for p in ranked:
             desc = p['desc'].replace('|', '\\|')
             bparts.append(f"| [{p['name']}](https://github.com/{p['repo']}) | {stars[p['repo']]} |"
-                          f" {VERDICT_MARK.get(rv.get(p['repo'].lower(), p.get('verdict')), '—')} | {desc} |")
+                          f" {tile(rv.get(p['repo'].lower(), p.get('verdict')), ver)} | {desc} |")
         bparts.append('')
-    bparts.append('> 实测口径同精选榜；整合包安装方式以各仓库 README 为准（预设类多为 `dsh plugin add` 后在设置中启用，发行版类需按其自身安装器操作）。')
+    bparts.append('> 磁贴口径同精选榜（三态 · 右半 runner 版本）；整合包安装方式以各仓库 README 为准（预设类多为 `dsh plugin add` 后在设置中启用，发行版类需按其自身安装器操作）。')
     bblock = '\n'.join(bparts) + '\n\n<!-- AUTO:bundles:END -->'
 
     changed = False

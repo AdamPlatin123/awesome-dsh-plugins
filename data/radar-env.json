@@ -1,0 +1,5 @@
+{
+  "dsh_version": "0.1.1-rc.2",
+  "source": "dsh-k8s/radar-pipeline-run.sh runner 镜像钉定（dsh-test-runner:0.1.1-rc.2）；随 runner 版本升级同步更新本文件",
+  "updated": "2026-08-30"
+}
