@@ -1,14 +1,14 @@
 # 全量插件清单（统一四档口径）
 
-> 数据源：radar 快照并集（`20260830T224501Z` 2026-08-31 06:45 UTC+8 ⊕ `20260830T223001Z` 2026-08-31 06:30 UTC+8 ⊕ `20260830T213001Z` 2026-08-31 05:30 UTC+8 等 232 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
+> 数据源：radar 快照并集（`20260830T233001Z` 2026-08-31 07:30 UTC+8 ⊕ `20260830T224501Z` 2026-08-31 06:45 UTC+8 ⊕ `20260830T223001Z` 2026-08-31 06:30 UTC+8 等 233 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
 > 呈现：分组列表（状态 · 名称 · ★星标 · 一句话说明），不使用大表格；〔📦〕= 整合包（根 dsh.bundle / workspaces 多子包）。
 
 ## 统一度量衡
 
 **判定维度**（运行级四档；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：
 
-- 全量判定 12664（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（8349）/ `[不兼容]`（2656）/ `[待定]`（1508）
-- 已定位明细 8298（本列表展示口径，另 4366 条监测/未定位的判定暂不展示）：`[可用]`（5492）/ `[不兼容]`（1703）/ `[待定]`（997）/ `[未测]`（106）
+- 全量判定 12665（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（8349）/ `[不兼容]`（2657）/ `[待定]`（1508）
+- 已定位明细 8299（本列表展示口径，另 4366 条监测/未定位的判定暂不展示）：`[可用]`（5492）/ `[不兼容]`（1704）/ `[待定]`（997）/ `[未测]`（106）
 
 **定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：
 
@@ -19,7 +19,7 @@
 
 > 〔PR〕= 经已合并 PR 正式登记；收录 ≠ 兼容 ≠ 运行可用 ≠ 安全审计。
 
-## 汇总：12664 条（已定位 8298 · 监测/未定位 4366）· PR 登记 23 个
+## 汇总：12665 条（已定位 8299 · 监测/未定位 4366）· PR 登记 23 个
 
 ## 🎓 技能包（25）
 
@@ -2557,7 +2557,7 @@
 - `[歧义监测]` **dsh-tui-app** — 同名多仓，判定暂不展示
 - `[歧义监测]` **dsh-live-stats** — 同名多仓，判定暂不展示 〔PR〕
 
-## 💻 编码开发（1681）
+## 💻 编码开发（1682）
 
 - `[待定]` [zilliztech-memsearch](https://github.com/zilliztech/memsearch) ★2532 — A persistent, unified memory layer for all your AI agents (e.g
 - `[可用]` [hyhmrright-brooks-lint](https://github.com/hyhmrright/brooks-lint) ★1432 — AI code reviews grounded in 12 classic engineering books — decay risk diagnostics with book citations, severit
@@ -4157,6 +4157,7 @@
 - `[不兼容]` [lhh666-6-dsh-usage-cost](https://github.com/lhh666-6/dsh-usage-cost) ★0 — Real-time DeepSeek token usage and cost meter for DSH: status-bar capsule plus detail panel, local-only persis
 - `[未定位]` **lukeknow0-dsh-side-chat** — 占位待复核，判定暂不展示
 - `[未定位]` **m1ssbe4r-pocketcode** — 占位待复核，判定暂不展示
+- `[不兼容]` [masquerator-coder-dsh-im-gateway](https://github.com/masquerator-coder/dsh-im-gateway) ★0 — Deepseek harness im gateway
 - `[不兼容]` [memorax-ai-dsh-llm-memorax](https://github.com/memorax-ai/dsh-llm-memorax) ★0 — DSH provider preset for the Memorax DeepSeek V4 Flash gateway
 - `[未定位]` **michengai-dsh-codex-desktop-website** — 占位待复核，判定暂不展示
 - `[未定位]` **mj-chang-dsh-vscode** — 占位待复核，判定暂不展示
