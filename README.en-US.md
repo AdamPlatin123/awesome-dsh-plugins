@@ -12,7 +12,7 @@
 **An open-source radar for the DeepSeek Harness plugin ecosystem — continuous discovery, runtime validation, 15-minute snapshots. The plugin catalog you see below is just an artifact it generates.**
 Know which plugins work before you install them.
 
-[![confirmed](https://img.shields.io/badge/confirmed-8327-blue)](#featured) [![scan](https://img.shields.io/badge/scan-every_6h-green)](#ecosystem-snapshot) [![tested](https://img.shields.io/badge/tested-11689-orange)](#how-we-assess-compatibility) [![dshfind](https://dshfind.com/api/badge/AdamPlatin123/dsh-plugin-radar?lang=en)](https://dshfind.com/plugins/AdamPlatin123/dsh-plugin-radar?ref=badge) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![confirmed](https://img.shields.io/badge/confirmed-8367-blue)](#featured) [![scan](https://img.shields.io/badge/scan-every_6h-green)](#ecosystem-snapshot) [![tested](https://img.shields.io/badge/tested-11689-orange)](#how-we-assess-compatibility) [![dshfind](https://dshfind.com/api/badge/AdamPlatin123/dsh-plugin-radar?lang=en)](https://dshfind.com/plugins/AdamPlatin123/dsh-plugin-radar?ref=badge) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
 [![runtime OK](https://img.shields.io/badge/runtime_OK_7813-0.1.1--rc.2-brightgreen)](#2-understand-status-unified-4-tier-scale) [![to test](https://img.shields.io/badge/to_test_1351-0.1.1--rc.2-lightgrey)](#2-understand-status-unified-4-tier-scale) [![needs adapt](https://img.shields.io/badge/needs_adapt_2631-0.1.1--rc.2-yellow)](#2-understand-status-unified-4-tier-scale)
 
@@ -20,7 +20,7 @@ Know which plugins work before you install them.
 
 ---
 
-**What is this?** DeepSeek Harness (DSH) is an open-source coding agent where everything is a plugin. This repo is a **radar** that automatically tracks its plugin ecosystem — **8327 plugin repos indexed** (manifest-level classification, v2 engine), **11689 runtime-tested on the k8s track**.
+**What is this?** DeepSeek Harness (DSH) is an open-source coding agent where everything is a plugin. This repo is a **radar** that automatically tracks its plugin ecosystem — **8367 plugin repos indexed** (manifest-level classification, v2 engine), **11689 runtime-tested on the k8s track**.
 
 **Architecture principle: the catalog is a build artifact.**
 
@@ -39,20 +39,20 @@ Catalog renderer (aggregation · classification · bilingual rendering)
 
 ## How it works
 
-> Data as of snapshot `20260830T161501Z` (2026-08-31 00:15:03 UTC+8 · classifier unified-v2-bridge)
+> Data as of snapshot `20260830T191501Z` (2026-08-31 03:15:02 UTC+8 · classifier unified-v2-bridge)
 
 <!-- AUTO:pipeline:START -->
 ```mermaid
 flowchart TB
     subgraph Discovery["Discovery (every 6h · probe every 15 min)"]
-        A1["GitHub Search<br/>topic ×2 + keyword ×3<br/>candidates 16632 · age 161m"]
+        A1["GitHub Search<br/>topic ×2 + keyword ×3<br/>candidates 16737 · age 112m"]
         A2["Local DB merge · dedupe by repo id"]
         A3["Private org repos excluded<br/>35s stagger · 403 backoff · dshow blocklist"]
     end
     subgraph Validation["Validation (driver 20s streaming loop)"]
         B1{"package.json<br/>name + main/exports/dsh?"}
     end
-    B1 -->|"plugins 8327"| C1["k8s runtime test<br/>1 pod per plugin · concurrency 10<br/>dsh agent + Qwen (de-stream)"]
+    B1 -->|"plugins 8367"| C1["k8s runtime test<br/>1 pod per plugin · concurrency 10<br/>dsh agent + Qwen (de-stream)"]
     B1 -->|"non-plugins (dropped 1064)"| B3["dropped to save space"]
     C1 --> D1{"verdict · total 11689"}
     D1 -->|"7813 / 2631"| E1["aggregate + README stats"]
@@ -242,19 +242,19 @@ Everything catalog-shaped below — the featured board, bundles, category direct
 
 Per-plugin details (verdict · location · stars) in **PLUGINS-ALL.md**.
 
-- **🎓 技能包**（24）— OK 6 · incompatible 1 · pending 3 · untested 11 · watching 3 — [details](PLUGINS-ALL.md#-技能包24)
-- **🧠 记忆增强**（33）— OK 14 · incompatible 3 · pending 5 · untested 2 · watching 9 — [details](PLUGINS-ALL.md#-记忆增强33)
+- **🎓 技能包**（25）— OK 6 · incompatible 2 · pending 3 · untested 11 · watching 3 — [details](PLUGINS-ALL.md#-技能包25)
+- **🧠 记忆增强**（34）— OK 14 · incompatible 4 · pending 5 · untested 2 · watching 9 — [details](PLUGINS-ALL.md#-记忆增强34)
 - **🎨 主题皮肤**（17）— OK 7 · incompatible 0 · pending 2 · untested 5 · watching 3 — [details](PLUGINS-ALL.md#-主题皮肤17)
 - **🛒 市场与管理**（235）— OK 93 · incompatible 20 · pending 14 · untested 7 · watching 101 — [details](PLUGINS-ALL.md#-市场与管理235)
-- **🔌 Web UI 增强**（2184）— OK 1200 · incompatible 390 · pending 196 · untested 16 · watching 382 — [details](PLUGINS-ALL.md#-web-ui-增强2184)
-- **💻 编码开发**（1664）— OK 833 · incompatible 320 · pending 153 · untested 18 · watching 340 — [details](PLUGINS-ALL.md#-编码开发1664)
-- **🤖 Agent 能力**（1622）— OK 724 · incompatible 298 · pending 145 · untested 10 · watching 445 — [details](PLUGINS-ALL.md#-agent-能力1622)
-- **📡 消息通讯**（550）— OK 224 · incompatible 123 · pending 44 · untested 3 · watching 156 — [details](PLUGINS-ALL.md#-消息通讯550)
-- **🗂 文件数据**（490）— OK 231 · incompatible 84 · pending 45 · untested 9 · watching 121 — [details](PLUGINS-ALL.md#-文件数据490)
-- **🎮 娱乐生活**（322）— OK 151 · incompatible 28 · pending 28 · untested 0 · watching 115 — [details](PLUGINS-ALL.md#-娱乐生活322)
-- **🛠 基建部署**（1031）— OK 407 · incompatible 123 · pending 128 · untested 3 · watching 370 — [details](PLUGINS-ALL.md#-基建部署1031)
+- **🔌 Web UI 增强**（2191）— OK 1203 · incompatible 390 · pending 197 · untested 16 · watching 385 — [details](PLUGINS-ALL.md#-web-ui-增强2191)
+- **💻 编码开发**（1664）— OK 830 · incompatible 319 · pending 155 · untested 18 · watching 342 — [details](PLUGINS-ALL.md#-编码开发1664)
+- **🤖 Agent 能力**（1620）— OK 724 · incompatible 296 · pending 145 · untested 10 · watching 445 — [details](PLUGINS-ALL.md#-agent-能力1620)
+- **📡 消息通讯**（547）— OK 222 · incompatible 123 · pending 43 · untested 3 · watching 156 — [details](PLUGINS-ALL.md#-消息通讯547)
+- **🗂 文件数据**（489）— OK 230 · incompatible 84 · pending 45 · untested 9 · watching 121 — [details](PLUGINS-ALL.md#-文件数据489)
+- **🎮 娱乐生活**（325）— OK 153 · incompatible 28 · pending 29 · untested 0 · watching 115 — [details](PLUGINS-ALL.md#-娱乐生活325)
+- **🛠 基建部署**（1030）— OK 408 · incompatible 124 · pending 125 · untested 3 · watching 370 — [details](PLUGINS-ALL.md#-基建部署1030)
 - **📚 学习研究**（107）— OK 29 · incompatible 9 · pending 8 · untested 2 · watching 59 — [details](PLUGINS-ALL.md#-学习研究107)
-- **❓ 其他**（4263）— OK 1534 · incompatible 293 · pending 223 · untested 20 · watching 2193 — [details](PLUGINS-ALL.md#-其他4263)
+- **❓ 其他**（4279）— OK 1534 · incompatible 294 · pending 222 · untested 20 · watching 2209 — [details](PLUGINS-ALL.md#-其他4279)
 
 <!-- AUTO:catalog:END -->
 
@@ -295,7 +295,7 @@ All entries use a **single runtime scale** (k8s container tests — see the test
 | · Untested | Never dispatched to a runtime test | Do not infer either compatibility or incompatibility |
 
 > [!NOTE]
-> **Test version**: dsh (in-container agent) driven by Qwen3.6-35B (via the de-stream proxy) · k8s, 5 shards · each run is anchored by the snapshot `run_id` (currently `20260830T161501Z`). The DSH npm version is not recorded per snapshot — cross-check via run_id and the `reports/agent-test/` dates.
+> **Test version**: dsh (in-container agent) driven by Qwen3.6-35B (via the de-stream proxy) · k8s, 5 shards · each run is anchored by the snapshot `run_id` (currently `20260830T191501Z`). The DSH npm version is not recorded per snapshot — cross-check via run_id and the `reports/agent-test/` dates.
 > **Scale note**: "tested N" in badges and stats is the single-run scale; the catalog and full listing use the cross-run cumulative scale — the numbers legitimately differ.
 
 Every conclusion carries four facts: **plugin commit, mainline commit, test date, test level**. If any one is missing, lower your trust in the result.
@@ -402,7 +402,7 @@ Small PRs that just fix a link, category, description, or status evidence are al
 ## Ecosystem Snapshot
 
 <!-- AUTO:ecosystem:START -->
-> 渲染于快照 20260830T161501Z（2026-08-31 00:15 UTC+8）· 数据源 data/snapshots/（渲染即对齐）
+> 渲染于快照 20260830T191501Z（2026-08-31 03:15 UTC+8）· 数据源 data/snapshots/（渲染即对齐）
 
 | 证据层 | 当前结果 |
 |---|---:|
