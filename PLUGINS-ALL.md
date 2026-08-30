@@ -1,14 +1,14 @@
 # 全量插件清单（统一四档口径）
 
-> 数据源：radar 快照并集（`20260830T191501Z` 2026-08-31 03:15 UTC+8 ⊕ `20260830T161501Z` 2026-08-31 00:15 UTC+8 ⊕ `20260830T160001Z` 2026-08-31 00:00 UTC+8 等 225 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
+> 数据源：radar 快照并集（`20260830T193001Z` 2026-08-31 03:30 UTC+8 ⊕ `20260830T191501Z` 2026-08-31 03:15 UTC+8 ⊕ `20260830T161501Z` 2026-08-31 00:15 UTC+8 等 226 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
 > 呈现：分组列表（状态 · 名称 · ★星标 · 一句话说明），不使用大表格；〔📦〕= 整合包（根 dsh.bundle / workspaces 多子包）。
 
 ## 统一度量衡
 
 **判定维度**（运行级四档；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：
 
-- 全量判定 12563（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（8279）/ `[不兼容]`（2633）/ `[待定]`（1500）
-- 已定位明细 8245（本列表展示口径，另 4318 条监测/未定位的判定暂不展示）：`[可用]`（5453）/ `[不兼容]`（1693）/ `[待定]`（993）/ `[未测]`（106）
+- 全量判定 12564（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（8280）/ `[不兼容]`（2633）/ `[待定]`（1500）
+- 已定位明细 8246（本列表展示口径，另 4318 条监测/未定位的判定暂不展示）：`[可用]`（5454）/ `[不兼容]`（1693）/ `[待定]`（993）/ `[未测]`（106）
 
 **定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：
 
@@ -19,7 +19,7 @@
 
 > 〔PR〕= 经已合并 PR 正式登记；收录 ≠ 兼容 ≠ 运行可用 ≠ 安全审计。
 
-## 汇总：12563 条（已定位 8245 · 监测/未定位 4318）· PR 登记 23 个
+## 汇总：12564 条（已定位 8246 · 监测/未定位 4318）· PR 登记 23 个
 
 ## 🎓 技能包（25）
 
@@ -344,7 +344,7 @@
 - `[空仓监测]` **zhoupengjie-dsh-motion-manager** — GitHub 无此仓库，判定暂不展示
 - `[空仓监测]` **zhoupengjie-dsh-settings-icon-manager** — GitHub 无此仓库，判定暂不展示
 
-## 🔌 Web UI 增强（2191）
+## 🔌 Web UI 增强（2192）
 
 - `[可用]` [chuspeeism-dashi-taskboard](https://github.com/chuspeeism/dashi-taskboard) ★2792 — 现代化可灵活嵌入的任务面板，支持 Codex、DeepSeek Harness
 - `[可用]` [modlens](https://github.com/liustack/modlens) ★2185 — The first vision plugin for DeepSeek Harness, and the vision bridge for every text-only coding agent
@@ -633,6 +633,7 @@
 - `[可用]` [mux9056-bot-dsh-theme](https://github.com/mux9056-bot/dsh-theme) ★4 — DeepSeek Harness 主题插件 · 30 款即插即用主题（零依赖 DSH 客户端插件 + 独立 CSS）/ 30-theme pack for DeepSeek Harness web UI
 - `[可用]` [nabin-qq273274877-dsh-model-balance](https://github.com/nabin-qq273274877/dsh-model-balance) ★4 — 为 DeepSeek Harness Web GUI 提供多供应商真实账户余额显示
 - `[可用]` [dsh-ui-quote-selection](https://github.com/nekogpt/dsh-ui-quote-selection) ★4 — Codex-style select-to-quote for DeepSeek Harness Web: quote any chat text into the composer as a native refere
+- `[可用]` [null119-dsh-mcp-manage](https://github.com/null119/dsh-mcp-manage) ★4 — DSH（DeepSeek Harness）Web GUI 插件：在设置页管理 MCP 服务器——列出已安装工具，添加/编辑/删除、启用/停用；组合配置提供的 MCP 同样可在运行时直接编辑、停用、移除并恢复，无需重启宿主
 - `[可用]` [dsh-science](https://github.com/omdsh-dev/dsh-science) ★4 — Reproducible Python and R work on DeepSeek Harness, built as plugins.〔📦〕
 - `[可用]` [paicat1-dsh-screenshot](https://github.com/paicat1/dsh-screenshot) ★4 — DSH 轻量截图插件：轻 ： 纯 PowerShell 实现，零依赖、零二进制；截图能力独立维护，不随任何上游更新而失效
 - `[可用]` [perrylink-dsh-plugin-guide](https://github.com/PerryLink/dsh-plugin-guide) ★4 — —
