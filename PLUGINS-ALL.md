@@ -1,14 +1,14 @@
 # 全量插件清单（统一四档口径）
 
-> 数据源：radar 快照并集（`20260831T174501Z` 2026-09-01 01:45 UTC+8 ⊕ `20260831T123001Z` 2026-08-31 20:30 UTC+8 ⊕ `20260831T120001Z` 2026-08-31 20:00 UTC+8 等 250 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
+> 数据源：radar 快照并集（`20260831T180001Z` 2026-09-01 02:00 UTC+8 ⊕ `20260831T174501Z` 2026-09-01 01:45 UTC+8 ⊕ `20260831T123001Z` 2026-08-31 20:30 UTC+8 等 251 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
 > 呈现：分组列表（状态 · 名称 · ★星标 · 一句话说明），不使用大表格；〔📦〕= 整合包（根 dsh.bundle / workspaces 多子包）。
 
 ## 统一度量衡
 
 **判定维度**（运行级四档；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：
 
-- 全量判定 13020（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（8621）/ `[不兼容]`（2724）/ `[待定]`（1522）
-- 已定位明细 8527（本列表展示口径，另 4493 条监测/未定位的判定暂不展示）：`[可用]`（5675）/ `[不兼容]`（1739）/ `[待定]`（1005）/ `[未测]`（108）
+- 全量判定 13020（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（8621）/ `[不兼容]`（2725）/ `[待定]`（1521）
+- 已定位明细 8527（本列表展示口径，另 4493 条监测/未定位的判定暂不展示）：`[可用]`（5675）/ `[不兼容]`（1740）/ `[待定]`（1004）/ `[未测]`（108）
 
 **定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：
 
@@ -11751,7 +11751,6 @@
 - `[未定位]` **washington5533-guarftrain** — 占位待复核，判定暂不展示
 - `[未定位]` **waverly-w-dsh-scratchpad** — 占位待复核，判定暂不展示
 - `[未定位]` **wayne036-dsh-plugin-login-gate** — 占位待复核，判定暂不展示
-- `[待定]` [weekitmo-dsh-trace](https://github.com/weekitmo/dsh-trace) ★0 — A DeepSeek Harness Web plugin for inspecting redacted LLM HTTP request and response traces.
 - `[未定位]` **weihaolee-dsh-plugin-vision-fallback** — 占位待复核，判定暂不展示
 - `[可用]` [welsione-dsh-plugin-developer](https://github.com/welsione/dsh-plugin-developer) ★0 — —
 - `[可用]` [wemio-dsh-plugin-catalog](https://github.com/wemio/dsh-plugin-catalog) ★0 — —
@@ -12974,6 +12973,7 @@
 - `[未定位]` **web0926-dsh-llm-verifier** — 占位待复核，判定暂不展示
 - `[未定位]` **webkubor-dsh-mirror** — 占位待复核，判定暂不展示
 - `[未定位]` **wechsels-dsh-zotero-wiki** — 占位待复核，判定暂不展示
+- `[不兼容]` [weekitmo-dsh-trace](https://github.com/weekitmo/dsh-trace) ★0 — A DeepSeek Harness Web plugin for inspecting redacted LLM HTTP request and response traces.
 - `[未定位]` **wensincai-btw4deepseekharness** — 占位待复核，判定暂不展示
 - `[未定位]` **wertybsd-dsh-local-llm** — 占位待复核，判定暂不展示
 - `[未定位]` **why-daydream-dsh-pack** — 占位待复核，判定暂不展示
