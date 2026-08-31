@@ -1,14 +1,14 @@
 # 全量插件清单（统一四档口径）
 
-> 数据源：radar 快照并集（`20260831T054501Z` 2026-08-31 13:45 UTC+8 ⊕ `20260831T034501Z` 2026-08-31 11:45 UTC+8 ⊕ `20260831T021501Z` 2026-08-31 10:15 UTC+8 等 240 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
+> 数据源：radar 快照并集（`20260831T060001Z` 2026-08-31 14:00 UTC+8 ⊕ `20260831T054501Z` 2026-08-31 13:45 UTC+8 ⊕ `20260831T034501Z` 2026-08-31 11:45 UTC+8 等 241 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
 > 呈现：分组列表（状态 · 名称 · ★星标 · 一句话说明），不使用大表格；〔📦〕= 整合包（根 dsh.bundle / workspaces 多子包）。
 
 ## 统一度量衡
 
 **判定维度**（运行级四档；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：
 
-- 全量判定 12772（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（8437）/ `[不兼容]`（2670）/ `[待定]`（1514）
-- 已定位明细 8372（本列表展示口径，另 4400 条监测/未定位的判定暂不展示）：`[可用]`（5555）/ `[不兼容]`（1710）/ `[待定]`（1001）/ `[未测]`（106）
+- 全量判定 12773（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（8437）/ `[不兼容]`（2671）/ `[待定]`（1514）
+- 已定位明细 8373（本列表展示口径，另 4400 条监测/未定位的判定暂不展示）：`[可用]`（5555）/ `[不兼容]`（1711）/ `[待定]`（1001）/ `[未测]`（106）
 
 **定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：
 
@@ -19,7 +19,7 @@
 
 > 〔PR〕= 经已合并 PR 正式登记；收录 ≠ 兼容 ≠ 运行可用 ≠ 安全审计。
 
-## 汇总：12772 条（已定位 8372 · 监测/未定位 4400）· PR 登记 23 个
+## 汇总：12773 条（已定位 8373 · 监测/未定位 4400）· PR 登记 23 个
 
 ## 🎓 技能包（25）
 
@@ -4250,7 +4250,7 @@
 - `[歧义监测]` **dsh-cc-connect** — 同名多仓，判定暂不展示
 - `[歧义监测]` **dsh-codex-bridge** — 同名多仓，判定暂不展示
 
-## 🤖 Agent 能力（1638）
+## 🤖 Agent 能力（1639）
 
 - `[可用]` [mem0ai-mem0](https://github.com/mem0ai/mem0) ★64389 — Universal memory layer for AI Agents
 - `[待定]` [tt-a1i-archify](https://github.com/tt-a1i/archify) ★35431 — Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self
@@ -5633,6 +5633,7 @@
 - `[不兼容]` [wang122818-dsh-command-delete](https://github.com/wang122818/dsh-command-delete) ★1 — DSH plugin: slash commands to delete sessions and workspaces (projects)
 - `[不兼容]` [xianshu-virtuous-dsh-whale-companion](https://github.com/xianshu-virtuous/dsh-whale-companion) ★1 — DeepSeek Harness whale-maid persona and automatic near-limit session continuation
 - `[不兼容]` [xiejianjun000-eco-dsh-plugins](https://github.com/xiejianjun000/eco-dsh-plugins) ★1 — dsh plugins ported from eco-agent (xiejianjun000): permission gate, SM3 audit chain, memory tree
+- `[不兼容]` [xipian1216-dsh-aa-bridge](https://github.com/xipian1216/dsh-aa-bridge) ★1 — Agents Anywhere bridge and Web status plugin for DeepSeek Harness
 - `[不兼容]` [xuanyuanluoxue-computer-use-vision](https://github.com/xuanyuanluoxue/computer-use-vision) ★1 — Windows computer-use capability for DSH: screenshot, vision, simulated input, self-evolving knowledge base
 - `[不兼容]` [zergtant-dsh-remote-access](https://github.com/zergtant/dsh-remote-access) ★1 — DeepSeek Harness (dsh) 远程访问插件：提供 TLS、登录认证、会话保护和 HTTP/WebSocket 透明反代，支持局域网及 FRP ，cloudflare隧道等远程访问
 - `[不兼容]` [zhengjy01-dsh-cubox](https://github.com/zhengjy01/dsh-cubox) ★1 — Cubox sync plugin for DeepSeek Harness: scheduled sync, AI daily brief from your prompt template into Obsidian
