@@ -1,25 +1,25 @@
 # 全量插件清单（统一四档口径）
 
-> 数据源：radar 快照并集（`20260901T021501Z` 2026-09-01 10:15 UTC+8 ⊕ `20260901T001501Z` 2026-09-01 08:17 UTC+8 ⊕ `20260831T231501Z` 2026-09-01 07:15 UTC+8 等 257 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
+> 数据源：radar 快照并集（`20260901T034502Z` 2026-09-01 11:45 UTC+8 ⊕ `20260901T021501Z` 2026-09-01 10:15 UTC+8 ⊕ `20260901T001501Z` 2026-09-01 08:17 UTC+8 等 258 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
 > 呈现：分组列表（状态 · 名称 · ★星标 · 一句话说明），不使用大表格；〔📦〕= 整合包（根 dsh.bundle / workspaces 多子包）。
 
 ## 统一度量衡
 
 **判定维度**（运行级四档；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：
 
-- 全量判定 13094（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（8723）/ `[不兼容]`（2634）/ `[待定]`（1584）
-- 已定位明细 8536（本列表展示口径，另 4558 条监测/未定位的判定暂不展示）：`[可用]`（5711）/ `[不兼容]`（1681）/ `[待定]`（1036）/ `[未测]`（108）
+- 全量判定 13095（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（8723）/ `[不兼容]`（2636）/ `[待定]`（1583）
+- 已定位明细 8536（本列表展示口径，另 4559 条监测/未定位的判定暂不展示）：`[可用]`（5711）/ `[不兼容]`（1681）/ `[待定]`（1036）/ `[未测]`（108）
 
 **定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：
 
 - `[空仓监测]`（133）— GitHub 复核无此仓库；待重现后恢复判定显示
 - `[歧义监测]`（103）— 同名多仓无法锁定本体；锁定前不展示
-- `[未定位]`（4320）— 新占位条目，待下一轮定位复核（scripts/resolve_placeholders.py）
+- `[未定位]`（4321）— 新占位条目，待下一轮定位复核（scripts/resolve_placeholders.py）
 - 定位复核累计修复 539 个占位 URL
 
 > 〔PR〕= 经已合并 PR 正式登记；收录 ≠ 兼容 ≠ 运行可用 ≠ 安全审计。
 
-## 汇总：13094 条（已定位 8536 · 监测/未定位 4558）· PR 登记 23 个
+## 汇总：13095 条（已定位 8536 · 监测/未定位 4559）· PR 登记 23 个
 
 ## 🎓 技能包（24）
 
@@ -351,7 +351,7 @@
 - `[空仓监测]` **zhoupengjie-dsh-motion-manager** — GitHub 无此仓库，判定暂不展示
 - `[空仓监测]` **zhoupengjie-dsh-settings-icon-manager** — GitHub 无此仓库，判定暂不展示
 
-## 🔌 Web UI 增强（2240）
+## 🔌 Web UI 增强（2241）
 
 - `[可用]` [chuspeeism-dashi-taskboard](https://github.com/chuspeeism/dashi-taskboard) ★2828 — 现代化可灵活嵌入的任务面板，支持 Codex、DeepSeek Harness
 - `[可用]` [modlens](https://github.com/liustack/modlens) ★2185 — The first vision plugin for DeepSeek Harness, and the vision bridge for every text-only coding agent
@@ -2447,6 +2447,7 @@
 - `[未定位]` **ethanz11-creat-dsh-billing-tui** — 占位待复核，判定暂不展示
 - `[未定位]` **festoney8-deepseek-harness-gui** — 占位待复核，判定暂不展示
 - `[未定位]` **fishofouc-plugin-ui-controls** — 占位待复核，判定暂不展示
+- `[未定位]` **flametn7-dsh-tui-browser-use** — 占位待复核，判定暂不展示
 - `[未定位]` **foo1moon-dsh-web-visualuiconfig** — 占位待复核，判定暂不展示
 - `[不兼容]` [foxi-ui-deepseek-harness-desktop](https://github.com/foxi-ui/deepseek-harness-desktop) ★0 — Deepseek Harness 桌面版
 - `[不兼容]` [ghbhiee-dsh-plugin-tui](https://github.com/ghbhiee/dsh-plugin-tui) ★0 — Claude Code-style terminal UI plugin for DeepSeek Harness (dsh): streaming REPL, collapsed thinking, interacti
@@ -10010,7 +10011,6 @@
 - `[未定位]` **dk-zhu-dsh-consult** — 占位待复核，判定暂不展示
 - `[未定位]` **dm010727-dsh-cline** — 占位待复核，判定暂不展示
 - `[未定位]` **dnncovo-dsh-sounds** — 占位待复核，判定暂不展示
-- `[未定位]` **dobychao-dsh-workspace-enhancement** — 占位待复核，判定暂不展示
 - `[未定位]` **docjlm-dsh-arknights** — 占位待复核，判定暂不展示
 - `[未定位]` **doggyhu-dsh-daily-sticky** — 占位待复核，判定暂不展示
 - `[未定位]` **doiiarx-dsh-settings-search-plugin** — 占位待复核，判定暂不展示
@@ -12698,6 +12698,7 @@
 - `[未定位]` **dev-wiki-dev-harness-dsh** — 占位待复核，判定暂不展示
 - `[不兼容]` [dingminhua-dsh-connect-trae](https://github.com/dingminhua/dsh-connect-trae) ★0 — Connect locally signed-in Trae models to DeepSeek Harness with a read-only credits overview.
 - `[不兼容]` [dmz2922990-dsh-thinkmeter](https://github.com/dmz2922990/dsh-thinkmeter) ★0 — DeepSeek Harness（DSH）客户端插件：将聊天视图中流式的 Think 思考预览替换为 实时 Token 数量显示
+- `[未定位]` **dobychao-dsh-workspace-enhancement** — 占位待复核，判定暂不展示
 - `[未定位]` **drhushi-dsh-plugin-tav2** — 占位待复核，判定暂不展示
 - `[不兼容]` [dsh-pulse-dsh-hermes-bridge](https://github.com/dsh-pulse/dsh-hermes-bridge) ★0 — —
 - `[未定位]` **eavebounty-dsh-workflow-studio** — 占位待复核，判定暂不展示
