@@ -1,14 +1,14 @@
 # 全量插件清单（统一四档口径）
 
-> 数据源：radar 快照并集（`20260902T111501Z` 2026-09-02 19:15 UTC+8 ⊕ `20260902T110001Z` 2026-09-02 19:00 UTC+8 ⊕ `20260902T100001Z` 2026-09-02 18:00 UTC+8 等 302 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
+> 数据源：radar 快照并集（`20260902T113001Z` 2026-09-02 19:30 UTC+8 ⊕ `20260902T111501Z` 2026-09-02 19:15 UTC+8 ⊕ `20260902T110001Z` 2026-09-02 19:00 UTC+8 等 303 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
 > 呈现：分组列表（状态 · 名称 · ★星标 · 一句话说明），不使用大表格；〔📦〕= 整合包（根 dsh.bundle / workspaces 多子包）。
 
 ## 统一度量衡
 
 **判定维度**（运行级四档；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：
 
-- 全量判定 13694（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（9140）/ `[不兼容]`（2704）/ `[待定]`（1697）
-- 已定位明细 8836（本列表展示口径，另 4858 条监测/未定位的判定暂不展示）：`[可用]`（5923）/ `[不兼容]`（1704）/ `[待定]`（1101）/ `[未测]`（108）
+- 全量判定 13696（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（9141）/ `[不兼容]`（2704）/ `[待定]`（1698）
+- 已定位明细 8838（本列表展示口径，另 4858 条监测/未定位的判定暂不展示）：`[可用]`（5924）/ `[不兼容]`（1704）/ `[待定]`（1102）/ `[未测]`（108）
 
 **定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：
 
@@ -19,7 +19,7 @@
 
 > 〔PR〕= 经已合并 PR 正式登记；收录 ≠ 兼容 ≠ 运行可用 ≠ 安全审计。
 
-## 汇总：13694 条（已定位 8836 · 监测/未定位 4858）· PR 登记 23 个
+## 汇总：13696 条（已定位 8838 · 监测/未定位 4858）· PR 登记 23 个
 
 ## 🎓 技能包（26）
 
@@ -358,7 +358,7 @@
 - `[空仓监测]` **zhoupengjie-dsh-motion-manager** — GitHub 无此仓库，判定暂不展示
 - `[空仓监测]` **zhoupengjie-dsh-settings-icon-manager** — GitHub 无此仓库，判定暂不展示
 
-## 🔌 Web UI 增强（2331）
+## 🔌 Web UI 增强（2332）
 
 - `[可用]` [mem0ai-mem0](https://github.com/mem0ai/mem0) ★64562 — The Memory Layer for AI Agents - Drop-in memory infrastructure for AI agents and apps
 - `[可用]` [huangruiteng-loopx](https://github.com/huangruiteng/loopx) ★5410 — Long-horizon agent control plane for durable, governed work across Codex, Claude Code, and other harnesses.
@@ -2102,6 +2102,7 @@
 - `[未定位]` **yhprime-dsh-theme-picker** — 占位待复核，判定暂不展示
 - `[未定位]` **yicheng-zzz-dsh-client-ui-skin-jarvis** — 占位待复核，判定暂不展示
 - `[未定位]` **yicheng-zzz-jarvis-skin-publish-dsh-client-ui** — 占位待复核，判定暂不展示
+- `[可用]` [yin52133-dsh-luban](https://github.com/yin52133/dsh-luban) ★0 — 🛠️ Custom workbench plugin suite for DeepSeek Harness (DSH) — LAN auth, task board, SSH + tmux keep-alive, sha
 - `[未定位]` **yinbenfeng-dsh-plugin-quick-draw-tool** — 占位待复核，判定暂不展示
 - `[待定]` [ying-c-dsh-browser](https://github.com/ying-c/dsh-browser) ★0 — Chrome sidebar extension that lets DeepSeek Harness operate your browser directly, no vision capabilities requ
 - `[可用]` [dsh-plugin-connection-banner](https://github.com/yinren112/dsh-plugin-connection-banner) ★0 — Visible reconnecting banner for the DeepSeek Harness Web UI
@@ -2692,7 +2693,7 @@
 - `[歧义监测]` **dsh-tui-app** — 同名多仓，判定暂不展示
 - `[歧义监测]` **dsh-live-stats** — 同名多仓，判定暂不展示 〔PR〕
 
-## 💻 编码开发（1802）
+## 💻 编码开发（1803）
 
 - `[可用]` [anbeime-skill](https://github.com/anbeime/skill) ★6056 — 收录最全、更新最快的技能Skills商店：精选原创技能包（涵盖文档处理、内容创作、编程开发、机器学习、自动化工作流），全部打包好可直接安装使用！同时自动抓取GitHub上万个Skills项目，按分类、更新时间、Star数
 - `[待定]` [strukto-ai-mirage](https://github.com/strukto-ai/mirage) ★3596 — The World's First Virtual Terminal for AI Agents
@@ -3294,6 +3295,7 @@
 - `[待定]` [helibeiqi-dsh-csp-runtime](https://github.com/helibeiqi/dsh-csp-runtime) ★1 — Cognitive State Protocol (CSP) v0.1 — the cross-framework interop layer that makes AI thinking state serializa
 - `[可用]` [henryopencode-dsh-vision-plugin](https://github.com/henryopencode/dsh-vision-plugin) ★1 — Paste-to-recognize images in DeepSeek Harness via local Ollama vision model (Windows/macOS/Linux)
 - `[可用]` [hezhongtang-dsh-capability-optimizer](https://github.com/hezhongtang/dsh-capability-optimizer) ★1 — External-expert consultation for DeepSeek Harness: headless Claude Code CLI with role personas (advisor/review
+- `[待定]` [hotpot-labs-dsh-version-plugin](https://github.com/hotpot-labs/dsh-version-plugin) ★1 — 展示dsh版本，提供更新到最新版按钮
 - `[可用]` [hskelp9527-pixel-dsh-plugin-market](https://github.com/hskelp9527-pixel/dsh-plugin-market) ★1 — DSH (DeepSeek Harness) plugin market tab: deepseek-harness GitHub catalog with Chinese-translated descriptions
 - `[可用]` [huangdaxianer-dsh-dual-model-eval](https://github.com/huangdaxianer/dsh-dual-model-eval) ★1 — Compare multiple coding models side by side in DeepSeek Harness with isolated Git worktrees, live traces, and
 - `[待定]` [hzh13650010318-coder-dsh-background](https://github.com/hzh13650010318-coder/dsh-background) ★1 — deepseek harness背景更换
