@@ -1,14 +1,14 @@
 # 全量插件清单（统一四档口径）
 
-> 数据源：radar 快照并集（`20260902T113001Z` 2026-09-02 19:30 UTC+8 ⊕ `20260902T111501Z` 2026-09-02 19:15 UTC+8 ⊕ `20260902T110001Z` 2026-09-02 19:00 UTC+8 等 303 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
+> 数据源：radar 快照并集（`20260902T114501Z` 2026-09-02 19:45 UTC+8 ⊕ `20260902T113001Z` 2026-09-02 19:30 UTC+8 ⊕ `20260902T111501Z` 2026-09-02 19:15 UTC+8 等 304 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
 > 呈现：分组列表（状态 · 名称 · ★星标 · 一句话说明），不使用大表格；〔📦〕= 整合包（根 dsh.bundle / workspaces 多子包）。
 
 ## 统一度量衡
 
 **判定维度**（运行级四档；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：
 
-- 全量判定 13696（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（9141）/ `[不兼容]`（2704）/ `[待定]`（1698）
-- 已定位明细 8838（本列表展示口径，另 4858 条监测/未定位的判定暂不展示）：`[可用]`（5924）/ `[不兼容]`（1704）/ `[待定]`（1102）/ `[未测]`（108）
+- 全量判定 13698（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（9144）/ `[不兼容]`（2704）/ `[待定]`（1697）
+- 已定位明细 8840（本列表展示口径，另 4858 条监测/未定位的判定暂不展示）：`[可用]`（5927）/ `[不兼容]`（1704）/ `[待定]`（1101）/ `[未测]`（108）
 
 **定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：
 
@@ -19,7 +19,7 @@
 
 > 〔PR〕= 经已合并 PR 正式登记；收录 ≠ 兼容 ≠ 运行可用 ≠ 安全审计。
 
-## 汇总：13696 条（已定位 8838 · 监测/未定位 4858）· PR 登记 23 个
+## 汇总：13698 条（已定位 8840 · 监测/未定位 4858）· PR 登记 23 个
 
 ## 🎓 技能包（26）
 
@@ -358,7 +358,7 @@
 - `[空仓监测]` **zhoupengjie-dsh-motion-manager** — GitHub 无此仓库，判定暂不展示
 - `[空仓监测]` **zhoupengjie-dsh-settings-icon-manager** — GitHub 无此仓库，判定暂不展示
 
-## 🔌 Web UI 增强（2332）
+## 🔌 Web UI 增强（2333）
 
 - `[可用]` [mem0ai-mem0](https://github.com/mem0ai/mem0) ★64562 — The Memory Layer for AI Agents - Drop-in memory infrastructure for AI agents and apps
 - `[可用]` [huangruiteng-loopx](https://github.com/huangruiteng/loopx) ★5410 — Long-horizon agent control plane for durable, governed work across Codex, Claude Code, and other harnesses.
@@ -1531,6 +1531,7 @@
 - `[未定位]` **anyuinlara-bit-dsh-bff-pet** — 占位待复核，判定暂不展示
 - `[待定]` [aqiane-dsh-client-ui-period-hint](https://github.com/aqiane/dsh-client-ui-period-hint) ★0 — 在输入栏显示当前dsAPI价格时段
 - `[未定位]` **as17514-dsh-cc-suite** — 占位待复核，判定暂不展示
+- `[可用]` [ash-qw-dsh-theme-prts](https://github.com/ash-qw/dsh-theme-prts) ★0 — Unofficial personal non-commercial Arknights P.R.T.S
 - `[未定位]` **askingtheheavens-dsh-openclaw-persona** — 占位待复核，判定暂不展示
 - `[未定位]` **astra-ursae-majoris-deepseek-harness-local-ui** — 占位待复核，判定暂不展示
 - `[未定位]` **atropinoltt-dsh-guide-dog** — 占位待复核，判定暂不展示
@@ -6194,7 +6195,7 @@
 - `[不兼容]` [mstar-workflow](https://github.com/btspoony/mstar-workflow) ★0 — —
 - `[歧义监测]` **dsh-kimi-bridge** — 同名多仓，判定暂不展示
 
-## 📡 消息通讯（570）
+## 📡 消息通讯（571）
 
 - `[可用]` [titanwings-distilly](https://github.com/titanwings/distilly) ★24259 — Distilly — Distill how they think into reusable Skills for any Agent or Bot
 - `[待定]` [wenbin-wb-dsh-bridge](https://github.com/wenbin-wb/dsh-bridge) ★137 — 🚀 DeepSeek Harness 多通道远程访问与安全守护插件 \| 局域网扫码直连、Cloudflare / 自建公网隧道、微信 / QQ / 飞书 / Telegram 机器人全生命周期对话 \| 内置全协议访问安全
@@ -6472,6 +6473,7 @@
 - `[未定位]` **goldenzqqq-dsh-model-collapse** — 占位待复核，判定暂不展示
 - `[未定位]` **guzhengsvt-dsh-wecom-notify** — 占位待复核，判定暂不展示
 - `[未定位]` **hoshino-yumetsuki-dsh-onebot** — 占位待复核，判定暂不展示
+- `[可用]` [hotpot-labs-dsh-notifier-plugin](https://github.com/hotpot-labs/dsh-notifier-plugin) ★0 — dsh 干完活之后通知你，【轻量级】通知插件，只通知，不交互，mac/windows/linux 操作系统支持，dsh 在干活时你可以摸鱼
 - `[未定位]` **huaiyuwangh-dsh-session-notify** — 占位待复核，判定暂不展示
 - `[未定位]` **huauauaa-dsh-notify** — 占位待复核，判定暂不展示
 - `[可用]` [huyang2024-dsh-openai-api](https://github.com/huyang2024/dsh-openai-api) ★0 — OpenAI-compatible HTTP surface for DeepSeek Harness (dsh): POST /v1/chat/completions, POST /v1/responses, GET
@@ -6824,7 +6826,7 @@
 - `[可用]` [fangweixuan26-hash-dsh-a2a-agent](https://github.com/fangweixuan26-hash/dsh-a2a-agent) ★3 — Expose a DeepSeek Harness agent over the Agent2Agent (A2A) protocol: agent card, JSON-RPC, LLM replies.
 - `[可用]` [ferstar-dsh-tool-ocr](https://github.com/ferstar/dsh-tool-ocr) ★3 — 本地 OCR 插件：让纯文本生成 LLM 也能读懂图片 \| Local OCR plugin: give text-only generative LLMs the ability to read images
 - `[待定]` [jinguanghai-deepseek-harness-forge-plugins](https://github.com/jinguanghai/deepseek-harness-forge-plugins) ★3 — Forge-plus: math/logic/regex/eprover/system/repair gates + TCM diagnosis + memory recall plugins for DeepSeek
-- `[待定]` [jinsiyu-dsh-safemode-profile](https://github.com/jinsiyu/dsh-safemode-profile) ★3 — dsh安全模式插件，通过构建空白profile实现零第三方插件启动
+- `[可用]` [jinsiyu-dsh-safemode-profile](https://github.com/jinsiyu/dsh-safemode-profile) ★3 — dsh安全模式插件，通过构建空白profile实现零第三方插件启动
 - `[可用]` [dsh-archive-viewer](https://github.com/keepermttl/dsh-archive-viewer) ★3 — DeepSeek Harness 归档会话管理插件：查看/恢复已归档会话（回到原工作区分组）+ 右上角一键关闭 dsh
 - `[可用]` [kkbsgg-dsh-balance](https://github.com/kkbsgg/dsh-balance) ★3 — —
 - `[可用]` [komoai2026-dsh-kolmopdf](https://github.com/komoai2026/dsh-kolmopdf) ★3 — KolmoPDF tools for DeepSeek Harness with durable API-key settings and CLI configuration.
