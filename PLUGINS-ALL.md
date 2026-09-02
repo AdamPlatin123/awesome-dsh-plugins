@@ -1,25 +1,25 @@
 # 全量插件清单（统一四档口径）
 
-> 数据源：radar 快照并集（`20260902T003001Z` 2026-09-02 08:30 UTC+8 ⊕ `20260902T001501Z` 2026-09-02 08:15 UTC+8 ⊕ `20260902T000001Z` 2026-09-02 08:00 UTC+8 等 273 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
+> 数据源：radar 快照并集（`20260902T004501Z` 2026-09-02 08:45 UTC+8 ⊕ `20260902T003001Z` 2026-09-02 08:30 UTC+8 ⊕ `20260902T001501Z` 2026-09-02 08:15 UTC+8 等 274 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
 > 呈现：分组列表（状态 · 名称 · ★星标 · 一句话说明），不使用大表格；〔📦〕= 整合包（根 dsh.bundle / workspaces 多子包）。
 
 ## 统一度量衡
 
 **判定维度**（运行级四档；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：
 
-- 全量判定 13217（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（8800）/ `[不兼容]`（2623）/ `[待定]`（1641）
-- 已定位明细 8581（本列表展示口径，另 4636 条监测/未定位的判定暂不展示）：`[可用]`（5731）/ `[不兼容]`（1667）/ `[待定]`（1075）/ `[未测]`（108）
+- 全量判定 13221（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（8801）/ `[不兼容]`（2623）/ `[待定]`（1644）
+- 已定位明细 8583（本列表展示口径，另 4638 条监测/未定位的判定暂不展示）：`[可用]`（5731）/ `[不兼容]`（1667）/ `[待定]`（1077）/ `[未测]`（108）
 
 **定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：
 
 - `[空仓监测]`（133）— GitHub 复核无此仓库；待重现后恢复判定显示
 - `[歧义监测]`（103）— 同名多仓无法锁定本体；锁定前不展示
-- `[未定位]`（4398）— 新占位条目，待下一轮定位复核（scripts/resolve_placeholders.py）
+- `[未定位]`（4400）— 新占位条目，待下一轮定位复核（scripts/resolve_placeholders.py）
 - 定位复核累计修复 539 个占位 URL
 
 > 〔PR〕= 经已合并 PR 正式登记；收录 ≠ 兼容 ≠ 运行可用 ≠ 安全审计。
 
-## 汇总：13217 条（已定位 8581 · 监测/未定位 4636）· PR 登记 23 个
+## 汇总：13221 条（已定位 8583 · 监测/未定位 4638）· PR 登记 23 个
 
 ## 🎓 技能包（25）
 
@@ -8625,7 +8625,7 @@
 - `[不兼容]` [dsh-plugin-wallpaper](https://github.com/Tree-Summer/dsh-plugin-wallpaper) ★0 — 可以在deepseek harness网页端自定义背景图片的插件
 - `[歧义监测]` **dsh-101** — 同名多仓，判定暂不展示
 
-## ❓ 其他（4649）
+## ❓ 其他（4653）
 
 - `[待定]` [deepseek-ai-deepseek-harness](https://github.com/deepseek-ai/deepseek-harness) ★124593 — DeepSeek Harness: Everything is a Plugin.〔📦〕
 - `[未测]` [openpencil](https://github.com/zseven-w/openpencil) ★5647 — OpenPencil 设计工具本体（DSH 适配器 dsh-openpencil 已另有条目；本体插队实测）
@@ -9357,6 +9357,7 @@
 - `[可用]` [dsh-payload-capture](https://github.com/Moeblack/dsh-payload-capture) ★1 — —
 - `[可用]` [moon16u-dsh-pouch](https://github.com/moon16u/dsh-pouch) ★1 — A pouch of practical plugins for DeepSeek Harness · DSH 实用小插件工具箱
 - `[可用]` [mouliangyu-dsh-plugins](https://github.com/mouliangyu/dsh-plugins) ★1 — Community plugins for DeepSeek Harness
+- `[待定]` [mycherish-dsh-bridge](https://github.com/mycherish/dsh-bridge) ★1 — DSH Bridge 是 DeepSeek Harness 的原生 macOS 菜单栏快速入口，不是完整聊天客户端，也不是 DSH Web 的套壳
 - `[待定]` [mywl6-dsh-task-reminder](https://github.com/mywl6/dsh-task-reminder) ★1 — Popup + sound reminders for DeepSeek Harness: get notified when the AI finishes a turn or asks you a question.
 - `[可用]` [DSH-Plugin-Account-HUD](https://github.com/namesColin/DSH-Plugin-Account-HUD) ★1 — 一个deepseek harness的插件，用于实时显示api-key的余额和api服务状态
 - `[可用]` [nanbbb-dsh-computer-use-windows](https://github.com/nanbbb/dsh-computer-use-windows) ★1 — Windows Computer Use tools for DeepSeek Harness: self-contained UIA native helper, occlusion-aware screenshots
@@ -10103,6 +10104,7 @@
 - `[未定位]` **dongsheng123132-dsh-vulnerability-remediation** — 占位待复核，判定暂不展示
 - `[未定位]` **dongyaoze-texpage-bridge** — 占位待复核，判定暂不展示
 - `[未定位]` **donnietangzhili-dsh-ops-console** — 占位待复核，判定暂不展示
+- `[未定位]` **doozqoo-dsh-pixel-office** — 占位待复核，判定暂不展示
 - `[未定位]` **dosterbool-dsh-balance-guard** — 占位待复核，判定暂不展示
 - `[未定位]` **dosterbool-dsh-zombie-gc** — 占位待复核，判定暂不展示
 - `[未定位]` **dreamrift-dsh-hub** — 占位待复核，判定暂不展示
@@ -10661,6 +10663,7 @@
 - `[未定位]` **lorodn4x-dsh-voice** — 占位待复核，判定暂不展示
 - `[未定位]` **lorvaste-dsh-project-initialization** — 占位待复核，判定暂不展示
 - `[未定位]` **lottle7-dsh-quota** — 占位待复核，判定暂不展示
+- `[未定位]` **lovaxi-thinktime-plugin-dsh** — 占位待复核，判定暂不展示
 - `[可用]` [lovstudio-dsh-account-balance](https://github.com/lovstudio/dsh-account-balance) ★0 — —
 - `[可用]` [lovstudio-dsh-better-command](https://github.com/lovstudio/dsh-better-command) ★0 — —
 - `[未定位]` **lqfhub-dsh-plugin** — 占位待复核，判定暂不展示
@@ -10977,6 +10980,7 @@
 - `[未定位]` **ramenne-deepseek-harness-gov** — 占位待复核，判定暂不展示
 - `[待定]` [rand0wn-dsh-malware-audit](https://github.com/rand0wn/dsh-malware-audit) ★0 — DeepSeek Harness (dsh) plugin: real AST-based scan of installed plugins for malicious-intent patterns, with an
 - `[未定位]` **randomix777-dsh-plugin-subscriptions** — 占位待复核，判定暂不展示
+- `[待定]` [rangdl-dsh-all-enhance](https://github.com/rangdl/dsh-all-enhance) ★0 — DSH（DeepSeek Harness）功能增强插件
 - `[未定位]` **rangrongg-searchsieve** — 占位待复核，判定暂不展示
 - `[未定位]` **rannist-balance-dsh** — 占位待复核，判定暂不展示
 - `[未定位]` **ranz-feng-dsh-web-import** — 占位待复核，判定暂不展示
