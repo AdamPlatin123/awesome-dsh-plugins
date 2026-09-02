@@ -1,14 +1,14 @@
 # 全量插件清单（统一四档口径）
 
-> 数据源：radar 快照并集（`20260902T041502Z` 2026-09-02 12:15 UTC+8 ⊕ `20260902T040001Z` 2026-09-02 12:00 UTC+8 ⊕ `20260902T034501Z` 2026-09-02 11:45 UTC+8 等 286 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
+> 数据源：radar 快照并集（`20260902T043001Z` 2026-09-02 12:30 UTC+8 ⊕ `20260902T041502Z` 2026-09-02 12:15 UTC+8 ⊕ `20260902T040001Z` 2026-09-02 12:00 UTC+8 等 287 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
 > 呈现：分组列表（状态 · 名称 · ★星标 · 一句话说明），不使用大表格；〔📦〕= 整合包（根 dsh.bundle / workspaces 多子包）。
 
 ## 统一度量衡
 
 **判定维度**（运行级四档；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：
 
-- 全量判定 13414（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（8934）/ `[不兼容]`（2658）/ `[待定]`（1669）
-- 已定位明细 8701（本列表展示口径，另 4713 条监测/未定位的判定暂不展示）：`[可用]`（5821）/ `[不兼容]`（1683）/ `[待定]`（1089）/ `[未测]`（108）
+- 全量判定 13416（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（8935）/ `[不兼容]`（2658）/ `[待定]`（1670）
+- 已定位明细 8703（本列表展示口径，另 4713 条监测/未定位的判定暂不展示）：`[可用]`（5822）/ `[不兼容]`（1683）/ `[待定]`（1090）/ `[未测]`（108）
 
 **定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：
 
@@ -19,7 +19,7 @@
 
 > 〔PR〕= 经已合并 PR 正式登记；收录 ≠ 兼容 ≠ 运行可用 ≠ 安全审计。
 
-## 汇总：13414 条（已定位 8701 · 监测/未定位 4713）· PR 登记 23 个
+## 汇总：13416 条（已定位 8703 · 监测/未定位 4713）· PR 登记 23 个
 
 ## 🎓 技能包（25）
 
@@ -353,7 +353,7 @@
 - `[空仓监测]` **zhoupengjie-dsh-motion-manager** — GitHub 无此仓库，判定暂不展示
 - `[空仓监测]` **zhoupengjie-dsh-settings-icon-manager** — GitHub 无此仓库，判定暂不展示
 
-## 🔌 Web UI 增强（2296）
+## 🔌 Web UI 增强（2297）
 
 - `[可用]` [mem0ai-mem0](https://github.com/mem0ai/mem0) ★64536 — The Memory Layer for AI Agents - Drop-in memory infrastructure for AI agents and apps
 - `[可用]` [huangruiteng-loopx](https://github.com/huangruiteng/loopx) ★5394 — Long-horizon agent control plane for durable, governed work across Codex, Claude Code, and other harnesses.
@@ -1830,6 +1830,7 @@
 - `[未定位]` **michengai-dsh-codex-ui** — 占位待复核，判定暂不展示
 - `[可用]` [ming6203-dsh-message-navigator](https://github.com/ming6203/dsh-message-navigator) ★0 — DSH Web GUI 插件：会话右侧悬浮消息导航条 —— 收起态短横杠，悬停展开用户消息摘要，点击平滑滚动定位历史消息
 - `[未定位]` **mmmmaru-dsh-vscode-sidebar** — 占位待复核，判定暂不展示
+- `[可用]` [mohith-das-dsh-voice-input-en](https://github.com/mohith-das/dsh-voice-input-en) ★0 — Minimal, English-only voice input plugin for DeepSeek Harness Web UI — a mic button in the composer using the
 - `[可用]` [momo-gen-dsh-canvas](https://github.com/momo-gen/dsh-canvas) ★0 — Toggleable infinite process canvas over the DSH conversation shell - pan/zoom the live process, annotate devia
 - `[未定位]` **momojie-s-dsh-right-dock** — 占位待复核，判定暂不展示
 - `[未定位]` **morinissleeping-dsh-pnc-theme** — 占位待复核，判定暂不展示
@@ -8749,7 +8750,7 @@
 - `[不兼容]` [dsh-plugin-wallpaper](https://github.com/Tree-Summer/dsh-plugin-wallpaper) ★0 — 可以在deepseek harness网页端自定义背景图片的插件
 - `[歧义监测]` **dsh-101** — 同名多仓，判定暂不展示
 
-## ❓ 其他（4722）
+## ❓ 其他（4723）
 
 - `[待定]` [deepseek-ai-deepseek-harness](https://github.com/deepseek-ai/deepseek-harness) ★124593 — DeepSeek Harness: Everything is a Plugin.〔📦〕
 - `[未测]` [openpencil](https://github.com/zseven-w/openpencil) ★5647 — OpenPencil 设计工具本体（DSH 适配器 dsh-openpencil 已另有条目；本体插队实测）
@@ -10954,6 +10955,7 @@
 - `[待定]` [myk5010-dsh-llm-concurrency](https://github.com/myk5010/dsh-llm-concurrency) ★0 — —
 - `[未定位]` **mystery-god-dsh-balance** — 占位待复核，判定暂不展示
 - `[未定位]` **mystery-god-dsh-chime** — 占位待复核，判定暂不展示
+- `[待定]` [mzzsfy-dsh-plugin](https://github.com/mzzsfy/dsh-plugin) ★0 — —
 - `[未定位]` **n9-developer-empowerment-dsh-vibeify** — 占位待复核，判定暂不展示
 - `[未定位]` **nanexist-dsh-win-launchscript** — 占位待复核，判定暂不展示
 - `[未定位]` **nasbaye-dsh-launcher** — 占位待复核，判定暂不展示
