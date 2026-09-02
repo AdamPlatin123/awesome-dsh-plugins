@@ -1,25 +1,25 @@
 # 全量插件清单（统一四档口径）
 
-> 数据源：radar 快照并集（`20260902T004501Z` 2026-09-02 08:45 UTC+8 ⊕ `20260902T003001Z` 2026-09-02 08:30 UTC+8 ⊕ `20260902T001501Z` 2026-09-02 08:15 UTC+8 等 274 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
+> 数据源：radar 快照并集（`20260902T010001Z` 2026-09-02 09:00 UTC+8 ⊕ `20260902T004501Z` 2026-09-02 08:45 UTC+8 ⊕ `20260902T003001Z` 2026-09-02 08:30 UTC+8 等 275 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
 > 呈现：分组列表（状态 · 名称 · ★星标 · 一句话说明），不使用大表格；〔📦〕= 整合包（根 dsh.bundle / workspaces 多子包）。
 
 ## 统一度量衡
 
 **判定维度**（运行级四档；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：
 
-- 全量判定 13221（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（8801）/ `[不兼容]`（2623）/ `[待定]`（1644）
-- 已定位明细 8583（本列表展示口径，另 4638 条监测/未定位的判定暂不展示）：`[可用]`（5731）/ `[不兼容]`（1667）/ `[待定]`（1077）/ `[未测]`（108）
+- 全量判定 13224（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（8802）/ `[不兼容]`（2625）/ `[待定]`（1644）
+- 已定位明细 8585（本列表展示口径，另 4639 条监测/未定位的判定暂不展示）：`[可用]`（5731）/ `[不兼容]`（1669）/ `[待定]`（1077）/ `[未测]`（108）
 
 **定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：
 
 - `[空仓监测]`（133）— GitHub 复核无此仓库；待重现后恢复判定显示
 - `[歧义监测]`（103）— 同名多仓无法锁定本体；锁定前不展示
-- `[未定位]`（4400）— 新占位条目，待下一轮定位复核（scripts/resolve_placeholders.py）
+- `[未定位]`（4401）— 新占位条目，待下一轮定位复核（scripts/resolve_placeholders.py）
 - 定位复核累计修复 539 个占位 URL
 
 > 〔PR〕= 经已合并 PR 正式登记；收录 ≠ 兼容 ≠ 运行可用 ≠ 安全审计。
 
-## 汇总：13221 条（已定位 8583 · 监测/未定位 4638）· PR 登记 23 个
+## 汇总：13224 条（已定位 8585 · 监测/未定位 4639）· PR 登记 23 个
 
 ## 🎓 技能包（25）
 
@@ -352,7 +352,7 @@
 - `[空仓监测]` **zhoupengjie-dsh-motion-manager** — GitHub 无此仓库，判定暂不展示
 - `[空仓监测]` **zhoupengjie-dsh-settings-icon-manager** — GitHub 无此仓库，判定暂不展示
 
-## 🔌 Web UI 增强（2258）
+## 🔌 Web UI 增强（2260）
 
 - `[可用]` [mem0ai-mem0](https://github.com/mem0ai/mem0) ★64530 — The Memory Layer for AI Agents - Drop-in memory infrastructure for AI agents and apps
 - `[可用]` [huangruiteng-loopx](https://github.com/huangruiteng/loopx) ★5390 — Long-horizon agent control plane for durable, governed work across Codex, Claude Code, and other harnesses.
@@ -2448,8 +2448,10 @@
 - `[未定位]` **alfredchaos-dsh-usage-panel** — 占位待复核，判定暂不展示
 - `[不兼容]` [an4nsi-dsh-fork-view](https://github.com/an4nsi/dsh-fork-view) ★0 — DSH web plugin: replaces the native workspace browser in the left sidebar with a session tree in the style of
 - `[不兼容]` [apodemakeles-dsh-gui](https://github.com/apodemakeles/dsh-gui) ★0 — Desktop shell for dsh (DeepSeek Harness) — an Electron app delivered as a dsh bundle
+- `[不兼容]` [awol2005ex3-dsh-logo-custom](https://github.com/awol2005ex3/dsh-logo-custom) ★0 — DeepSeek Harness 自定义 Logo 插件 — 上传图片替换侧边栏左上角的品牌图标和文字
 - `[不兼容]` [awol2005ex3-dsh-role-manager](https://github.com/awol2005ex3/dsh-role-manager) ★0 — DeepSeek Harness（dsh）角色管理插件
 - `[未定位]` **blueriverlhr-dsh-better-webui** — 占位待复核，判定暂不展示
+- `[不兼容]` [bvcvb-dsh-baize-rules](https://github.com/bvcvb/dsh-baize-rules) ★0 — dsh plugin: user-set session/global must-do & must-not requirements injected at conversation start (Baize).
 - `[未定位]` **ch4acko3-dsh-ui-workspace** — 占位待复核，判定暂不展示
 - `[不兼容]` [chendefine-dsh-sidebar-onlyoffice](https://github.com/chendefine/dsh-sidebar-onlyoffice) ★0 — DSH web plugin: open and edit .docx/.xlsx/.pptx in the better-sidebar editor through a self-hosted ONLYOFFICE
 - `[未定位]` **chenruot-dsh-sidebar-qa** — 占位待复核，判定暂不展示
@@ -8625,7 +8627,7 @@
 - `[不兼容]` [dsh-plugin-wallpaper](https://github.com/Tree-Summer/dsh-plugin-wallpaper) ★0 — 可以在deepseek harness网页端自定义背景图片的插件
 - `[歧义监测]` **dsh-101** — 同名多仓，判定暂不展示
 
-## ❓ 其他（4653）
+## ❓ 其他（4654）
 
 - `[待定]` [deepseek-ai-deepseek-harness](https://github.com/deepseek-ai/deepseek-harness) ★124593 — DeepSeek Harness: Everything is a Plugin.〔📦〕
 - `[未测]` [openpencil](https://github.com/zseven-w/openpencil) ★5647 — OpenPencil 设计工具本体（DSH 适配器 dsh-openpencil 已另有条目；本体插队实测）
@@ -12048,6 +12050,7 @@
 - `[未定位]` **yueminghub-ming-capability-pack** — 占位待复核，判定暂不展示
 - `[未定位]` **yuer6327-noletme** — 占位待复核，判定暂不展示
 - `[未定位]` **yujm888-dsh-turn-rail** — 占位待复核，判定暂不展示
+- `[未定位]` **yujunzhixue-dsh-purge** — 占位待复核，判定暂不展示
 - `[未定位]` **yukari316-dsh-toolcall-compat** — 占位待复核，判定暂不展示
 - `[未定位]` **yuki-takuya-kun-dsh-engine-switch** — 占位待复核，判定暂不展示
 - `[待定]` [yuloong07-star-dsh-usb](https://github.com/yuloong07-star/dsh-usb) ★0 — DSH USB - DeepSeek Harness portable edition (USB-drive friendly, exFAT compatible)
