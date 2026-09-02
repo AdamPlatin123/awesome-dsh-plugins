@@ -1,0 +1,3285 @@
+{
+ "schema": "radar-snapshot/2",
+ "run_id": "20260902T230001Z",
+ "generated_at": "2026-09-02T23:00:01+00:00",
+ "classifier": "unified-v2-bridge",
+ "discovery": {
+  "candidates": null,
+  "org": null,
+  "topic": null,
+  "keyword": null,
+  "age_min": null,
+  "partial_flagged": null
+ },
+ "clone": {
+  "clones": 59,
+  "plugins": 59,
+  "nonplugin": 0,
+  "fail_entries": null
+ },
+ "test": {
+  "running": 16,
+  "succeeded": 20,
+  "failed": 0,
+  "dispatched_total": 0
+ },
+ "verdict": {
+  "pass": 245,
+  "fail": 77,
+  "inc": 38,
+  "total": 360,
+  "bundle": 8,
+  "cur_image": "dsh-test-runner:0.1.1-rc.2",
+  "cur_tested": 304,
+  "cur_pass": 232
+ },
+ "deliver": {
+  "delta_since": null,
+  "open_bot_prs": null
+ },
+ "static": {},
+ "by_domain": {},
+ "topology": {},
+ "catalog_entries": [
+  {
+   "name": "173787247-dsh-wsl-browser",
+   "url": "https://github.com/search?q=173787247-dsh-wsl-browser",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🛠 基建部署",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "173787247-dsh-wsl-clipboard",
+   "url": "https://github.com/search?q=173787247-dsh-wsl-clipboard",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "173787247-dsh-wsl-cred",
+   "url": "https://github.com/search?q=173787247-dsh-wsl-cred",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "173787247-dsh-wsl-distro",
+   "url": "https://github.com/search?q=173787247-dsh-wsl-distro",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "173787247-dsh-wsl-github",
+   "url": "https://github.com/search?q=173787247-dsh-wsl-github",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "💻 编码开发",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "173787247-dsh-wsl-gpu",
+   "url": "https://github.com/search?q=173787247-dsh-wsl-gpu",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "173787247-dsh-wsl-kit",
+   "url": "https://github.com/search?q=173787247-dsh-wsl-kit",
+   "star": 0,
+   "verdict": "⚠️ 待定",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "173787247-dsh-wsl-launch",
+   "url": "https://github.com/search?q=173787247-dsh-wsl-launch",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "173787247-dsh-wsl-notify",
+   "url": "https://github.com/search?q=173787247-dsh-wsl-notify",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "📡 消息通讯",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "173787247-dsh-wsl-open",
+   "url": "https://github.com/search?q=173787247-dsh-wsl-open",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "173787247-dsh-wsl-path",
+   "url": "https://github.com/search?q=173787247-dsh-wsl-path",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "173787247-dsh-wsl-port",
+   "url": "https://github.com/search?q=173787247-dsh-wsl-port",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "1ecc-dsh-lenovo-toolkit",
+   "url": "https://github.com/search?q=1ecc-dsh-lenovo-toolkit",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "1m01m0-deepseek-harness-desktop",
+   "url": "https://github.com/search?q=1m01m0-deepseek-harness-desktop",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "🛠 基建部署",
+   "desc": "—",
+   "bundle": "workspaces"
+  },
+  {
+   "name": "2bingling-dsh-market",
+   "url": "https://github.com/search?q=2bingling-dsh-market",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": "workspaces"
+  },
+  {
+   "name": "610la-dsh-notification-center",
+   "url": "https://github.com/search?q=610la-dsh-notification-center",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "a903067276-rgb-dsh-file-mentions",
+   "url": "https://github.com/search?q=a903067276-rgb-dsh-file-mentions",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "a903067276-rgb-dsh-hud",
+   "url": "https://github.com/search?q=a903067276-rgb-dsh-hud",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "adamplatin123-awesome-dsh-plugins",
+   "url": "https://github.com/search?q=adamplatin123-awesome-dsh-plugins",
+   "star": 0,
+   "verdict": "⚠️ 待定",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "ai-scarlett-dsh-store",
+   "url": "https://github.com/search?q=ai-scarlett-dsh-store",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "aidenwu0209-dsh-paddleocr-skills",
+   "url": "https://github.com/search?q=aidenwu0209-dsh-paddleocr-skills",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "💻 编码开发",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "aik358-dsh-auto-memory",
+   "url": "https://github.com/search?q=aik358-dsh-auto-memory",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "alaxrpg-dsh-llm-approve-for-me",
+   "url": "https://github.com/search?q=alaxrpg-dsh-llm-approve-for-me",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "alonelypigeon-dsh-plugin-balance-panel",
+   "url": "https://github.com/search?q=alonelypigeon-dsh-plugin-balance-panel",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "alonelypigeon-dsh-plugin-desktop-control",
+   "url": "https://github.com/search?q=alonelypigeon-dsh-plugin-desktop-control",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🛠 基建部署",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "alonelypigeon-dsh-plugin-session-outline",
+   "url": "https://github.com/search?q=alonelypigeon-dsh-plugin-session-outline",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "anakincao-dsh-cost-meter",
+   "url": "https://github.com/search?q=anakincao-dsh-cost-meter",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "anionex-dsh-computer-use",
+   "url": "https://github.com/search?q=anionex-dsh-computer-use",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "anionex-dsh-turn-rewind",
+   "url": "https://github.com/search?q=anionex-dsh-turn-rewind",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "ansonfishing-dsh-model-manager",
+   "url": "https://github.com/search?q=ansonfishing-dsh-model-manager",
+   "star": 0,
+   "verdict": "⚠️ 待定",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "antlordgit-dsh-plugin-question-index",
+   "url": "https://github.com/search?q=antlordgit-dsh-plugin-question-index",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "💻 编码开发",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "antlordgit-dsh-plugin-session-rollback",
+   "url": "https://github.com/search?q=antlordgit-dsh-plugin-session-rollback",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "💻 编码开发",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "antlordgit-dsh-plugin-terminal-agent",
+   "url": "https://github.com/search?q=antlordgit-dsh-plugin-terminal-agent",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "💻 编码开发",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "anywhere-labs-dsh-desktop",
+   "url": "https://github.com/search?q=anywhere-labs-dsh-desktop",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🛠 基建部署",
+   "desc": "—",
+   "bundle": "workspaces"
+  },
+  {
+   "name": "areium-dsh-fail-logger",
+   "url": "https://github.com/search?q=areium-dsh-fail-logger",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "ariestar-sivtr",
+   "url": "https://github.com/search?q=ariestar-sivtr",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "ashuai-dsh-s2s",
+   "url": "https://github.com/search?q=ashuai-dsh-s2s",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "atlascloudai-atlas-cloud-skills",
+   "url": "https://github.com/search?q=atlascloudai-atlas-cloud-skills",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "atlascloudai-cli",
+   "url": "https://github.com/search?q=atlascloudai-cli",
+   "star": 0,
+   "verdict": "⚠️ 待定",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "atlascloudai-mcp-server",
+   "url": "https://github.com/search?q=atlascloudai-mcp-server",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "auggie246-dsh-output-styles",
+   "url": "https://github.com/search?q=auggie246-dsh-output-styles",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "auggie246-dsh-sidebar",
+   "url": "https://github.com/search?q=auggie246-dsh-sidebar",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🔌 Web UI 增强",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "auggie246-dsh-synthetic-web-search",
+   "url": "https://github.com/search?q=auggie246-dsh-synthetic-web-search",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "auraxm-dsh-plugin-confirm-check",
+   "url": "https://github.com/search?q=auraxm-dsh-plugin-confirm-check",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "auraxm-dsh-plugin-doc-present",
+   "url": "https://github.com/search?q=auraxm-dsh-plugin-doc-present",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "awesome-dsh-plugin-awesome-dsh-plugin",
+   "url": "https://github.com/search?q=awesome-dsh-plugin-awesome-dsh-plugin",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "awol2005ex3-dsh-role-manager",
+   "url": "https://github.com/search?q=awol2005ex3-dsh-role-manager",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "axiaohungry-dsh-llm-codebuddy",
+   "url": "https://github.com/search?q=axiaohungry-dsh-llm-codebuddy",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "💻 编码开发",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "baiyuscc13724-max-deepseek-harness-desktop",
+   "url": "https://github.com/search?q=baiyuscc13724-max-deepseek-harness-desktop",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🛠 基建部署",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "bandersnatch0x-amber-protocol",
+   "url": "https://github.com/search?q=bandersnatch0x-amber-protocol",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "beancookie-awesome-dsh-plugin",
+   "url": "https://github.com/search?q=beancookie-awesome-dsh-plugin",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "bhxiang-auto-pwa",
+   "url": "https://github.com/search?q=bhxiang-auto-pwa",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "biedongbin-dsh-claude-compat",
+   "url": "https://github.com/search?q=biedongbin-dsh-claude-compat",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "bill9109-dsh-web-ui-notify",
+   "url": "https://github.com/search?q=bill9109-dsh-web-ui-notify",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🔌 Web UI 增强",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "billliao-awesome-dsh-plugin",
+   "url": "https://github.com/search?q=billliao-awesome-dsh-plugin",
+   "star": 0,
+   "verdict": "⚠️ 待定",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "bittersmilezzz-dsh-asr-voice",
+   "url": "https://github.com/search?q=bittersmilezzz-dsh-asr-voice",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "bluechonk-dsh-balance-phoebe",
+   "url": "https://github.com/search?q=bluechonk-dsh-balance-phoebe",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "bobhuhu-dsh-llm-github-copilot-cli",
+   "url": "https://github.com/search?q=bobhuhu-dsh-llm-github-copilot-cli",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "💻 编码开发",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "bowenliang123-dsh-context",
+   "url": "https://github.com/search?q=bowenliang123-dsh-context",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "bradegithub-dsh-plugins-marketplace",
+   "url": "https://github.com/search?q=bradegithub-dsh-plugins-marketplace",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "💻 编码开发",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "bruc3van-awesome-dsh-plugin",
+   "url": "https://github.com/search?q=bruc3van-awesome-dsh-plugin",
+   "star": 0,
+   "verdict": "⚠️ 待定",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "bruc3van-dsh-doctor",
+   "url": "https://github.com/search?q=bruc3van-dsh-doctor",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "btspoony-mstar-harness",
+   "url": "https://github.com/search?q=btspoony-mstar-harness",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "carvin94-dsh-router",
+   "url": "https://github.com/search?q=carvin94-dsh-router",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "carvin94-dsh-router-codebuddy",
+   "url": "https://github.com/search?q=carvin94-dsh-router-codebuddy",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "💻 编码开发",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "carvin94-dsh-router-traework",
+   "url": "https://github.com/search?q=carvin94-dsh-router-traework",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "ccch1mneyyy-dsh-tui",
+   "url": "https://github.com/search?q=ccch1mneyyy-dsh-tui",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🔌 Web UI 增强",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "chasepassion-dsh-plugin-marketplace",
+   "url": "https://github.com/search?q=chasepassion-dsh-plugin-marketplace",
+   "star": 0,
+   "verdict": "⚠️ 待定",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "chendefine-dsh-sidebar-onlyoffice",
+   "url": "https://github.com/search?q=chendefine-dsh-sidebar-onlyoffice",
+   "star": 0,
+   "verdict": "⚠️ 待定",
+   "domain": "🔌 Web UI 增强",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "chocobo77-dsh-infinite-context",
+   "url": "https://github.com/search?q=chocobo77-dsh-infinite-context",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "chumingjun-dsh-harness-one",
+   "url": "https://github.com/search?q=chumingjun-dsh-harness-one",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "csustyang-dsh-garmin-coach",
+   "url": "https://github.com/search?q=csustyang-dsh-garmin-coach",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "cyberfox-lab-dsh-rss",
+   "url": "https://github.com/search?q=cyberfox-lab-dsh-rss",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "cyjyyd-dsh-ssh-tui",
+   "url": "https://github.com/search?q=cyjyyd-dsh-ssh-tui",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "🔌 Web UI 增强",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "cyphernaught-0x-dsh-subagent-model-router",
+   "url": "https://github.com/search?q=cyphernaught-0x-dsh-subagent-model-router",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "cyrus123456-dsh-johari-cognition-quadrant-dia",
+   "url": "https://github.com/search?q=cyrus123456-dsh-johari-cognition-quadrant-dia",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "czj-git-dsh-plugin-hub",
+   "url": "https://github.com/search?q=czj-git-dsh-plugin-hub",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "💻 编码开发",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "d2moqi-dsh-openwiki",
+   "url": "https://github.com/search?q=d2moqi-dsh-openwiki",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "dabaicai001-star-dsh-desktop",
+   "url": "https://github.com/search?q=dabaicai001-star-dsh-desktop",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🛠 基建部署",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "darlingc-dsh-freesearch",
+   "url": "https://github.com/search?q=darlingc-dsh-freesearch",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "ddtcorex-dsh-maestro-devkit",
+   "url": "https://github.com/search?q=ddtcorex-dsh-maestro-devkit",
+   "star": 0,
+   "verdict": "⚠️ 待定",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "ddtcorex-maestro-skills",
+   "url": "https://github.com/search?q=ddtcorex-maestro-skills",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "dee3526-dsh-plugin-trtc-conai",
+   "url": "https://github.com/search?q=dee3526-dsh-plugin-trtc-conai",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "deepseek-club-dsh-desktop",
+   "url": "https://github.com/search?q=deepseek-club-dsh-desktop",
+   "star": 0,
+   "verdict": "⚠️ 待定",
+   "domain": "🛠 基建部署",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "doublemolu-dsh-balance-dock",
+   "url": "https://github.com/search?q=doublemolu-dsh-balance-dock",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "dream-num-dsh-univer-office",
+   "url": "https://github.com/search?q=dream-num-dsh-univer-office",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "dsh-research-dsh-research",
+   "url": "https://github.com/search?q=dsh-research-dsh-research",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "dsh-tauri-desk-deepseek-harness-desktop",
+   "url": "https://github.com/search?q=dsh-tauri-desk-deepseek-harness-desktop",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🛠 基建部署",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "ericwong5021-deepseek-plugin-store",
+   "url": "https://github.com/search?q=ericwong5021-deepseek-plugin-store",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "eve1329-dsh-shared-handoff",
+   "url": "https://github.com/search?q=eve1329-dsh-shared-handoff",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "fafaisa6305-dsh-gamemode",
+   "url": "https://github.com/search?q=fafaisa6305-dsh-gamemode",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🎮 娱乐生活",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "fakek0f3st-dsh-mcp-diff",
+   "url": "https://github.com/search?q=fakek0f3st-dsh-mcp-diff",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "💻 编码开发",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "fan56-dsh-mcp-adapter",
+   "url": "https://github.com/search?q=fan56-dsh-mcp-adapter",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "featureagents-agentsgitflowcontroller",
+   "url": "https://github.com/search?q=featureagents-agentsgitflowcontroller",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "💻 编码开发",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "feibi-mochi-deepseek-harness-control-center",
+   "url": "https://github.com/search?q=feibi-mochi-deepseek-harness-control-center",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "firestige-wsr-dsh",
+   "url": "https://github.com/search?q=firestige-wsr-dsh",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": "workspaces"
+  },
+  {
+   "name": "fishquito7-dsh-skill-mcp-panel",
+   "url": "https://github.com/search?q=fishquito7-dsh-skill-mcp-panel",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🔌 Web UI 增强",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "focksor-dsh-plugin-node-time",
+   "url": "https://github.com/search?q=focksor-dsh-plugin-node-time",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "franklinzanedurant-agent-discipline",
+   "url": "https://github.com/search?q=franklinzanedurant-agent-discipline",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "franksong2702-dsh-dictate",
+   "url": "https://github.com/search?q=franksong2702-dsh-dictate",
+   "star": 0,
+   "verdict": "⚠️ 待定",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "frayoshi-dsh-ui-models-invert-selection",
+   "url": "https://github.com/search?q=frayoshi-dsh-ui-models-invert-selection",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🔌 Web UI 增强",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "fsmargoo-dsh-at-file",
+   "url": "https://github.com/search?q=fsmargoo-dsh-at-file",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "fthuu-tokan-dsh-token-analytics",
+   "url": "https://github.com/search?q=fthuu-tokan-dsh-token-analytics",
+   "star": 0,
+   "verdict": "⚠️ 待定",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "gavinqier-dsh-cmdwatch",
+   "url": "https://github.com/search?q=gavinqier-dsh-cmdwatch",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "geeklei-dsh-plugins",
+   "url": "https://github.com/search?q=geeklei-dsh-plugins",
+   "star": 0,
+   "verdict": "⚠️ 待定",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "goatliamia-dsh-plugin-maker",
+   "url": "https://github.com/search?q=goatliamia-dsh-plugin-maker",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "goatliamia-dsh-runtime",
+   "url": "https://github.com/search?q=goatliamia-dsh-runtime",
+   "star": 0,
+   "verdict": "⚠️ 待定",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "gongyijie85-dsh-agent-frugality",
+   "url": "https://github.com/search?q=gongyijie85-dsh-agent-frugality",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "goodandready-dsh-gitea",
+   "url": "https://github.com/search?q=goodandready-dsh-gitea",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "💻 编码开发",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "goodandready-dsh-live-canvas",
+   "url": "https://github.com/search?q=goodandready-dsh-live-canvas",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "gouzijing0821-dsh-ai-wallet",
+   "url": "https://github.com/search?q=gouzijing0821-dsh-ai-wallet",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "graysilver-dsh-evolve-modes",
+   "url": "https://github.com/search?q=graysilver-dsh-evolve-modes",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "gulagala001-dsh-trisoul",
+   "url": "https://github.com/search?q=gulagala001-dsh-trisoul",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "gychen-nju-dsh-overleaf",
+   "url": "https://github.com/search?q=gychen-nju-dsh-overleaf",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "hackernotfound-dsh-tacit",
+   "url": "https://github.com/search?q=hackernotfound-dsh-tacit",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "haohaihuang-design-agent",
+   "url": "https://github.com/search?q=haohaihuang-design-agent",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "hejielijob-commits-dsh-data-agent",
+   "url": "https://github.com/search?q=hejielijob-commits-dsh-data-agent",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "henryopencode-deepseek-harness-desktop",
+   "url": "https://github.com/search?q=henryopencode-deepseek-harness-desktop",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "💻 编码开发",
+   "desc": "—",
+   "bundle": "workspaces"
+  },
+  {
+   "name": "higekibaka-dsh-ciel",
+   "url": "https://github.com/search?q=higekibaka-dsh-ciel",
+   "star": 0,
+   "verdict": "⚠️ 待定",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "hilbert-beinghappy-seektty",
+   "url": "https://github.com/search?q=hilbert-beinghappy-seektty",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "hjj345-dsh-sm-version-display",
+   "url": "https://github.com/search?q=hjj345-dsh-sm-version-display",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "💻 编码开发",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "hpyer-dsh-for-mac",
+   "url": "https://github.com/search?q=hpyer-dsh-for-mac",
+   "star": 0,
+   "verdict": "⚠️ 待定",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "huanlinoto-dsh-plugin-better-glob",
+   "url": "https://github.com/search?q=huanlinoto-dsh-plugin-better-glob",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "huenjie-dsh-paste-collapse",
+   "url": "https://github.com/search?q=huenjie-dsh-paste-collapse",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "iasiv5-skins",
+   "url": "https://github.com/search?q=iasiv5-skins",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🔌 Web UI 增强",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "icedwatermelonjuice-dsh-provider-veark",
+   "url": "https://github.com/search?q=icedwatermelonjuice-dsh-provider-veark",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🔌 Web UI 增强",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "ipromise2021-dsh-omc-tui",
+   "url": "https://github.com/search?q=ipromise2021-dsh-omc-tui",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "🔌 Web UI 增强",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "itrimut-github-road",
+   "url": "https://github.com/search?q=itrimut-github-road",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "💻 编码开发",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "iwctwbh-dsh-flowglass",
+   "url": "https://github.com/search?q=iwctwbh-dsh-flowglass",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "jaaty-dsh-gsd-bundle",
+   "url": "https://github.com/search?q=jaaty-dsh-gsd-bundle",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "jiang12345-code-dsh-openrouter-free",
+   "url": "https://github.com/search?q=jiang12345-code-dsh-openrouter-free",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "💻 编码开发",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "jimmyzhang219-dsh-plan-and-execute",
+   "url": "https://github.com/search?q=jimmyzhang219-dsh-plan-and-execute",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "jinganwushideng-deepseek-harness-desktop",
+   "url": "https://github.com/search?q=jinganwushideng-deepseek-harness-desktop",
+   "star": 0,
+   "verdict": "⚠️ 待定",
+   "domain": "💻 编码开发",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "jingyunstudio-jingyun-dsh",
+   "url": "https://github.com/search?q=jingyunstudio-jingyun-dsh",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "jochenyang-dsh-remote",
+   "url": "https://github.com/search?q=jochenyang-dsh-remote",
+   "star": 0,
+   "verdict": "⚠️ 待定",
+   "domain": "🛠 基建部署",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "johndfowler-dsh-draft-shield",
+   "url": "https://github.com/search?q=johndfowler-dsh-draft-shield",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "johndfowler-dsh-iphone-mode",
+   "url": "https://github.com/search?q=johndfowler-dsh-iphone-mode",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "johndfowler-dsh-model-search",
+   "url": "https://github.com/search?q=johndfowler-dsh-model-search",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "justin-sky-ai-art-engine",
+   "url": "https://github.com/search?q=justin-sky-ai-art-engine",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "jwilson411-dsh-arxiv",
+   "url": "https://github.com/search?q=jwilson411-dsh-arxiv",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "jwilson411-dsh-kokoro",
+   "url": "https://github.com/search?q=jwilson411-dsh-kokoro",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "jwilson411-dsh-llamacpp",
+   "url": "https://github.com/search?q=jwilson411-dsh-llamacpp",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "jwilson411-dsh-otel",
+   "url": "https://github.com/search?q=jwilson411-dsh-otel",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "jwilson411-dsh-plugin-kit",
+   "url": "https://github.com/search?q=jwilson411-dsh-plugin-kit",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "jwilson411-dsh-spend-receipt",
+   "url": "https://github.com/search?q=jwilson411-dsh-spend-receipt",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "jxame-dsh-echo-memory",
+   "url": "https://github.com/search?q=jxame-dsh-echo-memory",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "kaiji-z-dsh-plugin-warroom",
+   "url": "https://github.com/search?q=kaiji-z-dsh-plugin-warroom",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "kaiwu-sparkles",
+   "url": "https://github.com/search?q=kaiwu-sparkles",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "kannakuron-dsh-better-workspace",
+   "url": "https://github.com/search?q=kannakuron-dsh-better-workspace",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "kilganon725-dsh-cost-ledger",
+   "url": "https://github.com/search?q=kilganon725-dsh-cost-ledger",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "kiligzzz-dsh-agent-dispatch",
+   "url": "https://github.com/search?q=kiligzzz-dsh-agent-dispatch",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "kirbylynx-dsh-hub",
+   "url": "https://github.com/search?q=kirbylynx-dsh-hub",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "kittimzhe-dsh-plugin-authoring-guide",
+   "url": "https://github.com/search?q=kittimzhe-dsh-plugin-authoring-guide",
+   "star": 0,
+   "verdict": "⚠️ 待定",
+   "domain": "🔌 Web UI 增强",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "kongshan-zhuyu-dsh-balance-quota",
+   "url": "https://github.com/search?q=kongshan-zhuyu-dsh-balance-quota",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "kuun993-dsh-loop-engine",
+   "url": "https://github.com/search?q=kuun993-dsh-loop-engine",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "l-vm2k-dsh-ayaka-theme",
+   "url": "https://github.com/search?q=l-vm2k-dsh-ayaka-theme",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🔌 Web UI 增强",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "lamplitisles-dsh-companion",
+   "url": "https://github.com/search?q=lamplitisles-dsh-companion",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "lamplitisles-kepos-imagegen",
+   "url": "https://github.com/search?q=lamplitisles-kepos-imagegen",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "lamplitisles-kepos-tts",
+   "url": "https://github.com/search?q=lamplitisles-kepos-tts",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "lelens0-dsh-token-ledger",
+   "url": "https://github.com/search?q=lelens0-dsh-token-ledger",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "lgquan-dsh-voco",
+   "url": "https://github.com/search?q=lgquan-dsh-voco",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "lgquan-dsh-workspace-memory",
+   "url": "https://github.com/search?q=lgquan-dsh-workspace-memory",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "lhh010-dsh-file-trace",
+   "url": "https://github.com/search?q=lhh010-dsh-file-trace",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "li3nga-dhs-multi-agent-plugin",
+   "url": "https://github.com/search?q=li3nga-dhs-multi-agent-plugin",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "liangminhua-agent-notes-toolkit",
+   "url": "https://github.com/search?q=liangminhua-agent-notes-toolkit",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "licn9901-arch-deepseek-harness-desktop",
+   "url": "https://github.com/search?q=licn9901-arch-deepseek-harness-desktop",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🛠 基建部署",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "liujie-harsh-heart-health-dsh-suite",
+   "url": "https://github.com/search?q=liujie-harsh-heart-health-dsh-suite",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "🔌 Web UI 增强",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "liushutan-dsh-archive-manager",
+   "url": "https://github.com/search?q=liushutan-dsh-archive-manager",
+   "star": 0,
+   "verdict": "⚠️ 待定",
+   "domain": "🗂 文件数据",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "liushutan-dsh-automation",
+   "url": "https://github.com/search?q=liushutan-dsh-automation",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "liustack-pptwise",
+   "url": "https://github.com/search?q=liustack-pptwise",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "liwuzhan-cad-tool",
+   "url": "https://github.com/search?q=liwuzhan-cad-tool",
+   "star": 0,
+   "verdict": "⚠️ 待定",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "lizhouai-dsh-provider-usage",
+   "url": "https://github.com/search?q=lizhouai-dsh-provider-usage",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "💻 编码开发",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "ljc6413-pkg-dev",
+   "url": "https://github.com/search?q=ljc6413-pkg-dev",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "lkdxzhxi-dsh-glass-ui-theme",
+   "url": "https://github.com/search?q=lkdxzhxi-dsh-glass-ui-theme",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🔌 Web UI 增强",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "lomehong-dsh-remote",
+   "url": "https://github.com/search?q=lomehong-dsh-remote",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🛠 基建部署",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "longsasasasasa-dsh-issue2pr",
+   "url": "https://github.com/search?q=longsasasasasa-dsh-issue2pr",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "lorvaste-dsh-project-initialization",
+   "url": "https://github.com/search?q=lorvaste-dsh-project-initialization",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "loyalchiiina-dsh-font-enhancer",
+   "url": "https://github.com/search?q=loyalchiiina-dsh-font-enhancer",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "lsqace-del-dsh-progress",
+   "url": "https://github.com/search?q=lsqace-del-dsh-progress",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "luv061211-dsh-pet",
+   "url": "https://github.com/search?q=luv061211-dsh-pet",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "🎮 娱乐生活",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "luyu020816-droid-skill-dag",
+   "url": "https://github.com/search?q=luyu020816-droid-skill-dag",
+   "star": 0,
+   "verdict": "⚠️ 待定",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "mapan0424-deepseek-harness-channels",
+   "url": "https://github.com/search?q=mapan0424-deepseek-harness-channels",
+   "star": 0,
+   "verdict": "⚠️ 待定",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "marecgents-deepseek-harness-hub",
+   "url": "https://github.com/search?q=marecgents-deepseek-harness-hub",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "masknull-dsh-message-collapse",
+   "url": "https://github.com/search?q=masknull-dsh-message-collapse",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "mason-1011-dsh-schematic",
+   "url": "https://github.com/search?q=mason-1011-dsh-schematic",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "📚 学习研究",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "masquerator-coder-dsh-im-gateway",
+   "url": "https://github.com/search?q=masquerator-coder-dsh-im-gateway",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "💻 编码开发",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "masquerator-coder-dsh-memory",
+   "url": "https://github.com/search?q=masquerator-coder-dsh-memory",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "💻 编码开发",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "maxwell-feng-dsh-tinyfish-search",
+   "url": "https://github.com/search?q=maxwell-feng-dsh-tinyfish-search",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "memorax-ai-dsh-patchouli",
+   "url": "https://github.com/search?q=memorax-ai-dsh-patchouli",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "meyaomiao-dsh-files-native",
+   "url": "https://github.com/search?q=meyaomiao-dsh-files-native",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "michengai-dsh-codex-desktop",
+   "url": "https://github.com/search?q=michengai-dsh-codex-desktop",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "💻 编码开发",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "movingtoleveltwo-dsh-revert",
+   "url": "https://github.com/search?q=movingtoleveltwo-dsh-revert",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "mrrisega-dsh-remote",
+   "url": "https://github.com/search?q=mrrisega-dsh-remote",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🛠 基建部署",
+   "desc": "—",
+   "bundle": "workspaces"
+  },
+  {
+   "name": "muou000-improved-compact",
+   "url": "https://github.com/search?q=muou000-improved-compact",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "my-dsh-dsh-session-attention",
+   "url": "https://github.com/search?q=my-dsh-dsh-session-attention",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": "workspaces"
+  },
+  {
+   "name": "mycodesite-dsh-rules",
+   "url": "https://github.com/search?q=mycodesite-dsh-rules",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "💻 编码开发",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "nabin-qq273274877-dsh-desktop",
+   "url": "https://github.com/search?q=nabin-qq273274877-dsh-desktop",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "📡 消息通讯",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "nath-vikky-dsh-codekin",
+   "url": "https://github.com/search?q=nath-vikky-dsh-codekin",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "💻 编码开发",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "nicecx-dsh-task-queue",
+   "url": "https://github.com/search?q=nicecx-dsh-task-queue",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "nickkkkkk123123-dsh-whale-girl",
+   "url": "https://github.com/search?q=nickkkkkk123123-dsh-whale-girl",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "nimustudio-nimuqdock-dsh",
+   "url": "https://github.com/search?q=nimustudio-nimuqdock-dsh",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "noirbright-dsh-external-agents",
+   "url": "https://github.com/search?q=noirbright-dsh-external-agents",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "noirbright-dsh-llm-commandcode",
+   "url": "https://github.com/search?q=noirbright-dsh-llm-commandcode",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "💻 编码开发",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "noirbright-dsh-model-switch",
+   "url": "https://github.com/search?q=noirbright-dsh-model-switch",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "noirbright-dsh-plugins",
+   "url": "https://github.com/search?q=noirbright-dsh-plugins",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "norman-else-dsh-claude",
+   "url": "https://github.com/search?q=norman-else-dsh-claude",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "null-object-0000-dsh-output-style",
+   "url": "https://github.com/search?q=null-object-0000-dsh-output-style",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "omdsh-dev-dsh-file-trace",
+   "url": "https://github.com/search?q=omdsh-dev-dsh-file-trace",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "omdsh-dev-dsh-serenity-plugin",
+   "url": "https://github.com/search?q=omdsh-dev-dsh-serenity-plugin",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "omdsh-dev-stent",
+   "url": "https://github.com/search?q=omdsh-dev-stent",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "openma-ai-martty",
+   "url": "https://github.com/search?q=openma-ai-martty",
+   "star": 0,
+   "verdict": "⚠️ 待定",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "oscar-williams-dsh-deepcanary",
+   "url": "https://github.com/search?q=oscar-williams-dsh-deepcanary",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "pacoyi-dsh-memory-lite",
+   "url": "https://github.com/search?q=pacoyi-dsh-memory-lite",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "pappet-dsh-tool-imagegen",
+   "url": "https://github.com/search?q=pappet-dsh-tool-imagegen",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "🎮 娱乐生活",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "particlelight-dsh-all-usage",
+   "url": "https://github.com/search?q=particlelight-dsh-all-usage",
+   "star": 0,
+   "verdict": "⚠️ 待定",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "pawpaw-agent-dsh-mobile",
+   "url": "https://github.com/search?q=pawpaw-agent-dsh-mobile",
+   "star": 0,
+   "verdict": "⚠️ 待定",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "peiyucn-dsh-sparrow",
+   "url": "https://github.com/search?q=peiyucn-dsh-sparrow",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "perrylink-dsh-plugin-certification",
+   "url": "https://github.com/search?q=perrylink-dsh-plugin-certification",
+   "star": 0,
+   "verdict": "⚠️ 待定",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "pipipigu-dsh-ssh-control",
+   "url": "https://github.com/search?q=pipipigu-dsh-ssh-control",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "pipipigu-dsh-workspace-tree",
+   "url": "https://github.com/search?q=pipipigu-dsh-workspace-tree",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "pn1024-dsh-ppt-master",
+   "url": "https://github.com/search?q=pn1024-dsh-ppt-master",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "promisez322-prog-dsh-vox-input",
+   "url": "https://github.com/search?q=promisez322-prog-dsh-vox-input",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "pudge1996-dsh-feedback",
+   "url": "https://github.com/search?q=pudge1996-dsh-feedback",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "qiqiangvae-dsh-input-enhancer",
+   "url": "https://github.com/search?q=qiqiangvae-dsh-input-enhancer",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "qixin-ai-data-dsh-qixin-insight-mcp-oauth",
+   "url": "https://github.com/search?q=qixin-ai-data-dsh-qixin-insight-mcp-oauth",
+   "star": 0,
+   "verdict": "⚠️ 待定",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "qomob-dsh",
+   "url": "https://github.com/search?q=qomob-dsh",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "qudayan92-dsh-market",
+   "url": "https://github.com/search?q=qudayan92-dsh-market",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "qwe13-art-dsh-skill-folder",
+   "url": "https://github.com/search?q=qwe13-art-dsh-skill-folder",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "qwe13-art-dsh-tool-folder",
+   "url": "https://github.com/search?q=qwe13-art-dsh-tool-folder",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "raktim-mondol-dsh-researchcraft",
+   "url": "https://github.com/search?q=raktim-mondol-dsh-researchcraft",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "randomix777-dsh-plugin-subscriptions",
+   "url": "https://github.com/search?q=randomix777-dsh-plugin-subscriptions",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "raullazaro-dsh-pwa-plugin",
+   "url": "https://github.com/search?q=raullazaro-dsh-pwa-plugin",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "rayafriandion-dsh-oc-tui",
+   "url": "https://github.com/search?q=rayafriandion-dsh-oc-tui",
+   "star": 0,
+   "verdict": "⚠️ 待定",
+   "domain": "🔌 Web UI 增强",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "repins-01-math-agent",
+   "url": "https://github.com/search?q=repins-01-math-agent",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "reseezhang-vizcb-codeblock-visualizer",
+   "url": "https://github.com/search?q=reseezhang-vizcb-codeblock-visualizer",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🔌 Web UI 增强",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "ri0n72y-dsh-workspace-scope",
+   "url": "https://github.com/search?q=ri0n72y-dsh-workspace-scope",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "robbin810130-dsh-vault-plugin",
+   "url": "https://github.com/search?q=robbin810130-dsh-vault-plugin",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "📚 学习研究",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "rogerdigital-dsh-vet",
+   "url": "https://github.com/search?q=rogerdigital-dsh-vet",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "💻 编码开发",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "rongxingda-dsh-prompt-enhance",
+   "url": "https://github.com/search?q=rongxingda-dsh-prompt-enhance",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "rrrrrredy-context-continuity",
+   "url": "https://github.com/search?q=rrrrrredy-context-continuity",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "🔌 Web UI 增强",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "rrrrrredy-intent-loop",
+   "url": "https://github.com/search?q=rrrrrredy-intent-loop",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "ruisenbai-dsh-annotation",
+   "url": "https://github.com/search?q=ruisenbai-dsh-annotation",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "🔌 Web UI 增强",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "runcat-tommy-dsh-theme-manager",
+   "url": "https://github.com/search?q=runcat-tommy-dsh-theme-manager",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🔌 Web UI 增强",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "runcat-tommy-dsh-view-manager",
+   "url": "https://github.com/search?q=runcat-tommy-dsh-view-manager",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "runfali-dsh-prompt-injector",
+   "url": "https://github.com/search?q=runfali-dsh-prompt-injector",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "samaidev-pluginaicq",
+   "url": "https://github.com/search?q=samaidev-pluginaicq",
+   "star": 0,
+   "verdict": "⚠️ 待定",
+   "domain": "💻 编码开发",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "saqie803-ponytail",
+   "url": "https://github.com/search?q=saqie803-ponytail",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "scotthuang-agent-knock-knock",
+   "url": "https://github.com/search?q=scotthuang-agent-knock-knock",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "severuszh-dsh-ollama-usage",
+   "url": "https://github.com/search?q=severuszh-dsh-ollama-usage",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "shengmk-godsh",
+   "url": "https://github.com/search?q=shengmk-godsh",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "shengyvself-narrative-prompt-polish",
+   "url": "https://github.com/search?q=shengyvself-narrative-prompt-polish",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "shenjingnan-zapmomo",
+   "url": "https://github.com/search?q=shenjingnan-zapmomo",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "shimingming520-dsh-audiogen",
+   "url": "https://github.com/search?q=shimingming520-dsh-audiogen",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "shuaweng-dsh-xieshujing",
+   "url": "https://github.com/search?q=shuaweng-dsh-xieshujing",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "shuind-dsh-codex-harness",
+   "url": "https://github.com/search?q=shuind-dsh-codex-harness",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🔌 Web UI 增强",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "shxtmaker-dsh-usage-monitor",
+   "url": "https://github.com/search?q=shxtmaker-dsh-usage-monitor",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🛠 基建部署",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "sinply-dsh-tui",
+   "url": "https://github.com/search?q=sinply-dsh-tui",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🔌 Web UI 增强",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "sischoi-daruma",
+   "url": "https://github.com/search?q=sischoi-daruma",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "sivan757-dsh-agent-plugins-market",
+   "url": "https://github.com/search?q=sivan757-dsh-agent-plugins-market",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "snow-ea-dsh-token-optimizer",
+   "url": "https://github.com/search?q=snow-ea-dsh-token-optimizer",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "softspark-dsh-codex",
+   "url": "https://github.com/search?q=softspark-dsh-codex",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "💻 编码开发",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "softspark-dsh-orchestrator",
+   "url": "https://github.com/search?q=softspark-dsh-orchestrator",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "sol5766-dshm",
+   "url": "https://github.com/search?q=sol5766-dshm",
+   "star": 0,
+   "verdict": "⚠️ 待定",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "songoao25-dsh-contract-drafting-agent",
+   "url": "https://github.com/search?q=songoao25-dsh-contract-drafting-agent",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "ssmurfgg04-gif-context-m",
+   "url": "https://github.com/search?q=ssmurfgg04-gif-context-m",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "stardustlc666-dsh-suite",
+   "url": "https://github.com/search?q=stardustlc666-dsh-suite",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "🔌 Web UI 增强",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "statem-li-dsh-triad",
+   "url": "https://github.com/search?q=statem-li-dsh-triad",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "stvli-dsh-phoenix",
+   "url": "https://github.com/search?q=stvli-dsh-phoenix",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "substitute525-dsh-tool-monitor",
+   "url": "https://github.com/search?q=substitute525-dsh-tool-monitor",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🛠 基建部署",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "sunyuhuirong-fsviewer",
+   "url": "https://github.com/search?q=sunyuhuirong-fsviewer",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "🔌 Web UI 增强",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "suonsun9527-deepseek-harness-flow-arrange",
+   "url": "https://github.com/search?q=suonsun9527-deepseek-harness-flow-arrange",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": "workspaces"
+  },
+  {
+   "name": "supermate-ai-supermate-harness-system",
+   "url": "https://github.com/search?q=supermate-ai-supermate-harness-system",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "tabbit-browser-dsh-tabbit",
+   "url": "https://github.com/search?q=tabbit-browser-dsh-tabbit",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "🛠 基建部署",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "taoser258-dsh-client-ui-skin-qingxiao",
+   "url": "https://github.com/search?q=taoser258-dsh-client-ui-skin-qingxiao",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🔌 Web UI 增强",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "tap-apia-deepseek-harness-desktop",
+   "url": "https://github.com/search?q=tap-apia-deepseek-harness-desktop",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🛠 基建部署",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "telosmaylx-dsh-session-notify",
+   "url": "https://github.com/search?q=telosmaylx-dsh-session-notify",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "📡 消息通讯",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "tiger3807861189-j-space-cognition-suite-v3-7",
+   "url": "https://github.com/search?q=tiger3807861189-j-space-cognition-suite-v3-7",
+   "star": 0,
+   "verdict": "⚠️ 待定",
+   "domain": "🔌 Web UI 增强",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "tiz36-evo",
+   "url": "https://github.com/search?q=tiz36-evo",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "tongailinc-dsh-mobile-access",
+   "url": "https://github.com/search?q=tongailinc-dsh-mobile-access",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🛠 基建部署",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "traveritas-petween",
+   "url": "https://github.com/search?q=traveritas-petween",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "🎮 娱乐生活",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "traveritas-petween-physics",
+   "url": "https://github.com/search?q=traveritas-petween-physics",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "🎮 娱乐生活",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "tsfreddie-dsh-compaction-instant",
+   "url": "https://github.com/search?q=tsfreddie-dsh-compaction-instant",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "tt-wang-dsh-slice-agent-loop",
+   "url": "https://github.com/search?q=tt-wang-dsh-slice-agent-loop",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "upstash-box",
+   "url": "https://github.com/search?q=upstash-box",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "vincibeans-dsh-dashboard",
+   "url": "https://github.com/search?q=vincibeans-dsh-dashboard",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "wecode-ai-wegent",
+   "url": "https://github.com/search?q=wecode-ai-wegent",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "💻 编码开发",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "weekitmo-dsh-trace",
+   "url": "https://github.com/search?q=weekitmo-dsh-trace",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "wendyltan-dsh-ops-console",
+   "url": "https://github.com/search?q=wendyltan-dsh-ops-console",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "wsl043-dsh-chat-manager",
+   "url": "https://github.com/search?q=wsl043-dsh-chat-manager",
+   "star": 0,
+   "verdict": "⚠️ 待定",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "wsl043-dsh-image-viewer",
+   "url": "https://github.com/search?q=wsl043-dsh-image-viewer",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "wszhoho-dsh-file-attachment",
+   "url": "https://github.com/search?q=wszhoho-dsh-file-attachment",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "ww2186874-cyber-dsh-archived-sessions",
+   "url": "https://github.com/search?q=ww2186874-cyber-dsh-archived-sessions",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🗂 文件数据",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "wyattjhayes-dsh-feishu-channel",
+   "url": "https://github.com/search?q=wyattjhayes-dsh-feishu-channel",
+   "star": 0,
+   "verdict": "⚠️ 待定",
+   "domain": "📡 消息通讯",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xby-skill-xby-datetime",
+   "url": "https://github.com/search?q=xby-skill-xby-datetime",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xby-skill-xby-db",
+   "url": "https://github.com/search?q=xby-skill-xby-db",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xby-skill-xby-dblp",
+   "url": "https://github.com/search?q=xby-skill-xby-dblp",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xby-skill-xby-ddg-search",
+   "url": "https://github.com/search?q=xby-skill-xby-ddg-search",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xby-skill-xby-defi-yields",
+   "url": "https://github.com/search?q=xby-skill-xby-defi-yields",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xby-skill-xby-epub-template-server",
+   "url": "https://github.com/search?q=xby-skill-xby-epub-template-server",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xby-skill-xby-extract-antv-topic",
+   "url": "https://github.com/search?q=xby-skill-xby-extract-antv-topic",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xby-skill-xby-fantasynbaleague",
+   "url": "https://github.com/search?q=xby-skill-xby-fantasynbaleague",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xby-skill-xby-fastdomaincheck",
+   "url": "https://github.com/search?q=xby-skill-xby-fastdomaincheck",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xby-skill-xby-fetch",
+   "url": "https://github.com/search?q=xby-skill-xby-fetch",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xby-skill-xby-fluent",
+   "url": "https://github.com/search?q=xby-skill-xby-fluent",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xby-skill-xby-french-tax",
+   "url": "https://github.com/search?q=xby-skill-xby-french-tax",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xby-skill-xby-gathering-card-lookup-service",
+   "url": "https://github.com/search?q=xby-skill-xby-gathering-card-lookup-service",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xby-skill-xby-generate-echarts",
+   "url": "https://github.com/search?q=xby-skill-xby-generate-echarts",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xby-skill-xby-glama-registry",
+   "url": "https://github.com/search?q=xby-skill-xby-glama-registry",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xby-skill-xby-hackernews-search",
+   "url": "https://github.com/search?q=xby-skill-xby-hackernews-search",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xby-skill-xby-hitoshura25-android-playstore-d",
+   "url": "https://github.com/search?q=xby-skill-xby-hitoshura25-android-playstore-d",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xby-skill-xby-lunar-calendar",
+   "url": "https://github.com/search?q=xby-skill-xby-lunar-calendar",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xby-skill-xby-math",
+   "url": "https://github.com/search?q=xby-skill-xby-math",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xby-skill-xby-mathematical-visualization",
+   "url": "https://github.com/search?q=xby-skill-xby-mathematical-visualization",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🔌 Web UI 增强",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xby-skill-xby-mbit-test",
+   "url": "https://github.com/search?q=xby-skill-xby-mbit-test",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xby-skill-xby-mermaid-doc",
+   "url": "https://github.com/search?q=xby-skill-xby-mermaid-doc",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xby-skill-xby-mm1-simulation",
+   "url": "https://github.com/search?q=xby-skill-xby-mm1-simulation",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xby-skill-xby-ons-data",
+   "url": "https://github.com/search?q=xby-skill-xby-ons-data",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xby-skill-xby-open-data-hk",
+   "url": "https://github.com/search?q=xby-skill-xby-open-data-hk",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xby-skill-xby-pubchem",
+   "url": "https://github.com/search?q=xby-skill-xby-pubchem",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xby-skill-xby-qanon",
+   "url": "https://github.com/search?q=xby-skill-xby-qanon",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xby-skill-xby-random-number",
+   "url": "https://github.com/search?q=xby-skill-xby-random-number",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xby-skill-xby-running-formulas",
+   "url": "https://github.com/search?q=xby-skill-xby-running-formulas",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xby-skill-xby-scan-code",
+   "url": "https://github.com/search?q=xby-skill-xby-scan-code",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "💻 编码开发",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xby-skill-xby-sequentialthinking",
+   "url": "https://github.com/search?q=xby-skill-xby-sequentialthinking",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xby-skill-xby-smart-search",
+   "url": "https://github.com/search?q=xby-skill-xby-smart-search",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xby-skill-xby-source-coop",
+   "url": "https://github.com/search?q=xby-skill-xby-source-coop",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xby-skill-xby-structured-argumentation",
+   "url": "https://github.com/search?q=xby-skill-xby-structured-argumentation",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xby-skill-xby-todolist",
+   "url": "https://github.com/search?q=xby-skill-xby-todolist",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xby-skill-xby-toronto-open-data-server",
+   "url": "https://github.com/search?q=xby-skill-xby-toronto-open-data-server",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xby-skill-xby-vnstock",
+   "url": "https://github.com/search?q=xby-skill-xby-vnstock",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🎮 娱乐生活",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xby-skill-xby-web-research-assistant",
+   "url": "https://github.com/search?q=xby-skill-xby-web-research-assistant",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xht-code-dsh-model-reasoning-defaults",
+   "url": "https://github.com/search?q=xht-code-dsh-model-reasoning-defaults",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "💻 编码开发",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xiaobai2017666-dsh-chrome-cdp",
+   "url": "https://github.com/search?q=xiaobai2017666-dsh-chrome-cdp",
+   "star": 0,
+   "verdict": "⚠️ 待定",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xiaoguomeiyitian-dsh-qr-share",
+   "url": "https://github.com/search?q=xiaoguomeiyitian-dsh-qr-share",
+   "star": 0,
+   "verdict": "⚠️ 待定",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xiaokaizhou-dsh-media-preview",
+   "url": "https://github.com/search?q=xiaokaizhou-dsh-media-preview",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xiaoshi7915-dsh-kb-manager",
+   "url": "https://github.com/search?q=xiaoshi7915-dsh-kb-manager",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xiaoso456-dsh-tool-plus",
+   "url": "https://github.com/search?q=xiaoso456-dsh-tool-plus",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xiaoxiao44443-dfy-dsh-plugins",
+   "url": "https://github.com/search?q=xiaoxiao44443-dfy-dsh-plugins",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xiaoxiaohai-dsh-remote",
+   "url": "https://github.com/search?q=xiaoxiaohai-dsh-remote",
+   "star": 0,
+   "verdict": "⚠️ 待定",
+   "domain": "🛠 基建部署",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xinde-deepseek-harness-desktop",
+   "url": "https://github.com/search?q=xinde-deepseek-harness-desktop",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🛠 基建部署",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xmnathan-dsh-skin-galactic-opera",
+   "url": "https://github.com/search?q=xmnathan-dsh-skin-galactic-opera",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🔌 Web UI 增强",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xobexo-dsh-smart-scenario-router",
+   "url": "https://github.com/search?q=xobexo-dsh-smart-scenario-router",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "xswt442-cmd-dsh-treekeeper",
+   "url": "https://github.com/search?q=xswt442-cmd-dsh-treekeeper",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "yancey2023-dsh-fold",
+   "url": "https://github.com/search?q=yancey2023-dsh-fold",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "yangdongzhen590-dsh-knj-obsidian",
+   "url": "https://github.com/search?q=yangdongzhen590-dsh-knj-obsidian",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "yuan-source-666-dsh-research-autoresearch",
+   "url": "https://github.com/search?q=yuan-source-666-dsh-research-autoresearch",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "yuan-source-666-dsh-task-notifier",
+   "url": "https://github.com/search?q=yuan-source-666-dsh-task-notifier",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "yuioi666-dsh-conversation-nav-dots",
+   "url": "https://github.com/search?q=yuioi666-dsh-conversation-nav-dots",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🔌 Web UI 增强",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "yunqiangwu-dsh-ai-team",
+   "url": "https://github.com/search?q=yunqiangwu-dsh-ai-team",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "yur0918-dsh-user-addons",
+   "url": "https://github.com/search?q=yur0918-dsh-user-addons",
+   "star": 0,
+   "verdict": "⚠️ 待定",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "yurzi-dsh-plugin-template",
+   "url": "https://github.com/search?q=yurzi-dsh-plugin-template",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "yurzi-dsh-web-fetch-enhanced",
+   "url": "https://github.com/search?q=yurzi-dsh-web-fetch-enhanced",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "zhang-jiazhi-dsh-prompt-optimizer",
+   "url": "https://github.com/search?q=zhang-jiazhi-dsh-prompt-optimizer",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🤖 Agent 能力",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "zhenghaoyang24-obsidian-plugin-deepshian",
+   "url": "https://github.com/search?q=zhenghaoyang24-obsidian-plugin-deepshian",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "zhhhhmmm-dsh-usage-dashboard",
+   "url": "https://github.com/search?q=zhhhhmmm-dsh-usage-dashboard",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "zhongruiyu-mine-math-modeling-plugin",
+   "url": "https://github.com/search?q=zhongruiyu-mine-math-modeling-plugin",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "🔌 Web UI 增强",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "zhucy123-source-code-mgmt",
+   "url": "https://github.com/search?q=zhucy123-source-code-mgmt",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "💻 编码开发",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "zuojinxin-dsh-provider-switch",
+   "url": "https://github.com/search?q=zuojinxin-dsh-provider-switch",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "💻 编码开发",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "zw11591-sketch-dsh-pet-panel",
+   "url": "https://github.com/search?q=zw11591-sketch-dsh-pet-panel",
+   "star": 0,
+   "verdict": "❌ 运行级不兼容",
+   "domain": "🎮 娱乐生活",
+   "desc": "—",
+   "bundle": ""
+  },
+  {
+   "name": "zxheyi-dsh-work",
+   "url": "https://github.com/search?q=zxheyi-dsh-work",
+   "star": 0,
+   "verdict": "✅ 运行级可用",
+   "domain": "❓ 其他",
+   "desc": "—",
+   "bundle": ""
+  }
+ ]
+}
