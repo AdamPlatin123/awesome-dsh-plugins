@@ -1,13 +1,13 @@
 # 全量插件清单（统一四档口径）
 
-> 数据源：radar 快照并集（`20260902T233002Z` 2026-09-03 07:30 UTC+8 ⊕ `20260902T231502Z` 2026-09-03 07:15 UTC+8 ⊕ `20260902T230001Z` 2026-09-03 07:00 UTC+8 等 313 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
+> 数据源：radar 快照并集（`20260902T234501Z` 2026-09-03 07:45 UTC+8 ⊕ `20260902T233002Z` 2026-09-03 07:30 UTC+8 ⊕ `20260902T231502Z` 2026-09-03 07:15 UTC+8 等 314 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
 > 呈现：分组列表（状态 · 名称 · ★星标 · 一句话说明），不使用大表格；〔📦〕= 整合包（根 dsh.bundle / workspaces 多子包）。
 
 ## 统一度量衡
 
 **判定维度**（运行级四档；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：
 
-- 全量判定 17329（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（11717）/ `[不兼容]`（3462）/ `[待定]`（1997）
+- 全量判定 17329（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（11717）/ `[不兼容]`（3459）/ `[待定]`（2000）
 - 已定位明细 8866（本列表展示口径，另 8463 条监测/未定位的判定暂不展示）：`[可用]`（5949）/ `[不兼容]`（1740）/ `[待定]`（1069）/ `[未测]`（108）
 
 **定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：
@@ -3898,6 +3898,7 @@
 - `[未定位]` **scientisbo-dsh-codex-usage** — 占位待复核，判定暂不展示
 - `[未定位]` **seriousz158-dsh-codex-use** — 占位待复核，判定暂不展示
 - `[未定位]` **shaneconner-dsh-provider-login** — 占位待复核，判定暂不展示
+- `[未定位]` **shanhaifish-dsh-plugin-security-review** — 占位待复核，判定暂不展示
 - `[未定位]` **shao-01-test-dsh-chat-rail** — 占位待复核，判定暂不展示
 - `[未定位]` **shaomingbo-dsh-open-in-editor** — 占位待复核，判定暂不展示
 - `[未定位]` **shellexy-dsh-webviewgtk** — 占位待复核，判定暂不展示
@@ -4636,7 +4637,6 @@
 - `[未定位]` **sakthiveltofficial-dsh-git-plugins** — 占位待复核，判定暂不展示
 - `[未定位]` **sandersyao-dsh-session-persistence-mysql** — 占位待复核，判定暂不展示
 - `[未定位]` **sd1g1-dsh-opencode-go-models** — 占位待复核，判定暂不展示
-- `[未定位]` **shanhaifish-dsh-plugin-security-review** — 占位待复核，判定暂不展示
 - `[未定位]` **shaomingbo-dsh-codex-auth-bridge** — 占位待复核，判定暂不展示
 - `[未定位]` **shinonomeaya-dsh-git-chain** — 占位待复核，判定暂不展示
 - `[未定位]` **shonean-deepseek-harness-vscode-desktop** — 占位待复核，判定暂不展示
@@ -11627,6 +11627,7 @@
 - `[未定位]` **a-g-guy-dsh-plus** — 占位待复核，判定暂不展示
 - `[未定位]` **a1141171521-dsh-plugin-conflict-guard** — 占位待复核，判定暂不展示
 - `[未定位]` **a137460387-dsh-computer-use** — 占位待复核，判定暂不展示
+- `[未定位]` **a3boy-dsh-web-tools** — 占位待复核，判定暂不展示
 - `[未定位]` **a4tox-dsh-sql** — 占位待复核，判定暂不展示
 - `[未定位]` **a792883583-dsh-smart-reminder** — 占位待复核，判定暂不展示
 - `[未定位]` **a903067276-rgb-dsh-backup** — 占位待复核，判定暂不展示
@@ -12464,6 +12465,7 @@
 - `[未定位]` **greenhand-monster-dsh-deliberation-presets** — 占位待复核，判定暂不展示
 - `[未定位]` **grstein-dsh-locale-ptbr** — 占位待复核，判定暂不展示
 - `[未定位]` **gsh150801-dsh-bioinf-verify** — 占位待复核，判定暂不展示
+- `[未定位]` **gtc2080-dsh-apex-plugin** — 占位待复核，判定暂不展示
 - `[未定位]` **guangminju-mellos-mapping** — 占位待复核，判定暂不展示
 - `[未定位]` **guangxiangwu6-cmd-dsh-llm-failover** — 占位待复核，判定暂不展示
 - `[未定位]` **guard42-dsh-humanize** — 占位待复核，判定暂不展示
@@ -13207,6 +13209,7 @@
 - `[未定位]` **mianyoubiaoqing-dsh-mmem** — 占位待复核，判定暂不展示
 - `[未定位]` **michael-han-il-dsh-llm-finish-reason-toleranc** — 占位待复核，判定暂不展示
 - `[未定位]` **michaelshii-dsh-plugin-teamflow** — 占位待复核，判定暂不展示
+- `[未定位]` **michengai-dsh-automation** — 占位待复核，判定暂不展示
 - `[未定位]` **michengai-dsh-im-connect** — 占位待复核，判定暂不展示
 - `[未定位]` **micklife-mex** — 占位待复核，判定暂不展示
 - `[未定位]` **microherox-dsh-koboldcpp-hands** — 占位待复核，判定暂不展示
@@ -13672,7 +13675,6 @@
 - `[未定位]` **sdongmaker-vpshub** — 占位待复核，判定暂不展示
 - `[未定位]` **sdoygb-geometry-knowledge** — 占位待复核，判定暂不展示
 - `[未定位]` **sean-gao-dsh** — 占位待复核，判定暂不展示
-- `[未定位]` **seaof0-dsh-redteam-model** — 占位待复核，判定暂不展示
 - `[未定位]` **secretljp-dsh-weave** — 占位待复核，判定暂不展示
 - `[未定位]` **secyborg-dsh-command-rail** — 占位待复核，判定暂不展示
 - `[未定位]` **secyborg-dsh-find-bar** — 占位待复核，判定暂不展示
@@ -16477,7 +16479,6 @@
 - `[未定位]` **6mikao9-dsh-wsl-workspace** — 占位待复核，判定暂不展示
 - `[未定位]` **9931666-dsh-plugin-roundtable** — 占位待复核，判定暂不展示
 - `[未定位]` **9epuuuu-dsh-api-balance** — 占位待复核，判定暂不展示
-- `[未定位]` **a3boy-dsh-web-tools** — 占位待复核，判定暂不展示
 - `[未定位]` **a805026135-dsh-constellation** — 占位待复核，判定暂不展示
 - `[未定位]` **aa2246740-dsh-gateway** — 占位待复核，判定暂不展示
 - `[未定位]` **aa2246740-pstack-dsh** — 占位待复核，判定暂不展示
@@ -16706,7 +16707,6 @@
 - `[未定位]` **green-dalii-dsh-shift-router** — 占位待复核，判定暂不展示
 - `[未定位]` **gsh150801-dsh-bioinf** — 占位待复核，判定暂不展示
 - `[未定位]` **gsh150801-dsh-bioinf-routed** — 占位待复核，判定暂不展示
-- `[未定位]` **gtc2080-dsh-apex-plugin** — 占位待复核，判定暂不展示
 - `[未定位]` **guaguasong-dsh-attachment-s3** — 占位待复核，判定暂不展示
 - `[空仓监测]` **guanosine-diphosphate-dsh-retry-policy-settin** — GitHub 无此仓库，判定暂不展示
 - `[未定位]` **gumiho12345-dsh-plugin-net-access** — 占位待复核，判定暂不展示
@@ -16915,7 +16915,6 @@
 - `[未定位]` **meghanbao-dsh-crumbs** — 占位待复核，判定暂不展示
 - `[不兼容]` [menantonio83-hue-tnt-house](https://github.com/menantonio83-hue/tnt-house) ★0 — TNT House - Safe New Tokens Platform
 - `[未定位]` **merenguesl-dsh-usage-atlas** — 占位待复核，判定暂不展示
-- `[未定位]` **michengai-dsh-automation** — 占位待复核，判定暂不展示
 - `[未定位]` **mikegabyte-dsh-vn-biz** — 占位待复核，判定暂不展示
 - `[未定位]` **mingyu-kalo-dsh-https-fix** — 占位待复核，判定暂不展示
 - `[未定位]` **mkaliezz-dsh-action-ledger** — 占位待复核，判定暂不展示
@@ -17025,6 +17024,7 @@
 - `[未定位]` **scd13150-dsh-cognition** — 占位待复核，判定暂不展示
 - `[未定位]` **sch246-dsh-warm-minimal** — 占位待复核，判定暂不展示
 - `[未定位]` **seantan1983-dsh-qr-toolkit** — 占位待复核，判定暂不展示
+- `[未定位]` **seaof0-dsh-redteam-model** — 占位待复核，判定暂不展示
 - `[未定位]` **seerableofficial-dsh-anydoc-markdown** — 占位待复核，判定暂不展示
 - `[未定位]` **seerableofficial-dsh-web-search-toggle** — 占位待复核，判定暂不展示
 - `[未定位]` **seireia-dsh-plugin-rtk** — 占位待复核，判定暂不展示
