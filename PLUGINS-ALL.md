@@ -1,14 +1,14 @@
 # 全量插件清单（统一四档口径）
 
-> 数据源：radar 快照并集（`20260902T074501Z` 2026-09-02 15:45 UTC+8 ⊕ `20260902T071501Z` 2026-09-02 15:15 UTC+8 ⊕ `20260902T064501Z` 2026-09-02 14:45 UTC+8 等 296 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
+> 数据源：radar 快照并集（`20260902T080001Z` 2026-09-02 16:00 UTC+8 ⊕ `20260902T074501Z` 2026-09-02 15:45 UTC+8 ⊕ `20260902T071501Z` 2026-09-02 15:15 UTC+8 等 297 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
 > 呈现：分组列表（状态 · 名称 · ★星标 · 一句话说明），不使用大表格；〔📦〕= 整合包（根 dsh.bundle / workspaces 多子包）。
 
 ## 统一度量衡
 
 **判定维度**（运行级四档；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：
 
-- 全量判定 13583（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（9052）/ `[不兼容]`（2687）/ `[待定]`（1691）
-- 已定位明细 8798（本列表展示口径，另 4785 条监测/未定位的判定暂不展示）：`[可用]`（5889）/ `[不兼容]`（1701）/ `[待定]`（1100）/ `[未测]`（108）
+- 全量判定 13595（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（9064）/ `[不兼容]`（2687）/ `[待定]`（1691）
+- 已定位明细 8810（本列表展示口径，另 4785 条监测/未定位的判定暂不展示）：`[可用]`（5901）/ `[不兼容]`（1701）/ `[待定]`（1100）/ `[未测]`（108）
 
 **定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：
 
@@ -19,7 +19,7 @@
 
 > 〔PR〕= 经已合并 PR 正式登记；收录 ≠ 兼容 ≠ 运行可用 ≠ 安全审计。
 
-## 汇总：13583 条（已定位 8798 · 监测/未定位 4785）· PR 登记 23 个
+## 汇总：13595 条（已定位 8810 · 监测/未定位 4785）· PR 登记 23 个
 
 ## 🎓 技能包（25）
 
@@ -7299,7 +7299,7 @@
 - `[未定位]` **glfzr-dsh-drop-file-to-path** — 占位待复核，判定暂不展示
 - `[歧义监测]` **context-doctor** — 同名多仓，判定暂不展示
 
-## 🎮 娱乐生活（344）
+## 🎮 娱乐生活（345）
 
 - `[可用]` [crafter-station-petdex](https://github.com/crafter-station/petdex) ★3844 — A public gallery of animated pets for Codex, Claude Code, DeepSeek Harness, Hermes, OpenCode, Gemini CLI, and
 - `[可用]` [alvinunreal-openpets](https://github.com/alvinunreal/openpets) ★1150 — Local first, desktop companion platform with animated pets, plugin SDK and coding-agent integrations.〔📦〕
@@ -7553,6 +7553,7 @@
 - `[可用]` [uckkk-dsh-pet-heat](https://github.com/uckkk/dsh-pet-heat) ★0 — 宠物中暑急救
 - `[未定位]` **uckkk-dsh-pet-nutri** — 占位待复核，判定暂不展示
 - `[未定位]` **uckkk-dsh-pet-pill** — 占位待复核，判定暂不展示
+- `[可用]` [uckkk-dsh-pet-sitting](https://github.com/uckkk/dsh-pet-sitting) ★0 — 宠物寄养
 - `[可用]` [uckkk-dsh-pet-teeth](https://github.com/uckkk/dsh-pet-teeth) ★0 — 口腔健康
 - `[未定位]` **uckkk-dsh-pet-transport** — 占位待复核，判定暂不展示
 - `[未定位]` **uckkk-dsh-pet-travel** — 占位待复核，判定暂不展示
@@ -8841,7 +8842,7 @@
 - `[不兼容]` [dsh-plugin-wallpaper](https://github.com/Tree-Summer/dsh-plugin-wallpaper) ★0 — 可以在deepseek harness网页端自定义背景图片的插件
 - `[歧义监测]` **dsh-101** — 同名多仓，判定暂不展示
 
-## ❓ 其他（4799）
+## ❓ 其他（4810）
 
 - `[待定]` [deepseek-ai-deepseek-harness](https://github.com/deepseek-ai/deepseek-harness) ★124593 — DeepSeek Harness: Everything is a Plugin.〔📦〕
 - `[未测]` [openpencil](https://github.com/zseven-w/openpencil) ★5647 — OpenPencil 设计工具本体（DSH 适配器 dsh-openpencil 已另有条目；本体插队实测）
@@ -11598,6 +11599,7 @@
 - `[可用]` [uckkk-dsh-camelcase](https://github.com/uckkk/dsh-camelcase) ★0 — 驼峰命名
 - `[未定位]` **uckkk-dsh-cameroon** — 占位待复核，判定暂不展示
 - `[可用]` [uckkk-dsh-camp-food](https://github.com/uckkk/dsh-camp-food) ★0 — 露营食物准备
+- `[可用]` [uckkk-dsh-camp-gear](https://github.com/uckkk/dsh-camp-gear) ★0 — 露营装备清单
 - `[未定位]` **uckkk-dsh-camp-safety** — 占位待复核，判定暂不展示
 - `[未定位]` **uckkk-dsh-camp-site** — 占位待复核，判定暂不展示
 - `[未定位]` **uckkk-dsh-candle-make** — 占位待复核，判定暂不展示
@@ -11635,6 +11637,7 @@
 - `[未定位]` **uckkk-dsh-contract-unlimited** — 占位待复核，判定暂不展示
 - `[可用]` [uckkk-dsh-cook-time](https://github.com/uckkk/dsh-cook-time) ★0 — 涮烫时间表
 - `[未定位]` **uckkk-dsh-cookie** — 占位待复核，判定暂不展示
+- `[可用]` [uckkk-dsh-cosmetics-shelf](https://github.com/uckkk/dsh-cosmetics-shelf) ★0 — 化妆品保质期
 - `[未定位]` **uckkk-dsh-countdown** — 占位待复核，判定暂不展示
 - `[未定位]` **uckkk-dsh-counter-height** — 占位待复核，判定暂不展示
 - `[未定位]` **uckkk-dsh-coupon-opt** — 占位待复核，判定暂不展示
@@ -11648,6 +11651,7 @@
 - `[未定位]` **uckkk-dsh-dance-pick** — 占位待复核，判定暂不展示
 - `[未定位]` **uckkk-dsh-date-format** — 占位待复核，判定暂不展示
 - `[可用]` [uckkk-dsh-day-of-year](https://github.com/uckkk/dsh-day-of-year) ★0 — 年内第几天
+- `[可用]` [uckkk-dsh-deed-tax](https://github.com/uckkk/dsh-deed-tax) ★0 — 契税计算
 - `[未定位]` **uckkk-dsh-deep-clone** — 占位待复核，判定暂不展示
 - `[未定位]` **uckkk-dsh-deep-equal** — 占位待复核，判定暂不展示
 - `[未定位]` **uckkk-dsh-dehumid-pick** — 占位待复核，判定暂不展示
@@ -11683,7 +11687,9 @@
 - `[未定位]` **uckkk-dsh-exercise-calories** — 占位待复核，判定暂不展示
 - `[未定位]` **uckkk-dsh-exposure-calc** — 占位待复核，判定暂不展示
 - `[未定位]` **uckkk-dsh-eye-care** — 占位待复核，判定暂不展示
+- `[可用]` [uckkk-dsh-eye-makeup](https://github.com/uckkk/dsh-eye-makeup) ★0 — 眼妆基础
 - `[未定位]` **uckkk-dsh-factorial** — 占位待复核，判定暂不展示
+- `[可用]` [uckkk-dsh-family-gather](https://github.com/uckkk/dsh-family-gather) ★0 — 家庭聚会
 - `[未定位]` **uckkk-dsh-fat-loss-cal** — 占位待复核，判定暂不展示
 - `[可用]` [uckkk-dsh-fatigue](https://github.com/uckkk/dsh-fatigue) ★0 — 疲劳自测
 - `[未定位]` **uckkk-dsh-flight-pick** — 占位待复核，判定暂不展示
@@ -11697,7 +11703,9 @@
 - `[未定位]` **uckkk-dsh-food-transition** — 占位待复核，判定暂不展示
 - `[可用]` [uckkk-dsh-formalin](https://github.com/uckkk/dsh-formalin) ★0 — 甲醛治理
 - `[未定位]` **uckkk-dsh-foundation-dose** — 占位待复核，判定暂不展示
+- `[可用]` [uckkk-dsh-fuel-cost](https://github.com/uckkk/dsh-fuel-cost) ★0 — 油耗成本计算
 - `[未定位]` **uckkk-dsh-full-reduction** — 占位待复核，判定暂不展示
+- `[可用]` [uckkk-dsh-furniture-care](https://github.com/uckkk/dsh-furniture-care) ★0 — 家具防潮
 - `[可用]` [uckkk-dsh-furniture-fix](https://github.com/uckkk/dsh-furniture-fix) ★0 — 家具维修
 - `[可用]` [uckkk-dsh-future-brain-upload](https://github.com/uckkk/dsh-future-brain-upload) ★0 — 意识上传
 - `[待定]` [uckkk-dsh-future-cbdc](https://github.com/uckkk/dsh-future-cbdc) ★0 — 央行数字货币
@@ -11845,6 +11853,8 @@
 - `[未定位]` **uckkk-dsh-keyword-extract** — 占位待复核，判定暂不展示
 - `[可用]` [uckkk-dsh-kg2lb](https://github.com/uckkk/dsh-kg2lb) ★0 — 千克转磅
 - `[未定位]` **uckkk-dsh-kidney-func** — 占位待复核，判定暂不展示
+- `[可用]` [uckkk-dsh-kids-swim](https://github.com/uckkk/dsh-kids-swim) ★0 — 儿童游泳建议
+- `[可用]` [uckkk-dsh-kitchen-exhaust](https://github.com/uckkk/dsh-kitchen-exhaust) ★0 — 烟灶选购
 - `[未定位]` **uckkk-dsh-kitchen-org** — 占位待复核，判定暂不展示
 - `[可用]` [uckkk-dsh-km2mi](https://github.com/uckkk/dsh-km2mi) ★0 — 公里转英里
 - `[可用]` [uckkk-dsh-kn2km](https://github.com/uckkk/dsh-kn2km) ★0 — 海里/时转公里/时
@@ -11874,6 +11884,7 @@
 - `[可用]` [uckkk-dsh-lebanon](https://github.com/uckkk/dsh-lebanon) ★0 — 黎巴嫩国家
 - `[可用]` [uckkk-dsh-license-period](https://github.com/uckkk/dsh-license-period) ★0 — 驾驶证换证
 - `[可用]` [uckkk-dsh-lift-form](https://github.com/uckkk/dsh-lift-form) ★0 — 动作教学
+- `[可用]` [uckkk-dsh-light-need](https://github.com/uckkk/dsh-light-need) ★0 — 光照需求参考
 - `[可用]` [uckkk-dsh-lighting-calc](https://github.com/uckkk/dsh-lighting-calc) ★0 — 照明功率计算
 - `[可用]` [uckkk-dsh-lip-pick](https://github.com/uckkk/dsh-lip-pick) ★0 — 口红选择
 - `[可用]` [uckkk-dsh-literature-terms](https://github.com/uckkk/dsh-literature-terms) ★0 — 文学术语
@@ -11891,6 +11902,7 @@
 - `[未定位]` **uckkk-dsh-marathon-pace** — 占位待复核，判定暂不展示
 - `[未定位]` **uckkk-dsh-markdown-to-html** — 占位待复核，判定暂不展示
 - `[未定位]` **uckkk-dsh-mauritius** — 占位待复核，判定暂不展示
+- `[可用]` [uckkk-dsh-max](https://github.com/uckkk/dsh-max) ★0 — 最大值
 - `[未定位]` **uckkk-dsh-meeting-cost** — 占位待复核，判定暂不展示
 - `[未定位]` **uckkk-dsh-meeting-prep** — 占位待复核，判定暂不展示
 - `[未定位]` **uckkk-dsh-metronome** — 占位待复核，判定暂不展示
