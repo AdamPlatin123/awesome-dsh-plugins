@@ -1,25 +1,25 @@
 # 全量插件清单（统一四档口径）
 
-> 数据源：radar 快照并集（`20260902T000001Z` 2026-09-02 08:00 UTC+8 ⊕ `20260901T230001Z` 2026-09-02 07:00 UTC+8 ⊕ `20260901T224501Z` 2026-09-02 06:45 UTC+8 等 271 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
+> 数据源：radar 快照并集（`20260902T001501Z` 2026-09-02 08:15 UTC+8 ⊕ `20260902T000001Z` 2026-09-02 08:00 UTC+8 ⊕ `20260901T230001Z` 2026-09-02 07:00 UTC+8 等 272 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
 > 呈现：分组列表（状态 · 名称 · ★星标 · 一句话说明），不使用大表格；〔📦〕= 整合包（根 dsh.bundle / workspaces 多子包）。
 
 ## 统一度量衡
 
 **判定维度**（运行级四档；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：
 
-- 全量判定 13210（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（8795）/ `[不兼容]`（2621）/ `[待定]`（1641）
-- 已定位明细 8577（本列表展示口径，另 4633 条监测/未定位的判定暂不展示）：`[可用]`（5728）/ `[不兼容]`（1666）/ `[待定]`（1075）/ `[未测]`（108）
+- 全量判定 13212（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（8796）/ `[不兼容]`（2622）/ `[待定]`（1641）
+- 已定位明细 8578（本列表展示口径，另 4634 条监测/未定位的判定暂不展示）：`[可用]`（5729）/ `[不兼容]`（1666）/ `[待定]`（1075）/ `[未测]`（108）
 
 **定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：
 
 - `[空仓监测]`（133）— GitHub 复核无此仓库；待重现后恢复判定显示
 - `[歧义监测]`（103）— 同名多仓无法锁定本体；锁定前不展示
-- `[未定位]`（4395）— 新占位条目，待下一轮定位复核（scripts/resolve_placeholders.py）
+- `[未定位]`（4396）— 新占位条目，待下一轮定位复核（scripts/resolve_placeholders.py）
 - 定位复核累计修复 539 个占位 URL
 
 > 〔PR〕= 经已合并 PR 正式登记；收录 ≠ 兼容 ≠ 运行可用 ≠ 安全审计。
 
-## 汇总：13210 条（已定位 8577 · 监测/未定位 4633）· PR 登记 23 个
+## 汇总：13212 条（已定位 8578 · 监测/未定位 4634）· PR 登记 23 个
 
 ## 🎓 技能包（25）
 
@@ -8621,7 +8621,7 @@
 - `[不兼容]` [dsh-plugin-wallpaper](https://github.com/Tree-Summer/dsh-plugin-wallpaper) ★0 — 可以在deepseek harness网页端自定义背景图片的插件
 - `[歧义监测]` **dsh-101** — 同名多仓，判定暂不展示
 
-## ❓ 其他（4646）
+## ❓ 其他（4648）
 
 - `[待定]` [deepseek-ai-deepseek-harness](https://github.com/deepseek-ai/deepseek-harness) ★124593 — DeepSeek Harness: Everything is a Plugin.〔📦〕
 - `[未测]` [openpencil](https://github.com/zseven-w/openpencil) ★5647 — OpenPencil 设计工具本体（DSH 适配器 dsh-openpencil 已另有条目；本体插队实测）
@@ -10729,6 +10729,7 @@
 - `[未定位]` **maybetheworld-dsh-inherit** — 占位待复核，判定暂不展示
 - `[可用]` [mccray-s-dsh-plugins](https://github.com/mccray-s/dsh-plugins) ★0 — —
 - `[待定]` [mcxcc303-dsh-dslow](https://github.com/MCXCC303/dsh-dslow) ★0 — —
+- `[可用]` [mengruoa-dsh-rembg](https://github.com/mengruoa/dsh-rembg) ★0 — DSH plugin: auto-install rembg and expose a background-removal tool to the LLM
 - `[未定位]` **mengshang-spec-dsh-plugin-trustlens** — 占位待复核，判定暂不展示
 - `[未定位]` **mengshang-spec-dsh-third-party-api-balance-wa** — 占位待复核，判定暂不展示
 - `[未定位]` **meowlynxsea-dsh-cot-summerization** — 占位待复核，判定暂不展示
@@ -12912,6 +12913,7 @@
 - `[不兼容]` [jieguanya-tugu-dsh-balance-widget](https://github.com/jieguanya/tugu-dsh-balance-widget) ★0 — DeepSeek Harness (DSH) 余额插件：实时余额/今日消耗/7-30天趋势图
 - `[未定位]` **jimchen-g-dsh-frontier-repro** — 占位待复核，判定暂不展示
 - `[未定位]` **jinryu-online-dsh-svn-plugin** — 占位待复核，判定暂不展示
+- `[未定位]` **jkstars-dsh-token-usage-stats** — 占位待复核，判定暂不展示
 - `[未定位]` **jo32-deepdeck** — 占位待复核，判定暂不展示
 - `[不兼容]` [jo32-dsh-hackernews-reader](https://github.com/jo32/dsh-hackernews-reader) ★0 — A dsh-plugin Hacker News reader with app-scoped AI conversations for DeepDeck.
 - `[不兼容]` [jo32-dsh-nga-reader](https://github.com/jo32/dsh-nga-reader) ★0 — A dsh-plugin NGA reader with app-scoped AI conversations for DeepDeck.
