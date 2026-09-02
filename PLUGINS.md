@@ -10,6 +10,7 @@
 
 | 插件 | 仓库 | 说明 | 运行级 |
 |---|---|---|---|
+| dsh-wps | [zhengjy01/dsh-wps](https://github.com/zhengjy01/dsh-wps) | WPS / 金山文档云文档集成（官方 SkillHub MCP，mcp__wps__* 工具） | agent |
 | dsh-vercel-mcp | [zhengjy01/dsh-vercel-mcp](https://github.com/zhengjy01/dsh-vercel-mcp) | Vercel MCP connection for DSH: official OAuth 2.0 client flow against mcp.vercel.com; Vercel platform tools under mcp__vercel__* | 待测 |
 | dsh-worktree | [alpacachen/dsh-worktree](https://github.com/alpacachen/dsh-worktree) | DSH Web 极简 Git worktree 管理：一个按钮和一个对话框创建任务分支 worktree，并直接打开为 DSH Workspace；npm `@alpacachen/dsh-simple-worktree` 1.0.2 | 待测 |
 | dsh-session-pin | [PerryLink/dsh-session-pin](https://github.com/PerryLink/dsh-session-pin) | 会话与工作区置顶（双面 host+client）：行级图钉与换色、会话头开关、已置顶面板、持久化 settings 命名空间；0.4.0 再加会话导航组织器——Pin 分组（boards）、标签与保存视图、会话健康摘要（只读脱敏）与 /goto 模糊跳转；全部浏览器本地零网络 | 待测 |
