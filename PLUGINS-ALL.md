@@ -1,14 +1,14 @@
 # 全量插件清单（统一四档口径）
 
-> 数据源：radar 快照并集（`20260903T200002Z` 2026-09-04 04:00 UTC+8 ⊕ `20260903T194501Z` 2026-09-04 03:45 UTC+8 ⊕ `20260903T193001Z` 2026-09-04 03:30 UTC+8 等 340 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
+> 数据源：radar 快照并集（`20260903T201501Z` 2026-09-04 04:15 UTC+8 ⊕ `20260903T200002Z` 2026-09-04 04:00 UTC+8 ⊕ `20260903T194501Z` 2026-09-04 03:45 UTC+8 等 341 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
 > 呈现：分组列表（状态 · 名称 · ★星标 · 一句话说明），不使用大表格；〔📦〕= 整合包（根 dsh.bundle / workspaces 多子包）。
 
 ## 统一度量衡
 
 **判定维度**（运行级四档；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：
 
-- 全量判定 17696（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12015）/ `[不兼容]`（3504）/ `[待定]`（2023）
-- 已定位明细 9108（本列表展示口径，另 8588 条监测/未定位的判定暂不展示）：`[可用]`（6167）/ `[不兼容]`（1750）/ `[待定]`（1082）/ `[未测]`（109）
+- 全量判定 17696（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12016）/ `[不兼容]`（3503）/ `[待定]`（2023）
+- 已定位明细 9108（本列表展示口径，另 8588 条监测/未定位的判定暂不展示）：`[可用]`（6168）/ `[不兼容]`（1749）/ `[待定]`（1082）/ `[未测]`（109）
 
 **定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：
 
@@ -3575,6 +3575,7 @@
 - `[可用]` [keke050-dsh-wallpaper](https://github.com/keke050/dsh-wallpaper) ★2 — Set a custom background wallpaper for the DeepSeek Harness desktop app — presets, image URL, upload, and an op
 - `[可用]` [kelai141-dsh-code-diff-viewer](https://github.com/kelai141/dsh-code-diff-viewer) ★2 — 用于dsh的代码可视化系统
 - `[可用]` [kikomaotu-ccs-balance](https://github.com/kikomaotu/ccs-balance) ★2 — DSH 插件：同步 cc-switch 各 provider 余额，按日/月/总量统计 token 用量与花费（支持中转站币种与汇率设置）
+- `[待定]` [ai-sdk-provider-dsh](https://github.com/krislavten/ai-sdk-provider-dsh) ★2 — AI SDK provider that drives a DeepSeek Harness (dsh) runtime as a LanguageModelV3 — works on AI SDK v6 and v7
 - `[可用]` [kurenai-studio-kurenai](https://github.com/kurenai-studio/kurenai) ★2 — DSH-native Cocos vibe coding studio with headless preview and runtime inspector
 - `[可用]` [dsh-project-mcp-bridge](https://github.com/KYinCode/dsh-project-mcp-bridge) ★2 — Per-project MCP loading for DeepSeek Harness: drop a .dsh/mcp.json into a project and its sessions get the MCP
 - `[可用]` [ldgeng-dsh-claudecode-tips](https://github.com/ldgeng/dsh-claudecode-tips) ★2 — 将deep diving替换为claudecode式的working tips
@@ -4844,7 +4845,6 @@
 - `[不兼容]` [jorinyang-dsh-clawshell](https://github.com/jorinyang/dsh-clawshell) ★2 — ClawShell vision as DeepSeek Harness plugins: self-perception, closed-loop self-adaptation, trust/niche swarm,
 - `[不兼容]` [justlearner010-dsh-plugin-market](https://github.com/justlearner010/dsh-plugin-market) ★2 — Recommended-plugin directory (ctx.pluginMarket) + search_plugins tool for DeepSeek Harness — live GitHub stars
 - `[不兼容]` [dsh-everything-oauth](https://github.com/kam74515-boop/dsh-everything-oauth) ★2 — Import local Codex / Grok / Claude / OpenCode / CC Switch logins into DeepSeek Harness
-- `[不兼容]` [ai-sdk-provider-dsh](https://github.com/krislavten/ai-sdk-provider-dsh) ★2 — AI SDK provider that drives a DeepSeek Harness (dsh) runtime as a LanguageModelV3 — works on AI SDK v6 and v7
 - `[不兼容]` [life1996cou-dsh-codex](https://github.com/life1996cou/dsh-codex) ★2 — 同步codex中的会话到dsh,一键导入上下文.
 - `[不兼容]` [linhut-dsh-manager](https://github.com/linhut/dsh-manager) ★2 — DeepSeek Harness 桌面管理工具，一站式掌控 Harness 运行环境：一键安装、版本管理、插件市场（管理）、Manager 设置、LLM 提供商可视化配置、settings.yaml 安全编辑、Agent〔📦〕
 - `[不兼容]` [linziyanleo-dsh-custom-provider](https://github.com/linziyanleo/dsh-custom-provider) ★2 — Configure custom LLM providers in DeepSeek Harness.
@@ -7521,7 +7521,7 @@
 - `[可用]` [giantgkl-dsh-cost](https://github.com/GiantGKL/dsh-cost) ★3 — —
 - `[可用]` [dsh-plugin-wechat](https://github.com/gnulife/dsh-plugin-wechat) ★3 — —
 - `[可用]` [kezboardpj-dsh-chat-nav](https://github.com/kezboardpj/dsh-chat-nav) ★3 — —
-- `[待定]` [dsh-session-import](https://github.com/kinyokun/dsh-session-import) ★3 — DSH 会话日志导入插件:解析 /export 的 zip/jsonl,结构真实性验证 + SHA-256 指纹校验,同步模型/预设/权限等状态,导入/删除实时推送免刷新
+- `[可用]` [dsh-session-import](https://github.com/kinyokun/dsh-session-import) ★3 — DSH 会话日志导入插件:解析 /export 的 zip/jsonl,结构真实性验证 + SHA-256 指纹校验,同步模型/预设/权限等状态,导入/删除实时推送免刷新
 - `[可用]` [loyalchiiina-dsh-chat-image-lightbox](https://github.com/loyalchiiina/dsh-chat-image-lightbox) ★3 — DSH plugin: display images inline in chat with lightbox zoom, download (save-as), and prev/next navigation
 - `[可用]` [miaomiao636-dsh-message-navigator](https://github.com/miaomiao636/dsh-message-navigator) ★3 — DeepSeek Harness message navigator: a table of contents for long conversations — user-message outline, click-t
 - `[可用]` [mozhuanzuojing-dsh-liangwengu](https://github.com/mozhuanzuojing/dsh-liangwengu) ★3 — 梁文谷提醒：DeepSeek API 定价高峰/空闲时段提醒（DSH/Cordis bundle）— 卡通弹窗+系统通知+提示音+30分钟倒计时
