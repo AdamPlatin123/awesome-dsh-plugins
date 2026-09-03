@@ -1,6 +1,6 @@
 {
  "schema": "dsh-radar/v1",
- "generated_at": "2026-09-03T18:00:47Z",
+ "generated_at": "2026-09-03T18:15:58Z",
  "plugins": [
   {
    "repo": "zhengjy01/dsh-wps",
