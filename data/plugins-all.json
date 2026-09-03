@@ -1,14 +1,7 @@
 {
  "schema": "dsh-radar/v1",
- "generated_at": "2026-09-03T18:30:40Z",
+ "generated_at": "2026-09-03T18:45:40Z",
  "plugins": [
-  {
-   "repo": "zhengjy01/dsh-wps",
-   "name": "dsh-wps",
-   "verdict": "untested",
-   "stars": null,
-   "desc": "WPS / 金山文档云文档集成（官方 SkillHub MCP，mcp__wps__* 工具）"
-  },
   {
    "repo": "perrylink/dsh-fast",
    "name": "dsh-fast",
