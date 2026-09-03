@@ -1,14 +1,14 @@
 # 全量插件清单（统一四档口径）
 
-> 数据源：radar 快照并集（`20260903T223001Z` 2026-09-04 06:30 UTC+8 ⊕ `20260903T221501Z` 2026-09-04 06:15 UTC+8 ⊕ `20260903T214501Z` 2026-09-04 05:45 UTC+8 等 347 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
+> 数据源：radar 快照并集（`20260903T224502Z` 2026-09-04 06:45 UTC+8 ⊕ `20260903T223001Z` 2026-09-04 06:30 UTC+8 ⊕ `20260903T221501Z` 2026-09-04 06:15 UTC+8 等 348 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
 > 呈现：分组列表（状态 · 名称 · ★星标 · 一句话说明），不使用大表格；〔📦〕= 整合包（根 dsh.bundle / workspaces 多子包）。
 
 ## 统一度量衡
 
 **判定维度**（运行级四档；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：
 
-- 全量判定 17696（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12022）/ `[不兼容]`（3465）/ `[待定]`（2055）
-- 已定位明细 9108（本列表展示口径，另 8588 条监测/未定位的判定暂不展示）：`[可用]`（6176）/ `[不兼容]`（1719）/ `[待定]`（1104）/ `[未测]`（109）
+- 全量判定 17696（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12022）/ `[不兼容]`（3462）/ `[待定]`（2058）
+- 已定位明细 9108（本列表展示口径，另 8588 条监测/未定位的判定暂不展示）：`[可用]`（6176）/ `[不兼容]`（1716）/ `[待定]`（1107）/ `[未测]`（109）
 
 **定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：
 
@@ -5655,6 +5655,7 @@
 - `[待定]` [yhfgyyf-dsh-auto-preset-router](https://github.com/yhfgyyf/dsh-auto-preset-router) ★2 — Routes the first DSH prompt to Standard, PTC, Minimal, or Cordis with DeepSeek V4 Flash.
 - `[可用]` [yyyyolo7a79-sketch-dsh-auto-and-safety](https://github.com/yyyyolo7a79-sketch/dsh-auto-and-safety) ★2 — DSH auto-and-safety permission preset: full file access but no delete without user approval
 - `[待定]` [dsh-plugin-token-billing](https://github.com/yzgwowcn/dsh-plugin-token-billing) ★2 — DeepSeek Harness Token 计费插件：会话/全账户 token 用量与费用、账户余额、右侧用量仪表盘（时段消费、模型花费、热力图、余额曲线）
+- `[待定]` [dsh-SkillsManagePlugins](https://github.com/z-col/dsh-SkillsManagePlugins) ★2 — DSH Skills 可视化管理器：在 DSH Web 界面可视化查看、编辑、创建、删除 Skills（用户级 ~/.dsh/skills 与项目级 .dsh/skills）
 - `[可用]` [zhangdong456-dsh-prompt-presets](https://github.com/zhangdong456/dsh-prompt-presets) ★2 — Prompt Presets to manage your library
 - `[可用]` [zhourenke-dsh-agent-rate-limit](https://github.com/zhourenke/dsh-agent-rate-limit) ★2 — —
 - `[可用]` [zixin947-dsh-compact](https://github.com/zixin947/dsh-compact) ★2 — DeepSeek Harness 上下文自动压缩、手动压缩与溢出恢复插件
@@ -7053,7 +7054,6 @@
 - `[不兼容]` [wangcong1137-hash-dsh-geoserver](https://github.com/wangcong1137-hash/dsh-geoserver) ★2 — DSH 平台 GeoServer 交互插件，实现可视化配置与会话内地图图像输出
 - `[不兼容]` [dsh-usage-widget](https://github.com/xinmo114514/dsh-usage-widget) ★2 — DSH (DeepSeek Harness) 持久化 Web 插件：Token 用量统计悬浮窗 —— 可拖动窗口/圆点、曲线/热力图、总 tokens 大数字；宿主半聚合会话日志并提供 /usage/api/snapsh
 - `[不兼容]` [dsh-plugin-meta-memory](https://github.com/YYTbit/dsh-plugin-meta-memory) ★2 — Structured long-term memory system for DeepSeek Harness
-- `[不兼容]` [dsh-SkillsManagePlugins](https://github.com/z-col/dsh-SkillsManagePlugins) ★2 — DSH Skills 可视化管理器：在 DSH Web 界面可视化查看、编辑、创建、删除 Skills（用户级 ~/.dsh/skills 与项目级 .dsh/skills）
 - `[不兼容]` [zeropointnine-dsh-compact-and-branch](https://github.com/zeropointnine/dsh-compact-and-branch) ★2 — Compact a session and continue the work in a new one
 - `[不兼容]` [zmh2000829-dsh-memory-graph](https://github.com/zmh2000829/dsh-memory-graph) ★2 — Local-first long-term memory and temporal knowledge graph plugin for DeepSeek Harness
 - `[不兼容]` [21hbguo-dsh-agent-board](https://github.com/21hbguo/dsh-agent-board) ★1 — DSH (DeepSeek Harness) Agent 实时看板：主 agent 与子代理树形层级监控 + 停滞自动告警 + SSE 实时推送，点击直达会话
@@ -7496,7 +7496,7 @@
 - `[可用]` [DeepSeek-harness-wecom](https://github.com/sliverp/DeepSeek-harness-wecom) ★5 — WeCom AI Bot text and image bridge for DeepSeek Harness
 - `[可用]` [dsh-email](https://github.com/STARDUSTLC666/dsh-email) ★5 — DeepSeek Harness 邮件插件：email_list/read/search/send/folders/attachment 六工具，内置 QQ/163/126/新浪/阿里/Gmail/Outlook/iCl
 - `[待定]` [dsh-feishu-bridge](https://github.com/wz-heng/dsh-feishu-bridge) ★5 — Fail-closed Feishu (Lark) channel bridge for DeepSeek Harness (dsh) — chat with a bot, get agent turns back
-- `[待定]` [dsh-feishu-plugin](https://github.com/yangzhaofeng496/dsh-feishu-plugin) ★5 — Feishu bot bridge plugin for DeepSeek Harness
+- `[可用]` [dsh-feishu-plugin](https://github.com/yangzhaofeng496/dsh-feishu-plugin) ★5 — Feishu bot bridge plugin for DeepSeek Harness
 - `[可用]` [yuunnn-dsh-on-imessage](https://github.com/yuunnn/dsh-on-imessage) ★5 — —
 - `[待定]` [534119219-dsh-messaging](https://github.com/534119219/dsh-messaging) ★4 — DSH 消息平台插件（messaging-core）：27 个消息渠道统一接入，移植自 hermes-agent
 - `[可用]` [br1nosense-dsh-wxauto-plugin](https://github.com/br1nosense/dsh-wxauto-plugin) ★4 — dsh-wxauto-plugin — DSH 微信汇报与监听插件
@@ -7514,6 +7514,7 @@
 - `[可用]` [dsh-slack](https://github.com/STARDUSTLC666/dsh-slack) ★4 — DeepSeek Harness Slack 插件：slack_notify/channels/inbox/reply 四工具，Socket Mode 免公网回调收消息，收件箱队列 + 线程回复，支持自定义 slackA
 - `[可用]` [tangwenhao616-netizen-dsh-clawbot](https://github.com/tangwenhao616-netizen/dsh-clawbot) ★4 — 微信 ClawBot 通道插件增强版：多会话、斜杠命令、每会话模型、并发修复
 - `[可用]` [dsh-notify-sound](https://github.com/xxxxxxxyu/dsh-notify-sound) ★4 — DSH (DeepSeek Harness) web plugin: plays a sound when the agent finishes replying (turn/end)
+- `[待定]` [DSH-telegram](https://github.com/yuko0331/DSH-telegram) ★4 — 通过 Telegram 私聊远程使用和查看 DeepSeek Harness
 - `[可用]` [1052326311-dsh-plan-lattice](https://github.com/1052326311/dsh-plan-lattice) ★3 — Execution-time drift firewall for long-running DeepSeek Harness agents
 - `[可用]` [173787247-dsh-wsl-open](https://github.com/173787247/dsh-wsl-open) ★3 — DeepSeek Harness plugin: open WSL Linux paths from chat in Windows.
 - `[可用]` [893413974-bit-dsh-setting-restart](https://github.com/893413974-bit/dsh-setting-restart) ★3 — One-click restart of the DSH service from Settings → General
@@ -7967,7 +7968,6 @@
 - `[不兼容]` [dsh-testgen](https://github.com/bujue600-arch/dsh-testgen) ★4 — Automated unit-test generation for DeepSeek Harness: /testgen command + generate_tests tool that scaffold, run
 - `[不兼容]` [shrekcg-dsh-im-channel](https://github.com/shrekcg/dsh-lark-bridge) ★4 — 将 DeepSeek Harness 接入飞书/Lark 的双向通道：持久会话、群聊、流式卡片、40 个飞书 MCP 工具
 - `[不兼容]` [wang-22-code-dsh-qqbot-bridge](https://github.com/wang-22-code/dsh-qqbot-bridge) ★4 — 让 DeepSeek Harness（DSH）住进 QQ：基于腾讯官方 Bot API，支持私聊白名单、持久会话、模型切换与远程权限审批
-- `[不兼容]` [DSH-telegram](https://github.com/yuko0331/DSH-telegram) ★4 — 通过 Telegram 私聊远程使用和查看 DeepSeek Harness
 - `[不兼容]` [zp-home-dsh-weixin-clawbot](https://github.com/zp-home/dsh-weixin-clawbot) ★4 — Phone-to-DSH control through Tencent's official Weixin ClawBot/iLink channel \| 基于腾讯官方微信 ClawBot/iLink 的 DSH 手机
 - `[不兼容]` [21hbguo-dsh-feishu-bridge-plugin](https://github.com/21hbguo/dsh-feishu-bridge-plugin) ★3 — 飞书机器人 ↔ DSH 对话桥：DSH 进程内 Cordis 插件，流式卡片 / 问答卡片 / 审批卡片 / 斜杠命令
 - `[不兼容]` [baisama-cloud-dsh-omni-bridge](https://github.com/baisama-cloud/dsh-omni-bridge) ★3 — DeepSeek Harness（DSH）多通道消息桥：将微信（ClawBot/iLink）、QQ和飞书（Lark）聊天消息路由给DSH代理，并将代理的回复反馈给发送方
@@ -11279,6 +11279,7 @@
 - `[可用]` [yibiner-dsh-plugin-list-plus](https://github.com/yibiner/dsh-plugin-list-plus) ★2 — Trust-tiered, collapsible plugin list for DeepSeek Harness Web Settings.
 - `[可用]` [dsh-failure-capsule](https://github.com/YiHarvest/dsh-failure-capsule) ★2 — Local-first failure evidence capsules for DeepSeek Harness sessions
 - `[可用]` [yiwufen-fin-trace](https://github.com/yiwufen/fin-trace) ★2 — —
+- `[待定]` [yjsoooooo-dsh-chrome](https://github.com/YJSoooooo/dsh-chrome) ★2 — —
 - `[可用]` [young-tim-dsh-llm-governor](https://github.com/young-tim/dsh-llm-governor) ★2 — Multi-model governance, routing, fallback, quota, and usage for DeepSeek Harness
 - `[可用]` [dsh-eyecare](https://github.com/Yummyxl/dsh-eyecare) ★2 — —
 - `[可用]` [dsh-vision-helper](https://github.com/Yuuz12/dsh-vision-helper) ★2 — DeepSeek Harness Vision Helper/DeepSeek Harness 视觉辅助方案
@@ -11792,7 +11793,7 @@
 - `[可用]` [yfzhou0904-dsh-plugin-gallery](https://github.com/yfzhou0904/dsh-plugin-gallery) ★1 — A personal gallery of plugins for DeepSeek Harness
 - `[可用]` [yidong-liu-dsh-live2d-widget](https://github.com/yidong-liu/dsh-live2d-widget) ★1 — DSH 客户端插件：Live2D 三月七看板娘挂件（@liuyidong/dsh-live2d-widget）
 - `[可用]` [yinfengwindy-dsh-plugin-shiori-role](https://github.com/YinFengWindy/dsh-plugin-shiori-role) ★1 — —
-- `[可用]` [dsh-plugin-greeter](https://github.com/YohtHill/dsh-plugin-greeter) ★1 — A DeepSeek Harness (dsh) plugin that greets you at the start of every session with varied wording, and remembe
+- `[待定]` [dsh-plugin-greeter](https://github.com/YohtHill/dsh-plugin-greeter) ★1 — A DeepSeek Harness (dsh) plugin that greets you at the start of every session with varied wording, and remembe
 - `[可用]` [yolotd-dsh-plugin-duwg](https://github.com/Yolotd/dsh-plugin-duwg) ★1 — —
 - `[待定]` [youkeq-mxl-dsh-plugins](https://github.com/youkeq/mxl-dsh-plugins) ★1 — deepseek harness Plugins
 - `[可用]` [young-ds1-cascade](https://github.com/young-ds1/cascade) ★1 — 一行命令让中国开发者用任何国产模型驱动任何 AI 编程工具 — 多供应商 AI 编程 Harness
@@ -16753,7 +16754,6 @@
 - `[不兼容]` [xiaoso456-dsh-tool-plus](https://github.com/xiaoso456/dsh-tool-plus) ★2 — DeepSeek Harness 基础工具增强：持久 bash、结构化 read、多模式 edit、原子 write、双引擎 grep/glob、图像直读，一个插件全覆盖
 - `[不兼容]` [xinyuehtx-dsh-plugin-hooks-ordering](https://github.com/xinyuehtx/dsh-plugin-hooks-ordering) ★2 — 为 deepseek harness 的 waterfall 和 serial 进行确定性 hooks 监听排序
 - `[不兼容]` [ycp424c-dsh-auto-fold-turn](https://github.com/ycp424c/dsh-auto-fold-turn) ★2 — —
-- `[不兼容]` [yjsoooooo-dsh-chrome](https://github.com/YJSoooooo/dsh-chrome) ★2 — —
 - `[不兼容]` [yuyolin-dsh-decision-log](https://github.com/yuyolin/dsh-decision-log) ★2 — —
 - `[不兼容]` [zfu691531-hash-dsh-realtime-voice](https://github.com/zfu691531-hash/dsh-realtime-voice) ★2 — Lightweight realtime ASR → DeepSeek Harness → TTS community plugin.
 - `[不兼容]` [zmh2000829-dsh-x-connect](https://github.com/zmh2000829/dsh-x-connect) ★2 — —
