@@ -1,14 +1,14 @@
 # 全量插件清单（统一四档口径）
 
-> 数据源：radar 快照并集（`20260903T074501Z` 2026-09-03 15:45 UTC+8 ⊕ `20260903T070001Z` 2026-09-03 15:00 UTC+8 ⊕ `20260903T064501Z` 2026-09-03 14:45 UTC+8 等 325 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
+> 数据源：radar 快照并集（`20260903T080001Z` 2026-09-03 16:00 UTC+8 ⊕ `20260903T074501Z` 2026-09-03 15:45 UTC+8 ⊕ `20260903T070001Z` 2026-09-03 15:00 UTC+8 等 326 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
 > 呈现：分组列表（状态 · 名称 · ★星标 · 一句话说明），不使用大表格；〔📦〕= 整合包（根 dsh.bundle / workspaces 多子包）。
 
 ## 统一度量衡
 
 **判定维度**（运行级四档；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：
 
-- 全量判定 17343（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（11765）/ `[不兼容]`（3427）/ `[待定]`（1998）
-- 已定位明细 8880（本列表展示口径，另 8463 条监测/未定位的判定暂不展示）：`[可用]`（5994）/ `[不兼容]`（1710）/ `[待定]`（1068）/ `[未测]`（108）
+- 全量判定 17343（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（11764）/ `[不兼容]`（3427）/ `[待定]`（1999）
+- 已定位明细 8880（本列表展示口径，另 8463 条监测/未定位的判定暂不展示）：`[可用]`（5993）/ `[不兼容]`（1710）/ `[待定]`（1069）/ `[未测]`（108）
 
 **定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：
 
@@ -10871,7 +10871,7 @@
 - `[待定]` [dsh-cost-tracker](https://github.com/yflmq001/dsh-cost-tracker) ★3 — Token cost tracking for DeepSeek Harness
 - `[可用]` [yihong89-dsh-usage-plugin](https://github.com/Yihong89/dsh-usage-plugin) ★3 — —
 - `[可用]` [dsh-zh-output](https://github.com/YKennen/dsh-zh-output) ★3 — DeepSeek Harness 中文输出插件：强制中文思考与输出的中文预设
-- `[可用]` [dsh-plugin-cost-tracker](https://github.com/YYTbit/dsh-plugin-cost-tracker) ★3 — Token cost tracker for DeepSeek Harness
+- `[待定]` [dsh-plugin-cost-tracker](https://github.com/YYTbit/dsh-plugin-cost-tracker) ★3 — Token cost tracker for DeepSeek Harness
 - `[可用]` [zelinw1-dsh-cosplay](https://github.com/ZelinW1/dsh-cosplay) ★3 — —
 - `[可用]` [zeng6125-rgb-dsh-llm-retry-settings](https://github.com/zeng6125-rgb/dsh-llm-retry-settings) ★3 — DSH 插件：LLM 自动重试设置卡片——调整重试次数与退避时间实时生效，可勾选额外可重试错误码（默认补入 INVALID_REQUEST：OpenAI thinking 模式 HTTP 400 自动重试）
 - `[可用]` [OpenFlowFrames](https://github.com/ZeroHackz/OpenFlowFrames) ★3 — —
