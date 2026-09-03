@@ -1,14 +1,14 @@
 # 全量插件清单（统一四档口径）
 
-> 数据源：radar 快照并集（`20260903T221501Z` 2026-09-04 06:15 UTC+8 ⊕ `20260903T214501Z` 2026-09-04 05:45 UTC+8 ⊕ `20260903T213001Z` 2026-09-04 05:30 UTC+8 等 346 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
+> 数据源：radar 快照并集（`20260903T223001Z` 2026-09-04 06:30 UTC+8 ⊕ `20260903T221501Z` 2026-09-04 06:15 UTC+8 ⊕ `20260903T214501Z` 2026-09-04 05:45 UTC+8 等 347 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
 > 呈现：分组列表（状态 · 名称 · ★星标 · 一句话说明），不使用大表格；〔📦〕= 整合包（根 dsh.bundle / workspaces 多子包）。
 
 ## 统一度量衡
 
 **判定维度**（运行级四档；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：
 
-- 全量判定 17696（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12021）/ `[不兼容]`（3466）/ `[待定]`（2055）
-- 已定位明细 9108（本列表展示口径，另 8588 条监测/未定位的判定暂不展示）：`[可用]`（6175）/ `[不兼容]`（1720）/ `[待定]`（1104）/ `[未测]`（109）
+- 全量判定 17696（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12022）/ `[不兼容]`（3465）/ `[待定]`（2055）
+- 已定位明细 9108（本列表展示口径，另 8588 条监测/未定位的判定暂不展示）：`[可用]`（6176）/ `[不兼容]`（1719）/ `[待定]`（1104）/ `[未测]`（109）
 
 **定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：
 
@@ -1169,7 +1169,7 @@
 - `[可用]` [xiaohj233-dsh-tavily-search-provider](https://github.com/xiaohj233/dsh-tavily-search-provider) ★2 — Tavily search provider for DeepSeek Harness with full search-control mapping, credential-backed key UI, and gu
 - `[可用]` [xiaxingtianxia2-glitch-dsh-auto-exit](https://github.com/xiaxingtianxia2-glitch/dsh-auto-exit) ★2 — DSH plugin: exit the CLI process automatically when the Web UI closes (equivalent to Ctrl+C)
 - `[可用]` [ximisi-dsh-quick-attach](https://github.com/ximisi/dsh-quick-attach) ★2 — —
-- `[待定]` [ds-web-ui](https://github.com/xing-shuyin/ds-web-ui) ★2 — My DeepSeek Harness Web UI
+- `[可用]` [ds-web-ui](https://github.com/xing-shuyin/ds-web-ui) ★2 — My DeepSeek Harness Web UI
 - `[可用]` [xswt442-cmd-dsh-instance-manager](https://github.com/xswt442-cmd/dsh-instance-manager) ★2 — DSH 常驻插件：侧边栏面板统一查看并管理本机的 dsh 实例 \| Sidebar panel to list and manage local dsh web instances
 - `[可用]` [xzyonline-dsh-chat-files](https://github.com/xzyonline/dsh-file-attachments) ★2 — Session-bound file attachments for DeepSeek Harness: drag, paste, or select files into the chat; the agent rea
 - `[可用]` [yafangwang9-dsh-voice-plugin](https://github.com/yafangwang9/dsh-voice-plugin) ★2 — Voice input plugin for DeepSeek Harness
@@ -8820,6 +8820,7 @@
 - `[可用]` [dsh-memento](https://github.com/PerryLink/dsh-memento) ★57 — Bounded, layered, approval-gated, auditable cross-session memory for DeepSeek Harness (capability seam: ctx.me
 - `[待定]` [pc2005-cloud-dsh-pet](https://github.com/PC2005-cloud/dsh-pet) ★51 — —
 - `[可用]` [liyupi-dsh-kun-like-pet](https://github.com/liyupi/dsh-kun-like-pet) ★43 — Kun Like 桌宠 —— DeepSeek Harness 桌面宠物插件：右下角小坤宠随 Agent 工作状态切换 9 种动作，任务完成播放「你干嘛~哎哟」
+- `[待定]` [xiaoshihou514-dsh-desktop-pet](https://github.com/xiaoshihou514/dsh-desktop-pet) ★32 — DeepSeek Harness：鲸鱼娘桌宠！
 - `[可用]` [awu12277-dsh-stock-watch](https://github.com/Awu12277/dsh-stock-watch) ★26 — —
 - `[待定]` [deepseek-pet](https://github.com/keleus/deepseek-pet) ★25 — 在你的deepseek-harness上养一只吃白饭的大蓝鲸
 - `[可用]` [dsh-emoji](https://github.com/hellodigua/dsh-emoji) ★19 — 让 AI 回复加入自定义表情，支持Bilibili、小红书、贴吧、知乎等多平台表情包，或自定义表情
@@ -9196,7 +9197,6 @@
 - `[空仓监测]` **dsh-pet-web** — GitHub 无此仓库，判定暂不展示
 - `[空仓监测]` **dsh-sfw** — GitHub 无此仓库，判定暂不展示
 - `[歧义监测]` **dsh-pets** — 同名多仓，判定暂不展示
-- `[不兼容]` [xiaoshihou514-dsh-desktop-pet](https://github.com/xiaoshihou514/dsh-desktop-pet) ★32 — DeepSeek Harness：鲸鱼娘桌宠！
 - `[不兼容]` [dsh-stock-market](https://github.com/AnacondaKC/dsh-stock-market) ★11 — 有效解决了写代码的时候账户不能同时亏钱的BUG
 - `[不兼容]` [dsh-pet](https://github.com/FlytoMAYDAY80/dsh-pet) ★9 — 🐋 DSH 有声桌宠：悬浮桌面的 DeepSeek 小鲸鱼，不打开 DSH 也能实时感知会话状态（需要确认/工作中/完成/空闲/离线），支持音效提醒与零代码定制素材
 - `[不兼容]` [rotifer-protocol-rotifer-playground](https://github.com/rotifer-protocol/rotifer-playground) ★6 — Local dev environment — Rust core + TypeScript CLI for gene development & Arena competition
