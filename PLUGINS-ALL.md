@@ -1,14 +1,14 @@
 # 全量插件清单（统一四档口径）
 
-> 数据源：radar 快照并集（`20260903T094501Z` 2026-09-03 17:45 UTC+8 ⊕ `20260903T090001Z` 2026-09-03 17:00 UTC+8 ⊕ `20260903T080001Z` 2026-09-03 16:00 UTC+8 等 328 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
+> 数据源：radar 快照并集（`20260903T124501Z` 2026-09-03 20:45 UTC+8 ⊕ `20260903T094501Z` 2026-09-03 17:45 UTC+8 ⊕ `20260903T090001Z` 2026-09-03 17:00 UTC+8 等 329 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
 > 呈现：分组列表（状态 · 名称 · ★星标 · 一句话说明），不使用大表格；〔📦〕= 整合包（根 dsh.bundle / workspaces 多子包）。
 
 ## 统一度量衡
 
 **判定维度**（运行级四档；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：
 
-- 全量判定 17343（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（11764）/ `[不兼容]`（3427）/ `[待定]`（1999）
-- 已定位明细 8880（本列表展示口径，另 8463 条监测/未定位的判定暂不展示）：`[可用]`（5993）/ `[不兼容]`（1710）/ `[待定]`（1069）/ `[未测]`（108）
+- 全量判定 17343（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（11763）/ `[不兼容]`（3428）/ `[待定]`（1999）
+- 已定位明细 8880（本列表展示口径，另 8463 条监测/未定位的判定暂不展示）：`[可用]`（5992）/ `[不兼容]`（1711）/ `[待定]`（1069）/ `[未测]`（108）
 
 **定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：
 
@@ -1172,7 +1172,7 @@
 - `[可用]` [silk-background](https://github.com/z21for99/silk-background) ★2 — DSH Web GUI 客户端插件：WebGL Silk 丝绸动态背景 + 全站玻璃化皮肤（官方主题 token 覆盖，零依赖） \| WebGL silk shader background & glassmorphis
 - `[可用]` [zenghuizhu69-hub-dsh-skin-blue-whale](https://github.com/zenghuizhu69-hub/dsh-skin-blue-whale) ★2 — dsh Web UI skin: DeepSeek blue-whale theme with official gradient and leaping whale art (dsh plugin)
 - `[待定]` [zengweicheng666-dsh-svn-tools](https://github.com/zengweicheng666/dsh-svn-tools) ★2 — SVN (Subversion) tools + sidebar UI for DeepSeek Harness: 33 agent tools with UTF-8 Chinese commit logs, plus
-- `[可用]` [dsh-security-suite](https://github.com/Zenquiem/dsh-security-suite) ★2 — Security assessment workflows for DeepSeek Harness
+- `[待定]` [dsh-security-suite](https://github.com/Zenquiem/dsh-security-suite) ★2 — Security assessment workflows for DeepSeek Harness
 - `[可用]` [zhang-jiazhi-dsh-stats-panel](https://github.com/zhang-jiazhi/dsh-stats-panel) ★2 — DeepSeek Harness Token 用量统计面板：模型/渠道聚合、余额配额、精确归档与费用估算
 - `[可用]` [zhenghaoyang24-obsidian-plugin-deepshian](https://github.com/zhenghaoyang24/obsidian-plugin-deepshian) ★2 — Sidebar AI chat powered by the local DeepSeek Harness (dsh): streaming replies, tool calls, and real vault fil
 - `[可用]` [zhuifengqug-dsh-adaptive-reasoning](https://github.com/zhuifengqug/dsh-adaptive-reasoning) ★2 — 面向 DeepSeek Harness Web GUI 的、基于模型能力的推理档位滑块
@@ -3802,7 +3802,6 @@
 - `[待定]` [ywsldxk-dsh-color-preview](https://github.com/ywsldxk/dsh-color-preview) ★1 — DeepSeek Harness 颜色预览插件：按需预览对话中提到的十六进制颜色
 - `[待定]` [dsh-plugin-code-review](https://github.com/YYTbit/dsh-plugin-code-review) ★1 — Structured code review skill for DeepSeek Harness
 - `[可用]` [zaizaizhao-dsh-branchmark](https://github.com/zaizaizhao/dsh-branchmark) ★1 — While vibe coding, save an answer you may need later, use Side Chat for a question that suddenly comes up, or
-- `[待定]` [dsh-provider-billing](https://github.com/ZeroingIn/dsh-provider-billing) ★1 — DeepSeek Harness plugin: provider account balance inside each Models settings ro
 - `[可用]` [zhoupengyun572-cell-dsh-hana-research](https://github.com/zhoupengyun572-cell/dsh-hana-research) ★1 — A local literature review, PDF annotation, evidence synthesis, and research notes workbench for DeepSeek Harne
 - `[可用]` [zhuoxuanliu53-svg-dsh-plugin-market](https://github.com/zhuoxuanliu53-svg/dsh-plugin-market) ★1 — 可视化插件市场：双源(curated + GitHub topic)浏览/搜索/排序/关注/一键安装/更新/卸载/自动更新/热禁用/组合包导入导出 (DSH bundle plugin)
 - `[可用]` [zhuzhujunandy-dsh-model-router](https://github.com/zhuzhujunandy/dsh-model-router) ★1 — Tiered model routing plugin for DeepSeek Harness (DSH): route delegated work to fast/medium/heavy model tiers〔📦〕
@@ -4864,6 +4863,7 @@
 - `[不兼容]` [yoke233-omdsh](https://github.com/yoke233/omdsh) ★1 — 一个dsh的终端样式插件，灵感来自Oh My Pi
 - `[不兼容]` [yuan-source-666-dsh-github-manager](https://github.com/yuan-source-666/dsh-github-manager) ★1 — GitHub 仓库 AI 自动管理通道插件 (DeepSeek Harness community bundle): 27 个工具（仓库/Issue/PR/分支/文件/标签/话题/Tags/Releases/搜索）+ W
 - `[不兼容]` [yushuosun-dsh-cost-governor](https://github.com/yushuosun/dsh-cost-governor) ★1 — Cost governance & budget enforcement for DeepSeek Harness: per-model token-cost accounting, multi-provider pri
+- `[不兼容]` [dsh-provider-billing](https://github.com/ZeroingIn/dsh-provider-billing) ★1 — DeepSeek Harness plugin: provider account balance inside each Models settings ro
 - `[不兼容]` [zhangyqjiaoshou-oss-dsh-model-sync](https://github.com/zhangyqjiaoshou-oss/dsh-model-sync) ★1 — One-click / auto model sync for DeepSeek Harness providers
 - `[不兼容]` [zhoushuoshi-code-dsh-live](https://github.com/zhoushuoshi-code/dsh-live) ★1 — DSH Live — Your coding agent calls you when it needs you
 - `[不兼容]` [sidesight](https://github.com/ZhuXinAI/sidesight) ★1 — CLI-first vision sidecar for text-only coding agents
