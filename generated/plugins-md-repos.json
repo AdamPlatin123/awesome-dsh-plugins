@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-31T13:44:48+00:00",
+  "generated_at": "2026-09-03T17:03:32+00:00",
   "source": "PLUGINS.md",
-  "count": 258,
+  "count": 261,
   "repos": [
     "1na-ko/dsh-hdc-bridge",
     "263311487-ux/dsh-verify",
@@ -116,6 +116,7 @@
     "STARDUSTLC666/dsh-rss",
     "STARDUSTLC666/dsh-slack",
     "STARDUSTLC666/dsh-sql",
+    "STARDUSTLC666/dsh-suite",
     "STARDUSTLC666/dsh-voice",
     "Scorp1o117/dsh-enhancement-suite",
     "Scorp1o117/dsh-plugin-marketplace",
@@ -258,8 +259,10 @@
     "zh667/TokenLedger",
     "zhang66633/dsh-pixel-ui",
     "zhang66633/dsh-plugin-installer",
+    "zhengjy01/dsh-qqbot-panel",
     "zhengjy01/dsh-task-dispatcher",
     "zhengjy01/dsh-vercel-mcp",
+    "zhengjy01/dsh-wps",
     "zhouwei713/dsh-daily-kit"
   ]
 }
