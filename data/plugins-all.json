@@ -1,7 +1,14 @@
 {
  "schema": "dsh-radar/v1",
- "generated_at": "2026-09-03T13:18:21Z",
+ "generated_at": "2026-09-03T17:31:45Z",
  "plugins": [
+  {
+   "repo": "zhengjy01/dsh-wps",
+   "name": "dsh-wps",
+   "verdict": "untested",
+   "stars": null,
+   "desc": "WPS / 金山文档云文档集成（官方 SkillHub MCP，mcp__wps__* 工具）"
+  },
   {
    "repo": "perrylink/dsh-fast",
    "name": "dsh-fast",
@@ -29,6 +36,13 @@
    "verdict": "untested",
    "stars": null,
    "desc": "会话消息级全文检索浏览器：FTS5 trigram 按消息检索（用户/助手/系统注入/工具，可按类型筛选），fork/续接会话结果自动去重，只读上下文预览自动滚动定位、一键跳转真实会话，增量/全量重建索引 + 健康检查，中英双语跟随 Host locale"
+  },
+  {
+   "repo": "stardustlc666/dsh-suite",
+   "name": "dsh-suite (STARDUSTLC666)",
+   "verdict": "untested",
+   "stars": null,
+   "desc": "与 18 个组件配套的组合补丁：统一注入办公流、媒体工坊、DevOps、通知与极简 PTC 预设的默认配置；组件需作为直接依赖一并安装；npm `@stardustlc/dsh-suite`"
   },
   {
    "repo": "perrylink/dsh-local-ai",
