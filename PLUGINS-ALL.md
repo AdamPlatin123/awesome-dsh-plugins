@@ -1,13 +1,13 @@
 # 全量插件清单（统一四档口径）
 
-> 数据源：radar 快照并集（`20260903T001501Z` 2026-09-03 08:15 UTC+8 ⊕ `20260903T000003Z` 2026-09-03 08:00 UTC+8 ⊕ `20260902T234501Z` 2026-09-03 07:45 UTC+8 等 316 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
+> 数据源：radar 快照并集（`20260903T003001Z` 2026-09-03 08:30 UTC+8 ⊕ `20260903T001501Z` 2026-09-03 08:15 UTC+8 ⊕ `20260903T000003Z` 2026-09-03 08:00 UTC+8 等 317 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
 > 呈现：分组列表（状态 · 名称 · ★星标 · 一句话说明），不使用大表格；〔📦〕= 整合包（根 dsh.bundle / workspaces 多子包）。
 
 ## 统一度量衡
 
 **判定维度**（运行级四档；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：
 
-- 全量判定 17329（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（11718）/ `[不兼容]`（3456）/ `[待定]`（2002）
+- 全量判定 17329（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（11718）/ `[不兼容]`（3455）/ `[待定]`（2003）
 - 已定位明细 8866（本列表展示口径，另 8463 条监测/未定位的判定暂不展示）：`[可用]`（5948）/ `[不兼容]`（1740）/ `[待定]`（1070）/ `[未测]`（108）
 
 **定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：
@@ -5463,7 +5463,6 @@
 - `[未定位]` **arch3rpro-dsh-skills** — 占位待复核，判定暂不展示
 - `[未定位]` **arthu77-dsh-memory** — 占位待复核，判定暂不展示
 - `[未定位]` **artificialwhale-session-reader-plugin** — 占位待复核，判定暂不展示
-- `[未定位]` **asaiuta-reverse-workbench-skill** — 占位待复核，判定暂不展示
 - `[未定位]` **asher-2000-dsh-memory-connect** — 占位待复核，判定暂不展示
 - `[未定位]` **asteroid0449-dsh-agent-plugin-research** — 占位待复核，判定暂不展示
 - `[未定位]` **astroliao-dsh-memory-core** — 占位待复核，判定暂不展示
@@ -6632,6 +6631,7 @@
 - `[未定位]` **anweat-dsh-context-console** — 占位待复核，判定暂不展示
 - `[未定位]` **aqsk-blg-dsh-memory** — 占位待复核，判定暂不展示
 - `[未定位]` **arkfishinglab-dsh-agent-skill-manager** — 占位待复核，判定暂不展示
+- `[未定位]` **asaiuta-reverse-workbench-skill** — 占位待复核，判定暂不展示
 - `[不兼容]` [autonomous-ai-deepseek-harness-cli](https://github.com/autonomous-ai/deepseek-harness-cli) ★0 — —
 - `[不兼容]` [avaritiachaos-dsh-plugin-memory](https://github.com/avaritiachaos/dsh-plugin-memory) ★0 — —
 - `[未定位]` **bailong-hakuryu-dsh-engineering-control-plane** — 占位待复核，判定暂不展示
@@ -11950,7 +11950,9 @@
 - `[未定位]` **cavan-ou-hermes-dsh-collab** — 占位待复核，判定暂不展示
 - `[未定位]` **cckyros-goal-acceptance** — 占位待复核，判定暂不展示
 - `[未定位]` **ccll-dsh-activity-pane** — 占位待复核，判定暂不展示
+- `[未定位]` **ccr-wer-dsh-dolphin-security** — 占位待复核，判定暂不展示
 - `[未定位]` **cczzyy-cn-c-vision** — 占位待复核，判定暂不展示
+- `[未定位]` **cdezt-better-basicfun** — 占位待复核，判定暂不展示
 - `[未定位]` **ceilcelia-dsh-eli-mode** — 占位待复核，判定暂不展示
 - `[未定位]` **centaurea5547196-dsh-page-zoom** — 占位待复核，判定暂不展示
 - `[未定位]` **cerbur-clutch-dsh** — 占位待复核，判定暂不展示
@@ -12902,7 +12904,6 @@
 - `[未定位]` **kuangre123-dsh-clipboard-history** — 占位待复核，判定暂不展示
 - `[未定位]` **kudanen-dsh-background** — 占位待复核，判定暂不展示
 - `[未定位]` **kuma-loong-dsh-llm-sampling** — 占位待复核，判定暂不展示
-- `[未定位]` **kumanana66-dsh-automation** — 占位待复核，判定暂不展示
 - `[未定位]` **kumarzx-kur-compact-trigger** — 占位待复核，判定暂不展示
 - `[可用]` [kungfu-systems-dsh-kungfu](https://github.com/kungfu-systems/dsh-kungfu) ★0 — Typed, read-only DeepSeek Harness tools for installed Kungfu Projects and Work.
 - `[未定位]` **kunting0701-dsh-aurora-bg** — 占位待复核，判定暂不展示
@@ -13056,6 +13057,7 @@
 - `[未定位]` **lodyai-acp-extension-dsh** — 占位待复核，判定暂不展示
 - `[未定位]` **loeanxi-dsh-injection-guard** — 占位待复核，判定暂不展示
 - `[未定位]` **log-li-dsh-automode** — 占位待复核，判定暂不展示
+- `[未定位]` **lohaslee-dsh-super-pm** — 占位待复核，判定暂不展示
 - `[未定位]` **lokic7123-star-dsh-route-resilience** — 占位待复核，判定暂不展示
 - `[未定位]` **lokiggo-dsh-tools** — 占位待复核，判定暂不展示
 - `[未定位]` **longfuxiaofeng-dsh-task-reminder** — 占位待复核，判定暂不展示
@@ -16573,8 +16575,6 @@
 - `[未定位]` **carvin94-dsh-router** — 占位待复核，判定暂不展示
 - `[未定位]` **cayan0x-lume** — 占位待复核，判定暂不展示
 - `[未定位]` **ccch1mneyyy-dsh-auth** — 占位待复核，判定暂不展示
-- `[未定位]` **ccr-wer-dsh-dolphin-security** — 占位待复核，判定暂不展示
-- `[未定位]` **cdezt-better-basicfun** — 占位待复核，判定暂不展示
 - `[未定位]` **ch4acko3-the-binding-of-dsh** — 占位待复核，判定暂不展示
 - `[未定位]` **chael-chael-dsh-reference-anything** — 占位待复核，判定暂不展示
 - `[未定位]` **chammoon-dsh-web-enterprise** — 占位待复核，判定暂不展示
@@ -16825,6 +16825,7 @@
 - `[未定位]` **kkkneko-dsh-search-enhance** — 占位待复核，判定暂不展示
 - `[未定位]` **konanzheng-dsh-timeline** — 占位待复核，判定暂不展示
 - `[不兼容]` [kongjianguan-dsh-tokstat](https://github.com/kongjianguan/dsh-tokstat) ★0 — DSH usage & performance statistics plugin + TUI (tokens / TTFT / TPS / cost)
+- `[未定位]` **kumanana66-dsh-automation** — 占位待复核，判定暂不展示
 - `[未定位]` **kurekaruna-dsh-open-folder** — 占位待复核，判定暂不展示
 - `[未定位]` **kurekaruna-dsh-show-image** — 占位待复核，判定暂不展示
 - `[未定位]` **lambdajoker-deepseek-harness-core** — 占位待复核，判定暂不展示
@@ -16874,7 +16875,6 @@
 - `[未定位]` **lmst2-dsh-asc** — 占位待复核，判定暂不展示
 - `[未定位]` **lnetrit-alt-dsh-system-control** — 占位待复核，判定暂不展示
 - `[未定位]` **logandoo-vibeweaver-dsh** — 占位待复核，判定暂不展示
-- `[未定位]` **lohaslee-dsh-super-pm** — 占位待复核，判定暂不展示
 - `[未定位]` **lovezi0-dsh-model-extension** — 占位待复核，判定暂不展示
 - `[未定位]` **lrplrplrp-dsh-live2d** — 占位待复核，判定暂不展示
 - `[未定位]` **lsls-kid-dsh-tasklist** — 占位待复核，判定暂不展示
