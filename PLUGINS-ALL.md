@@ -1,14 +1,14 @@
 # 全量插件清单（统一四档口径）
 
-> 数据源：radar 快照并集（`20260904T061501Z` 2026-09-04 14:15 UTC+8 ⊕ `20260904T060001Z` 2026-09-04 14:00 UTC+8 ⊕ `20260904T054501Z` 2026-09-04 13:45 UTC+8 等 376 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
+> 数据源：radar 快照并集（`20260904T063001Z` 2026-09-04 14:30 UTC+8 ⊕ `20260904T061501Z` 2026-09-04 14:15 UTC+8 ⊕ `20260904T060001Z` 2026-09-04 14:00 UTC+8 等 377 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
 > 呈现：分组列表（状态 · 名称 · ★星标 · 一句话说明），不使用大表格；〔📦〕= 整合包（根 dsh.bundle / workspaces 多子包）。
 
 ## 统一度量衡
 
 **判定维度**（运行级四档；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：
 
-- 全量判定 17698（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12024）/ `[不兼容]`（3401）/ `[待定]`（2119）
-- 已定位明细 9110（本列表展示口径，另 8588 条监测/未定位的判定暂不展示）：`[可用]`（6171）/ `[不兼容]`（1694）/ `[待定]`（1136）/ `[未测]`（109）
+- 全量判定 17698（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12023）/ `[不兼容]`（3399）/ `[待定]`（2122）
+- 已定位明细 9110（本列表展示口径，另 8588 条监测/未定位的判定暂不展示）：`[可用]`（6171）/ `[不兼容]`（1693）/ `[待定]`（1137）/ `[未测]`（109）
 
 **定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：
 
@@ -4426,11 +4426,11 @@
 - `[可用]` [wenbuer-dsh-readme-writer](https://github.com/wenbuer/dsh-readme-writer) ★0 — 一个给 DeepSeek Harness（dsh）用的 Agent Skill，负责写 / 优化 GitHub 项目 README.md
 - `[待定]` [whaojie797-design-diagram-drift](https://github.com/whaojie797-design/diagram-drift) ★0 — Detect drift between a Mermaid architecture diagram and the codebase it describes
 - `[待定]` [whaojie797-design-skill-sentry](https://github.com/whaojie797-design/skill-sentry) ★0 — Static, local, explainable pre-install security audit for Agent Skills
-- `[未定位]` **whiteplusms-dsh-git-graph** — 占位待复核，判定暂不展示
 - `[未定位]` **windypro-rourou-dsh-code-studio** — 占位待复核，判定暂不展示
 - `[未定位]` **wine-red-dsh-codex-timeline** — 占位待复核，判定暂不展示
 - `[未定位]` **wjnct55555-dsh-web-preview-float** — 占位待复核，判定暂不展示
 - `[未定位]` **wnjxyk-dsh-codex-oauth** — 占位待复核，判定暂不展示
+- `[未定位]` **wongzexu-dsh-git-status** — 占位待复核，判定暂不展示
 - `[未定位]` **woo-woo-waf-novelcode-dsh** — 占位待复核，判定暂不展示
 - `[未定位]` **writecasually-dsh-git** — 占位待复核，判定暂不展示
 - `[未定位]` **writecasually-dsh-opencode-go-models** — 占位待复核，判定暂不展示
@@ -5115,13 +5115,13 @@
 - `[未定位]` **vladimir-kryshchenko-dsh-route-fence-linter** — 占位待复核，判定暂不展示
 - `[不兼容]` [wanghaonan3333-web-dsh-idea-jar](https://github.com/wanghaonan3333-web/dsh-idea-jar) ★0 — A floating, persistent creative idea jar for DeepSeek Harness Web.
 - `[未定位]` **wanghaoyihaoyi-dsh-git** — 占位待复核，判定暂不展示
+- `[未定位]` **whiteplusms-dsh-git-graph** — 占位待复核，判定暂不展示
 - `[未定位]` **wilson-lai-ab-dsh-idea-style** — 占位待复核，判定暂不展示
 - `[不兼容]` [windygo123-dsh-see-world](https://github.com/windygo123/dsh-see-world) ★0 — DSH plugin: decide WHEN to search the web, enforce search-first answers, and stay out of the way for local tas
 - `[不兼容]` [winyh-dsh-idea](https://github.com/winyh/dsh-idea) ★0 — dsh-idea 是一个面向外部机会、市场变化和真实需求发现的 DeepSeek Harness 插件包
 - `[未定位]` **wm-coder-custom-first-control-prompt** — 占位待复核，判定暂不展示
 - `[未定位]` **wode25500-dsh-codex** — 占位待复核，判定暂不展示
 - `[未定位]` **wolffycode-deepseek-harness-plugin** — 占位待复核，判定暂不展示
-- `[未定位]` **wongzexu-dsh-git-status** — 占位待复核，判定暂不展示
 - `[不兼容]` [wwumit-dsh-office](https://github.com/wwumit/dsh-office) ★0 — Office efficiency skill hub provider for DeepSeek Harness (excel2insights, sum2slides-pro)
 - `[不兼容]` [wwwwwald-dsh-story](https://github.com/wwwwwald/dsh-story) ★0 — One prompt to cinematic story
 - `[不兼容]` [wyb587285-dot-git-ai-tracker](https://github.com/wyb587285-dot/git-ai-tracker) ★0 — GitHub AI repo tracker: star ratings, growth leaderboard, Markdown reports and web dashboard.
@@ -11766,6 +11766,7 @@
 - `[可用]` [wangzhishou-onebox-dsh-bridge](https://github.com/wangzhishou/onebox-dsh-bridge) ★1 — —
 - `[可用]` [water2004-dsh-liang-transformer-vote](https://github.com/water2004/dsh-liang-transformer-vote) ★1 — DeepSeek Harness Web plugin for 滑动变祖器 voting, scores, and trends.
 - `[待定]` [wc772-dsh-minimal](https://github.com/wc772/dsh-minimal) ★1 — DSH最小化版本可用
+- `[待定]` [wepar1212-dsh-wsl-workspace](https://github.com/wepar1212/dsh-wsl-workspace) ★1 — WSL workspace picker bundle for DeepSeek Harness
 - `[待定]` [whaojie797-design-novera-ai-pipeline](https://github.com/whaojie797-design/Novera-AI-pipeline) ★1 — —
 - `[可用]` [whyitsy-dsh-plugins](https://github.com/whyitsy/dsh-plugins) ★1 — dsh的小功能插件，以@kakoyo前缀scope发布
 - `[可用]` [whyself-dsh-knowledge-qa-plugin](https://github.com/whyself/dsh-knowledge-qa-plugin) ★1 — Standalone NOVA knowledge QA bundle for DeepSeek Harness
@@ -14287,6 +14288,7 @@
 - `[未定位]` **wenaixi-dsh-superpower** — 占位待复核，判定暂不展示
 - `[可用]` [wendyltan-dsh-ops-console](https://github.com/wendyltan/dsh-ops-console) ★0 — deepseek harness 轻量运维控制台
 - `[未定位]` **wenhongpan-dsh-projects** — 占位待复核，判定暂不展示
+- `[未定位]` **wensincai-btw4deepseekharness** — 占位待复核，判定暂不展示
 - `[未定位]` **wep-56-dsh-launcher** — 占位待复核，判定暂不展示
 - `[未定位]` **wesleyjay-dsh-weather** — 占位待复核，判定暂不展示
 - `[未定位]` **wfminerva-dsh-turn-cost** — 占位待复核，判定暂不展示
@@ -16822,7 +16824,6 @@
 - `[不兼容]` [wangyaominde-dsh-llm-grok-oauth](https://github.com/wangyaominde/dsh-llm-grok-oauth) ★1 — Grok subscription OAuth plugin for DeepSeek Harness: one-click login in Settings → Models
 - `[不兼容]` [wannanbigpig-dsh-usage-stats](https://github.com/wannanbigpig/dsh-usage-stats) ★1 — DeepSeek Harness web 用量与计费插件：官方余额、Token 用量、贡献热图与按小时计费统计
 - `[不兼容]` [weike-zhang-dsh-svg-motion](https://github.com/weike-zhang/dsh-svg-motion) ★1 — Turn any SVG logo into a motion video inside DeepSeek Harness
-- `[不兼容]` [wepar1212-dsh-wsl-workspace](https://github.com/wepar1212/dsh-wsl-workspace) ★1 — WSL workspace picker bundle for DeepSeek Harness
 - `[不兼容]` [xuc865-dsh-librarian](https://github.com/xuc865/dsh-librarian) ★1 — a dsh plugin that helps you to automatically generate, evolve and manage your dsh plugins
 - `[不兼容]` [yejiming-dsh-ppt](https://github.com/yejiming/dsh-ppt) ★1 — PPT design preset and editable PPTX production tools for DeepSeek Harness
 - `[不兼容]` [youngyangvip-dsh-diagon-alley](https://github.com/youngyangvip/dsh-diagon-alley) ★1 — dsh插件：对角巷角色面具插件 v1.0.0
@@ -17302,7 +17303,6 @@
 - `[未定位]` **webkubor-dsh-mirror** — 占位待复核，判定暂不展示
 - `[未定位]` **wechsels-dsh-zotero-wiki** — 占位待复核，判定暂不展示
 - `[不兼容]` [weekitmo-dsh-trace](https://github.com/weekitmo/dsh-trace) ★0 — A DeepSeek Harness Web plugin for inspecting redacted LLM HTTP request and response traces.
-- `[未定位]` **wensincai-btw4deepseekharness** — 占位待复核，判定暂不展示
 - `[未定位]` **wertybsd-dsh-local-llm** — 占位待复核，判定暂不展示
 - `[不兼容]` [whitewatercn-dsh-hotkeys-platform](https://github.com/whitewatercn/dsh-hotkeys-platform) ★0 — —
 - `[未定位]` **why-daydream-dsh-pack** — 占位待复核，判定暂不展示
