@@ -1,14 +1,14 @@
 # 全量插件清单（统一四档口径）
 
-> 数据源：radar 快照并集（`20260904T181501Z` 2026-09-05 02:15 UTC+8 ⊕ `20260904T163001Z` 2026-09-05 00:30 UTC+8 ⊕ `20260904T131503Z` 2026-09-04 21:15 UTC+8 等 399 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
+> 数据源：radar 快照并集（`20260904T183001Z` 2026-09-05 02:30 UTC+8 ⊕ `20260904T181501Z` 2026-09-05 02:15 UTC+8 ⊕ `20260904T163001Z` 2026-09-05 00:30 UTC+8 等 400 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
 > 呈现：分组列表（状态 · 名称 · ★星标 · 一句话说明），不使用大表格；〔📦〕= 整合包（根 dsh.bundle / workspaces 多子包）。
 
 ## 统一度量衡
 
 **判定维度**（运行级四档；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：
 
-- 全量判定 17860（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12149）/ `[不兼容]`（3432）/ `[待定]`（2125）
-- 已定位明细 9190（本列表展示口径，另 8670 条监测/未定位的判定暂不展示）：`[可用]`（6228）/ `[不兼容]`（1712）/ `[待定]`（1141）/ `[未测]`（109）
+- 全量判定 17860（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12152）/ `[不兼容]`（3433）/ `[待定]`（2121）
+- 已定位明细 9190（本列表展示口径，另 8670 条监测/未定位的判定暂不展示）：`[可用]`（6231）/ `[不兼容]`（1712）/ `[待定]`（1138）/ `[未测]`（109）
 
 **定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：
 
@@ -1130,7 +1130,7 @@
 - `[可用]` [runfali-dsh-login-gateway](https://github.com/runfali/dsh-login-gateway) ★2 — dsh 登录门卫插件：让只监听本机的 dsh Web UI 安全地对外开放——登录墙 + 全量反代，零依赖、零侵入
 - `[可用]` [sa998aaron-deepseek-harness-matt-plugin](https://github.com/sa998aaron/deepseek-harness-matt-plugin) ★2 — DeepSeek Harness 插件：内置 Matt Pocock 技能集 + 侧边栏可视化流水线面板（Idea→Triage→Grill→Spec→Tickets→Implement→Review），一键把 /技能
 - `[可用]` [sakthiveltofficial-dsh-shopify-plugins](https://github.com/sakthiveltofficial/dsh-shopify-plugins) ★2 — Shopify plugin for DeepSeek Harness: 213 model-facing shopify_* tools over the Shopify Admin REST + GraphQL AP
-- `[待定]` [sdoygb-conjugate-spectral-geometry](https://github.com/sdoygb/conjugate-spectral-geometry) ★2 — Conjugate Spectral Geometry - Geometric Theory of quantum error correction: 12-volume/117-paper index + DeepSe
+- `[可用]` [sdoygb-conjugate-spectral-geometry](https://github.com/sdoygb/conjugate-spectral-geometry) ★2 — Conjugate Spectral Geometry - Geometric Theory of quantum error correction: 12-volume/117-paper index + DeepSe
 - `[待定]` [shaoqiuyuavailable-text-llm-vision](https://github.com/shaoqiuyuavailable/text-llm-vision) ★2 — Scene-aware vision routing layer for DeepSeek Harness (dsh): decides which engine/backend an image should go t
 - `[可用]` [sharkymew-dsh-utility-tools](https://github.com/sharkymew/dsh-utility-tools) ★2 — DSH（DeepSeek Harness）对话工具插件：拖拽任意文件进入对话 + 选中文本引用
 - `[可用]` [shawnyhu-dsh-balance](https://github.com/shawnyhu/dsh-balance) ★2 — DeepSeek API balance in the DSH sidebar · 在 DSH 侧边栏显示 DeepSeek API 余额
@@ -1165,7 +1165,7 @@
 - `[可用]` [welsione-dsh-model-router](https://github.com/welsione/dsh-model-router) ★2 — DeepSeek Harness (DSH) 统一模型路由插件：一个逻辑 ModelID 多供应商候选链路由、首 token 前故障转移 + 冷却、三档分级（tier1/2/3）、思考级别 reasoningEffort
 - `[待定]` [wendi-lok-dsh-file-explorer](https://github.com/wendi-lok/dsh-file-explorer) ★2 — File directory card in the DeepSeek Harness Web left sidebar: tree browsing with arrow expand, drive-selection
 - `[待定]` [wenliang9527-dsh-themes](https://github.com/wenliang9527/dsh-themes) ★2 — —
-- `[待定]` [whaojie797-design-video-reverse-engineering](https://github.com/whaojie797-design/video-reverse-engineering) ★2 — Agent Skill: reverse-engineer how a video was made
+- `[可用]` [whaojie797-design-video-reverse-engineering](https://github.com/whaojie797-design/video-reverse-engineering) ★2 — Agent Skill: reverse-engineer how a video was made
 - `[可用]` [whh110112-human-writing-skills](https://github.com/whh110112/human-writing-skills) ★2 — Advanced multilingual AI humanizer and writing toolkit for natural prose, voice preservation, long-form contin
 - `[待定]` [whyihaveyou-dsh-workstation](https://github.com/whyihaveyou/dsh-workstation) ★2 — An all-in-one workstation plugin for DeepSeek Harness (DSH)
 - `[待定]` [wishesl-dsh-launcher](https://github.com/wishesl/dsh-launcher) ★2 — Manage DSH plugins & runtime without launching it: plugin market, per-instance masking, version install
@@ -5648,7 +5648,7 @@
 - `[待定]` [dsh-password-prompt](https://github.com/MagicCrazyMan/dsh-password-prompt) ★2 — DeepSeek Harness plugin: masked password panel in the Web GUI (password_prompt tool) — bundle + dual-face plug
 - `[可用]` [mahiro6-dsh-billing](https://github.com/mahiro6/dsh-billing) ★2 — 简陋deepseekharness计费插件,可查询显示余额.设置预算,累计汇总
 - `[可用]` [mario03690-dsh-netcafe](https://github.com/mario03690/dsh-netcafe) ★2 — DeepSeek Harness bundle: adds AI NetCafé's hosted outcome tools (statement extraction with reconciliation, SQL
-- `[待定]` [maskshell-solidforge-dsh](https://github.com/maskshell/solidforge-dsh) ★2 — 让 DSH Coding 流程更具有确定性！以 DSH 预设与全局插件（任意会话皆可使用）两种形式交付
+- `[可用]` [maskshell-solidforge-dsh](https://github.com/maskshell/solidforge-dsh) ★2 — 让 DSH Coding 流程更具有确定性！以 DSH 预设与全局插件（任意会话皆可使用）两种形式交付
 - `[可用]` [mel0nyrame-deepseek-harness-desktop](https://github.com/mel0nyrame/deepseek-harness-desktop) ★2 — Native Electron desktop app with a bundled DeepSeek Harness agent runtime
 - `[可用]` [menotbobbybrown-dsh-plugin-mcp](https://github.com/menotbobbybrown/dsh-plugin-mcp) ★2 — Universal Model Context Protocol (MCP) Bridge Plugin for DeepSeek Harness (dsh) — Everything is a Plugin
 - `[可用]` [meomeo-dev-dsh-voice](https://github.com/meomeo-dev/dsh-voice) ★2 — Conversation-tone switcher bundle for DeepSeek Harness — ships the 令 (Ling) tone and a create-voice meta-skill
@@ -7787,7 +7787,6 @@
 - `[未定位]` **codingyuanliu-dsh-chatbot-plugin** — 占位待复核，判定暂不展示
 - `[未定位]` **cokiscarazo-rgb-dsh-plugin-message-timeline-n** — 占位待复核，判定暂不展示
 - `[未定位]` **coldcgh-dsh-deepseek-chat** — 占位待复核，判定暂不展示
-- `[未定位]` **coprexist-aischat** — 占位待复核，判定暂不展示
 - `[未定位]` **crazy-l118-dsh-desktop-notify** — 占位待复核，判定暂不展示
 - `[未定位]` **crombastic-dsh-macos-notify** — 占位待复核，判定暂不展示
 - `[待定]` [cslht11-dsh-custom-patches](https://github.com/cslht11/dsh-custom-patches) ★0 — DSH (DeepSeek Harness) 自定义增强补丁集：输入历史 + 编辑最后一条消息并重新生成
@@ -8131,6 +8130,7 @@
 - `[未定位]` **cloud-j-dsh-chat-jumper** — 占位待复核，判定暂不展示
 - `[未定位]` **coffeiz-dsh-qqchat** — 占位待复核，判定暂不展示
 - `[不兼容]` [computersniper-dsh-codex](https://github.com/computersniper/dsh-codex) ★0 — DSH plugin: add OpenAI Codex (ChatGPT Plus/Pro) to the model picker
+- `[未定位]` **coprexist-aischat** — 占位待复核，判定暂不展示
 - `[未定位]` **dearmrchai-dsh-plugin-task-notify** — 占位待复核，判定暂不展示
 - `[未定位]` **dlive-dsh-qqbot-community** — 占位待复核，判定暂不展示
 - `[不兼容]` [force-push-dsh-telegram-channel](https://github.com/force-push/dsh-telegram-channel) ★0 — Telegram bot channel plugin for DeepSeek Harness — one DSH agent session per chat, zero npm dependencies
