@@ -1,14 +1,14 @@
 # 全量插件清单（统一四档口径）
 
-> 数据源：radar 快照并集（`20260904T071501Z` 2026-09-04 15:15 UTC+8 ⊕ `20260904T070001Z` 2026-09-04 15:00 UTC+8 ⊕ `20260904T064501Z` 2026-09-04 14:45 UTC+8 等 380 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
+> 数据源：radar 快照并集（`20260904T074501Z` 2026-09-04 15:45 UTC+8 ⊕ `20260904T071501Z` 2026-09-04 15:15 UTC+8 ⊕ `20260904T070001Z` 2026-09-04 15:00 UTC+8 等 381 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
 > 呈现：分组列表（状态 · 名称 · ★星标 · 一句话说明），不使用大表格；〔📦〕= 整合包（根 dsh.bundle / workspaces 多子包）。
 
 ## 统一度量衡
 
 **判定维度**（运行级四档；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：
 
-- 全量判定 17698（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12026）/ `[不兼容]`（3397）/ `[待定]`（2121）
-- 已定位明细 9110（本列表展示口径，另 8588 条监测/未定位的判定暂不展示）：`[可用]`（6171）/ `[不兼容]`（1694）/ `[待定]`（1136）/ `[未测]`（109）
+- 全量判定 17698（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12029）/ `[不兼容]`（3392）/ `[待定]`（2123）
+- 已定位明细 9110（本列表展示口径，另 8588 条监测/未定位的判定暂不展示）：`[可用]`（6171）/ `[不兼容]`（1692）/ `[待定]`（1138）/ `[未测]`（109）
 
 **定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：
 
@@ -2308,6 +2308,7 @@
 - `[未定位]` **zrtbdss-dsh-anime-skins** — 占位待复核，判定暂不展示
 - `[未定位]` **zrui-c-dsh-computer-use** — 占位待复核，判定暂不展示
 - `[未定位]` **zrui-c-dsh-content-studio** — 占位待复核，判定暂不展示
+- `[未定位]` **zrui-c-dsh-minimal-first-turn** — 占位待复核，判定暂不展示
 - `[可用]` [zshqzcn-dsh-browser-control](https://github.com/zshqzcn/dsh-browser-control) ★0 — UIA browser automation plugin for DeepSeek Harness - drives the open Doubao Browser (Chromium): tabs, navigati
 - `[可用]` [zuishi2006-pixel-dsh-whale-pet](https://github.com/zuishi2006-pixel/dsh-whale-pet) ★0 — 鲸鱼娘桌宠 —— DeepSeek Harness Web GUI 右下角看板娘插件：随 Agent 工作状态切换动作，任务完成播放「晓伊」鲸鱼娘语音
 - `[可用]` [zurrll-dsh-file-explorer](https://github.com/zurrll/dsh-file-explorer) ★0 — DSH Web GUI 文件资源管理器：右侧文件树抽屉，拖拽粘贴路径，双击打开，右侧取消区
@@ -3057,7 +3058,6 @@
 - `[未定位]` **znnvsnoou-dsh-skin-tlipoca** — 占位待复核，判定暂不展示
 - `[未定位]` **zoehao2026-dsh-ui-model-selection-collapsible** — 占位待复核，判定暂不展示
 - `[不兼容]` [zouxiaoyang-dsh-commandcode-usage](https://github.com/zouxiaoyang/dsh-commandcode-usage) ★0 — CommandCode usage & balance panel for DeepSeek Harness / DSH 的 CommandCode 用量与余额面板
-- `[未定位]` **zrui-c-dsh-minimal-first-turn** — 占位待复核，判定暂不展示
 - `[不兼容]` [zuijiuyueliang-dsh-plugin-rag](https://github.com/zuijiuyueliang/dsh-plugin-rag) ★0 — —
 - `[未定位]` **zzc269-dsh-soft-glass-ui** — 占位待复核，判定暂不展示
 - `[未定位]` **weijianguizhou-dsh-task-notify** — 占位待复核，判定暂不展示
@@ -3609,6 +3609,7 @@
 - `[待定]` [nvnoa57-star-dsh-compaction-slider](https://github.com/nvnoa57-star/dsh-compaction-slider) ★2 — —
 - `[可用]` [omdsh-dev-dsh-bash-encoding](https://github.com/omdsh-dev/dsh-bash-encoding) ★2 — DSH bash 输出编码自动识别插件：替换 ctx.bash，自管 spawn 收集原始字节，自动检测 UTF-16LE/UTF-8/GBK 等编码并正确解码，修复 WSL/Windows 下 bash 工具的中文乱码
 - `[待定]` [omdsh-dev-dsh-github-integration](https://github.com/omdsh-dev/dsh-github-integration) ★2 — —
+- `[待定]` [omicverse-dsh-omicos](https://github.com/omicverse/dsh-omicos) ★2 — Run OmicVerse/OmicOS bioinformatics analyses in a persistent Python kernel from inside DeepSeek Harness (dsh),
 - `[可用]` [ophielel-deepseek-forge](https://github.com/ophielel/dsh-devkit) ★2 — DeepSeek Harness 开发锻造工坊：审批守卫、开发 Skills、GitHub/浏览器能力与 Token Watch 消耗监督，装上就能干活
 - `[可用]` [oykb58246-dsh-desktop](https://github.com/oykb58246/dsh-desktop) ★2 — deepseek harness的功能集成桌面端，当前功能：自带视觉模块、web远程控制、codex会话导入、归档内容管理、对接api适配思考强度和图片开启、以及附件上传等等小改动
 - `[可用]` [pavangupta352-stalegreen](https://github.com/pavangupta352/stalegreen) ★2 — Keeps a coding agent's green claims honest: verification runs are recorded unmasked, and done is blocked when
@@ -4863,7 +4864,6 @@
 - `[不兼容]` [mokuyoaxis-agent-guard](https://github.com/mokuyoaxis/agent-guard) ★2 — Make destructive AI-agent actions reversible by default — quarantine + audit + human escalation for rm/git des
 - `[不兼容]` [my-dsh-plugin-thinking-level-override](https://github.com/my-dsh-plugin/thinking-level-override) ★2 — 自主覆盖与调整第三方模型的思考等级，修复工具内置预设缺失或不匹配的问题
 - `[不兼容]` [necokeine-dsh-codex-relay](https://github.com/necokeine/dsh-codex-relay) ★2 — Selectable Codex model provider for DeepSeek Harness over the local Codex app-server
-- `[不兼容]` [omicverse-dsh-omicos](https://github.com/omicverse/dsh-omicos) ★2 — Run OmicVerse/OmicOS bioinformatics analyses in a persistent Python kernel from inside DeepSeek Harness (dsh),
 - `[不兼容]` [perlied03-dsh-approval-auto-review](https://github.com/perlied03/dsh-approval-auto-review) ★2 — Codex-style automatic approval review plugin for DeepSeek Harness
 - `[不兼容]` [pharaohnie-dsh-context-mode](https://github.com/pharaohnie/dsh-context-mode) ★2 — DSH 原生 Cordis 插件：知识库(FTS5)、路由强制、会话记忆、沙箱执行(Think-in-Code)——context-window 减负
 - `[不兼容]` [dsh-audio-dub](https://github.com/pinch-eng/dsh-audio-dub) ★2 — Dub video and audio into 10 languages with voice cloning, from a DeepSeek Harness agent \| DSH 视频/音频配音插件
@@ -7630,6 +7630,7 @@
 - `[待定]` [jonnycafong-office-farmer-emoji](https://github.com/jonnycafong/office-farmer-emoji) ★1 — 🧑‍🌾 agent 通用 skill / npm 包：把中国农村传统农具画成「搪瓷缸怀旧质感 + 打工人梗」的微信表情包（CLI / 编程 API / DSH 插件三种接入）
 - `[可用]` [jypjypjypjyp-dsh-notifier](https://github.com/jypjypjypjyp/dsh-notifier) ★1 — 审批/完成/错误事件通知：浏览器 Notification + 系统原生 toast（Windows PowerShell WinRT / macOS osascript / Linux notify-send，均无需额
 - `[可用]` [kazecreator-dsh-plugins](https://github.com/kazecreator/dsh-plugins) ★1 — Monorepo of DeepSeek Harness (dsh) plugins — including dsh-im (Telegram & WeChat IM bridge)
+- `[待定]` [keepview-dsh-lark](https://github.com/keepview/dsh-lark) ★1 — Minimal Lark/Feishu gateway plugin for DeepSeek Harness (dsh) — chat with your agent from Feishu, one topic =
 - `[可用]` [lammarco86-dsh-plugin-chatgpt-crash-fix](https://github.com/lammarco86/dsh-plugin-chatgpt-crash-fix) ★1 — —
 - `[可用]` [leliln52-dsh-qqbot](https://github.com/leliln52/dsh-qqbot) ★1 — DeepSeek Harness QQ bot plugin with OneBot 11 and QQ Official Platform support
 - `[可用]` [lhjlol-dsh-whale-avatar](https://github.com/lhjlol/dsh-whale-avatar) ★1 — DSH 插件：给助手消息加头像与名字（App 图标 + 吃白饭的蓝色大肥鱼）\| Adds app-icon avatar and name to assistant messages
@@ -7679,6 +7680,7 @@
 - `[未定位]` **asakafeng-dsh-qq-remote** — 占位待复核，判定暂不展示
 - `[未定位]` **asianfleet-dsh-message-copy-enhance** — 占位待复核，判定暂不展示
 - `[未定位]` **atomercore-dsh-qq-agent-mail** — 占位待复核，判定暂不展示
+- `[未定位]` **ax1202-ax-feishu-bridge** — 占位待复核，判定暂不展示
 - `[未定位]` **bananasoldier01-dsh-tidychat** — 占位待复核，判定暂不展示
 - `[可用]` [baobaolaodie-cc-dsh-notifier](https://github.com/baobaolaodie/cc-dsh-notifier) ★0 — Windows desktop notifications for Claude Code and DeepSeek Harness sessions
 - `[未定位]` **barry-liu-001-dsh-chat-index** — 占位待复核，判定暂不展示
@@ -8021,7 +8023,6 @@
 - `[不兼容]` [jackcontrols-dsh-telegram-control](https://github.com/jackControls/dsh-telegram-control) ★1 — —
 - `[不兼容]` [jiangliuhong-dsh-gpt-oauth](https://github.com/jiangliuhong/dsh-gpt-oauth) ★1 — openai models for login by chatgpt
 - `[不兼容]` [kangshifu1-dsh-accounts](https://github.com/kangshifu1/dsh-accounts) ★1 — DSH multi-tenant auth plugin: PostgreSQL-backed accounts, admin management, per-user workspace isolation
-- `[不兼容]` [keepview-dsh-lark](https://github.com/keepview/dsh-lark) ★1 — Minimal Lark/Feishu gateway plugin for DeepSeek Harness (dsh) — chat with your agent from Feishu, one topic =
 - `[不兼容]` [kvenux-dsh-oai-oauth](https://github.com/kvenux/dsh-oai-oauth) ★1 — ChatGPT Plus/Pro OAuth model provider plugin for DeepSeek Harness
 - `[不兼容]` [qqmqq-deepseek-harness-weixin](https://github.com/qqmqq/deepseek-harness-weixin) ★1 — —
 - `[不兼容]` [softspark-dsh-codex](https://github.com/softspark/dsh-codex) ★1 — DeepSeek Harness provider for locally authenticated Codex app-server access through a ChatGPT subscription.
@@ -8038,7 +8039,6 @@
 - `[未定位]` **afap-dsh-message-minimap** — 占位待复核，判定暂不展示
 - `[未定位]` **aitechmei-dsh-feishu** — 占位待复核，判定暂不展示
 - `[未定位]` **awesome-ai-pedia-dsh-lark-web-auth** — 占位待复核，判定暂不展示
-- `[未定位]` **ax1202-ax-feishu-bridge** — 占位待复核，判定暂不展示
 - `[未定位]` **beforewave-dsh-with-chatgpt** — 占位待复核，判定暂不展示
 - `[不兼容]` [canadaeee-dsh-feishu](https://github.com/canadaeee/dsh-feishu) ★0 — DSH ecosystem channel plugin: Feishu (Lark) for DeepSeek Harness — resident Agents per chat, events + relay tr
 - `[未定位]` **caoxiaohu7745-bot-kongmu-im-bridge** — 占位待复核，判定暂不展示
@@ -8438,6 +8438,7 @@
 - `[未定位]` **lucasxingg-dsh-file-attach** — 占位待复核，判定暂不展示
 - `[可用]` [lzxcs-archive-vault-pro](https://github.com/lzxcs/archive-vault-pro) ★0 — 归档会话库：查看所有工作区的已归档会话、只读回看内容、右键取消归档（不影响官方逻辑）
 - `[可用]` [mario03690-dsh-devkit](https://github.com/mario03690/dsh-devkit) ★0 — The small deterministic operations an agent needs mid-task
+- `[未定位]` **melody-max114-dsh-excel-panel** — 占位待复核，判定暂不展示
 - `[未定位]` **mesun424-dsh-archive-manager** — 占位待复核，判定暂不展示
 - `[未定位]` **michengai-dsh-archive-manager** — 占位待复核，判定暂不展示
 - `[未定位]` **mlittlefriend-dsh-character-profiler** — 占位待复核，判定暂不展示
@@ -8749,7 +8750,6 @@
 - `[未定位]` **lingyuyue1-dsh-workbench** — 占位待复核，判定暂不展示
 - `[不兼容]` [linkbag-dsh-swarm-orchestrator](https://github.com/linkbag/dsh-swarm-orchestrator) ★0 — Role-based AI swarm orchestration for DeepSeek Harness: per-role model pinning with fallbacks, parallel task D
 - `[未定位]` **makima667-dsh-smart-profile** — 占位待复核，判定暂不展示
-- `[未定位]` **melody-max114-dsh-excel-panel** — 占位待复核，判定暂不展示
 - `[未定位]` **momojie-s-dsh-archive-retention** — 占位待复核，判定暂不展示
 - `[未定位]` **momojie-s-dsh-workspace-files** — 占位待复核，判定暂不展示
 - `[未定位]` **moonlitdropofblood-dsh-archive-manager** — 占位待复核，判定暂不展示
@@ -10118,6 +10118,7 @@
 - `[未定位]` **zouu-x-dsh-remote** — 占位待复核，判定暂不展示
 - `[未定位]` **zpa76-deepseek-pa-dsh-desktop** — 占位待复核，判定暂不展示
 - `[可用]` [zptalk0221-cpu-dsh-remote-desktop](https://github.com/zptalk0221-cpu/dsh-remote-desktop) ★0 — 远程桌面移动化插件：为 DeepSeek Harness 提供手机横屏外壳与中文输入法
+- `[未定位]` **zslsherly-dsh-remote-console** — 占位待复核，判定暂不展示
 - `[空仓监测]` **dsh-plugin-ssh-remotes** — GitHub 无此仓库，判定暂不展示
 - `[待定]` [ztkyo-deepseek-harness-desktop](https://github.com/ZTKyo/deepseek-harness-desktop) ★0 — —
 - `[未定位]` **zxcwt666-deepseek-harness-desktop** — 占位待复核，判定暂不展示
@@ -10538,7 +10539,6 @@
 - `[未定位]` **yueeeey-dsh-desktop-tools** — 占位待复核，判定暂不展示
 - `[不兼容]` [yxx-jf-deepseek-harness-desktop](https://github.com/yxx-jf/deepseek-harness-desktop) ★0 — —
 - `[不兼容]` [zhuyan1085-mcp-deliverable](https://github.com/zhuyan1085/mcp-deliverable) ★0 — MCP server settings components for DeepSeek Harness
-- `[未定位]` **zslsherly-dsh-remote-console** — 占位待复核，判定暂不展示
 - `[未定位]` **13680672459-alt-dsh-mobile** — 占位待复核，判定暂不展示
 - `[未定位]` **988hj7tczd-oss-dsh-mcp-tunnel** — 占位待复核，判定暂不展示
 - `[未定位]` **a1113622001-dsh-auto-update** — 占位待复核，判定暂不展示
@@ -12900,7 +12900,6 @@
 - `[可用]` [dsh-plugin-warroom-garak](https://github.com/lukethecat/dsh-plugin-warroom-garak) ★0 — —
 - `[未定位]` **lumera114514-dsh-hero-custom** — 占位待复核，判定暂不展示
 - `[未定位]` **luniteglaze-dsh-plugin-catalog** — 占位待复核，判定暂不展示
-- `[未定位]` **luoji-yuli-dsh-turn-rail** — 占位待复核，判定暂不展示
 - `[未定位]` **luria-yzk-dsh-tool-image-recognize** — 占位待复核，判定暂不展示
 - `[未定位]` **lusblead-dsh-kingdom** — 占位待复核，判定暂不展示
 - `[未定位]` **lusipad-rocketx** — 占位待复核，判定暂不展示
@@ -17104,6 +17103,7 @@
 - `[未定位]` **luckvd-dsh-btw** — 占位待复核，判定暂不展示
 - `[未定位]` **luckvd-dsh-pin-color** — 占位待复核，判定暂不展示
 - `[未定位]` **luke-yong-dsh-plugin-project-management** — 占位待复核，判定暂不展示
+- `[未定位]` **luoji-yuli-dsh-turn-rail** — 占位待复核，判定暂不展示
 - `[未定位]` **luxiu666-omniops** — 占位待复核，判定暂不展示
 - `[未定位]` **lxflgh-dsh-deepseek-relay** — 占位待复核，判定暂不展示
 - `[不兼容]` [lyuwen-dsh-thinking-summary](https://github.com/lyuwen/dsh-thinking-summary) ★0 — Readable thinking display for DeepSeek Harness
