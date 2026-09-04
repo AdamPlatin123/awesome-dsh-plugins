@@ -1,13 +1,13 @@
 # 全量插件清单（统一四档口径）
 
-> 数据源：radar 快照并集（`20260904T093001Z` 2026-09-04 17:30 UTC+8 ⊕ `20260904T091502Z` 2026-09-04 17:15 UTC+8 ⊕ `20260904T084501Z` 2026-09-04 16:45 UTC+8 等 387 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
+> 数据源：radar 快照并集（`20260904T100001Z` 2026-09-04 18:00 UTC+8 ⊕ `20260904T093001Z` 2026-09-04 17:30 UTC+8 ⊕ `20260904T091502Z` 2026-09-04 17:15 UTC+8 等 388 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
 > 呈现：分组列表（状态 · 名称 · ★星标 · 一句话说明），不使用大表格；〔📦〕= 整合包（根 dsh.bundle / workspaces 多子包）。
 
 ## 统一度量衡
 
 **判定维度**（运行级四档；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：
 
-- 全量判定 17713（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12037）/ `[不兼容]`（3382）/ `[待定]`（2140）
+- 全量判定 17713（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12038）/ `[不兼容]`（3381）/ `[待定]`（2140）
 - 已定位明细 9111（本列表展示口径，另 8602 条监测/未定位的判定暂不展示）：`[可用]`（6168）/ `[不兼容]`（1683）/ `[待定]`（1151）/ `[未测]`（109）
 
 **定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：
@@ -842,7 +842,7 @@
 - `[可用]` [ericw0315-dsh-usage-lite](https://github.com/ericw0315/dsh-usage-lite) ★3 — 为 DeepSeek Harness Web 界面提供简洁、优雅的余额与 Token 用量面板
 - `[可用]` [exoticknight-dsh-labnana](https://github.com/exoticknight/dsh-labnana) ★3 — Labnana image generation for DeepSeek Harness: text-to-image / image-to-image / precise editing — chat image c
 - `[可用]` [f20880479-lab-dsh-peak-gate](https://github.com/f20880479-lab/dsh-peak-gate) ★3 — DeepSeek Harness 峰谷计费插件：高峰时段发送前确认（可勾选本次高峰段内不再提示），支持将消息排队到空闲时段（半价）自动发送；可拖拽悬浮队列窗口、调整发送顺序与时间
-- `[可用]` [faith1688-dsh-usage-meter-harness](https://github.com/faith1688/dsh-usage-meter-harness) ★3 — 专为 DeepSeek API 打造的实时用量 / 费用 / 余额计量插件 —— 在聊天输入框旁直接看到 tokens、花费与真实余额
+- `[待定]` [faith1688-dsh-usage-meter-harness](https://github.com/faith1688/dsh-usage-meter-harness) ★3 — 专为 DeepSeek API 打造的实时用量 / 费用 / 余额计量插件 —— 在聊天输入框旁直接看到 tokens、花费与真实余额
 - `[可用]` [fengb3-dsh-session-icons](https://github.com/fengb3/dsh-session-icons) ★3 — DSH（DeepSeek Harness）Web 界面的会话标题图标插件：当模型为一次新会话生成标题时，宿主半用同一条路由发起一次辅助小请求，让模型按标题画一枚 24×24 单色 SVG 隐喻图标；浏览器半把它注入到左侧
 - `[待定]` [flaricy-maid-atelier-ui-bundle](https://github.com/flaricy/maid-atelier-ui-bundle) ★3 — A calm Maid Atelier theme and practical file, preview, Git, and terminal side panel for DeepSeek Harness Web.
 - `[待定]` [dsh-voice-input](https://github.com/forrestahha/dsh-voice-input) ★3 — Voice-to-text input plugin for the DeepSeek Harness Web UI
@@ -7524,7 +7524,7 @@
 - `[可用]` [893413974-bit-dsh-setting-restart](https://github.com/893413974-bit/dsh-setting-restart) ★3 — One-click restart of the DSH service from Settings → General
 - `[待定]` [baisama-cloud-dsh-omni-bridge](https://github.com/baisama-cloud/dsh-omni-bridge) ★3 — DeepSeek Harness（DSH）多通道消息桥：将微信（ClawBot/iLink）、QQ和飞书（Lark）聊天消息路由给DSH代理，并将代理的回复反馈给发送方
 - `[可用]` [blooming-fang-dsh-feishu-notifier](https://github.com/blooming-fang/dsh-feishu-notifier) ★3 — DeepSeek Harness 飞书通知插件：在需要用户操作或对话结束时发送飞书机器人提醒，并支持持久化配置
-- `[待定]` [clarklevis1995-dsh-plugin-mobile-gateway](https://github.com/Clarklevis1995/dsh-plugin-mobile-gateway) ★3 — —
+- `[可用]` [clarklevis1995-dsh-plugin-mobile-gateway](https://github.com/Clarklevis1995/dsh-plugin-mobile-gateway) ★3 — —
 - `[可用]` [echo-lgtm-dsh-plugin-wechat-official](https://github.com/echo-lgtm/dsh-plugin-wechat-official) ★3 — DeepSeek Harness 微信 ClawBot 渠道插件：通过腾讯官方 iLink 接口让用户在个人微信中与 DSH Agent 对话
 - `[可用]` [giantgkl-dsh-cost](https://github.com/GiantGKL/dsh-cost) ★3 — —
 - `[可用]` [dsh-plugin-wechat](https://github.com/gnulife/dsh-plugin-wechat) ★3 — —
@@ -12327,6 +12327,7 @@
 - `[未定位]` **elpsycoogroo-dsh-work-report** — 占位待复核，判定暂不展示
 - `[未定位]` **elysiaqwq-dsh-ccswitch** — 占位待复核，判定暂不展示
 - `[未定位]` **elysiaqwq-dsh-reasoning-depth** — 占位待复核，判定暂不展示
+- `[未定位]` **enc-hanted-dsh-pulse** — 占位待复核，判定暂不展示
 - `[未定位]` **enc-hanted-dsh-quote-temp-ask** — 占位待复核，判定暂不展示
 - `[未定位]` **enilmalus-offline-websearch** — 占位待复核，判定暂不展示
 - `[未定位]` **enter3211-dsh-web-search-all-modes** — 占位待复核，判定暂不展示
@@ -16961,7 +16962,6 @@
 - `[不兼容]` [dsh-pulse-dsh-hermes-bridge](https://github.com/dsh-pulse/dsh-hermes-bridge) ★0 — —
 - `[未定位]` **edison7009-echobird** — 占位待复核，判定暂不展示
 - `[未定位]` **emilia-awa-hermes-dsh-bridge** — 占位待复核，判定暂不展示
-- `[未定位]` **enc-hanted-dsh-pulse** — 占位待复核，判定暂不展示
 - `[未定位]` **enderfga-dsh-clawo** — 占位待复核，判定暂不展示
 - `[未定位]` **ericshang98-perfect-web-clone** — 占位待复核，判定暂不展示
 - `[未定位]` **ericxu20266-dsh-discovery** — 占位待复核，判定暂不展示
