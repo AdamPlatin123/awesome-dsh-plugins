@@ -1,14 +1,14 @@
 # 全量插件清单（统一四档口径）
 
-> 数据源：radar 快照并集（`20260904T011501Z` 2026-09-04 09:15 UTC+8 ⊕ `20260904T010001Z` 2026-09-04 09:00 UTC+8 ⊕ `20260904T004501Z` 2026-09-04 08:45 UTC+8 等 358 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
+> 数据源：radar 快照并集（`20260904T013001Z` 2026-09-04 09:30 UTC+8 ⊕ `20260904T011501Z` 2026-09-04 09:15 UTC+8 ⊕ `20260904T010001Z` 2026-09-04 09:00 UTC+8 等 359 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
 > 呈现：分组列表（状态 · 名称 · ★星标 · 一句话说明），不使用大表格；〔📦〕= 整合包（根 dsh.bundle / workspaces 多子包）。
 
 ## 统一度量衡
 
 **判定维度**（运行级四档；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：
 
-- 全量判定 17696（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12020）/ `[不兼容]`（3442）/ `[待定]`（2080）
-- 已定位明细 9108（本列表展示口径，另 8588 条监测/未定位的判定暂不展示）：`[可用]`（6172）/ `[不兼容]`（1707）/ `[待定]`（1120）/ `[未测]`（109）
+- 全量判定 17696（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12020）/ `[不兼容]`（3439）/ `[待定]`（2083）
+- 已定位明细 9108（本列表展示口径，另 8588 条监测/未定位的判定暂不展示）：`[可用]`（6172）/ `[不兼容]`（1706）/ `[待定]`（1121）/ `[未测]`（109）
 
 **定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：
 
@@ -1625,6 +1625,7 @@
 - `[可用]` [alexfengrui-dsh-client-ui-skin-real-madrid](https://github.com/alexfengrui/dsh-client-ui-skin-real-madrid) ★0 — Real Madrid dual-mode skin for DeepSeek Harness: Bernabeu night stadium (dark) and white-kit pinstripes (light
 - `[可用]` [alextamhk-dsh-harness-title](https://github.com/alextamhk/dsh-harness-title) ★0 — DSH web plugin: customizable Name Title for the DeepSeek Harness GUI
 - `[未定位]` **alfonsoferrertorres-cyber-saare-suite** — 占位待复核，判定暂不展示
+- `[未定位]` **alfredchaos-dsh-usage-panel** — 占位待复核，判定暂不展示
 - `[可用]` [aliuguofa-dsh-traffic-light](https://github.com/aliuguofa/dsh-traffic-light) ★0 — 一个 DeepSeek Harness Web UI 插件：在聊天输入框区域显示一盏红 / 黄 / 绿三色信号灯，实时反映当前会话的状态，点击可查看详情
 - `[未定位]` **all3ncn-dsh-better-sidebar-n23** — 占位待复核，判定暂不展示
 - `[未定位]` **all3ncn-dsh-qa-suite** — 占位待复核，判定暂不展示
@@ -2885,7 +2886,6 @@
 - `[未定位]` **aks1st-dock-images** — 占位待复核，判定暂不展示
 - `[未定位]` **aks1st-dock-markdown** — 占位待复核，判定暂不展示
 - `[未定位]` **aks1st-dock-media** — 占位待复核，判定暂不展示
-- `[未定位]` **alfredchaos-dsh-usage-panel** — 占位待复核，判定暂不展示
 - `[不兼容]` [an4nsi-dsh-fork-view](https://github.com/an4nsi/dsh-fork-view) ★0 — DSH web plugin: replaces the native workspace browser in the left sidebar with a session tree in the style of
 - `[未定位]` **andyzheng0715-dsh-web-ui-model-search** — 占位待复核，判定暂不展示
 - `[不兼容]` [apodemakeles-dsh-gui](https://github.com/apodemakeles/dsh-gui) ★0 — Desktop shell for dsh (DeepSeek Harness) — an Electron app delivered as a dsh bundle
@@ -10992,6 +10992,7 @@
 - `[待定]` [yxqfg-phone-lens](https://github.com/yxqfg/phone-lens) ★4 — —
 - `[可用]` [zhn1100-dsh-forge](https://github.com/zhn1100/dsh-forge) ★4 — Reproducible DeepSeek Harness plugin development environment
 - `[待定]` [54xkeee-dsh-youreyes](https://github.com/54xkeee/dsh-youreyes) ★3 — Eyes for text-only DeepSeek on DeepSeek Harness: model-invokable vision tool + wrapper adapters + general VLM
+- `[待定]` [akslcw-dsh-negative-ledger](https://github.com/akslcw/dsh-negative-ledger) ★3 — —
 - `[待定]` [dsh-restart](https://github.com/anweat/dsh-restart) ★3 — —
 - `[可用]` [asakumizy-dsh-trae-bridge](https://github.com/asakumizy/dsh-trae-bridge) ★3 — DSH和trae连接
 - `[待定]` [dsh-imggenerate](https://github.com/Bald0Wang/dsh-imggenerate) ★3 — DeepSeek Harness plugin: image_generate tool with qwen-image-3.0 (Aliyun MaaS) and doubao-seedream (Volcano Ar
@@ -12027,6 +12028,7 @@
 - `[未定位]` **axelgoal-deepharn** — 占位待复核，判定暂不展示
 - `[未定位]` **ayaka157-dsh-conversation-cost** — 占位待复核，判定暂不展示
 - `[未定位]` **ayou-claw-flowctx-dsh** — 占位待复核，判定暂不展示
+- `[未定位]` **aythyacrispus-dsh-minimal-msys2** — 占位待复核，判定暂不展示
 - `[可用]` [az790871109-dsh-cost-tracker](https://github.com/az790871109/dsh-cost-tracker) ★0 — —
 - `[未定位]` **azaisakura-dsh-computer-use** — 占位待复核，判定暂不展示
 - `[未定位]` **azurehalcyon-dsh-deepseek-usage** — 占位待复核，判定暂不展示
@@ -16688,7 +16690,6 @@
 - `[不兼容]` [dsh-mc-launcher](https://github.com/hellosky983/dsh-mc-launcher) ★4 — Minecraft launcher built on DeepSeek Harness: full-screen launcher UI (root slot) with version download, Micro
 - `[不兼容]` [Qwen-MM-Plugins](https://github.com/omdsh-dev/Qwen-MM-Plugins) ★4 — Qwen-MM-Plugins支持 〔PR〕
 - `[不兼容]` [3403473060-dsh-inline-images](https://github.com/3403473060/dsh-inline-images) ★3 — —
-- `[不兼容]` [akslcw-dsh-negative-ledger](https://github.com/akslcw/dsh-negative-ledger) ★3 — —
 - `[不兼容]` [blaczz-dsh-achievements](https://github.com/Blaczz/dsh-achievements) ★3 — —
 - `[不兼容]` [delef-dsh-free-web-search](https://github.com/delef/dsh-free-web-search) ★3 — —
 - `[不兼容]` [dsh-tool-policy](https://github.com/Drifter-yh/dsh-tool-policy) ★3 — Declarative deny-by-default tool policy plugin for DeepSeek Harness
@@ -16864,7 +16865,6 @@
 - `[未定位]` **ayanjava111-dsh-thinking-language-zh** — 占位待复核，判定暂不展示
 - `[未定位]` **ayingqaq-dsh-web-launcher** — 占位待复核，判定暂不展示
 - `[未定位]` **ayle5678-dsh-auto-guard** — 占位待复核，判定暂不展示
-- `[未定位]` **aythyacrispus-dsh-minimal-msys2** — 占位待复核，判定暂不展示
 - `[未定位]` **ayuan1023-dsh-plugin-template** — 占位待复核，判定暂不展示
 - `[未定位]` **badakonpro-dsh-llm-volcengine** — 占位待复核，判定暂不展示
 - `[未定位]` **bailiang-233-dsh-off-peak-schedule-widget** — 占位待复核，判定暂不展示
