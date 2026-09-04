@@ -1,14 +1,14 @@
 # 全量插件清单（统一四档口径）
 
-> 数据源：radar 快照并集（`20260904T014501Z` 2026-09-04 09:45 UTC+8 ⊕ `20260904T013001Z` 2026-09-04 09:30 UTC+8 ⊕ `20260904T011501Z` 2026-09-04 09:15 UTC+8 等 360 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
+> 数据源：radar 快照并集（`20260904T020001Z` 2026-09-04 10:00 UTC+8 ⊕ `20260904T014501Z` 2026-09-04 09:45 UTC+8 ⊕ `20260904T013001Z` 2026-09-04 09:30 UTC+8 等 361 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
 > 呈现：分组列表（状态 · 名称 · ★星标 · 一句话说明），不使用大表格；〔📦〕= 整合包（根 dsh.bundle / workspaces 多子包）。
 
 ## 统一度量衡
 
 **判定维度**（运行级四档；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：
 
-- 全量判定 17696（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12019）/ `[不兼容]`（3437）/ `[待定]`（2086）
-- 已定位明细 9108（本列表展示口径，另 8588 条监测/未定位的判定暂不展示）：`[可用]`（6172）/ `[不兼容]`（1704）/ `[待定]`（1123）/ `[未测]`（109）
+- 全量判定 17696（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12020）/ `[不兼容]`（3434）/ `[待定]`（2088）
+- 已定位明细 9108（本列表展示口径，另 8588 条监测/未定位的判定暂不展示）：`[可用]`（6172）/ `[不兼容]`（1703）/ `[待定]`（1124）/ `[未测]`（109）
 
 **定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：
 
@@ -4005,6 +4005,7 @@
 - `[可用]` [coldxiangyu163-dsh-web-search-tavily](https://github.com/coldxiangyu163/dsh-web-search-tavily) ★0 — Tavily search provider bundle for DeepSeek Harness
 - `[未定位]` **coostack-dsh-code-review** — 占位待复核，判定暂不展示
 - `[未定位]` **cora093-dsh-web-search-codex** — 占位待复核，判定暂不展示
+- `[未定位]` **cpfpatrick-dsh-codex-keychain** — 占位待复核，判定暂不展示
 - `[可用]` [cradler-ai-dsh-plugin](https://github.com/cradler-ai/dsh-plugin) ★0 — Cradler Router as a DeepSeek Harness provider — Claude, GPT, Gemini, DeepSeek and Grok behind one API key
 - `[可用]` [csiroqa-dsh-plugin-usage-report](https://github.com/csiroqa/dsh-plugin-usage-report) ★0 — DeepSeek Harness（DSH）用量报表插件：按日/月汇聚 token 与估算费用（USD）、月度报表、预算告警、Claude Code/Codex 式每日贡献格子与趣味统计
 - `[未定位]` **cslht11-dsh-provider-config** — 占位待复核，判定暂不展示
@@ -4999,7 +5000,6 @@
 - `[未定位]` **codedice1024-dsh-log-viewer** — 占位待复核，判定暂不展示
 - `[未定位]` **codeideal-dsh-review** — 占位待复核，判定暂不展示
 - `[未定位]` **cooberped-dsh-evidence** — 占位待复核，判定暂不展示
-- `[未定位]` **cpfpatrick-dsh-codex-keychain** — 占位待复核，判定暂不展示
 - `[不兼容]` [cyjyyd-dsh-llm-xai-oauth](https://github.com/cyjyyd/dsh-llm-xai-oauth) ★0 — Native SuperGrok / X Premium OAuth provider for DeepSeek Harness
 - `[未定位]` **dayi-z-gitcompass** — 占位待复核，判定暂不展示
 - `[未定位]` **dddfxyqiming-dsh-side-panel-patched** — 占位待复核，判定暂不展示
@@ -5530,6 +5530,7 @@
 - `[可用]` [chancelu-dsh-llmwiki](https://github.com/chancelu/dsh-llmwiki) ★2 — Local Markdown wiki as long-term memory for DeepSeek Harness — RRF-fused retrieval (keyword + wikilink graph +
 - `[可用]` [chaserchan-dsh-plugin-global-prompt](https://github.com/chaserchan/dsh-plugin-global-prompt) ★2 — DSH plugin: a global-prompt textarea in Settings > General, injected into every conversation system prompt
 - `[可用]` [chenkai2-dsh-daemon](https://github.com/chenkai2/dsh-daemon) ★2 — dsh daemon: register the DeepSeek Harness web server (dsh web) as an auto-start, self-healing background servi
+- `[待定]` [chenkezhen480-dsh-semantic-memory](https://github.com/chenkezhen480/dsh-semantic-memory) ★2 — 为deepseek-harness添加向量化跨会话记忆插件
 - `[可用]` [ciceroyang-dsh-report-studio](https://github.com/ciceroyang/dsh-report-studio) ★2 — Turn a DeepSeek Harness session into deliverable work reports (daily/weekly/handoff/article) with verifiable r
 - `[可用]` [ciceroyang-dsh-trajectory](https://github.com/ciceroyang/dsh-trajectory) ★2 — Render a DeepSeek Harness session log into a shareable HTML trajectory document
 - `[可用]` [crwsr124-dsh-memflow](https://github.com/crwsr124/dsh-memflow) ★2 — DeepSeek Harness 记忆框架插件
@@ -5947,6 +5948,7 @@
 - `[可用]` [dsh-plugins-plan-usage](https://github.com/chendefine/dsh-plugins-plan-usage) ★0 — deepseek harness plugins plan-usage
 - `[可用]` [chenyangcun-dsh-fixed-new-session-model](https://github.com/chenyangcun/dsh-fixed-new-session-model) ★0 — 为 DSH 固定新会话的默认 Agent 预设与模型，支持全局默认设置和工作区独立配置
 - `[待定]` [chris-003-dsh-agent-in-browser](https://github.com/chris-003/dsh-agent-in-browser) ★0 — Let a DeepSeek Harness agent see and control your browser in real time — read, screenshot, navigate, click, an
+- `[未定位]` **chuantianml-prompt-for-me** — 占位待复核，判定暂不展示
 - `[未定位]` **ciyuan1234-mcm-skills** — 占位待复核，判定暂不展示
 - `[未定位]` **cjl-1995-dsh-session-health** — 占位待复核，判定暂不展示
 - `[未定位]` **clapeill-dsh-skill-manager** — 占位待复核，判定暂不展示
@@ -7018,7 +7020,6 @@
 - `[不兼容]` [beijingwahw-dsh-computer-use-plugin](https://github.com/beijingwahw/dsh-computer-use-plugin) ★2 — Vision-only desktop automation agent plugin for DeepSeek Harness (DSH) \| 纯视觉桌面自动化 Agent 插件：SoM grounding · Pla
 - `[不兼容]` [dsh-review-skills](https://github.com/ben7am1n/dsh-review-skills) ★2 — —
 - `[不兼容]` [charlesliuzc-deepseek-harness-voice-context](https://github.com/CharlesLiuZC/deepseek-harness-voice-context) ★2 — —〔📦〕
-- `[不兼容]` [chenkezhen480-dsh-semantic-memory](https://github.com/chenkezhen480/dsh-semantic-memory) ★2 — 为deepseek-harness添加向量化跨会话记忆插件
 - `[不兼容]` [dsh-schedule](https://github.com/csiroqa/dsh-schedule) ★2 — DeepSeek Harness（DSH）定时任务 + 状态监控插件：按 cron 时间表自动触发 Agent 执行任务，/status 与设置页仪表盘查看系统与 harness 综合状态
 - `[不兼容]` [dataelement-dsh-plugin-coaligne](https://github.com/dataelement/dsh-plugin-coaligne) ★2 — CoAligne for DeepSeek Harness: shared team project context over MCP, plus the coaligne-workflow skill
 - `[不兼容]` [deepforce-dsh-balance](https://github.com/deepforce/dsh-balance) ★2 — DSH plugin: /balance command, composer-dock balance readout with top-up link, session-cost estimate
@@ -7136,7 +7137,6 @@
 - `[不兼容]` [chen-zz20-dsh-skill-stats](https://github.com/chen-zz20/dsh-skill-stats) ★0 — —
 - `[未定位]` **chhlafiu4312-promptwall** — 占位待复核，判定暂不展示
 - `[不兼容]` [chocobo77-dsh-infinite-context](https://github.com/chocobo77/dsh-infinite-context) ★0 — DeepSeek Harness plugin: multi-tier memory management, semantic retrieval, structured memory, and model-contex
-- `[未定位]` **chuantianml-prompt-for-me** — 占位待复核，判定暂不展示
 - `[未定位]` **cjl-1995-dsh-memory-self-evolution** — 占位待复核，判定暂不展示
 - `[不兼容]` [clawdwan-orbit-dsh-plugin](https://github.com/clawdwan/orbit-dsh-plugin) ★0 — DeepSeek Harness 上的反思层插件，把 Agent 的每一步记录成「假设→任务→结果」的证据链，蒸馏出以客观 done_when 为锚的可复用经验，让 Agent 累积每做一次就变好一点
 - `[不兼容]` [coffee-man666-dsh-lens](https://github.com/coffee-man666/dsh-lens) ★0 — Repository and agent-runtime analysis skills as an installable DeepSeek Harness (dsh) plugin
@@ -7696,6 +7696,7 @@
 - `[未定位]` **casually-dsh-plug-notify** — 占位待复核，判定暂不展示
 - `[可用]` [dsh-plugin-browser-notify](https://github.com/Caxson/dsh-plugin-browser-notify) ★0 — deepseek harness web notify plugin
 - `[未定位]` **cheerwhy-dsh-chat-anchors** — 占位待复核，判定暂不展示
+- `[未定位]` **chisaalter-dsh-plugin-message-edit** — 占位待复核，判定暂不展示
 - `[未定位]` **chuantianml-dsh-chat-tidy** — 占位待复核，判定暂不展示
 - `[未定位]` **clarklevis1995-dsh-mobile** — 占位待复核，判定暂不展示
 - `[可用]` [classfieldseason-cmd-dsh-notify-plugin](https://github.com/classfieldseason-cmd/dsh-notify-plugin) ★0 — —
@@ -8039,7 +8040,6 @@
 - `[未定位]` **caoxiaohu7745-bot-kongmu-im-bridge** — 占位待复核，判定暂不展示
 - `[未定位]` **carl-5535-dsh-wechat-gateway** — 占位待复核，判定暂不展示
 - `[未定位]` **charlotten7-dsh-netguard** — 占位待复核，判定暂不展示
-- `[未定位]` **chisaalter-dsh-plugin-message-edit** — 占位待复核，判定暂不展示
 - `[未定位]` **chocolzs-dsh-plugin-chat-menu** — 占位待复核，判定暂不展示
 - `[未定位]` **chu-m-dsh-chat-continue** — 占位待复核，判定暂不展示
 - `[未定位]` **cinnamobot-dsh-disclosure-tweaks** — 占位待复核，判定暂不展示
@@ -12193,7 +12193,6 @@
 - `[未定位]` **createcn-dsh-peak-valley** — 占位待复核，判定暂不展示
 - `[未定位]` **crystalwinter666-dsh-header-status** — 占位待复核，判定暂不展示
 - `[未定位]` **csbprd-dsh-anywhere-web** — 占位待复核，判定暂不展示
-- `[未定位]` **csbprd-dsh-workspace-only-plugin** — 占位待复核，判定暂不展示
 - `[未定位]` **csi-entitymorton-stavros-dsh-redteamer** — 占位待复核，判定暂不展示
 - `[未定位]` **cslawyer1985-dsh-excalidraw-board** — 占位待复核，判定暂不展示
 - `[可用]` [csustyang-dsh-garmin-coach](https://github.com/csustyang/dsh-garmin-coach) ★0 — Garmin Connect 运动健康 AI 教练插件 for DeepSeek Harness
@@ -16912,6 +16911,7 @@
 - `[未定位]` **co-kyo-dsh-interview-forge** — 占位待复核，判定暂不展示
 - `[不兼容]` [cofy-x-dsh-automation](https://github.com/cofy-x/dsh-automation) ★0 — Durable background automation for DeepSeek Harness
 - `[未定位]` **crosery-dsh-viewer** — 占位待复核，判定暂不展示
+- `[未定位]` **csbprd-dsh-workspace-only-plugin** — 占位待复核，判定暂不展示
 - `[未定位]` **cwnu-open-source-community-dsh-webgate** — 占位待复核，判定暂不展示
 - `[未定位]` **cyberfox-lab-dsh-rss** — 占位待复核，判定暂不展示
 - `[未定位]` **cyberkitten0009-dsh-quota-dashboard** — 占位待复核，判定暂不展示
