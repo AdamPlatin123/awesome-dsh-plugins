@@ -1,14 +1,14 @@
 # 全量插件清单（统一四档口径）
 
-> 数据源：radar 快照并集（`20260904T034501Z` 2026-09-04 11:45 UTC+8 ⊕ `20260904T033001Z` 2026-09-04 11:30 UTC+8 ⊕ `20260904T031501Z` 2026-09-04 11:15 UTC+8 等 368 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
+> 数据源：radar 快照并集（`20260904T040001Z` 2026-09-04 12:00 UTC+8 ⊕ `20260904T034501Z` 2026-09-04 11:45 UTC+8 ⊕ `20260904T033001Z` 2026-09-04 11:30 UTC+8 等 369 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
 > 呈现：分组列表（状态 · 名称 · ★星标 · 一句话说明），不使用大表格；〔📦〕= 整合包（根 dsh.bundle / workspaces 多子包）。
 
 ## 统一度量衡
 
 **判定维度**（运行级四档；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：
 
-- 全量判定 17696（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12026）/ `[不兼容]`（3417）/ `[待定]`（2099）
-- 已定位明细 9108（本列表展示口径，另 8588 条监测/未定位的判定暂不展示）：`[可用]`（6171）/ `[不兼容]`（1701）/ `[待定]`（1127）/ `[未测]`（109）
+- 全量判定 17696（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12027）/ `[不兼容]`（3413）/ `[待定]`（2102）
+- 已定位明细 9108（本列表展示口径，另 8588 条监测/未定位的判定暂不展示）：`[可用]`（6171）/ `[不兼容]`（1700）/ `[待定]`（1128）/ `[未测]`（109）
 
 **定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：
 
@@ -608,6 +608,7 @@
 - `[可用]` [lssyd20070106-dsh-ui-preset-enhance](https://github.com/lssyd20070106/dsh-ui-preset-enhance) ★7 — Third-party DSH WebUI enhancement plugin: custom backgrounds, theme colors, prompt presets, token/context visi
 - `[待定]` [marisa-4219-deepseek-harness-quota-monitor](https://github.com/marisa-4219/deepseek-harness-quota-monitor) ★7 — DeepSeek Harness 多供应商额度监控插件：余额型 API 查询 + 限额型本地用量计量，侧边栏实时卡片 + 可视化配置
 - `[可用]` [maxwell-feng-dsh-windows-ocr](https://github.com/maxwell-feng/dsh-windows-ocr) ★7 — dsh plugin: OCR attached images locally with the built-in Windows OCR engine — text-only models can see, priva
+- `[待定]` [moguiyu-dsh-tavily](https://github.com/moguiyu/dsh-tavily) ★7 — Tavily-powered optional search tool for DeepSeek Harness (rc.7 plugin management): multi-key rotation/failover
 - `[可用]` [dsh-lan](https://github.com/moxisuki/dsh-lan) ★7 — DeepSeek Harness（dsh）的局域网插件：一条 overlay 把 dsh web 绑定到局域网，并通过 index tap 注入 crypto.randomUUID    │ polyfill 修复非安全
 - `[待定]` [plugin-template](https://github.com/omdsh-dev/plugin-template) ★7 — 基于原turtle ui官方仓库创建的plugin模板仓库
 - `[可用]` [ryubyte-dsh-a2a](https://github.com/ryubyte/dsh-a2a) ★7 — DSH 的 A2A v1.0 双端插件:Client 发现远程 Agent 并映射为工具,Server 对外提供 JSON-RPC/SSE 端点与连接面板 ｜ A2A v1.0 dual-mode DSH plugin:
@@ -2624,7 +2625,6 @@
 - `[不兼容]` [gxinxing-deepseek-harness-tui](https://github.com/gxinxing/deepseek-harness-tui) ★7 — Terminal-native interactive TUI for DeepSeek Harness (dsh) — built with Ink, React for terminals
 - `[不兼容]` [lihang-lh-dsh-task-panel](https://github.com/lihang-lh/dsh-task-panel) ★7 — 在 AI 时代让自己当老板，只负责发布和验收
 - `[不兼容]` [lxfu1-dsh-plugin-chart](https://github.com/lxfu1/dsh-plugin-chart) ★7 — DeepSeek Harness plugin that bundles the AntV chart visualization skill and a native chart-generation tool.
-- `[不兼容]` [moguiyu-dsh-tavily](https://github.com/moguiyu/dsh-tavily) ★7 — Tavily-powered optional search tool for DeepSeek Harness (rc.7 plugin management): multi-key rotation/failover
 - `[不兼容]` [dsh-sidechain](https://github.com/omdsh-dev/dsh-sidechain) ★7 — DSH 侧会话插件：/side 持续性侧会话（Codex 风格）与 /btw 一次性侧问（Claude 风格）——在临时 fork 中运行、不写入主会话历史；Web UI 右侧链面板内嵌对话，主会话保持不变
 - `[不兼容]` [pixellover1433-dsh-better-sidebar-lite](https://github.com/pixellover1433/dsh-better-sidebar-lite) ★7 — a simple plugin to improve web UX/UI for "Deepseek Harness (dsh)"
 - `[不兼容]` [shuind-dsh-codex-harness](https://github.com/shuind/dsh-codex) ★7 — —
@@ -6187,6 +6187,7 @@
 - `[未定位]` **modole-dsh-plugin-skills-laoboshi** — 占位待复核，判定暂不展示
 - `[未定位]` **mombrane-dsh-subagent-monitor** — 占位待复核，判定暂不展示
 - `[未定位]` **moonlitdropofblood-dsh-agent-approval** — 占位待复核，判定暂不展示
+- `[未定位]` **moononnn-deepseek-harness-hanako-memory** — 占位待复核，判定暂不展示
 - `[未定位]` **mrwoov-dsh-agent-md** — 占位待复核，判定暂不展示
 - `[可用]` [mryuanliu-dsh-prompt-presets](https://github.com/Mryuanliu/dsh-prompt-presets) ★0 — —
 - `[未定位]` **mshir0-context-graph-deepseek-harness** — 占位待复核，判定暂不展示
@@ -7218,7 +7219,6 @@
 - `[未定位]` **momojie-s-dsh-subagent-cleanup** — 占位待复核，判定暂不展示
 - `[未定位]` **momojie-s-dsh-subagent-idle-delivery** — 占位待复核，判定暂不展示
 - `[未定位]` **moonlitdropofblood-dsh-memory-manager** — 占位待复核，判定暂不展示
-- `[未定位]` **moononnn-deepseek-harness-hanako-memory** — 占位待复核，判定暂不展示
 - `[未定位]` **morewax-dsh-prime-agent** — 占位待复核，判定暂不展示
 - `[不兼容]` [morphlinglan-dsh-moa](https://github.com/morphlinglan/dsh-moa) ★0 — DeepSeek Harness plugin: Mixture of Agents (MoA) on-demand tool.
 - `[不兼容]` [mouzhengsama-dsh-browser-bridge](https://github.com/mouzhengsama/dsh-browser-bridge) ★0 — Self-hosted Browser Bridge plugin for dsh Desktop: expose a local workspace to web AI agents through protected
@@ -13051,6 +13051,7 @@
 - `[未定位]` **muredsa-dsh-benchup** — 占位待复核，判定暂不展示
 - `[未定位]` **murrayjoe-dsh-urge-risk-light** — 占位待复核，判定暂不展示
 - `[未定位]` **musclepatrickstar-fdtree** — 占位待复核，判定暂不展示
+- `[未定位]` **mutalucem-dsh-plugin-integration** — 占位待复核，判定暂不展示
 - `[待定]` [mwbimh-dsh-plugin](https://github.com/mwbimh/dsh-plugin) ★0 — —
 - `[可用]` [myg133-anspire-ai-search](https://github.com/myg133/anspire-ai-search) ★0 — —
 - `[待定]` [myk5010-dsh-llm-concurrency](https://github.com/myk5010/dsh-llm-concurrency) ★0 — —
@@ -13091,6 +13092,7 @@
 - `[未定位]` **noirbright-dsh-llm-ollama** — 占位待复核，判定暂不展示
 - `[未定位]` **noirbright-dsh-plugins** — 占位待复核，判定暂不展示
 - `[未定位]` **nokorinnishikino-kidai-snapshot-guard** — 占位待复核，判定暂不展示
+- `[未定位]` **nonshiranai-dshx** — 占位待复核，判定暂不展示
 - `[未定位]` **noone89a-dsh-gauge** — 占位待复核，判定暂不展示
 - `[未定位]` **normalfix-deepseek-harness-cli** — 占位待复核，判定暂不展示
 - `[未定位]` **normanfxxkingrockwell-dsh-keyboard-history** — 占位待复核，判定暂不展示
@@ -17125,7 +17127,6 @@
 - `[未定位]` **mrlukezy-dsh-cloud-gateway** — 占位待复核，判定暂不展示
 - `[未定位]` **mu-scorpio-token-usage-counter** — 占位待复核，判定暂不展示
 - `[不兼容]` [muou000-improved-compact](https://github.com/muou000/improved-compact) ★0 — —
-- `[未定位]` **mutalucem-dsh-plugin-integration** — 占位待复核，判定暂不展示
 - `[未定位]` **myyangyunfan-dsh-cardian** — 占位待复核，判定暂不展示
 - `[未定位]` **necromanalbert-dsh-show-media** — 占位待复核，判定暂不展示
 - `[未定位]` **netmind-ai-dsh-narra-channel** — 占位待复核，判定暂不展示
@@ -17135,7 +17136,6 @@
 - `[未定位]` **noirbright-dsh-llm-cursor** — 占位待复核，判定暂不展示
 - `[未定位]` **noirbright-dsh-model-switch** — 占位待复核，判定暂不展示
 - `[未定位]` **noname-2121237-dsh-timeline** — 占位待复核，判定暂不展示
-- `[未定位]` **nonshiranai-dshx** — 占位待复核，判定暂不展示
 - `[未定位]` **norman-else-dsh-claude** — 占位待复核，判定暂不展示
 - `[未定位]` **normanfxxkingrockwell-dsh-auto-vision** — 占位待复核，判定暂不展示
 - `[未定位]` **not-big-dog-dsh-pipeline-kernel** — 占位待复核，判定暂不展示
