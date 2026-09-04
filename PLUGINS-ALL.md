@@ -1,14 +1,14 @@
 # 全量插件清单（统一四档口径）
 
-> 数据源：radar 快照并集（`20260904T233001Z` 2026-09-05 07:30 UTC+8 ⊕ `20260904T223004Z` 2026-09-05 06:30 UTC+8 ⊕ `20260904T221501Z` 2026-09-05 06:15 UTC+8 等 410 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
+> 数据源：radar 快照并集（`20260904T234501Z` 2026-09-05 07:45 UTC+8 ⊕ `20260904T233001Z` 2026-09-05 07:30 UTC+8 ⊕ `20260904T223004Z` 2026-09-05 06:30 UTC+8 等 411 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
 > 呈现：分组列表（状态 · 名称 · ★星标 · 一句话说明），不使用大表格；〔📦〕= 整合包（根 dsh.bundle / workspaces 多子包）。
 
 ## 统一度量衡
 
 **判定维度**（运行级四档；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：
 
-- 全量判定 17971（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12247）/ `[不兼容]`（3403）/ `[待定]`（2167）
-- 已定位明细 9230（本列表展示口径，另 8741 条监测/未定位的判定暂不展示）：`[可用]`（6257）/ `[不兼容]`（1699）/ `[待定]`（1165）/ `[未测]`（109）
+- 全量判定 17971（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12246）/ `[不兼容]`（3404）/ `[待定]`（2167）
+- 已定位明细 9230（本列表展示口径，另 8741 条监测/未定位的判定暂不展示）：`[可用]`（6256）/ `[不兼容]`（1700）/ `[待定]`（1165）/ `[未测]`（109）
 
 **定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：
 
@@ -13456,7 +13456,6 @@
 - `[未定位]` **ranz-feng-dsh-web-import** — 占位待复核，判定暂不展示
 - `[未定位]` **raullazaro-dsh-pwa-plugin** — 占位待复核，判定暂不展示
 - `[未定位]` **raullazaro-dsh-server-setup** — 占位待复核，判定暂不展示
-- `[可用]` [raybbish-dsh-poker-plugin](https://github.com/Raybbish/dsh-poker-plugin) ★0 — —
 - `[未定位]` **raywh-dsh-song-download** — 占位待复核，判定暂不展示
 - `[可用]` [rchen1207-dsh-password-generator](https://github.com/rchen1207/dsh-password-generator) ★0 — 生成密码，只生不存
 - `[未定位]` **ready22race-dsh-team-task** — 占位待复核，判定暂不展示
@@ -17457,6 +17456,7 @@
 - `[未定位]` **quanweng-token-usage-heatmap** — 占位待复核，判定暂不展示
 - `[不兼容]` [randomix777-dsh-sprite-gen](https://github.com/randomix777/dsh-sprite-gen) ★0 — Sprite Sheet Generator with AI Image Generation for DeepSeek Harness
 - `[未定位]` **raphaelutumn-dsh-mood** — 占位待复核，判定暂不展示
+- `[不兼容]` [raybbish-dsh-poker-plugin](https://github.com/Raybbish/dsh-poker-plugin) ★0 — —
 - `[未定位]` **rayzpub-dsh-plugin-garmin** — 占位待复核，判定暂不展示
 - `[未定位]` **re-itrt-dsh-keyring** — 占位待复核，判定暂不展示
 - `[未定位]` **rhymer-lcy-dsh-plugin-loud-failure** — 占位待复核，判定暂不展示
