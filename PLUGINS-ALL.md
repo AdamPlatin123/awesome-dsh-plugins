@@ -1,14 +1,14 @@
 # 全量插件清单（统一四档口径）
 
-> 数据源：radar 快照并集（`20260904T221501Z` 2026-09-05 06:15 UTC+8 ⊕ `20260904T220001Z` 2026-09-05 06:00 UTC+8 ⊕ `20260904T214501Z` 2026-09-05 05:45 UTC+8 等 408 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
+> 数据源：radar 快照并集（`20260904T223004Z` 2026-09-05 06:30 UTC+8 ⊕ `20260904T221501Z` 2026-09-05 06:15 UTC+8 ⊕ `20260904T220001Z` 2026-09-05 06:00 UTC+8 等 409 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
 > 呈现：分组列表（状态 · 名称 · ★星标 · 一句话说明），不使用大表格；〔📦〕= 整合包（根 dsh.bundle / workspaces 多子包）。
 
 ## 统一度量衡
 
 **判定维度**（运行级四档；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：
 
-- 全量判定 17971（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12255）/ `[不兼容]`（3400）/ `[待定]`（2162）
-- 已定位明细 9230（本列表展示口径，另 8741 条监测/未定位的判定暂不展示）：`[可用]`（6265）/ `[不兼容]`（1697）/ `[待定]`（1159）/ `[未测]`（109）
+- 全量判定 17971（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12254）/ `[不兼容]`（3401）/ `[待定]`（2162）
+- 已定位明细 9230（本列表展示口径，另 8741 条监测/未定位的判定暂不展示）：`[可用]`（6264）/ `[不兼容]`（1697）/ `[待定]`（1160）/ `[未测]`（109）
 
 **定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：
 
@@ -4067,7 +4067,6 @@
 - `[未定位]` **daetz-coder-dsh-mobile** — 占位待复核，判定暂不展示
 - `[可用]` [daief-dsh-nushell](https://github.com/daief/dsh-nushell) ★0 — —
 - `[可用]` [daveycodez-dsh-llm-agent-bridge](https://github.com/daveycodez/dsh-llm-agent-bridge) ★0 — Claude as a selectable LLM provider in DeepSeek Harness, via Anthropic's official Claude Agent SDK
-- `[未定位]` **dayi-z-gitcompass** — 占位待复核，判定暂不展示
 - `[未定位]` **dda-digital-dsh-deepseek-peak-indicator** — 占位待复核，判定暂不展示
 - `[可用]` [dengyier-openworkproof-dsh-plugin](https://github.com/dengyier/openworkproof-dsh-plugin) ★0 — Community DeepSeek Harness plugin for verifiable AI agent authorization, execution evidence, and offline deliv
 - `[未定位]` **devviking-persike-dsh-cliproxy** — 占位待复核，判定暂不展示
@@ -5069,6 +5068,7 @@
 - `[未定位]` **codeideal-dsh-review** — 占位待复核，判定暂不展示
 - `[未定位]` **cooberped-dsh-evidence** — 占位待复核，判定暂不展示
 - `[不兼容]` [cyjyyd-dsh-llm-xai-oauth](https://github.com/cyjyyd/dsh-llm-xai-oauth) ★0 — Native SuperGrok / X Premium OAuth provider for DeepSeek Harness
+- `[未定位]` **dayi-z-gitcompass** — 占位待复核，判定暂不展示
 - `[未定位]` **dddfxyqiming-dsh-side-panel-patched** — 占位待复核，判定暂不展示
 - `[未定位]` **easytz-dsh-git** — 占位待复核，判定暂不展示
 - `[未定位]` **easytz-dsh-terminal-panel** — 占位待复核，判定暂不展示
@@ -5359,7 +5359,7 @@
 - `[待定]` [hanelalo-browser-bridge](https://github.com/hanelalo/browser-bridge) ★36 — 让你的agent真的像你一样操控你的浏览器窗口
 - `[可用]` [a735624258-dsh-skill-picker](https://github.com/a735624258/dsh-skill-picker) ★27 — DSH 实现 workbuddy 同款选择 skill 功能 \| WorkBuddy-style skill picker for DeepSeek Harness: pick a skill in the compos
 - `[可用]` [openguardrails-openguardrails](https://github.com/openguardrails/openguardrails) ★27 — The vendor-neutral protocol for AI agent safety & security — and the neutral benchmark that ranks the vendors.〔📦〕
-- `[可用]` [upstash-skills](https://github.com/upstash/skills) ★25 — Collection of skills for Upstash
+- `[待定]` [upstash-skills](https://github.com/upstash/skills) ★25 — Collection of skills for Upstash
 - `[待定]` [billion-context-dsh](https://github.com/Tyan66666/billion-context-dsh) ★24 — Model-driven context management (Active Context Pruning / ACP) for the DeepSeek Harness — the model decides wh
 - `[可用]` [sailoumili-novel-writer](https://github.com/sailoumili/novel-writer) ★23 — 小说创作模式：一个统筹队长统领全局，5 个专职子代理各司其职——架构世界、策划剧情、管理人物、执笔写文、质检复核——协同写作
 - `[可用]` [atlascloudai-atlas-cloud-skills](https://github.com/AtlasCloudAI/atlas-cloud-skills) ★22 — —
