@@ -1,6 +1,6 @@
 {
  "schema": "dsh-radar/v1",
- "generated_at": "2026-09-04T01:45:35Z",
+ "generated_at": "2026-09-04T02:00:34Z",
  "plugins": [
   {
    "repo": "perrylink/dsh-fast",
