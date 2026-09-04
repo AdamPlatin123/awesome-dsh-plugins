@@ -1,14 +1,14 @@
 # 全量插件清单（统一四档口径）
 
-> 数据源：radar 快照并集（`20260904T003001Z` 2026-09-04 08:30 UTC+8 ⊕ `20260904T001501Z` 2026-09-04 08:15 UTC+8 ⊕ `20260904T000001Z` 2026-09-04 08:00 UTC+8 等 355 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
+> 数据源：radar 快照并集（`20260904T004501Z` 2026-09-04 08:45 UTC+8 ⊕ `20260904T003001Z` 2026-09-04 08:30 UTC+8 ⊕ `20260904T001501Z` 2026-09-04 08:15 UTC+8 等 356 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
 > 呈现：分组列表（状态 · 名称 · ★星标 · 一句话说明），不使用大表格；〔📦〕= 整合包（根 dsh.bundle / workspaces 多子包）。
 
 ## 统一度量衡
 
 **判定维度**（运行级四档；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：
 
-- 全量判定 17696（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12028）/ `[不兼容]`（3447）/ `[待定]`（2067）
-- 已定位明细 9108（本列表展示口径，另 8588 条监测/未定位的判定暂不展示）：`[可用]`（6180）/ `[不兼容]`（1711）/ `[待定]`（1108）/ `[未测]`（109）
+- 全量判定 17696（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12027）/ `[不兼容]`（3447）/ `[待定]`（2068）
+- 已定位明细 9108（本列表展示口径，另 8588 条监测/未定位的判定暂不展示）：`[可用]`（6179）/ `[不兼容]`（1711）/ `[待定]`（1109）/ `[未测]`（109）
 
 **定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：
 
@@ -629,7 +629,7 @@
 - `[可用]` [askman-dev-dsh-canvas-design-harness](https://github.com/askman-dev/dsh-canvas-design-harness) ★6 — A DeepSeek Harness plugin and AI skill for Figma-style canvas design
 - `[可用]` [balcoz-dsh-ocr-local](https://github.com/balcoz/dsh-ocr-local) ★6 — DeepSeek Harness 本地 OCR 插件：粘贴图片，PP-OCRv5 + ONNX Runtime   识别文字，完全离线，支持 TUI 与 Web \| Local OCR plugin for DeepSe
 - `[可用]` [biggerboy-dsh-conversation-anchors](https://github.com/biggerboy/dsh-conversation-anchors) ★6 — Codex-style tick-rail and thinking-process fold for DeepSeek Harness Web GUI: per-turn dashes, hover preview,
-- `[可用]` [chiro2001-dsh-oc](https://github.com/chiro2001/dsh-oc) ★6 — DeepSeek Harness × OpenCode TUI 前端：把 dsh 的 Agent、会话、工具接入官方 opencode 终端
+- `[待定]` [chiro2001-dsh-oc](https://github.com/chiro2001/dsh-oc) ★6 — DeepSeek Harness × OpenCode TUI 前端：把 dsh 的 Agent、会话、工具接入官方 opencode 终端
 - `[可用]` [cindyguyuehu123-dsh-mobile](https://github.com/cindyguyuehu123/dsh-mobile) ★6 — Use DeepSeek Harness from your iPhone / iPad: LAN reverse proxy, iOS PWA (add-to-home-screen) chrome, and touc
 - `[可用]` [dsh-niao-dsh-niao-quick-open](https://github.com/dsh-niao/dsh-niao-quick-open) ★6 — 会话/工作区快捷操作插件：一键打开工作区、编辑器自动发现、DeepSeek 网页版同款用户消息导航条、会话待办标记、硬性重启
 - `[可用]` [enterhalf-dsh-web-network-optimizer](https://github.com/enterhalf/dsh-web-network-optimizer) ★6 — dsh网页端网络优化：通过缓存与压缩技术降低传输，从而大幅提升网页加载速度；同时提供网络断连指示与自动断网重连功能
@@ -12964,7 +12964,6 @@
 - `[可用]` [mengruoa-dsh-vision-toolkit](https://github.com/mengruoa/dsh-vision-toolkit) ★0 — —
 - `[未定位]` **mengshang-spec-dsh-plugin-trustlens** — 占位待复核，判定暂不展示
 - `[未定位]` **mengshang-spec-dsh-third-party-api-balance-wa** — 占位待复核，判定暂不展示
-- `[未定位]` **meowlynxsea-dsh-cot-summerization** — 占位待复核，判定暂不展示
 - `[未定位]` **meowtnt3r-catalog-capabilities-zh** — 占位待复核，判定暂不展示
 - `[未定位]` **merenguesl-dsh-tool-normalizer** — 占位待复核，判定暂不展示
 - `[可用]` [mervyn-teo-dsh-plugin-background](https://github.com/mervyn-teo/dsh-plugin-background) ★0 — —
@@ -13458,6 +13457,7 @@
 - `[未定位]` **theonelee-deepseek-harness-sdk-go** — 占位待复核，判定暂不展示
 - `[待定]` [ther000-dshweblauncher](https://github.com/ther000/DshWebLauncher) ★0 — —
 - `[未定位]` **thewolfwalker-dsh-coyote** — 占位待复核，判定暂不展示
+- `[未定位]` **thewolfwalker-dsh-notifier** — 占位待复核，判定暂不展示
 - `[未定位]` **thisissevenpoints-deepseek-harness-local-svpt** — 占位待复核，判定暂不展示
 - `[未定位]` **threebody6666-dsh-computer-use** — 占位待复核，判定暂不展示
 - `[可用]` [thrudcoco-dsh-peak-hours-banner](https://github.com/thrudcoco/dsh-peak-hours-banner) ★0 — —
@@ -17113,6 +17113,7 @@
 - `[未定位]` **meghanbao-dsh-backstory** — 占位待复核，判定暂不展示
 - `[未定位]` **meghanbao-dsh-crumbs** — 占位待复核，判定暂不展示
 - `[不兼容]` [menantonio83-hue-tnt-house](https://github.com/menantonio83-hue/tnt-house) ★0 — TNT House - Safe New Tokens Platform
+- `[未定位]` **meowlynxsea-dsh-cot-summerization** — 占位待复核，判定暂不展示
 - `[未定位]` **merenguesl-dsh-usage-atlas** — 占位待复核，判定暂不展示
 - `[未定位]` **mingyu-kalo-dsh-https-fix** — 占位待复核，判定暂不展示
 - `[未定位]` **mkaliezz-dsh-action-ledger** — 占位待复核，判定暂不展示
@@ -17259,7 +17260,6 @@
 - `[未定位]` **thanksgiver233-comm-protocol-hub** — 占位待复核，判定暂不展示
 - `[未定位]` **thechengxi-intent-flow** — 占位待复核，判定暂不展示
 - `[不兼容]` [therain2020-dsh-obsidian-sync](https://github.com/therain2020/dsh-obsidian-sync) ★0 — Obsidian vault tools for DeepSeek Harness: write/read markdown notes with path-traversal protection
-- `[未定位]` **thewolfwalker-dsh-notifier** — 占位待复核，判定暂不展示
 - `[不兼容]` [tianhanly-dsh-genshin-redirect](https://github.com/tianhanly/dsh-genshin-redirect) ★0 — 完成任务自动跳转到原神 Automatically jump to Genshin Impact after completing the task
 - `[未定位]` **tianxia-dsh-llm-local-token** — 占位待复核，判定暂不展示
 - `[未定位]` **tieboyh-dsh-notes-markdown** — 占位待复核，判定暂不展示
