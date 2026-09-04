@@ -1,14 +1,14 @@
 # 全量插件清单（统一四档口径）
 
-> 数据源：radar 快照并集（`20260904T111501Z` 2026-09-04 19:15 UTC+8 ⊕ `20260904T110001Z` 2026-09-04 19:00 UTC+8 ⊕ `20260904T104501Z` 2026-09-04 18:45 UTC+8 等 391 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
+> 数据源：radar 快照并集（`20260904T113001Z` 2026-09-04 19:30 UTC+8 ⊕ `20260904T111501Z` 2026-09-04 19:15 UTC+8 ⊕ `20260904T110001Z` 2026-09-04 19:00 UTC+8 等 392 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
 > 呈现：分组列表（状态 · 名称 · ★星标 · 一句话说明），不使用大表格；〔📦〕= 整合包（根 dsh.bundle / workspaces 多子包）。
 
 ## 统一度量衡
 
 **判定维度**（运行级四档；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：
 
-- 全量判定 17713（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12036）/ `[不兼容]`（3370）/ `[待定]`（2153）
-- 已定位明细 9111（本列表展示口径，另 8602 条监测/未定位的判定暂不展示）：`[可用]`（6167）/ `[不兼容]`（1680）/ `[待定]`（1155）/ `[未测]`（109）
+- 全量判定 17713（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12035）/ `[不兼容]`（3370）/ `[待定]`（2154）
+- 已定位明细 9111（本列表展示口径，另 8602 条监测/未定位的判定暂不展示）：`[可用]`（6166）/ `[不兼容]`（1680）/ `[待定]`（1156）/ `[未测]`（109）
 
 **定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：
 
@@ -10069,7 +10069,7 @@
 - `[可用]` [xiangshangya-deepseek-harness-desktop](https://github.com/xiangshangya/deepseek-harness-desktop) ★0 — Electron desktop app for DeepSeek Harness: bundles the dsh web server and its frontend into one installable ap
 - `[可用]` [xiangziqingning-deepseek-harness-desktop](https://github.com/xiangziqingning/deepseek-harness-desktop) ★0 — DeepSeek Harness 桌面版（自更新）
 - `[未定位]` **xiaoran630-deepseek-harness-desktop** — 占位待复核，判定暂不展示
-- `[可用]` [xiaosenho-dsh-plugin-remote-access](https://github.com/xiaosenho/dsh-plugin-remote-access) ★0 — dsh远程访问插件，支持局域网和公网隧道连接
+- `[待定]` [xiaosenho-dsh-plugin-remote-access](https://github.com/xiaosenho/dsh-plugin-remote-access) ★0 — dsh远程访问插件，支持局域网和公网隧道连接
 - `[可用]` [xiaowangzhixiao-deepseek-harness-desktop](https://github.com/xiaowangzhixiao/deepseek-harness-desktop) ★0 — Standalone Electron desktop distribution of DeepSeek Harness
 - `[待定]` [xiaoxiaohai-dsh-remote](https://github.com/xiaoxiaohai/dsh-remote) ★0 — Secure, opt-in phone access for DeepSeek Harness Web on macOS.
 - `[可用]` [xiaoyuxiaoyuqwq-dsh-desktop](https://github.com/xiaoyuxiaoyuqwq/dsh-desktop) ★0 — DeepSeek Harness 简易桌面端，可供一键式启动
