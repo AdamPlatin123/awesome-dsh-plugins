@@ -1,11 +1,11 @@
 {
  "schema": "dsh-radar/v1",
- "generated_at": "2026-09-04T01:00:43Z",
- "snapshot_run_id": "20260904T010001Z",
+ "generated_at": "2026-09-04T01:15:37Z",
+ "snapshot_run_id": "20260904T011501Z",
  "stats": {
-  "ok": 6177,
-  "incompatible": 1711,
-  "pending": 1111,
+  "ok": 6172,
+  "incompatible": 1707,
+  "pending": 1120,
   "untested": 109,
   "gone": 133,
   "ambiguous": 103,
