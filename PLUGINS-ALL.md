@@ -1,14 +1,14 @@
 # 全量插件清单（统一四档口径）
 
-> 数据源：radar 快照并集（`20260904T091502Z` 2026-09-04 17:15 UTC+8 ⊕ `20260904T084501Z` 2026-09-04 16:45 UTC+8 ⊕ `20260904T083002Z` 2026-09-04 16:30 UTC+8 等 386 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
+> 数据源：radar 快照并集（`20260904T093001Z` 2026-09-04 17:30 UTC+8 ⊕ `20260904T091502Z` 2026-09-04 17:15 UTC+8 ⊕ `20260904T084501Z` 2026-09-04 16:45 UTC+8 等 387 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
 > 呈现：分组列表（状态 · 名称 · ★星标 · 一句话说明），不使用大表格；〔📦〕= 整合包（根 dsh.bundle / workspaces 多子包）。
 
 ## 统一度量衡
 
 **判定维度**（运行级四档；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：
 
-- 全量判定 17713（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12037）/ `[不兼容]`（3386）/ `[待定]`（2136）
-- 已定位明细 9111（本列表展示口径，另 8602 条监测/未定位的判定暂不展示）：`[可用]`（6168）/ `[不兼容]`（1685）/ `[待定]`（1149）/ `[未测]`（109）
+- 全量判定 17713（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12037）/ `[不兼容]`（3382）/ `[待定]`（2140）
+- 已定位明细 9111（本列表展示口径，另 8602 条监测/未定位的判定暂不展示）：`[可用]`（6168）/ `[不兼容]`（1683）/ `[待定]`（1151）/ `[未测]`（109）
 
 **定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：
 
@@ -5709,6 +5709,7 @@
 - `[待定]` [ddtcorex-dsh-maestro-govard](https://github.com/ddtcorex/dsh-maestro-govard) ★1 — Thin bridge exposing the Govard CLI to DeepSeek Harness agents as tools.
 - `[待定]` [ddtcorex-dsh-maestro-sync](https://github.com/ddtcorex/dsh-maestro-sync) ★1 — Maestro harness sync — merge memories and sessions across machines (publishable)
 - `[可用]` [deluo-dsh-usage-display](https://github.com/deluo/dsh-usage-display) ★1 — 在 dsh（DeepSeek Harness）会话头部展示模型厂商余额/用量徽标的插件：内置 DeepSeek 余额、MiniMax Token Plan 与智谱 GLM Coding Plan 配额，适配器架构支持接入
+- `[待定]` [devmom-dsh-session-import](https://github.com/devmom/dsh-session-import) ★1 — —
 - `[可用]` [dingyi580-dsh-conversation-rail](https://github.com/dingyi580/dsh-conversation-rail) ★1 — Session minimap for DSH Web — one bar per turn, hover to preview, click to jump · DSH 会话小地图：一根杠一轮对话，悬停预览，点击跳转
 - `[可用]` [directwire-culmen](https://github.com/directwire/culmen) ★1 — persona/v1 — 通用智能体人格格式：定义有记忆、会成长、有关系的 AI 如何落盘、迁移、在任意实现（Claude CLI / OpenClaw / Hermes / 自建运行时）间互换
 - `[可用]` [doublehappy123-dsh-memory](https://github.com/doublehappy123/dsh-memory) ★1 — —
@@ -5962,6 +5963,7 @@
 - `[未定位]` **ciyuan1234-mcm-skills** — 占位待复核，判定暂不展示
 - `[未定位]` **cjl-1995-dsh-session-health** — 占位待复核，判定暂不展示
 - `[未定位]` **clapeill-dsh-skill-manager** — 占位待复核，判定暂不展示
+- `[待定]` [clawdwan-orbit-dsh-plugin](https://github.com/clawdwan/orbit-dsh-plugin) ★0 — DeepSeek Harness 上的反思层插件，把 Agent 的每一步记录成「假设→任务→结果」的证据链，蒸馏出以客观 done_when 为锚的可复用经验，让 Agent 累积每做一次就变好一点
 - `[可用]` [cndn-dsh-d1](https://github.com/cndn/dsh-d1) ★0 — Cloudflare D1 tools for the DeepSeek Harness (dsh): read-only first, approval-gated writes, zero runtime depen
 - `[未定位]` **coaseedge-agentnavi** — 占位待复核，判定暂不展示
 - `[未定位]` **cocosgt-dsh-skills** — 占位待复核，判定暂不展示
@@ -7084,7 +7086,6 @@
 - `[不兼容]` [chinazkk-dsh-task-panel](https://github.com/chinazkk/dsh-task-panel) ★1 — DSH Web task panel for queued sub-agent execution, scheduled runs, auto review, acceptance, rework, and histor
 - `[不兼容]` [couldbeme-dsh-write-gate](https://github.com/couldbeme/dsh-write-gate) ★1 — Commitment write-gate for AI coding agents: two-tier pre-execution policy (deterministic guard + LLM judge) wi
 - `[不兼容]` [dat-lequoc-dsh-supervisor](https://github.com/dat-lequoc/dsh-supervisor) ★1 — Always-on supervisor agent bundle for DeepSeek Harness: main-agent preset + schedule overlay, one dsh plugin a
-- `[不兼容]` [devmom-dsh-session-import](https://github.com/devmom/dsh-session-import) ★1 — —
 - `[不兼容]` [esonx-dsh-project-j4agent](https://github.com/esonx/dsh-project-j4agent) ★1 — Agent-native Software Development Lifecycle Management for DeepSeek Harness
 - `[不兼容]` [fatatalia-dsh-dreaming](https://github.com/fatatalia/dsh-dreaming) ★1 — dsh 梦境记忆整合插件：凌晨随机窗口把记忆梦境化（裸上下文 narrative 纯梦写作）+ 信号驱动洞察晋升 + MEMORY.md 预算管理，随 dsh web 启停
 - `[不兼容]` [fjzzwxp-dsh-mnemosyne-memory](https://github.com/fjzzwxp/dsh-mnemosyne-memory) ★1 — Mnemosyne 永久记忆插件 - 为 DSH 提供长期记忆、向量搜索和 LLM 反思功能，对标 Hindsight Coding Agents
@@ -7147,7 +7148,6 @@
 - `[未定位]` **chhlafiu4312-promptwall** — 占位待复核，判定暂不展示
 - `[不兼容]` [chocobo77-dsh-infinite-context](https://github.com/chocobo77/dsh-infinite-context) ★0 — DeepSeek Harness plugin: multi-tier memory management, semantic retrieval, structured memory, and model-contex
 - `[未定位]` **cjl-1995-dsh-memory-self-evolution** — 占位待复核，判定暂不展示
-- `[不兼容]` [clawdwan-orbit-dsh-plugin](https://github.com/clawdwan/orbit-dsh-plugin) ★0 — DeepSeek Harness 上的反思层插件，把 Agent 的每一步记录成「假设→任务→结果」的证据链，蒸馏出以客观 done_when 为锚的可复用经验，让 Agent 累积每做一次就变好一点
 - `[不兼容]` [coffee-man666-dsh-lens](https://github.com/coffee-man666/dsh-lens) ★0 — Repository and agent-runtime analysis skills as an installable DeepSeek Harness (dsh) plugin
 - `[不兼容]` [cransmathenia666-hash-dsh-skill-mcp-stats](https://github.com/cransmathenia666-hash/dsh-skill-mcp-stats) ★0 — Per-turn skill & MCP usage stats for DeepSeek Harness (dsh) - see what tools the agent used, with per-message
 - `[未定位]` **cryonnan-gatecraft-math-modeling-skills** — 占位待复核，判定暂不展示
@@ -12135,6 +12135,7 @@
 - `[未定位]` **chenchen913-dsh-security-doctor** — 占位待复核，判定暂不展示
 - `[可用]` [chendengyuanxm-dsh-plugin-security-audit](https://github.com/chendengyuanxm/dsh-plugin-security-audit) ★0 — Static security audit for dynamic Cordis plugins in DeepSeek Harness (DSH): rule-based source scanning, risk r
 - `[未定位]` **cheng-cheng9669-dsh-cache-precision** — 占位待复核，判定暂不展示
+- `[未定位]` **cheng-xiu-dsh-auto-scheduler** — 占位待复核，判定暂不展示
 - `[未定位]` **chengxiucdp-dsh-plugin-advisor** — 占位待复核，判定暂不展示
 - `[未定位]` **chengxiucdp-dsh-plugin-hub** — 占位待复核，判定暂不展示
 - `[未定位]` **chenning-tao-dsh-plugin-balance** — 占位待复核，判定暂不展示
@@ -12156,6 +12157,7 @@
 - `[未定位]` **christianreevee-dsh-xiuxian-world** — 占位待复核，判定暂不展示
 - `[未定位]` **christophersmith2737-commits-offpeak** — 占位待复核，判定暂不展示
 - `[未定位]` **chuantianml-dsh-local-share** — 占位待复核，判定暂不展示
+- `[未定位]` **chuantianml-dsh-open-with** — 占位待复核，判定暂不展示
 - `[未定位]` **civaapple-alt-pi-cordis** — 占位待复核，判定暂不展示
 - `[未定位]` **ck-epsilon-aura-vision** — 占位待复核，判定暂不展示
 - `[未定位]` **clancyliao-dsh-plugins** — 占位待复核，判定暂不展示
@@ -16923,7 +16925,6 @@
 - `[不兼容]` [che-year-dsh-unidoc](https://github.com/Che-Year/dsh-unidoc) ★0 — —
 - `[未定位]` **chemmy-11-dsh-xuegulin** — 占位待复核，判定暂不展示
 - `[未定位]` **cheng-cheng9669-dsh-deepseek-vision** — 占位待复核，判定暂不展示
-- `[未定位]` **cheng-xiu-dsh-auto-scheduler** — 占位待复核，判定暂不展示
 - `[未定位]` **chenghaoyang-dsh-regression** — 占位待复核，判定暂不展示
 - `[未定位]` **chenjie1129-deepseek-harness-reliability-gove** — 占位待复核，判定暂不展示
 - `[不兼容]` [chenjieya-dsh-runbook-ops](https://github.com/chenjieya/dsh-runbook-ops) ★0 — DeepSeek Harness 社区 Runbook 插件：用 YAML 管理开发、测   试、发布和运维 SOP，并将流程暴露为可校验、可审计的 Harness   工具
@@ -16932,7 +16933,6 @@
 - `[未定位]` **chhlafiu4312-citeguard** — 占位待复核，判定暂不展示
 - `[未定位]` **chiyulogg-commits-deepseek-harness-sentence-r** — 占位待复核，判定暂不展示
 - `[未定位]` **chouyong-dsh-effect-doctor** — 占位待复核，判定暂不展示
-- `[未定位]` **chuantianml-dsh-open-with** — 占位待复核，判定暂不展示
 - `[未定位]` **circleyan-whiteboat-dsh** — 占位待复核，判定暂不展示
 - `[未定位]` **cjackhwang-succinix** — 占位待复核，判定暂不展示
 - `[未定位]` **cking000bigdemon-dsh-acp-interactive** — 占位待复核，判定暂不展示
