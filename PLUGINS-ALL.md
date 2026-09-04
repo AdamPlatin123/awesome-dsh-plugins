@@ -1,14 +1,14 @@
 # 全量插件清单（统一四档口径）
 
-> 数据源：radar 快照并集（`20260904T033001Z` 2026-09-04 11:30 UTC+8 ⊕ `20260904T031501Z` 2026-09-04 11:15 UTC+8 ⊕ `20260904T030001Z` 2026-09-04 11:00 UTC+8 等 367 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
+> 数据源：radar 快照并集（`20260904T034501Z` 2026-09-04 11:45 UTC+8 ⊕ `20260904T033001Z` 2026-09-04 11:30 UTC+8 ⊕ `20260904T031501Z` 2026-09-04 11:15 UTC+8 等 368 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
 > 呈现：分组列表（状态 · 名称 · ★星标 · 一句话说明），不使用大表格；〔📦〕= 整合包（根 dsh.bundle / workspaces 多子包）。
 
 ## 统一度量衡
 
 **判定维度**（运行级四档；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：
 
-- 全量判定 17696（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12024）/ `[不兼容]`（3421）/ `[待定]`（2097）
-- 已定位明细 9108（本列表展示口径，另 8588 条监测/未定位的判定暂不展示）：`[可用]`（6171）/ `[不兼容]`（1703）/ `[待定]`（1125）/ `[未测]`（109）
+- 全量判定 17696（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12026）/ `[不兼容]`（3417）/ `[待定]`（2099）
+- 已定位明细 9108（本列表展示口径，另 8588 条监测/未定位的判定暂不展示）：`[可用]`（6171）/ `[不兼容]`（1701）/ `[待定]`（1127）/ `[未测]`（109）
 
 **定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：
 
@@ -164,6 +164,7 @@
 - `[可用]` [kkkkkklze-dsh-plugin-manager](https://github.com/kkkkkklze/dsh-plugin-manager) ★2 — In-web plugin manager for DeepSeek Harness: categorized list, tags, one-click preset switching, plugin marketp
 - `[可用]` [dsh-plugins-market](https://github.com/Luaphes/dsh-plugins-market) ★2 — —
 - `[可用]` [maque2333-dsh-profile-manager](https://github.com/maque2333/dsh-profile-manager) ★2 — A DeepSeek Harness Profile manager
+- `[待定]` [mocchh-dsh-better-launcher](https://github.com/mocchh/dsh-better-launcher) ★2 — dsh start / stop / status - one-command lifecycle manager for DeepSeek Harness
 - `[待定]` [phil616-dsh-plugin-market](https://github.com/phil616/dsh-plugin-market) ★2 — DeepSeek Harness 插件市场
 - `[待定]` [piccolo123-url-manager](https://github.com/Piccolo123/url-manager) ★2 — —
 - `[可用]` [space-spacee-clamation-dsh-package-manager](https://github.com/space-spacee-clamation/dsh-package-manager) ★2 — dsh包管理器中间件，对原有的add的模式进行的封装，支持预设和插件  （内容还在迭代!!!!）
@@ -391,7 +392,6 @@
 - `[不兼容]` [dshhub-co-dshhub-market](https://github.com/dshhub-co/dshhub-market) ★3 — DeepSeek Harness 口令插件市场客户端：输码解锁插件，连接创作者与买家（DSHHub.co 驱动）
 - `[不兼容]` [accpowered-dsh-credential-manager](https://github.com/accpowered/dsh-credential-manager) ★2 — Named user credentials for DeepSeek Harness: model-facing credential tools, DSH_CM_* shell variables, and a Se
 - `[不兼容]` [ciceroyang-dsh-doctor](https://github.com/ciceroyang/dsh-doctor) ★2 — One-command health check for DeepSeek Harness local environments
-- `[不兼容]` [mocchh-dsh-better-launcher](https://github.com/mocchh/dsh-better-launcher) ★2 — dsh start / stop / status - one-command lifecycle manager for DeepSeek Harness
 - `[不兼容]` [wacly-dsh-dynamic-plugin-manage](https://github.com/wacly/dsh-dynamic-plugins-manager) ★2 — deepseek harness 动态插件管理
 - `[不兼容]` [xia-sc-dsh-cc-studio](https://github.com/xia-sc/dsh-cc-studio) ★2 — dsh-cc-studio · CCv3 角色卡工坊 从一句话点子到可导入 SillyTavern / Risu 的 chara_card_v3
 - `[不兼容]` [dsh-dynplugin-manager](https://github.com/Thomas-key/dsh-dynplugin-manager) ★2 — Manage DeepSeek Harness dynamic plugins: scan local directories, browse, and load with /dyn slash commands
@@ -678,6 +678,7 @@
 - `[可用]` [lsaa4-dsh-custom-ui](https://github.com/lsaa4/dsh-custom-ui) ★5 — 毛玻璃风格DSH主题，含壁纸、字体定制与网易云音乐
 - `[可用]` [dsh-web-attention-badge](https://github.com/Luaphes/dsh-web-attention-badge) ★5 — Attention reminders for the DeepSeek Harness Web UI: frame badge, (N) tab title and whale-favicon recolor for
 - `[可用]` [dsh-theme-taffy](https://github.com/Misaki14987/dsh-theme-taffy) ★5 — 我不是雏草姬
+- `[待定]` [mlosun-dsh-docs-panel](https://github.com/mlosun/dsh-docs-panel) ★5 — DSH WebUI 里的「随身手册」：全局 Markdown 笔记，任何工作区随时可读
 - `[可用]` [paicat1-dsh-screenshot](https://github.com/paicat1/dsh-screenshot) ★5 — DSH 轻量截图插件：轻 ： 纯 PowerShell 实现，零依赖、零二进制；截图能力独立维护，不随任何上游更新而失效
 - `[可用]` [qweqwe12382-dsh-client-ui-pet](https://github.com/qweqwe12382/dsh-client-ui-pet) ★5 — Q pet desktop companion overlay plugin for DeepSeek Harness web GUI (dsh bundle)
 - `[待定]` [rayafriandion-dsh-oc-tui](https://github.com/rayafriandion/dsh-oc-tui) ★5 — The plugin can use terminal UI like opencode/claude code and other CLI/TUI agents.
@@ -2644,7 +2645,6 @@
 - `[不兼容]` [kevin-luo-dsh-org-panel](https://github.com/kevin-luo/dsh-org-panel) ★5 — deepseek harness 纯牛马 —— 多智能体数字员工指挥台插件
 - `[不兼容]` [lbl61-dsh-drop-in](https://github.com/lbl61/dsh-drop-in) ★5 — 把文件拖入/粘贴到 DeepSeek Harness Web：输入框原生引用气泡，随消息发送（含绝对路径），气泡渲染文件卡片
 - `[不兼容]` [lijian-ui-dsh-im-gateway](https://github.com/lijian-ui/dsh-im-gateway) ★5 — 为 DeepSeek Harness 提供多 IM 通道接入的网关插件：钉钉 / QQ / 个人微信，支持扫码绑定与流式回复
-- `[不兼容]` [mlosun-dsh-docs-panel](https://github.com/mlosun/dsh-docs-panel) ★5 — DSH WebUI 里的「随身手册」：全局 Markdown 笔记，任何工作区随时可读
 - `[不兼容]` [tmpdot-dsh-checkpoint-diff](https://github.com/tmpdot/dsh-checkpoint-diff) ★5 — File-diff visualization between checkpoint time nodes for DeepSeek Harness: read-only timeline + per-file line
 - `[不兼容]` [xing-shuyin-dsh-ui-tools](https://github.com/xing-shuyin/dsh-ui-tools) ★5 — DeepSeek Harness (dsh) web 开发者工具面板 —— 文件浏览 / 多终端 / Git / 后台任务
 - `[不兼容]` [zemul-dsh-video-preview](https://github.com/zemul/dsh-video-preview) ★5 — dsh-better-sidebar 的视频文件预览插件： 在侧边栏打开 .mp4 .webm  .mov  .mkv  .avi 等视频文件时，内联渲染一个可播放、可拖拽进度条的 <video> 播放器
@@ -12957,6 +12957,8 @@
 - `[未定位]` **mauricioperera-patch-guard** — 占位待复核，判定暂不展示
 - `[未定位]` **max-null-dsh-chinese-thinking** — 占位待复核，判定暂不展示
 - `[未定位]` **max-null-dsh-draft-polish** — 占位待复核，判定暂不展示
+- `[未定位]` **max-null-dsh-guardian** — 占位待复核，判定暂不展示
+- `[未定位]` **max-null-dsh-habit** — 占位待复核，判定暂不展示
 - `[未定位]` **max-null-seek-soul-in-darkness** — 占位待复核，判定暂不展示
 - `[可用]` [dsh-scout](https://github.com/MaxHou-infinity/dsh-scout) ★0 — Evidence-driven company and job intelligence plugin for DeepSeek Harness.
 - `[可用]` [maxsaltshen-dsh-plugin-sources](https://github.com/maxsaltshen/dsh-plugin-sources) ★0 — —
@@ -17104,8 +17106,6 @@
 - `[未定位]` **marecgents-deepseek-harness-hub** — 占位待复核，判定暂不展示
 - `[未定位]` **masterbenc-shangshi-dsh** — 占位待复核，判定暂不展示
 - `[未定位]` **max-null-dsh-capture** — 占位待复核，判定暂不展示
-- `[未定位]` **max-null-dsh-guardian** — 占位待复核，判定暂不展示
-- `[未定位]` **max-null-dsh-habit** — 占位待复核，判定暂不展示
 - `[未定位]` **max-null-dsh-plugin-center** — 占位待复核，判定暂不展示
 - `[不兼容]` [maxesisnclaw-dsh-lan-gate](https://github.com/maxesisnclaw/dsh-lan-gate) ★0 — Password + CIDR gate for DeepSeek Harness web / DeepSeek Harness 局域网密码门禁
 - `[未定位]` **mckaygong-dsh-safe-restart** — 占位待复核，判定暂不展示
