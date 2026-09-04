@@ -220,6 +220,7 @@
 | dsh-local-ai | [PerryLink/dsh-local-ai](https://github.com/PerryLink/dsh-local-ai) | Ollama 本地模型接入：ollama_list/pull/remove/show 与健康检查，以官方 LlmAdapter 注册 Ollama 路由并按 model_route 规则（离线优先/长文本/隐私）分流、失败自动回退云端；/ollama 命令一键总览；npm dsh-local-ai 已发布 | 待测 |
 | dsh-cert-mcp | [PerryLink/dsh-cert-mcp](https://github.com/PerryLink/dsh-cert-mcp) | DSH 插件认证注册表 MCP 服务器：查询认证、列出已认证插件、读取认证规范 | 待测 |
 | dsh-wallpaper-engine | [elysia395/dsh-wallpaper-engine](https://github.com/elysia395/dsh-wallpaper-engine) | 把本机 Wallpaper Engine 壁纸渲染到 DSH Web 对话界面后方：视频原生播放、Web/HTML 走 iframe、Scene 壁纸由内置纯 JS 场景渲染器输出完整场景帧（对象树/纹理/粒子/shader 效果）；iOS 液态玻璃（配色/玻璃颜色/透明度/模糊统一调节）、一级液态玻璃设置页、壁纸选择弹窗、隐藏/恢复、倍速/翻转/亮度对比度饱和度、遮挡暂停省电三档、ffmpeg 抽帧转码帧率上限、自定义壁纸上传；设置持久化到宿主端文件，npm `dsh-plugin-wallpaper-engine` 0.7.0 | 待测 |
+| dsh-theme-macintosh | [fengb3/dsh-theme-macintosh](https://github.com/fengb3/dsh-theme-macintosh) | 经典麦金塔 System 7 像素主题：ChiKareGo/Fusion Pixel 像素字体、桌面噪点画布、Finder 式会话侧栏、黑白按钮与弹窗、深浅色随官方外观切换、Kit 检视页；npm `dsh-theme-macintosh`，`dsh plugin add github:fengb3/dsh-theme-macintosh` 一键安装 | ✅(自报) |
 
 ## 📚 学习研究
 
