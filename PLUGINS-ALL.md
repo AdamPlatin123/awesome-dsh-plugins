@@ -1,13 +1,13 @@
 # 全量插件清单（统一四档口径）
 
-> 数据源：radar 快照并集（`20260904T110001Z` 2026-09-04 19:00 UTC+8 ⊕ `20260904T104501Z` 2026-09-04 18:45 UTC+8 ⊕ `20260904T100001Z` 2026-09-04 18:00 UTC+8 等 390 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
+> 数据源：radar 快照并集（`20260904T111501Z` 2026-09-04 19:15 UTC+8 ⊕ `20260904T110001Z` 2026-09-04 19:00 UTC+8 ⊕ `20260904T104501Z` 2026-09-04 18:45 UTC+8 等 391 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
 > 呈现：分组列表（状态 · 名称 · ★星标 · 一句话说明），不使用大表格；〔📦〕= 整合包（根 dsh.bundle / workspaces 多子包）。
 
 ## 统一度量衡
 
 **判定维度**（运行级四档；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：
 
-- 全量判定 17713（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12037）/ `[不兼容]`（3371）/ `[待定]`（2151）
+- 全量判定 17713（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12036）/ `[不兼容]`（3370）/ `[待定]`（2153）
 - 已定位明细 9111（本列表展示口径，另 8602 条监测/未定位的判定暂不展示）：`[可用]`（6167）/ `[不兼容]`（1680）/ `[待定]`（1155）/ `[未测]`（109）
 
 **定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：
@@ -7831,6 +7831,7 @@
 - `[可用]` [uckkk-dsh-mortgage-equal-principal](https://github.com/uckkk/dsh-mortgage-equal-principal) ★0 — 等额本金房贷计算器
 - `[未定位]` **uknown-wang-dsh-approval-notify** — 占位待复核，判定暂不展示
 - `[未定位]` **unintendedz-dsh-attention-notify** — 占位待复核，判定暂不展示
+- `[未定位]` **v-reason-dsh-task-notify** — 占位待复核，判定暂不展示
 - `[可用]` [dsh-plugin-adapter-qq](https://github.com/veloce-ailab/dsh-plugin-adapter-qq) ★0 — —
 - `[未定位]` **vexpaer-contextgate** — 占位待复核，判定暂不展示
 - `[可用]` [welay21312312321-dsh-pitch-doc-generator](https://github.com/welay21312312321/dsh-pitch-doc-generator) ★0 — Feishu/Lark bid-proposal document generator skill for DeepSeek Harness (dsh) — structured pitch docs with cove
@@ -8102,7 +8103,6 @@
 - `[不兼容]` [tkwkeven-dsh-lark](https://github.com/tkwkeven/dsh-lark) ★0 — Feishu/Lark channel for DeepSeek Harness: prefix-created task sessions, thread routing, streaming thinking car
 - `[不兼容]` [todayer-todayer-dsh-telegram-bridge](https://github.com/todayer/todayer-dsh-telegram-bridge) ★0 — DeepSeek Harness Telegram bridge (bot) plugin, Hermes-style: per-topic sessions, DM topics, group gating, medi
 - `[未定位]` **twilightspirit-dsh-message-edit** — 占位待复核，判定暂不展示
-- `[未定位]` **v-reason-dsh-task-notify** — 占位待复核，判定暂不展示
 - `[不兼容]` [vibeinging-dsh-session-teams](https://github.com/vibeinging/dsh-session-teams) ★0 — DSH 对话窗口协作与窗口团队插件 · dsh-plugin · DSH 窗口间真实消息、任务协调与角色窗口团队，按链接精确寻址
 - `[不兼容]` [wangsan71-dsh-feishu-bot](https://github.com/wangsan71/DSh-feishu-bot) ★0 — —
 - `[未定位]` **whoisddd-dsh-approval-notify** — 占位待复核，判定暂不展示
