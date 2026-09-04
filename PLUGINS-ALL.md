@@ -1,14 +1,14 @@
 # 全量插件清单（统一四档口径）
 
-> 数据源：radar 快照并集（`20260904T024501Z` 2026-09-04 10:45 UTC+8 ⊕ `20260904T023001Z` 2026-09-04 10:30 UTC+8 ⊕ `20260904T021501Z` 2026-09-04 10:15 UTC+8 等 364 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
+> 数据源：radar 快照并集（`20260904T030001Z` 2026-09-04 11:00 UTC+8 ⊕ `20260904T024501Z` 2026-09-04 10:45 UTC+8 ⊕ `20260904T023001Z` 2026-09-04 10:30 UTC+8 等 365 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
 > 呈现：分组列表（状态 · 名称 · ★星标 · 一句话说明），不使用大表格；〔📦〕= 整合包（根 dsh.bundle / workspaces 多子包）。
 
 ## 统一度量衡
 
 **判定维度**（运行级四档；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：
 
-- 全量判定 17696（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12021）/ `[不兼容]`（3426）/ `[待定]`（2095）
-- 已定位明细 9108（本列表展示口径，另 8588 条监测/未定位的判定暂不展示）：`[可用]`（6172）/ `[不兼容]`（1703）/ `[待定]`（1124）/ `[未测]`（109）
+- 全量判定 17696（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12021）/ `[不兼容]`（3425）/ `[待定]`（2096）
+- 已定位明细 9108（本列表展示口径，另 8588 条监测/未定位的判定暂不展示）：`[可用]`（6171）/ `[不兼容]`（1703）/ `[待定]`（1125）/ `[未测]`（109）
 
 **定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：
 
@@ -3515,7 +3515,7 @@
 - `[可用]` [chenjiajungithub-dsh-doc-generator](https://github.com/chenjiajungithub/dsh-doc-generator) ★2 — DeepSeekharness agent预设模式文档生成助手
 - `[可用]` [chenjie1129-remotion-video-plugin](https://github.com/chenjie1129/remotion-video-plugin) ★2 — Create, preview, and render Remotion videos through a verified DeepSeek Harness skill workflow.
 - `[待定]` [chenyinrusi-dsh-repo-health](https://github.com/chenyinrusi/dsh-repo-health) ★2 — Read-only repository health scanners for DeepSeek Harness and any repo: definition drift, unwired-module reach
-- `[可用]` [chiro2001-dsh-dcp](https://github.com/chiro2001/dsh-dcp) ★2 — DeepSeek Harness 动态上下文管理插件（Dynamic Context Pruning for dsh），对标 opencode-dcp
+- `[待定]` [chiro2001-dsh-dcp](https://github.com/chiro2001/dsh-dcp) ★2 — DeepSeek Harness 动态上下文管理插件（Dynamic Context Pruning for dsh），对标 opencode-dcp
 - `[可用]` [cinob-dsh-plugin-custom-provider-enhancer](https://github.com/cinob/dsh-plugin-custom-provider-enhancer) ★2 — ⚡ DeepSeek Harness 自定义模型增强插件：在配置第三方提供商时，自动从权威模型库补齐上下文大小、Token 上限、视觉多模态输入与思考强度档位
 - `[可用]` [dsh-plugin-open-editor](https://github.com/Civitasv/dsh-plugin-open-editor) ★2 — Editor Plugin for Deepseek Harness
 - `[可用]` [coder-wu-dsh-finance-data](https://github.com/coder-wu/dsh-finance-data) ★2 — 增量收集金融数据
@@ -12672,6 +12672,7 @@
 - `[未定位]` **johnxu22786-rss-digest** — 占位待复核，判定暂不展示
 - `[未定位]` **johnxu22786-secret-guard** — 占位待复核，判定暂不展示
 - `[未定位]` **johnxu22786-worktree-mgr** — 占位待复核，判定暂不展示
+- `[未定位]` **jojo666888888-dsh-gateway** — 占位待复核，判定暂不展示
 - `[未定位]` **jolly-life-jolly-dsh-vision** — 占位待复核，判定暂不展示
 - `[未定位]` **jonah-wu23-dsh-bg-carousel** — 占位待复核，判定暂不展示
 - `[未定位]` **jonah-wu23-dsh-fullstack-pack** — 占位待复核，判定暂不展示
@@ -17046,7 +17047,6 @@
 - `[未定位]` **johnxu22786-semantic-search** — 占位待复核，判定暂不展示
 - `[未定位]` **johnxu22786-spec-driven** — 占位待复核，判定暂不展示
 - `[未定位]` **johnxu22786-subtitle-studio** — 占位待复核，判定暂不展示
-- `[未定位]` **jojo666888888-dsh-gateway** — 占位待复核，判定暂不展示
 - `[未定位]` **jstn-1g-dsh-guarded-live-voice** — 占位待复核，判定暂不展示
 - `[未定位]` **junkrat9527-dsh-autovision** — 占位待复核，判定暂不展示
 - `[未定位]` **justin-sky-ai-art-engine** — 占位待复核，判定暂不展示
