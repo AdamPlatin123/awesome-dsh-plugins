@@ -1,14 +1,14 @@
 # 全量插件清单（统一四档口径）
 
-> 数据源：radar 快照并集（`20260904T013001Z` 2026-09-04 09:30 UTC+8 ⊕ `20260904T011501Z` 2026-09-04 09:15 UTC+8 ⊕ `20260904T010001Z` 2026-09-04 09:00 UTC+8 等 359 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
+> 数据源：radar 快照并集（`20260904T014501Z` 2026-09-04 09:45 UTC+8 ⊕ `20260904T013001Z` 2026-09-04 09:30 UTC+8 ⊕ `20260904T011501Z` 2026-09-04 09:15 UTC+8 等 360 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
 > 呈现：分组列表（状态 · 名称 · ★星标 · 一句话说明），不使用大表格；〔📦〕= 整合包（根 dsh.bundle / workspaces 多子包）。
 
 ## 统一度量衡
 
 **判定维度**（运行级四档；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：
 
-- 全量判定 17696（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12020）/ `[不兼容]`（3439）/ `[待定]`（2083）
-- 已定位明细 9108（本列表展示口径，另 8588 条监测/未定位的判定暂不展示）：`[可用]`（6172）/ `[不兼容]`（1706）/ `[待定]`（1121）/ `[未测]`（109）
+- 全量判定 17696（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12019）/ `[不兼容]`（3437）/ `[待定]`（2086）
+- 已定位明细 9108（本列表展示口径，另 8588 条监测/未定位的判定暂不展示）：`[可用]`（6172）/ `[不兼容]`（1704）/ `[待定]`（1123）/ `[未测]`（109）
 
 **定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：
 
@@ -3962,6 +3962,7 @@
 - `[未定位]` **boyuan623-coder-deepseek-harness-plugin-box** — 占位待复核，判定暂不展示
 - `[可用]` [bpc-oss-dsh-subagent-model](https://github.com/bpc-oss/dsh-subagent-model) ★0 — Read-only provider/model badge for DeepSeek Harness subagent session composers
 - `[可用]` [brilliant751-dsh-web-search-litellm](https://github.com/brilliant751/dsh-web-search-litellm) ★0 — LiteLLM /v1/search web search provider for DeepSeek Harness (ctx.web)
+- `[未定位]` **britneycode-dsh-archive-vault** — 占位待复核，判定暂不展示
 - `[未定位]` **britneycode-dsh-distillery** — 占位待复核，判定暂不展示
 - `[未定位]` **britneycode-dsh-live-room** — 占位待复核，判定暂不展示
 - `[未定位]` **britneycode-dsh-update-center** — 占位待复核，判定暂不展示
@@ -4991,7 +4992,6 @@
 - `[不兼容]` [bainianlaoyao-dsh-codex-harness](https://github.com/bainianlaoyao/dsh-codex-harness) ★0 — —
 - `[未定位]` **balcsida-dsh-litellm-provider** — 占位待复核，判定暂不展示
 - `[不兼容]` [bleakbelladonnals-dsh-echo](https://github.com/bleakbelladonnals/dsh-echo) ★0 — Record MCP once
-- `[未定位]` **britneycode-dsh-archive-vault** — 占位待复核，判定暂不展示
 - `[不兼容]` [canadaeee-dsh-douyin](https://github.com/canadaeee/dsh-douyin) ★0 — DSH ecosystem channel plugin: Douyin DMs for DeepSeek Harness — webhook relay + resident Agents + OpenAPI repl
 - `[未定位]` **cc19990113-dsh-plugin-codegraph** — 占位待复核，判定暂不展示
 - `[不兼容]` [chenxuhl-dsh-tool-jwt](https://github.com/chenxuhl/dsh-tool-jwt) ★0 — DSH JWT tool: HS256 decode (header/payload/expiry status), sign, and verify — zero runtime dependencies, RFC 7
@@ -7517,6 +7517,7 @@
 - `[可用]` [173787247-dsh-wsl-open](https://github.com/173787247/dsh-wsl-open) ★3 — DeepSeek Harness plugin: open WSL Linux paths from chat in Windows.
 - `[待定]` [21hbguo-dsh-feishu-bridge-plugin](https://github.com/21hbguo/dsh-feishu-bridge-plugin) ★3 — 飞书机器人 ↔ DSH 对话桥：DSH 进程内 Cordis 插件，流式卡片 / 问答卡片 / 审批卡片 / 斜杠命令
 - `[可用]` [893413974-bit-dsh-setting-restart](https://github.com/893413974-bit/dsh-setting-restart) ★3 — One-click restart of the DSH service from Settings → General
+- `[待定]` [baisama-cloud-dsh-omni-bridge](https://github.com/baisama-cloud/dsh-omni-bridge) ★3 — DeepSeek Harness（DSH）多通道消息桥：将微信（ClawBot/iLink）、QQ和飞书（Lark）聊天消息路由给DSH代理，并将代理的回复反馈给发送方
 - `[可用]` [blooming-fang-dsh-feishu-notifier](https://github.com/blooming-fang/dsh-feishu-notifier) ★3 — DeepSeek Harness 飞书通知插件：在需要用户操作或对话结束时发送飞书机器人提醒，并支持持久化配置
 - `[待定]` [clarklevis1995-dsh-plugin-mobile-gateway](https://github.com/Clarklevis1995/dsh-plugin-mobile-gateway) ★3 — —
 - `[可用]` [echo-lgtm-dsh-plugin-wechat-official](https://github.com/echo-lgtm/dsh-plugin-wechat-official) ★3 — DeepSeek Harness 微信 ClawBot 渠道插件：通过腾讯官方 iLink 接口让用户在个人微信中与 DSH Agent 对话
@@ -7966,7 +7967,6 @@
 - `[不兼容]` [shrekcg-dsh-im-channel](https://github.com/shrekcg/dsh-lark-bridge) ★4 — 将 DeepSeek Harness 接入飞书/Lark 的双向通道：持久会话、群聊、流式卡片、40 个飞书 MCP 工具
 - `[不兼容]` [wang-22-code-dsh-qqbot-bridge](https://github.com/wang-22-code/dsh-qqbot-bridge) ★4 — 让 DeepSeek Harness（DSH）住进 QQ：基于腾讯官方 Bot API，支持私聊白名单、持久会话、模型切换与远程权限审批
 - `[不兼容]` [zp-home-dsh-weixin-clawbot](https://github.com/zp-home/dsh-weixin-clawbot) ★4 — Phone-to-DSH control through Tencent's official Weixin ClawBot/iLink channel \| 基于腾讯官方微信 ClawBot/iLink 的 DSH 手机
-- `[不兼容]` [baisama-cloud-dsh-omni-bridge](https://github.com/baisama-cloud/dsh-omni-bridge) ★3 — DeepSeek Harness（DSH）多通道消息桥：将微信（ClawBot/iLink）、QQ和飞书（Lark）聊天消息路由给DSH代理，并将代理的回复反馈给发送方
 - `[不兼容]` [bufeibufei-dsh-openai-codex](https://github.com/bufeibufei/dsh-openai-codex) ★3 — ChatGPT OAuth model provider plugin for DeepSeek Harness
 - `[不兼容]` [hyper-dsh-plugins-dsh-open-eyes](https://github.com/Hyp6666/dsh-open-eyes) ★3 — A lightweight DeepSeek Harness vision delegation tool for text-only routes, with native OpenAI Responses, Chat
 - `[不兼容]` [jerryjiao-dsh-wewrite](https://github.com/jerryjiao/dsh-wewrite) ★3 — 微信公众号 AI 写作插件，跑在 DeepSeek Harness 里：一条命令装上完整写作管线（选题→写作→质量门禁→排版→配图→草稿箱），定时默认只进草稿箱，群发永远人工
@@ -8145,6 +8145,7 @@
 
 ## 🗂 文件数据（663）
 
+- `[待定]` [chen731215-dev-dsh-tavern](https://github.com/chen731215-dev/dsh-tavern) ★40 — [ARCHIVED] Migrated to dsh-tavern-v2 with PolyForm-Noncommercial-Copyleft-1.0.0 license
 - `[可用]` [jing-hy-picturereader](https://github.com/jing-hy/picturereader) ★36 — DSH plugin: pixel-to-text image reading for text-only models
 - `[可用]` [feiyang-dev-dsh-usage-plugin](https://github.com/feiyang-dev/dsh-usage-plugin) ★35 — DeepSeek Harness 用量与消耗插件（dsh-usage-plugin）—— 每次调用的 token 用量/缓存命中统计、峰谷计费、余额查询、CSV/JSON/PNG 导出，可经桌面端一键安装或命令行 dsh
 - `[可用]` [cloader-dsh-taskboard](https://github.com/cloader/dsh-taskboard) ★33 — deepseekharness 任务看板插件
@@ -8650,7 +8651,6 @@
 - `[未测]` [dsh-enhancement-suite](https://github.com/scorp1o117/dsh-enhancement-suite) ★0 — 四个 Scorp1o117 DSH 插件的官方总入口 + 一键安装器（list/install/update/doctor，--profile/--only/--dry-run）：零依赖，走官方 dsh plugin CLI 并安全自动挂载；npm 已发布
 - `[未测]` [dsh-library](https://github.com/perrylink/dsh-library) ★0 — 本地优先文档知识库：library_add/remove/list、语义+关键词混合 library_search（多样性重排、相关性过滤、避免 lost-in-the-middle）、引用感知注入与 library_cite_check/diagnose，SQLite 索引 + 本地嵌入，零模型下载
 - `[不兼容]` [oil-oil-dsh-oil-creator](https://github.com/oil-oil/dsh-oil-creator) ★177 — AI-assisted local creator workbench for DeepSeek Harness
-- `[不兼容]` [chen731215-dev-dsh-tavern](https://github.com/chen731215-dev/dsh-tavern) ★40 — [ARCHIVED] Migrated to dsh-tavern-v2 with PolyForm-Noncommercial-Copyleft-1.0.0 license
 - `[不兼容]` [houyanchao-dsh-timeline](https://github.com/houyanchao/dsh-timeline) ★30 — 为 DeepSeek Harness（DSH）打造的会话效率插件，时间轴导航、收藏文件夹、对话导出、提示词库、闪记
 - `[不兼容]` [duhu2000-dsh-mcp-connector](https://github.com/duhu2000/dsh-mcp-connector) ★13 — DeepSeek Harness MCP Connector and MCP Server marketplace with over one hundred MCP connectors
 - `[不兼容]` [xohmai-dsh-session-delete](https://github.com/xohmai/dsh-session-delete) ★8 — DeepSeek Harness 会话删除插件：设置页管理归档会话，真正删除磁盘日志（回收站可还原）+ 批量清理——官方归档只隐藏不删盘，这里补上
@@ -12132,7 +12132,6 @@
 - `[未定位]` **chenchen913-dsh-security-doctor** — 占位待复核，判定暂不展示
 - `[可用]` [chendengyuanxm-dsh-plugin-security-audit](https://github.com/chendengyuanxm/dsh-plugin-security-audit) ★0 — Static security audit for dynamic Cordis plugins in DeepSeek Harness (DSH): rule-based source scanning, risk r
 - `[未定位]` **cheng-cheng9669-dsh-cache-precision** — 占位待复核，判定暂不展示
-- `[未定位]` **cheng-cheng9669-dsh-deepseek-vision** — 占位待复核，判定暂不展示
 - `[未定位]` **chengxiucdp-dsh-plugin-advisor** — 占位待复核，判定暂不展示
 - `[未定位]` **chengxiucdp-dsh-plugin-hub** — 占位待复核，判定暂不展示
 - `[未定位]` **chenning-tao-dsh-plugin-balance** — 占位待复核，判定暂不展示
@@ -16896,6 +16895,7 @@
 - `[不兼容]` [changyinliangbaikai-dsh-b2us-chrome-tool](https://github.com/changyinliangbaikai/dsh-b2us-chrome-tool) ★0 — —
 - `[不兼容]` [che-year-dsh-unidoc](https://github.com/Che-Year/dsh-unidoc) ★0 — —
 - `[未定位]` **chemmy-11-dsh-xuegulin** — 占位待复核，判定暂不展示
+- `[未定位]` **cheng-cheng9669-dsh-deepseek-vision** — 占位待复核，判定暂不展示
 - `[未定位]` **cheng-xiu-dsh-auto-scheduler** — 占位待复核，判定暂不展示
 - `[未定位]` **chenghaoyang-dsh-regression** — 占位待复核，判定暂不展示
 - `[未定位]` **chenjie1129-deepseek-harness-reliability-gove** — 占位待复核，判定暂不展示
