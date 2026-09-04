@@ -1,14 +1,14 @@
 # 全量插件清单（统一四档口径）
 
-> 数据源：radar 快照并集（`20260904T080002Z` 2026-09-04 16:00 UTC+8 ⊕ `20260904T074501Z` 2026-09-04 15:45 UTC+8 ⊕ `20260904T071501Z` 2026-09-04 15:15 UTC+8 等 382 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
+> 数据源：radar 快照并集（`20260904T081501Z` 2026-09-04 16:15 UTC+8 ⊕ `20260904T080002Z` 2026-09-04 16:00 UTC+8 ⊕ `20260904T074501Z` 2026-09-04 15:45 UTC+8 等 383 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
 > 呈现：分组列表（状态 · 名称 · ★星标 · 一句话说明），不使用大表格；〔📦〕= 整合包（根 dsh.bundle / workspaces 多子包）。
 
 ## 统一度量衡
 
 **判定维度**（运行级四档；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：
 
-- 全量判定 17698（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12029）/ `[不兼容]`（3392）/ `[待定]`（2123）
-- 已定位明细 9110（本列表展示口径，另 8588 条监测/未定位的判定暂不展示）：`[可用]`（6171）/ `[不兼容]`（1692）/ `[待定]`（1138）/ `[未测]`（109）
+- 全量判定 17698（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12028）/ `[不兼容]`（3392）/ `[待定]`（2124）
+- 已定位明细 9110（本列表展示口径，另 8588 条监测/未定位的判定暂不展示）：`[可用]`（6170）/ `[不兼容]`（1692）/ `[待定]`（1139）/ `[未测]`（109）
 
 **定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：
 
@@ -8176,7 +8176,7 @@
 - `[可用]` [liceses-dsh-workspace-tree](https://github.com/liceses/dsh-workspace-tree) ★6 — 把 DSH Web 左侧栏的「工作区」重做为文件系统树双模式
 - `[可用]` [dsh-file-claim](https://github.com/Nwflower/dsh-file-claim) ★6 — File claim / protection for concurrent DeepSeek Harness (DSH) sessions working the same workspace: claim/relea
 - `[可用]` [smackgg-dsh-archived-sessions](https://github.com/smackgg/dsh-archived-sessions) ★6 — View and restore archived DeepSeek Harness sessions.
-- `[可用]` [bingoogolapple-bga-dsh-workbench](https://github.com/bingoogolapple/bga-dsh-workbench) ★5 — DeepSeek Harness Workbench
+- `[待定]` [bingoogolapple-bga-dsh-workbench](https://github.com/bingoogolapple/bga-dsh-workbench) ★5 — DeepSeek Harness Workbench
 - `[可用]` [hccccc01333-dsh-excel-chat](https://github.com/hccccc01333/dsh-excel-chat) ★5 — dsh-excel-chat — talk to Excel in DeepSeek Harness: create, edit, repair, and verify spreadsheets by conversat
 - `[可用]` [imrascal-dsh-archive](https://github.com/imrascal/dsh-archive) ★5 — DeepSeek Harness归档会话管理插件
 - `[可用]` [dsh-usage-stats](https://github.com/lanlandeli/dsh-usage-stats) ★5 — DeepSeek Harness 使用统计插件｜Token 总量与构成、7/30 天趋势、年度活跃热力图、模型占比、工作区/任务筛选、CSV/JSON 导出
