@@ -1,6 +1,6 @@
 {
  "schema": "dsh-radar/v1",
- "generated_at": "2026-09-05T11:02:09Z",
+ "generated_at": "2026-09-05T11:17:03Z",
  "plugins": [
   {
    "repo": "tt-a1i/archify",
@@ -11644,6 +11644,13 @@
    "desc": "Verifiable narrative state, continuity and character-knowledge ledger for DeepSeek Harness"
   },
   {
+   "repo": "drscrewdriver/dsh-session-search-toggle",
+   "name": "drscrewdriver-dsh-session-search-toggle",
+   "verdict": "pending",
+   "stars": 3,
+   "desc": "给 DeepSeek Harness 侧边栏加一个会话内容检索——标题/内容一键切换，还能按用户/回复/工具筛选"
+  },
+  {
    "repo": "dshplugin-me/dsh-plugin-radar",
    "name": "dshplugin-me-dsh-plugin-radar",
    "verdict": "ok",
@@ -20735,13 +20742,6 @@
    "verdict": "incompatible",
    "stars": 3,
    "desc": "Midscene-based AI UI automation plugin for DeepSeek Harness (android_ui + web_ui)"
-  },
-  {
-   "repo": "drscrewdriver/dsh-session-search-toggle",
-   "name": "drscrewdriver-dsh-session-search-toggle",
-   "verdict": "incompatible",
-   "stars": 3,
-   "desc": "给 DeepSeek Harness 侧边栏加一个会话内容检索——标题/内容一键切换，还能按用户/回复/工具筛选"
   },
   {
    "repo": "gwsbhqt/dsh-insight",
@@ -40281,6 +40281,13 @@
    "desc": "Playwright browser automation for DeepSeek Harness｜面向 DeepSeek Harness 的 Playwright 浏览器自动化插件"
   },
   {
+   "repo": "dsh-ssh/dsh-ssh",
+   "name": "dsh-ssh-dsh-ssh",
+   "verdict": "pending",
+   "stars": 8,
+   "desc": "SSH remote workspaces for DeepSeek Harness — run bash, file, and search tools on any remote machine."
+  },
+  {
    "repo": "labmimors/dsh-mcp-lens",
    "name": "labmimors-dsh-mcp-lens",
    "verdict": "ok",
@@ -44045,13 +44052,6 @@
    "verdict": "incompatible",
    "stars": 10,
    "desc": "为 DeepSeek Harness 增加远程访问能力，并通过密码和 OTP 进行安全加固"
-  },
-  {
-   "repo": "dsh-ssh/dsh-ssh",
-   "name": "dsh-ssh-dsh-ssh",
-   "verdict": "incompatible",
-   "stars": 8,
-   "desc": "SSH remote workspaces for DeepSeek Harness — run bash, file, and search tools on any remote machine."
   },
   {
    "repo": "springbrand-lab/dsh-oauth-mcp-client",
