@@ -1,13 +1,13 @@
 # 全量插件清单（统一四档口径）
 
-> 数据源：radar 快照并集（`20260905T060001Z` 2026-09-05 14:00 UTC+8 ⊕ `20260905T054501Z` 2026-09-05 13:45 UTC+8 ⊕ `20260905T043001Z` 2026-09-05 12:30 UTC+8 等 423 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
+> 数据源：radar 快照并集（`20260905T063002Z` 2026-09-05 14:30 UTC+8 ⊕ `20260905T060001Z` 2026-09-05 14:00 UTC+8 ⊕ `20260905T054501Z` 2026-09-05 13:45 UTC+8 等 424 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
 > 呈现：分组列表（状态 · 名称 · ★星标 · 一句话说明），不使用大表格；〔📦〕= 整合包（根 dsh.bundle / workspaces 多子包）。
 
 ## 统一度量衡
 
 **判定维度**（运行级四档；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：
 
-- 全量判定 17971（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12244）/ `[不兼容]`（3361）/ `[待定]`（2212）
+- 全量判定 17971（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12243）/ `[不兼容]`（3362）/ `[待定]`（2212）
 - 已定位明细 9230（本列表展示口径，另 8741 条监测/未定位的判定暂不展示）：`[可用]`（6262）/ `[不兼容]`（1670）/ `[待定]`（1189）/ `[未测]`（109）
 
 **定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：
@@ -4039,7 +4039,6 @@
 - `[可用]` [cchenbin042-yuque-notes-plugin](https://github.com/cchenbin042/yuque-notes-plugin) ★0 — 把零散笔记（文本+图片）保存到语雀知识库，由模型自动分类；图片经 GitHub 图床上传（jsdelivr CDN）\| Save messy notes (text + images) to a Yuque knowle
 - `[未定位]` **cdown1-deepseek-harness-vscode** — 占位待复核，判定暂不展示
 - `[未定位]` **ceq151-dsh-codex-style-plugin** — 占位待复核，判定暂不展示
-- `[未定位]` **chadcsong-dsh-cliproxyapi-provider** — 占位待复核，判定暂不展示
 - `[可用]` [change979666-ox-alpha-dsh](https://github.com/change979666/ox-alpha-dsh) ★0 — [Model Hub for DSH] Lightweight model/provider integration toolkit for DeepSeek Harness Desktop - one plugin i
 - `[可用]` [charlescroft-dsh-desktop](https://github.com/charlescroft/dsh-desktop) ★0 — Standalone Tauri 2 desktop app for the DeepSeek Harness (dsh) web profile — no terminal, no browser tab
 - `[可用]` [chenaptx-deepseek-harness-mac](https://github.com/chenaptx/deepseek-harness-mac) ★0 — Tiny macOS shell for DeepSeek Harness — 132KB Swift+WKWebView, zero Electron
@@ -5075,6 +5074,7 @@
 - `[不兼容]` [bleakbelladonnals-dsh-echo](https://github.com/bleakbelladonnals/dsh-echo) ★0 — Record MCP once
 - `[不兼容]` [canadaeee-dsh-douyin](https://github.com/canadaeee/dsh-douyin) ★0 — DSH ecosystem channel plugin: Douyin DMs for DeepSeek Harness — webhook relay + resident Agents + OpenAPI repl
 - `[未定位]` **cc19990113-dsh-plugin-codegraph** — 占位待复核，判定暂不展示
+- `[未定位]` **chadcsong-dsh-cliproxyapi-provider** — 占位待复核，判定暂不展示
 - `[不兼容]` [chenxuhl-dsh-tool-jwt](https://github.com/chenxuhl/dsh-tool-jwt) ★0 — DSH JWT tool: HS256 decode (header/payload/expiry status), sign, and verify — zero runtime dependencies, RFC 7
 - `[未定位]` **codedice1024-dsh-log-viewer** — 占位待复核，判定暂不展示
 - `[未定位]` **codedice1024-dsh-plugin-dev-assistant** — 占位待复核，判定暂不展示
