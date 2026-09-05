@@ -1,6 +1,6 @@
 {
  "schema": "dsh-radar/v1",
- "generated_at": "2026-09-05T19:00:51Z",
+ "generated_at": "2026-09-05T19:15:39Z",
  "plugins": [
   {
    "repo": "tt-a1i/archify",
@@ -3312,6 +3312,13 @@
    "verdict": "ok",
    "stars": 1,
    "desc": "Unofficial desktop launcher for DeepSeek Harness"
+  },
+  {
+   "repo": "esonx/dsh-project-j4agent",
+   "name": "esonx-dsh-project-j4agent",
+   "verdict": "pending",
+   "stars": 1,
+   "desc": "Agent-native Software Development Lifecycle Management for DeepSeek Harness"
   },
   {
    "repo": "falling-ts/dsh-web-ding",
@@ -7890,13 +7897,6 @@
    "verdict": "incompatible",
    "stars": 1,
    "desc": "Data cleaning and enterprise enrichment agent plugin for DeepSeek Harness."
-  },
-  {
-   "repo": "esonx/dsh-project-j4agent",
-   "name": "esonx-dsh-project-j4agent",
-   "verdict": "incompatible",
-   "stars": 1,
-   "desc": "Agent-native Software Development Lifecycle Management for DeepSeek Harness"
   },
   {
    "repo": "fatatalia/dsh-dreaming",
@@ -19407,6 +19407,13 @@
    "desc": "dsh 插件 · 设置界面自定义：调整原生设置窗口大小（全屏/预置/自定义）、背景不透明度与背景（亮暗各一色，实时跟随主题）"
   },
   {
+   "repo": "weibaohui/dsh-xiuxian",
+   "name": "weibaohui-dsh-xiuxian",
+   "verdict": "ok",
+   "stars": 0,
+   "desc": "dsh 插件 · 修仙陪伴：随机唤醒一位《凡人修仙传》角色，Q版电子宠物悬浮陪伴你写代码（自带2496角色数据集）"
+  },
+  {
    "repo": "weibaohui/experts-management",
    "name": "weibaohui-experts-management",
    "verdict": "ok",
@@ -24454,13 +24461,6 @@
    "desc": "dsh free token route"
   },
   {
-   "repo": "edge-sky/dsh-oauth-adapter",
-   "name": "edge-sky-dsh-oauth-adapter",
-   "verdict": "ok",
-   "stars": 4,
-   "desc": "An OAuth adapter for DSH"
-  },
-  {
    "repo": "Electricitysheep/dsh-tool-turbo",
    "name": "dsh-tool-turbo",
    "verdict": "pending",
@@ -25784,6 +25784,13 @@
    "desc": "—"
   },
   {
+   "repo": "elviass/dsh-cost-insights",
+   "name": "elviass-dsh-cost-insights",
+   "verdict": "pending",
+   "stars": 2,
+   "desc": "DeepSeek Harness 的用量、费用、Token、缓存、余额与模型价格分析插件"
+  },
+  {
    "repo": "emredeveloper/deepseek-harness-huggingface",
    "name": "deepseek-harness-huggingface",
    "verdict": "ok",
@@ -26797,6 +26804,13 @@
    "verdict": "ok",
    "stars": 2,
    "desc": "为手工 OpenAI 兼容模型补上推理档位声明的 DSH 插件 / DSH plugin to declare reasoning efforts on hand-added OpenAI-compatible mode"
+  },
+  {
+   "repo": "zingzheng/dsh-gb",
+   "name": "zingzheng-dsh-gb",
+   "verdict": "ok",
+   "stars": 2,
+   "desc": "把手机变成 DSH 的语音遥控外设"
   },
   {
    "repo": "zisekongling/deepseek-peak-blocker",
@@ -38209,6 +38223,13 @@
    "desc": "—"
   },
   {
+   "repo": "edge-sky/dsh-oauth-adapter",
+   "name": "edge-sky-dsh-oauth-adapter",
+   "verdict": "incompatible",
+   "stars": 4,
+   "desc": "An OAuth adapter for DSH"
+  },
+  {
    "repo": "gxpppp/dsh-obsidian",
    "name": "gxpppp-dsh-obsidian",
    "verdict": "incompatible",
@@ -38536,13 +38557,6 @@
    "verdict": "incompatible",
    "stars": 2,
    "desc": "Capability-aware reasoning controls and Fast model routing for DeepSeek Harness"
-  },
-  {
-   "repo": "elviass/dsh-cost-insights",
-   "name": "elviass-dsh-cost-insights",
-   "verdict": "incompatible",
-   "stars": 2,
-   "desc": "DeepSeek Harness 的用量、费用、Token、缓存、余额与模型价格分析插件"
   },
   {
    "repo": "GongYuanCaiJi/dsh-copilot-sdk",
@@ -41553,13 +41567,6 @@
    "verdict": "ok",
    "stars": 2,
    "desc": "鲸仔 Whalito，DeepSeek Harness 桌面助手"
-  },
-  {
-   "repo": "eomis/packhub-workbench-assistant",
-   "name": "eomis-packhub-workbench-assistant",
-   "verdict": "ok",
-   "stars": 2,
-   "desc": "DSH Desktop workbench installer, switcher, and updater"
   },
   {
    "repo": "GoyacJ/deepseek-harness-desktop",
@@ -44675,6 +44682,13 @@
    "verdict": "incompatible",
    "stars": 2,
    "desc": "The bilingual, source-backed registry and installer for the DeepSeek Harness plugin ecosystem.〔📦〕"
+  },
+  {
+   "repo": "eomis/packhub-workbench-assistant",
+   "name": "eomis-packhub-workbench-assistant",
+   "verdict": "incompatible",
+   "stars": 2,
+   "desc": "DSH Desktop workbench installer, switcher, and updater"
   },
   {
    "repo": "evanmormmm/deepseek-harness-desktop",
@@ -52314,13 +52328,6 @@
    "desc": "IM gateway for DeepSeek Harness agents — send and receive QQ, WeChat, Feishu and Telegram messages from dsh se"
   },
   {
-   "repo": "emiliagarfield6-bot/dsh-telegram-notify",
-   "name": "emiliagarfield6-bot-dsh-telegram-notify",
-   "verdict": "ok",
-   "stars": 2,
-   "desc": "Telegram notifications for DeepSeek Harness — get pinged when your agent finishes a task or needs you"
-  },
-  {
    "repo": "fatmind/dsh-plugin-browser-use",
    "name": "fatmind-dsh-plugin-browser-use",
    "verdict": "pending",
@@ -53992,6 +53999,13 @@
    "verdict": "incompatible",
    "stars": 2,
    "desc": "ChatGPT subscription OAuth for the openai-codex provider in DeepSeek Harness"
+  },
+  {
+   "repo": "emiliagarfield6-bot/dsh-telegram-notify",
+   "name": "emiliagarfield6-bot-dsh-telegram-notify",
+   "verdict": "incompatible",
+   "stars": 2,
+   "desc": "Telegram notifications for DeepSeek Harness — get pinged when your agent finishes a task or needs you"
   },
   {
    "repo": "eons2long/dsh-codex-oauth",
@@ -58691,6 +58705,13 @@
    "desc": "Turn codebase smells into an executable, priority-ordered refactoring plan (file-length / deep-nesting / TODO-"
   },
   {
+   "repo": "easysir10/easy-git",
+   "name": "easysir10-easy-git",
+   "verdict": "ok",
+   "stars": 1,
+   "desc": "—"
+  },
+  {
    "repo": "elegymythos/exam-paper-plugin",
    "name": "elegymythos-exam-paper-plugin",
    "verdict": "ok",
@@ -60390,6 +60411,13 @@
    "verdict": "pending",
    "stars": 0,
    "desc": "A structured plugin marketplace for DeepSeek Harness — each plugin described as JSON, auto-aggregated into a s"
+  },
+  {
+   "repo": "emircanerkul/dsh-terminal",
+   "name": "emircanerkul-dsh-terminal",
+   "verdict": "ok",
+   "stars": 0,
+   "desc": "Workspace-aware web terminal plugin for the DeepSeek Harness (dsh)"
   },
   {
    "repo": "erdholion/dsh-loop-guard",
@@ -63752,13 +63780,6 @@
    "desc": "Analyze a codebase and generate architecture documentation (module responsibilities, dependencies, entry point"
   },
   {
-   "repo": "easysir10/easy-git",
-   "name": "easysir10-easy-git",
-   "verdict": "incompatible",
-   "stars": 1,
-   "desc": "—"
-  },
-  {
    "repo": "edynasty/dsh-opencode-go-provider",
    "name": "edynasty-dsh-opencode-go-provider",
    "verdict": "incompatible",
@@ -64352,13 +64373,6 @@
    "verdict": "incompatible",
    "stars": 0,
    "desc": "—"
-  },
-  {
-   "repo": "emircanerkul/dsh-terminal",
-   "name": "emircanerkul-dsh-terminal",
-   "verdict": "incompatible",
-   "stars": 0,
-   "desc": "Workspace-aware web terminal plugin for the DeepSeek Harness (dsh)"
   },
   {
    "repo": "evlon/dsh-matrix-agent",
