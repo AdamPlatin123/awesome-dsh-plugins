@@ -240,21 +240,21 @@ Everything catalog-shaped below — the featured board, bundles, category direct
 
 <!-- AUTO:catalog:START -->
 
-Per-plugin details (verdict · location · stars) in **PLUGINS-ALL.md**.
+Per-plugin details (verdict · location · stars) paginated per domain — index in **PLUGINS-ALL.md**.
 
-- **🎓 技能包**（27）— OK 7 · incompatible 2 · pending 4 · untested 11 · watching 3 — [details](PLUGINS-ALL.md#-技能包27)
-- **🧠 记忆增强**（46）— OK 14 · incompatible 4 · pending 5 · untested 2 · watching 21 — [details](PLUGINS-ALL.md#-记忆增强46)
-- **🎨 主题皮肤**（18）— OK 9 · incompatible 0 · pending 1 · untested 5 · watching 3 — [details](PLUGINS-ALL.md#-主题皮肤18)
-- **🛒 市场与管理**（306）— OK 100 · incompatible 20 · pending 17 · untested 8 · watching 161 — [details](PLUGINS-ALL.md#-市场与管理306)
-- **🔌 Web UI 增强**（2752）— OK 1346 · incompatible 376 · pending 262 · untested 16 · watching 752 — [details](PLUGINS-ALL.md#-web-ui-增强2752)
-- **💻 编码开发**（2134）— OK 930 · incompatible 336 · pending 192 · untested 19 · watching 657 — [details](PLUGINS-ALL.md#-编码开发2134)
-- **🤖 Agent 能力**（2228）— OK 821 · incompatible 252 · pending 168 · untested 10 · watching 977 — [details](PLUGINS-ALL.md#-agent-能力2228)
-- **📡 消息通讯**（710）— OK 260 · incompatible 108 · pending 56 · untested 3 · watching 283 — [details](PLUGINS-ALL.md#-消息通讯710)
-- **🗂 文件数据**（671）— OK 273 · incompatible 88 · pending 58 · untested 9 · watching 243 — [details](PLUGINS-ALL.md#-文件数据671)
-- **🎮 娱乐生活**（450）— OK 175 · incompatible 30 · pending 32 · untested 0 · watching 213 — [details](PLUGINS-ALL.md#-娱乐生活450)
-- **🛠 基建部署**（1347）— OK 444 · incompatible 127 · pending 126 · untested 3 · watching 647 — [details](PLUGINS-ALL.md#-基建部署1347)
-- **📚 学习研究**（154）— OK 35 · incompatible 8 · pending 8 · untested 2 · watching 101 — [details](PLUGINS-ALL.md#-学习研究154)
-- **❓ 其他**（7128）— OK 1848 · incompatible 317 · pending 262 · untested 21 · watching 4680 — [details](PLUGINS-ALL.md#-其他7128)
+- **🎓 技能包**（27）— OK 7 · incompatible 2 · pending 4 · untested 11 · watching 3 — [details](catalog/all/技能包.md)
+- **🧠 记忆增强**（46）— OK 14 · incompatible 4 · pending 5 · untested 2 · watching 21 — [details](catalog/all/记忆增强.md)
+- **🎨 主题皮肤**（18）— OK 9 · incompatible 0 · pending 1 · untested 5 · watching 3 — [details](catalog/all/主题皮肤.md)
+- **🛒 市场与管理**（306）— OK 100 · incompatible 20 · pending 17 · untested 8 · watching 161 — [details](catalog/all/市场与管理.md)
+- **🔌 Web UI 增强**（2752）— OK 1346 · incompatible 376 · pending 262 · untested 16 · watching 752 — [details](catalog/all/Web%20UI%20增强.md)
+- **💻 编码开发**（2134）— OK 930 · incompatible 336 · pending 192 · untested 19 · watching 657 — [details](catalog/all/编码开发.md)
+- **🤖 Agent 能力**（2228）— OK 821 · incompatible 252 · pending 168 · untested 10 · watching 977 — [details](catalog/all/Agent%20能力.md)
+- **📡 消息通讯**（710）— OK 260 · incompatible 108 · pending 56 · untested 3 · watching 283 — [details](catalog/all/消息通讯.md)
+- **🗂 文件数据**（671）— OK 273 · incompatible 88 · pending 58 · untested 9 · watching 243 — [details](catalog/all/文件数据.md)
+- **🎮 娱乐生活**（450）— OK 175 · incompatible 30 · pending 32 · untested 0 · watching 213 — [details](catalog/all/娱乐生活.md)
+- **🛠 基建部署**（1347）— OK 444 · incompatible 127 · pending 126 · untested 3 · watching 647 — [details](catalog/all/基建部署.md)
+- **📚 学习研究**（154）— OK 35 · incompatible 8 · pending 8 · untested 2 · watching 101 — [details](catalog/all/学习研究.md)
+- **❓ 其他**（7128）— OK 1848 · incompatible 317 · pending 262 · untested 21 · watching 4680 — [details](catalog/all/其他.md)
 
 <!-- AUTO:catalog:END -->
 
