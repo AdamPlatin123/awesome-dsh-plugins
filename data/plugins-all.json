@@ -1,6 +1,6 @@
 {
  "schema": "dsh-radar/v1",
- "generated_at": "2026-09-05T19:15:39Z",
+ "generated_at": "2026-09-05T19:45:46Z",
  "plugins": [
   {
    "repo": "tt-a1i/archify",
@@ -4854,13 +4854,6 @@
    "desc": "Automatic bounded type context and edit diagnostics for DeepSeek Harness"
   },
   {
-   "repo": "fatatalia/dsh-turn-guard",
-   "name": "fatatalia-dsh-turn-guard",
-   "verdict": "ok",
-   "stars": 0,
-   "desc": "dsh turn-guard plugin: per-step timeout for agent turns (防模型退化死循环)"
-  },
-  {
    "repo": "fatherplus/dsh-superpowers-zh",
    "name": "fatherplus-dsh-superpowers-zh",
    "verdict": "ok",
@@ -6968,6 +6961,13 @@
    "desc": "让 DSH 主 agent 和子代理别一开口就 `Let me...`：首轮用 Minimal 开局进入满血状态，第二轮恢复全部工具；自定义子代理角色首轮先收起来，第二轮再放出来"
   },
   {
+   "repo": "perrylink/dsh-reach",
+   "name": "dsh-reach",
+   "verdict": "untested",
+   "stars": null,
+   "desc": "多通道决策与远程控制桥：把 DSH 的审批卡与提问卡推送到 IM 渠道（先微信），可在聊天中直接作答，带会话控制台、逐渠道安全与开放推送服务"
+  },
+  {
    "repo": "stardustlc666/dsh-minimal-ptc",
    "name": "dsh-minimal-ptc",
    "verdict": "untested",
@@ -8282,6 +8282,13 @@
    "verdict": "incompatible",
    "stars": 0,
    "desc": "DeepSeek Harness plugin for session-scoped system prompt inspection"
+  },
+  {
+   "repo": "fatatalia/dsh-turn-guard",
+   "name": "fatatalia-dsh-turn-guard",
+   "verdict": "incompatible",
+   "stars": 0,
+   "desc": "dsh turn-guard plugin: per-step timeout for agent turns (防模型退化死循环)"
   },
   {
    "repo": "fengyufengzi/dsh-local-diagnostics",
@@ -12937,13 +12944,6 @@
    "verdict": "ok",
    "stars": 2,
    "desc": "Codex 风格左侧消息导航轨道，用于在 DeepSeek Harness Web UI 的长会话中快速定位历史提问"
-  },
-  {
-   "repo": "frankxxxxue/dsh-photo-skins",
-   "name": "frankxxxxue-dsh-photo-skins",
-   "verdict": "ok",
-   "stars": 2,
-   "desc": "A DeepSeek Harness plugin that turns your photos into Web GUI skins — auto-extracted accent colors, all files"
   },
   {
    "repo": "g1998815/dsh-workspace-tools",
@@ -20198,6 +20198,13 @@
    "desc": "会话日志诊断与安全修复：raw zstd/JSONL 工件校验、空 tool-call ID 链的确定性修复、单槽 pre-repair 备份与恢复、审计记录；Web「会话体检」面板 + 只读诊断工具 dsh_session_repair；npm `dsh-session-repair` 0.5.3"
   },
   {
+   "repo": "perrylink/dsh-ticktick",
+   "name": "dsh-ticktick",
+   "verdict": "untested",
+   "stars": null,
+   "desc": "TickTick（滴答清单）任务桥：会话页头部任务面板与精选代理工具，走官方 TickTick MCP 端点"
+  },
+  {
    "repo": "sirilee/dsh-approval-hotkeys",
    "name": "dsh-approval-hotkeys",
    "verdict": "untested",
@@ -21183,6 +21190,13 @@
    "verdict": "incompatible",
    "stars": 2,
    "desc": "—"
+  },
+  {
+   "repo": "frankxxxxue/dsh-photo-skins",
+   "name": "frankxxxxue-dsh-photo-skins",
+   "verdict": "incompatible",
+   "stars": 2,
+   "desc": "A DeepSeek Harness plugin that turns your photos into Web GUI skins — auto-extracted accent colors, all files"
   },
   {
    "repo": "gdgfd22/deepseek-harness-ssh",
@@ -44397,6 +44411,13 @@
    "desc": "DeepSeek Harness desktop client (Electron shell)"
   },
   {
+   "repo": "perrylink/dsh-cert-mcp",
+   "name": "dsh-cert-mcp",
+   "verdict": "untested",
+   "stars": null,
+   "desc": "DSH 插件认证注册表 MCP 服务器：查询认证、列出已认证插件、读取认证规范"
+  },
+  {
    "repo": "turtle2209/Bigfish",
    "name": "Bigfish",
    "verdict": "incompatible",
@@ -53742,6 +53763,13 @@
    "desc": "DeepSeek Harness plugin: Windows tray-balloon + sound notification when a conver"
   },
   {
+   "repo": "perrylink/dsh-wechat",
+   "name": "dsh-wechat",
+   "verdict": "untested",
+   "stars": null,
+   "desc": "微信私聊消息桥接 DSH：文本、图片、文件与音视频双向传输"
+  },
+  {
    "repo": "perrylink/dsh-defend",
    "name": "dsh-defend",
    "verdict": "untested",
@@ -57417,13 +57445,6 @@
    "desc": "Scopes MCP tool injection per workspace directory in the DeepSeek Harness: a session opened in a project sees"
   },
   {
-   "repo": "ffyuuu/dsh-llm-longcat",
-   "name": "ffyuuu-dsh-llm-longcat",
-   "verdict": "ok",
-   "stars": 2,
-   "desc": "LongCat (LongCat-2.0) provider for DeepSeek Harness — 1M context, thinking mode, tool calling"
-  },
-  {
    "repo": "fieldnote-ops/frameevidence",
    "name": "fieldnote-ops-frameevidence",
    "verdict": "ok",
@@ -60483,25 +60504,11 @@
    "desc": "Tavily web search provider plugin for DeepSeek Harness (dsh)"
   },
   {
-   "repo": "fastengiel-kurai/dsh-peekfile-everything",
-   "name": "fastengiel-kurai-dsh-peekfile-everything",
-   "verdict": "ok",
-   "stars": 0,
-   "desc": "DSH local file search, clickable path detection, and floating preview plugin with optional EverythingCLI integ"
-  },
-  {
    "repo": "faye0526/dsh-backup-btn",
    "name": "faye0526-dsh-backup-btn",
    "verdict": "ok",
    "stars": 0,
    "desc": "DSH 一键备份按钮 - 浮动按钮备份 DSH 数据到 GitHub Gist"
-  },
-  {
-   "repo": "fbzz/readproof",
-   "name": "fbzz-readproof",
-   "verdict": "ok",
-   "stars": 0,
-   "desc": "Readproof — the lockfile and replay primitive for what AI agents read: stable identity, freshness policy, cont"
   },
   {
    "repo": "FernanDAlumin/dsh-codex-subs-plugin",
@@ -63311,6 +63318,13 @@
    "desc": "—"
   },
   {
+   "repo": "ffyuuu/dsh-llm-longcat",
+   "name": "ffyuuu-dsh-llm-longcat",
+   "verdict": "incompatible",
+   "stars": 2,
+   "desc": "LongCat (LongCat-2.0) provider for DeepSeek Harness — 1M context, thinking mode, tool calling"
+  },
+  {
    "repo": "fieldnote-ops/keyringseam",
    "name": "fieldnote-ops-keyringseam",
    "verdict": "incompatible",
@@ -64380,6 +64394,20 @@
    "verdict": "incompatible",
    "stars": 0,
    "desc": "DeepSeek Harness（dsh）的 Matrix agent 桥接插件：把 Matrix 房间桥接到 harness agent 会话，每个房间一个会话，支持在聊天里远程监控、审批和追加指令；多分身架构 + 媒"
+  },
+  {
+   "repo": "fastengiel-kurai/dsh-peekfile-everything",
+   "name": "fastengiel-kurai-dsh-peekfile-everything",
+   "verdict": "incompatible",
+   "stars": 0,
+   "desc": "DSH local file search, clickable path detection, and floating preview plugin with optional EverythingCLI integ"
+  },
+  {
+   "repo": "fbzz/readproof",
+   "name": "fbzz-readproof",
+   "verdict": "incompatible",
+   "stars": 0,
+   "desc": "Readproof — the lockfile and replay primitive for what AI agents read: stable identity, freshness policy, cont"
   },
   {
    "repo": "february2015/dsh-subagent-codex-plus",
