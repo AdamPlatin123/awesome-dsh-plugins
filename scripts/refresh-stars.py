@@ -149,7 +149,7 @@ def process(path):
     def sub_list(m):
         # 分组：1=判定 2=名称 3=owner 4=repo 5=可选数字 6=—
         key = f'{m.group(3)}/{m.group(4)}'.lower()
-        cur = int(m.group(5)) if m.group(5) is not None else None
+        cur = int(m.group(5).lstrip('★')) if m.group(5) is not None else None
         if key not in stars:
             return m.group(0)
         if key in renames:
