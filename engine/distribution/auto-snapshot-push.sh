@@ -64,7 +64,7 @@ gh api -X PUT "repos/$REPO/contents/data/snapshots/$RUN_ID.json" \
 
 # ④ 镜像双仓同步（公开仓 AdamPlatin123：快照+数据缓存 org→mirror，
 #    触发镜像 readme-render workflow 自动渲染；失败不阻断 org 主链路，幂等重试）
-MIRROR=AdamPlatin123/awesome-dsh-plugins
+MIRROR=AdamPlatin123/dsh-plugin-radar
 sync_put() {  # $1=文件路径：org 内容转推镜像，sha 一致则跳过
   local p="$1" sha_o sha_m
   sha_o=$(gh api "repos/$REPO/contents/$p" --jq '.sha' 2>/dev/null)
@@ -93,10 +93,15 @@ sync_put "data/snapshots/$RUN_ID.json"
 for _f in data/locate-cache.json data/url-audit.json data/repo-map.json data/desc-cache.json; do
   sync_put "$_f"
 done
-# 渲染链脚本以 org 为权威（镜像 workflow 用本仓脚本渲染，脱节会生成旧口径产物）
-for _f in scripts/gen_plugins_all.py scripts/resolve_placeholders.py \
-          scripts/render-readme-from-snapshot.py scripts/classify.py \
-          scripts/gen-pipeline-diagram.py scripts/reconcile_catalog.py; do
-  sync_put "$_f"
+# 脚本权威反转（2026-09-05）：主仓 main 为唯一权威，.9 每轮拉取最新脚本再渲染；
+# 不再向 org 推送脚本（旧环会用 .9 过期副本周期性回灌主仓，已三次冲掉拆分案）
+SCRIPTS="gen_plugins_all.py resolve_placeholders.py render-readme-from-snapshot.py classify.py gen-pipeline-diagram.py reconcile_catalog.py tile_assets.py"
+for _f in $SCRIPTS; do
+  for _base in "https://raw.githubusercontent.com/AdamPlatin123/dsh-plugin-radar/main" \
+               "https://cdn.jsdelivr.net/gh/AdamPlatin123/dsh-plugin-radar@main"; do
+    if curl -sf --max-time 20 "$_base/scripts/$_f" -o "$HOME/dsh-external-research/scripts/$_f"; then
+      break
+    fi
+  done || echo "[scripts] 拉取 $_f 失败（沿用本地现行版）"
 done
 

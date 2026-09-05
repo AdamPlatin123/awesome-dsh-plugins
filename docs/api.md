@@ -7,7 +7,7 @@
 | 文件 | 内容 | 体积 | 更新节奏 |
 |---|---|---:|---|
 | [`data/latest.json`](../data/latest.json) | 快照指针 + 四档统计（轮询友好，小文件） | <1KB | 每轮快照（约 15 分钟） |
-| [`data/plugins-all.json`](../data/plugins-all.json) | 全量扁平清单（repo / verdict / stars / desc） | ~2MB | 每轮渲染提交后 |
+| [`data/plugins-all.json`](../data/plugins-all.json) | **已定位**扁平清单（repo / verdict / stars / desc；监测/未定位仅入统计不入数组） | ~2MB | 每轮渲染提交后 |
 
 Raw 直链模式：
 
@@ -29,7 +29,7 @@ https://raw.githubusercontent.com/AdamPlatin123/dsh-plugin-radar/main/data/plugi
   "snapshot_run_id": "20260905T073001Z",
   "stats": {"ok": 6262, "incompatible": 1668, "pending": 1191, "untested": 109,
              "gone": 133, "ambiguous": 103, "unlocated": 8503},
-  "total_listed": 17971,
+  "total_listed": 17971,   // 全量口径（含监测/未定位）；plugins 数组为已定位明细口径
   "data": {"latest": "...", "plugins_all": "..."}
 }
 ```

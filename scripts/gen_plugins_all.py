@@ -366,7 +366,7 @@ def main():
         g_ok = vc_local(entries, dom, '✅ 运行级可用')
         g_bad = vc_local(entries, dom, '❌ 运行级不兼容')
         g_inc = vc_local(entries, dom, '⚠️ 待定') + vc_local(entries, dom, '⏳ 未测')
-        L.append(f'- **{dom}**（{len(group)}）— 🟩 {g_ok} · 🟨 {g_bad} · ⬜ {g_inc} — [明细]({dom_file.relative_to(ROOT)})')
+        L.append(f'- **{dom}**（{len(group)}）— 🟩 {g_ok} · 🟨 {g_bad} · ⬜ {g_inc} — [明细]({dom_file.relative_to(ROOT).as_posix().replace(chr(32), "%20")})')
     L.append('')
 
     L.append('## 附录')

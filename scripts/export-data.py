@@ -39,6 +39,7 @@ def main() -> int:
     generated_at = time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())
 
     stats = {VERDICT_MAP[k]: int(v) for k, v in STAT_RE.findall(text)}
+
     anchor = ANCHOR_RE.search(text)
 
     plugins = []
@@ -54,6 +55,23 @@ def main() -> int:
             'stars': int(stars.lstrip('★')) if stars else None,
             'desc': (desc or '').strip(),
         })
+
+    # 同仓多键去重 + 判定仲裁（codex 评审 #4：9230 行曾含 14 重复键、8 例 ok/incompatible 冲突，
+    # 下游 dict 推导会静默取后值——此处统一仲裁并硬断言唯一）
+    _by = {}
+    for p in plugins:
+        k = p['repo'].lower()
+        if k in _by:
+            prev = _by[k]
+            if prev['verdict'] != p['verdict'] and {prev['verdict'], p['verdict']} & {'ok', 'incompatible'}:
+                prev['verdict'] = 'pending'   # 互斥冲突降待定（对齐 gen_plugins_all 仲裁规则）
+            if (p['stars'] or 0) > (prev['stars'] or 0):
+                prev['stars'] = p['stars']
+        else:
+            _by[k] = p
+    plugins = list(_by.values())
+    _keys = [p['repo'].lower() for p in plugins]
+    assert len(_keys) == len(set(_keys)), f'导出仓库键不唯一: {len(_keys)} 行 {len(set(_keys))}'
 
     latest = {
         'schema': SCHEMA,

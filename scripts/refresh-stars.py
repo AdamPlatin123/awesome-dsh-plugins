@@ -18,6 +18,13 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DRY = '--dry' in sys.argv
 TARGET = os.path.join(ROOT, 'PLUGINS-ALL.md')
+DOMAIN_DIR = os.path.join(ROOT, 'catalog', 'all')
+
+def _targets():
+    files = [TARGET]
+    if os.path.isdir(DOMAIN_DIR):
+        files += sorted(os.path.join(DOMAIN_DIR, f) for f in os.listdir(DOMAIN_DIR) if f.endswith('.md'))
+    return files
 BATCH = 50
 MIN_RESOLVE_RATIO = 0.5  # 解析成功率守门
 
@@ -30,8 +37,8 @@ if not TOKEN:
 # 数字段可省（星数未知——登记兜底行渲染留空）：缺数字时首次刷新补入，此后与普通行同刷。
 # 分组：1=前缀 2=owner 3=repo 4=可选数字 5=尾部（—）
 LIST_RE = re.compile(
-    r'- `\[([^\]]+)\]` \[([^\]]+)\]\(https://github\.com/([A-Za-z0-9_.-]+)/([A-Za-z0-9_.-]+)\)[ \t]*'
-    r'(?:(\d+)[ \t]*)?(—)')
+    r'- (?:[^\[`]* )?`\[([^\]]+)\]` \[([^\]]+)\]\(https://github\.com/([A-Za-z0-9_.-]+)/([A-Za-z0-9_.-]+)\)[ \t]*'
+    r'(?:(★?\d+)[ \t]*)?(—)')
 # 兼容旧表格行：| [name](url) | 123 |（分组：1=前缀 3=owner 4=repo 5=数字 6=尾部）
 TABLE_RE = re.compile(
     r'(\|[ \t]*\[([^\]]+)\]\(https://github\.com/([A-Za-z0-9_.-]+)/([A-Za-z0-9_.-]+)\)[ \t]*\|[ \t]*)'
@@ -84,8 +91,8 @@ def gql_batch(repos):
     return out
 
 
-def main():
-    text = open(TARGET, encoding='utf-8').read()
+def process(path):
+    text = open(path, encoding='utf-8').read()
     entries = []  # (owner, name)
     seen = set()
     for m in LIST_RE.finditer(text):
@@ -99,7 +106,11 @@ def main():
             seen.add(key)
             entries.append(key)
     if not entries:
-        sys.exit('[错误] PLUGINS-ALL.md 未解析到任何条目')
+        # 索引页（PLUGINS-ALL.md）拆分后本无条目行，属预期；域文件零条目仅告警不中断
+        if os.path.basename(path) == 'PLUGINS-ALL.md':
+            return
+        print(f'[stars] {os.path.basename(path)} 未解析到条目（格式漂移？），跳过', file=sys.stderr)
+        return
 
     stars = {}
     for i in range(0, len(entries), BATCH):
@@ -164,7 +175,18 @@ def main():
     print(f'[stars] 候选 {len(entries)} | 解析 {resolved} | 星数变化 {changed[0]}')
     if changed[0] == 0 or DRY:
         return
-    open(TARGET, 'w', encoding='utf-8').write(new_text)
+    open(path, 'w', encoding='utf-8').write(new_text)
+
+
+
+def main():
+    files = _targets()
+    print(f'[stars] 目标文件 {len(files)}：' + ', '.join(os.path.basename(f) for f in files[:4]) + ('…' if len(files) > 4 else ''))
+    for f in files:
+        try:
+            process(f)
+        except Exception as e:
+            print(f'[stars] {os.path.basename(f)} 处理失败: {e}', file=sys.stderr)
 
 
 if __name__ == '__main__':
