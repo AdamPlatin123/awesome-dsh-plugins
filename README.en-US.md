@@ -258,6 +258,12 @@ Per-plugin details (verdict · location · stars) in **PLUGINS-ALL.md**.
 
 <!-- AUTO:catalog:END -->
 
+## 🤝 For Marketplaces (reference our compatibility data)
+
+Plugin marketplaces and aggregators are **welcome to consume this radar's runtime-verdict data** — two stable JSON endpoints, no key required, attribution appreciated:
+
+- Docs & schema: **[docs/api.md](docs/api.md)** (dsh-radar/v1 · 9,000+ verdicts · tiles & dynamic badge patterns)
+
 ##  DSH Learning Community dshfind.com
 
 [dshfind.com](https://dshfind.com) — Learn DSH principles, discover plugins & share best practices.
