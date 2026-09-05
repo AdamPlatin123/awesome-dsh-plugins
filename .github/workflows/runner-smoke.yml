@@ -1,0 +1,36 @@
+name: runner-smoke
+# runner 可运行性冒烟：每次引擎/脚本变更即验证「这份开源代码真的能跑」——
+# 编译检查 + 两个确定性产物链（磁贴资产生成 + 数据接口导出）端到端走通。
+on:
+  push:
+    paths: ['engine/**', 'scripts/**', '.github/workflows/runner-smoke.yml']
+  workflow_dispatch:
+
+concurrency:
+  group: runner-smoke
+  cancel-in-progress: true
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: 编译检查（engine/ + scripts/ 全量）
+        run: python3 -m py_compile engine/**/*.py scripts/*.py 2>/dev/null || python3 - <<'EOF'
+import compileall, sys
+ok = compileall.compile_dir('scripts', quiet=1) and compileall.compile_dir('engine', quiet=1)
+sys.exit(0 if ok else 1)
+EOF
+      - name: 冒烟① 磁贴资产生成（tile_assets，确定性输出）
+        run: python3 scripts/tile_assets.py && test -s assets/tile-ok.svg && test -s assets/tile-adapt.svg && test -s assets/tile-test.svg
+      - name: 冒烟② 数据接口导出（export-data，dsh-radar/v1）
+        run: python3 scripts/gen_plugins_all.py && python3 scripts/export-data.py . && python3 -c "
+import json
+d = json.load(open('data/plugins-all.json'))
+n = len(d.get('plugins') or [])
+assert n > 5000, f'导出条目异常: {n}'
+print(f'[smoke] 数据接口 OK：{n} 条')
+"

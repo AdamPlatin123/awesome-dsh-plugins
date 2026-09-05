@@ -86,6 +86,7 @@ flowchart TB
 | 了解这个雷达系统本身 | [工作原理](#工作原理) · [架构原则](#工作原理) · [开源引擎源码 engine/](engine/) · [管线文档](docs/radar/overview.md) |
 | 看精选插件 | [精选插件榜](#精选插件榜) — 人工策展 · 11 类 |
 | 一把装好不挑单品 | [整合包](#-整合包) — 预设套件 / 能力合集 / 发行版 / 配方管理器 |
+| 市场接入（引用可用性数据） | [数据接口 docs/api.md](docs/api.md) — 两个稳定 JSON · 无需申请 · 署名即可 |
 | 按用途找一个插件 | [分类目录](#分类目录) — 13 类功能领域 · 逐插件明细见 [PLUGINS-ALL.md](PLUGINS-ALL.md)；[PLUGINS.md](PLUGINS.md) 为 PR 登记清单 |
 | 浏览自动发现的全部仓库 | [ 当前生态快照](#当前生态快照) — 日期化兼容矩阵 |
 | 了解最近发生了什么 | [ CHANGELOG](CHANGELOG.md) |
@@ -102,6 +103,10 @@ flowchart TB
 ## 🛒 生态目录（雷达生成的 artifact）
 
 以下所有目录内容——精选榜、整合包、分类目录、兼容矩阵——均由上述雷达管线自动生产与刷新（精选榜与整合包成员为人工策展，星标与状态由 bot 持续更新）。
+数据接口与下游接入见 **[🤝 市场与下游接入](#-市场与下游接入欢迎引用可用性数据)**。
+
+<details>
+<summary><b>📖 展开生态目录</b>（精选榜 56 款 · 整合包 16 个 · 13 域分页明细 17971 条）</summary>
 
 ### 精选插件榜
 
@@ -264,6 +269,20 @@ flowchart TB
 - **❓ 其他**（7128）— 可用 1848 · 不兼容 317 · 待定 262 · 未测 21 · 监测 4680 — [明细](PLUGINS-ALL.md#-其他7128)
 
 <!-- AUTO:catalog:END -->
+
+</details>
+
+## 🤝 市场与下游接入（欢迎引用可用性数据）
+
+插件市场、聚合站与社区清单（dsh-market、dshfind、awesome 列表等）**欢迎直接引用本雷达的运行级可用性数据**——两个稳定 JSON 接口，无需申请、署名即可：
+
+```python
+d = json.load(urllib.request.urlopen(
+    "https://raw.githubusercontent.com/AdamPlatin123/dsh-plugin-radar/main/data/plugins-all.json"))
+verdict = {p["repo"]: p["verdict"] for p in d["plugins"]}   # 9230 条 · 四档判定 + 星标 + 描述
+```
+
+三态磁贴资产可热链、动态徽章端点 schema、口径与署名规范见 **[docs/api.md](docs/api.md)**。
 
 ##  DSH 学习社区 dshfind.com
 

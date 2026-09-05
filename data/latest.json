@@ -1,6 +1,6 @@
 {
  "schema": "dsh-radar/v1",
- "generated_at": "2026-09-05T07:32:57Z",
+ "generated_at": "2026-09-05T09:46:24Z",
  "snapshot_run_id": "20260905T073001Z",
  "stats": {
   "ok": 6262,
@@ -11,7 +11,7 @@
   "ambiguous": 103,
   "unlocated": 8503
  },
- "total_listed": 23,
+ "total_listed": 9230,
  "data": {
   "plugins_all": "data/plugins-all.json",
   "snapshots_dir": "data/snapshots/"

@@ -24,21 +24,25 @@ VERDICT_MAP = {
 }
 # - `[可用]` [name](url) 31 — desc   （desc 可为空：行尾为 " —" 或无 " —"）
 ROW_RE = re.compile(
-    r'^- `\[([^\]]+)\]` \[([^\]]+)\]\((https://github\.com/[^\s)]+)\)(?: (\d+))?(?: — ?(.*))?$')
+    r'^- (?:[^\[`]* )?`\[([^\]]+)\]` \[([^\]]+)\]\((https://github\.com/[^\s)]+)\)(?: (★?\d+))?(?: — ?(.*))?$')
 STAT_RE = re.compile(r'`\[([^\]]+)\]`（(\d+)）')
 ANCHOR_RE = re.compile(r'`(\d{8}T\d{6}Z)`')
 
 
 def main() -> int:
     root = Path(sys.argv[1] if len(sys.argv) > 1 else '.')
+    # 拆分案后逐条明细在 catalog/all/*.md 域文件；PLUGINS-ALL.md 为索引（含图例统计）。
+    # 两处合并解析：索引出统计，域文件出条目。
     text = (root / 'PLUGINS-ALL.md').read_text(encoding='utf8')
+    domain_texts = sorted((root / 'catalog' / 'all').glob('*.md'))
+    rows_text = '\n'.join(p.read_text(encoding='utf8') for p in domain_texts) if domain_texts else text
     generated_at = time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())
 
     stats = {VERDICT_MAP[k]: int(v) for k, v in STAT_RE.findall(text)}
     anchor = ANCHOR_RE.search(text)
 
     plugins = []
-    for line in text.splitlines():
+    for line in rows_text.splitlines():
         m = ROW_RE.match(line.strip())
         if not m:
             continue
@@ -47,7 +51,7 @@ def main() -> int:
             'repo': url.split('github.com/')[1],
             'name': name,
             'verdict': VERDICT_MAP.get(verdict_cn, verdict_cn),
-            'stars': int(stars) if stars else None,
+            'stars': int(stars.lstrip('★')) if stars else None,
             'desc': (desc or '').strip(),
         })
 

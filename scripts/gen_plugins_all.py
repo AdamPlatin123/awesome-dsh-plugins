@@ -29,8 +29,9 @@ REAL_URL_RE = re.compile(r'github\.com/([A-Za-z0-9_.-]+)/([A-Za-z0-9_.-]+)')
 # 互斥判定（✅/❌ 矛盾才降待定；待定/未测属非结论性，不参与冲突）
 CONFLICTING_VERDICTS = ('✅ 运行级可用', '❌ 运行级不兼容')
 
-MARK = {'✅ 运行级可用': '![已兼容](assets/tile-ok.svg)', '❌ 运行级不兼容': '![需适配](assets/tile-adapt.svg)',
-        '⚠️ 待定': '![待测试](assets/tile-test.svg)', '⏳ 未测': '![待测试](assets/tile-test.svg)'}
+# 四档文本标记（机器可解析——export-data.py 的 dsh-radar/v1 稳定接口依赖此格式，勿改图形标记）
+MARK = {'✅ 运行级可用': '🟩 `[可用]`', '❌ 运行级不兼容': '🟨 `[不兼容]`',
+        '⚠️ 待定': '⬜ `[待定]`', '⏳ 未测': '⬜ `[未测]`'}
 DOMAIN_ORDER = ['🎓 技能包', '🧠 记忆增强', '🎨 主题皮肤', '🛒 市场与管理',
                 '🔌 Web UI 增强', '💻 编码开发', '🤖 Agent 能力', '📡 消息通讯',
                 '🗂 文件数据', '🎮 娱乐生活', '🛠 基建部署', '📚 学习研究', '❓ 其他']
@@ -358,7 +359,7 @@ def main():
                 dl.append(f'- `[未定位]` **{name}** — 占位待复核，判定暂不展示{pr}')
             else:
                 bundle_part = '〔📦〕' if e.get('bundle') else ''   # 整合包（dsh.bundle / workspaces 结构）
-                dl.append(f'- {MARK.get(e.get("verdict"), "![待测试](assets/tile-test.svg)")} [{name}]({e["url"]}) {star_part}— {desc}{pr}{bundle_part}')
+                dl.append(f'- {MARK.get(e.get("verdict"), "⬜ `[未测]`")} [{name}]({e["url"]}) {star_part}— {desc}{pr}{bundle_part}')
         dom_slug = dom.split(' ', 1)[-1]
         dom_file = dom_dir / f'{dom_slug}.md'
         dom_file.write_text('\n'.join(dl).replace('](assets/', '](../../assets/') + '\n', encoding='utf-8')
