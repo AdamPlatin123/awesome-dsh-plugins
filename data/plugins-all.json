@@ -1,6 +1,6 @@
 {
  "schema": "dsh-radar/v1",
- "generated_at": "2026-09-05T20:15:57Z",
+ "generated_at": "2026-09-05T20:30:54Z",
  "plugins": [
   {
    "repo": "tt-a1i/archify",
@@ -4959,6 +4959,13 @@
    "desc": "Mobile client for Harness AI — follow, answer and approve your hosted agent sessions from your phone"
   },
   {
+   "repo": "harness-home/harness-ai-desktop",
+   "name": "harness-home-harness-ai-desktop",
+   "verdict": "ok",
+   "stars": 0,
+   "desc": "Desktop client for Harness AI — an Electron app that boots the DeepSeek Harness (dsh) agent runtime in-process"
+  },
+  {
    "repo": "hmlyx/dsh-memory",
    "name": "hmlyx-dsh-memory",
    "verdict": "ok",
@@ -8317,13 +8324,6 @@
    "verdict": "incompatible",
    "stars": 0,
    "desc": "DeepSeek Harness Netx Ops agent preset (UME alarms, NE, managed CLI)"
-  },
-  {
-   "repo": "harness-home/harness-ai-desktop",
-   "name": "harness-home-harness-ai-desktop",
-   "verdict": "incompatible",
-   "stars": 0,
-   "desc": "Desktop client for Harness AI — an Electron app that boots the DeepSeek Harness (dsh) agent runtime in-process"
   },
   {
    "repo": "harp-reed/planbridge",
