@@ -1,6 +1,6 @@
 {
  "schema": "dsh-radar/v1",
- "generated_at": "2026-09-05T19:45:46Z",
+ "generated_at": "2026-09-05T20:00:52Z",
  "plugins": [
   {
    "repo": "tt-a1i/archify",
@@ -2269,13 +2269,6 @@
    "verdict": "ok",
    "stars": 2,
    "desc": "Discord bridge for DeepSeek Harness: chat with your dsh web sessions from Discord"
-  },
-  {
-   "repo": "glangzh/dsh-advisor",
-   "name": "glangzh-dsh-advisor",
-   "verdict": "ok",
-   "stars": 2,
-   "desc": "给 DeepSeek Harness 的 Agent 增加一位\"顾问\"：日常任务使用较弱模型（默认模型），遇到真正困难的决策时，Agent 会自动向一个更强的模型咨询"
   },
   {
    "repo": "hackernotfound/dsh-tacit",
@@ -7512,6 +7505,13 @@
    "verdict": "incompatible",
    "stars": 2,
    "desc": "Context-aware dictation for DeepSeek Harness — live Composer transcription, model polish, and user-controlled"
+  },
+  {
+   "repo": "glangzh/dsh-advisor",
+   "name": "glangzh-dsh-advisor",
+   "verdict": "incompatible",
+   "stars": 2,
+   "desc": "给 DeepSeek Harness 的 Agent 增加一位\"顾问\"：日常任务使用较弱模型（默认模型），遇到真正困难的决策时，Agent 会自动向一个更强的模型咨询"
   },
   {
    "repo": "hjqcan/dsh-goodmemory",
@@ -15053,13 +15053,6 @@
    "desc": "Team access for the DeepSeek Harness (dsh) web UI — login wall + HTTP/WebSocket reverse proxy"
   },
   {
-   "repo": "fsrmqi/dsh-promptkit",
-   "name": "fsrmqi-dsh-promptkit",
-   "verdict": "ok",
-   "stars": 1,
-   "desc": "Prompt building & enhancement toolkit for DeepSeek Harness: Studio + QuickEnhancer"
-  },
-  {
    "repo": "fwfuuu-design/dsh-desktop",
    "name": "fwfuuu-design-dsh-desktop",
    "verdict": "ok",
@@ -21773,6 +21766,13 @@
    "desc": "DSH (DeepSeek Harness) web plugin: pin sessions to the top of the sidebar for quick access to recurring workfl"
   },
   {
+   "repo": "fsrmqi/dsh-promptkit",
+   "name": "fsrmqi-dsh-promptkit",
+   "verdict": "incompatible",
+   "stars": 1,
+   "desc": "Prompt building & enhancement toolkit for DeepSeek Harness: Studio + QuickEnhancer"
+  },
+  {
    "repo": "hanlinlibham/dsh-native-tui",
    "name": "hanlinlibham-dsh-native-tui",
    "verdict": "incompatible",
@@ -25835,13 +25835,6 @@
   {
    "repo": "fuyu-jie/dsh-go-plugin",
    "name": "fuyu-jie-dsh-go-plugin",
-   "verdict": "ok",
-   "stars": 2,
-   "desc": "—"
-  },
-  {
-   "repo": "fuzz1og/dsh-font-settings",
-   "name": "fuzz1og-dsh-font-settings",
    "verdict": "ok",
    "stars": 2,
    "desc": "—"
@@ -31428,7 +31421,7 @@
   {
    "repo": "gausszhou/dsh-where-am-i",
    "name": "gausszhou-dsh-where-am-i",
-   "verdict": "ok",
+   "verdict": "pending",
    "stars": 0,
    "desc": "Neofetch for DeepSeek Harness."
   },
@@ -38573,6 +38566,13 @@
    "desc": "Capability-aware reasoning controls and Fast model routing for DeepSeek Harness"
   },
   {
+   "repo": "fuzz1og/dsh-font-settings",
+   "name": "fuzz1og-dsh-font-settings",
+   "verdict": "incompatible",
+   "stars": 2,
+   "desc": "—"
+  },
+  {
    "repo": "GongYuanCaiJi/dsh-copilot-sdk",
    "name": "gongyuancaiji-dsh-copilot-sdk",
    "verdict": "incompatible",
@@ -42332,13 +42332,6 @@
    "desc": "—"
   },
   {
-   "repo": "frederico-kluser/deepseek-harness-mobile",
-   "name": "frederico-kluser-deepseek-harness-mobile",
-   "verdict": "ok",
-   "stars": 1,
-   "desc": "—"
-  },
-  {
    "repo": "fuckingling/deepseek-harness-desktop",
    "name": "fuckingling-deepseek-harness-desktop",
    "verdict": "ok",
@@ -44850,6 +44843,13 @@
    "verdict": "incompatible",
    "stars": 1,
    "desc": "dsh-seatbelt 方面沙箱增强尝试使用非exec工具直接对接系统seatbelt相关api"
+  },
+  {
+   "repo": "frederico-kluser/deepseek-harness-mobile",
+   "name": "frederico-kluser-deepseek-harness-mobile",
+   "verdict": "incompatible",
+   "stars": 1,
+   "desc": "—"
   },
   {
    "repo": "hw-cola/dsh-remote-control",
@@ -49241,13 +49241,6 @@
    "desc": "SGME 拾光记忆引擎——AI 无缝切换：记忆、WIKI 知识库、技能库全面接管"
   },
   {
-   "repo": "fufengyuan/dsh-stool-plugin",
-   "name": "fufengyuan-dsh-stool-plugin",
-   "verdict": "ok",
-   "stars": 2,
-   "desc": "DSH 运维工具箱插件"
-  },
-  {
    "repo": "huangrx6/dsh-plugin",
    "name": "huangrx6-dsh-plugin",
    "verdict": "pending",
@@ -51101,6 +51094,13 @@
    "verdict": "incompatible",
    "stars": 2,
    "desc": "让 DeepSeek 的每一分钱都花在刀刃上 —— 前缀缓存命中率、费用与健康度，一眼看穿"
+  },
+  {
+   "repo": "fufengyuan/dsh-stool-plugin",
+   "name": "fufengyuan-dsh-stool-plugin",
+   "verdict": "incompatible",
+   "stars": 2,
+   "desc": "DSH 运维工具箱插件"
   },
   {
    "repo": "huanghouchun/dsh-claude-migrator",

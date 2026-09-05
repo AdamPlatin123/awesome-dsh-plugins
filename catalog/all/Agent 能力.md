@@ -327,7 +327,6 @@
 - ⬜ `[待定]` [genesis-agents-dsh-plugins](https://github.com/genesis-agents/dsh-plugins) ★2 — Plugins for DeepSeek Harness: a source library that reads 72 feeds and publishes podcasts, digests and reports
 - 🟩 `[可用]` [gfds2005-dsh-timed-goal](https://github.com/gfds2005/dsh-timed-goal) ★2 — DSH（DeepSeek Harness） Web 插件：在任意对话中配置一次性（或每日重复）任务——一个绝对时间加上要执行的提示词
 - 🟩 `[可用]` [ghbhiee-dsh-plugin-discord](https://github.com/ghbhiee/dsh-plugin-discord) ★2 — Discord bridge for DeepSeek Harness: chat with your dsh web sessions from Discord
-- 🟩 `[可用]` [glangzh-dsh-advisor](https://github.com/glangzh/dsh-advisor) ★2 — 给 DeepSeek Harness 的 Agent 增加一位"顾问"：日常任务使用较弱模型（默认模型），遇到真正困难的决策时，Agent 会自动向一个更强的模型咨询
 - 🟩 `[可用]` [hackernotfound-dsh-tacit](https://github.com/hackernotfound/dsh-tacit) ★2 — Learns what you leave unsaid in your prompts and steers the DeepSeek Harness agent for you
 - 🟩 `[可用]` [haoku123-dsh-budget-guard](https://github.com/haoku123/dsh-budget-guard) ★2 — DeepSeek Harness plugin: LLM cost metering with budget enforcement (deny/warn) and peak-valley pricing
 - ⬜ `[待定]` [hccccc01333-dsh-eval](https://github.com/hccccc01333/dsh-eval) ★2 — Agent evaluation platform for DeepSeek Harness: benchmark YAML, headless dsh orchestration, trace-based metric
@@ -784,7 +783,6 @@
 - 🟩 `[可用]` [fplj-fplj-dsh-ua-headers](https://github.com/fplj-fplj/dsh-ua-headers) ★0 — 为 DeepSeek Harness (DSH) 定制的 User-Agent 与请求头插件：按模型匹配改写 UA / 合并自定义请求头，遵循 dsh-ecosystem-spec 生态规范
 - ⬜ `[待定]` [frederico-kluser-dsh-plugin-dev-agent-skill](https://github.com/frederico-kluser/dsh-plugin-dev-agent-skill) ★0 — Global agent skill: create, extend, secure, test and publish Cordis plugins for the DeepSeek Harness (DSH)
 - 🟩 `[可用]` [freedomkk-qfeng-dsh-mail-assistant](https://github.com/freedomkk-qfeng/dsh-mail-assistant) ★0 — Standards-based IMAP/SMTP mail connector for DeepSeek Harness, enabling agents to read and send email with exp
-- `[未定位]` **frog755-dsh-hybrid-memory** — 占位待复核，判定暂不展示
 - `[未定位]` **frog755-dsh-prompt-vault** — 占位待复核，判定暂不展示
 - 🟩 `[可用]` [fufuf-c-dsh-token](https://github.com/fufuf-c/dsh-token) ★0 — DSH local token usage & cost dashboard: 4-segment token breakdown, cache savings, per-session drill-down, glob
 - `[未定位]` **funnyvalentine00-dsh-session-continue** — 占位待复核，判定暂不展示
@@ -1823,6 +1821,7 @@
 - 🟨 `[不兼容]` [dengpeihua-dsh-browser](https://github.com/dengpeihua/dsh-browser) ★2 — Native DeepSeek Harness browser-agent plugin with session-isolated Chromium, CDP, and DOM tools
 - 🟨 `[不兼容]` [feiertu-dsh-input-rewriter](https://github.com/feiertu/dsh-input-rewriter) ★2 — 一个用于实时改写提示词的deepseek harness插件
 - 🟨 `[不兼容]` [franksong2702-dsh-dictate](https://github.com/franksong2702/dsh-dictate) ★2 — Context-aware dictation for DeepSeek Harness — live Composer transcription, model polish, and user-controlled
+- 🟨 `[不兼容]` [glangzh-dsh-advisor](https://github.com/glangzh/dsh-advisor) ★2 — 给 DeepSeek Harness 的 Agent 增加一位"顾问"：日常任务使用较弱模型（默认模型），遇到真正困难的决策时，Agent 会自动向一个更强的模型咨询
 - 🟨 `[不兼容]` [hjqcan-dsh-goodmemory](https://github.com/hjqcan/dsh-goodmemory) ★2 — Automatic cross-session GoodMemory recall and writeback for DeepSeek Harness
 - 🟨 `[不兼容]` [inmny-dsh-continue](https://github.com/inmny/dsh-continue) ★2 — 为 DeepSeek Harness 增加一个直接续跑按钮
 - 🟨 `[不兼容]` [ishuowang-dsh-rolehub-bridge](https://github.com/ishuowang/dsh-rolehub-bridge) ★2 — Native RoleHub bridge for DeepSeek Harness: discover verified roles, start role-scoped Sessions, and invite th
@@ -1964,6 +1963,7 @@
 - `[未定位]` **frank-nf-dsh-memory-nexus** — 占位待复核，判定暂不展示
 - `[未定位]` **franklinzanedurant-agent-discipline** — 占位待复核，判定暂不展示
 - `[未定位]` **friendshl-dsh-agent-evolution** — 占位待复核，判定暂不展示
+- `[未定位]` **frog755-dsh-hybrid-memory** — 占位待复核，判定暂不展示
 - `[未定位]` **geralt4-dsh-plugin-session-delete** — 占位待复核，判定暂不展示
 - `[未定位]` **greenlv-dsh-context-guard** — 占位待复核，判定暂不展示
 - `[未定位]` **guanzhw-agentsession** — 占位待复核，判定暂不展示

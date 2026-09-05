@@ -895,7 +895,6 @@
 - 🟩 `[可用]` [dsh-plugin-devecocli](https://github.com/frankq007/dsh-plugin-devecocli) ★1 — HarmonyOS development tools for DeepSeek Harness: device/emulator management, UI automation, build & deploy, l
 - ⬜ `[待定]` [freespace8-dsh-plugins](https://github.com/freespace8/dsh-plugins) ★1 — DeepSeek Harness (DSH) 插件合集：工具包、守护循环、UI 面板等
 - 🟩 `[可用]` [frozo-ai-dsh-teams](https://github.com/frozo-ai/dsh-teams) ★1 — Team access for the DeepSeek Harness (dsh) web UI — login wall + HTTP/WebSocket reverse proxy
-- 🟩 `[可用]` [fsrmqi-dsh-promptkit](https://github.com/fsrmqi/dsh-promptkit) ★1 — Prompt building & enhancement toolkit for DeepSeek Harness: Studio + QuickEnhancer
 - 🟩 `[可用]` [fwfuuu-design-dsh-desktop](https://github.com/fwfuuu-design/dsh-desktop) ★1 — A DeepSeek Harness desktop client for Apple Silicon Macs with a built-in plugin marketplace
 - 🟩 `[可用]` [ganfne123-dsh-plugin-api-quota](https://github.com/ganfne123/dsh-plugin-api-quota) ★1 — DSH Web UI plugin: check your DeepSeek API key balance from the sidebar
 - 🟩 `[可用]` [gdy01-dsh-token-cost](https://github.com/gdy01/dsh-token-cost) ★1 — DSH plugin: per-project LLM token usage and RMB cost (input / cache-hit / output) based on model standard pric
@@ -2450,6 +2449,7 @@
 - 🟨 `[不兼容]` [dsh-tauri-desk-dsh-tauri-plugins](https://github.com/dsh-tauri-desk/dsh-tauri-plugins) ★1 — ⚠️ Deprecated & archived — built-in plugins migrated to github.com/dsh-tauri-desk/deepseek-harness-desktop pac
 - 🟨 `[不兼容]` [dsh-config-watch](https://github.com/Equinox7379/dsh-config-watch) ★1 — Config drift detective for DSH: snapshots profile/plugin state, records changes.
 - 🟨 `[不兼容]` [fallow5-dsh-pin-sessions](https://github.com/fallow5/dsh-pin-sessions) ★1 — DSH (DeepSeek Harness) web plugin: pin sessions to the top of the sidebar for quick access to recurring workfl
+- 🟨 `[不兼容]` [fsrmqi-dsh-promptkit](https://github.com/fsrmqi/dsh-promptkit) ★1 — Prompt building & enhancement toolkit for DeepSeek Harness: Studio + QuickEnhancer
 - 🟨 `[不兼容]` [hanlinlibham-dsh-native-tui](https://github.com/hanlinlibham/dsh-native-tui) ★1 — Classic, dependable DeepSeek Harness TUI with session, provider, and model management.
 - 🟨 `[不兼容]` [hatter123-dsh-math-suite](https://github.com/hatter123/dsh-math-suite) ★1 — dsh用来进行数学计算的工具整合包，内含多个数学工具
 - 🟨 `[不兼容]` [jhckevin-dsh-request-privacy](https://github.com/jhckevin/dsh-request-privacy) ★1 — Live request metadata minimization for DeepSeek Harness, covering the native DeepSeek provider with WebUI sett
