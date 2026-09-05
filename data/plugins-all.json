@@ -1,6 +1,6 @@
 {
  "schema": "dsh-radar/v1",
- "generated_at": "2026-09-05T11:47:59Z",
+ "generated_at": "2026-09-05T16:47:29Z",
  "plugins": [
   {
    "repo": "tt-a1i/archify",
@@ -27499,13 +27499,6 @@
    "desc": "—"
   },
   {
-   "repo": "haodongzhang022-hue/OpenLiulan",
-   "name": "haodongzhang022-hue-openliulan",
-   "verdict": "pending",
-   "stars": 1,
-   "desc": "—"
-  },
-  {
    "repo": "haohao16421/dsh-add-conversation",
    "name": "haohao16421-dsh-add-conversation",
    "verdict": "ok",
@@ -38753,6 +38746,13 @@
    "verdict": "incompatible",
    "stars": 1,
    "desc": "番茄时钟：25/5 标准番茄工作法倒计时，纯本地计时零依赖"
+  },
+  {
+   "repo": "haodongzhang022-hue/OpenLiulan",
+   "name": "haodongzhang022-hue-openliulan",
+   "verdict": "incompatible",
+   "stars": 1,
+   "desc": "—"
   },
   {
    "repo": "hpyperry/dsh-ref-lib",
