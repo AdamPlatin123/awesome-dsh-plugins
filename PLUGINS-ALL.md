@@ -1,14 +1,14 @@
 # 全量插件清单（统一四档口径）
 
-> 数据源：radar 快照并集（`20260905T000001Z` 2026-09-05 08:00 UTC+8 ⊕ `20260904T234501Z` 2026-09-05 07:45 UTC+8 ⊕ `20260904T233001Z` 2026-09-05 07:30 UTC+8 等 412 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
+> 数据源：radar 快照并集（`20260905T003001Z` 2026-09-05 08:30 UTC+8 ⊕ `20260905T000001Z` 2026-09-05 08:00 UTC+8 ⊕ `20260904T234501Z` 2026-09-05 07:45 UTC+8 等 413 轮）⊕ GitHub 定位复核缓存（data/locate-cache.json）。
 > 呈现：分组列表（状态 · 名称 · ★星标 · 一句话说明），不使用大表格；〔📦〕= 整合包（根 dsh.bundle / workspaces 多子包）。
 
 ## 统一度量衡
 
 **判定维度**（运行级四档；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：
 
-- 全量判定 17971（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12245）/ `[不兼容]`（3404）/ `[待定]`（2168）
-- 已定位明细 9230（本列表展示口径，另 8741 条监测/未定位的判定暂不展示）：`[可用]`（6255）/ `[不兼容]`（1700）/ `[待定]`（1166）/ `[未测]`（109）
+- 全量判定 17971（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：`[可用]`（12245）/ `[不兼容]`（3403）/ `[待定]`（2169）
+- 已定位明细 9230（本列表展示口径，另 8741 条监测/未定位的判定暂不展示）：`[可用]`（6255）/ `[不兼容]`（1699）/ `[待定]`（1167）/ `[未测]`（109）
 
 **定位维度**（与判定正交；监测类不显示对错判定，原始结果保留于快照层）：
 
@@ -7688,6 +7688,7 @@
 - `[可用]` [pack-agent](https://github.com/sakikoTGW/pack-agent) ★2 — Agent Modpack — 像装 MC 整合包一样，装你的 agent
 - `[可用]` [sakuraqqq-dsh-auto-paste](https://github.com/sakuraqqq/dsh-auto-paste) ★2 — A DeepSeek Harness plugin that auto-saves large pasted text as attachment files
 - `[待定]` [shellexy-dsh-webviewgtk](https://github.com/shellexy/dsh-webviewgtk) ★2 — A GTK4 + WebKitGTK 6.0 based web launcher for dsh
+- `[待定]` [shoxiy-danny-dsh-feishu](https://github.com/shoxiy-danny/dsh-feishu) ★2 — The harness lives in Feishu, on a Linux server
 - `[可用]` [DeepSeek-harness-dingtalk](https://github.com/sliverp/DeepSeek-harness-dingtalk) ★2 — DingTalk Stream text and image channel plugin for DeepSeek Harness
 - `[待定]` [DeepSeek-harness-weixin](https://github.com/sliverp/DeepSeek-harness-weixin) ★2 — Weixin ClawBot channel plugin for DeepSeek Harness with QR login and text/image messaging
 - `[待定]` [thuang3316-dsh-live-notify](https://github.com/thuang3316/dsh-live-notify) ★2 — DSH plugin for live notification
@@ -8108,7 +8109,6 @@
 - `[不兼容]` [leonardoxr-dsh-auto-chat-titles](https://github.com/leonardoxr/dsh-auto-chat-titles) ★2 — Semantic, configurable chat titles for DeepSeek Harness
 - `[不兼容]` [ljnljn2005-dsh-clawbot-notify](https://github.com/ljnljn2005/dsh-clawbot-notify) ★2 — —
 - `[不兼容]` [michaelcode-wang-dsh-wecom](https://github.com/michaelcode-wang/dsh-wecom) ★2 — WeCom (Enterprise WeChat) Smart Robot bridge for DeepSeek Harness — two-way chat over the aibot WebSocket gate
-- `[不兼容]` [shoxiy-danny-dsh-feishu](https://github.com/shoxiy-danny/dsh-feishu) ★2 — The harness lives in Feishu, on a Linux server
 - `[不兼容]` [vibeinging-dsh-red-alert](https://github.com/vibeinging/dsh-red-alert) ★2 — A real Red Alert 2 AI battlefield plugin for DeepSeek Harness with fog-safe control, live DSH Chat, and post-m
 - `[不兼容]` [xsoc1-dsh-image-vision](https://github.com/xsoc1/dsh-image-vision) ★2 — Eyes for text-only DeepSeek: view_image tool (local Ollama or any OpenAI-compatible VLM) + chat image-attachme
 - `[不兼容]` [zhang0098-dsh-telegram-channel](https://github.com/zhang0098/dsh-telegram-channel) ★2 — DeepSeek Harness Telegram mobile remote: bind live Web sessions (Codex-style)
