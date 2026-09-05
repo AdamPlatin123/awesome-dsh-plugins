@@ -1,6 +1,6 @@
 {
  "schema": "dsh-radar/v1",
- "generated_at": "2026-09-05T22:00:45Z",
+ "generated_at": "2026-09-05T22:15:41Z",
  "plugins": [
   {
    "repo": "tt-a1i/archify",
