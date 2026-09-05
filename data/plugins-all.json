@@ -1,6 +1,6 @@
 {
  "schema": "dsh-radar/v1",
- "generated_at": "2026-09-05T11:17:03Z",
+ "generated_at": "2026-09-05T11:47:59Z",
  "plugins": [
   {
    "repo": "tt-a1i/archify",
@@ -17566,13 +17566,6 @@
    "desc": "DeepSeek Harness web-GUI plugin: discover and install community plugins from the dsh-plugin topic — searchable"
   },
   {
-   "repo": "dujar/dsh-restart",
-   "name": "dujar-dsh-restart",
-   "verdict": "ok",
-   "stars": 0,
-   "desc": "DeepSeek Harness web-GUI plugin: restart dsh web in one click, toggle installed plugins, git panel for local c"
-  },
-  {
    "repo": "dxsdyhm/dsh-adb-logcat",
    "name": "dxsdyhm-dsh-adb-logcat",
    "verdict": "ok",
@@ -22163,6 +22156,13 @@
    "verdict": "incompatible",
    "stars": 0,
    "desc": "DeepSeek Harness 语音插件：火山 seed-tts 云端 TTS（自动回退 SAPI/Huihui 离线）+ 桌面通知 + 场景化 WAV 提示音 + 提问自动呼叫"
+  },
+  {
+   "repo": "dujar/dsh-restart",
+   "name": "dujar-dsh-restart",
+   "verdict": "incompatible",
+   "stars": 0,
+   "desc": "DeepSeek Harness web-GUI plugin: restart dsh web in one click, toggle installed plugins, git panel for local c"
   },
   {
    "repo": "ghbhiee/dsh-plugin-tui",
