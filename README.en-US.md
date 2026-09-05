@@ -276,7 +276,7 @@ Plugin marketplaces and aggregators are **welcome to consume this radar's runtim
 
 The DSH plugin community discussion group on WeChat: plugin authors, maintainers, and users discuss plugin development, compatibility issues, and new releases.
 
-<img src="assets/community-discussion-20260829.jpg" width="350" alt="DSH plugin community discussion group">
+<img src="assets/community-discussion-20260905.jpg" width="350" alt="DSH plugin community discussion group">
 
 > The QR code is valid for 7 days (before 2026-09-05).
 
