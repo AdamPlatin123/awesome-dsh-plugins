@@ -768,6 +768,7 @@
 - 🟩 `[可用]` [fantasyce-dsh-typelens](https://github.com/fantasyce/dsh-typelens) ★0 — Automatic bounded type context and edit diagnostics for DeepSeek Harness
 - 🟩 `[可用]` [fatherplus-dsh-superpowers-zh](https://github.com/fatherplus/dsh-superpowers-zh) ★0 — Core Superpowers-zh engineering skills for DeepSeek Harness
 - `[未定位]` **featherhunter-dsh-chinese-skill-patch** — 占位待复核，判定暂不展示
+- `[未定位]` **featherhunter-dsh-mattpocock-skills-deck** — 占位待复核，判定暂不展示
 - `[未定位]` **featherhunter-dsh-prompt** — 占位待复核，判定暂不展示
 - 🟩 `[可用]` [fengling375-dsh-nyan-context-progress](https://github.com/fengling375/dsh-nyan-context-progress) ★0 — dsh-nyan-context-progress plugin project
 - `[未定位]` **firestige-execution-system** — 占位待复核，判定暂不展示
@@ -878,6 +879,7 @@
 - 🟩 `[可用]` [kittcat-lab-dsh-kitt-voice](https://github.com/kittcat-lab/dsh-kitt-voice) ★0 — Voice for the DeepSeek Harness: speak to the agent, hear it back, and see what it is doing from a floating win
 - `[未定位]` **kkl08-dsh-plastic-memory** — 占位待复核，判定暂不展示
 - 🟩 `[可用]` [klpzj-dsh-peer-relay](https://github.com/klpzj/dsh-peer-relay) ★0 — Host-only peer session relay tools for DeepSeek Harness
+- `[未定位]` **klrsl-dsh-biomemory** — 占位待复核，判定暂不展示
 - `[未定位]` **klukai-416-clukay-dsh-skill-curator** — 占位待复核，判定暂不展示
 - `[未定位]` **kobenfang-bigplan** — 占位待复核，判定暂不展示
 - `[未定位]` **kobenfang-bigseedskill** — 占位待复核，判定暂不展示
@@ -1013,7 +1015,6 @@
 - 🟩 `[可用]` [perinchiang-dsh-memory-dashboard](https://github.com/perinchiang/dsh-memory-dashboard) ★0 — DeepSeek Harness embedded read-only viewer for TencentDB Agent Memory's four-layer local memory
 - `[未定位]` **perrylink-dsh-budget** — 占位待复核，判定暂不展示
 - `[未定位]` **perrylink-dsh-session-sync** — 占位待复核，判定暂不展示
-- `[未定位]` **perrylink-dsh-skill-pack-security** — 占位待复核，判定暂不展示
 - `[未定位]` **phant0meow-dsh-meow-memory** — 占位待复核，判定暂不展示
 - 🟩 `[可用]` [phoenixlucky-business-data-analyst-skill](https://github.com/phoenixlucky/business-data-analyst-skill) ★0 — —
 - 🟩 `[可用]` [phoenixlucky-family-lovers-skill](https://github.com/phoenixlucky/family-lovers-skill) ★0 — ❤️ 家庭关怀技能 · 走出原生家庭 — 觉察、疗愈、陪伴
@@ -1952,7 +1953,6 @@
 - 🟨 `[不兼容]` [elonnzhang-dsh-system-prompt](https://github.com/elonnzhang/dsh-system-prompt) ★0 — DeepSeek Harness plugin for session-scoped system prompt inspection
 - `[未定位]` **evilirving-dsh-context-proxy** — 占位待复核，判定暂不展示
 - 🟨 `[不兼容]` [fatatalia-dsh-turn-guard](https://github.com/fatatalia/dsh-turn-guard) ★0 — dsh turn-guard plugin: per-step timeout for agent turns (防模型退化死循环)
-- `[未定位]` **featherhunter-dsh-mattpocock-skills-deck** — 占位待复核，判定暂不展示
 - `[未定位]` **featherhunter-skills** — 占位待复核，判定暂不展示
 - 🟨 `[不兼容]` [fengyufengzi-dsh-local-diagnostics](https://github.com/fengyufengzi/dsh-local-diagnostics) ★0 — Privacy-first in-memory diagnostics for DeepSeek Harness
 - 🟨 `[不兼容]` [fentz26-dsh-goodjob](https://github.com/fentz26/dsh-goodjob) ★0 — Multi-agent operations workspace for DeepSeek Harness.
@@ -1992,7 +1992,6 @@
 - `[未定位]` **karthuslorin-dsh-subagent-grok** — 占位待复核，判定暂不展示
 - 🟨 `[不兼容]` [dsh-push](https://github.com/kiim-wong/dsh-push) ★0 — Push DeepSeek Harness agent lifecycle notifications to configurable channels
 - `[未定位]` **kinomotomio-dsh-context-lens** — 占位待复核，判定暂不展示
-- `[未定位]` **klrsl-dsh-biomemory** — 占位待复核，判定暂不展示
 - `[未定位]` **kngear-dsh-agenttask** — 占位待复核，判定暂不展示
 - `[未定位]` **kumarzx-dsh-memory-wrap** — 占位待复核，判定暂不展示
 - `[未定位]` **kyrielrving11-loopforge** — 占位待复核，判定暂不展示
@@ -2040,6 +2039,7 @@
 - `[未定位]` **olina1ye-internal-skill-workshop-plugin** — 占位待复核，判定暂不展示
 - `[未定位]` **pakco77-dsh-daqi-skill** — 占位待复核，判定暂不展示
 - `[未定位]` **pastsheep-dsh-agent-shell** — 占位待复核，判定暂不展示
+- `[未定位]` **perrylink-dsh-skill-pack-security** — 占位待复核，判定暂不展示
 - 🟨 `[不兼容]` [piaohua-dsh-schedule-command](https://github.com/piaohua/dsh-schedule-command) ★0 — DeepSeek Harness 的 /schedule 定时任务命令 —— 一句话创建会话内单次/周期任务，⏰ 标识自动识别定时会话
 - 🟨 `[不兼容]` [po-et-dsh-session-guard](https://github.com/po-et/dsh-session-guard) ★0 — Per-session advisory locks that stop two dsh processes from corrupting one session log
 - `[未定位]` **powerrrrrrrr-dsh-live-loop** — 占位待复核，判定暂不展示
