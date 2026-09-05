@@ -1,6 +1,6 @@
 {
  "schema": "dsh-radar/v1",
- "generated_at": "2026-09-05T21:30:48Z",
+ "generated_at": "2026-09-05T22:00:45Z",
  "plugins": [
   {
    "repo": "tt-a1i/archify",
@@ -8844,6 +8844,13 @@
    "desc": "The Memory Layer for AI Agents - Drop-in memory infrastructure for AI agents and apps"
   },
   {
+   "repo": "amruthpillai/reactive-resume",
+   "name": "amruthpillai-reactive-resume",
+   "verdict": "pending",
+   "stars": 42218,
+   "desc": "A one-of-a-kind resume builder that keeps your privacy in mind〔📦〕"
+  },
+  {
    "repo": "huangruiteng/loopx",
    "name": "huangruiteng-loopx",
    "verdict": "ok",
@@ -9598,13 +9605,6 @@
    "verdict": "ok",
    "stars": 12,
    "desc": "An independent, open-source desktop wrapper for DeepSeek Harness"
-  },
-  {
-   "repo": "runzhliu/deepseek-harness-docker",
-   "name": "runzhliu-deepseek-harness-docker",
-   "verdict": "ok",
-   "stars": 12,
-   "desc": "Community Docker and Kubernetes packaging for DeepSeek Harness (@deepseek-ai/dsh), with a hardened image, Comp"
   },
   {
    "repo": "tianji-qingtian/dsh-composer-polish",
@@ -20198,13 +20198,6 @@
    "desc": "审批面板键盘快捷键：Enter 批准一次、Esc 拒绝、Esc 暂停键盘驱动审阅，审批/提问面板通用；npm `dsh-approval-hotkeys`，`dsh plugin add` 一键安装"
   },
   {
-   "repo": "amruthpillai/reactive-resume",
-   "name": "amruthpillai-reactive-resume",
-   "verdict": "incompatible",
-   "stars": 42218,
-   "desc": "A one-of-a-kind resume builder that keeps your privacy in mind〔📦〕"
-  },
-  {
    "repo": "yjh051108/dsh-routing-suite",
    "name": "yjh051108-dsh-routing-suite",
    "verdict": "incompatible",
@@ -20378,6 +20371,13 @@
    "verdict": "incompatible",
    "stars": 13,
    "desc": "An open-source terminal front door for DeepSeek Harness (dsh)."
+  },
+  {
+   "repo": "runzhliu/deepseek-harness-docker",
+   "name": "runzhliu-deepseek-harness-docker",
+   "verdict": "incompatible",
+   "stars": 12,
+   "desc": "Community Docker and Kubernetes packaging for DeepSeek Harness (@deepseek-ai/dsh), with a hardened image, Comp"
   },
   {
    "repo": "buhuikongpan/dsh-win-gitbash",
@@ -28705,7 +28705,7 @@
   {
    "repo": "TYEclipse/dsh-netdoctor",
    "name": "dsh-netdoctor",
-   "verdict": "ok",
+   "verdict": "pending",
    "stars": 1,
    "desc": "—"
   },
