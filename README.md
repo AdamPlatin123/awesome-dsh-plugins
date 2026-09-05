@@ -296,7 +296,7 @@ verdict = {p["repo"]: p["verdict"] for p in d["plugins"]}   # 9230 条 · 四档
 
 DSH 插件社区讨论群（微信群）：插件作者、维护者与使用者都在这里，讨论插件开发、兼容性问题与新插件发布。
 
-<img src="assets/community-discussion-20260829.jpg" width="350" alt="DSH 插件社区讨论群">
+<img src="assets/community-discussion-20260905.jpg" width="350" alt="DSH 插件社区讨论群">
 
 > **入群指引（长期有效）**：上方为微信群 7 天期分享码，过期后请[开一个新 issue](https://github.com/AdamPlatin123/dsh-plugin-radar/issues/new?title=%5B%E5%85%A5%E7%BE%A4%5D%E8%AF%B7%E6%B1%82%E6%96%B0%E7%9A%84%E7%A4%BE%E5%8C%BA%E7%BE%A4%E4%BA%8C%E7%BB%B4%E7%A0%81) 索取新码（标题注明「入群」），维护者会尽快更新图片。插件作者请在 issue 里附上你的插件仓库链接，方便对号。
 
