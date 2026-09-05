@@ -1,6 +1,6 @@
 {
  "schema": "dsh-radar/v1",
- "generated_at": "2026-09-05T17:46:52Z",
+ "generated_at": "2026-09-05T18:01:52Z",
  "plugins": [
   {
    "repo": "tt-a1i/archify",
@@ -1944,7 +1944,7 @@
   {
    "repo": "aerince/dsh-active-context-pruning",
    "name": "aerince-dsh-active-context-pruning",
-   "verdict": "ok",
+   "verdict": "pending",
    "stars": 2,
    "desc": "Model-authored context pruning for DeepSeek Harness through the official compaction API."
   },
@@ -2360,13 +2360,6 @@
    "verdict": "ok",
    "stars": 2,
    "desc": "Agent-driven compaction for DeepSeek Harness: the agent summarizes its own conversation (KV-cache friendly, no"
-  },
-  {
-   "repo": "jonah791/dsh-agent-life",
-   "name": "jonah791-dsh-agent-life",
-   "verdict": "pending",
-   "stars": 2,
-   "desc": "DSH plugin: dsh-agent-life"
   },
   {
    "repo": "keyiadiannao/dsh-delay-tools",
@@ -3540,7 +3533,7 @@
   {
    "repo": "istarwyh/harbor-self-evolving",
    "name": "istarwyh-harbor-self-evolving",
-   "verdict": "pending",
+   "verdict": "ok",
    "stars": 1,
    "desc": "DeepSeek Harness plugin and Harbor template for reproducible Agent evaluation, self-evolution, and controlled"
   },
@@ -7535,6 +7528,13 @@
    "desc": "DSH plugin: dsh-agent-context"
   },
   {
+   "repo": "jonah791/dsh-agent-life",
+   "name": "jonah791-dsh-agent-life",
+   "verdict": "incompatible",
+   "stars": 2,
+   "desc": "DSH plugin: dsh-agent-life"
+  },
+  {
    "repo": "kelemiao/dsh-api",
    "name": "kelemiao-dsh-api",
    "verdict": "incompatible",
@@ -9934,13 +9934,6 @@
    "verdict": "ok",
    "stars": 8,
    "desc": "—"
-  },
-  {
-   "repo": "534119219/chicheng-stats",
-   "name": "534119219-chicheng-stats",
-   "verdict": "pending",
-   "stars": 7,
-   "desc": "DSH 全局用量统计插件：高度可配置侧边栏组件（文字/卡片）+ 统计面板（模型分布/趋势/首字节/耗时明细）"
   },
   {
    "repo": "asukasec/dsh-message-preview",
@@ -12465,7 +12458,7 @@
   {
    "repo": "314857493/dsh-vision",
    "name": "314857493-dsh-vision",
-   "verdict": "pending",
+   "verdict": "ok",
    "stars": 2,
    "desc": "Free GLM vision for text-only DeepSeek Harness: paste images in the GUI (auto-transcribe route) + vision tool"
   },
@@ -20317,6 +20310,13 @@
    "desc": "提供vscode风格和功能的侧栏"
   },
   {
+   "repo": "534119219/chicheng-stats",
+   "name": "534119219-chicheng-stats",
+   "verdict": "incompatible",
+   "stars": 7,
+   "desc": "DSH 全局用量统计插件：高度可配置侧边栏组件（文字/卡片）+ 统计面板（模型分布/趋势/首字节/耗时明细）"
+  },
+  {
    "repo": "gxinxing/deepseek-harness-tui",
    "name": "gxinxing-deepseek-harness-tui",
    "verdict": "incompatible",
@@ -23178,13 +23178,6 @@
    "verdict": "untested",
    "stars": 23,
    "desc": "DSH Web 界面丝滑流式渲染：打字机跟随 token 到达、Markdown 边流边渲染、换行滑入、不闪烁，滚动归用户，尊重 prefers-reduced-motion"
-  },
-  {
-   "repo": "wzxaaaa/dsh-w-plugin-ecosystem",
-   "name": "wzxaaaa-dsh-w-plugin-ecosystem",
-   "verdict": "pending",
-   "stars": 22,
-   "desc": "为dsh专属打造的贴近原生的自定义插件生态，支持插件可配置，独立协议，热拔插"
   },
   {
    "repo": "sumarilkkxx/dsh-artifact",
@@ -26850,7 +26843,7 @@
   {
    "repo": "anxinyuanshiyu/dsh-plugin-zh-inventory",
    "name": "anxinyuanshiyu-dsh-plugin-zh-inventory",
-   "verdict": "pending",
+   "verdict": "ok",
    "stars": 1,
    "desc": "给DeepSeek Harness 中的插件列表加上中文的表签和简述"
   },
@@ -27704,7 +27697,7 @@
   {
    "repo": "kingsunb/dsh-model-plus",
    "name": "kingsunb-dsh-model-plus",
-   "verdict": "pending",
+   "verdict": "ok",
    "stars": 1,
    "desc": "—"
   },
@@ -31011,6 +31004,13 @@
    "verdict": "ok",
    "stars": 0,
    "desc": "—"
+  },
+  {
+   "repo": "dmz2922990/dsh-thinkmeter",
+   "name": "dmz2922990-dsh-thinkmeter",
+   "verdict": "pending",
+   "stars": 0,
+   "desc": "DeepSeek Harness（DSH）客户端插件：将聊天视图中流式的 Think 思考预览替换为 实时 Token 数量显示"
   },
   {
    "repo": "dongsheng123132/dsh-artifact-promotion-proof",
@@ -37817,6 +37817,13 @@
    "desc": "Solo-style isolated brainstorm branches and Handoffs for DeepSeek Harness"
   },
   {
+   "repo": "wzxaaaa/dsh-w-plugin-ecosystem",
+   "name": "wzxaaaa-dsh-w-plugin-ecosystem",
+   "verdict": "incompatible",
+   "stars": 22,
+   "desc": "为dsh专属打造的贴近原生的自定义插件生态，支持插件可配置，独立协议，热拔插"
+  },
+  {
    "repo": "ai-daming/clickvibe",
    "name": "ai-daming-clickvibe",
    "verdict": "incompatible",
@@ -39215,13 +39222,6 @@
    "verdict": "incompatible",
    "stars": 0,
    "desc": "—"
-  },
-  {
-   "repo": "dmz2922990/dsh-thinkmeter",
-   "name": "dmz2922990-dsh-thinkmeter",
-   "verdict": "incompatible",
-   "stars": 0,
-   "desc": "DeepSeek Harness（DSH）客户端插件：将聊天视图中流式的 Think 思考预览替换为 实时 Token 数量显示"
   },
   {
    "repo": "DomenCai/dsh-harness-call",
@@ -45405,13 +45405,6 @@
    "desc": "《牛来》 meme sound board for DeepSeek Harness Web: plays the movie 妈妈 when you send a message and 牛来 when a task"
   },
   {
-   "repo": "kentleenot/dsh-trading-toolkit",
-   "name": "kentleenot-dsh-trading-toolkit",
-   "verdict": "pending",
-   "stars": 2,
-   "desc": "A-share + US stock trading toolkit for DeepSeek Harness agents: quotes, klines, ADX regime signal, backtest pr"
-  },
-  {
    "repo": "levi52/dsh-pet",
    "name": "levi52-dsh-pet",
    "verdict": "ok",
@@ -46404,6 +46397,13 @@
    "verdict": "incompatible",
    "stars": 2,
    "desc": "A floating task-status pet for DeepSeek Harness"
+  },
+  {
+   "repo": "kentleenot/dsh-trading-toolkit",
+   "name": "kentleenot-dsh-trading-toolkit",
+   "verdict": "incompatible",
+   "stars": 2,
+   "desc": "A-share + US stock trading toolkit for DeepSeek Harness agents: quotes, klines, ADX regime signal, backtest pr"
   },
   {
    "repo": "meme-dog/dsh-plugin-finder",
@@ -48329,13 +48329,6 @@
    "verdict": "ok",
    "stars": 5,
    "desc": "My dotfiles on macOS and Termux, managed with Chezmoi."
-  },
-  {
-   "repo": "1070296335-create/dph-taskboard",
-   "name": "1070296335-create-dph-taskboard",
-   "verdict": "pending",
-   "stars": 4,
-   "desc": "—"
   },
   {
    "repo": "Favio8/dsh-plugin-deepeye",
@@ -50480,6 +50473,13 @@
    "desc": "dsh wps云文档插件"
   },
   {
+   "repo": "1070296335-create/dph-taskboard",
+   "name": "1070296335-create-dph-taskboard",
+   "verdict": "incompatible",
+   "stars": 4,
+   "desc": "—"
+  },
+  {
    "repo": "anyuer678/dsh-logtimeline",
    "name": "anyuer678-dsh-logtimeline",
    "verdict": "incompatible",
@@ -51556,13 +51556,6 @@
    "verdict": "ok",
    "stars": 4,
    "desc": "DSH (DeepSeek Harness) web plugin: plays a sound when the agent finishes replying (turn/end)"
-  },
-  {
-   "repo": "yuko0331/DSH-telegram",
-   "name": "DSH-telegram",
-   "verdict": "pending",
-   "stars": 4,
-   "desc": "通过 Telegram 私聊远程使用和查看 DeepSeek Harness"
   },
   {
    "repo": "173787247/dsh-wsl-open",
@@ -53420,6 +53413,13 @@
    "desc": "让 DeepSeek Harness（DSH）住进 QQ：基于腾讯官方 Bot API，支持私聊白名单、持久会话、模型切换与远程权限审批"
   },
   {
+   "repo": "yuko0331/DSH-telegram",
+   "name": "DSH-telegram",
+   "verdict": "incompatible",
+   "stars": 4,
+   "desc": "通过 Telegram 私聊远程使用和查看 DeepSeek Harness"
+  },
+  {
    "repo": "zp-home/dsh-weixin-clawbot",
    "name": "zp-home-dsh-weixin-clawbot",
    "verdict": "incompatible",
@@ -54218,13 +54218,6 @@
    "desc": "OpenPencil design preview and editing plugin for DSH"
   },
   {
-   "repo": "fwerkor/local-shell-mcp",
-   "name": "fwerkor-local-shell-mcp",
-   "verdict": "pending",
-   "stars": 61,
-   "desc": "Enables LLM to use a cli environment."
-  },
-  {
    "repo": "Nwflower/dsh-chat-import",
    "name": "dsh-chat-import",
    "verdict": "ok",
@@ -54255,7 +54248,7 @@
   {
    "repo": "zenx0x/allinluna",
    "name": "zenx0x-allinluna",
-   "verdict": "pending",
+   "verdict": "ok",
    "stars": 52,
    "desc": "Resource-aware multi-agent orchestration for Codex and DeepSeek Harness (All in Flash DSH plugin)"
   },
@@ -57615,7 +57608,7 @@
   {
    "repo": "zdx8637-gitdog/dshmobile",
    "name": "zdx8637-gitdog-dshmobile",
-   "verdict": "pending",
+   "verdict": "ok",
    "stars": 2,
    "desc": "手机远程控制 DeepSeek Harness：Android App + 云端 relay + PC 插件，常驻二维码一码三用（扫码下载/配对/登录授权）"
   },
@@ -62084,6 +62077,13 @@
    "verdict": "incompatible",
    "stars": 112,
    "desc": "Local-first A-share research workbench for DeepSeek Harness: market dashboards, watchlists, valuation, four in"
+  },
+  {
+   "repo": "fwerkor/local-shell-mcp",
+   "name": "fwerkor-local-shell-mcp",
+   "verdict": "incompatible",
+   "stars": 61,
+   "desc": "Enables LLM to use a cli environment."
   },
   {
    "repo": "Yan-Zero/dsh-codex",
