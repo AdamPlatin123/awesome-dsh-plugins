@@ -1330,7 +1330,6 @@
 - 🟩 `[可用]` [dove-a-dsh-plugin-registry](https://github.com/dove-a/dsh-plugin-registry) ★0 — Path registry for DSH (DeepSeek Harness) plugins: inventory all installed plugins/presets/skills with real pat
 - 🟩 `[可用]` [dsh-mixxed-dsh-client-ui-filesystem-manager](https://github.com/dsh-mixxed/dsh-client-ui-filesystem-manager) ★0 — A customized DeepSeek Harness filetree manager UI plugin.
 - 🟩 `[可用]` [dujar-dsh-community-plugins](https://github.com/dujar/dsh-community-plugins) ★0 — DeepSeek Harness web-GUI plugin: discover and install community plugins from the dsh-plugin topic — searchable
-- 🟩 `[可用]` [dujar-dsh-restart](https://github.com/dujar/dsh-restart) ★0 — DeepSeek Harness web-GUI plugin: restart dsh web in one click, toggle installed plugins, git panel for local c
 - `[未定位]` **dviridescent-dafy-whale-theme** — 占位待复核，判定暂不展示
 - 🟩 `[可用]` [dxsdyhm-dsh-adb-logcat](https://github.com/dxsdyhm/dsh-adb-logcat) ★0 — Android Studio-style ADB logcat viewer for the DSH Web GUI
 - 🟩 `[可用]` [dy395769511-star-dsh-pdf-to-word](https://github.com/dy395769511-star/dsh-pdf-to-word) ★0 — PDF to Word conversion plugin for DeepSeek Harness (dsh): PyMuPDF/PaddleOCR pipeline + LLM visual style verifi
@@ -2529,6 +2528,7 @@
 - `[未定位]` **dingpenghui-good-dsh-plugin-manager** — 占位待复核，判定暂不展示
 - 🟨 `[不兼容]` [doer1296-dsh-plugin-voice](https://github.com/doer1296/dsh-plugin-voice) ★0 — DeepSeek Harness 语音插件：火山 seed-tts 云端 TTS（自动回退 SAPI/Huihui 离线）+ 桌面通知 + 场景化 WAV 提示音 + 提问自动呼叫
 - `[未定位]` **du-u-uck-dsh-transparent-ui-plugin** — 占位待复核，判定暂不展示
+- 🟨 `[不兼容]` [dujar-dsh-restart](https://github.com/dujar/dsh-restart) ★0 — DeepSeek Harness web-GUI plugin: restart dsh web in one click, toggle installed plugins, git panel for local c
 - `[未定位]` **enernitylune-dsh-luvian-ui-wallpaper** — 占位待复核，判定暂不展示
 - `[未定位]` **fishofouc-plugin-ui-controls** — 占位待复核，判定暂不展示
 - `[未定位]` **flametn7-dsh-tui-browser-use** — 占位待复核，判定暂不展示
